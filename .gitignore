@@ -1,0 +1,29 @@
+# CMake çıktısı. vcpkg ağacı, third_party ve vendor depoya girmez (07).
+/build/
+/vcpkg/
+/vcpkg_installed/
+third_party/
+vendor/
+
+# Sırlar
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# Süreç kendi dizinine yazar. Boş pid, syslog, syserr, stdout açılmaz (09).
+server/**/pid
+server/**/syslog
+server/**/syserr
+server/**/stdout
+*.core
+
+# Derleme çıktısı. share/bin klasörü durur; game.exe ve db.exe kopyalanmaz.
+*.exe
+*.dll
+*.obj
+*.o
+*.a
+*.lib
+*.so

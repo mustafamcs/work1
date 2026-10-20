@@ -1,0 +1,13 @@
+# 07: metin dosyaları UTF-8 ve LF. Depo txt, quest ve CONFIG için LF zorlar.
+*.txt text eol=lf
+*.quest text eol=lf
+*.lua text eol=lf
+*.sql text eol=lf
+*.yaml text eol=lf
+*.conf text eol=lf
+*.py text eol=lf
+CONFIG text eol=lf
+CMD text eol=lf
+VERSION text eol=lf
+active_profile text eol=lf
+server_attr binary
