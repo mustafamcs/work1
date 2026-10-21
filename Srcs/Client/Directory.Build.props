@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- Projeler arası paralel derleme için tüm CPU çekirdeklerini kullan -->
+    <BuildInParallel>true</BuildInParallel>
+    <!-- MSBuild paralel proje sayısı (tüm çekirdekler) -->
+    <MaxCpuCount>0</MaxCpuCount>
+  </PropertyGroup>
+</Project>

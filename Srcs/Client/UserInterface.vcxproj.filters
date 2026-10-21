@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="UserInterface\AffectFlagContainer.cpp" />
+    <ClCompile Include="UserInterface\InstanceBase.cpp" />
+    <ClCompile Include="UserInterface\InstanceBaseBattle.cpp" />
+    <ClCompile Include="UserInterface\InstanceBaseEffect.cpp" />
+    <ClCompile Include="UserInterface\InstanceBaseEvent.cpp" />
+    <ClCompile Include="UserInterface\InstanceBaseMotion.cpp" />
+    <ClCompile Include="UserInterface\InstanceBaseMovement.cpp" />
+    <ClCompile Include="UserInterface\InstanceBaseTransform.cpp" />
+    <ClCompile Include="UserInterface\CameraProcedure.cpp" />
+    <ClCompile Include="UserInterface\PythonAcce.cpp" />
+    <ClCompile Include="UserInterface\PythonBackground.cpp" />
+    <ClCompile Include="UserInterface\PythonBackgroundModule.cpp" />
+    <ClCompile Include="UserInterface\PythonCharacterManager.cpp" />
+    <ClCompile Include="UserInterface\PythonCharacterManagerModule.cpp" />
+    <ClCompile Include="UserInterface\PythonCharacterModule.cpp" />
+    <ClCompile Include="UserInterface\PythonEffectModule.cpp" />
+    <ClCompile Include="UserInterface\PythonEventManager.cpp" />
+    <ClCompile Include="UserInterface\PythonGameEventManagerModule.cpp" />
+    <ClCompile Include="UserInterface\PythonItem.cpp" />
+    <ClCompile Include="UserInterface\PythonItemModule.cpp" />
+    <ClCompile Include="UserInterface\PythonNonPlayer.cpp" />
+    <ClCompile Include="UserInterface\PythonNonPlayerModule.cpp" />
+    <ClCompile Include="UserInterface\PythonPlayer.cpp" />
+    <ClCompile Include="UserInterface\PythonPlayerEventHandler.cpp" />
+    <ClCompile Include="UserInterface\PythonPlayerInput.cpp" />
+    <ClCompile Include="UserInterface\PythonPlayerInputKeyboard.cpp" />
+    <ClCompile Include="UserInterface\PythonPlayerInputMouse.cpp" />
+    <ClCompile Include="UserInterface\PythonPlayerModule.cpp" />
+    <ClCompile Include="UserInterface\PythonPlayerSkill.cpp" />
+    <ClCompile Include="UserInterface\PythonQuest.cpp" />
+    <ClCompile Include="UserInterface\PythonSkill.cpp" />
+    <ClCompile Include="UserInterface\PythonChat.cpp" />
+    <ClCompile Include="UserInterface\PythonChatModule.cpp" />
+    <ClCompile Include="UserInterface\PythonExchange.cpp" />
+    <ClCompile Include="UserInterface\PythonExchangeModule.cpp" />
+    <ClCompile Include="UserInterface\PythonFlyModule.cpp" />
+    <ClCompile Include="UserInterface\PythonGuild.cpp" />
+    <ClCompile Include="UserInterface\PythonMessenger.cpp" />
+    <ClCompile Include="UserInterface\PythonMiniMap.cpp" />
+    <ClCompile Include="UserInterface\PythonMiniMapModule.cpp" />
+    <ClCompile Include="UserInterface\PythonSafeBox.cpp" />
+    <ClCompile Include="UserInterface\PythonShop.cpp" />
+    <ClCompile Include="UserInterface\PythonTextTail.cpp" />
+    <ClCompile Include="UserInterface\PythonTextTailModule.cpp" />
+    <ClCompile Include="UserInterface\PythonPackModule.cpp" />
+    <ClCompile Include="UserInterface\ProcessScanner.cpp" />
+    <ClCompile Include="UserInterface\PythonApplication.cpp" />
+    <ClCompile Include="UserInterface\PythonApplicationCamera.cpp" />
+    <ClCompile Include="UserInterface\PythonApplicationCursor.cpp" />
+    <ClCompile Include="UserInterface\PythonApplicationEvent.cpp" />
+    <ClCompile Include="UserInterface\PythonApplicationLogo.cpp" />
+    <ClCompile Include="UserInterface\PythonApplicationModule.cpp" />
+    <ClCompile Include="UserInterface\PythonApplicationProcedure.cpp" />
+    <ClCompile Include="UserInterface\PythonApplicationWebPage.cpp" />
+    <ClCompile Include="UserInterface\PythonIME.cpp" />
+    <ClCompile Include="UserInterface\PythonIMEModule.cpp" />
+    <ClCompile Include="UserInterface\PythonProfilerModule.cpp" />
+    <ClCompile Include="UserInterface\PythonSoundManagerModule.cpp" />
+    <ClCompile Include="UserInterface\PythonSystem.cpp" />
+    <ClCompile Include="UserInterface\PythonSystemModule.cpp" />
+    <ClCompile Include="UserInterface\GuildMarkDownloader.cpp" />
+    <ClCompile Include="UserInterface\GuildMarkUploader.cpp" />
+    <ClCompile Include="UserInterface\MarkImage.cpp" />
+    <ClCompile Include="UserInterface\MarkManager.cpp" />
+    <ClCompile Include="UserInterface\Locale.cpp" />
+    <ClCompile Include="UserInterface\AccountConnector.cpp" />
+    <ClCompile Include="UserInterface\InsultChecker.cpp" />
+    <ClCompile Include="UserInterface\NetworkActorManager.cpp" />
+    <ClCompile Include="UserInterface\ProcessCRC.cpp" />
+    <ClCompile Include="UserInterface\PythonExceptionSender.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkDatagram.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkDatagramModule.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStream.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamCommand.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamEvent.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamModule.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseGame.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseGameActor.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseGameItem.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseHandShake.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseLoading.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseLogin.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseOffline.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamPhaseSelect.cpp" />
+    <ClCompile Include="UserInterface\ServerStateChecker.cpp" />
+    <ClCompile Include="UserInterface\ServerStateCheckerModule.cpp" />
+    <ClCompile Include="UserInterface\CheckLatestFiles.cpp" />
+    <ClCompile Include="UserInterface\GameType.cpp" />
+    <ClCompile Include="UserInterface\MovieMan.cpp" />
+    <ClCompile Include="UserInterface\StdAfx.cpp" />
+    <ClCompile Include="UserInterface\UserInterface.cpp" />
+    <ClCompile Include="UserInterface\PythonEventManagerModule.cpp" />
+    <ClCompile Include="UserInterface\PythonLocale.cpp" />
+    <ClCompile Include="UserInterface\PythonIkarusShop.cpp" />
+    <ClCompile Include="UserInterface\PythonNetworkStreamIkarusShop.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UserInterface\AffectFlagContainer.h" />
+    <ClInclude Include="UserInterface\Discord.h" />
+    <ClInclude Include="UserInterface\InstanceBase.h" />
+    <ClInclude Include="UserInterface\PythonAcce.h" />
+    <ClInclude Include="UserInterface\PythonBackground.h" />
+    <ClInclude Include="UserInterface\PythonCharacterManager.h" />
+    <ClInclude Include="UserInterface\PythonEventManager.h" />
+    <ClInclude Include="UserInterface\PythonItem.h" />
+    <ClInclude Include="UserInterface\PythonNonPlayer.h" />
+    <ClInclude Include="UserInterface\PythonPlayer.h" />
+    <ClInclude Include="UserInterface\PythonPlayerEventHandler.h" />
+    <ClInclude Include="UserInterface\PythonQuest.h" />
+    <ClInclude Include="UserInterface\PythonSkill.h" />
+    <ClInclude Include="UserInterface\PythonChat.h" />
+    <ClInclude Include="UserInterface\PythonExchange.h" />
+    <ClInclude Include="UserInterface\PythonGuild.h" />
+    <ClInclude Include="UserInterface\PythonMessenger.h" />
+    <ClInclude Include="UserInterface\PythonMiniMap.h" />
+    <ClInclude Include="UserInterface\PythonSafeBox.h" />
+    <ClInclude Include="UserInterface\PythonShop.h" />
+    <ClInclude Include="UserInterface\PythonTextTail.h" />
+    <ClInclude Include="UserInterface\ProcessScanner.h" />
+    <ClInclude Include="UserInterface\PythonApplication.h" />
+    <ClInclude Include="UserInterface\PythonIME.h" />
+    <ClInclude Include="UserInterface\PythonSystem.h" />
+    <ClInclude Include="UserInterface\GuildMarkDownloader.h" />
+    <ClInclude Include="UserInterface\GuildMarkUploader.h" />
+    <ClInclude Include="UserInterface\MarkImage.h" />
+    <ClInclude Include="UserInterface\MarkManager.h" />
+    <ClInclude Include="UserInterface\resource.h" />
+    <ClInclude Include="UserInterface\AbstractApplication.h" />
+    <ClInclude Include="UserInterface\AbstractCharacterManager.h" />
+    <ClInclude Include="UserInterface\AbstractChat.h" />
+    <ClInclude Include="UserInterface\AbstractPlayer.h" />
+    <ClInclude Include="UserInterface\AbstractSingleton.h" />
+    <ClInclude Include="UserInterface\Locale.h" />
+    <ClInclude Include="UserInterface\Locale_inc.h" />
+    <ClInclude Include="UserInterface\AccountConnector.h" />
+    <ClInclude Include="UserInterface\InsultChecker.h" />
+    <ClInclude Include="UserInterface\NetworkActorManager.h" />
+    <ClInclude Include="UserInterface\Packet.h" />
+    <ClInclude Include="UserInterface\ProcessCRC.h" />
+    <ClInclude Include="UserInterface\PythonExceptionSender.h" />
+    <ClInclude Include="UserInterface\PythonNetworkDatagram.h" />
+    <ClInclude Include="UserInterface\PythonNetworkStream.h" />
+    <ClInclude Include="UserInterface\ServerStateChecker.h" />
+    <ClInclude Include="UserInterface\CheckLatestFiles.h" />
+    <ClInclude Include="UserInterface\CRC32_inc.h" />
+    <ClInclude Include="UserInterface\GameType.h" />
+    <ClInclude Include="UserInterface\MovieMan.h" />
+    <ClInclude Include="UserInterface\StdAfx.h" />
+    <ClInclude Include="UserInterface\Test.h" />
+    <ClInclude Include="UserInterface\PythonLocale.h" />
+    <ClInclude Include="UserInterface\JsonHelper.h" />
+    <ClInclude Include="UserInterface\PythonIkarusShop.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UserInterface\Cursors\cursor.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_attack.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_buy.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_camera_rotate.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_chair.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_door.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_hsize.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_hvsize.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_no.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_pick.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_sell.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_talk.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Cursors\cursor_vsize.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\metin2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{bb9834e2-1e1b-4ebc-8fce-f955fb142ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sistema %28Multilenguaje%29">
+      <UniqueIdentifier>{b416d0c4-72b5-49a3-bf41-ac6d9602b092}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UserInterface\UserInterface.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

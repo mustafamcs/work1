@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IntDir>$(MSBuildThisFileDirectory)..\..\out\client\$(ProjectName)\$(Configuration)\obj\</IntDir>
+    <OutDir>$(MSBuildThisFileDirectory)..\..\out\client\$(ProjectName)\$(Configuration)\bin\</OutDir>
+    <!-- Paralel proje build için max CPU kullan -->
+    <CL_MPCount>$(NUMBER_OF_PROCESSORS)</CL_MPCount>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <!-- Tüm CPU çekirdeklerini kullan -->
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <!-- Minimal rebuild devre dışı (MP ile uyumsuz) -->
+      <MinimalRebuild>false</MinimalRebuild>
+      <!-- Fonksiyon seviyesinde linking (daha hızlı incremental build) -->
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <!-- Intrinsic fonksiyonlar (daha hızlı kod) -->
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <!-- Deprecated CRT ve Winsock uyarılarını gizle -->
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <!-- Extern kütüphanelerdeki uyarıları gizle (cryptopp vb.) -->
+      <!-- TODO: Bu uyarıları ileride düzelt, şimdilik gizle -->
+      <!-- C4244,C4242,C4267: Veri kaybı uyarıları (int64->int, DWORD->BYTE vb.) -->
+      <!-- C4838: Narrowing conversion -->
+      <!-- C4805: BOOL/bool karışımı -->
+      <!-- C4146: Unsigned türe negatif işlem -->
+      <!-- C4018: Signed/unsigned karşılaştırma -->
+      <!-- C4309: Sabit değer kesildi -->
+      <!-- C4804: Bool türü güvensiz kullanım -->
+      <!-- C4101: Kullanılmayan değişken -->
+      <!-- C4065: Switch default without case -->
+      <!-- C4477: Format string uyumsuzluğu -->
+      <DisableSpecificWarnings>4996;5054;5055;4244;4242;4267;4838;4805;4146;4018;4309;4804;4101;4065;4477;4005;4834;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <!-- Link Time Code Generation - paralel optimizasyon -->
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <!-- Kullanılmayan referansları kaldır -->
+      <OptimizeReferences>true</OptimizeReferences>
+      <!-- COMDAT katlama -->
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalLibraryDirectories>
+        $(MSBuildThisFileDirectory)..\..\out\client\CWebBrowser\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\EffectLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterBase\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterGrnLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterImageLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterlib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\EterLocale\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\EterPack\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterPythonLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\gamelib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\mileslib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\PRTerrainLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\scriptLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\SpeedTreeLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\SphereLib\$(Configuration)\bin;
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+        $(MSBuildThisFileDirectory)..\..\out\client\CWebBrowser\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\EffectLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterBase\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterGrnLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterImageLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterlib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\EterLocale\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\EterPack\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\eterPythonLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\gamelib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\mileslib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\PRTerrainLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\scriptLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\SpeedTreeLib\$(Configuration)\bin;
+        $(MSBuildThisFileDirectory)..\..\out\client\SphereLib\$(Configuration)\bin;
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+</Project>
