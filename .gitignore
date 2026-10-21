@@ -72,3 +72,6 @@ client/loca.cfg
 client/channel.inf
 client/metin2.cfg
 client/mouse.cfg
+
+# CMake onbellek dizini
+Srcs/Server/build/

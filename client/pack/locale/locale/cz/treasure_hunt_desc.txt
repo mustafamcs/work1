@@ -1,8 +1,0 @@
-[DELAY value;0]
-Získal jsi jednu z odmìn na seznamu. Po sebrání[ENTER]
-9 odmìn dokonèí kolo. Kadé dokonèené kolo[ENTER]
-ti dá dalí odmìny. Musí sebrat alespoò[ENTER]
-jednu odmìnu, ne mùe zaèít nové. Za kola[ENTER]
-6 a 9 získá extra poehnání, ale[ENTER]
-jejich poèet na kadou událost je omezen. Kadá postava[ENTER]
-mùe získat poehnání pouze jednou za událost.
