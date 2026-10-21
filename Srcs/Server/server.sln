@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsql", "libsql.vcxproj", "{3967853D-4E19-4548-AC3A-F6012B78E384}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libgame", "libgame.vcxproj", "{2AB4A5A4-3EAA-4486-B93C-38E8D39BF218}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpoly", "libpoly.vcxproj", "{BD8E86DD-07BA-49B0-BF04-3282DA8377EB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libthecore", "libthecore.vcxproj", "{5C8620C9-5D1F-419D-8267-48D2863C3D13}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblua", "liblua.vcxproj", "{EC666345-5F4E-4A4E-8C66-C7A6326F8235}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game", "game.vcxproj", "{146DE22F-4DD4-4E6F-B2FD-98AE163BEBBA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "db", "db.vcxproj", "{ADC2E26A-C39B-4817-A24C-A99827B74EB2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qc", "qc.vcxproj", "{3783243F-5E36-4B96-9A13-7BFF00F15B34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3967853D-4E19-4548-AC3A-F6012B78E384}.Release|Win32.ActiveCfg = Release|Win32
+		{3967853D-4E19-4548-AC3A-F6012B78E384}.Release|Win32.Build.0 = Release|Win32
+		{2AB4A5A4-3EAA-4486-B93C-38E8D39BF218}.Release|Win32.ActiveCfg = Release|Win32
+		{2AB4A5A4-3EAA-4486-B93C-38E8D39BF218}.Release|Win32.Build.0 = Release|Win32
+		{BD8E86DD-07BA-49B0-BF04-3282DA8377EB}.Release|Win32.ActiveCfg = Release|Win32
+		{BD8E86DD-07BA-49B0-BF04-3282DA8377EB}.Release|Win32.Build.0 = Release|Win32
+		{5C8620C9-5D1F-419D-8267-48D2863C3D13}.Release|Win32.ActiveCfg = Release|Win32
+		{5C8620C9-5D1F-419D-8267-48D2863C3D13}.Release|Win32.Build.0 = Release|Win32
+		{EC666345-5F4E-4A4E-8C66-C7A6326F8235}.Release|Win32.ActiveCfg = Release|Win32
+		{EC666345-5F4E-4A4E-8C66-C7A6326F8235}.Release|Win32.Build.0 = Release|Win32
+		{146DE22F-4DD4-4E6F-B2FD-98AE163BEBBA}.Release|Win32.ActiveCfg = Release|Win32
+		{146DE22F-4DD4-4E6F-B2FD-98AE163BEBBA}.Release|Win32.Build.0 = Release|Win32
+		{ADC2E26A-C39B-4817-A24C-A99827B74EB2}.Release|Win32.ActiveCfg = Release|Win32
+		{ADC2E26A-C39B-4817-A24C-A99827B74EB2}.Release|Win32.Build.0 = Release|Win32
+		{3783243F-5E36-4B96-9A13-7BFF00F15B34}.Release|Win32.ActiveCfg = Release|Win32
+		{3783243F-5E36-4B96-9A13-7BFF00F15B34}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+EndGlobal

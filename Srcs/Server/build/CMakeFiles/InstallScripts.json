@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Works/work1/Srcs/Server/build/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/platform/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/libthecore/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/liblua/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/libsql/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/libpoly/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/libgame/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/db/cmake_install.cmake",
+		"C:/Works/work1/Srcs/Server/build/game/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
