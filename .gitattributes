@@ -11,3 +11,5 @@ CMD text eol=lf
 VERSION text eol=lf
 active_profile text eol=lf
 server_attr binary
+*.epk filter=lfs diff=lfs merge=lfs -text
+*.eix filter=lfs diff=lfs merge=lfs -text
