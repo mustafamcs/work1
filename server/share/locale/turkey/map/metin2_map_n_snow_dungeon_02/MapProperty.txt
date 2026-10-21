@@ -1,0 +1,2 @@
+ScriptType MapProperty
+MapType "Outdoor"
