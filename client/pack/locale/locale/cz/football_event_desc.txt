@@ -1,0 +1,6 @@
+[DELAY value;0]
+Popis události[ENTER]
+Událost MS ve fotbale byla zahájena. Fotbalové míèe se[ENTER]
+ji nebudou v tvém inventáøi objevovat. Nasbírej jich[ENTER]
+tolik, kolik bude moné a pak je u Yu-Hwana vymìò za[ENTER]
+Zlaté míèe nebo je pouij na vımìnu za pøedmìty.
