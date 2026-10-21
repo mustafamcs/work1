@@ -1,0 +1,79 @@
+id: 105
+level_cap: 105
+attr_slots: 5
+features:
+  - core
+  - belt
+  - costume
+  - energy
+  - seal_pet
+  - maps_90
+  - spider3
+  - catacomb
+  - nemere
+  - razador
+map_allow:
+  - 1
+  - 21
+  - 41
+  - 4
+  - 24
+  - 44
+  - 250
+  - 3
+  - 23
+  - 43
+  - 64
+  - 63
+  - 61
+  - 65
+  - 62
+  - 69
+  - 70
+  - 67
+  - 68
+  - 71
+  - 104
+  - 107
+  - 108
+  - 109
+  - 66
+  - 72
+  - 73
+  - 208
+  - 81
+  - 112
+  - 113
+  - 181
+  - 182
+  - 183
+  - 301
+  - 302
+  - 303
+  - 304
+  - 216
+  - 217
+  - 351
+  - 364
+  - 352
+  - 367
+exp_mul:
+drop_mul:
+gold_mul:
+ozet: |
+  105 midschool’dur. Seviye 105’te biter. 99 dünyası açık kalır. Kasılma 99’dan akıcı, 120’den yavaştır. Oran profil dosyasında, sayı henüz yok. 105 çarpanı 99’dan yüksek, 120’den düşüktür.
+  Efsun beştir. Beta eşya açıktır: 65, sonra 80, sonra 105. 80 halkasının +9’u beta tarifinin girdisidir. Tarif patron otudur: kırmızı, mavi, yeşil, mor. Enerji parçası tarifi yazılmaz.
+  Beta adları: Runik Kılıç, Ejderha Dişi Kılıcı, Beş Element Kılıcı, Anka Yayı, Uyuyan Ejder Yelpazesi, Ejderha Hayaleti Çanı, Şeytan Boynuzu Zırhı, Ejder Süvari Giysisi, Kemik Plaka Zırh, Altın Giysi. 75’lik silah durur. Beta onun yerine geçmek zorunda değildir.
+  90’dan itibaren dört saha açılır. Giriş 90’dır: Yıldırım Dağları, Gautama Uçurumu, Ejderha Ateşi Burnu, Nefrit Körfezi. Burnun kasabasında PvP kapalıdır, dışı agresiftir.
+  Örümcek 3, 55–75 bandında her kanalda açıktır. Barones yuvadadır.
+  Şeytan Katakombu, Şeytan Kulesi bir kez bitmiş olmak ve seviye 75 ister. Son patron Azrail’dir. Oyuncu kanal listesinde durmaz. Harita numarası pack satırındandır.
+  Kızıl Ejderha Kalesi’ne seviye 100’de, grupla girilir. Patron Razador’dur. Patron odası 104 ister.
+  Nemere gözetleme kulesi açıktır. Oyuncu kanal listesinde durmaz. Giriş seviyesi seçilmedi. Harita numarası pack satırındandır.
+  Ochao bu profilin harita listesinde değildir. 105’ten 120’ye giden saha Büyülü Orman’dır.
+  Kemer, kostüm, enerji, mühürlü pet ve mühürlü binek açıktır. Kostüm kıyafet, saç ve silah fişidir. Mühürlü petler Porki, Khan, Cellatçık ve Azrailcik’tir. Mühürlü binekler Manni, Kar Yağduran ve Yırtıcı Aslan’dır. Simyacı ekipmanı parçalar, enerji kristali üretir. Ejderha taşı penceresi açılmaz.
+  Titanyum kemer 105 tavanında giyilmez.
+  Küp, çevrimdışı pazar, efsun botu ve ek envanter açıktır.
+  Simya, omuz kuşağı, aura, tılsım, levelli pet, altıncı ve yedinci efsun, gaya, yansıtma, otomatik av, yardımcı şaman, kyanit ve zodyak kilitlidir.
+  Biyolog 94’te biter.
+  Başlangıç seviyesi seçilmedi. Başlangıçta set, sınırsız pelerin, oto pot, mühürlü binek ve pet vardır.
+  15. seviyenin altındaki oyuncu PvP hedefi olamaz.

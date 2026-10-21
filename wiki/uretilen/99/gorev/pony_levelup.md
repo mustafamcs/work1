@@ -1,0 +1,24 @@
+# pony_levelup
+
+Profil: `99` | Tur: `gorev` | Kimlik: `pony_levelup`
+
+## Oyuncu
+
+- Gorev: `pony_levelup`
+- Tur: at
+- NPC: Seyis
+
+## Sunucu
+
+| Alan | Deger |
+| --- | --- |
+| `dosya` | `horse/pony_levelup.quest` |
+| `state` | `training_frame_red_step9`, `training_frame_red_step8`, `training_frame_red_step7`, `training_frame_red_step6`, `training_frame_red_step5`, `training_frame_red_step4`, `training_frame_red_step3`, `training_frame_red_step2`, `training_frame_red_step1`, `training_frame_blue_step9`, `training_frame_blue_step8`, `training_frame_blue_step7`, `training_frame_blue_step6`, `training_frame_blue_step5`, `training_frame_blue_step4`, `training_frame_blue_step3`, `training_frame_blue_step2`, `training_frame_blue_step1`, `training_frame_yellow_step9`, `training_frame_yellow_step8`, `training_frame_yellow_step7`, `training_frame_yellow_step6`, `training_frame_yellow_step5`, `training_frame_yellow_step4`, `training_frame_yellow_step3`, `training_frame_yellow_step2`, `training_frame_yellow_step1`, `training_frame_purple_step9`, `training_frame_purple_step8`, `training_frame_purple_step7`, `training_frame_purple_step6`, `training_frame_purple_step5`, `training_frame_purple_step4`, `training_frame_purple_step3`, `training_frame_purple_step2`, `training_frame_purple_step1`, `training_frame_white_step9`, `training_frame_white_step8`, `training_frame_white_step7`, `training_frame_white_step6`, `training_frame_white_step5`, `training_frame_white_step4`, `training_frame_white_step3`, `training_frame_white_step2`, `training_frame_white_step1`, `training_frame_sky_step9`, `training_frame_sky_step8`, `training_frame_sky_step7`, `training_frame_sky_step6`, `training_frame_sky_step5`, `training_frame_sky_step4`, `training_frame_sky_step3`, `training_frame_sky_step2`, `training_frame_sky_step1`, `training_desert_red_step4`, `training_desert_red_step3`, `training_desert_red_step2`, `training_desert_red_step1`, `training_desert_blue_step3`, `training_desert_blue_step2`, `training_desert_blue_step1`, `training_desert_yellow_step6`, `training_desert_yellow_step5`, `training_desert_yellow_step4`, `training_desert_yellow_step3`, `training_desert_yellow_step2`, `training_desert_yellow_step1`, `training_desert_purple_step4`, `training_desert_purple_step3`, `training_desert_purple_step2`, `training_desert_purple_step1`, `training_desert_white_step4`, `training_desert_white_step3`, `training_desert_white_step2`, `training_desert_white_step1`, `training_desert_sky_step3`, `training_desert_sky_step2`, `training_desert_sky_step1`, `training_valley_red_step9`, `training_valley_red_step8`, `training_valley_red_step7`, `training_valley_red_step6`, `training_valley_red_step5`, `training_valley_red_step4`, `training_valley_red_step3`, `training_valley_red_step2`, `training_valley_red_step1`, `training_valley_blue_step9`, `training_valley_blue_step8`, `training_valley_blue_step7`, `training_valley_blue_step6`, `training_valley_blue_step5`, `training_valley_blue_step4`, `training_valley_blue_step3`, `training_valley_blue_step2`, `training_valley_blue_step1`, `training_valley_yellow_step9`, `training_valley_yellow_step8`, `training_valley_yellow_step7`, `training_valley_yellow_step6`, `training_valley_yellow_step5`, `training_valley_yellow_step4`, `training_valley_yellow_step3`, `training_valley_yellow_step2`, `training_valley_yellow_step1`, `training_snow_red_step9`, `training_snow_red_step8`, `training_snow_red_step7`, `training_snow_red_step6`, `training_snow_red_step5`, `training_snow_red_step4`, `training_snow_red_step3`, `training_snow_red_step2`, `training_snow_red_step1`, `training_snow_blue_step9`, `training_snow_blue_step8`, `training_snow_blue_step7`, `training_snow_blue_step6`, `training_snow_blue_step5`, `training_snow_blue_step4`, `training_snow_blue_step3`, `training_snow_blue_step2`, `training_snow_blue_step1`, `training_snow_yellow_step9`, `training_snow_yellow_step8`, `training_snow_yellow_step7`, `training_snow_yellow_step6`, `training_snow_yellow_step5`, `training_snow_yellow_step4`, `training_snow_yellow_step3`, `training_snow_yellow_step2`, `training_snow_yellow_step1`, `training1_normal1`, `training1_normal2`, `training1_normal3`, `training1_normal4`, `training2_normal1`, `training2_normal2`, `training2_normal3`, `training2_normal4`, `training3_normal1`, `training3_normal2`, `training3_normal3`, `training3_normal4`, `training1_easy1`, `training1_easy2`, `training1_easy3`, `training1_easy4`, `training2_easy1`, `training2_easy2`, `training2_easy3`, `training2_easy4`, `training3_easy1`, `training3_easy2`, `training3_easy3`, `training3_easy4`, `start`, `need_item50050`, `failure`, `report`, `reward`, `__COMPLETE__` |
+| `olaylar` | `button`, `chat`, `enter`, `info`, `letter`, `target`, `unmount`, `use` |
+| `chat` | `20349` |
+
+<details><summary>Gelistirici</summary>
+
+- Kaynak: `server/share/locale/turkey/quest/horse/pony_levelup.quest`
+- quest_list: etkin
+</details>

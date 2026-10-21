@@ -1,0 +1,43 @@
+uretim zamani: 2026-10-22T00:00:42
+kaynak:
+  item_proto: 10328 vnum + 180 aralik satiri (utf-8)
+  item_names: 10750 satir
+  mob_proto: 2854 satir
+  mob_names: 2866 satir
+  map/index: 74 satir
+  group.txt Vnum: 803 grup
+  quest etkin: 79 dosya
+  dusus vnum kumesi: 592 (bos dosya: mob_drop_item.txt, etc_drop_item.txt, drop_item_group.txt, special_item_group.txt)
+  istemci item_list (Srcs/tr): 11141 vnum
+sayfa:
+  profil 99: 13305 sayfa
+    esya: 10328
+    yaratik: 2854
+    harita: 34
+    zindan: 5
+    gorev: 79
+    biyolog: 1
+    meslek: 4
+    beceri: 0
+    set: 0
+  profil 105: 13319 sayfa
+    esya: 10328
+    yaratik: 2854
+    harita: 44
+    zindan: 9
+    gorev: 79
+    biyolog: 1
+    meslek: 4
+    beceri: 0
+    set: 0
+  profil 120: 13328 sayfa
+    esya: 10328
+    yaratik: 2854
+    harita: 49
+    zindan: 13
+    gorev: 79
+    biyolog: 1
+    meslek: 4
+    beceri: 0
+    set: 0
+kirik bag bulgu: 7863

@@ -1,0 +1,60 @@
+id: 99
+level_cap: 99
+attr_slots: 5
+features:
+  - core
+map_allow:
+  - 1
+  - 21
+  - 41
+  - 4
+  - 24
+  - 44
+  - 250
+  - 3
+  - 23
+  - 43
+  - 64
+  - 63
+  - 61
+  - 65
+  - 62
+  - 69
+  - 70
+  - 67
+  - 68
+  - 71
+  - 104
+  - 107
+  - 108
+  - 109
+  - 66
+  - 72
+  - 73
+  - 208
+  - 81
+  - 112
+  - 113
+  - 181
+  - 182
+  - 183
+exp_mul:
+drop_mul:
+gold_mul:
+start_gear: plus9
+ozet: |
+  99 oldschool’dur. Seviye 99’da biter.
+  Dört meslek vardır: savaşçı, ninja, sura ve şaman. Dal 5. seviyede bir kez seçilir. Beceri tavanı Perfect’tir. Master eşiği 17’dir.
+  Efsun beştir. Taş yuvası üçtür. Basım +0’dan +9’a kadardır. Küp açıktır. Silah ve zırh dönüşümü 80’de biter. 75’lik silah yerinde kalır ve 80’lik dönüşüme girmez. 65’lik silah 80’de durur. Beta tarifi bu profilde basılmaz.
+  Yol üç imparatorluktan geçer: 1. köy, 2. köy, Seungryong, Yongbi, Sohan, Hwang, Doyyumhwan, Yılan Vadisi, Devler Diyarı, maymun zindanı, örümcek 1 ve 2, Şeytan Kulesi, Hayalet Orman, Kızıl Orman ve sürgün.
+  Şeytan Kulesi’ne 40. seviyede girilir. Dokuz kattır. Tepe Azrail’dir. Kule, sürgün ve evlilik oyuncu kanal listesinde durmaz; ışın içeriden yapılır.
+  Maymun zindanı Hasun, Jungsun ve Sangsun’dur. Ortak sahadır.
+  Örümcek 1 ve 2 her oyun kanalındadır. Örümcek 3 kapısı bu profilde açılmaz.
+  Sürgün girişi 75’tir. Boss odası Beran-Setaou’dur.
+  Biyolog kademeleri 30, 40, 50, 60, 70, 80, 85, 90, 92 ve 94’tür. 25’teki bitki görevi bu zincire yazılmaz. 30–90 Chaegirab’dadır. 92 ve 94 Seon-Pyeong’dadır.
+  At, lonca ve evlilik açıktır. Lonca kurma seviyesi 40’tır. Evlilik 25’tir, seviye farkı en çok 15’tir.
+  Çevrimdışı pazar, efsun botu ve ek envanter açıktır. Efsun nesnesi metinden düşer.
+  Simya, kemer, kostüm, enerji, mühürlü pet, omuz kuşağı, aura, tılsım, levelli pet, altıncı ve yedinci efsun, gaya, yansıtma, otomatik av ve yardımcı şaman kilitlidir. Eşya satırı durur, kullanılamaz.
+  Dört 90 saha, katakomb, Razador ve Nemere bu profilin harita listesinde değildir.
+  Başlangıç seviyesi seçilmedi. Varsayılan başlangıç seti +9’dur; yanında başlangıç şebnemi vardır.
+  15. seviyenin altındaki oyuncu PvP hedefi olamaz. Kasılma yavaştır. Oran profil dosyasında, sayı henüz yok. 99 çarpanı 105’ten düşüktür.
