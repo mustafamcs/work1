@@ -1,0 +1,77 @@
+# tools\script — work1 işletim betikleri
+
+Her iş için ayrı `.bat` dosyası. `cmd.exe` ile çalışır, ek bağımlılık yok.
+Tüm yollar `_ayar.bat` içindedir — taşıma durumunda sadece orayı düzenle.
+
+## Gizli (penceresiz) çalıştırma
+
+İki yardımcı VBS var:
+
+- **`_gizli_baslat.vbs`** — betiklerin içinden süreçleri penceresiz başlatır.
+  db/game/mariadbd hiçbir konsol penceresi açmadan arka planda çalışır.
+- **`_gizli.vbs <betik.bat> [arg]`** — herhangi bir betiği **tamamen
+  penceresiz** çalıştırır; çıktı `tools\script\log\<betik>.log`'a yazılır.
+  Örn. `wscript _gizli.vbs 30_hepsini_baslat.bat` — hiçbir pencere açılmaz.
+
+`.bat` dosyasına çift tıklanırsa kendi konsolu kısa süre görünür; hiç
+pencere istemiyorsan `_gizli.vbs` üzerinden çağır (veya ona kısayol koy).
+
+## Süreç açma/kapama (bağımlılık sırasıyla)
+
+| Betik | İş |
+|---|---|
+| `10_mariadb_baslat.bat` | MariaDB'yi süreç olarak başlatır (servis değil, admin gerekmez) |
+| `11_mariadb_durdur.bat` | Önce `mysqladmin shutdown`, yetmezse süreç kapatma |
+| `20_db_baslat.bat` / `21_db_durdur.bat` | `server\db` (db.exe, :30000) |
+| `22_auth_baslat.bat` / `23_auth_durdur.bat` | `server\auth` (game.exe, :30001) |
+| `24_core_baslat.bat` / `25_core_durdur.bat` | `server\channel1\core1` (game.exe, :30003) |
+| `26_ch99_baslat.bat` / `27_ch99_durdur.bat` | `server\channel99` (game.exe, :30901) |
+| `30_hepsini_baslat.bat` | mariadb → db → auth → core → ch99 |
+| `31_hepsini_durdur.bat` | ters sırada hepsini kapatır |
+| `32_hepsini_yeniden.bat` | durdur + başlat |
+| `33_durum.bat` | portlara göre süreç durum tablosu + aktif profil |
+
+Her başlatma betiği port zaten dinleniyorsa "zaten açık" der ve çıkar;
+bağımlı katman kapalıysa önce onu zincirler (`24_core` → db → mariadb).
+
+## Derleme (önce açık çıktı kapatılır, sonra kullanıldığı yere dağıtılır)
+
+| Betik | Önce kapatır | Dağıtım |
+|---|---|---|
+| `40_build_db.bat` | db :30000 | `server\db`, `share\bin` |
+| `41_build_game.bat` | auth/core1/ch99 | `auth`, `channel1\core1`, `channel99`, `share\bin` |
+| `42_build_qc.bat` | qc.exe | `quest\`, `share\bin` |
+| `43_build_hepsi.bat` | hepsi | yukarıdakilerin tümü |
+| `44_build_client.bat` | metin2client.exe | `client\metin2client.exe` |
+
+## Quest
+
+`50_quest_derle.bat` — `quest_list`'teki her `.quest` dosyasını `qc.exe`
+ile derler; sonunda derlenen/hata sayısını verir.
+
+## Profil geçişi (99 / 105 / 120)
+
+`60_profil_99.bat`, `61_profil_105.bat`, `62_profil_120.bat`
+
+Oyun süreçlerini durdurur (MariaDB açık kalır), `active_profile` yazar,
+`core1` ve `ch99` CONFIG'lerindeki `MAP_ALLOW` satırlarını profile göre
+yeniler ve süreçleri geri başlatır.
+
+## Diğer
+
+| Betik | İş |
+|---|---|
+| `70_istemci_baslat.bat` | `client\metin2client.exe` (yoksa `Launcher.exe`) — görünür pencere |
+| `71_paket_repack.bat <paket>` | istemciyi kapatır, `Srcs\Pack\<paket>` → PackMakerLite → `client\pack\`, artık dosya bırakmaz |
+| `72_wiki_uret.bat` | `tools\wiki-uret\uret.py` (python gerekir) |
+| `73_sql_import.bat` | `sql\schema.sql` içe aktarımı (mariadb açık olmalı) |
+
+## Tipik akışlar
+
+```
+wscript _gizli.vbs 30_hepsini_baslat.bat   REM sunucuyu sessizce ac
+33_durum.bat                               REM durumu gor
+61_profil_105.bat                          REM midschool profiline gec
+43_build_hepsi.bat                         REM derle + dagit
+wscript _gizli.vbs 31_hepsini_durdur.bat   REM hepsini sessizce kapat
+```

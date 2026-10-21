@@ -1,0 +1,29 @@
+@echo off
+title work1 - profil 120 (newschool)
+call "%~dp0_ayar.bat"
+
+echo oyun surecleri durduruluyor (mariadb acik kalir)...
+call "%~dp027_ch99_durdur.bat"  >nul 2>&1
+call "%~dp025_core_durdur.bat"  >nul 2>&1
+call "%~dp023_auth_durdur.bat"  >nul 2>&1
+call "%~dp021_db_durdur.bat"    >nul 2>&1
+
+echo 120> "%KOK%\active_profile"
+
+call :mapallow "%SRV%\channel1\core1" "1 21 41 4 24 44 250 3 23 43 64 63 61 65 62 69 70 67 68 71 104 107 108 109 217 301 302 303 304"
+call :mapallow "%SRV%\channel99"      "66 72 73 208 81 112 113 181 182 183 216 351 352 364 367 210 212 355 356 358"
+
+echo profil 120 yazildi, surecler geri baslatiliyor...
+call "%~dp020_db_baslat.bat"    >nul 2>&1
+call "%~dp022_auth_baslat.bat"  >nul 2>&1
+call "%~dp024_core_baslat.bat"  >nul 2>&1
+call "%~dp026_ch99_baslat.bat"  >nul 2>&1
+call "%~dp033_durum.bat"
+exit /b 0
+
+:mapallow
+cd /d "%~1"
+findstr /v /i "MAP_ALLOW" CONFIG > CONFIG.tmp
+echo MAP_ALLOW: %~2>> CONFIG.tmp
+move /y CONFIG.tmp CONFIG >nul
+exit /b 0
