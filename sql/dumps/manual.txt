@@ -1,0 +1,17 @@
+#MARIA DB
+#Primero ejecuta sh run.sh y después pega el contenido de este archivo en la consola
+
+########Establecer contraseña y permisos a root
+
+mysql -u root
+UPDATE user SET password=PASSWORD('your_password') WHERE user='root'; #cambiar your_password
+##### Permisos localhost
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'your_password'; #cambiar your_password
+########
+
+##### Permisos a todos los hosts
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'your_password'; #cambiar your_password
+#
+
+FLUSH PRIVILEGES;
+quit
