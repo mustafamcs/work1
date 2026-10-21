@@ -1,0 +1,5 @@
+﻿[DELAY value;0]
+Ölen petini tanrısal protein lokması ve ölen peti[ENTER]
+birleştirerek diriltebilirsin. \n[ENTER]
+Gerekli olan eşyaların sayısı petinin yaşına bağlıdır. \n[ENTER]
+Ölen pet, orijinal yaşının %80'inde dirilir. \n

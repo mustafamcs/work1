@@ -1,0 +1,23 @@
+ACCE_REFINE_COST	Absorption price: %d
+ACCE_ABSORB_CHANCE	Absorption rate: %d%%
+ACCE_ABSORB_CHANCE2	Absorption rate: %d%% ~ %d%%
+ACCE_DO_YOU_CLEAN	Do you want to remove all available bonuses?
+ACCE_FAILURE_CLEAN	No bonuses can be taken away.
+UI_BOLD_FONT	Tahoma:12b
+UI_BOLD_FONT_LARGE	Tahoma:14b
+UI_BOLD_FONT_SMALL	Tahoma:9b
+UI_NORMAL_FONT	Tahoma:12
+UI_NORMAL_FONT_LARGE	Tahoma:14
+UI_NORMAL_FONT_SMALL	Tahoma:9
+UI_ITALIC_FONT	Tahoma:12i
+UI_ITALIC_FONT_LARGE	Tahoma:14i
+UI_ITALIC_FONT_SMALL	Tahoma:9i
+UI_STRIKE_FONT	Tahoma:12s
+UI_STRIKE_FONT_LARGE	Tahoma:14s
+UI_STRIKE_FONT_SMALL	Tahoma:9s
+UI_UNDER_FONT	Tahoma:12u
+UI_UNDER_FONT_LARGE	Tahoma:14u
+UI_UNDER_FONT_SMALL	Tahoma:9u
+TOOLTIP_TIPS_SPLIT_ITEM	{} + {} Split Item
+DO_YOU_SELL_ITEM1	Do you want to sell %s for %s Yang?
+DO_YOU_SELL_ITEM2	Do you want to sell %s (%s lots) for %s Yang?
