@@ -10,71 +10,70 @@
 // =========================================================================
 
 //////////////////////////////////////////////////////////////////////////
-// ### Default Ymir Macros ###
+// ### Dil ve Bolge ###
 #define LOCALE_SERVICE_EUROPE
-#define ENABLE_COSTUME_SYSTEM
-#define ENABLE_ENERGY_SYSTEM
-#define ENABLE_DRAGON_SOUL_SYSTEM
-#define ENABLE_NEW_EQUIPMENT_SYSTEM
+#define ENABLE_LOCALE_EX
+#define ENABLE_LOCALE_COMMON
+#define ENABLE_TRANSLATE_LUA
+#define __BL_CLIENT_LOCALE_STRING__
+#define __BL_MULTI_LANGUAGE__
+#define __BL_MULTI_LANGUAGE_PREMIUM__
+#define __BL_MULTI_LANGUAGE_ULTIMATE__
+// #define LOCALE_SERVICE_GLOBAL
+// #define LOCALE_SERVICE_JAPAN
+// #define LOCALE_SERVICE_WE_JAPAN
+// #define LOCALE_SERVICE_YMIR
+// #define LOCALE_SERVICE_VIETNAM_MILD
+// #define LOCALE_SERVICE_STAGE_DEVELOPMENT
+// #define LOCALE_SERVICE_STAGE_TEST
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Standard Features ###
+// ### Ag ve Paket ###
+#define __UDP_BLOCK__
+#define ENABLE_PORT_SECURITY
+#define ENABLE_LARGE_DYNAMIC_PACKETS
 //#define _IMPROVED_PACKET_ENCRYPTION_
 #ifdef _IMPROVED_PACKET_ENCRYPTION_
 #define USE_IMPROVED_PACKET_DECRYPTED_BUFFER
 #endif
-#define __UDP_BLOCK__
-//#define ENABLE_QUEST_CATEGORY
+// #define ENABLE_SEQUENCE_SYSTEM
+#define ENABLE_AUTODETECT_INTERNAL_IP
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Ortak Sistemler ###
-#define ENABLE_NO_MOUNT_CHECK
-#define ENABLE_D_NJGUILD
-#define ENABLE_FULL_NOTICE
-#define ENABLE_NEWSTUFF
-#define ENABLE_PORT_SECURITY
-#define ENABLE_BELT_INVENTORY_EX
-#define ENABLE_CMD_WARP_IN_DUNGEON
-// #define ENABLE_ITEM_ATTR_COSTUME
-// #define ENABLE_SEQUENCE_SYSTEM
+// ### Veritabani / Proto ###
+#define ENABLE_PROTO_FROM_DB
+#ifdef ENABLE_PROTO_FROM_DB
+#define ENABLE_AUTODETECT_VNUMRANGE
+#endif
+#define ENABLE_PROTOSTRUCT_AUTODETECT
+#define ENABLE_NUMERIC_FIELD
+#define ENABLE_EXPTABLE_FROMDB
+#define ENABLE_ITEMAWARD_REFRESH
+#define ENABLE_DEFAULT_PRIV
+#define ENABLE_DB_SQL_LOG
+// #define ENABLE_SPAMDB_REFRESH
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Karakter ve Oyuncu ###
 // Karakter yuvasi 4. pid5 acilmaz.
 // #define ENABLE_PLAYER_PER_ACCOUNT5
-#define ENABLE_DICE_SYSTEM
-#define ENABLE_DS_GRADE_MYTH
-#define ENABLE_EXTEND_INVEN_SYSTEM
-#define ENABLE_MOUNT_COSTUME_SYSTEM
-#define ENABLE_WEAPON_COSTUME_SYSTEM
-#define ENABLE_QUEST_DIE_EVENT
-#define ENABLE_QUEST_BOOT_EVENT
-#define ENABLE_QUEST_DND_EVENT
-#define ENABLE_PET_SYSTEM_EX
-#define ENABLE_SKILL_FLAG_PARTY
-#define ENABLE_NO_DSS_QUALIFICATION
-// #define ENABLE_NO_SELL_PRICE_DIVIDED_BY_5
-#define ENABLE_CHECK_SELL_PRICE
-#define ENABLE_GOTO_LAG_FIX
-#define ENABLE_MOUNT_COSTUME_EX_SYSTEM
-#define ENABLE_PENDANT_SYSTEM
-// Eldiven uc profilde de yok.
-// #define ENABLE_GLOVE_SYSTEM
-#define ENABLE_MOVE_CHANNEL
-#define ENABLE_QUIVER_SYSTEM
-#define ENABLE_REDUCED_ENTITY_VIEW
-#define ENABLE_GUILD_TOKEN_AUTH
-#define ENABLE_DB_SQL_LOG
-
-#define __PET_SYSTEM__
-#ifdef __PET_SYSTEM__
-#define USE_ACTIVE_PET_SEAL_EFFECT
-#define PET_SEAL_ACTIVE_SOCKET_IDX 2
-#define USE_PET_SEAL_ON_LOGIN
-#endif
-
-enum eCommonDefines {
-	MAP_ALLOW_LIMIT = 32, // 32 default
-};
+#define ENABLE_LEVEL_IN_TRADE
+#define ENABLE_RACE_HEIGHT
+#define ENABLE_GM_FLAG_IF_TEST_SERVER
+#define ENABLE_GM_FLAG_FOR_LOW_WIZARD
+#define ENABLE_CANSEEHIDDENTHING_FOR_GM
+#define ENABLE_STATPLUS_NOLIMIT
+#define ENABLE_SET_STATE_WITH_TARGET
+// #define ENABLE_ANTI_CMD_FLOOD
+#define ENABLE_CHECK_GHOSTMODE
+		// #define ENABLE_TP_SPEED_CHECK
+// #define ENABLE_ACCOUNT_W_SPECIALCHARS
+// #define ENABLE_LOCALECHECK_CHANGENAME
+#define DISABLE_STOP_RIDING_WHEN_DIE //	olunce at/binek dusmez
+//#define ENABLE_LIMIT_TIME
 
 //#define ENABLE_WOLFMAN_CHARACTER
 //#ifdef ENABLE_WOLFMAN_CHARACTER
@@ -86,7 +85,24 @@ enum eCommonDefines {
 //#define USE_WOLFMAN_STONES
 //#define USE_WOLFMAN_BOOKS
 //#endif
+// #define USE_LYCAN_CREATE_POSITION
+//////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////
+// ### Savas ve Yetenek ###
+#define ENABLE_DICE_SYSTEM
+#define ENABLE_EFFECT_PENETRATE
+#define ENABLE_NEWEXP_CALCULATION
+#define ENABLE_EFFECT_EXTRAPOT
+#define ENABLE_FORCE2MASTERSKILL
+#define ENABLE_SKILL_COOLDOWN_CHECK
+#define ENABLE_SKILL_FLAG_PARTY
+#define ENABLE_ELEMENTAL_TARGET
+// #define ENABLE_NULLIFYAFFECT_LIMIT
+// #define ENABLE_MASTER_SKILLBOOK_NO_STEPS
+// #define ENABLE_IMMUNE_PERC
+// #define ENABLE_NO_DAMAGE_QUEST_RUNNING
+#define ENABLE_KILL_EVENT_FIX // kill lua event 0 exp fix (onerilen)
 // #define ENABLE_MAGIC_REDUCTION_SYSTEM
 #ifdef ENABLE_MAGIC_REDUCTION_SYSTEM
 // #define USE_MAGIC_REDUCTION_STONES
@@ -94,62 +110,86 @@ enum eCommonDefines {
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Client Ozellikleri ###
-#define ENABLE_PACK_GET_CHECK
-#define ENABLE_CANSEEHIDDENTHING_FOR_GM
-#define ENABLE_PROTOSTRUCT_AUTODETECT
-#define ENABLE_LEVEL_IN_TRADE
-#define ENABLE_LVL115_ARMOR_EFFECT
+// ### Esya ve Envanter ###
+#define ENABLE_NEW_EQUIPMENT_SYSTEM
+#define ENABLE_EXTEND_INVEN_SYSTEM
+#define ENABLE_BELT_INVENTORY_EX
 #define ENABLE_SLOT_WINDOW_EX
-#define ENABLE_TEXT_LEVEL_REFRESH
-#define ENABLE_USE_COSTUME_ATTR
-#define ENABLE_DISCORD_RPC
-#define ENABLE_LOCALE_EX
-#define ENABLE_RACE_HEIGHT
-#define ENABLE_ELEMENTAL_TARGET
-#define ENABLE_INGAME_CONSOLE
-#define ENABLE_4TH_AFF_SKILL_DESC
-#define ENABLE_LOCALE_COMMON
-#define ENABLE_CONQUEROR_UI
-
-#define ENABLE_NEW_EVENT_STRUCT
-#ifdef ENABLE_NEW_EVENT_STRUCT
-#define USE_NEW_EVENT_TEXT_AUTO_Y
-#endif
-
-#define WJ_SHOW_MOB_INFO
-#ifdef WJ_SHOW_MOB_INFO
-#define ENABLE_SHOW_MOBAIFLAG
-#define ENABLE_SHOW_MOBLEVEL
-#define WJ_SHOW_MOB_INFO_EX
-#endif
-//////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////
-// ### Extended Features ###
-#define DISABLE_STOP_RIDING_WHEN_DIE //	if DISABLE_TOP_RIDING_WHEN_DIE is defined, the player doesn't lose the horse after dying
-#define ENABLE_ACCE_COSTUME_SYSTEM //fixed version
-#ifdef ENABLE_ACCE_COSTUME_SYSTEM
-// #define USE_ACCE_ABSORB_WITH_NO_NEGATIVE_BONUS //enable only positive bonus in acce absorb
-#endif
-// if you want use SetMouseWheelScrollEvent or you want use mouse wheel to move the scrollbar
-#define ENABLE_MOUSEWHEEL_EVENT
-// if you want to see highlighted a new item when dropped or when exchanged
-#define ENABLE_HIGHLIGHT_NEW_ITEM
-// it shows emojis in the textlines
-#define ENABLE_EMOJI_SYSTEM
-// effects while hidden won't show up
-#define __ENABLE_STEALTH_FIX__
-// circle dots in minimap instead of squares
-#define ENABLE_MINIMAP_WHITEMARK_CIRCLE
-#define ENABLE_MINIMAP_TELEPORT_CLICK // click on minimap as gm to warp directly
-#define ENABLE_KILL_EVENT_FIX //if you want to fix the 0 exp problem about the when kill lua event (recommended)
-// #define ENABLE_SYSLOG_PACKET_SENT // debug purposes
-
-#define ENABLE_EXTEND_ITEM_AWARD //slight adjustement
+#define ENABLE_PENDANT_SYSTEM
+// Eldiven uc profilde de yok.
+// #define ENABLE_GLOVE_SYSTEM
+#define ENABLE_QUIVER_SYSTEM
+// #define ENABLE_ITEM_ATTR_COSTUME
+#define ENABLE_ITEM_PROTO_MAP
+#define ENABLE_ITEM_RARE_ATTR_LEVEL_PCT
+#define ENABLE_UNIQUE_ITEM_AUTOSPLIT
+#define ENABLE_ADDSTONE_FAILURE
+#define ENABLE_BOOKS_STACKFIX
+#define ENABLE_IMMUNE_FIX
+// #define ENABLE_FIREWORK_STUN
+#define ENABLE_HIGHLIGHT_NEW_ITEM // yeni dusen/takas esyasi vurgu
+#define ENABLE_EXTEND_ITEM_AWARD
 #ifdef ENABLE_EXTEND_ITEM_AWARD
-	// #define USE_ITEM_AWARD_CHECK_ATTRIBUTES //it prevents bonuses higher than item_attr lvl1-lvl5 min-max range limit
+	// #define USE_ITEM_AWARD_CHECK_ATTRIBUTES // item_attr lvl1-5 min-max limiti asimini engeller
 #endif
+#define ENABLE_NO_PICKUP_LIMIT
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Kostum ve Gorunum ###
+#define ENABLE_COSTUME_SYSTEM
+#define ENABLE_MOUNT_COSTUME_SYSTEM
+#define ENABLE_MOUNT_COSTUME_EX_SYSTEM
+#define ENABLE_WEAPON_COSTUME_SYSTEM
+#define ENABLE_USE_COSTUME_ATTR
+#define ENABLE_ACCE_COSTUME_SYSTEM // omuz sasi (sabit surum)
+#ifdef ENABLE_ACCE_COSTUME_SYSTEM
+// #define USE_ACCE_ABSORB_WITH_NO_NEGATIVE_BONUS // sadece pozitif bonus absorbe
+#endif
+#define ENABLE_LVL115_ARMOR_EFFECT
+#define ENABLE_HAIR_SPECULAR
+// #define USE_WEAPON_COSTUME_WITH_EFFECT
+// #define USE_BODY_COSTUME_WITH_EFFECT
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Ejderha Ruhu ###
+#define ENABLE_DRAGON_SOUL_SYSTEM
+#define ENABLE_DS_GRADE_MYTH
+#define ENABLE_NO_DSS_QUALIFICATION
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Pet ve Binek ###
+#define ENABLE_ENERGY_SYSTEM
+#define ENABLE_PET_SYSTEM_EX
+#define __PET_SYSTEM__
+#ifdef __PET_SYSTEM__
+#define USE_ACTIVE_PET_SEAL_EFFECT
+#define PET_SEAL_ACTIVE_SOCKET_IDX 2
+#define USE_PET_SEAL_ON_LOGIN
+#endif
+#define ENABLE_NO_MOUNT_CHECK
+// #define ENABLE_MOUNT_ENTITY_REFRESH
+// #define ENABLE_INFINITE_HORSE_HEALTH_STAMINA
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Ekonomi ve Dukkan ###
+#define FULL_YANG        // long long yang destegi (server)
+#define ENABLE_FULL_YANG // client tarafi
+#define ENABLE_CHECK_SELL_PRICE
+// #define ENABLE_NO_SELL_PRICE_DIVIDED_BY_5
+#define ENABLE_OPEN_SHOP_WITH_ARMOR
+#define ENABLE_NEWSTUFF
+
+#define ENABLE_IKASHOP_RENEWAL
+#define EXTEND_IKASHOP_PRO
+#define EXTEND_IKASHOP_ULTIMATE
+#define ENABLE_IKASHOP_ENTITIES
+// #define ENABLE_IKASHOP_GM_PROTECTION
+// #define ENABLE_PC_OPENSHOP
+//#define ENABLE_SHOP_BLACKLIST
 
 // Won / cheque yok. Yang bigint. Ikinci para kolonu acilmaz.
 // #define ENABLE_CHEQUE_SYSTEM
@@ -160,122 +200,119 @@ enum eCommonDefines {
 #endif
 //////////////////////////////////////////////////////////////////////////
 
-#define ENABLE_TARGET_INFORMATION_SYSTEM					// Mop Drop Info / Mob info
-
-#define FULL_YANG // Enable support for yang type long long (server tarafi)
-#define ENABLE_FULL_YANG // client tarafi
-
-#define __BL_CLIENT_LOCALE_STRING__
-#define __BL_MULTI_LANGUAGE__
-#define __BL_MULTI_LANGUAGE_PREMIUM__
-#define __BL_MULTI_LANGUAGE_ULTIMATE__
-#define ENABLE_GF_ATLAS_MARK_INFO // https://metin2.dev/topic/23474-gf-loadatlasmarkinfo/
-
-#define ENABLE_IKASHOP_RENEWAL
-#define EXTEND_IKASHOP_PRO
-#define EXTEND_IKASHOP_ULTIMATE
-#define ENABLE_LARGE_DYNAMIC_PACKETS
-#define ENABLE_IKASHOP_ENTITIES
-
-// for debug: print received packets
-// #define ENABLE_PRINT_RECV_PACKET_DEBUG
+//////////////////////////////////////////////////////////////////////////
+// ### Lonca ve Sosyal ###
+#define ENABLE_GUILD_TOKEN_AUTH
+#define ENABLE_GUILD_COMMENT_ANTIFLOOD
+#define ENABLE_D_NJGUILD
+// #define ENABLE_NEWGUILDMAKE
+#define ENABLE_PARTYKILL
+//////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Client Ayarlari ###
-#define ENABLE_CRASH_MINIDUMP
-//#define USE_CRAMERS_RULE
+// ### Sohbet ###
+#define ENABLE_CHAT_COLOR_SYSTEM
+#define ENABLE_CHAT_LOGGING
+#define ENABLE_CHAT_SPAMLIMIT
+#define ENABLE_WHISPER_CHAT_SPAMLIMIT
+#define ENABLE_FULL_NOTICE
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Gorev ve Event ###
+//#define ENABLE_QUEST_CATEGORY
+#define ENABLE_QUEST_DIE_EVENT
+#define ENABLE_QUEST_BOOT_EVENT
+#define ENABLE_QUEST_DND_EVENT
+#define ENABLE_NEW_EVENT_STRUCT
+#ifdef ENABLE_NEW_EVENT_STRUCT
+#define USE_NEW_EVENT_TEXT_AUTO_Y
+#endif
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Harita, Dunya ve Toplayicilik ###
+enum eCommonDefines {
+	MAP_ALLOW_LIMIT = 32, // 32 default
+};
+#define ENABLE_MOVE_CHANNEL
+#define ENABLE_REDUCED_ENTITY_VIEW
+#define ENABLE_GOHOME_IF_MAP_NOT_ALLOWED
+#define ENABLE_GOHOME_IF_MAP_NOT_EXIST
+#define ENABLE_GOTO_LAG_FIX
+#define ENABLE_CMD_WARP_IN_DUNGEON
+#define ENABLE_FISHINGROD_RENEWAL
+#define ENABLE_PICKAXE_RENEWAL
+#define ENABLE_TARGET_INFORMATION_SYSTEM // Mob drop info
+#define WJ_SHOW_MOB_INFO
+#ifdef WJ_SHOW_MOB_INFO
+#define ENABLE_SHOW_MOBAIFLAG
+#define ENABLE_SHOW_MOBLEVEL
+#define WJ_SHOW_MOB_INFO_EX
+#endif
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Istemci Arayuz ve Gorsel ###
+#define ENABLE_DISCORD_RPC
+#define ENABLE_EMOJI_SYSTEM
+#define ENABLE_MOUSEWHEEL_EVENT
+#define ENABLE_MINIMAP_WHITEMARK_CIRCLE
+#define ENABLE_MINIMAP_TELEPORT_CLICK // gm minimap tikla-isinlan
+#define ENABLE_INGAME_CONSOLE
+#define ENABLE_CONQUEROR_UI
+#define ENABLE_4TH_AFF_SKILL_DESC
+#define ENABLE_TEXT_LEVEL_REFRESH
+#define ENABLE_GF_ATLAS_MARK_INFO
+#define ENABLE_ATLASINFO_FROM_ROOT
+#define __ENABLE_STEALTH_FIX__ // gizliyken efektler gorunmez
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Paket/Dosya Okuma (client) ###
+#define ENABLE_PACK_GET_CHECK
 #define ENABLE_CRC32_CHECK
-#define ENABLE_HAIR_SPECULAR
+#define ENABLE_LOAD_ITEM_LIST_FROM_ROOT
+#define ENABLE_LOAD_ITEM_SCALE_FROM_ROOT
+#define ENABLE_LOAD_SKILL_TABLE_FROM_ROOT
+#define ENABLE_LOAD_ALTER_ITEMICON
+#define ENABLE_SKIN_EXTENDED
+#define ENABLE_WALK_RUN_ANI_ALTERNATIVE
 #define ENABLE_NPC_WITHOUT_COLLISIONS
 #ifndef ENABLE_NPC_WITHOUT_COLLISIONS
 #define ENABLE_PETS_WITHOUT_COLLISIONS
 #define ENABLE_SHOPS_WITHOUT_COLLISIONS
 #define ENABLE_MOUNTS_WITHOUT_COLLISIONS
 #endif
-#define ENABLE_WALK_RUN_ANI_ALTERNATIVE
-#define ENABLE_LOAD_ALTER_ITEMICON
-//#define USE_LEVEL
-// #define ENABLE_FOG_LOAD
-#define ENABLE_SKIN_EXTENDED
-// #define USE_SPEEDGRASS   // Constants.h hicbir yerde include edilmiyor - orijinalde kapaliydi
-// #define ENABLE_SIMPLE_REFINED_EFFECT_CHECK
-// #define USE_WEAPON_COSTUME_WITH_EFFECT
-// #define USE_BODY_COSTUME_WITH_EFFECT
-#define ENABLE_LOAD_ITEM_LIST_FROM_ROOT
-#define ENABLE_LOAD_ITEM_SCALE_FROM_ROOT
-#define ENABLE_LOAD_SKILL_TABLE_FROM_ROOT
-#define ENABLE_ATLASINFO_FROM_ROOT
 // #define ENABLE_NEW_MOB_PROTO_STRUCT_20141125	// bleeding resistance 2014/11/25
 // #define ENABLE_NEW_MOB_PROTO_STRUCT_20151020	// claw resistance 2015/10/20
-#define ENABLE_NO_PICKUP_LIMIT
+// #define ENABLE_FOG_LOAD
+//#define USE_LEVEL
+//#define USE_CRAMERS_RULE
+// #define USE_SPEEDGRASS   // Constants.h hicbir yerde include edilmiyor - orijinalde kapaliydi
+// #define ENABLE_SIMPLE_REFINED_EFFECT_CHECK
+//////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+// ### Guvenlik ve Anti-Hile ###
 #define ENABLE_PYLIB_CHECK
 #define ENABLE_MILES_CHECK
 // #define ENABLE_DAEMONPROTECTION
+//////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Server Ayarlari ###
-#define ENABLE_DEFAULT_PRIV
-#define ENABLE_ITEMAWARD_REFRESH
-#define ENABLE_PROTO_FROM_DB
-#ifdef ENABLE_PROTO_FROM_DB
-#define ENABLE_AUTODETECT_VNUMRANGE
-#endif
-#define ENABLE_NUMERIC_FIELD
-// #define ENABLE_SHOWNPCLEVEL
-#define ENABLE_GM_FLAG_IF_TEST_SERVER
-#define ENABLE_GM_FLAG_FOR_LOW_WIZARD
-#define ENABLE_GOHOME_IF_MAP_NOT_ALLOWED
-// #define ENABLE_MOUNT_ENTITY_REFRESH
-// #define ENABLE_ANTI_CMD_FLOOD
-#define ENABLE_OPEN_SHOP_WITH_ARMOR
-#define ENABLE_SKILL_COOLDOWN_CHECK
-#define ENABLE_EFFECT_PENETRATE
-#define ENABLE_NEWEXP_CALCULATION
-// #define ENABLE_NO_DAMAGE_QUEST_RUNNING
-#define ENABLE_EFFECT_EXTRAPOT
-#define ENABLE_BOOKS_STACKFIX
-#define ENABLE_ITEM_RARE_ATTR_LEVEL_PCT
-#define ENABLE_UNIQUE_ITEM_AUTOSPLIT
-// #define ENABLE_FIREWORK_STUN
-#define ENABLE_ADDSTONE_FAILURE
-// #define ENABLE_IMMUNE_PERC
-#define ENABLE_FORCE2MASTERSKILL
-// #define ENABLE_NULLIFYAFFECT_LIMIT
-// #define ENABLE_MASTER_SKILLBOOK_NO_STEPS
-// #define ENABLE_BLOCK_CMD_SHORTCUT
-#define ENABLE_CMD_IPURGE_EX
-#define ENABLE_SET_STATE_WITH_TARGET
-#define ENABLE_STATPLUS_NOLIMIT
-#define ENABLE_AUTODETECT_INTERNAL_IP
+// ### GM ve Debug ###
 #define ENABLE_CMD_PLAYER
-#define ENABLE_EXPTABLE_FROMDB
+#define ENABLE_CMD_IPURGE_EX
 // #define ENABLE_GENERAL_CMD
 // #define ENABLE_GENERAL_CONFIG
-// #define ENABLE_SPAMDB_REFRESH
+// #define ENABLE_BLOCK_CMD_SHORTCUT
+// #define ENABLE_SHOWNPCLEVEL
+#define ENABLE_CRASH_MINIDUMP
 // #define DEBUG_ALLOC                  // debug allocator/DebugPtr sistemi (acinca USE_DEBUG_PTR otomatik gelir)
-#define ENABLE_FISHINGROD_RENEWAL
-#define ENABLE_GUILD_COMMENT_ANTIFLOOD
-// #define ENABLE_NEWGUILDMAKE
-// #define ENABLE_INFINITE_HORSE_HEALTH_STAMINA
-// #define ENABLE_IKASHOP_GM_PROTECTION
-// #define ENABLE_ACCOUNT_W_SPECIALCHARS
-#define ENABLE_GOHOME_IF_MAP_NOT_EXIST
-// #define USE_LYCAN_CREATE_POSITION
-#define ENABLE_CHAT_COLOR_SYSTEM
-#define ENABLE_CHAT_LOGGING
-#define ENABLE_CHAT_SPAMLIMIT
-#define ENABLE_WHISPER_CHAT_SPAMLIMIT
-#define ENABLE_CHECK_GHOSTMODE
-		// #define ENABLE_TP_SPEED_CHECK
-#define ENABLE_IMMUNE_FIX
-#define ENABLE_ITEM_PROTO_MAP
-//#define ENABLE_LIMIT_TIME
-#define ENABLE_PICKAXE_RENEWAL
-#define ENABLE_TRANSLATE_LUA
-// #define ENABLE_LOCALECHECK_CHANGENAME
-// #define ENABLE_PC_OPENSHOP
-#define ENABLE_PARTYKILL
-//#define ENABLE_SHOP_BLACKLIST
+// #define ENABLE_SYSLOG_PACKET_SENT // debug purposes
+// #define ENABLE_PRINT_RECV_PACKET_DEBUG // gelen paketleri yazdir
+//////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
 // ### Pack/Python Ayarlari ###
@@ -389,13 +426,6 @@ enum eCommonDefines {
 // #define ENABLE_ADDITIONAL_EQUIPMENT_PAGE
 // #define ENABLE_SERVER_SELECT_RENEWAL
 // #define ENABLE_PREMIUM_PRIVATE_SHOP
-// #define LOCALE_SERVICE_GLOBAL
-// #define LOCALE_SERVICE_JAPAN
-// #define LOCALE_SERVICE_STAGE_DEVELOPMENT
-// #define LOCALE_SERVICE_STAGE_TEST
-// #define LOCALE_SERVICE_VIETNAM_MILD
-// #define LOCALE_SERVICE_WE_JAPAN
-// #define LOCALE_SERVICE_YMIR
 // #define USE_OPENID
 // #define USE_RELATIVE_PATH
 // #define __BL_CLIP_MASK__
