@@ -123,7 +123,7 @@ def minmax(tmin, tmid, tmax):
 def intWithCommas(x, commasign='.'):
 	# alternative of
 	# return '{0:,}'.format(x).replace(',', commasign)
-	if tip(x) not in [tip(0), tip(0L)]:
+	if type(x) not in [type(0), type(0L)]:
 		raise TypeError("Parameter must be an integer.")
 	if x < 0:
 		return '-' + intWithCommas(-x, commasign)
@@ -322,14 +322,14 @@ def GET_ACCESSORY_MATERIAL_VNUM(vnum, subType):
 		EAR_ITEM_VNUM_BASE = 17000
 		ret -= EAR_ITEM_VNUM_BASE
 
-	tip = ret/20
+	type = ret/20
 
-	if tip<0 or tip>=len(ACCESSORY_MATERIAL_LIST):
-		tip = (ret-170) / 20
-		if tip<0 or tip>=len(ACCESSORY_MATERIAL_LIST):
+	if type<0 or type>=len(ACCESSORY_MATERIAL_LIST):
+		type = (ret-170) / 20
+		if type<0 or type>=len(ACCESSORY_MATERIAL_LIST):
 			return 0
 
-	return ACCESSORY_MATERIAL_LIST[tip]
+	return ACCESSORY_MATERIAL_LIST[type]
 
 ##################################################################
 

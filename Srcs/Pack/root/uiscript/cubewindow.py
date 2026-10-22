@@ -22,7 +22,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "expanded_image",
+			"type" : "expanded_image",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -38,7 +38,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 5,
@@ -49,14 +49,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.CUBE_TITLE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.CUBE_TITLE, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Cube Slot
 				{
 					"name" : "CubeSlot",
-					"tip" : "grid_table",
+					"type" : "grid_table",
 
 					"x" : 14,
 					"y" : 364,
@@ -72,7 +72,7 @@ window = {
 				## Print
 				{
 					"name" : "NeedMoney",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 20,
 					"y" : 468,
@@ -87,7 +87,7 @@ window = {
 
 				{
 					"name" : "contentScrollbar",
-					"tip" : "thin_scrollbar",
+					"type" : "thin_scrollbar",
 
 					"x" : 253,
 					"y" : 38,
@@ -98,7 +98,7 @@ window = {
 				# Cube Result List. 1 ~ 3
 				{
 					"name" : "result1board",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 25,
 					"y" : 41,
@@ -110,7 +110,7 @@ window = {
 					(
 						{
 							"name" : "result1",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -123,7 +123,7 @@ window = {
 						},
 						{
 							"name" : "material11",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -136,7 +136,7 @@ window = {
 						},
 						{
 							"name" : "material12",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -149,7 +149,7 @@ window = {
 						},
 						{
 							"name" : "material13",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -162,7 +162,7 @@ window = {
 						},
 						{
 							"name" : "material14",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -175,7 +175,7 @@ window = {
 						},
 						{
 							"name" : "material15",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -191,7 +191,7 @@ window = {
 				},
 				{
 					"name" : "result2board",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 25,
 					"y" : 147,
@@ -203,7 +203,7 @@ window = {
 					(
 						{
 							"name" : "result2",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -216,7 +216,7 @@ window = {
 						},
 						{
 							"name" : "material21",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -229,7 +229,7 @@ window = {
 						},
 						{
 							"name" : "material22",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -242,7 +242,7 @@ window = {
 						},
 						{
 							"name" : "material23",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -255,7 +255,7 @@ window = {
 						},
 						{
 							"name" : "material24",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -268,7 +268,7 @@ window = {
 						},
 						{
 							"name" : "material25",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -283,7 +283,7 @@ window = {
 				},
 				{
 					"name" : "result3board",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 25,
 					"y" : 253,
@@ -295,7 +295,7 @@ window = {
 					(
 						{
 							"name" : "result3",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -308,7 +308,7 @@ window = {
 						},
 						{
 							"name" : "material31",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -321,7 +321,7 @@ window = {
 						},
 						{
 							"name" : "material32",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -334,7 +334,7 @@ window = {
 						},
 						{
 							"name" : "material33",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -347,7 +347,7 @@ window = {
 						},
 						{
 							"name" : "material34",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -360,7 +360,7 @@ window = {
 						},
 						{
 							"name" : "material35",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"start_index" : 0,
 
 							"x_count" : 1,
@@ -378,7 +378,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 148,
 					"y" : 32,
@@ -392,7 +392,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 211,
 					"y" : 32,

@@ -17,7 +17,7 @@ window = {
 		# güç
 		{
 			"name" : "EnergyGauge_Board",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 0,
 			"y" : -10 + Y_ADD_POSITION,
@@ -28,7 +28,7 @@ window = {
 			(
 				{
 					"name" : "EnergyGauge_Empty",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 5,
 					"y" : 8,
@@ -37,7 +37,7 @@ window = {
 				},
 				{
 					"name" : "EnergyGauge_Hungry",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 5,
 					"y" : 8,
@@ -46,7 +46,7 @@ window = {
 				},
 				{
 					"name" : "EnergyGauge_Full",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 5,
 					"y" : 8,
@@ -63,7 +63,7 @@ window = {
 			
 			"width"  : 50,
 			"height" : 10,		
-			"tip" : "window",
+			"type" : "window",
 		},		
 	),
 }

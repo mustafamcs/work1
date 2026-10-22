@@ -238,14 +238,14 @@ class CharacterDetailsUI(ui.ScriptWindow):
 			idx = i + self.ScollPos
 
 			text = self.InfoList[idx][self.INFO_TEXT]
-			tip = self.InfoList[idx][self.INFO_VALUE]
+			type = self.InfoList[idx][self.INFO_VALUE]
 
-			if tip == self.CATEGORY_STARTLINE:
+			if type == self.CATEGORY_STARTLINE:
 				self.__LabelTitleLine(i, text)
-			elif tip == self.CATEGORY_ENDLINE:
+			elif type == self.CATEGORY_ENDLINE:
 				self.__EmptyLine(i)
 			else:
-				value = player.GetStatus(tip)
+				value = player.GetStatus(type)
 
 				self.__LabelLine(i, text, value)
 

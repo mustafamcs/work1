@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "thinboard",
+			"type" : "thinboard",
 
 			"x" : 0,
 			"y" : 0,
@@ -26,7 +26,7 @@ window = {
 			(
 				{
 					"name" : "reset_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 17,
@@ -40,7 +40,7 @@ window = {
 
 				{
 					"name" : "cancel_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 57,

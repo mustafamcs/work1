@@ -723,8 +723,8 @@ class GameWindow(ui.ScriptWindow):
 		self.stream.popupWindow.Close()
 		self.stream.popupWindow.Open(msg, 0, localeInfo.UI_OK)
 
-	def OpenRefineDialog(self, targetItemPos, nextGradeItemVnum, cost, prob, tip=0):
-		self.interface.OpenRefineDialog(targetItemPos, nextGradeItemVnum, cost, prob, tip)
+	def OpenRefineDialog(self, targetItemPos, nextGradeItemVnum, cost, prob, type=0):
+		self.interface.OpenRefineDialog(targetItemPos, nextGradeItemVnum, cost, prob, type)
 
 	def AppendMaterialToRefineDialog(self, vnum, count):
 		self.interface.AppendMaterialToRefineDialog(vnum, count)
@@ -742,16 +742,16 @@ class GameWindow(ui.ScriptWindow):
 		self.affectShower.ResetAffect(affect)
 
 	# UNKNOWN_UPDATE
-	def BINARY_NEW_AddAffect(self, tip, pointIdx, value, duration):
-		self.affectShower.BINARY_NEW_AddAffect(tip, pointIdx, value, duration)
-		if chr.NEW_AFFECT_DRAGON_SOUL_DECK1 == tip or chr.NEW_AFFECT_DRAGON_SOUL_DECK2 == tip:
-			self.interface.DragonSoulActivate(tip - chr.NEW_AFFECT_DRAGON_SOUL_DECK1)
-		elif chr.NEW_AFFECT_DRAGON_SOUL_QUALIFIED == tip:
+	def BINARY_NEW_AddAffect(self, type, pointIdx, value, duration):
+		self.affectShower.BINARY_NEW_AddAffect(type, pointIdx, value, duration)
+		if chr.NEW_AFFECT_DRAGON_SOUL_DECK1 == type or chr.NEW_AFFECT_DRAGON_SOUL_DECK2 == type:
+			self.interface.DragonSoulActivate(type - chr.NEW_AFFECT_DRAGON_SOUL_DECK1)
+		elif chr.NEW_AFFECT_DRAGON_SOUL_QUALIFIED == type:
 			self.BINARY_DragonSoulGiveQuilification()
 
-	def BINARY_NEW_RemoveAffect(self, tip, pointIdx):
-		self.affectShower.BINARY_NEW_RemoveAffect(tip, pointIdx)
-		if chr.NEW_AFFECT_DRAGON_SOUL_DECK1 == tip or chr.NEW_AFFECT_DRAGON_SOUL_DECK2 == tip:
+	def BINARY_NEW_RemoveAffect(self, type, pointIdx):
+		self.affectShower.BINARY_NEW_RemoveAffect(type, pointIdx)
+		if chr.NEW_AFFECT_DRAGON_SOUL_DECK1 == type or chr.NEW_AFFECT_DRAGON_SOUL_DECK2 == type:
 			self.interface.DragonSoulDeactivate()
 	# END_OF_UNKNOWN_UPDATE
 
@@ -842,8 +842,8 @@ class GameWindow(ui.ScriptWindow):
 	def SetEquipmentDialogSocket(self, vid, slotIndex, socketIndex, value):
 		self.interface.SetEquipmentDialogSocket(vid, slotIndex, socketIndex, value)
 
-	def SetEquipmentDialogAttr(self, vid, slotIndex, attrIndex, tip, value):
-		self.interface.SetEquipmentDialogAttr(vid, slotIndex, attrIndex, tip, value)
+	def SetEquipmentDialogAttr(self, vid, slotIndex, attrIndex, type, value):
+		self.interface.SetEquipmentDialogAttr(vid, slotIndex, attrIndex, type, value)
 
 	# SHOW_LOCAL_MAP_NAME
 	def ShowMapName(self, mapName, x, y):
@@ -893,11 +893,11 @@ class GameWindow(ui.ScriptWindow):
 #		chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.GAME_PICK_MONEY % (money))
 #
 
-	def OnShopError(self, tip):
+	def OnShopError(self, type):
 		try:
-			self.PopupMessage(localeInfo.SHOP_ERROR_DICT[tip])
+			self.PopupMessage(localeInfo.SHOP_ERROR_DICT[type])
 		except KeyError:
-			self.PopupMessage(localeInfo.SHOP_ERROR_UNKNOWN % (tip))
+			self.PopupMessage(localeInfo.SHOP_ERROR_UNKNOWN % (type))
 
 	def OnSafeBoxError(self):
 		self.PopupMessage(localeInfo.SAFEBOX_ERROR)
@@ -927,15 +927,15 @@ class GameWindow(ui.ScriptWindow):
 		chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.GAME_CANNOT_MINING)
 	# END_OF_MINING
 
-	def OnCannotUseSkill(self, vid, tip):
-		if localeInfo.USE_SKILL_ERROR_TAIL_DICT.has_key(tip):
-			textTail.RegisterInfoTail(vid, localeInfo.USE_SKILL_ERROR_TAIL_DICT[tip])
+	def OnCannotUseSkill(self, vid, type):
+		if localeInfo.USE_SKILL_ERROR_TAIL_DICT.has_key(type):
+			textTail.RegisterInfoTail(vid, localeInfo.USE_SKILL_ERROR_TAIL_DICT[type])
 
-		if localeInfo.USE_SKILL_ERROR_CHAT_DICT.has_key(tip):
-			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.USE_SKILL_ERROR_CHAT_DICT[tip])
+		if localeInfo.USE_SKILL_ERROR_CHAT_DICT.has_key(type):
+			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.USE_SKILL_ERROR_CHAT_DICT[type])
 
-	def	OnCannotShotError(self, vid, tip):
-		textTail.RegisterInfoTail(vid, localeInfo.SHOT_ERROR_TAIL_DICT.get(tip, localeInfo.SHOT_ERROR_UNKNOWN % (tip)))
+	def	OnCannotShotError(self, vid, type):
+		textTail.RegisterInfoTail(vid, localeInfo.SHOT_ERROR_TAIL_DICT.get(type, localeInfo.SHOT_ERROR_UNKNOWN % (type)))
 
 	## PointReset
 	def StartPointReset(self):
@@ -1765,10 +1765,10 @@ class GameWindow(ui.ScriptWindow):
 
 	# END_OF_CUBE
 
-	def BINARY_Highlight_Item(self, inven_tip, inven_pos):
+	def BINARY_Highlight_Item(self, inven_type, inven_pos):
 		# @fixme003 (+if self.interface:)
 		if self.interface:
-			self.interface.Highligt_Item(inven_tip, inven_pos)
+			self.interface.Highligt_Item(inven_type, inven_pos)
 
 	def BINARY_DragonSoulGiveQuilification(self):
 		self.interface.DragonSoulGiveQuilification()
@@ -1776,11 +1776,11 @@ class GameWindow(ui.ScriptWindow):
 	def BINARY_DragonSoulRefineWindow_Open(self):
 		self.interface.OpenDragonSoulRefineWindow()
 
-	def BINARY_DragonSoulRefineWindow_RefineFail(self, reason, inven_tip, inven_pos):
-		self.interface.FailDragonSoulRefine(reason, inven_tip, inven_pos)
+	def BINARY_DragonSoulRefineWindow_RefineFail(self, reason, inven_type, inven_pos):
+		self.interface.FailDragonSoulRefine(reason, inven_type, inven_pos)
 
-	def BINARY_DragonSoulRefineWindow_RefineSucceed(self, inven_tip, inven_pos):
-		self.interface.SucceedDragonSoulRefine(inven_tip, inven_pos)
+	def BINARY_DragonSoulRefineWindow_RefineSucceed(self, inven_type, inven_pos):
+		self.interface.SucceedDragonSoulRefine(inven_type, inven_pos)
 
 	# END of DRAGON SOUL REFINE WINDOW
 
@@ -1790,10 +1790,10 @@ class GameWindow(ui.ScriptWindow):
 	def BINARY_SetTipMessage(self, message):
 		self.interface.tipBoard.SetTip(message)
 
-	def BINARY_AppendNotifyMessage(self, tip):
-		if not tip in localeInfo.NOTIFY_MESSAGE:
+	def BINARY_AppendNotifyMessage(self, type):
+		if not type in localeInfo.NOTIFY_MESSAGE:
 			return
-		chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.NOTIFY_MESSAGE[tip])
+		chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.NOTIFY_MESSAGE[type])
 
 	def BINARY_Guild_EnterGuildArea(self, areaID):
 		self.interface.BULID_EnterGuildArea(areaID)

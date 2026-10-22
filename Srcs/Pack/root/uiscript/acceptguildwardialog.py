@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"tip" : "board_with_titlebar",
+			"type" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -30,7 +30,7 @@ window = {
 				## Input Slot
 				{
 					"name" : "InputName",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 15,
 					"y" : 40,
@@ -39,7 +39,7 @@ window = {
 				},
 				{
 					"name" : "InputSlot",
-					"tip" : "slotbar",
+					"type" : "slotbar",
 
 					"x" : 80,
 					"y" : 37,
@@ -50,7 +50,7 @@ window = {
 					(
 						{
 							"name" : "InputValue",
-							"tip" : "text",
+							"type" : "text",
 
 							"x" : 3,
 							"y" : 3,
@@ -67,10 +67,10 @@ window = {
 
 					"children" :
 					(
-						{"name" : "GameTypeLabel", "tip" : "text", "x" : 0, "y" : 3, "text" : uiScriptLocale.GUILD_WAR_BATTLE_TYPE,},
+						{"name" : "GameTypeLabel", "type" : "text", "x" : 0, "y" : 3, "text" : uiScriptLocale.GUILD_WAR_BATTLE_TYPE,},
 						{
 							"name" : "NormalButton",
-							"tip" : "radio_button",
+							"type" : "radio_button",
 
 							"x" : 65,
 							"y" : 0,
@@ -83,7 +83,7 @@ window = {
 						},
 						{
 							"name" : "WarpButton",
-							"tip" : "radio_button",
+							"type" : "radio_button",
 
 							"x" : 65+45*1,
 							"y" : 0,
@@ -96,7 +96,7 @@ window = {
 						},
 						{
 							"name" : "CTFButton",
-							"tip" : "radio_button",
+							"type" : "radio_button",
 
 							"x" : 65+45*2,
 							"y" : 0,
@@ -112,7 +112,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : - 61 - 5 + 30,
 					"y" : 95,
@@ -126,7 +126,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 5 + 30,
 					"y" : 95,

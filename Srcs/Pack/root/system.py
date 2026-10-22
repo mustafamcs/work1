@@ -118,7 +118,7 @@ __builtins__.open = open
 __builtins__.old_open = old_open
 __builtins__.new_open = open
 
-_ModuleType = tip(sys)
+_ModuleType = type(sys)
 
 old_import = __import__
 def _process_result(code, fqname):
@@ -366,6 +366,6 @@ loginMark = "-cs"
 app.__COMMAND_LINE__ = __COMMAND_LINE__
 if __USE_CYTHON__:
 	import __main__
-	__hybrid_import('Prototip', __main__.__dict__)
+	__hybrid_import('Prototype', __main__.__dict__)
 else:
-	RunMainScript("prototip.py")
+	RunMainScript("prototype.py")

@@ -14,7 +14,7 @@ window = {
 		## OpenWindow
 		{
 			"name" : "OpenWindow",
-			"tip" : "window",
+			"type" : "window",
 
 			"x" : 0,
 			"y" : 0,
@@ -26,7 +26,7 @@ window = {
 			(
 				{
 					"name" : "OpenWindowBGI",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 0,
 					"y" : 0,
 					"image" : ROOT + "minimap.sub",
@@ -34,7 +34,7 @@ window = {
 				## MiniMapWindow
 				{
 					"name" : "MiniMapWindow",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 4,
 					"y" : 5,
@@ -45,7 +45,7 @@ window = {
 				## ScaleUpButton
 				{
 					"name" : "ScaleUpButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 101,
 					"y" : 116,
@@ -57,7 +57,7 @@ window = {
 				## ScaleDownButton
 				{
 					"name" : "ScaleDownButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 115,
 					"y" : 103,
@@ -69,7 +69,7 @@ window = {
 				## MiniMapHideButton
 				{
 					"name" : "MiniMapHideButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 111,
 					"y" : 6,
@@ -81,7 +81,7 @@ window = {
 				## AtlasShowButton
 				{
 					"name" : "AtlasShowButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 12,
 					"y" : 12,
@@ -93,7 +93,7 @@ window = {
 				## ServerInfo
 				{
 					"name" : "ServerInfo",
-					"tip" : "text",
+					"type" : "text",
 
 					"text_horizontal_align" : "center",
 
@@ -107,7 +107,7 @@ window = {
 				## PositionInfo
 				{
 					"name" : "PositionInfo",
-					"tip" : "text",
+					"type" : "text",
 
 					"text_horizontal_align" : "center",
 
@@ -121,7 +121,7 @@ window = {
 				## ObserverCount
 				{
 					"name" : "ObserverCount",
-					"tip" : "text",
+					"type" : "text",
 
 					"text_horizontal_align" : "center",
 
@@ -136,7 +136,7 @@ window = {
 		},
 		{
 			"name" : "CloseWindow",
-			"tip" : "window",
+			"type" : "window",
 
 			"x" : 0,
 			"y" : 0,
@@ -149,7 +149,7 @@ window = {
 				## ShowButton
 				{
 					"name" : "MiniMapShowButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 100,
 					"y" : 4,

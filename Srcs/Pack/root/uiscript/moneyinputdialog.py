@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board_with_titlebar",
+			"type" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -31,7 +31,7 @@ window = {
 				## Input Slot
 				{
 					"name" : "InputSlot",
-					"tip" : "slotbar",
+					"type" : "slotbar",
 
 					"x" : 0,
 					"y" : 34,
@@ -43,7 +43,7 @@ window = {
 					(
 						{
 							"name" : "InputValue",
-							"tip" : "editline",
+							"type" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -59,7 +59,7 @@ window = {
 				## Input Slot
 				{
 					"name" : "MoneyValue",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 0,
 					"y" : 59,
@@ -71,7 +71,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : - 61 - 5 + 30,
 					"y" : 78,
@@ -85,7 +85,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 5 + 30,
 					"y" : 78,

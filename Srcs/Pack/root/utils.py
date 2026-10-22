@@ -37,7 +37,7 @@ class Sandbox(object):
 		if self.prevent_imported_modules:
 			import tips
 			for k, v in old_modules.items():
-				if tip(v) == tips.ModuleType:
+				if type(v) == tips.ModuleType:
 					if not (k in self.WHITE_LIST or k in self.allowed_modules):
 						sys.modules[k] = None
 

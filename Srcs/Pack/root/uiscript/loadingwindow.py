@@ -15,7 +15,7 @@ window = {
 		## Board
 		{
 			"name" : "BackGround",
-			"tip" : "expanded_image",
+			"type" : "expanded_image",
 
 			"x" : 0,
 			"y" : 0,
@@ -27,12 +27,12 @@ window = {
 		},
 		{
 			"name":"ErrorMessage",
-			"tip":"text", "x":10, "y":10,
+			"type":"text", "x":10, "y":10,
 			"text": uiScriptLocale.LOAD_ERROR,
 		},
 		{
 			"name" : "GageBoard",
-			"tip" : "window",
+			"type" : "window",
 			"x" : float(SCREEN_WIDTH) * 400 / 800.0 - 200,
 			"y" : float(SCREEN_HEIGHT) * 500 / 600.0 ,
 			"width" : 400,
@@ -42,7 +42,7 @@ window = {
 			(
 				{
 					"name" : "BackGage",
-					"tip" : "ani_image",
+					"type" : "ani_image",
 
 
 					"x" : 0,
@@ -80,7 +80,7 @@ window = {
 				},
 				{
 					"name" : "BackGage",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 70,
 					"y" : 25,
@@ -89,7 +89,7 @@ window = {
 				},
 				{
 					"name" : "FullGage",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 70,
 					"y" : 25,

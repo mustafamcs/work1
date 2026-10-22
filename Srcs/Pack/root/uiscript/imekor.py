@@ -14,7 +14,7 @@ window = {
 		## Board
 		{
 			"name" : "Base_Board_01",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 0,
 			"y" : 0,
@@ -23,7 +23,7 @@ window = {
 		},
 		{
 			"name" : "CandidateList",
-			"tip" : "candidate_list",
+			"type" : "candidate_list",
 
 			"x" : 5 + 2,
 			"y" : 10,

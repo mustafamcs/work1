@@ -397,8 +397,8 @@ class Interface(object):
 	def MakeHyperlinkTooltip(self, hyperlink):
 		tokens = hyperlink.split(":")
 		if tokens and len(tokens):
-			tip = tokens[0]
-			if "item" == tip:
+			type = tokens[0]
+			if "item" == type:
 				self.hyperlinkItemTooltip.SetHyperlinkItem(tokens)
 
 	## Make Windows & Dialogs
@@ -892,8 +892,8 @@ class Interface(object):
 		self.dlgSystem.OnChangePKMode()
 
 	## Refine
-	def OpenRefineDialog(self, targetItemPos, nextGradeItemVnum, cost, prob, tip):
-		self.dlgRefineNew.Open(targetItemPos, nextGradeItemVnum, cost, prob, tip)
+	def OpenRefineDialog(self, targetItemPos, nextGradeItemVnum, cost, prob, type):
+		self.dlgRefineNew.Open(targetItemPos, nextGradeItemVnum, cost, prob, type)
 
 	def AppendMaterialToRefineDialog(self, vnum, count):
 		self.dlgRefineNew.AppendMaterial(vnum, count)
@@ -1075,12 +1075,12 @@ class Interface(object):
 		if app.ENABLE_DRAGON_SOUL_SYSTEM:
 			self.wndDragonSoul.DeactivateDragonSoul()
 
-	def Highligt_Item(self, inven_tip, inven_pos):
-		if player.DRAGON_SOUL_INVENTORY == inven_tip:
+	def Highligt_Item(self, inven_type, inven_pos):
+		if player.DRAGON_SOUL_INVENTORY == inven_type:
 			if app.ENABLE_DRAGON_SOUL_SYSTEM:
 				self.wndDragonSoul.HighlightSlot(inven_pos)
 
-		elif app.ENABLE_HIGHLIGHT_NEW_ITEM and player.SLOT_TYPE_INVENTORY == inven_tip:
+		elif app.ENABLE_HIGHLIGHT_NEW_ITEM and player.SLOT_TYPE_INVENTORY == inven_type:
 			self.wndInventory.HighlightSlot(inven_pos)
 
 
@@ -1115,17 +1115,17 @@ class Interface(object):
 				else:
 					self.wndDragonSoul.Close()
 
-	def FailDragonSoulRefine(self, reason, inven_tip, inven_pos):
+	def FailDragonSoulRefine(self, reason, inven_type, inven_pos):
 		if False == player.IsObserverMode():
 			if app.ENABLE_DRAGON_SOUL_SYSTEM:
 				if True == self.wndDragonSoulRefine.IsShow():
-					self.wndDragonSoulRefine.RefineFail(reason, inven_tip, inven_pos)
+					self.wndDragonSoulRefine.RefineFail(reason, inven_type, inven_pos)
 
-	def SucceedDragonSoulRefine(self, inven_tip, inven_pos):
+	def SucceedDragonSoulRefine(self, inven_type, inven_pos):
 		if False == player.IsObserverMode():
 			if app.ENABLE_DRAGON_SOUL_SYSTEM:
 				if True == self.wndDragonSoulRefine.IsShow():
-					self.wndDragonSoulRefine.RefineSucceed(inven_tip, inven_pos)
+					self.wndDragonSoulRefine.RefineSucceed(inven_type, inven_pos)
 
 	def OpenDragonSoulRefineWindow(self):
 		if False == player.IsObserverMode():
@@ -1388,10 +1388,10 @@ class Interface(object):
 			return
 		self.equipmentDialogDict[vid].SetEquipmentDialogSocket(slotIndex, socketIndex, value)
 
-	def SetEquipmentDialogAttr(self, vid, slotIndex, attrIndex, tip, value):
+	def SetEquipmentDialogAttr(self, vid, slotIndex, attrIndex, type, value):
 		if not vid in self.equipmentDialogDict:
 			return
-		self.equipmentDialogDict[vid].SetEquipmentDialogAttr(slotIndex, attrIndex, tip, value)
+		self.equipmentDialogDict[vid].SetEquipmentDialogAttr(slotIndex, attrIndex, type, value)
 
 	def CloseEquipmentDialog(self, vid):
 		if not vid in self.equipmentDialogDict:
@@ -1428,7 +1428,7 @@ class Interface(object):
 		else:
 			buttonImageFileName=iconName
 
-		if iconName and (iconType not in ("item", "file")): # tip "ex" implied
+		if iconName and (iconType not in ("item", "file")): # type "ex" implied
 			btn.SetUpVisual("d:/ymir work/ui/game/quest/questicon/%s" % (iconName.replace("open", "close")))
 			btn.SetOverVisual("d:/ymir work/ui/game/quest/questicon/%s" % (iconName))
 			btn.SetDownVisual("d:/ymir work/ui/game/quest/questicon/%s" % (iconName))

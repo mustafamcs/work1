@@ -16,7 +16,7 @@ window = {
 
 		{
 			"name" : "board",
-			"tip" : "board_with_titlebar",
+			"type" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 
 		{
 			"name" : "ScrollBar",
-			"tip" : "scrollbar",
+			"type" : "scrollbar",
 
 			"x" : 27,
 			"y" : 40,
@@ -38,7 +38,7 @@ window = {
 
 		{
 			"name" : "ok",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : 15,
 			"y" : 265,
@@ -54,7 +54,7 @@ window = {
 		},
 		{
 			"name" : "cancel",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : 60,
 			"y" : 265,
@@ -71,7 +71,7 @@ window = {
 
 		{
 			"name" : "refresh",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : 115,
 			"y" : 265,

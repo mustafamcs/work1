@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"tip" : "board",
+			"type" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -26,7 +26,7 @@ window = {
 			(
 				{
 					"name" : "TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -39,7 +39,7 @@ window = {
 					(
 						{
 							"name" : "TitleName",
-							"tip" : "text",
+							"type" : "text",
 							"text" : uiScriptLocale.ATTACH_METIN_TITLE,
 							"horizontal_align" : "center",
 							"text_horizontal_align" : "center",
@@ -50,7 +50,7 @@ window = {
 				},
 				{
 					"name" : "AttachMetinArrow",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 0,
 					"y" : -33,
 					"horizontal_align" : "center",
@@ -59,7 +59,7 @@ window = {
 				},
 				{
 					"name" : "MetinSlot",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 0,
 					"y" : 5,
 					"horizontal_align" : "center",
@@ -70,7 +70,7 @@ window = {
 					(
 						{
 							"name" : "MetinImage",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 1,
 							"y" : 1,
 							"horizontal_align" : "center",
@@ -80,7 +80,7 @@ window = {
 				},
 				{
 					"name" : "Question",
-					"tip" : "text",
+					"type" : "text",
 					"text" : uiScriptLocale.ATTACH_METIN_INFO,
 					"horizontal_align" : "center",
 					"vertical_align" : "bottom",
@@ -90,7 +90,7 @@ window = {
 				},
 				{
 					"name" : "AcceptButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : -35,
 					"y" : 35,
@@ -105,7 +105,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 35,
 					"y" : 35,

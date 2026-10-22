@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"tip" : "board_with_titlebar",
+			"type" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -31,7 +31,7 @@ window = {
 				## GradeName Slot
 				{
 					"name" : "GradeNameSlot",
-					"tip" : "image",
+					"type" : "image",
 
 					"x" : 0,
 					"y" : 34,
@@ -43,7 +43,7 @@ window = {
 					(
 						{
 							"name" : "GradeNameValue",
-							"tip" : "editline",
+							"type" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -59,7 +59,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 170/2 - 61 - 5,
 					"y" : 58,
@@ -72,7 +72,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 170/2 + 5,
 					"y" : 58,

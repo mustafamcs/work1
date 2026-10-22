@@ -247,8 +247,8 @@ class DragonSoulWindow(ui.ScriptWindow):
 	def RefreshStatus(self):
 		self.RefreshItemSlot()
 
-	def __InventoryLocalSlotPosToGlobalSlotPos(self, window_tip, local_slot_pos):
-		if player.INVENTORY == window_tip:
+	def __InventoryLocalSlotPosToGlobalSlotPos(self, window_type, local_slot_pos):
+		if player.INVENTORY == window_type:
 			return self.deckPageIndex * player.DRAGON_SOUL_EQUIPMENT_FIRST_SIZE + local_slot_pos
 		return (self.DSKindIndex * player.DRAGON_SOUL_PAGE_COUNT * player.DRAGON_SOUL_PAGE_SIZE) + self.inventoryPageIndex * player.DRAGON_SOUL_PAGE_SIZE + local_slot_pos
 
@@ -291,9 +291,9 @@ class DragonSoulWindow(ui.ScriptWindow):
 		self.__HighlightSlot_RefreshCurrentPage()
 		self.wndItem.RefreshSlot()
 
-	def ShowToolTip(self, window_tip, slotIndex):
+	def ShowToolTip(self, window_type, slotIndex):
 		if None != self.tooltipItem:
-			if player.INVENTORY == window_tip:
+			if player.INVENTORY == window_type:
 				self.tooltipItem.SetInventoryItem(slotIndex)
 			else:
 				self.tooltipItem.SetInventoryItem(slotIndex, player.DRAGON_SOUL_INVENTORY)
@@ -1193,13 +1193,13 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 
 	def __OverInRefineItem(self, slotIndex):
 		if self.refineItemInfo.has_key(slotIndex):
-			inven_tip, inven_pos, item_count = self.refineItemInfo[slotIndex]
-			self.tooltipItem.SetInventoryItem(inven_pos, inven_tip)
+			inven_type, inven_pos, item_count = self.refineItemInfo[slotIndex]
+			self.tooltipItem.SetInventoryItem(inven_pos, inven_type)
 
 	def __OverInResultItem(self, slotIndex):
 		if self.resultItemInfo.has_key(slotIndex):
-			inven_tip, inven_pos, item_count = self.resultItemInfo[slotIndex]
-			self.tooltipItem.SetInventoryItem(inven_pos, inven_tip)
+			inven_type, inven_pos, item_count = self.resultItemInfo[slotIndex]
+			self.tooltipItem.SetInventoryItem(inven_pos, inven_type)
 
 	def __OverOutItem(self):
 		if self.tooltipItem:
@@ -1303,23 +1303,23 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 		self.wndResultSlot.ClearSlot(0)
 		self.resultItemInfo = {}
 
-	def RefineSucceed(self, inven_tip, inven_pos):
+	def RefineSucceed(self, inven_type, inven_pos):
 		self.__Initialize()
 		self.Refresh()
 
-		itemCount = player.GetItemCount(inven_tip, inven_pos)
+		itemCount = player.GetItemCount(inven_type, inven_pos)
 		if itemCount > 0:
-			self.resultItemInfo[0] = (inven_tip, inven_pos, itemCount)
-			self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_tip, inven_pos), itemCount)
+			self.resultItemInfo[0] = (inven_type, inven_pos, itemCount)
+			self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_type, inven_pos), itemCount)
 
-	def	RefineFail(self, reason, inven_tip, inven_pos):
+	def	RefineFail(self, reason, inven_type, inven_pos):
 		if net.DS_SUB_HEADER_REFINE_FAIL == reason:
 			self.__Initialize()
 			self.Refresh()
-			itemCount = player.GetItemCount(inven_tip, inven_pos)
+			itemCount = player.GetItemCount(inven_type, inven_pos)
 			if itemCount > 0:
-				self.resultItemInfo[0] = (inven_tip, inven_pos, itemCount)
-				self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_tip, inven_pos), itemCount)
+				self.resultItemInfo[0] = (inven_type, inven_pos, itemCount)
+				self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_type, inven_pos), itemCount)
 		else:
 			self.Refresh()
 

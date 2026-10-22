@@ -608,14 +608,14 @@ class MessengerWindow(ui.ScriptWindow):
 			if self.familyGroup.GetLover():
 				self.showingItemList.append(self.familyGroup.GetLover())
 
-		for grup in self.grupList:
+		for group in self.grupList:
 
-			self.showingItemList.append(grup)
+			self.showingItemList.append(group)
 
-			if grup.IsOpen():
+			if group.IsOpen():
 
-				loginMemberList = grup.GetLoginMemberList()
-				logoutMemberList = grup.GetLogoutMemberList()
+				loginMemberList = group.GetLoginMemberList()
+				logoutMemberList = group.GetLogoutMemberList()
 
 				if loginMemberList or logoutMemberList:
 					for member in loginMemberList:
@@ -635,34 +635,34 @@ class MessengerWindow(ui.ScriptWindow):
 
 	## EventHandler
 	def __AddList(self, grupIndex, key, name):
-		grup = self.grupList[grupIndex]
-		member = grup.FindMember(key)
+		group = self.grupList[grupIndex]
+		member = group.FindMember(key)
 		if not member:
-			member = grup.AppendMember(key, name)
+			member = group.AppendMember(key, name)
 			self.OnSelectItem(None)
 		return member
 
 	def OnRemoveList(self, grupIndex, key):
-		grup = self.grupList[grupIndex]
-		grup.RemoveMember(grup.FindMember(key))
+		group = self.grupList[grupIndex]
+		group.RemoveMember(group.FindMember(key))
 		self.OnRefreshList()
 
 	def OnRemoveAllList(self, grupIndex):
-		grup = self.grupList[grupIndex]
-		grup.ClearMember()
+		group = self.grupList[grupIndex]
+		group.ClearMember()
 		self.OnRefreshList()
 
 	def OnLogin(self, grupIndex, key, name=None):
 		if not name:
 			name = key
-		grup = self.grupList[grupIndex]
+		group = self.grupList[grupIndex]
 		member = self.__AddList(grupIndex, key, name)
 		member.SetName(name)
 		member.Online()
 		self.OnRefreshList()
 
 	def OnLogout(self, grupIndex, key, name=None):
-		grup = self.grupList[grupIndex]
+		group = self.grupList[grupIndex]
 		member = self.__AddList(grupIndex, key, name)
 		if not name:
 			name = key

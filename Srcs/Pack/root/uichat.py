@@ -222,11 +222,11 @@ class ChatLine(ui.EditLine):
 		self.__CheckChatMark()
 
 
-	def __SendChatPacket(self, text, tip):
+	def __SendChatPacket(self, text, type):
 		if net.IsChatInsultIn(text):
 			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.CHAT_INSULT_STRING)
 		else:
-			net.SendChatPacket(text, tip)
+			net.SendChatPacket(text, type)
 
 	def __SendPartyChatPacket(self, text):
 
@@ -706,9 +706,9 @@ class ChatWindow(ui.Window):
 			CHAT_COLOR_DICT.update({chat.CHAT_TYPE_DICE_INFO : colorInfo.CHAT_RGB_DICE_INFO,})
 
 		for colorItem in CHAT_COLOR_DICT.items():
-			tip=colorItem[0]
+			type=colorItem[0]
 			rgb=colorItem[1]
-			chat.SetChatColor(tip, rgb[0], rgb[1], rgb[2])
+			chat.SetChatColor(type, rgb[0], rgb[1], rgb[2])
 
 	@ui.WindowDestroy
 	def Destroy(self):
@@ -788,15 +788,15 @@ class ChatWindow(ui.Window):
 		self.btnChatLog.SetEvent(event)
 
 	if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-		def __EventCountry(self, event_tip, lang):
-			if "mouse_click" == event_tip :
+		def __EventCountry(self, event_type, lang):
+			if "mouse_click" == event_type :
 				if systemSetting.IsChatFilterCountry(lang):
 					systemSetting.RemoveChatFilterCountry(lang)
 				else:
 					systemSetting.AddChatFilterCountry(lang)
 
 				self.RefreshChatFilterSettings()
-			elif "mouse_over_in" == event_tip :
+			elif "mouse_over_in" == event_type :
 				lang = uiScriptLocale.LOCALE_NAME_DICT.get(lang, "")
 				if lang:
 					arglen = len(lang)
@@ -807,18 +807,18 @@ class ChatWindow(ui.Window):
 					self.toolTip.SetToolTipPosition(pos_x + 50, pos_y + 50)
 					self.toolTip.AppendTextLine(lang, 0xffffff00)
 					self.toolTip.Show()
-			elif "mouse_over_out" == event_tip :
+			elif "mouse_over_out" == event_type :
 				self.toolTip.Hide()
 
-		def __EventEmpire(self, event_tip, empire):
-			if "mouse_click" == event_tip :
+		def __EventEmpire(self, event_type, empire):
+			if "mouse_click" == event_type :
 				if systemSetting.IsChatFilterEmpire(empire):
 					systemSetting.RemoveChatFilterEmpire(empire)
 				else:
 					systemSetting.AddChatFilterEmpire(empire)
 
 				self.RefreshChatFilterSettings()
-			elif "mouse_over_in" == event_tip :
+			elif "mouse_over_in" == event_type :
 				empire = self.EMPIRE_NAME.get(empire, "")
 				if empire:
 					arglen = len(empire)
@@ -829,7 +829,7 @@ class ChatWindow(ui.Window):
 					self.toolTip.SetToolTipPosition(pos_x + 50, pos_y + 50)
 					self.toolTip.AppendTextLine(empire, 0xffffff00)
 					self.toolTip.Show()
-			elif "mouse_over_out" == event_tip :
+			elif "mouse_over_out" == event_type :
 				self.toolTip.Hide()
 
 		def RefreshChatFilterSettings(self):

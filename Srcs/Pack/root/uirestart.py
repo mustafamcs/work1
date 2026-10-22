@@ -20,8 +20,8 @@ class RestartDialog(ui.ScriptWindow):
 			pyScrLoader.LoadScriptFile(self, "uiscript/restartdialog.py")
 		except Exception, msg:
 			import sys
-			(tip, msg, tb)=sys.exc_info()
-			dbg.TraceError("RestartDialog.LoadDialog - %s:%s" % (tip, msg))
+			(type, msg, tb)=sys.exc_info()
+			dbg.TraceError("RestartDialog.LoadDialog - %s:%s" % (type, msg))
 			app.Abort()
 			return 0
 
@@ -30,8 +30,8 @@ class RestartDialog(ui.ScriptWindow):
 			self.restartTownButton=self.GetChild("restart_town_button")
 		except:
 			import sys
-			(tip, msg, tb)=sys.exc_info()
-			dbg.TraceError("RestartDialog.LoadDialog - %s:%s" % (tip, msg))
+			(type, msg, tb)=sys.exc_info()
+			dbg.TraceError("RestartDialog.LoadDialog - %s:%s" % (type, msg))
 			app.Abort()
 			return 0
 

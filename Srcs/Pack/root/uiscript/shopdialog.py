@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -29,7 +29,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -40,14 +40,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "tip":"text", "x":84, "y":4, "text":uiScriptLocale.SHOP_TITLE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":84, "y":4, "text":uiScriptLocale.SHOP_TITLE, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Item Slot
 				{
 					"name" : "ItemSlot",
-					"tip" : "grid_table",
+					"type" : "grid_table",
 
 					"x" : 12,
 					"y" : 34,
@@ -64,7 +64,7 @@ window = {
 				## Buy
 				{
 					"name" : "BuyButton",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : 21,
 					"y" : 295,
@@ -82,7 +82,7 @@ window = {
 				## Sell
 				{
 					"name" : "SellButton",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : 104,
 					"y" : 295,
@@ -100,7 +100,7 @@ window = {
 				## Close
 				{
 					"name" : "CloseButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 0,
 					"y" : 295,
@@ -117,7 +117,7 @@ window = {
 				## MiddleTab1
 				{
 					"name" : "MiddleTab1",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : 21,
 					"y" : 295,
@@ -133,7 +133,7 @@ window = {
 				## MiddleTab2
 				{
 					"name" : "MiddleTab2",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : 104,
 					"y" : 295,
@@ -149,7 +149,7 @@ window = {
 				## SmallTab1
 				{
 					"name" : "SmallTab1",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : 21,
 					"y" : 295,
@@ -165,7 +165,7 @@ window = {
 				## SmallTab2
 				{
 					"name" : "SmallTab2",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : 71,
 					"y" : 295,
@@ -181,7 +181,7 @@ window = {
 				## SmallTab3
 				{
 					"name" : "SmallTab3",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : 120,
 					"y" : 295,

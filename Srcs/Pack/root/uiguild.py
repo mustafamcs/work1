@@ -56,7 +56,7 @@ class DeclareGuildWarDialog(ui.ScriptWindow):
 	def __init__(self):
 		ui.ScriptWindow.__init__(self)
 
-		self.tip=0
+		self.type=0
 		self.__CreateDialog()
 
 	def __del__(self):
@@ -95,10 +95,10 @@ class DeclareGuildWarDialog(ui.ScriptWindow):
 			getObject = self.GetChild
 			self.board = getObject("Board")
 
-			self.tipButtonList=[]
-			self.tipButtonList.append(getObject("NormalButton"))
-			self.tipButtonList.append(getObject("WarpButton"))
-			self.tipButtonList.append(getObject("CTFButton"))
+			self.typeButtonList=[]
+			self.typeButtonList.append(getObject("NormalButton"))
+			self.typeButtonList.append(getObject("WarpButton"))
+			self.typeButtonList.append(getObject("CTFButton"))
 
 			self.acceptButton = getObject("AcceptButton")
 			self.cancelButton = getObject("CancelButton")
@@ -114,27 +114,27 @@ class DeclareGuildWarDialog(ui.ScriptWindow):
 		if constInfo.GUILD_WAR_TYPE_SELECT_ENABLE==0:
 			gameType.Hide()
 
-		self.tipButtonList[0].SAFE_SetEvent(self.__OnClickTypeButtonNormal)
-		self.tipButtonList[1].SAFE_SetEvent(self.__OnClickTypeButtonWarp)
-		self.tipButtonList[2].SAFE_SetEvent(self.__OnClickTypeButtonCTF)
+		self.typeButtonList[0].SAFE_SetEvent(self.__OnClickTypeButtonNormal)
+		self.typeButtonList[1].SAFE_SetEvent(self.__OnClickTypeButtonWarp)
+		self.typeButtonList[2].SAFE_SetEvent(self.__OnClickTypeButtonCTF)
 
-		self.tipButtonList[0].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_NORMAL_TITLE, localeInfo.GUILDWAR_NORMAL_DESCLIST))
-		self.tipButtonList[1].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_WARP_TITLE, localeInfo.GUILDWAR_WARP_DESCLIST))
-		self.tipButtonList[2].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_CTF_TITLE, localeInfo.GUILDWAR_CTF_DESCLIST))
+		self.typeButtonList[0].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_NORMAL_TITLE, localeInfo.GUILDWAR_NORMAL_DESCLIST))
+		self.typeButtonList[1].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_WARP_TITLE, localeInfo.GUILDWAR_WARP_DESCLIST))
+		self.typeButtonList[2].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_CTF_TITLE, localeInfo.GUILDWAR_CTF_DESCLIST))
 
-		self.__ClickRadioButton(self.tipButtonList, 0)
+		self.__ClickRadioButton(self.typeButtonList, 0)
 
 		self.SetAcceptEvent(ui.__mem_func__(self.__OnOK))
 		self.SetCancelEvent(ui.__mem_func__(self.__OnCancel))
 
 	def __OnOK(self):
 		text = self.GetText()
-		tip = self.GetType()
+		type = self.GetType()
 
 		if ""==text:
 			return
 
-		net.SendChatPacket("/war %s %d" % (text, tip))
+		net.SendChatPacket("/war %s %d" % (text, type))
 		self.Close()
 
 		return 1
@@ -152,9 +152,9 @@ class DeclareGuildWarDialog(ui.ScriptWindow):
 	def __OnClickTypeButtonCTF(self):
 		self.__ClickTypeRadioButton(2)
 
-	def __ClickTypeRadioButton(self, tip):
-		self.__ClickRadioButton(self.tipButtonList, tip)
-		self.tip=tip
+	def __ClickTypeRadioButton(self, type):
+		self.__ClickRadioButton(self.typeButtonList, type)
+		self.type=type
 
 	def __ClickRadioButton(self, buttonList, buttonIndex):
 		try:
@@ -204,7 +204,7 @@ class DeclareGuildWarDialog(ui.ScriptWindow):
 		self.inputValue.OnPressEscapeKey = event
 
 	def GetType(self):
-		return self.tip
+		return self.type
 
 	def GetText(self):
 		return self.inputValue.GetText()
@@ -226,7 +226,7 @@ class AcceptGuildWarDialog(ui.ScriptWindow):
 	def __init__(self):
 		ui.ScriptWindow.__init__(self)
 
-		self.tip=0
+		self.type=0
 		self.__CreateDialog()
 
 	def __del__(self):
@@ -270,10 +270,10 @@ class AcceptGuildWarDialog(ui.ScriptWindow):
 			getObject = self.GetChild
 			self.board = getObject("Board")
 
-			self.tipButtonList=[]
-			self.tipButtonList.append(getObject("NormalButton"))
-			self.tipButtonList.append(getObject("WarpButton"))
-			self.tipButtonList.append(getObject("CTFButton"))
+			self.typeButtonList=[]
+			self.typeButtonList.append(getObject("NormalButton"))
+			self.typeButtonList.append(getObject("WarpButton"))
+			self.typeButtonList.append(getObject("CTFButton"))
 
 			self.acceptButton = getObject("AcceptButton")
 			self.cancelButton = getObject("CancelButton")
@@ -289,15 +289,15 @@ class AcceptGuildWarDialog(ui.ScriptWindow):
 		if constInfo.GUILD_WAR_TYPE_SELECT_ENABLE==0:
 			gameType.Hide()
 
-		self.tipButtonList[0].SAFE_SetEvent(self.__OnClickTypeButtonNormal)
-		self.tipButtonList[1].SAFE_SetEvent(self.__OnClickTypeButtonWarp)
-		self.tipButtonList[2].SAFE_SetEvent(self.__OnClickTypeButtonCTF)
+		self.typeButtonList[0].SAFE_SetEvent(self.__OnClickTypeButtonNormal)
+		self.typeButtonList[1].SAFE_SetEvent(self.__OnClickTypeButtonWarp)
+		self.typeButtonList[2].SAFE_SetEvent(self.__OnClickTypeButtonCTF)
 
-		self.tipButtonList[0].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_NORMAL_TITLE, localeInfo.GUILDWAR_NORMAL_DESCLIST))
-		self.tipButtonList[1].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_WARP_TITLE, localeInfo.GUILDWAR_WARP_DESCLIST))
-		self.tipButtonList[2].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_CTF_TITLE, localeInfo.GUILDWAR_CTF_DESCLIST))
+		self.typeButtonList[0].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_NORMAL_TITLE, localeInfo.GUILDWAR_NORMAL_DESCLIST))
+		self.typeButtonList[1].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_WARP_TITLE, localeInfo.GUILDWAR_WARP_DESCLIST))
+		self.typeButtonList[2].SetToolTipWindow(self.__CreateGameTypeToolTip(localeInfo.GUILDWAR_CTF_TITLE, localeInfo.GUILDWAR_CTF_DESCLIST))
 
-		self.__ClickRadioButton(self.tipButtonList, 0)
+		self.__ClickRadioButton(self.typeButtonList, 0)
 
 	def __OnClickTypeButtonNormal(self):
 		self.__ClickSelectedTypeRadioButton()
@@ -308,9 +308,9 @@ class AcceptGuildWarDialog(ui.ScriptWindow):
 	def __OnClickTypeButtonCTF(self):
 		self.__ClickSelectedTypeRadioButton()
 
-	def __ClickTypeRadioButton(self, tip):
-		self.__ClickRadioButton(self.tipButtonList, tip)
-		self.tip=tip
+	def __ClickTypeRadioButton(self, type):
+		self.__ClickRadioButton(self.typeButtonList, type)
+		self.type=type
 
 	def __ClickRadioButton(self, buttonList, buttonIndex):
 		try:
@@ -366,7 +366,7 @@ class AcceptGuildWarDialog(ui.ScriptWindow):
 		self.inputValue.OnPressEscapeKey = event
 
 	def GetType(self):
-		return self.tip
+		return self.type
 
 	def GetText(self):
 		return self.inputValue.GetText()
@@ -1214,23 +1214,23 @@ class GuildWindow(ui.ScriptWindow):
 		page.btnHealGSP = page.GetChild("Heal_GSP_Button")
 
 		page.activeSlot.SetSlotStyle(wndMgr.SLOT_STYLE_NONE)
-		page.activeSlot.SetOverInItemEvent(lambda slotNumber, tip=self.GUILD_SKILL_ACTIVE_SLOT: self.OverInItem(slotNumber, tip))
+		page.activeSlot.SetOverInItemEvent(lambda slotNumber, type=self.GUILD_SKILL_ACTIVE_SLOT: self.OverInItem(slotNumber, type))
 		page.activeSlot.SetOverOutItemEvent(ui.__mem_func__(self.OverOutItem))
-		page.activeSlot.SetSelectItemSlotEvent(lambda slotNumber, tip=self.GUILD_SKILL_ACTIVE_SLOT: self.OnPickUpGuildSkill(slotNumber, tip))
-		page.activeSlot.SetUnselectItemSlotEvent(lambda slotNumber, tip=self.GUILD_SKILL_ACTIVE_SLOT: self.OnUseGuildSkill(slotNumber, tip))
-		page.activeSlot.SetPressedSlotButtonEvent(lambda slotNumber, tip=self.GUILD_SKILL_ACTIVE_SLOT: self.OnUpGuildSkill(slotNumber, tip))
+		page.activeSlot.SetSelectItemSlotEvent(lambda slotNumber, type=self.GUILD_SKILL_ACTIVE_SLOT: self.OnPickUpGuildSkill(slotNumber, type))
+		page.activeSlot.SetUnselectItemSlotEvent(lambda slotNumber, type=self.GUILD_SKILL_ACTIVE_SLOT: self.OnUseGuildSkill(slotNumber, type))
+		page.activeSlot.SetPressedSlotButtonEvent(lambda slotNumber, type=self.GUILD_SKILL_ACTIVE_SLOT: self.OnUpGuildSkill(slotNumber, type))
 		page.activeSlot.AppendSlotButton("d:/ymir work/ui/game/windows/btn_plus_up.sub",\
 										"d:/ymir work/ui/game/windows/btn_plus_over.sub",\
 										"d:/ymir work/ui/game/windows/btn_plus_down.sub")
 		page.passiveSlot.SetSlotStyle(wndMgr.SLOT_STYLE_NONE)
-		page.passiveSlot.SetOverInItemEvent(lambda slotNumber, tip=self.GUILD_SKILL_PASSIVE_SLOT: self.OverInItem(slotNumber, tip))
+		page.passiveSlot.SetOverInItemEvent(lambda slotNumber, type=self.GUILD_SKILL_PASSIVE_SLOT: self.OverInItem(slotNumber, type))
 		page.passiveSlot.SetOverOutItemEvent(ui.__mem_func__(self.OverOutItem))
-		page.passiveSlot.SetPressedSlotButtonEvent(lambda slotNumber, tip=self.GUILD_SKILL_PASSIVE_SLOT: self.OnUpGuildSkill(slotNumber, tip))
+		page.passiveSlot.SetPressedSlotButtonEvent(lambda slotNumber, type=self.GUILD_SKILL_PASSIVE_SLOT: self.OnUpGuildSkill(slotNumber, type))
 		page.passiveSlot.AppendSlotButton("d:/ymir work/ui/game/windows/btn_plus_up.sub",\
 										"d:/ymir work/ui/game/windows/btn_plus_over.sub",\
 										"d:/ymir work/ui/game/windows/btn_plus_down.sub")
 		page.affectSlot.SetSlotStyle(wndMgr.SLOT_STYLE_NONE)
-		page.affectSlot.SetOverInItemEvent(lambda slotNumber, tip=self.GUILD_SKILL_AFFECT_SLOT: self.OverInItem(slotNumber, tip))
+		page.affectSlot.SetOverInItemEvent(lambda slotNumber, type=self.GUILD_SKILL_AFFECT_SLOT: self.OverInItem(slotNumber, type))
 		page.affectSlot.SetOverOutItemEvent(ui.__mem_func__(self.OverOutItem))
 		page.btnHealGSP.SetEvent(ui.__mem_func__(self.__OnOpenHealGSPBoard))
 
@@ -1894,7 +1894,7 @@ class GuildWindow(ui.ScriptWindow):
 			self.questionDialog.Close()
 		self.questionDialog = None
 
-	def OnPickUpGuildSkill(self, skillSlotIndex, tip):
+	def OnPickUpGuildSkill(self, skillSlotIndex, type):
 
 		mouseController = mouseModule.mouseController
 
@@ -1915,7 +1915,7 @@ class GuildWindow(ui.ScriptWindow):
 		else:
 			mouseController.DeattachObject()
 
-	def OnUseGuildSkill(self, slotNumber, tip):
+	def OnUseGuildSkill(self, slotNumber, type):
 		skillIndex = player.GetSkillIndex(slotNumber)
 		skillLevel = guild.GetSkillLevel(slotNumber)
 
@@ -1924,7 +1924,7 @@ class GuildWindow(ui.ScriptWindow):
 
 		player.UseGuildSkill(slotNumber)
 
-	def OnUpGuildSkill(self, slotNumber, tip):
+	def OnUpGuildSkill(self, slotNumber, type):
 		skillIndex = player.GetSkillIndex(slotNumber)
 		net.SendChatPacket("/gskillup " + str(skillIndex))
 
@@ -1967,7 +1967,7 @@ class GuildWindow(ui.ScriptWindow):
 				return
 
 	## ToolTip
-	def OverInItem(self, slotNumber, tip):
+	def OverInItem(self, slotNumber, type):
 
 		if mouseModule.mouseController.isAttached():
 			return
@@ -2050,7 +2050,7 @@ class BuildGuildBuildingWindow(ui.ScriptWindow):
 		self.popup = None
 		self.mode = self.MODE_VIEW
 		self.race = 0
-		self.tip = None
+		self.type = None
 		self.x = 0
 		self.y = 0
 		self.z = 0
@@ -2286,7 +2286,7 @@ class BuildGuildBuildingWindow(ui.ScriptWindow):
 
 		## /build c vnum x y x_rot y_rot z_rot
 		## /build d vnum
-		if "BUILDIN" == self.tip:
+		if "BUILDIN" == self.type:
 			for i in xrange(len(self.raceList)):
 				race = self.raceList[i]
 				xPos, yPos = self.posList[i]
@@ -2512,14 +2512,14 @@ class BuildGuildBuildingWindow(ui.ScriptWindow):
 
 		index = 0
 		for data in BUILDING_DATA_LIST:
-			tip = data["TYPE"]
+			type = data["TYPE"]
 			vnum = data["VNUM"]
-			if selectedType != tip:
+			if selectedType != type:
 				continue
 
 			if index == buildingIndex:
-				self.tip = tip
-				if "BUILDIN" == self.tip:
+				self.type = type
+				if "BUILDIN" == self.type:
 					self.__CreateBuildInInstance(vnum)
 				else:
 					self.__CreateInstance(vnum)
@@ -2538,7 +2538,7 @@ class BuildGuildBuildingWindow(ui.ScriptWindow):
 		self.rot_x = self.ctrlRotationX.GetSliderPos() * self.rot_x_limit - self.rot_x_limit/2
 		self.rot_y = self.ctrlRotationY.GetSliderPos() * self.rot_y_limit - self.rot_y_limit/2
 		self.rot_z = (self.ctrlRotationZ.GetSliderPos() * 360 + 180) % 360
-		if "BUILDIN" == self.tip:
+		if "BUILDIN" == self.type:
 			chr.SetRotationAll(self.rot_x, self.rot_y, self.rot_z)
 		else:
 			chr.SetRotationAll(self.rot_x, self.rot_y, self.rot_z)

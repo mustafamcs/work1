@@ -198,7 +198,7 @@ class RefineDialogNew(ui.ScriptWindow):
 		self.dialogHeight = 0
 		self.cost = 0
 		self.percentage = 0
-		self.tip = 0
+		self.type = 0
 
 	def __LoadScript(self):
 
@@ -286,7 +286,7 @@ class RefineDialogNew(ui.ScriptWindow):
 		self.slotList = []
 		self.children = []
 
-	def Open(self, targetItemPos, nextGradeItemVnum, cost, prob, tip):
+	def Open(self, targetItemPos, nextGradeItemVnum, cost, prob, type):
 
 		if False == self.isLoaded:
 			self.__LoadScript()
@@ -297,7 +297,7 @@ class RefineDialogNew(ui.ScriptWindow):
 		self.vnum = nextGradeItemVnum
 		self.cost = cost
 		self.percentage = prob
-		self.tip = tip
+		self.type = type
 
 		self.probText.SetText(localeInfo.REFINE_SUCCESS_PROBALITY % (self.percentage))
 		self.costText.SetText(localeInfo.REFINE_COST % (self.cost))
@@ -394,7 +394,7 @@ class RefineDialogNew(ui.ScriptWindow):
 			self.Accept()
 			return
 
-		if 5 == self.tip:
+		if 5 == self.type:
 			self.Accept()
 			return
 
@@ -403,10 +403,10 @@ class RefineDialogNew(ui.ScriptWindow):
 		dlgQuestion.SetAcceptEvent(ui.__mem_func__(self.Accept))
 		dlgQuestion.SetCancelEvent(ui.__mem_func__(dlgQuestion.Close))
 
-		if 3 == self.tip:
+		if 3 == self.type:
 			dlgQuestion.SetText1(localeInfo.REFINE_DESTROY_WARNING_WITH_BONUS_PERCENT_1)
 			dlgQuestion.SetText2(localeInfo.REFINE_DESTROY_WARNING_WITH_BONUS_PERCENT_2)
-		elif 2 == self.tip:
+		elif 2 == self.type:
 			dlgQuestion.SetText1(localeInfo.REFINE_DOWN_GRADE_WARNING)
 		else:
 			dlgQuestion.SetText1(localeInfo.REFINE_DESTROY_WARNING)
@@ -415,7 +415,7 @@ class RefineDialogNew(ui.ScriptWindow):
 		self.dlgQuestion = dlgQuestion
 
 	def Accept(self):
-		net.SendRefinePacket(self.targetItemPos, self.tip)
+		net.SendRefinePacket(self.targetItemPos, self.type)
 		self.Close()
 
 	def CancelRefine(self):

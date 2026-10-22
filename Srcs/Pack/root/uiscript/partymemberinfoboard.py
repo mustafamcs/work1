@@ -16,7 +16,7 @@ window = {
 
 		{
 			"name" : "StateButton",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 
 		{
 			"name" : "NameSlot",
-			"tip" : "bar",
+			"type" : "bar",
 			"style" : ("not_pick",),
 
 			"x" : 22,
@@ -41,7 +41,7 @@ window = {
 			(
 				{
 					"name" : "NamePrint",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 3,
 					"y" : 2,
@@ -53,7 +53,7 @@ window = {
 
 		{
 			"name" : "Gauge",
-			"tip" : "gauge",
+			"type" : "gauge",
 			"style" : ("not_pick",),
 
 			"x" : 22,
@@ -64,7 +64,7 @@ window = {
 
 		{
 			"name" : "ExperienceImage",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 22,
 			"y" : 24,
@@ -73,7 +73,7 @@ window = {
 		},
 		{
 			"name" : "AttackerImage",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 34,
 			"y" : 24,
@@ -82,7 +82,7 @@ window = {
 		},
 		{
 			"name" : "DefenderImage",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 46,
 			"y" : 24,
@@ -91,7 +91,7 @@ window = {
 		},
 		{
 			"name" : "BufferImage",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 34,
 			"y" : 24,
@@ -100,7 +100,7 @@ window = {
 		},
 		{
 			"name" : "SkillMasterImage",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 46,
 			"y" : 24,
@@ -109,7 +109,7 @@ window = {
 		},
 		{
 			"name" : "TimeBonusImage",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 58,
 			"y" : 24,
@@ -118,7 +118,7 @@ window = {
 		},
 		{
 			"name" : "RegenBonus",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 70,
 			"y" : 24,
@@ -127,7 +127,7 @@ window = {
 		},
 		{
 			"name" : "IncreaseArea150",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 82,
 			"y" : 24,
@@ -136,7 +136,7 @@ window = {
 		},
 		{
 			"name" : "IncreaseArea200",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 94,
 			"y" : 24,

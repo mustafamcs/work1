@@ -16,17 +16,17 @@ window = {
 
 		## ID
 		{
-			"name" : "IndexID", "tip" : "text", "x" : 42, "y" : 8, "text" : uiScriptLocale.GUILD_BOARD_ID,
+			"name" : "IndexID", "type" : "text", "x" : 42, "y" : 8, "text" : uiScriptLocale.GUILD_BOARD_ID,
 		},
 		## Messages
 		{
-			"name" : "IndexMessages", "tip" : "text", "x" : 212, "y" : 8, "text" : uiScriptLocale.GUILD_BOARD_TEXT,
+			"name" : "IndexMessages", "type" : "text", "x" : 212, "y" : 8, "text" : uiScriptLocale.GUILD_BOARD_TEXT,
 		},
 
 		## Refresh Button
 		{
 			"name" : "RefreshButton",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 337,
 			"y" : 5,
 			"default_image" : "d:/ymir work/ui/game/guild/Refresh_Button_01.sub",
@@ -38,7 +38,7 @@ window = {
 		## Post Comment Button
 		{
 			"name" : "PostCommentButton",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 337,
 			"y" : 273,
 			"default_image" : "d:/ymir work/ui/game/taskbar/Send_Chat_Button_01.sub",
@@ -50,7 +50,7 @@ window = {
 		## EditLine
 		{
 			"name" : "CommentSlot",
-			"tip" : "slotbar",
+			"type" : "slotbar",
 			"x" : 15,
 			"y" : 272,
 			"width" : 315,
@@ -60,7 +60,7 @@ window = {
 			(
 				{
 					"name" : "CommentValue",
-					"tip" : "editline",
+					"type" : "editline",
 					"x" : 2,
 					"y" : 3,
 					"width" : 317,

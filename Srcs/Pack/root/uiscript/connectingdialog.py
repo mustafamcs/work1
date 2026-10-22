@@ -13,7 +13,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 
 			"x" : 0,
 			"y" : 0,
@@ -25,7 +25,7 @@ window = {
 			(
 				{
 					"name" : "message",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 0,
 					"y" : 25,
@@ -38,7 +38,7 @@ window = {
 				},
 				{
 					"name" : "countdown_message",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 0,
 					"y" : 50,

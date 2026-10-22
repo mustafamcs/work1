@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -38,14 +38,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.SELECT_METIN_STONE_TITLE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.SELECT_METIN_STONE_TITLE, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Item Slot
 				{
 					"name" : "ItemSlot",
-					"tip" : "grid_table",
+					"type" : "grid_table",
 
 					"x" : 12,
 					"y" : 34,
@@ -62,7 +62,7 @@ window = {
 				## Button
 				{
 					"name" : "ExitButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 0,
 					"y" : 34,

@@ -104,7 +104,7 @@ def DefineSkillIndexDict():
 			},
 		}
 
-def RegisterSkill(race, grup, empire=0):
+def RegisterSkill(race, group, empire=0):
 
 	DefineSkillIndexDict()
 
@@ -112,9 +112,9 @@ def RegisterSkill(race, grup, empire=0):
 
 	## Character Skill
 	if SKILL_INDEX_DICT.has_key(job):
-		if SKILL_INDEX_DICT[job].has_key(grup):
+		if SKILL_INDEX_DICT[job].has_key(group):
 
-			activeSkillList = SKILL_INDEX_DICT[job][grup]
+			activeSkillList = SKILL_INDEX_DICT[job][group]
 
 			for i in xrange(len(activeSkillList)):
 				skillIndex = activeSkillList[i]
@@ -143,14 +143,14 @@ def RegisterSkill(race, grup, empire=0):
 	for i in xrange(len(ACTIVE_GUILD_SKILL_INDEX_LIST)):
 		player.SetSkill(210+i, ACTIVE_GUILD_SKILL_INDEX_LIST[i])
 
-def RegisterSkillAt(race, grup, pos, num):
+def RegisterSkillAt(race, group, pos, num):
 
 	DefineSkillIndexDict()
 
 	job = chr.RaceToJob(race)
-	tmp = list(SKILL_INDEX_DICT[job][grup])
+	tmp = list(SKILL_INDEX_DICT[job][group])
 	tmp[pos] = num
-	SKILL_INDEX_DICT[job][grup] = tuple(tmp)
+	SKILL_INDEX_DICT[job][group] = tuple(tmp)
 	player.SetSkill(pos+1, num)
 
 FACE_IMAGE_DICT = {
@@ -1316,7 +1316,7 @@ def LoadGuildBuildingList(filename):
 			continue
 
 		vnum = int(tokens[TOKEN_VNUM])
-		tip = tokens[TOKEN_TYPE]
+		type = tokens[TOKEN_TYPE]
 		name = tokens[TOKEN_NAME]
 		localName = tokens[TOKEN_LOCAL_NAME]
 		xRotLimit = int(tokens[TOKEN_X_ROT_LIMIT])
@@ -1326,13 +1326,13 @@ def LoadGuildBuildingList(filename):
 		material = tokens[TOKEN_MATERIAL]
 
 		folderName = ""
-		if "HEADQUARTER" == tip:
+		if "HEADQUARTER" == type:
 			folderName = "headquarter"
-		elif "FACILITY" == tip:
+		elif "FACILITY" == type:
 			folderName = "facility"
-		elif "OBJECT" == tip:
+		elif "OBJECT" == type:
 			folderName = "object"
-		elif "WALL" == tip:
+		elif "WALL" == type:
 			folderName = "fence"
 
 		materialList = ["0", "0", "0"]
@@ -1360,7 +1360,7 @@ def LoadGuildBuildingList(filename):
 		chrmgr.RegisterRaceName(vnum, name)
 
 		appendingData = { "VNUM":vnum,
-						  "TYPE":tip,
+						  "TYPE":type,
 						  "NAME":name,
 						  "LOCAL_NAME":localName,
 						  "X_ROT_LIMIT":xRotLimit,

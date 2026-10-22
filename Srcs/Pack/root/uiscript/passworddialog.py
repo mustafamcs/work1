@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 				## Title
 				{
 					"name" : "titlebar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -41,7 +41,7 @@ window = {
 					(
 						{
 							"name" : "TitleName",
-							"tip" : "text",
+							"type" : "text",
 
 							"x" : 154/2,
 							"y" : 3,
@@ -55,7 +55,7 @@ window = {
 				## Password Slot
 				{
 					"name" : "password_slot",
-					"tip" : "image",
+					"type" : "image",
 
 					"x" : 0,
 					"y" : 34,
@@ -67,7 +67,7 @@ window = {
 					(
 						{
 							"name" : "password_value",
-							"tip" : "editline",
+							"type" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -84,7 +84,7 @@ window = {
 				## Button
 				{
 					"name" : "accept_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 170/2 - 61 - 5,
 					"y" : 58,
@@ -97,7 +97,7 @@ window = {
 				},
 				{
 					"name" : "cancel_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 170/2 + 5,
 					"y" : 58,

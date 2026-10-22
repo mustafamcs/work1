@@ -16,7 +16,7 @@ window = {
 	(
 		{
 			"name" : "GiftBox_Icon",
-			"tip" : "image",
+			"type" : "image",
 			
 			"x" : 5,
 			"y" : -90 + Y_ADD_POSITION,
@@ -35,7 +35,7 @@ window = {
 			
 			"width" : 50,
 			"height" : 10,
-			"tip" : "window",
+			"type" : "window",
 		},
 	),	
 }

@@ -14,7 +14,7 @@ window = {
 		## Board
 		{
 			"name" : "BackGround",
-			"tip" : "expanded_image",
+			"type" : "expanded_image",
 
 			"x" : 0,
 			"y" : 0,
@@ -26,13 +26,13 @@ window = {
 		},
 		{ 
 			"name":"ErrorMessage", 
-			"tip":"text", "x":10, "y":10, 
+			"type":"text", "x":10, "y":10, 
 			"text": uiScriptLocale.LOAD_ERROR, 
 		},
 		
 		{
 			"name" : "GageBoard",
-			"tip" : "window",
+			"type" : "window",
 			"style" : ("ltr",),
 			"x" : float(SCREEN_WIDTH) * 400 / 800.0 - 200,
 			"y" : float(SCREEN_HEIGHT) * 500 / 600.0 ,
@@ -44,7 +44,7 @@ window = {
 			
 				{
 					"name" : "BackGage",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 40,
 					"y" : 25,
@@ -53,7 +53,7 @@ window = {
 				},
 				{
 					"name" : "FullGage",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 40,
 					"y" : 25,
@@ -68,7 +68,7 @@ window = {
 window["children"] = window["children"] + [
 {
 	"name" : "TipBackground",
-	"tip" : "middleboard",
+	"type" : "middleboard",
 	
 	"x"	: 0,
 	"y" : float(SCREEN_HEIGHT) * 500 / 600.0 - 100,
@@ -80,7 +80,7 @@ window["children"] = window["children"] + [
 	(
 		{
 			"name" : "LoadingTip",
-			"tip" : "text",
+			"type" : "text",
 			
 			"x"	: float(SCREEN_WIDTH) / 2,
 			"y" : 40,				

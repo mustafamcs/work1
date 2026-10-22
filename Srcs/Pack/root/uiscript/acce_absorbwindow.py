@@ -17,7 +17,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -31,7 +31,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 6,
@@ -42,14 +42,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "tip":"text", "x":95, "y":3, "text":uiScriptLocale.ACCE_ABSORB, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":95, "y":3, "text":uiScriptLocale.ACCE_ABSORB, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Slot
 				{
 					"name" : "Acce_Combine",
-					"tip" : "image",
+					"type" : "image",
 
 					"x" : 9,
 					"y" : 35,
@@ -60,7 +60,7 @@ window = {
 					(
 						{
 							"name" : "AcceSlot",
-							"tip" : "slot",
+							"type" : "slot",
 
 							"x" : 3,
 							"y" : 3,
@@ -79,7 +79,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 40,
 					"y" : 235,
@@ -92,7 +92,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 114,
 					"y" : 235,

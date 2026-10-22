@@ -21,7 +21,7 @@ window = {
 	(
 		## Board
 		{
-			"name" : "BackGround", "tip" : "expanded_image", 
+			"name" : "BackGround", "type" : "expanded_image", 
 			"x" : 0, "y" : 0, "x_scale" : float(SCREEN_WIDTH) / 1024.0, "y_scale" : float(SCREEN_HEIGHT) / 768.0,
 
 			"image" : "d:/ymir work/ui/intro/empire/background/empire_select.jpg",
@@ -30,7 +30,7 @@ window = {
 		## Title
 		{
 			"name" : "Title",
-			"tip" : "expanded_image",
+			"type" : "expanded_image",
 
 			"x" : ATALS_X + 70,
 			"y" : 40,
@@ -40,12 +40,12 @@ window = {
 			"image" : LOCALE_PATH+"title.sub"
 		},
 		{
-			"name" : "desc_phase", "tip" : "image", "x" : 0, 
+			"name" : "desc_phase", "type" : "image", "x" : 0, 
 			"y" : SCREEN_HEIGHT * (156) / 600 - 129, "image" : ROOT_PATH + "public_intro_btn/descPhase_btn.sub",
 			"children" :
 			(
 				{
-					"name" : "desc_phase_text", "tip" : "text",
+					"name" : "desc_phase_text", "type" : "text",
 					"x" : 18, "y" : 7, "r" : 0.7843, "g" : 0.7843, "b" : 0.7843,
 					"text" : localeInfo.EMPIRE_SELECT_MODE,
 					"fontsize" : "LARGE",
@@ -55,7 +55,7 @@ window = {
 		## Atlas
 		{
 			"name" : "Atlas",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : ATALS_X,
 			"y" : ATALS_Y,
@@ -67,7 +67,7 @@ window = {
 				## Empire Image
 				{
 					"name" : "EmpireArea_A",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 43,
 					"y" : 201,
@@ -76,7 +76,7 @@ window = {
 				},
 				{
 					"name" : "EmpireArea_B",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 17,
 					"y" : 16,
@@ -85,7 +85,7 @@ window = {
 				},
 				{
 					"name" : "EmpireArea_C",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 314,
 					"y" : 33,
@@ -96,7 +96,7 @@ window = {
 				## Empire Flag
 				{
 					"name" : "EmpireAreaFlag_A",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 167,
 					"y" : 235,
@@ -105,7 +105,7 @@ window = {
 				},
 				{
 					"name" : "EmpireAreaFlag_B",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 70,
 					"y" : 42,
@@ -114,7 +114,7 @@ window = {
 				},
 				{
 					"name" : "EmpireAreaFlag_C",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 357,
 					"y" : 78,
@@ -126,7 +126,7 @@ window = {
 
 		## Buttons
 		{
-			"name" : "left_button", "tip" : "button",
+			"name" : "left_button", "type" : "button",
 			"x" : ATALS_X + 120, "y" : ATALS_Y + 340,
 			
 			"default_image" : "d:/ymir work/ui/intro/select/left_button_01.sub",
@@ -134,7 +134,7 @@ window = {
 			"down_image" : "d:/ymir work/ui/intro/select/left_button_03.sub",
 		},
 		{
-			"name" : "right_button", "tip" : "button",
+			"name" : "right_button", "type" : "button",
 			"x" : ATALS_X + 120 + 130, "y" : ATALS_Y + 340,
 			
 			"default_image" : "d:/ymir work/ui/intro/select/right_button_01.sub",
@@ -145,7 +145,7 @@ window = {
 		#Information
 		{
 			"name" : "empire_board",
-			"tip" : "thinboard_gold",
+			"type" : "thinboard_gold",
 
 			"x" : SCREEN_WIDTH - 201 - SCREEN_WIDTH * (25) / 800,
 			"y" : SCREEN_HEIGHT * (156) / 600,
@@ -157,28 +157,28 @@ window = {
 			(
 				## Empire Flag & Name##
 				{	
-					"name" : "EmpireNameSlot", "tip" : "thinboard_circle",
+					"name" : "EmpireNameSlot", "type" : "thinboard_circle",
 					"x" : 13, "y" : 14, "width" : 180, "height" : 40,
 
 					"children" :
 					(
 						{
-							"name" : "EmpireFlag_A", "tip" : "expanded_image",
+							"name" : "EmpireFlag_A", "type" : "expanded_image",
 							"x" : 0, "y" : 0, "x_scale" : FLAG_SCALE_X, "y_scale" : FLAG_SCALE_Y,
 							"image" : "d:/ymir work/ui/intro/empire/empireflag_a.sub"
 						},
 						{
-							"name" : "EmpireFlag_B", "tip" : "expanded_image",
+							"name" : "EmpireFlag_B", "type" : "expanded_image",
 							"x" : 0, "y" : 0, "x_scale" : FLAG_SCALE_X, "y_scale" : FLAG_SCALE_Y,
 							"image" : "d:/ymir work/ui/intro/empire/empireflag_b.sub"
 						},
 						{
-							"name" : "EmpireFlag_C", "tip" : "expanded_image",
+							"name" : "EmpireFlag_C", "type" : "expanded_image",
 							"x" : 0, "y" : 0, "x_scale" : FLAG_SCALE_X, "y_scale" : FLAG_SCALE_Y,
 							"image" : "d:/ymir work/ui/intro/empire/empireflag_c.sub"
 						},
 						{
-							"name" : "EmpireName", "tip" : "text",
+							"name" : "EmpireName", "type" : "text",
 							"x" : 30, "y" : 0,
 							"text" : "None",
 							"fontsize" : "LARGE",
@@ -188,7 +188,7 @@ window = {
 				},
 				{
 					"name" : "text_board",
-					"tip" : "thinboard_circle",
+					"type" : "thinboard_circle",
 
 					"x" : 11,
 					"y" : 57,
@@ -199,7 +199,7 @@ window = {
 					"children" :
 					(
 						{
-							"name" : "prev_text_button", "tip" : "button",
+							"name" : "prev_text_button", "type" : "button",
 							"x" : 122, "y" : 250,
 
 							"default_image" : ROOT_PATH + "public_intro_btn/prev_btn_01.sub",
@@ -207,7 +207,7 @@ window = {
 							"down_image" 	: ROOT_PATH + "public_intro_btn/prev_btn_01.sub",
 						},
 						{
-							"name" : "next_text_button", "tip" : "button",
+							"name" : "next_text_button", "type" : "button",
 							"x" : 122 + 20 + 10, "y" : 250,
 
 							"default_image" : ROOT_PATH + "public_intro_btn/next_btn_01.sub",
@@ -221,7 +221,7 @@ window = {
 		
 		## Buttons
 		{
-			"name" : "select_button", "tip" : "button",
+			"name" : "select_button", "type" : "button",
 			"x" : SCREEN_WIDTH - 201 - SCREEN_WIDTH * (25) / 800, "y" : SCREEN_HEIGHT * (156) / 600 + 341,
 
 			"default_image" : ROOT_PATH + "public_intro_btn/select_btn_01.sub",
@@ -229,7 +229,7 @@ window = {
 			"down_image" 	: ROOT_PATH + "public_intro_btn/select_btn_03.sub",
 		},
 		{
-			"name" : "exit_button", "tip" : "button",
+			"name" : "exit_button", "type" : "button",
 			"x" : SCREEN_WIDTH - 201 - SCREEN_WIDTH * (25) / 800 + 130, "y" : SCREEN_HEIGHT * (156) / 600 + 341,
 
 			"default_image" : ROOT_PATH + "public_intro_btn/cancel_btn_01.sub",

@@ -16,7 +16,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "thinboard",
+			"type" : "thinboard",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 			(
 				{
 					"name" : "help_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 17,
@@ -41,7 +41,7 @@ window = {
 				},
 				{
 					"name" : "mall_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 57,
@@ -55,7 +55,7 @@ window = {
 
 				{
 					"name" : "system_option_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 87,
@@ -68,7 +68,7 @@ window = {
 				},
 				{
 					"name" : "game_option_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 117,
@@ -81,7 +81,7 @@ window = {
 				},
 				{
 					"name" : "change_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 147,
@@ -94,7 +94,7 @@ window = {
 				},
 				{
 					"name" : "logout_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 177,
@@ -107,7 +107,7 @@ window = {
 				},
 				{
 					"name" : "exit_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 217,
@@ -120,7 +120,7 @@ window = {
 				},
 				{
 					"name" : "cancel_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 10,
 					"y" : 247,

@@ -28,7 +28,7 @@ window = {
 	[
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 
 			"x" : 0,
 			"y" : 0,
@@ -41,7 +41,7 @@ window = {
 				## Title
 				{
 					"name" : "titlebar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ["attach",],
 
 					"x" : 8,
@@ -52,7 +52,7 @@ window = {
 
 					"children" :
 					[
-						{ "name":"titlename", "tip":"text", "x":0, "y":3,
+						{ "name":"titlename", "type":"text", "x":0, "y":3,
 						"text" : uiScriptLocale.GAMEOPTION_TITLE,
 						"horizontal_align":"center", "text_horizontal_align":"center" },
 					],
@@ -60,7 +60,7 @@ window = {
 
 				{
 					"name" : "name_color",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 40+2,
@@ -69,7 +69,7 @@ window = {
 				},
 				{
 					"name" : "name_color_normal",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*0,
 					"y" : 40,
@@ -82,7 +82,7 @@ window = {
 				},
 				{
 					"name" : "name_color_empire",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*1,
 					"y" : 40,
@@ -96,7 +96,7 @@ window = {
 
 				{
 					"name" : "target_board",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 65+2,
@@ -105,7 +105,7 @@ window = {
 				},
 				{
 					"name" : "target_board_no_view",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*0,
 					"y" : 65,
@@ -118,7 +118,7 @@ window = {
 				},
 				{
 					"name" : "target_board_view",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*1,
 					"y" : 65,
@@ -134,7 +134,7 @@ window = {
 				## PvP Mode
 				{
 					"name" : "pvp_mode",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 90+2,
@@ -143,7 +143,7 @@ window = {
 				},
 				{
 					"name" : "pvp_peace",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+SMALL_BUTTON_WIDTH*0,
 					"y" : 90,
@@ -157,7 +157,7 @@ window = {
 				},
 				{
 					"name" : "pvp_revenge",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+SMALL_BUTTON_WIDTH*1,
 					"y" : 90,
@@ -171,7 +171,7 @@ window = {
 				},
 				{
 					"name" : "pvp_guild",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+SMALL_BUTTON_WIDTH*2,
 					"y" : 90,
@@ -185,7 +185,7 @@ window = {
 				},
 				{
 					"name" : "pvp_free",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+SMALL_BUTTON_WIDTH*3,
 					"y" : 90,
@@ -201,7 +201,7 @@ window = {
 				## Block
 				{
 					"name" : "block",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 115+2,
@@ -210,7 +210,7 @@ window = {
 				},
 				{
 					"name" : "block_exchange_button",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*0,
 					"y" : 115,
@@ -223,7 +223,7 @@ window = {
 				},
 				{
 					"name" : "block_party_button",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*1,
 					"y" : 115,
@@ -236,7 +236,7 @@ window = {
 				},
 				{
 					"name" : "block_guild_button",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*2,
 					"y" : 115,
@@ -249,7 +249,7 @@ window = {
 				},
 				{
 					"name" : "block_whisper_button",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*0,
 					"y" : 140,
@@ -262,7 +262,7 @@ window = {
 				},
 				{
 					"name" : "block_friend_button",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*1,
 					"y" : 140,
@@ -275,7 +275,7 @@ window = {
 				},
 				{
 					"name" : "block_party_request_button",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH*2,
 					"y" : 140,
@@ -290,7 +290,7 @@ window = {
 				## Chat
 				{
 					"name" : "chat",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 165+2,
@@ -299,7 +299,7 @@ window = {
 				},
 				{
 					"name" : "view_chat_on_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X,
 					"y" : 165,
@@ -312,7 +312,7 @@ window = {
 				},
 				{
 					"name" : "view_chat_off_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH,
 					"y" : 165,
@@ -327,7 +327,7 @@ window = {
 				## Always Show Name
 				{
 					"name" : "always_show_name",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 190+2,
@@ -336,7 +336,7 @@ window = {
 				},
 				{
 					"name" : "always_show_name_on_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X,
 					"y" : 190,
@@ -349,7 +349,7 @@ window = {
 				},
 				{
 					"name" : "always_show_name_off_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH,
 					"y" : 190,
@@ -364,7 +364,7 @@ window = {
 				## Effect On/Off
 				{
 					"name" : "effect_on_off",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 215+2,
@@ -373,7 +373,7 @@ window = {
 				},
 				{
 					"name" : "show_damage_on_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X,
 					"y" : 215,
@@ -386,7 +386,7 @@ window = {
 				},
 				{
 					"name" : "show_damage_off_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH,
 					"y" : 215,
@@ -400,7 +400,7 @@ window = {
 
 				{
 					"name" : "salestext_on_off",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : LINE_LABEL_X,
 					"y" : 240+2,
@@ -409,7 +409,7 @@ window = {
 				},
 				{
 					"name" : "salestext_on_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X,
 					"y" : 240,
@@ -422,7 +422,7 @@ window = {
 				},
 				{
 					"name" : "salestext_off_button",
-					"tip" : "radio_button",
+					"type" : "radio_button",
 
 					"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH,
 					"y" : 240,
@@ -449,7 +449,7 @@ if app.WJ_SHOW_MOB_INFO:
 					## Show Mob Info List
 					{
 						"name" : "show_mob_info",
-						"tip" : "text",
+						"type" : "text",
 
 						"multi_line" : 1,
 
@@ -460,7 +460,7 @@ if app.WJ_SHOW_MOB_INFO:
 					},
 					{
 						"name" : "show_mob_level_button",
-						"tip" : "toggle_button",
+						"type" : "toggle_button",
 
 						"x" : LINE_DATA_X,
 						"y" : CUR_LINE_Y,
@@ -473,7 +473,7 @@ if app.WJ_SHOW_MOB_INFO:
 					},
 					{
 						"name" : "show_mob_AI_flag_button",
-						"tip" : "toggle_button",
+						"type" : "toggle_button",
 
 						"x" : LINE_DATA_X+MIDDLE_BUTTON_WIDTH,
 						"y" : CUR_LINE_Y,

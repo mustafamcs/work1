@@ -28,12 +28,12 @@ window = {
 
 		## Board
 		{
-			"name" : "bg1", "tip" : "expanded_image", "x" : 0, "y" : 0,
+			"name" : "bg1", "type" : "expanded_image", "x" : 0, "y" : 0,
 			"x_scale" : float(SCREEN_WIDTH) / 1024.0, "y_scale" : float(SCREEN_HEIGHT) / 768.0,
 			"image" : "locale/tr/ui/serverlist.sub",
 		},
 		{
-			"name" : "bg2", "tip" : "expanded_image", "x" : 0, "y" : 0,
+			"name" : "bg2", "type" : "expanded_image", "x" : 0, "y" : 0,
 			"x_scale" : float(SCREEN_WIDTH) / 1024.0, "y_scale" : float(SCREEN_HEIGHT) / 768.0,
 			"image" : "locale/tr/ui/login.sub",
 		},
@@ -41,7 +41,7 @@ window = {
 		## VirtualKeyboard
 		{
 			'name' : 'VirtualKeyboard',
-			'tip' : 'thinboard',
+			'type' : 'thinboard',
 			'x' : (SCREEN_WIDTH - 564) / 2,
 			'y' : SCREEN_HEIGHT - 300,
 			'width' : 564,
@@ -50,7 +50,7 @@ window = {
 			(
 				{
 					'name' : 'key_at',
-					'tip' : 'toggle_button',
+					'type' : 'toggle_button',
 					'x' : 40,
 					'y' : 186,
 					'default_image' : 'locale/tr/ui/vkey/key_at.tga',
@@ -59,7 +59,7 @@ window = {
 				},
 				{
 					'name' : 'key_backspace',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 498,
 					'y' : 186,
 					'default_image' : 'locale/tr/ui/vkey/key_backspace.tga',
@@ -68,7 +68,7 @@ window = {
 				},
 				{
 					'name' : 'key_enter',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 439,
 					'y' : 186,
 					'default_image' : 'locale/tr/ui/vkey/key_enter.tga',
@@ -77,7 +77,7 @@ window = {
 				},
 				{
 					'name' : 'key_shift',
-					'tip' : 'toggle_button',
+					'type' : 'toggle_button',
 					'x' : 86,
 					'y' : 186,
 					'default_image' : 'locale/tr/ui/vkey/key_shift.tga',
@@ -86,7 +86,7 @@ window = {
 				},
 				{
 					'name' : 'key_space',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 145,
 					'y' : 186,
 					'default_image' : 'locale/tr/ui/vkey/key_space.tga',
@@ -95,7 +95,7 @@ window = {
 				},
 				{
 					'name' : 'key_1',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 40,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -104,7 +104,7 @@ window = {
 				},
 				{
 					'name' : 'key_2',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 80,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -113,7 +113,7 @@ window = {
 				},
 				{
 					'name' : 'key_3',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 120,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -122,7 +122,7 @@ window = {
 				},
 				{
 					'name' : 'key_4',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 160,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -131,7 +131,7 @@ window = {
 				},
 				{
 					'name' : 'key_5',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 200,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -140,7 +140,7 @@ window = {
 				},
 				{
 					'name' : 'key_6',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 240,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -149,7 +149,7 @@ window = {
 				},
 				{
 					'name' : 'key_7',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 280,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -158,7 +158,7 @@ window = {
 				},
 				{
 					'name' : 'key_8',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 320,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -167,7 +167,7 @@ window = {
 				},
 				{
 					'name' : 'key_9',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 360,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -176,7 +176,7 @@ window = {
 				},
 				{
 					'name' : 'key_10',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 400,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -185,7 +185,7 @@ window = {
 				},
 				{
 					'name' : 'key_11',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 440,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -194,7 +194,7 @@ window = {
 				},
 				{
 					'name' : 'key_12',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 480,
 					'y' : 24,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -203,7 +203,7 @@ window = {
 				},
 				{
 					'name' : 'key_13',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 40,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -212,7 +212,7 @@ window = {
 				},
 				{
 					'name' : 'key_14',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 80,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -221,7 +221,7 @@ window = {
 				},
 				{
 					'name' : 'key_15',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 120,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -230,7 +230,7 @@ window = {
 				},
 				{
 					'name' : 'key_16',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 160,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -239,7 +239,7 @@ window = {
 				},
 				{
 					'name' : 'key_17',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 200,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -248,7 +248,7 @@ window = {
 				},
 				{
 					'name' : 'key_18',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 240,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -257,7 +257,7 @@ window = {
 				},
 				{
 					'name' : 'key_19',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 280,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -266,7 +266,7 @@ window = {
 				},
 				{
 					'name' : 'key_20',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 320,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -275,7 +275,7 @@ window = {
 				},
 				{
 					'name' : 'key_21',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 360,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -284,7 +284,7 @@ window = {
 				},
 				{
 					'name' : 'key_22',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 400,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -293,7 +293,7 @@ window = {
 				},
 				{
 					'name' : 'key_23',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 440,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -302,7 +302,7 @@ window = {
 				},
 				{
 					'name' : 'key_24',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 480,
 					'y' : 63,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -311,7 +311,7 @@ window = {
 				},
 				{
 					'name' : 'key_25',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 60,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -320,7 +320,7 @@ window = {
 				},
 				{
 					'name' : 'key_26',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 100,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -329,7 +329,7 @@ window = {
 				},
 				{
 					'name' : 'key_27',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 140,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -338,7 +338,7 @@ window = {
 				},
 				{
 					'name' : 'key_28',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 180,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -347,7 +347,7 @@ window = {
 				},
 				{
 					'name' : 'key_29',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 220,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -356,7 +356,7 @@ window = {
 				},
 				{
 					'name' : 'key_30',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 260,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -365,7 +365,7 @@ window = {
 				},
 				{
 					'name' : 'key_31',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 300,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -374,7 +374,7 @@ window = {
 				},
 				{
 					'name' : 'key_32',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 340,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -383,7 +383,7 @@ window = {
 				},
 				{
 					'name' : 'key_33',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 380,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -392,7 +392,7 @@ window = {
 				},
 				{
 					'name' : 'key_34',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 420,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -401,7 +401,7 @@ window = {
 				},
 				{
 					'name' : 'key_35',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 460,
 					'y' : 104,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -410,7 +410,7 @@ window = {
 				},
 				{
 					'name' : 'key_36',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 60,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -419,7 +419,7 @@ window = {
 				},
 				{
 					'name' : 'key_37',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 100,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -428,7 +428,7 @@ window = {
 				},
 				{
 					'name' : 'key_38',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 140,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -437,7 +437,7 @@ window = {
 				},
 				{
 					'name' : 'key_39',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 180,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -446,7 +446,7 @@ window = {
 				},
 				{
 					'name' : 'key_40',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 220,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -455,7 +455,7 @@ window = {
 				},
 				{
 					'name' : 'key_41',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 260,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -464,7 +464,7 @@ window = {
 				},
 				{
 					'name' : 'key_42',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 300,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -473,7 +473,7 @@ window = {
 				},
 				{
 					'name' : 'key_43',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 340,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -482,7 +482,7 @@ window = {
 				},
 				{
 					'name' : 'key_44',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 380,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -491,7 +491,7 @@ window = {
 				},
 				{
 					'name' : 'key_45',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 420,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -500,7 +500,7 @@ window = {
 				},
 				{
 					'name' : 'key_46',
-					'tip' : 'button',
+					'type' : 'button',
 					'x' : 460,
 					'y' : 144,
 					'default_image' : 'locale/tr/ui/vkey/key_normal.tga',
@@ -513,7 +513,7 @@ window = {
 		## ConnectBoard
 		{
 			"name" : "ConnectBoard",
-			"tip" : "thinboard",
+			"type" : "thinboard",
 
 			"x" : (SCREEN_WIDTH - 208) / 2,
 			"y" : (SCREEN_HEIGHT - 410 - 35),
@@ -524,7 +524,7 @@ window = {
 			(
 				{
 					"name" : "ConnectName",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 15,
 					"y" : 0,
@@ -535,7 +535,7 @@ window = {
 				},
 				{
 					"name" : "SelectConnectButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 150,
 					"y" : 0,
@@ -553,7 +553,7 @@ window = {
 		## LoginBoard
 		{
 			"name" : "LoginBoard",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : (SCREEN_WIDTH - 208) / 2,
 			"y" : (SCREEN_HEIGHT - 410),
@@ -563,24 +563,24 @@ window = {
 			"children" :
 			(
 				{ 
-					"name" : "ID_Text_window", "tip" : "window", "x" : 45, "y" : 4, "width" : 120, "height" : 18,
+					"name" : "ID_Text_window", "type" : "window", "x" : 45, "y" : 4, "width" : 120, "height" : 18,
 					"children" :
 					(
-						{"name":"ID_Text", "tip":"text", "x":0, "y":0, "text":uiScriptLocale.LOGIN_ID, "all_align" : "center"},
+						{"name":"ID_Text", "type":"text", "x":0, "y":0, "text":uiScriptLocale.LOGIN_ID, "all_align" : "center"},
 					),	
 				},
 				
 				{ 
-					"name" : "Password_Text_window", "tip" : "window", "x" : 45, "y" : 41, "width" : 120, "height" : 18,
+					"name" : "Password_Text_window", "type" : "window", "x" : 45, "y" : 41, "width" : 120, "height" : 18,
 					"children" :
 					(
-						{"name":"Password_Text", "tip":"text", "x":0, "y":0, "text":uiScriptLocale.LOGIN_PASSWORD, "all_align" : "center"},
+						{"name":"Password_Text", "type":"text", "x":0, "y":0, "text":uiScriptLocale.LOGIN_PASSWORD, "all_align" : "center"},
 					),	
 				},
 				
 				{
 					"name" : "ID_EditLine",
-					"tip" : "editline",
+					"type" : "editline",
 
 					"x" : 48,
 					"y" : 23,
@@ -598,7 +598,7 @@ window = {
 				},
 				{
 					"name" : "Password_EditLine",
-					"tip" : "editline",
+					"type" : "editline",
 
 					"x" : 48,
 					"y" : 60,
@@ -617,7 +617,7 @@ window = {
 				},
 				{
 					"name" : "LoginButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 15,
 					"y" : 79,
@@ -630,7 +630,7 @@ window = {
 				},
 				{
 					"name" : "LoginExitButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 105,
 					"y" : 79,
@@ -647,7 +647,7 @@ window = {
 		## ServerBoard
 		{
 			"name" : "ServerBoard",
-			"tip" : "thinboard",
+			"type" : "thinboard",
 
 			"x" : 0,
 			"y" : SCREEN_HEIGHT - SERVER_BOARD_HEIGHT - 72,
@@ -661,7 +661,7 @@ window = {
 				## Title
 				{
 					"name" : "Title",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 0,
 					"y" : 12,
@@ -673,7 +673,7 @@ window = {
 				## Horizontal
 				{
 					"name" : "HorizontalLine1",
-					"tip" : "line",
+					"type" : "line",
 
 					"x" : 10,
 					"y" : 34,
@@ -683,7 +683,7 @@ window = {
 				},
 				{
 					"name" : "HorizontalLine2",
-					"tip" : "line",
+					"type" : "line",
 
 					"x" : 10,
 					"y" : 35,
@@ -695,7 +695,7 @@ window = {
 				## Vertical
 				{
 					"name" : "VerticalLine1",
-					"tip" : "line",
+					"type" : "line",
 
 					"x" : 246,
 					"y" : 38,
@@ -705,7 +705,7 @@ window = {
 				},
 				{
 					"name" : "VerticalLine2",
-					"tip" : "line",
+					"type" : "line",
 
 					"x" : 247,
 					"y" : 38,
@@ -717,7 +717,7 @@ window = {
 				## Buttons
 				{
 					"name" : "ServerSelectButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 267,
 					"y" : SERVER_LIST_HEIGHT,
@@ -730,7 +730,7 @@ window = {
 				},
 				{
 					"name" : "ServerExitButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 267,
 					"y" : SERVER_LIST_HEIGHT + 22,
@@ -756,7 +756,7 @@ if not app.ENABLE_SERVER_SELECT_RENEWAL:
 				## ListBox
 				{
 					"name" : "ServerList",
-					"tip" : "listbox2",
+					"type" : "listbox2",
 
 					"x" : 10,
 					"y" : 40,
@@ -767,7 +767,7 @@ if not app.ENABLE_SERVER_SELECT_RENEWAL:
 				},
 				{
 					"name" : "ChannelList",
-					"tip" : "listbox",
+					"type" : "listbox",
 					"x" : 255,
 					"y" : 40,
 					"width" : 109,

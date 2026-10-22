@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "thinboard",
+			"type" : "thinboard",
 			"style" : ("attach", "ignore_size",),
 
 			"x" : 0,

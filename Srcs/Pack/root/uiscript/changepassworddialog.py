@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 				## Title
 				{
 					"name" : "titlebar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -42,7 +42,7 @@ window = {
 						{
 
 							"name" : "TitleName",
-							"tip" : "text",
+							"type" : "text",
 
 							"x" : 0,
 							"y" : 3,
@@ -57,7 +57,7 @@ window = {
 				## Password Slot
 				{
 					"name" : "old_password_slot",
-					"tip" : "image",
+					"type" : "image",
 
 					"x" : 135,
 					"y" : 34,
@@ -68,7 +68,7 @@ window = {
 					(
 						{
 							"name" : "old_password_name",
-							"tip" : "text",
+							"type" : "text",
 
 							"x" : -110,
 							"y" : 3,
@@ -76,7 +76,7 @@ window = {
 						},
 						{
 							"name" : "old_password_value",
-							"tip" : "editline",
+							"type" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -91,7 +91,7 @@ window = {
 				},
 				{
 					"name" : "new_password_slot",
-					"tip" : "image",
+					"type" : "image",
 
 					"x" : 135,
 					"y" : 59,
@@ -102,7 +102,7 @@ window = {
 					(
 						{
 							"name" : "new_password_name",
-							"tip" : "text",
+							"type" : "text",
 
 							"x" : -110,
 							"y" : 3,
@@ -110,7 +110,7 @@ window = {
 						},
 						{
 							"name" : "new_password_value",
-							"tip" : "editline",
+							"type" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -125,7 +125,7 @@ window = {
 				},
 				{
 					"name" : "new_password_check_slot",
-					"tip" : "image",
+					"type" : "image",
 
 					"x" : 135,
 					"y" : 79,
@@ -136,7 +136,7 @@ window = {
 					(
 						{
 							"name" : "new_password_check_name",
-							"tip" : "text",
+							"type" : "text",
 
 							"x" : -110,
 							"y" : 3,
@@ -144,7 +144,7 @@ window = {
 						},
 						{
 							"name" : "new_password_check_value",
-							"tip" : "editline",
+							"type" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -161,7 +161,7 @@ window = {
 				## Button
 				{
 					"name" : "accept_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : -35,
 					"y" : 103,
@@ -175,7 +175,7 @@ window = {
 				},
 				{
 					"name" : "cancel_button",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 35,
 					"y" : 103,

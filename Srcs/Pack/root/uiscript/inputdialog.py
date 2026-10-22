@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"tip" : "board_with_titlebar",
+			"type" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -31,7 +31,7 @@ window = {
 				## Input Slot
 				{
 					"name" : "InputSlot",
-					"tip" : "slotbar",
+					"type" : "slotbar",
 
 					"x" : 0,
 					"y" : 34,
@@ -39,14 +39,14 @@ window = {
 					"height" : 18,
 					"horizontal_align" : "center",
 
-					#"tip" : "image",
+					#"type" : "image",
 					#"image" : "d:/ymir work/ui/public/Parameter_Slot_03.sub",
 
 					"children" :
 					(
 						{
 							"name" : "InputValue",
-							"tip" : "editline",
+							"type" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -62,7 +62,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : - 61 - 5 + 30,
 					"y" : 58,
@@ -76,7 +76,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 5 + 30,
 					"y" : 58,

@@ -229,10 +229,10 @@ class LoadingWindow(ui.ScriptWindow):
 	def __RegisterSkill(self):
 
 		race = net.GetMainActorRace()
-		grup = net.GetMainActorSkillGroup()
+		group = net.GetMainActorSkillGroup()
 		empire = net.GetMainActorEmpire()
 
-		playerSettingModule.RegisterSkill(race, grup, empire)
+		playerSettingModule.RegisterSkill(race, group, empire)
 
 	def __RegisterTitleName(self):
 		for i in xrange(len(localeInfo.TITLE_NAME_LIST)):

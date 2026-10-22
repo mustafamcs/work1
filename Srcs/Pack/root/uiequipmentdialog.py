@@ -84,12 +84,12 @@ class EquipmentDialog(ui.ScriptWindow):
 			return
 		self.itemDataDict[slotIndex][2][socketIndex] = value
 
-	def SetEquipmentDialogAttr(self, slotIndex, attrIndex, tip, value):
+	def SetEquipmentDialogAttr(self, slotIndex, attrIndex, type, value):
 		if not slotIndex in self.itemDataDict:
 			return
 		if attrIndex < 0 or attrIndex > player.ATTRIBUTE_SLOT_MAX_NUM:
 			return
-		self.itemDataDict[slotIndex][3][attrIndex] = (tip, value)
+		self.itemDataDict[slotIndex][3][attrIndex] = (type, value)
 
 	def SetItemToolTip(self, tooltipItem):
 		self.tooltipItem = tooltipItem

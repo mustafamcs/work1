@@ -582,8 +582,8 @@ class CreateCharacterWindow(ui.Window):
 	def OnCreateSuccess(self):
 		self.stream.SetSelectCharacterPhase()
 
-	def OnCreateFailure(self, tip):
-		if 1 == tip:
+	def OnCreateFailure(self, type):
+		if 1 == type:
 			self.PopupMessage(localeInfo.CREATE_EXIST_SAME_NAME, self.EnableWindow)
 		else:
 			self.PopupMessage(localeInfo.CREATE_FAILURE, self.EnableWindow)

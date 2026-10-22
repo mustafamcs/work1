@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"tip" : "board_with_titlebar",
+			"type" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -27,7 +27,7 @@ window = {
 
 				{
 					"name" : "FishingBox1",
-					"tip" : "box",
+					"type" : "box",
 
 					"x" : 9,
 					"y" : 31,
@@ -39,7 +39,7 @@ window = {
 
 				{
 					"name" : "FishingBox2",
-					"tip" : "box",
+					"type" : "box",
 
 					"x" : 10,
 					"y" : 32,
@@ -51,7 +51,7 @@ window = {
 
 				{
 					"name" : "Water",
-					"tip" : "ani_image",
+					"type" : "ani_image",
 
 					"x" : 0,
 					"y" : 33,
@@ -77,7 +77,7 @@ window = {
 
 						{
 							"name" : "FishName",
-							"tip" : "text",
+							"type" : "text",
 
 							"x" : 10,
 							"y" : 10,
@@ -87,7 +87,7 @@ window = {
 
 						{
 							"name" : "Float_Wait",
-							"tip" : "ani_image",
+							"type" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -115,7 +115,7 @@ window = {
 
 						{
 							"name" : "Float_Throw",
-							"tip" : "ani_image",
+							"type" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -146,7 +146,7 @@ window = {
 
 						{
 							"name" : "Float_React",
-							"tip" : "ani_image",
+							"type" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -177,7 +177,7 @@ window = {
 
 						{
 							"name" : "Float_Catch",
-							"tip" : "ani_image",
+							"type" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -210,7 +210,7 @@ window = {
 
 				{
 					"name" : "FishingButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 0,
 					"y" : 30,

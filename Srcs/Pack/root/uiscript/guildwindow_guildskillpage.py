@@ -18,7 +18,7 @@ window = {
 		## PassiveSkill
 		{
 			"name":"Passive_Skill_Bar",
-			"tip":"horizontalbar",
+			"type":"horizontalbar",
 			"x":0,
 			"y":3 + ADD_HEIGHT,
 			"width":320,
@@ -28,7 +28,7 @@ window = {
 
 				{
 					"name":"Passive_Skill_Title",
-					"tip":"text",
+					"type":"text",
 					"x" : 7,
 					"y" : 2,
 					"vertical_align" : "center",
@@ -37,7 +37,7 @@ window = {
 				},
 				{
 					"name":"Passive_Skill_Plus_Label",
-					"tip":"image",
+					"type":"image",
 					"x":240,
 					"y":2,
 					"image":LOCALE_PATH+"label_uppt.sub",
@@ -45,7 +45,7 @@ window = {
 					(
 						{
 							"name":"Skill_Plus_Value",
-							"tip":"text",
+							"type":"text",
 							"x":61,
 							"y":0,
 							"text":"99",
@@ -59,7 +59,7 @@ window = {
 
 		{
 			"name" : "Passive_Skill_Slot_Table",
-			"tip" : "grid_table",
+			"type" : "grid_table",
 
 			"x" : 20 + 16,
 			"y" : 6 + 23 + ADD_HEIGHT,
@@ -76,7 +76,7 @@ window = {
 		## ActiveSkill
 		{
 			"name":"Active_Skill_Bar",
-			"tip":"horizontalbar",
+			"type":"horizontalbar",
 			"x":0,
 			"y":70 + ADD_HEIGHT,
 			"width":320,
@@ -86,7 +86,7 @@ window = {
 
 				{
 					"name":"Active_Skill_Title",
-					"tip":"text",
+					"type":"text",
 					"x" : 7,
 					"y" : 2,
 					"vertical_align" : "center",
@@ -99,7 +99,7 @@ window = {
 
 		{
 			"name" : "Active_Skill_Slot_Table",
-			"tip" : "grid_table",
+			"type" : "grid_table",
 
 			"x" : 20 + 16,
 			"y" : 73 + 23 + ADD_HEIGHT,
@@ -116,7 +116,7 @@ window = {
 		## Affect
 		{
 			"name":"Affect_Bar",
-			"tip":"horizontalbar",
+			"type":"horizontalbar",
 			"x":0,
 			"y":137 + ADD_HEIGHT,
 			"width":320,
@@ -126,7 +126,7 @@ window = {
 
 				{
 					"name":"Affect_Title",
-					"tip":"text",
+					"type":"text",
 					"x" : 0,
 					"y" : 0,
 					"all_align" : "center",
@@ -138,7 +138,7 @@ window = {
 
 		{
 			"name" : "Affect_Slot_Table",
-			"tip" : "grid_table",
+			"type" : "grid_table",
 
 			"x" : 20 + 16,
 			"y" : 137 + 30 + ADD_HEIGHT,
@@ -156,21 +156,21 @@ window = {
 
 		{
 			"name":"Dragon_God_Power_Title",
-			"tip":"text",
+			"type":"text",
 			"x" : 20,
 			"y" : 243 + ADD_HEIGHT + 5,
 			"text" : uiScriptLocale.GUILD_SKILL_POWER,
 		},
 		{
 			"name":"Dragon_God_Power_Gauge_Slot",
-			"tip":"image",
+			"type":"image",
 			"x" : 65,
 			"y" : 243 + ADD_HEIGHT + 5,
 			"image" : "d:/ymir work/ui/game/guild/gauge.sub",
 		},
 		{
 			"name" : "Dragon_God_Power_Gauge",
-			"tip" : "ani_image",
+			"type" : "ani_image",
 
 			"x" : 69,
 			"y" : 243 + ADD_HEIGHT + 5,
@@ -190,7 +190,7 @@ window = {
 		},
 		{
 			"name" : "Dragon_God_Power_Slot",
-			"tip" : "image",
+			"type" : "image",
 			"x" : 255,
 			"y" : 241 + ADD_HEIGHT - 4,
 			"image" : "d:/ymir work/ui/public/Parameter_Slot_03.sub",
@@ -199,7 +199,7 @@ window = {
 
 				{
 					"name":"Dragon_God_Power_Value",
-					"tip":"text",
+					"type":"text",
 					"x" : 0,
 					"y" : 0,
 					"all_align" : "center",
@@ -211,7 +211,7 @@ window = {
 		## OfferButton
 		{
 			"name" : "Heal_GSP_Button",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 257,
 			"y" : 241 + ADD_HEIGHT + 17,
 			"text" : uiScriptLocale.GUILD_SKIlL_HEAL_GSP,

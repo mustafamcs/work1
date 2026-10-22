@@ -13,7 +13,7 @@ window = {
 	"width" : 148,
 	"height" : 139,
 
-	"tip" : "image",
+	"type" : "image",
 	"image" : "d:/ymir work/ui/game/belt_inventory/bg.tga",
 
 
@@ -22,7 +22,7 @@ window = {
 		## Expand Buttons
 		{
 			"name" : "ExpandBtn",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : 2,
 			"y" : 15,
@@ -37,7 +37,7 @@ window = {
 		## Belt Inventory Layer (include minimize button)
 		{
 			"name" : "BeltInventoryLayer",
-#			"tip" : "board",
+#			"type" : "board",
 #			"style" : ("attach", "float"),
 
 			"x" : 5,
@@ -51,7 +51,7 @@ window = {
 				## Minimize Button
 				{
 					"name" : "MinimizeBtn",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 2,
 					"y" : 15,
@@ -67,7 +67,7 @@ window = {
 				## Real Belt Inventory Board
 				{
 					"name" : "BeltInventoryBoard",
-					"tip" : "board",
+					"type" : "board",
 					"style" : ("attach", "float"),
 
 					"x" : 10,
@@ -81,7 +81,7 @@ window = {
 						## Belt Inventory Slots
 						{
 							"name" : "BeltInventorySlot",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 
 							"x" : 5,
 							"y" : 5,

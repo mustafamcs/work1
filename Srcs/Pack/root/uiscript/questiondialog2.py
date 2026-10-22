@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 
 			"x" : 0,
 			"y" : 0,
@@ -26,7 +26,7 @@ window = {
 			(
 				{
 					"name" : "message1",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 0,
 					"y" : 25,
@@ -39,7 +39,7 @@ window = {
 				},
 				{
 					"name" : "message2",
-					"tip" : "text",
+					"type" : "text",
 
 					"x" : 0,
 					"y" : 50,
@@ -52,7 +52,7 @@ window = {
 				},
 				{
 					"name" : "accept",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : -40,
 					"y" : 68,
@@ -69,7 +69,7 @@ window = {
 				},
 				{
 					"name" : "cancel",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : +40,
 					"y" : 68,

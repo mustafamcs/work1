@@ -17,7 +17,7 @@ window = {
 		## BOARD
 		{
 			"name" : "board",
-			"tip" : "board_with_titlebar",
+			"type" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,

@@ -16,7 +16,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -30,7 +30,7 @@ window = {
 				## Base BackGroud Image
 				{
 					"name" : "DragonSoulRefineWindowBaseImage",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 					"x" : 0,
 					"y" : 0,
 
@@ -40,7 +40,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 5,
@@ -53,7 +53,7 @@ window = {
 					(
 						{ 
 							"name":"TitleName", 
-							"tip":"text", 
+							"type":"text", 
 							"x":140, 
 							"y":5, 
 							"text":uiScriptLocale.DRAGONSOUL_REFINE_WINDOW_TITLE, 
@@ -65,7 +65,7 @@ window = {
 				## Refine Slot
 				{
 					"name" : "RefineSlot",
-					"tip" : "grid_table",
+					"type" : "grid_table",
 
 					"image" : "d:/ymir work/ui/dragonsoul/cap.tga", 
 
@@ -82,7 +82,7 @@ window = {
 				## Result Slot
 				{
 					"name" : "ResultSlot",
-					"tip" : "grid_table",
+					"type" : "grid_table",
 
 					"x" : 207,
 					"y" : 39,
@@ -97,7 +97,7 @@ window = {
 				## Grade Button
 				{
 					"name" : "GradeButton",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : 36,
 					"y" : 148,
@@ -110,7 +110,7 @@ window = {
 					(
 						{
 							"name" : "GradeSlotTitle",
-							"tip" : "text",
+							"type" : "text",
 							"x" : 0,
 							"y" : 0,
 							"all_align" : "center",
@@ -123,7 +123,7 @@ window = {
 				## Step Button
 				{
 					"name" : "StepButton",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : 118,
 					"y" : 148,
@@ -136,7 +136,7 @@ window = {
 					(
 						{
 							"name" : "StepSlotTitle",
-							"tip" : "text",
+							"type" : "text",
 							"x" : 0,
 							"y" : 0,
 							"all_align" : "center",
@@ -149,7 +149,7 @@ window = {
 				## Refine Button
 				{
 					"name" : "StrengthButton",
-					"tip" : "toggle_button",
+					"type" : "toggle_button",
 
 					"x" : 198,
 					"y" : 148,
@@ -162,7 +162,7 @@ window = {
 					(
 						{
 							"name" : "RefineSlotTitle",
-							"tip" : "text",
+							"type" : "text",
 							"x" : 0,
 							"y" : 0,
 							"all_align" : "center",
@@ -175,7 +175,7 @@ window = {
 				## Money Print
 				{
 					"name":"Money_Slot",
-					"tip" : "text",
+					"type" : "text",
 
 					"x":35,
 					"y":180,
@@ -189,7 +189,7 @@ window = {
 				## Do Refine Button
 				{
 					"name" : "DoRefineButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 188,
 					"y" : 200,
@@ -202,7 +202,7 @@ window = {
 					(
 						{ 
 							"name" : "DoRefineButtonTitle", 
-							"tip" : "text", 
+							"type" : "text", 
 							"x" : 0, 
 							"y" : 0, 
 							"text" : uiScriptLocale.DO_REFINE, 

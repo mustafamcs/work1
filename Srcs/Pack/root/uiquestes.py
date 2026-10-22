@@ -717,8 +717,8 @@ class QuestDialog(ui.ScriptWindow):
 		# END_OF_IMAGE_EXCEPTION_BUG_FIX
 
 	# QUEST_IMAGE
-	def OnInsertItemIcon(self, tip, idx, title, desc, index=0, total=1):
-		if "item" != tip:
+	def OnInsertItemIcon(self, type, idx, title, desc, index=0, total=1):
+		if "item" != type:
 			return
 
 		import item

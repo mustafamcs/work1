@@ -14,7 +14,7 @@ window = {
 		## ScrollBar
 		{
 			"name" : "ScrollBar",
-			"tip" : "scrollbar",
+			"type" : "scrollbar",
 
 			"x" : 341,
 			"y" : 20,
@@ -24,22 +24,22 @@ window = {
 
 		## Grade
 		{
-			"name" : "IndexName", "tip" : "text", "x" : 43, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_NAME,
+			"name" : "IndexName", "type" : "text", "x" : 43, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_NAME,
 		},
 		{
-			"name" : "IndexGrade", "tip" : "text", "x" : 119, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_RANK,
+			"name" : "IndexGrade", "type" : "text", "x" : 119, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_RANK,
 		},
 		{
-			"name" : "IndexJob", "tip" : "text", "x" : 177, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_JOB,
+			"name" : "IndexJob", "type" : "text", "x" : 177, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_JOB,
 		},
 		{
-			"name" : "IndexLevel", "tip" : "text", "x" : 217, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_LEVEL,
+			"name" : "IndexLevel", "type" : "text", "x" : 217, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_LEVEL,
 		},
 		{
-			"name" : "IndexOffer", "tip" : "text", "x" : 251, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_SPECIFIC_GRAVITY,
+			"name" : "IndexOffer", "type" : "text", "x" : 251, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_SPECIFIC_GRAVITY,
 		},
 		{
-			"name" : "IndexGeneral", "tip" : "text", "x" : 304, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_KNIGHT,
+			"name" : "IndexGeneral", "type" : "text", "x" : 304, "y" : 8, "text" : uiScriptLocale.GUILD_MEMBER_KNIGHT,
 		},
 
 	),

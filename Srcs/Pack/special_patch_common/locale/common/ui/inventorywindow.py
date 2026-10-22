@@ -25,7 +25,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 			## Inventory, Equipment Slots
 			{
 				"name" : "board",
-				"tip" : "board",
+				"type" : "board",
 				"style" : ("attach",),
 
 				"x" : 0,
@@ -39,7 +39,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 					## Title
 					{
 						"name" : "TitleBar",
-						"tip" : "titlebar",
+						"type" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 8,
@@ -50,14 +50,14 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 
 						"children" :
 						(
-							{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
+							{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
 						),
 					},
 
 					## Equipment Slot
 					{
 						"name" : "Equipment_Base",
-						"tip" : "image",
+						"type" : "image",
 
 						"x" : 10,
 						"y" : 33,
@@ -69,7 +69,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 
 							{
 								"name" : "EquipmentSlot",
-								"tip" : "slot",
+								"type" : "slot",
 
 								"x" : 3,
 								"y" : 3,
@@ -100,7 +100,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 							## Dragon Soul Button
 							{
 								"name" : "DSSButton",
-								"tip" : "button",
+								"type" : "button",
 
 								"x" : 114,
 								"y" : 107,
@@ -114,7 +114,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 							## MallButton
 							{
 								"name" : "MallButton",
-								"tip" : "button",
+								"type" : "button",
 
 								"x" : 118,
 								"y" : 148,
@@ -128,7 +128,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 							## CostumeButton
 							{
 								"name" : "CostumeButton",
-								"tip" : "button",
+								"type" : "button",
 
 								"x" : 78,
 								"y" : 5,
@@ -141,7 +141,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 							},						
 							{
 								"name" : "Equipment_Tab_01",
-								"tip" : "radio_button",
+								"type" : "radio_button",
 
 								"x" : 86,
 								"y" : 161,
@@ -154,7 +154,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 								(
 									{
 										"name" : "Equipment_Tab_01_Print",
-										"tip" : "text",
+										"type" : "text",
 
 										"x" : 0,
 										"y" : 0,
@@ -167,7 +167,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 							},
 							{
 								"name" : "Equipment_Tab_02",
-								"tip" : "radio_button",
+								"type" : "radio_button",
 
 								"x" : 86 + 32,
 								"y" : 161,
@@ -180,7 +180,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 								(
 									{
 										"name" : "Equipment_Tab_02_Print",
-										"tip" : "text",
+										"type" : "text",
 
 										"x" : 0,
 										"y" : 0,
@@ -197,7 +197,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 
 					{
 						"name" : "Inventory_Tab_01",
-						"tip" : "radio_button",
+						"type" : "radio_button",
 
 						"x" : 10,
 						"y" : 33 + 191,
@@ -211,7 +211,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 						(
 							{
 								"name" : "Inventory_Tab_01_Print",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -224,7 +224,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 					},
 					{
 						"name" : "Inventory_Tab_02",
-						"tip" : "radio_button",
+						"type" : "radio_button",
 
 						#"x" : 10 + 78,
 						"x" : 10 + 39,
@@ -239,7 +239,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 						(
 							{
 								"name" : "Inventory_Tab_02_Print",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -253,7 +253,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 					
 					{
 						"name" : "Inventory_Tab_03",
-						"tip" : "radio_button",
+						"type" : "radio_button",
 
 						"x" : 10 + 39 + 39,
 						"y" : 33 + 191,
@@ -267,7 +267,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 						(
 							{
 								"name" : "Inventory_Tab_03_Print",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -281,7 +281,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 					
 					{
 						"name" : "Inventory_Tab_04",
-						"tip" : "radio_button",
+						"type" : "radio_button",
 
 						"x" : 10 + 39 + 39 + 39,
 						"y" : 33 + 191,
@@ -295,7 +295,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 						(
 							{
 								"name" : "Inventory_Tab_04_Print",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -310,7 +310,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 					## Item Slot
 					{
 						"name" : "ItemSlot",
-						"tip" : "grid_table",
+						"type" : "grid_table",
 
 						"x" : 8,
 						"y" : 246,
@@ -327,7 +327,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 					## Print
 					{
 						"name":"Money_Slot",
-						"tip":"button",
+						"type":"button",
 
 						"x":8,
 						"y":28,
@@ -343,7 +343,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 						(
 							{
 								"name":"Money_Icon",
-								"tip":"image",
+								"type":"image",
 
 								"x":-18,
 								"y":2,
@@ -353,7 +353,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 
 							{
 								"name" : "Money",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 3,
 								"y" : 3,
@@ -388,7 +388,7 @@ else:
 			## Inventory, Equipment Slots
 			{
 				"name" : "board",
-				"tip" : "board",
+				"type" : "board",
 				"style" : ("attach",),
 
 				"x" : 0,
@@ -402,7 +402,7 @@ else:
 					## Title
 					{
 						"name" : "TitleBar",
-						"tip" : "titlebar",
+						"type" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 8,
@@ -413,14 +413,14 @@ else:
 
 						"children" :
 						(
-							{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
+							{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
 						),
 					},
 
 					## Equipment Slot
 					{
 						"name" : "Equipment_Base",
-						"tip" : "image",
+						"type" : "image",
 
 						"x" : 10,
 						"y" : 33,
@@ -432,7 +432,7 @@ else:
 
 							{
 								"name" : "EquipmentSlot",
-								"tip" : "slot",
+								"type" : "slot",
 
 								"x" : 3,
 								"y" : 3,
@@ -463,7 +463,7 @@ else:
 							## Dragon Soul Button
 							{
 								"name" : "DSSButton",
-								"tip" : "button",
+								"type" : "button",
 
 								"x" : 114,
 								"y" : 107,
@@ -477,7 +477,7 @@ else:
 							## MallButton
 							{
 								"name" : "MallButton",
-								"tip" : "button",
+								"type" : "button",
 
 								"x" : 118,
 								"y" : 148,
@@ -491,7 +491,7 @@ else:
 							## CostumeButton
 							{
 								"name" : "CostumeButton",
-								"tip" : "button",
+								"type" : "button",
 
 								"x" : 78,
 								"y" : 5,
@@ -504,7 +504,7 @@ else:
 							},						
 							{
 								"name" : "Equipment_Tab_01",
-								"tip" : "radio_button",
+								"type" : "radio_button",
 
 								"x" : 86,
 								"y" : 161,
@@ -517,7 +517,7 @@ else:
 								(
 									{
 										"name" : "Equipment_Tab_01_Print",
-										"tip" : "text",
+										"type" : "text",
 
 										"x" : 0,
 										"y" : 0,
@@ -530,7 +530,7 @@ else:
 							},
 							{
 								"name" : "Equipment_Tab_02",
-								"tip" : "radio_button",
+								"type" : "radio_button",
 
 								"x" : 86 + 32,
 								"y" : 161,
@@ -543,7 +543,7 @@ else:
 								(
 									{
 										"name" : "Equipment_Tab_02_Print",
-										"tip" : "text",
+										"type" : "text",
 
 										"x" : 0,
 										"y" : 0,
@@ -560,7 +560,7 @@ else:
 
 					{
 						"name" : "Inventory_Tab_01",
-						"tip" : "radio_button",
+						"type" : "radio_button",
 
 						"x" : 10,
 						"y" : 33 + 191,
@@ -574,7 +574,7 @@ else:
 						(
 							{
 								"name" : "Inventory_Tab_01_Print",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -587,7 +587,7 @@ else:
 					},
 					{
 						"name" : "Inventory_Tab_02",
-						"tip" : "radio_button",
+						"type" : "radio_button",
 
 						"x" : 10 + 78,
 						"y" : 33 + 191,
@@ -601,7 +601,7 @@ else:
 						(
 							{
 								"name" : "Inventory_Tab_02_Print",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -616,7 +616,7 @@ else:
 					## Item Slot
 					{
 						"name" : "ItemSlot",
-						"tip" : "grid_table",
+						"type" : "grid_table",
 
 						"x" : 8,
 						"y" : 246,
@@ -633,7 +633,7 @@ else:
 					## Print
 					{
 						"name":"Money_Slot",
-						"tip":"button",
+						"type":"button",
 
 						"x":8,
 						"y":28,
@@ -649,7 +649,7 @@ else:
 						(
 							{
 								"name":"Money_Icon",
-								"tip":"image",
+								"type":"image",
 
 								"x":-18,
 								"y":2,
@@ -659,7 +659,7 @@ else:
 
 							{
 								"name" : "Money",
-								"tip" : "text",
+								"type" : "text",
 
 								"x" : 3,
 								"y" : 3,

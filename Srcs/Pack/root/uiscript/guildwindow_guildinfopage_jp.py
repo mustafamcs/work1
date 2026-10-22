@@ -18,25 +18,25 @@ window = {
 
 		## Guild Info Title
 		{
-			"name":"Guild_Info_Title_Bar", "tip":"horizontalbar", "x":5, "y":10, "width":167,
+			"name":"Guild_Info_Title_Bar", "type":"horizontalbar", "x":5, "y":10, "width":167,
 			"children" :
 			(
-				{ "name":"Guild_Info_Point_Value", "tip":"text", "x":8, "y":3, "text":uiScriptLocale.GUILD_INFO, },
+				{ "name":"Guild_Info_Point_Value", "type":"text", "x":8, "y":3, "text":uiScriptLocale.GUILD_INFO, },
 
 				## GuildName
 				{
-					"name" : "GuildName", "tip" : "text", "x" : 3, "y" : 31, "text" : uiScriptLocale.GUILD_INFO_NAME,
+					"name" : "GuildName", "type" : "text", "x" : 3, "y" : 31, "text" : uiScriptLocale.GUILD_INFO_NAME,
 					"children" :
 					(
 						{
 							"name" : "GuildNameSlot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 70,
 							"y" : -2,
 							"image" : LARGE_VALUE_FILE,
 							"children" :
 							(
-								{"name" : "GuildNameValue", "tip":"text", "text":uiScriptLocale.GUILD_INFO_NAME_VALUE, "x":0, "y":0, "all_align":"center"},
+								{"name" : "GuildNameValue", "type":"text", "text":uiScriptLocale.GUILD_INFO_NAME_VALUE, "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -44,18 +44,18 @@ window = {
 
 				## GuildMaster
 				{
-					"name" : "GuildMaster", "tip" : "text", "x" : 3, "y" : 57, "text" : uiScriptLocale.GUILD_INFO_MASTER,
+					"name" : "GuildMaster", "type" : "text", "x" : 3, "y" : 57, "text" : uiScriptLocale.GUILD_INFO_MASTER,
 					"children" :
 					(
 						{
 							"name" : "GuildMasterNameSlot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 70,
 							"y" : -2,
 							"image" : LARGE_VALUE_FILE,
 							"children" :
 							(
-								{"name" : "GuildMasterNameValue", "tip":"text", "text":uiScriptLocale.GUILD_INFO_MASTER_VALUE, "x":0, "y":0, "all_align":"center"},
+								{"name" : "GuildMasterNameValue", "type":"text", "text":uiScriptLocale.GUILD_INFO_MASTER_VALUE, "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -63,19 +63,19 @@ window = {
 
 				## GuildLevel
 				{
-					"name" : "GuildLevel", "tip" : "text", "x" : 3, "y" : 93, "text" : uiScriptLocale.GUILD_INFO_LEVEL,
+					"name" : "GuildLevel", "type" : "text", "x" : 3, "y" : 93, "text" : uiScriptLocale.GUILD_INFO_LEVEL,
 					"children" :
 					(
 						{
 							"name" : "GuildLevelSlot",
-							"tip" : "slotbar",
+							"type" : "slotbar",
 							"x" : 70,
 							"y" : -2,
 							"width" : 45,
 							"height" : 17,
 							"children" :
 							(
-								{"name" : "GuildLevelValue", "tip":"text", "text":"30", "x":0, "y":0, "all_align":"center"},
+								{"name" : "GuildLevelValue", "type":"text", "text":"30", "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -83,18 +83,18 @@ window = {
 
 				## CurrentExperience
 				{
-					"name" : "CurrentExperience", "tip" : "text", "x" : 3, "y" : 119, "text" : uiScriptLocale.GUILD_INFO_CUR_EXP,
+					"name" : "CurrentExperience", "type" : "text", "x" : 3, "y" : 119, "text" : uiScriptLocale.GUILD_INFO_CUR_EXP,
 					"children" :
 					(
 						{
 							"name" : "CurrentExperienceSlot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 70,
 							"y" : -2,
 							"image" : LARGE_VALUE_FILE,
 							"children" :
 							(
-								{"name" : "CurrentExperienceValue", "tip":"text", "text":"10000000", "x":0, "y":0, "all_align":"center"},
+								{"name" : "CurrentExperienceValue", "type":"text", "text":"10000000", "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -102,18 +102,18 @@ window = {
 
 				## LastExperience
 				{
-					"name" : "LastExperience", "tip" : "text", "x" : 3, "y" : 145, "text" : uiScriptLocale.GUILD_INFO_REST_EXP,
+					"name" : "LastExperience", "type" : "text", "x" : 3, "y" : 145, "text" : uiScriptLocale.GUILD_INFO_REST_EXP,
 					"children" :
 					(
 						{
 							"name" : "LastExperienceSlot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 70,
 							"y" : -2,
 							"image" : LARGE_VALUE_FILE,
 							"children" :
 							(
-								{"name" : "LastExperienceValue", "tip":"text", "text":"123123123123", "x":0, "y":0, "all_align":"center"},
+								{"name" : "LastExperienceValue", "type":"text", "text":"123123123123", "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -121,18 +121,18 @@ window = {
 
 				## GuildMemberCount
 				{
-					"name" : "GuildMemberCount", "tip" : "text", "x" : 3, "y" : 171, "text" : uiScriptLocale.GUILD_INFO_MEMBER_NUM,
+					"name" : "GuildMemberCount", "type" : "text", "x" : 3, "y" : 171, "text" : uiScriptLocale.GUILD_INFO_MEMBER_NUM,
 					"children" :
 					(
 						{
 							"name" : "GuildMemberCountSlot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 70,
 							"y" : -2,
 							"image" : LARGE_VALUE_FILE,
 							"children" :
 							(
-								{"name" : "GuildMemberCountValue", "tip":"text", "text":"30 / 32", "x":0, "y":0, "all_align":"center"},
+								{"name" : "GuildMemberCountValue", "type":"text", "text":"30 / 32", "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -140,18 +140,18 @@ window = {
 
 				## GuildMemberLevelAverage
 				{
-					"name" : "GuildMemberLevelAverage", "tip" : "text", "x" : 3, "y" : 197, "text" : uiScriptLocale.GUILD_INFO_MEMBER_AVG_LEVEL,
+					"name" : "GuildMemberLevelAverage", "type" : "text", "x" : 3, "y" : 197, "text" : uiScriptLocale.GUILD_INFO_MEMBER_AVG_LEVEL,
 					"children" :
 					(
 						{
 							"name" : "GuildMemberLevelAverageSlot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 108,
 							"y" : -2,
 							"image" : SMALL_VALUE_FILE,
 							"children" :
 							(
-								{"name" : "GuildMemberLevelAverageValue", "tip":"text", "text":"53", "x":0, "y":0, "all_align":"center"},
+								{"name" : "GuildMemberLevelAverageValue", "type":"text", "text":"53", "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -159,18 +159,18 @@ window = {
 
 				## GuildMoney
 				{
-					"name" : "GuildMoney", "tip" : "text", "x" : 3, "y" : 233, "text" : uiScriptLocale.GUILD_MONEY,
+					"name" : "GuildMoney", "type" : "text", "x" : 3, "y" : 233, "text" : uiScriptLocale.GUILD_MONEY,
 					"children" :
 					(
 						{
 							"name" : "GuildMoneySlot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 70,
 							"y" : -2,
 							"image" : LARGE_VALUE_FILE,
 							"children" :
 							(
-								{"name" : "GuildMoneyValue", "tip":"text", "text":"9999999", "x":0, "y":0, "all_align":"center"},
+								{"name" : "GuildMoneyValue", "type":"text", "text":"9999999", "x":0, "y":0, "all_align":"center"},
 							),
 						},
 					),
@@ -181,7 +181,7 @@ window = {
 		## Button
 		{
 			"name" : "OfferButton",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 127,
 			"y" : 100,
 			"text" : uiScriptLocale.GUILD_INFO_OFFER_EXP,
@@ -191,7 +191,7 @@ window = {
 		},
 			{
 				"name" : "DepositButton",
-				"tip" : "button",
+				"type" : "button",
 				"x" : 78,
 				"y" : 263,
 				"text" : uiScriptLocale.GUILD_DEPOSIT,
@@ -201,7 +201,7 @@ window = {
 			},
 			{
 				"name" : "WithdrawButton",
-				"tip" : "button",
+				"type" : "button",
 				"x" : 126,
 				"y" : 263,
 				"text" : uiScriptLocale.GUILD_WITHDRAW,
@@ -214,16 +214,16 @@ window = {
 
 		## Guild Mark Title
 		{
-			"name":"Guild_Mark_Title_Bar", "tip":"horizontalbar", "x":188, "y":10, "width":167,
+			"name":"Guild_Mark_Title_Bar", "type":"horizontalbar", "x":188, "y":10, "width":167,
 			"children" :
 			(
 
-				{ "name":"Guild_Mark_Title", "tip":"text", "x":8, "y":3, "text":uiScriptLocale.GUILD_MARK, },
+				{ "name":"Guild_Mark_Title", "type":"text", "x":8, "y":3, "text":uiScriptLocale.GUILD_MARK, },
 
 				## LargeGuildMark
 				{
 					"name" : "LargeGuildMarkSlot",
-					"tip" : "slotbar",
+					"type" : "slotbar",
 					"x" : 5,
 					"y" : 24,
 					"width" : 48+1,
@@ -232,7 +232,7 @@ window = {
 					(
 						{
 							"name" : "LargeGuildMark",
-							"tip" : "mark",
+							"type" : "mark",
 							"x" : 1,
 							"y" : 1,
 						},
@@ -245,7 +245,7 @@ window = {
 		## UploadButton
 		{
 			"name" : "UploadGuildMarkButton",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 260,
 			"y" : 33,
 			"text" : uiScriptLocale.GUILD_INFO_UPLOAD_MARK,
@@ -255,7 +255,7 @@ window = {
 		},
 		{
 			"name" : "UploadGuildSymbolButton",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 260,
 			"y" : 33 + 23,
 			"text" : uiScriptLocale.GUILD_INFO_UPLOAD_SYMBOL,
@@ -266,76 +266,76 @@ window = {
 
 		## Guild Mark Title
 		{
-			"name":"Guild_Mark_Title_Bar", "tip":"horizontalbar", "x":188, "y":85, "width":167,
+			"name":"Guild_Mark_Title_Bar", "type":"horizontalbar", "x":188, "y":85, "width":167,
 			"children" :
 			(
 
-				{ "name":"Guild_Mark_Title", "tip":"text", "x":8, "y":3, "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD, },
+				{ "name":"Guild_Mark_Title", "type":"text", "x":8, "y":3, "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD, },
 
 				{
 					"name" : "EnemyGuildSlot1",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 4,
 					"y" : 27 + 26*0,
 					"image" : XLARGE_VALUE_FILE,
 					"children" :
 					(
-						{"name" : "EnemyGuildName1", "tip":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
+						{"name" : "EnemyGuildName1", "type":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
 					),
 				},
 				{
 					"name" : "EnemyGuildSlot2",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 4,
 					"y" : 27 + 26*1,
 					"image" : XLARGE_VALUE_FILE,
 					"children" :
 					(
-						{"name" : "EnemyGuildName2", "tip":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
+						{"name" : "EnemyGuildName2", "type":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
 					),
 				},
 				{
 					"name" : "EnemyGuildSlot3",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 4,
 					"y" : 27 + 26*2,
 					"image" : XLARGE_VALUE_FILE,
 					"children" :
 					(
-						{"name" : "EnemyGuildName3", "tip":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
+						{"name" : "EnemyGuildName3", "type":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
 					),
 				},
 				{
 					"name" : "EnemyGuildSlot4",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 4,
 					"y" : 27 + 26*3,
 					"image" : XLARGE_VALUE_FILE,
 					"children" :
 					(
-						{"name" : "EnemyGuildName4", "tip":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
+						{"name" : "EnemyGuildName4", "type":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
 					),
 				},
 				{
 					"name" : "EnemyGuildSlot5",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 4,
 					"y" : 27 + 26*4,
 					"image" : XLARGE_VALUE_FILE,
 					"children" :
 					(
-						{"name" : "EnemyGuildName5", "tip":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
+						{"name" : "EnemyGuildName5", "type":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
 					),
 				},
 				{
 					"name" : "EnemyGuildSlot6",
-					"tip" : "image",
+					"type" : "image",
 					"x" : 4,
 					"y" : 27 + 26*5,
 					"image" : XLARGE_VALUE_FILE,
 					"children" :
 					(
-						{"name" : "EnemyGuildName6", "tip":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
+						{"name" : "EnemyGuildName6", "type":"text", "text":uiScriptLocale.GUILD_INFO_ENEMY_GUILD_EMPTY, "x":0, "y":0, "all_align":"center"},
 					),
 				},
 
@@ -345,7 +345,7 @@ window = {
 		## CancelButtons
 		{
 			"name" : "EnemyGuildCancel1",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 310,
 			"y" : 111 + 26*0,
 			"text" : uiScriptLocale.CANCEL,
@@ -355,7 +355,7 @@ window = {
 		},
 		{
 			"name" : "EnemyGuildCancel2",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 310,
 			"y" : 111 + 26*1,
 			"text" : uiScriptLocale.CANCEL,
@@ -365,7 +365,7 @@ window = {
 		},
 		{
 			"name" : "EnemyGuildCancel3",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 310,
 			"y" : 111 + 26*2,
 			"text" : uiScriptLocale.CANCEL,
@@ -375,7 +375,7 @@ window = {
 		},
 		{
 			"name" : "EnemyGuildCancel4",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 310,
 			"y" : 111 + 26*3,
 			"text" : uiScriptLocale.CANCEL,
@@ -385,7 +385,7 @@ window = {
 		},
 		{
 			"name" : "EnemyGuildCancel5",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 310,
 			"y" : 111 + 26*4,
 			"text" : uiScriptLocale.CANCEL,
@@ -395,7 +395,7 @@ window = {
 		},
 		{
 			"name" : "EnemyGuildCancel6",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 310,
 			"y" : 111 + 26*5,
 			"text" : uiScriptLocale.CANCEL,
@@ -407,7 +407,7 @@ window = {
 		## DeclareWar
 		{
 			"name" : "DeclareWarButton",
-			"tip" : "button",
+			"type" : "button",
 			"x" : 250 + 15,
 			"y" : 264,
 			"text" : uiScriptLocale.GUILD_INFO_DECALRE_WAR,

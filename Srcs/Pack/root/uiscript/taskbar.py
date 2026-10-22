@@ -19,7 +19,7 @@ window = {
 		## Board
 		{
 			"name" : "Base_Board_01",
-			"tip" : "expanded_image",
+			"type" : "expanded_image",
 
 			"x" : 263,
 			"y" : 0,
@@ -32,7 +32,7 @@ window = {
 		## Gauge
 		{
 			"name" : "Gauge_Board",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 0,
 			"y" : -10 + Y_ADD_POSITION,
@@ -43,7 +43,7 @@ window = {
 			(
 				{
 					"name" : "RampageGauge",
-					"tip" : "ani_image",
+					"type" : "ani_image",
 
 					"x" : 8,
 					"y" : 4,
@@ -74,7 +74,7 @@ window = {
 				},
 				{
 					"name" : "RampageGauge2",
-					"tip" : "ani_image",
+					"type" : "ani_image",
 
 					"x" : 8,
 					"y" : 4,
@@ -105,7 +105,7 @@ window = {
 				},
 				{
 					"name" : "HPGauge_Board",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 59,
 					"y" : 14,
@@ -117,7 +117,7 @@ window = {
 					(
 						{
 							"name" : "HPRecoveryGaugeBar",
-							"tip" : "bar",
+							"type" : "bar",
 
 							"x" : 0,
 							"y" : 0,
@@ -127,7 +127,7 @@ window = {
 						},
 						{
 							"name" : "HPGauge",
-							"tip" : "ani_image",
+							"type" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -149,7 +149,7 @@ window = {
 				},
 				{
 					"name" : "SPGauge_Board",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 59,
 					"y" : 24,
@@ -161,7 +161,7 @@ window = {
 					(
 						{
 							"name" : "SPRecoveryGaugeBar",
-							"tip" : "bar",
+							"type" : "bar",
 
 							"x" : 0,
 							"y" : 0,
@@ -171,7 +171,7 @@ window = {
 						},
 						{
 							"name" : "SPGauge",
-							"tip" : "ani_image",
+							"type" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -193,7 +193,7 @@ window = {
 				},
 				{
 					"name" : "STGauge_Board",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 59,
 					"y" : 38,
@@ -205,7 +205,7 @@ window = {
 					(
 						{
 							"name" : "STGauge",
-							"tip" : "ani_image",
+							"type" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -230,7 +230,7 @@ window = {
 		},
 		{
 			"name" : "EXP_Gauge_Board",
-			"tip" : "image",
+			"type" : "image",
 
 			"x" : 158,
 			"y" : 0 + Y_ADD_POSITION,
@@ -241,7 +241,7 @@ window = {
 			(
 				{
 					"name" : "EXPGauge_01",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 5,
 					"y" : 9,
@@ -250,7 +250,7 @@ window = {
 				},
 				{
 					"name" : "EXPGauge_02",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 30,
 					"y" : 9,
@@ -259,7 +259,7 @@ window = {
 				},
 				{
 					"name" : "EXPGauge_03",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 55,
 					"y" : 9,
@@ -268,7 +268,7 @@ window = {
 				},
 				{
 					"name" : "EXPGauge_04",
-					"tip" : "expanded_image",
+					"type" : "expanded_image",
 
 					"x" : 80,
 					"y" : 9,
@@ -281,7 +281,7 @@ window = {
 		## Mouse Button
 		{
 			"name" : "LeftMouseButton",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : SCREEN_WIDTH/2 - 128,
 			"y" : 3 + Y_ADD_POSITION,
@@ -292,7 +292,7 @@ window = {
 		},
 		{
 			"name" : "RightMouseButton",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : SCREEN_WIDTH/2 + 128 + 66 + 11,
 			"y" : 3 + Y_ADD_POSITION,
@@ -305,7 +305,7 @@ window = {
 		## Button
 		{
 			"name" : "CharacterButton",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : SCREEN_WIDTH - 144,
 			"y" : 3 + Y_ADD_POSITION,
@@ -318,7 +318,7 @@ window = {
 		},
 		{
 			"name" : "InventoryButton",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : SCREEN_WIDTH - 110,
 			"y" : 3 + Y_ADD_POSITION,
@@ -331,7 +331,7 @@ window = {
 		},
 		{
 			"name" : "MessengerButton",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : SCREEN_WIDTH - 76,
 			"y" : 3 + Y_ADD_POSITION,
@@ -344,7 +344,7 @@ window = {
 		},
 		{
 			"name" : "SystemButton",
-			"tip" : "button",
+			"type" : "button",
 
 			"x" : SCREEN_WIDTH - 42,
 			"y" : 3 + Y_ADD_POSITION,
@@ -359,7 +359,7 @@ window = {
 		## QuickBar
 		{
 			"name" : "quickslot_board",
-			"tip" : "window",
+			"type" : "window",
 
 			"x" : SCREEN_WIDTH/2 - 128 + 32 + 10,
 			"y" : 0 + Y_ADD_POSITION,
@@ -371,7 +371,7 @@ window = {
 			(
 				{
 					"name" : "ExpandButton",
-					"tip" : "button",
+					"type" : "button",
 
 					"x" : 128,
 					"y" : 1,
@@ -384,7 +384,7 @@ window = {
 				},
 				{
 					"name" : "quick_slot_1",
-					"tip" : "grid_table",
+					"type" : "grid_table",
 
 					"start_index" : 0,
 
@@ -404,15 +404,15 @@ window = {
 
 					"children" :
 					(
-						{ "name" : "slot_1", "tip" : "image", "x" : 3, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/1.sub", },
-						{ "name" : "slot_2", "tip" : "image", "x" : 35, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/2.sub", },
-						{ "name" : "slot_3", "tip" : "image", "x" : 67, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/3.sub", },
-						{ "name" : "slot_4", "tip" : "image", "x" : 99, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/4.sub", },
+						{ "name" : "slot_1", "type" : "image", "x" : 3, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/1.sub", },
+						{ "name" : "slot_2", "type" : "image", "x" : 35, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/2.sub", },
+						{ "name" : "slot_3", "type" : "image", "x" : 67, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/3.sub", },
+						{ "name" : "slot_4", "type" : "image", "x" : 99, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/4.sub", },
 					),
 				},
 				{
 					"name" : "quick_slot_2",
-					"tip" : "grid_table",
+					"type" : "grid_table",
 
 					"start_index" : 4,
 
@@ -432,15 +432,15 @@ window = {
 
 					"children" :
 					(
-						{ "name" : "slot_5", "tip" : "image", "x" : 3, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f1.sub", },
-						{ "name" : "slot_6", "tip" : "image", "x" : 35, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f2.sub", },
-						{ "name" : "slot_7", "tip" : "image", "x" : 67, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f3.sub", },
-						{ "name" : "slot_8", "tip" : "image", "x" : 99, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f4.sub", },
+						{ "name" : "slot_5", "type" : "image", "x" : 3, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f1.sub", },
+						{ "name" : "slot_6", "type" : "image", "x" : 35, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f2.sub", },
+						{ "name" : "slot_7", "type" : "image", "x" : 67, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f3.sub", },
+						{ "name" : "slot_8", "type" : "image", "x" : 99, "y" : 3, "image" : "d:/ymir work/ui/game/taskbar/f4.sub", },
 					),
 				},
 				{
 					"name" : "QuickSlotBoard",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 128+14+128+2,
 					"y" : 0,
@@ -450,14 +450,14 @@ window = {
 					(
 						{
 							"name" : "QuickSlotNumberBox",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 1,
 							"y" : 15,
 							"image" : ROOT + "taskbar/QuickSlot_Button_Board.sub",
 						},
 						{
 							"name" : "QuickPageUpButton",
-							"tip" : "button",
+							"type" : "button",
 							"tooltip_text" : uiScriptLocale.TASKBAR_PREV_QUICKSLOT,
 							"x" : 1,
 							"y" : 9,
@@ -468,12 +468,12 @@ window = {
 
 						{
 							"name" : "QuickPageNumber",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 3, "y" : 15, "image" : "d:/ymir work/ui/game/taskbar/1.sub",
 						},
 						{
 							"name" : "QuickPageDownButton",
-							"tip" : "button",
+							"type" : "button",
 							"tooltip_text" : uiScriptLocale.TASKBAR_NEXT_QUICKSLOT,
 
 							"x" : 1,

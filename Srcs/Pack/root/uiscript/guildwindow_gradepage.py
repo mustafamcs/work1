@@ -14,27 +14,27 @@ window = {
 
 		## GradeNumber
 		{
-			"name" : "GradeNumber", "tip" : "text", "x" : 21, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_NUM,
+			"name" : "GradeNumber", "type" : "text", "x" : 21, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_NUM,
 		},
 		## GradeName
 		{
-			"name" : "GradeName", "tip" : "text", "x" : 76, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_RANK,
+			"name" : "GradeName", "type" : "text", "x" : 76, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_RANK,
 		},
 		## InviteAuthority
 		{
-			"name" : "InviteAuthority", "tip" : "text", "x" : 126, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_JOIN,
+			"name" : "InviteAuthority", "type" : "text", "x" : 126, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_JOIN,
 		},
 		## DriveOutAuthority
 		{
-			"name" : "DriveOutAuthority", "tip" : "text", "x" : 183, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_DELETE,
+			"name" : "DriveOutAuthority", "type" : "text", "x" : 183, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_DELETE,
 		},
 		## NoticeAuthority
 		{
-			"name" : "NoticeAuthority", "tip" : "text", "x" : 240, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_NOTICE,
+			"name" : "NoticeAuthority", "type" : "text", "x" : 240, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_NOTICE,
 		},
 		## GeneralAuthority
 		{
-			"name" : "SkillAuthority", "tip" : "text", "x" : 297, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_SKILL,
+			"name" : "SkillAuthority", "type" : "text", "x" : 297, "y" : 5, "text" : uiScriptLocale.GUILD_GRADE_PERMISSION_SKILL,
 		},
 
 	),

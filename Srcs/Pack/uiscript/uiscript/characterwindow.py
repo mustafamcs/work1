@@ -25,7 +25,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"tip" : "board",
+			"type" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -38,7 +38,7 @@ window = {
 			(
 				{
 					"name" : "Skill_TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -49,13 +49,13 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "tip":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_SKILL, "all_align":"center" },
-						#{ "name":"TitleName", "tip":"image", "style" : ("attach",), "x":101, "y" : 1, "image" : LOCALE_PATH+"title_skill.sub", },
+						{ "name":"TitleName", "type":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_SKILL, "all_align":"center" },
+						#{ "name":"TitleName", "type":"image", "style" : ("attach",), "x":101, "y" : 1, "image" : LOCALE_PATH+"title_skill.sub", },
 					),
 				},
 				{
 					"name" : "Emoticon_TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -66,12 +66,12 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "tip":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_ACTION, "all_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_ACTION, "all_align":"center" },
 					),
 				},
 				{
 					"name" : "Quest_TitleBar",
-					"tip" : "titlebar",
+					"type" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -82,14 +82,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "tip":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_QUEST, "all_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_QUEST, "all_align":"center" },
 					),
 				},
 
 				## Tab Area
 				{
 					"name" : "TabControl",
-					"tip" : "window",
+					"type" : "window",
 
 					"x" : 0,
 					"y" : 328,
@@ -102,7 +102,7 @@ window = {
 						## Tab
 						{
 							"name" : "Tab_01",
-							"tip" : "image",
+							"type" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -114,7 +114,7 @@ window = {
 						},
 						{
 							"name" : "Tab_02",
-							"tip" : "image",
+							"type" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -126,7 +126,7 @@ window = {
 						},
 						{
 							"name" : "Tab_03",
-							"tip" : "image",
+							"type" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -138,7 +138,7 @@ window = {
 						},
 						{
 							"name" : "Tab_04",
-							"tip" : "image",
+							"type" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -151,7 +151,7 @@ window = {
 						## RadioButton
 						{
 							"name" : "Tab_Button_01",
-							"tip" : "radio_button",
+							"type" : "radio_button",
 
 							"x" : 6,
 							"y" : 5,
@@ -161,7 +161,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_02",
-							"tip" : "radio_button",
+							"type" : "radio_button",
 
 							"x" : 61,
 							"y" : 5,
@@ -171,7 +171,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_03",
-							"tip" : "radio_button",
+							"type" : "radio_button",
 
 							"x" : 130,
 							"y" : 5,
@@ -181,7 +181,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_04",
-							"tip" : "radio_button",
+							"type" : "radio_button",
 
 							"x" : 192,
 							"y" : 5,
@@ -195,7 +195,7 @@ window = {
 				## Page Area
 				{
 					"name" : "Character_Page",
-					"tip" : "window",
+					"type" : "window",
 					"style" : ("attach",),
 
 					"x" : 0,
@@ -209,18 +209,18 @@ window = {
 
 						## Title Area
 						{
-							"name" : "Character_TitleBar", "tip" : "titlebar", "style" : ("attach",), "x" : 61, "y" : 7, "width" : 185, "color" : "red",
+							"name" : "Character_TitleBar", "type" : "titlebar", "style" : ("attach",), "x" : 61, "y" : 7, "width" : 185, "color" : "red",
 							"children" :
 							(
-								#{ "name" : "TitleName", "tip" : "image", "style" : ("attach",), "x" : 70, "y" : 1, "image" : LOCALE_PATH+"title_status.sub", },
-								{ "name" : "TitleName", "tip":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_MAIN, "all_align":"center" },
+								#{ "name" : "TitleName", "type" : "image", "style" : ("attach",), "x" : 70, "y" : 1, "image" : LOCALE_PATH+"title_status.sub", },
+								{ "name" : "TitleName", "type":"text", "x":0, "y":-1, "text":uiScriptLocale.CHARACTER_MAIN, "all_align":"center" },
 							),
 						},
 
 						## Guild Name Slot
 						{
 							"name" : "Guild_Name_Slot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 60,
 							"y" :27+7,
 							"image" : LARGE_VALUE_FILE,
@@ -229,7 +229,7 @@ window = {
 							(
 								{
 									"name" : "Guild_Name",
-									"tip":"text",
+									"type":"text",
 									"text":"Lonca Adı",
 									"x":0,
 									"y":0,
@@ -245,7 +245,7 @@ window = {
 						## Character Name Slot
 						{
 							"name" : "Character_Name_Slot",
-							"tip" : "image",
+							"type" : "image",
 							"x" : 153,
 							"y" :27+7,
 							"image" : LARGE_VALUE_FILE,
@@ -254,7 +254,7 @@ window = {
 							(
 								{
 									"name" : "Character_Name",
-									"tip":"text",
+									"type":"text",
 									"text":"Karakter Adı",
 									"x":0,
 									"y":0,
@@ -269,215 +269,215 @@ window = {
 
 						## Header
 						{
-							"name":"Status_Header", "tip":"window", "x":3, "y":31, "width":0, "height":0,
+							"name":"Status_Header", "type":"window", "x":3, "y":31, "width":0, "height":0,
 							"children" :
 							(
 								## Lv
 								{
-									"name":"Status_Lv", "tip":"window", "x":9, "y":30, "width":37, "height":42,
+									"name":"Status_Lv", "type":"window", "x":9, "y":30, "width":37, "height":42,
 									"children" :
 									(
-										{ "name":"Level_Header", "tip":"image", "x":0, "y":0, "image":LOCALE_PATH+"label_level.sub" },
-										{ "name":"Level_Value", "tip":"text", "x":19, "y":19, "fontsize":"LARGE", "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"Level_Header", "type":"image", "x":0, "y":0, "image":LOCALE_PATH+"label_level.sub" },
+										{ "name":"Level_Value", "type":"text", "x":19, "y":19, "fontsize":"LARGE", "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									),
 								},
 
 								## EXP
 								{
-									"name":"Status_CurExp", "tip":"window", "x":53, "y":30, "width":87, "height":42,
+									"name":"Status_CurExp", "type":"window", "x":53, "y":30, "width":87, "height":42,
 									"children" :
 									(
-										{ "name":"Exp_Slot", "tip":"image", "x":0, "y":0, "image":LOCALE_PATH+"label_cur_exp.sub" },
-										{ "name":"Exp_Value", "tip":"text", "x":46, "y":19, "fontsize":"LARGE", "text":"12345678901", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },									),
+										{ "name":"Exp_Slot", "type":"image", "x":0, "y":0, "image":LOCALE_PATH+"label_cur_exp.sub" },
+										{ "name":"Exp_Value", "type":"text", "x":46, "y":19, "fontsize":"LARGE", "text":"12345678901", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },									),
 								},
 
 								## REXP
 								{
-									"name":"Status_RestExp", "tip":"window", "x":150, "y":30, "width":50, "height":20,
+									"name":"Status_RestExp", "type":"window", "x":150, "y":30, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"RestExp_Slot", "tip":"image", "x":0, "y":0, "image":LOCALE_PATH+"label_last_exp.sub" },
-										{ "name":"RestExp_Value", "tip":"text", "x":46, "y":19, "fontsize":"LARGE", "text":"12345678901", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"RestExp_Slot", "type":"image", "x":0, "y":0, "image":LOCALE_PATH+"label_last_exp.sub" },
+										{ "name":"RestExp_Value", "type":"text", "x":46, "y":19, "fontsize":"LARGE", "text":"12345678901", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									),
 								},
 							),
 						},
 
 						## Face Slot
-						{ "name" : "Face_Image", "tip" : "image", "x" : 11, "y" : 11, "image" : "d:/ymir work/ui/game/windows/face_warrior.sub" },
-						{ "name" : "Face_Slot", "tip" : "image", "x" : 7, "y" : 7, "image" : FACE_SLOT_FILE, },
+						{ "name" : "Face_Image", "type" : "image", "x" : 11, "y" : 11, "image" : "d:/ymir work/ui/game/windows/face_warrior.sub" },
+						{ "name" : "Face_Slot", "type" : "image", "x" : 7, "y" : 7, "image" : FACE_SLOT_FILE, },
 
 						{
-							"name":"Status_Standard", "tip":"window", "x":3, "y":100, "width":200, "height":250,
+							"name":"Status_Standard", "type":"window", "x":3, "y":100, "width":200, "height":250,
 							"children" :
 							(
-								{ "name":"Character_Bar_01", "tip":"horizontalbar", "x":12, "y":8, "width":223, },
-								{ "name":"Character_Bar_01_Text", "tip" : "image", "x" : 13, "y" : 9, "image" : LOCALE_PATH+"label_std.sub", },
+								{ "name":"Character_Bar_01", "type":"horizontalbar", "x":12, "y":8, "width":223, },
+								{ "name":"Character_Bar_01_Text", "type" : "image", "x" : 13, "y" : 9, "image" : LOCALE_PATH+"label_std.sub", },
 
 								{
 									"name":"Status_Plus_Label",
-									"tip":"image",
+									"type":"image",
 									"x":150, "y":11,
 									"image":LOCALE_PATH+"label_uppt.sub",
 
 									"children" :
 									(
-										{ "name":"Status_Plus_Value", "tip":"text", "x":62, "y":0, "text":"99", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"Status_Plus_Value", "type":"text", "x":62, "y":0, "text":"99", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									),
 								},
 
-								{"name":"Status_Standard_ItemList1", "tip" : "image", "x":17, "y":31, "image" : LOCALE_PATH+"label_std_item1.sub", },
-								{"name":"Status_Standard_ItemList2", "tip" : "image", "x":100, "y":30, "image" : LOCALE_PATH+"label_std_item2.sub", },
+								{"name":"Status_Standard_ItemList1", "type" : "image", "x":17, "y":31, "image" : LOCALE_PATH+"label_std_item1.sub", },
+								{"name":"Status_Standard_ItemList2", "type" : "image", "x":100, "y":30, "image" : LOCALE_PATH+"label_std_item2.sub", },
 
 								## HTH
 								{
-									"name":"HTH_Label", "tip":"window", "x":50, "y":32, "width":60, "height":20,
+									"name":"HTH_Label", "type":"window", "x":50, "y":32, "width":60, "height":20,
 									"children" :
 									(
-										{ "name":"HTH_Slot", "tip":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
-										{ "name":"HTH_Value", "tip":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
-										{ "name":"HTH_Plus", "tip" : "button", "x":41, "y":3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
+										{ "name":"HTH_Slot", "type":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
+										{ "name":"HTH_Value", "type":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"HTH_Plus", "type" : "button", "x":41, "y":3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
 									),
 								},
 								## INT
 								{
-									"name":"INT_Label", "tip":"window", "x":50, "y":32+23, "width":60, "height":20,
+									"name":"INT_Label", "type":"window", "x":50, "y":32+23, "width":60, "height":20,
 									"children" :
 									(
-										{ "name":"INT_Slot", "tip":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
-										{ "name":"INT_Value", "tip":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
-										{ "name":"INT_Plus", "tip" : "button", "x" : 41, "y" : 3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
+										{ "name":"INT_Slot", "type":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
+										{ "name":"INT_Value", "type":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"INT_Plus", "type" : "button", "x" : 41, "y" : 3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
 									)
 								},
 								## STR
 								{
-									"name":"STR_Label", "tip":"window", "x":50, "y":32+23*2, "width":60, "height":20,
+									"name":"STR_Label", "type":"window", "x":50, "y":32+23*2, "width":60, "height":20,
 									"children" :
 									(
-										{ "name":"STR_Slot", "tip":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
-										{ "name":"STR_Value", "tip":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
-										{ "name":"STR_Plus", "tip" : "button", "x" : 41, "y" : 3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
+										{ "name":"STR_Slot", "type":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
+										{ "name":"STR_Value", "type":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"STR_Plus", "type" : "button", "x" : 41, "y" : 3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
 									)
 								},
 								## DEX
 								{
-									"name":"DEX_Label", "tip":"window", "x":50, "y":32+23*3, "width":60, "height":20,
+									"name":"DEX_Label", "type":"window", "x":50, "y":32+23*3, "width":60, "height":20,
 									"children" :
 									(
-										{ "name":"DEX_Slot", "tip":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
-										{ "name":"DEX_Value", "tip":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
-										{ "name":"DEX_Plus", "tip" : "button", "x" : 41, "y" : 3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
+										{ "name":"DEX_Slot", "type":"image", "x":0, "y":0, "image":SMALL_VALUE_FILE },
+										{ "name":"DEX_Value", "type":"text", "x":20, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"DEX_Plus", "type" : "button", "x" : 41, "y" : 3, "default_image" : ROOT_PATH+"btn_plus_up.sub", "over_image" : ROOT_PATH+"btn_plus_over.sub", "down_image" : ROOT_PATH+"btn_plus_down.sub", },
 									)
 								},
 
-								{ "name":"HTH_Minus", "tip" : "button", "x":9, "y":35, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
-								{ "name":"INT_Minus", "tip" : "button", "x":9, "y":35+23, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
-								{ "name":"STR_Minus", "tip" : "button", "x":9, "y":35+23*2, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
-								{ "name":"DEX_Minus", "tip" : "button", "x":9, "y":35+23*3, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
+								{ "name":"HTH_Minus", "type" : "button", "x":9, "y":35, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
+								{ "name":"INT_Minus", "type" : "button", "x":9, "y":35+23, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
+								{ "name":"STR_Minus", "type" : "button", "x":9, "y":35+23*2, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
+								{ "name":"DEX_Minus", "type" : "button", "x":9, "y":35+23*3, "default_image" : ROOT_PATH+"btn_minus_up.sub", "over_image" : ROOT_PATH+"btn_minus_over.sub", "down_image" : ROOT_PATH+"btn_minus_down.sub", },
 
 								####
 
 								## HP
 								{
-									"name":"HEL_Label", "tip":"window", "x":145, "y":32, "width":50, "height":20,
+									"name":"HEL_Label", "type":"window", "x":145, "y":32, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"HP_Slot", "tip":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
-										{ "name":"HP_Value", "tip":"text", "x":45, "y":3, "text":"9999/9999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"HP_Slot", "type":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
+										{ "name":"HP_Value", "type":"text", "x":45, "y":3, "text":"9999/9999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									),
 								},
 								## SP
 								{
-									"name":"SP_Label", "tip":"window", "x":145, "y":32+23, "width":50, "height":20,
+									"name":"SP_Label", "type":"window", "x":145, "y":32+23, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"SP_Slot", "tip":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
-										{ "name":"SP_Value", "tip":"text", "x":45, "y":3, "text":"9999/9999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"SP_Slot", "type":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
+										{ "name":"SP_Value", "type":"text", "x":45, "y":3, "text":"9999/9999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 								## ATT
 								{
-									"name":"ATT_Label", "tip":"window", "x":145, "y":32+23*2, "width":50, "height":20,
+									"name":"ATT_Label", "type":"window", "x":145, "y":32+23*2, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"ATT_Slot", "tip":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
-										{ "name":"ATT_Value", "tip":"text", "x":45, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"ATT_Slot", "type":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
+										{ "name":"ATT_Value", "type":"text", "x":45, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									),
 								},
 								## DEF
 								{
-									"name":"DEF_Label", "tip":"window", "x":145, "y":32+23*3, "width":50, "height":20,
+									"name":"DEF_Label", "type":"window", "x":145, "y":32+23*3, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"DEF_Slot", "tip":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
-										{ "name":"DEF_Value", "tip":"text", "x":45, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"DEF_Slot", "type":"image", "x":0, "y":0, "image":LARGE_VALUE_FILE },
+										{ "name":"DEF_Value", "type":"text", "x":45, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 							),
 						},
 
 						{
-							"name":"Status_Extent", "tip":"window", "x":3, "y":221, "width":200, "height":50,
+							"name":"Status_Extent", "type":"window", "x":3, "y":221, "width":200, "height":50,
 							"children" :
 							(
 
-								{ "name":"Status_Extent_Bar", "tip":"horizontalbar", "x":12, "y":6, "width":223, },
-								{ "name":"Status_Extent_Label", "tip" : "image", "x" : 13, "y" : 8, "image" : LOCALE_PATH+"label_ext.sub", },
+								{ "name":"Status_Extent_Bar", "type":"horizontalbar", "x":12, "y":6, "width":223, },
+								{ "name":"Status_Extent_Label", "type" : "image", "x" : 13, "y" : 8, "image" : LOCALE_PATH+"label_ext.sub", },
 
-								{"name":"Status_Extent_ItemList1", "tip" : "image", "x":11, "y":31, "image" : LOCALE_PATH+"label_ext_item1.sub", },
-								{"name":"Status_Extent_ItemList2", "tip" : "image", "x":128, "y":32, "image" : LOCALE_PATH+"label_ext_item2.sub", },
+								{"name":"Status_Extent_ItemList1", "type" : "image", "x":11, "y":31, "image" : LOCALE_PATH+"label_ext_item1.sub", },
+								{"name":"Status_Extent_ItemList2", "type" : "image", "x":128, "y":32, "image" : LOCALE_PATH+"label_ext_item2.sub", },
 
 								{
-									"name":"MOV_Label", "tip":"window", "x":66, "y":33, "width":50, "height":20,
+									"name":"MOV_Label", "type":"window", "x":66, "y":33, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"MSPD_Slot", "tip":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
-										{ "name":"MSPD_Value", "tip":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"MSPD_Slot", "type":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
+										{ "name":"MSPD_Value", "type":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 
 								{
-									"name":"ASPD_Label", "tip":"window", "x":66, "y":33+23, "width":50, "height":20,
+									"name":"ASPD_Label", "type":"window", "x":66, "y":33+23, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"ASPD_Slot", "tip":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
-										{ "name":"ASPD_Value", "tip":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"ASPD_Slot", "type":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
+										{ "name":"ASPD_Value", "type":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 
 								{
-									"name":"CSPD_Label", "tip":"window", "x":66, "y":33+23*2, "width":50, "height":20,
+									"name":"CSPD_Label", "type":"window", "x":66, "y":33+23*2, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"CSPD_Slot", "tip":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
-										{ "name":"CSPD_Value", "tip":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"CSPD_Slot", "type":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
+										{ "name":"CSPD_Value", "type":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 
 								{
-									"name":"MATT_Label", "tip":"window", "x":183, "y":33, "width":50, "height":20,
+									"name":"MATT_Label", "type":"window", "x":183, "y":33, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"MATT_Slot", "tip":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
-										{ "name":"MATT_Value", "tip":"text", "x":26, "y":3, "text":"999-999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"MATT_Slot", "type":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
+										{ "name":"MATT_Value", "type":"text", "x":26, "y":3, "text":"999-999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 
 								{
-									"name":"MDEF_Label", "tip":"window", "x":183, "y":33+23, "width":50, "height":20,
+									"name":"MDEF_Label", "type":"window", "x":183, "y":33+23, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"MDEF_Slot", "tip":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
-										{ "name":"MDEF_Value", "tip":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"MDEF_Slot", "type":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
+										{ "name":"MDEF_Value", "type":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 
 								{
-									"name":"ER_Label", "tip":"window", "x":183, "y":33+23*2, "width":50, "height":20,
+									"name":"ER_Label", "type":"window", "x":183, "y":33+23*2, "width":50, "height":20,
 									"children" :
 									(
-										{ "name":"ER_Slot", "tip":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
-										{ "name":"ER_Value", "tip":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"ER_Slot", "type":"image", "x":0, "y":0, "image":MIDDLE_VALUE_FILE },
+										{ "name":"ER_Value", "type":"text", "x":26, "y":3, "text":"999", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									)
 								},
 
@@ -487,7 +487,7 @@ window = {
 				},
 				{
 					"name" : "Skill_Page",
-					"tip" : "window",
+					"type" : "window",
 					"style" : ("attach",),
 
 					"x" : 0,
@@ -500,22 +500,22 @@ window = {
 					(
 
 						{
-							"name":"Skill_Active_Title_Bar", "tip":"horizontalbar", "x":15, "y":17, "width":223,
+							"name":"Skill_Active_Title_Bar", "type":"horizontalbar", "x":15, "y":17, "width":223,
 
 							"children" :
 							(
 								{
-									"name":"Active_Skill_Point_Label", "tip":"image", "x":145, "y":3, "image":LOCALE_PATH+"label_uppt.sub",
+									"name":"Active_Skill_Point_Label", "type":"image", "x":145, "y":3, "image":LOCALE_PATH+"label_uppt.sub",
 									"children" :
 									(
-										{ "name":"Active_Skill_Point_Value", "tip":"text", "x":62, "y":0, "text":"99", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"Active_Skill_Point_Value", "type":"text", "x":62, "y":0, "text":"99", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									),
 								},
 
 								## Group Button
 								{
 									"name" : "Skill_Group_Button_1",
-									"tip" : "radio_button",
+									"type" : "radio_button",
 
 									"x" : 5,
 									"y" : 2,
@@ -530,7 +530,7 @@ window = {
 
 								{
 									"name" : "Skill_Group_Button_2",
-									"tip" : "radio_button",
+									"type" : "radio_button",
 
 									"x" : 50,
 									"y" : 2,
@@ -545,7 +545,7 @@ window = {
 
 								{
 									"name" : "Active_Skill_Group_Name",
-									"tip" : "text",
+									"type" : "text",
 
 									"x" : 7,
 									"y" : 1,
@@ -560,13 +560,13 @@ window = {
 						},
 
 						{
-							"name":"Skill_ETC_Title_Bar", "tip":"horizontalbar", "x":15, "y":200, "width":223,
+							"name":"Skill_ETC_Title_Bar", "type":"horizontalbar", "x":15, "y":200, "width":223,
 
 							"children" :
 							(
 								{
 									"name" : "Support_Skill_Group_Name",
-									"tip" : "text",
+									"type" : "text",
 
 									"x" : 7,
 									"y" : 1,
@@ -578,20 +578,20 @@ window = {
 								},
 
 								{
-									"name":"Support_Skill_Point_Label", "tip":"image", "x":145, "y":3, "image":LOCALE_PATH+"label_uppt.sub",
+									"name":"Support_Skill_Point_Label", "type":"image", "x":145, "y":3, "image":LOCALE_PATH+"label_uppt.sub",
 									"children" :
 									(
-										{ "name":"Support_Skill_Point_Value", "tip":"text", "x":62, "y":0, "text":"99", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
+										{ "name":"Support_Skill_Point_Value", "type":"text", "x":62, "y":0, "text":"99", "r":1.0, "g":1.0, "b":1.0, "a":1.0, "text_horizontal_align":"center" },
 									),
 								},
 							),
 						},
-						{ "name":"Skill_Board", "tip":"image", "x":13, "y":38, "image":"d:/ymir work/ui/game/windows/skill_board.sub", },
+						{ "name":"Skill_Board", "type":"image", "x":13, "y":38, "image":"d:/ymir work/ui/game/windows/skill_board.sub", },
 
 						## Active Slot
 						{
 							"name" : "Skill_Active_Slot",
-							"tip" : "slot",
+							"type" : "slot",
 
 							"x" : 0 + 16,
 							"y" : 0 + 15 + 23,
@@ -640,7 +640,7 @@ window = {
 						## ETC Slot
 						{
 							"name" : "Skill_ETC_Slot",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"x" : 18,
 							"y" : 221,
 							"start_index" : 101,
@@ -657,7 +657,7 @@ window = {
 				},
 				{
 					"name" : "Emoticon_Page",
-					"tip" : "window",
+					"type" : "window",
 					"style" : ("attach",),
 
 					"x" : 0,
@@ -668,13 +668,13 @@ window = {
 
 					"children" :
 					(
-						{ "name":"Action_Bar", "tip":"horizontalbar", "x":12, "y":11, "width":223, },
-						{ "name":"Action_Bar_Text", "tip":"text", "x":15, "y":13, "text":uiScriptLocale.CHARACTER_NORMAL_ACTION },
+						{ "name":"Action_Bar", "type":"horizontalbar", "x":12, "y":11, "width":223, },
+						{ "name":"Action_Bar_Text", "type":"text", "x":15, "y":13, "text":uiScriptLocale.CHARACTER_NORMAL_ACTION },
 
 						## Basis Action Slot
 						{
 							"name" : "SoloEmotionSlot",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"x" : 30,
 							"y" : 33,
 							"horizontal_align" : "center",
@@ -688,13 +688,13 @@ window = {
 							"image" : ICON_SLOT_FILE,
 						},
 
-						{ "name":"Reaction_Bar", "tip":"horizontalbar", "x":12, "y":8+150, "width":223, },
-						{ "name":"Reaction_Bar_Text", "tip":"text", "x":15, "y":10+150, "text":uiScriptLocale.CHARACTER_MUTUAL_ACTION },
+						{ "name":"Reaction_Bar", "type":"horizontalbar", "x":12, "y":8+150, "width":223, },
+						{ "name":"Reaction_Bar_Text", "type":"text", "x":15, "y":10+150, "text":uiScriptLocale.CHARACTER_MUTUAL_ACTION },
 
 						## Reaction Slot
 						{
 							"name" : "DualEmotionSlot",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"x" : 30,
 							"y" : 180,
 							"start_index" : 51,
@@ -710,7 +710,7 @@ window = {
 				},
 				{
 					"name" : "Quest_Page",
-					"tip" : "window",
+					"type" : "window",
 					"style" : ("attach",),
 
 					"x" : 0,
@@ -723,7 +723,7 @@ window = {
 					(
 						{
 							"name" : "Quest_Slot",
-							"tip" : "grid_table",
+							"type" : "grid_table",
 							"x" : 18,
 							"y" : 20,
 							"start_index" : 0,
@@ -737,7 +737,7 @@ window = {
 
 						{
 							"name" : "Quest_ScrollBar",
-							"tip" : "scrollbar",
+							"type" : "scrollbar",
 
 							"x" : 25,
 							"y" : 12,
@@ -745,25 +745,25 @@ window = {
 							"horizontal_align" : "right",
 						},
 
-						{ "name" : "Quest_Name_00", "tip" : "text", "text" : "İsim burada", "x" : 60, "y" : 14 },
-						{ "name" : "Quest_LastTime_00", "tip" : "text", "text" : "Kalan süre", "x" : 60, "y" : 30 },
-						{ "name" : "Quest_LastCount_00", "tip" : "text", "text" : "Kalan adet", "x" : 60, "y" : 46 },
+						{ "name" : "Quest_Name_00", "type" : "text", "text" : "İsim burada", "x" : 60, "y" : 14 },
+						{ "name" : "Quest_LastTime_00", "type" : "text", "text" : "Kalan süre", "x" : 60, "y" : 30 },
+						{ "name" : "Quest_LastCount_00", "type" : "text", "text" : "Kalan adet", "x" : 60, "y" : 46 },
 
-						{ "name" : "Quest_Name_01", "tip" : "text", "text" : "İsim burada", "x" : 60, "y" : 74 },
-						{ "name" : "Quest_LastTime_01", "tip" : "text", "text" : "Kalan süre", "x" : 60, "y" : 90 },
-						{ "name" : "Quest_LastCount_01", "tip" : "text", "text" : "Kalan adet", "x" : 60, "y" : 106 },
+						{ "name" : "Quest_Name_01", "type" : "text", "text" : "İsim burada", "x" : 60, "y" : 74 },
+						{ "name" : "Quest_LastTime_01", "type" : "text", "text" : "Kalan süre", "x" : 60, "y" : 90 },
+						{ "name" : "Quest_LastCount_01", "type" : "text", "text" : "Kalan adet", "x" : 60, "y" : 106 },
 
-						{ "name" : "Quest_Name_02", "tip" : "text", "text" : "İsim burada", "x" : 60, "y" : 134 },
-						{ "name" : "Quest_LastTime_02", "tip" : "text", "text" : "Kalan süre", "x" : 60, "y" : 150 },
-						{ "name" : "Quest_LastCount_02", "tip" : "text", "text" : "Kalan adet", "x" : 60, "y" : 166 },
+						{ "name" : "Quest_Name_02", "type" : "text", "text" : "İsim burada", "x" : 60, "y" : 134 },
+						{ "name" : "Quest_LastTime_02", "type" : "text", "text" : "Kalan süre", "x" : 60, "y" : 150 },
+						{ "name" : "Quest_LastCount_02", "type" : "text", "text" : "Kalan adet", "x" : 60, "y" : 166 },
 
-						{ "name" : "Quest_Name_03", "tip" : "text", "text" : "İsim burada", "x" : 60, "y" : 194 },
-						{ "name" : "Quest_LastTime_03", "tip" : "text", "text" : "Kalan süre", "x" : 60, "y" : 210 },
-						{ "name" : "Quest_LastCount_03", "tip" : "text", "text" : "Kalan adet", "x" : 60, "y" : 226 },
+						{ "name" : "Quest_Name_03", "type" : "text", "text" : "İsim burada", "x" : 60, "y" : 194 },
+						{ "name" : "Quest_LastTime_03", "type" : "text", "text" : "Kalan süre", "x" : 60, "y" : 210 },
+						{ "name" : "Quest_LastCount_03", "type" : "text", "text" : "Kalan adet", "x" : 60, "y" : 226 },
 
-						{ "name" : "Quest_Name_04", "tip" : "text", "text" : "İsim burada", "x" : 60, "y" : 254 },
-						{ "name" : "Quest_LastTime_04", "tip" : "text", "text" : "Kalan süre", "x" : 60, "y" : 270 },
-						{ "name" : "Quest_LastCount_04", "tip" : "text", "text" : "Kalan adet", "x" : 60, "y" : 286 },
+						{ "name" : "Quest_Name_04", "type" : "text", "text" : "İsim burada", "x" : 60, "y" : 254 },
+						{ "name" : "Quest_LastTime_04", "type" : "text", "text" : "Kalan süre", "x" : 60, "y" : 270 },
+						{ "name" : "Quest_LastCount_04", "type" : "text", "text" : "Kalan adet", "x" : 60, "y" : 286 },
 
 					),
 				},
