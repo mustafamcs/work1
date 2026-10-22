@@ -91,3 +91,6 @@ Srcs/Server/build/
 *.epk
 server/**/packet_info.txt
 server/**/p2p_packet_info.txt
+
+# Kodlama onarim raporlari (uretilmis)
+tools/fffd_rapor*.txt
