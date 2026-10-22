@@ -370,7 +370,7 @@ Group	퀘스트용_붉은멧돼지
 	1	"Hungriger Roter Keiler"	179
 	2	"Hungriger Roter Keiler"	179
 }
-Group	퀘스트용_°õ
+Group	퀘스트용_곰
 {
 	Leader	"Hungriger B?r"	180
 	Vnum	180
@@ -1122,14 +1122,14 @@ Group	퀘스트용_진웅귀
 	1	Ork-K?mpfer	603
 	2	Ork-Sp?her	602
 }
-Group	L44_¹Ğ교나한병(PAWN)-밀교추종자(PAWN)
+Group	L44_밀교나한병(PAWN)-밀교추종자(PAWN)
 {
 	Leader	"Dunkler Arahan"	702
 	Vnum	701
 	1	"Dunkler Fanatiker"	701
 	2	"Dunkler Fanatiker"	701
 }
-Group	L44_¹Ğ교나한병(PAWN)-밀교나한병(PAWN)
+Group	L44_밀교나한병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler Arahan"	702
 	Vnum	702
@@ -1137,7 +1137,7 @@ Group	L44_¹Ğ교나한병(PAWN)-밀교나한병(PAWN)
 	2	"Dunkler Fanatiker"	701
 	3	"Dunkler Fanatiker"	701
 }
-Group	L44_¹Ğ교나한병(PAWN)-밀교나한병(PAWN)
+Group	L44_밀교나한병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler Arahan"	702
 	Vnum	703
@@ -1145,7 +1145,7 @@ Group	L44_¹Ğ교나한병(PAWN)-밀교나한병(PAWN)
 	2	"Hoher Arahan"	752
 	3	"Dunkler Fanatiker"	701
 }
-Group	L45_¹Ğ교나한투병(PAWN)-밀교나한병(PAWN)
+Group	L45_밀교나한투병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler K?mpfer"	703
 	Vnum	704
@@ -1153,7 +1153,7 @@ Group	L45_¹Ğ교나한투병(PAWN)-밀교나한병(PAWN)
 	2	"Dunkler Fanatiker"	701
 	3	"Dunkler Fanatiker"	701
 }
-Group	L45_¹Ğ교나한투병(PAWN)-밀교나한병(PAWN)
+Group	L45_밀교나한투병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler K?mpfer"	703
 	Vnum	705
@@ -1161,7 +1161,7 @@ Group	L45_¹Ğ교나한투병(PAWN)-밀교나한병(PAWN)
 	2	"Dunkler Arahan"	702
 	3	"Dunkler Arahan"	702
 }
-Group	L46_¹Ğ교나한장(S_PAWN)-밀교나한투병(PAWN)
+Group	L46_밀교나한장(S_PAWN)-밀교나한투병(PAWN)
 {
 	Leader	"Oberer dunkler Arahan"	704
 	Vnum	706
@@ -1169,7 +1169,7 @@ Group	L46_¹Ğ교나한장(S_PAWN)-밀교나한투병(PAWN)
 	2	"Dunkler Arahan"	702
 	3	"Dunkler Arahan"	702
 }
-Group	L46_¹Ğ교나한장(S_PAWN)-밀교나한투병(PAWN)
+Group	L46_밀교나한장(S_PAWN)-밀교나한투병(PAWN)
 {
 	Leader	"Oberer dunkler Arahan"	704
 	Vnum	707
@@ -1193,7 +1193,7 @@ Group	L31_밀교집행병(S_PAWN)-밀교집행병(S_PAWN)
 	2	"Oberer dunkler Arahan"	704
 	3	"Oberer dunkler Arahan"	704
 }
-Group	L33_¹Ğ교강박령(S_PAWN)-밀교집행병(S_PAWN)
+Group	L33_밀교강박령(S_PAWN)-밀교집행병(S_PAWN)
 {
 	Leader	"Dunkler Peiniger"	706
 	Vnum	710
@@ -1201,7 +1201,7 @@ Group	L33_¹Ğ교강박령(S_PAWN)-밀교집행병(S_PAWN)
 	2	"Hoher Scharfrichter"	755
 	3	"Oberer dunkler Arahan"	704
 }
-Group	L33_¹Ğ교강박령(S_PAWN)-밀교강박령(S_PAWN)
+Group	L33_밀교강박령(S_PAWN)-밀교강박령(S_PAWN)
 {
 	Leader	"Dunkler Peiniger"	706
 	Vnum	711
@@ -1209,7 +1209,7 @@ Group	L33_¹Ğ교강박령(S_PAWN)-밀교강박령(S_PAWN)
 	2	"Dunkler Scharfrichter"	705
 	3	"Oberer dunkler Arahan"	704
 }
-Group	L36_¹Ğ교소환령(S_PAWN)-밀교강박령(S_PAWN)
+Group	L36_밀교소환령(S_PAWN)-밀교강박령(S_PAWN)
 {
 	Leader	"Dunkler Beschw?rer"	707
 	Vnum	712
@@ -1217,7 +1217,7 @@ Group	L36_¹Ğ교소환령(S_PAWN)-밀교강박령(S_PAWN)
 	2	"Dunkler Scharfrichter"	705
 	3	"Dunkler Scharfrichter"	705
 }
-Group	L36_¹Ğ교소환령(S_PAWN)-밀교소환령(S_PAWN)
+Group	L36_밀교소환령(S_PAWN)-밀교소환령(S_PAWN)
 {
 	Leader	"Dunkler Beschw?rer"	707
 	Vnum	713
@@ -1225,14 +1225,14 @@ Group	L36_¹Ğ교소환령(S_PAWN)-밀교소환령(S_PAWN)
 	2	"Dunkler Peiniger"	706
 	3	"Dunkler Scharfrichter"	705
 }
-Group	L40_¹Ğ교나한병(KNIGHT)-밀교추종자(KNIGHT)
+Group	L40_밀교나한병(KNIGHT)-밀교추종자(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Arahan"	732
 	Vnum	714
 	1	"Stolzer dunkl. Fanatiker"	731
 	2	"Brutaler Fanatiker"	771
 }
-Group	L40_¹Ğ교나한병(KNIGHT)-밀교나한병(KNIGHT)
+Group	L40_밀교나한병(KNIGHT)-밀교나한병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Arahan"	732
 	Vnum	715
@@ -1240,7 +1240,7 @@ Group	L40_¹Ğ교나한병(KNIGHT)-밀교나한병(KNIGHT)
 	2	"Stolzer dunkl. Fanatiker"	731
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L40_¹Ğ교나한병(KNIGHT)-밀교나한병(KNIGHT)
+Group	L40_밀교나한병(KNIGHT)-밀교나한병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Arahan"	732
 	Vnum	716
@@ -1248,7 +1248,7 @@ Group	L40_¹Ğ교나한병(KNIGHT)-밀교나한병(KNIGHT)
 	2	"Stolzer dunkl. Arahan"	732
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L43_¹Ğ교나한투병(KNIGHT)-밀교나한병(KNIGHT)
+Group	L43_밀교나한투병(KNIGHT)-밀교나한병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. K?mpfer"	733
 	Vnum	717
@@ -1256,7 +1256,7 @@ Group	L43_¹Ğ교나한투병(KNIGHT)-밀교나한병(KNIGHT)
 	2	"Brutaler Arahan"	772
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L43_¹Ğ교나한투병(KNIGHT)-밀교나한투병(KNIGHT)
+Group	L43_밀교나한투병(KNIGHT)-밀교나한투병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. K?mpfer"	733
 	Vnum	718
@@ -1264,7 +1264,7 @@ Group	L43_¹Ğ교나한투병(KNIGHT)-밀교나한투병(KNIGHT)
 	2	"Stolzer dunkl. Arahan"	732
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L46_¹Ğ교나한장(S_KNIGHT)-밀교나한투병(KNIGHT)
+Group	L46_밀교나한장(S_KNIGHT)-밀교나한투병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Oberst"	734
 	Vnum	719
@@ -1272,7 +1272,7 @@ Group	L46_¹Ğ교나한장(S_KNIGHT)-밀교나한투병(KNIGHT)
 	2	"Stolzer dunkl. Arahan"	732
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L46_¹Ğ교나한장(S_KNIGHT)-밀교나한장(S_KNIGHT)
+Group	L46_밀교나한장(S_KNIGHT)-밀교나한장(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Oberst"	734
 	Vnum	720
@@ -1296,7 +1296,7 @@ Group	L49_밀교집행병(S_KNIGHT)-밀교집행병(S_KNIGHT)
 	2	"Stolzer dunkl. Oberst"	734
 	3	"Stolzer dunkl. K?mpfer"	733
 }
-Group	L34_¹Ğ교강박령(S_KNIGHT)-밀교집행병(S_KNIGHT)
+Group	L34_밀교강박령(S_KNIGHT)-밀교집행병(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Peiniger"	736
 	Vnum	723
@@ -1304,7 +1304,7 @@ Group	L34_¹Ğ교강박령(S_KNIGHT)-밀교집행병(S_KNIGHT)
 	2	"Stolzer dunkl. Oberst"	734
 	3	"Stolzer dunkl. Oberst"	734
 }
-Group	L34_¹Ğ교강박령(S_KNIGHT)-밀교강박령(S_KNIGHT)
+Group	L34_밀교강박령(S_KNIGHT)-밀교강박령(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Peiniger"	736
 	Vnum	724
@@ -1312,7 +1312,7 @@ Group	L34_¹Ğ교강박령(S_KNIGHT)-밀교강박령(S_KNIGHT)
 	2	"Stolzer dunkl. Sch?tze"	735
 	3	"Stolzer dunkl. Sch?tze"	735
 }
-Group	L37_¹Ğ교소환령(S_KNIGHT)-밀교강박령(S_KNIGHT)
+Group	L37_밀교소환령(S_KNIGHT)-밀교강박령(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Zauberer"	737
 	Vnum	725
@@ -1320,7 +1320,7 @@ Group	L37_¹Ğ교소환령(S_KNIGHT)-밀교강박령(S_KNIGHT)
 	2	"Stolzer dunkl. Peiniger"	736
 	3	"Stolzer dunkl. Sch?tze"	735
 }
-Group	L37_¹Ğ교소환령(S_KNIGHT)-밀교소환령(S_KNIGHT)
+Group	L37_밀교소환령(S_KNIGHT)-밀교소환령(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Zauberer"	737
 	Vnum	726
@@ -1328,7 +1328,7 @@ Group	L37_¹Ğ교소환령(S_KNIGHT)-밀교소환령(S_KNIGHT)
 	2	"Stolzer dunkl. Peiniger"	736
 	3	"Stolzer dunkl. Sch?tze"	735
 }
-Group	L40_¹Ğ교교주(BOSS)-밀교소환령(S_KNIGHT)
+Group	L40_밀교교주(BOSS)-밀교소환령(S_KNIGHT)
 {
 	Leader	"Dunkler Anf?hrer"	791
 	Vnum	727
@@ -1337,7 +1337,7 @@ Group	L40_¹Ğ교교주(BOSS)-밀교소환령(S_KNIGHT)
 	3	"Stolzer dunkl. Sch?tze"	735
 	4	"Stolzer dunkl. Sch?tze"	735
 }
-Group	퀘스트용_¹Ğ교추종자
+Group	퀘스트용_밀교추종자
 {
 	Leader	"Hoher Fanatiker"	751
 	Vnum	751
@@ -2145,14 +2145,14 @@ Group	L74_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
 	1	"Rote Giftspinne"	2003
 	2	Giftspinne	2002
 }
-Group	L75_Áı게거미(S_PAWN)-붉은독거미(S_PAWN)
+Group	L75_집게거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Leader	Klauenspinne	2004
 	Vnum	2006
 	1	"Rote Giftspinne"	2003
 	2	"Rote Giftspinne"	2003
 }
-Group	L75_Áı게거미(S_PAWN)-집게거미(S_PAWN)
+Group	L75_집게거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Leader	Klauenspinne	2004
 	Vnum	2007
@@ -2208,14 +2208,14 @@ Group	L62_붉은맹독거미(S_KNIGHT)-붉은맹독거미(S_KNIGHT)
 	1	"Rote w?tende Giftspinne"	2033
 	2	"T?dliche Giftspinne"	2032
 }
-Group	L63_Áı게독거미(S_KNIGHT)-붉은맹독거미(S_KNIGHT)
+Group	L63_집게독거미(S_KNIGHT)-붉은맹독거미(S_KNIGHT)
 {
 	Leader	Klauengiftspinne	2034
 	Vnum	2015
 	1	"Rote w?tende Giftspinne"	2033
 	2	"Rote w?tende Giftspinne"	2033
 }
-Group	L63_Áı게독거미(S_KNIGHT)-집게독거미(S_KNIGHT)
+Group	L63_집게독거미(S_KNIGHT)-집게독거미(S_KNIGHT)
 {
 	Leader	Klauengiftspinne	2034
 	Vnum	2016
@@ -2292,14 +2292,14 @@ Group	L74_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
 	1	"Rote t?dliche Giftspinne"	2063
 	2	"T?dliche Giftspinne"	2062
 }
-Group	L75_Áı게거미(S_PAWN)-붉은독거미(S_PAWN)
+Group	L75_집게거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Leader	Klauengiftspinne	2064
 	Vnum	2056
 	1	"Rote t?dliche Giftspinne"	2063
 	2	"Rote t?dliche Giftspinne"	2063
 }
-Group	L75_Áı게거미(S_PAWN)-집게거미(S_PAWN)
+Group	L75_집게거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Leader	Klauengiftspinne	2064
 	Vnum	2057
@@ -2382,7 +2382,7 @@ Group	퀘스트용_독거미
 	1	"B?se t?dl. Giftspinne"	2052
 	2	"B?se t?dl. Giftspinne"	2052
 }
-Group	퀘스트용_Áı게거미
+Group	퀘스트용_집게거미
 {
 	Leader	"B?se rote Giftspinne"	2053
 	Vnum	4074
@@ -3482,7 +3482,7 @@ Group	L25_만우절_맷돼지
 	2	Keiler	8502
 	3	Keiler	8502
 }
-Group	L25_만우절_°õ
+Group	L25_만우절_곰
 {
 	Leader	B?r	8503
 	Vnum	8503
@@ -3522,7 +3522,7 @@ Group	L25_만우절_사막의무법자
 	2	W?stenbandit	8507
 	3	W?stenbandit	8507
 }
-Group	L25_만우절_¹Ğ교강박령
+Group	L25_만우절_밀교강박령
 {
 	Leader	"Esoterischer Peiniger"	8508
 	Vnum	8508
@@ -3530,7 +3530,7 @@ Group	L25_만우절_¹Ğ교강박령
 	2	"Esoterischer Peiniger"	8508
 	3	"Esoterischer Peiniger"	8508
 }
-Group	L25_만우절_¹Ğ교소환령
+Group	L25_만우절_밀교소환령
 {
 	Leader	"Esoterischer Beschw?rer"	8509
 	Vnum	8509
@@ -4458,7 +4458,7 @@ Group	Easter-Metin95_2
 	1	Setaou-Magistra	2413
 	2	Setaou-Magistra	2413
 }
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2501
 	Leader	아귀	2501
@@ -4466,7 +4466,7 @@ Group	아귀동굴1-2Ãş용
 	2	아귀	2501
 	3	아귀	2501
 }
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2502
 	Leader	아귀견	2502
@@ -4474,7 +4474,7 @@ Group	아귀동굴1-2Ãş용
 	2	아귀	2501
 }
 
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2503
 	Leader	아귀견	2502
@@ -4483,7 +4483,7 @@ Group	아귀동굴1-2Ãş용
 	3	아귀견	2502
 }
 
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2504
 	Leader	아귀감염자	2503
@@ -4491,7 +4491,7 @@ Group	아귀동굴1-2Ãş용
 	2	아귀견	2502
 }
 
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2505
 	Leader	아귀감염자	2503
@@ -4500,7 +4500,7 @@ Group	아귀동굴1-2Ãş용
 	3	아귀감염자	2503
 }
 
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2506
 	Leader	아귀돌격병	2504
@@ -4509,7 +4509,7 @@ Group	아귀동굴1-2Ãş용
 	3	아귀감염자	2503
 }
 
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2506
 	Leader	아귀돌격병	2504
@@ -4518,7 +4518,7 @@ Group	아귀동굴1-2Ãş용
 	3	아귀돌격병	2504
 }
 
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2507
 	Leader	아귀감염창병	2505
@@ -4527,7 +4527,7 @@ Group	아귀동굴1-2Ãş용
 	3	아귀돌격병	2504
 }
 
-Group	아귀동굴1-2Ãş용
+Group	아귀동굴1-2층용
 {
 	Vnum	2508
 	Leader	아귀감염창병	2505
@@ -4536,7 +4536,7 @@ Group	아귀동굴1-2Ãş용
 	3	아귀돌격병	2504
 }
 
-Group	아귀동굴2Ãş용
+Group	아귀동굴2층용
 {
 	Vnum	2509
 	Leader	아귀감염창병	2505
@@ -4545,7 +4545,7 @@ Group	아귀동굴2Ãş용
 	3	아귀감염창병	2505
 }
 
-Group	아귀동굴2Ãş용
+Group	아귀동굴2층용
 {
 	Vnum	2510
 	Leader	아귀궁수	2506
@@ -4554,7 +4554,7 @@ Group	아귀동굴2Ãş용
 	3	아귀감염창병	2505
 }
 
-Group	아귀동굴2Ãş용
+Group	아귀동굴2층용
 {
 	Vnum	2511
 	Leader	아귀궁수	2506
@@ -4563,7 +4563,7 @@ Group	아귀동굴2Ãş용
 	3	아귀궁수	2506
 }
 
-Group	아귀동굴2Ãş용
+Group	아귀동굴2층용
 {
 	Vnum	2512
 	Leader	아귀감염대장	2507
@@ -4574,7 +4574,7 @@ Group	아귀동굴2Ãş용
 	5	아귀감염창병	2505
 }
 
-Group	아귀동굴3Ãş용
+Group	아귀동굴3층용
 {
 	Vnum	2513
 	Leader	아귀병	2508
@@ -4584,7 +4584,7 @@ Group	아귀동굴3Ãş용
 	4	아귀병	2508
 }
 
-Group	아귀동굴3Ãş용
+Group	아귀동굴3층용
 {
 	Vnum	2514
 	Leader	아귀병	2508
@@ -4594,7 +4594,7 @@ Group	아귀동굴3Ãş용
 	4	아귀궁병	2509
 }
 
-Group	아귀동굴3Ãş용
+Group	아귀동굴3층용
 {
 	Vnum	2515
 	Leader	아귀궁병	2509
@@ -4604,7 +4604,7 @@ Group	아귀동굴3Ãş용
 	4	아귀병	2508
 }
 
-Group	아귀동굴3Ãş용
+Group	아귀동굴3층용
 {
 	Vnum	2516
 	Leader	아귀궁병	2509
@@ -4614,7 +4614,7 @@ Group	아귀동굴3Ãş용
 	4	아귀병	2508
 }
 
-Group	아귀동굴3Ãş용
+Group	아귀동굴3층용
 {
 	Vnum	2517
 	Leader	아귀궁병	2509
@@ -4624,7 +4624,7 @@ Group	아귀동굴3Ãş용
 	4	아귀병	2508
 }
 
-Group	아귀동굴3Ãş용
+Group	아귀동굴3층용
 {
 	Vnum	2518
 	Leader	아귀창병	2510
@@ -4634,7 +4634,7 @@ Group	아귀동굴3Ãş용
 	4	아귀병	2508
 }
 
-Group	아귀동굴3Ãş용
+Group	아귀동굴3층용
 {
 	Vnum	2519
 	Leader	아귀창병	2510
@@ -4644,7 +4644,7 @@ Group	아귀동굴3Ãş용
 	4	아귀궁병	2509
 }
 
-Group	아귀동굴4Ãş용
+Group	아귀동굴4층용
 {
 	Vnum	2520
 	Leader	아귀주술사	2511
@@ -4654,7 +4654,7 @@ Group	아귀동굴4Ãş용
 	4	아귀궁병	2509
 }
 
-Group	아귀동굴4-7Ãş용
+Group	아귀동굴4-7층용
 {
 	Vnum	2521
 	Leader	아귀주술사	2511
@@ -4664,7 +4664,7 @@ Group	아귀동굴4-7Ãş용
 	4	아귀창병	2510
 }
 
-Group	아귀동굴4-7Ãş용
+Group	아귀동굴4-7층용
 {
 	Vnum	2522
 	Leader	아귀검병	2512
@@ -4674,7 +4674,7 @@ Group	아귀동굴4-7Ãş용
 	4	아귀창병	2510
 }
 
-Group	아귀동굴4-7Ãş용
+Group	아귀동굴4-7층용
 {
 	Vnum	2523
 	Leader	아귀마검사	2513
@@ -4684,7 +4684,7 @@ Group	아귀동굴4-7Ãş용
 	4	아귀창병	2510
 }
 
-Group	아귀동굴4-7Ãş용
+Group	아귀동굴4-7층용
 {
 	Vnum	2524
 	Leader	아귀마검사	2513
@@ -4694,7 +4694,7 @@ Group	아귀동굴4-7Ãş용
 	4	아귀창병	2510
 }
 
-Group	아귀동굴4-7Ãş용
+Group	아귀동굴4-7층용
 {
 	Vnum	2525
 	Leader	아귀마검사	2513
@@ -4705,7 +4705,7 @@ Group	아귀동굴4-7Ãş용
 	5	아귀창병	2510
 }
 
-Group	아귀동굴4-7Ãş용
+Group	아귀동굴4-7층용
 {
 	Vnum	2526
 	Leader	아귀장수	2514
@@ -4716,7 +4716,7 @@ Group	아귀동굴4-7Ãş용
 	5	아귀창병	2510
 }
 
-Group	아귀동굴4-7Ãş용
+Group	아귀동굴4-7층용
 {
 	Vnum	2527
 	Leader	아귀장수	2514
@@ -4728,7 +4728,7 @@ Group	아귀동굴4-7Ãş용
 	6	아귀창병	2510
 }
 
-Group	아귀동굴5Ãş용
+Group	아귀동굴5층용
 {
 	Vnum	2528
 	Leader	아귀왕	2591
@@ -4742,7 +4742,7 @@ Group	아귀동굴5Ãş용
 	8	아귀궁병	2509
 }
 
-Group	아귀동굴6Ãş용
+Group	아귀동굴6층용
 {
 	Vnum	2529
 	Leader	아걸	2597
@@ -4756,7 +4756,7 @@ Group	아귀동굴6Ãş용
 	8	아귀궁병	2509
 }
 
-Group	아귀동굴7Ãş용
+Group	아귀동굴7층용
 {
 	Vnum	2530
 	Leader	아귀대제사마휘	2598
@@ -4770,55 +4770,55 @@ Group	아귀동굴7Ãş용
 	8	아귀궁병	2509
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2551
 	Leader	시구문	30111
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2552
 	Leader	시구문	30112
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2553
 	Leader	시구문	30113
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2554
 	Leader	시구문	30114
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2555
 	Leader	시구문	30115
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2556
 	Leader	시구문	30116
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2557
 	Leader	시구문	30117
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2558
 	Leader	시구문	30118
 }
 
-Group	아귀동굴2Ãş시구문
+Group	아귀동굴2층시구문
 {
 	Vnum	2559
 	Leader	시구문	30119
@@ -5314,7 +5314,7 @@ Group	귀목삼거리3_7
 	3	목령	7095
 	4	목령	7095
 }
-Group	거미동굴3Ãş_새끼거미(PAWN)-새끼거미(PAWN)
+Group	거미동굴3층_새끼거미(PAWN)-새끼거미(PAWN)
 {
 	Vnum	2071
 	Leader	새끼거미	2071
@@ -5322,7 +5322,7 @@ Group	거미동굴3Ãş_새끼거미(PAWN)-새끼거미(PAWN)
 	2	새끼거미	2071
 }
 
-Group	거미동굴3Ãş_독거미(PAWN)-새끼거미(PAWN)
+Group	거미동굴3층_독거미(PAWN)-새끼거미(PAWN)
 {
 	Vnum	2072
 	Leader	독거미	2072
@@ -5330,7 +5330,7 @@ Group	거미동굴3Ãş_독거미(PAWN)-새끼거미(PAWN)
 	2	새끼거미	2071
 }
 
-Group	거미동굴3Ãş_독거미(PAWN)-독거미(PAWN)
+Group	거미동굴3층_독거미(PAWN)-독거미(PAWN)
 {
 	Vnum	2073
 	Leader	독거미	2072
@@ -5338,7 +5338,7 @@ Group	거미동굴3Ãş_독거미(PAWN)-독거미(PAWN)
 	2	새끼거미	2071
 }
 
-Group	거미동굴3Ãş_붉은독거미(S_PAWN)-독거미(PAWN)
+Group	거미동굴3층_붉은독거미(S_PAWN)-독거미(PAWN)
 {
 	Vnum	2074
 	Leader	붉은독거미	2073
@@ -5346,7 +5346,7 @@ Group	거미동굴3Ãş_붉은독거미(S_PAWN)-독거미(PAWN)
 	2	독거미	2072
 }
 
-Group	거미동굴3Ãş_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
+Group	거미동굴3층_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Vnum	2075
 	Leader	붉은독거미	2073
@@ -5354,7 +5354,7 @@ Group	거미동굴3Ãş_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
 	2	독거미	2072
 }
 
-Group	거미동굴3Ãş_Áı게거미(S_PAWN)-붉은독거미(S_PAWN)
+Group	거미동굴3층_집게거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Vnum	2076
 	Leader	집게거미	2074
@@ -5362,7 +5362,7 @@ Group	거미동굴3Ãş_Áı게거미(S_PAWN)-붉은독거미(S_PAWN)
 	2	붉은독거미	2073
 }
 
-Group	거미동굴3Ãş_Áı게거미(S_PAWN)-집게거미(S_PAWN)
+Group	거미동굴3층_집게거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Vnum	2077
 	Leader	집게거미	2074
@@ -5370,7 +5370,7 @@ Group	거미동굴3Ãş_Áı게거미(S_PAWN)-집게거미(S_PAWN)
 	2	붉은독거미	2073
 }
 
-Group	거미동굴3Ãş_병정거미(S_PAWN)-집게거미(S_PAWN)
+Group	거미동굴3층_병정거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Vnum	2078
 	Leader	병정거미	2075
@@ -5378,7 +5378,7 @@ Group	거미동굴3Ãş_병정거미(S_PAWN)-집게거미(S_PAWN)
 	2	집게거미	2074
 }
 
-Group	거미동굴3Ãş_병정거미(S_PAWN)-병정거미(S_PAWN)
+Group	거미동굴3층_병정거미(S_PAWN)-병정거미(S_PAWN)
 {
 	Vnum	2079
 	Leader	병정거미	2075
