@@ -12,6 +12,7 @@ const int c_iMaxLineCount = 5;
 
 #if defined(__BL_MULTI_LANGUAGE_PREMIUM__)
 #include "../eterPack/EterPackManager.h"
+#define FMT_HEADER_ONLY
 #include <fmt/format.h>
 
 constexpr float c_fFlagTargetX = 22.0f * 0.9f;

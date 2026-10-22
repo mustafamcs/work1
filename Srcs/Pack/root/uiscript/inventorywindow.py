@@ -1,5 +1,6 @@
 import uiScriptLocale
 import app
+import item
 
 EQUIPMENT_START_INDEX = 90
 
@@ -235,7 +236,7 @@ window = {
 							"type":"image",
 
 							"x":-18,
-							"y":20,
+							"y":2,
 
 							"image":"d:/ymir work/ui/game/windows/money_icon.sub",
 						},

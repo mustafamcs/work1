@@ -2647,9 +2647,6 @@ float CInstanceBase::__GetAlphaValue()
 
 void CInstanceBase::SetHair(DWORD eHair)
 {
-	if (!HAIR_COLOR_ENABLE)
-		return;
-
 	if (IsPC()==false)
 		return;
 	m_awPart[CRaceData::PART_HAIR] = eHair;
@@ -2675,9 +2672,6 @@ void CInstanceBase::SetHair(DWORD eHair)
 
 void CInstanceBase::ChangeHair(DWORD eHair)
 {
-	if (!HAIR_COLOR_ENABLE)
-		return;
-
 	if (IsPC()==false)
 		return;
 

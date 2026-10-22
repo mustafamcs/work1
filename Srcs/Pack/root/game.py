@@ -758,7 +758,7 @@ class GameWindow(ui.ScriptWindow):
 	def BINARY_NEW_CurrentChannel(self, channelID):
 		if self.interface and self.interface.wndMiniMap:
 			self.interface.wndMiniMap.UpdateCurrentChannel(channelID)
-		if self.interface.wndMoveChannel:
+		if app.ENABLE_MOVE_CHANNEL and self.interface.wndMoveChannel:
 			self.interface.wndMoveChannel.ingameChannel = int(channelID)
 
 	def ActivateSkillSlot(self, slotIndex):

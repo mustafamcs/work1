@@ -838,6 +838,8 @@ void CPythonMiniMap::__LoadAtlasMarkInfo()
 		const CTokenVector & rVector = stTokenVectorMap[szMarkInfoName];
 
 #ifdef ENABLE_GF_ATLAS_MARK_INFO
+		if (rVector.size() < 3)
+			continue;
 		const std::string& c_rstrPositionX = rVector[0].c_str();
 		const std::string& c_rstrPositionY = rVector[1].c_str();
 		const std::string& c_rstrVnum = rVector[2].c_str();
@@ -877,6 +879,8 @@ void CPythonMiniMap::__LoadAtlasMarkInfo()
 			}
 		}
 #else
+		if (rVector.size() < 4)
+			continue;
 		const std::string & c_rstrType = rVector[0].c_str();
 		const std::string & c_rstrPositionX = rVector[1].c_str();
 		const std::string & c_rstrPositionY = rVector[2].c_str();
