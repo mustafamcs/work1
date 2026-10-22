@@ -11,7 +11,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 	window = {
 		"name" : "InventoryWindow",
 
-		## 600 - (width + ø¿∏•¬ ¿∏∑Œ ∫Œ≈Õ ∂ÁøÏ±‚ 24 px)
+		## 600 - (width + Ïò§Î•∏Ï™ΩÏúºÎ°ú Î∂ÄÌÑ∞ ÎùÑÏö∞Í∏∞ 24 px)
 		"x" : SCREEN_WIDTH - 176,
 		"y" : SCREEN_HEIGHT - 37 - 565,
 
@@ -89,11 +89,11 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 											{"index":EQUIPMENT_START_INDEX+8, "x":75, "y":145, "width":32, "height":32},
 											{"index":EQUIPMENT_START_INDEX+9, "x":114, "y":2, "width":32, "height":32},
 											{"index":EQUIPMENT_START_INDEX+10, "x":75, "y":35, "width":32, "height":32},
-											## ªı π›¡ˆ1
+											## ÏÉà Î∞òÏßÄ1
 											##{"index":item.EQUIPMENT_RING1, "x":2, "y":106, "width":32, "height":32},
-											## ªı π›¡ˆ2
+											## ÏÉà Î∞òÏßÄ2
 											##{"index":item.EQUIPMENT_RING2, "x":75, "y":106, "width":32, "height":32},
-											## ªı ∫ß∆Æ
+											## ÏÉà Î≤®Ìä∏
 											{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 										),
 							},
@@ -374,7 +374,7 @@ else:
 	window = {
 		"name" : "InventoryWindow",
 
-		## 600 - (width + ø¿∏•¬ ¿∏∑Œ ∫Œ≈Õ ∂ÁøÏ±‚ 24 px)
+		## 600 - (width + Ïò§Î•∏Ï™ΩÏúºÎ°ú Î∂ÄÌÑ∞ ÎùÑÏö∞Í∏∞ 24 px)
 		"x" : SCREEN_WIDTH - 176,
 		"y" : SCREEN_HEIGHT - 37 - 565,
 
@@ -452,11 +452,11 @@ else:
 											{"index":EQUIPMENT_START_INDEX+8, "x":75, "y":145, "width":32, "height":32},
 											{"index":EQUIPMENT_START_INDEX+9, "x":114, "y":2, "width":32, "height":32},
 											{"index":EQUIPMENT_START_INDEX+10, "x":75, "y":35, "width":32, "height":32},
-											## ªı π›¡ˆ1
+											## ÏÉà Î∞òÏßÄ1
 											##{"index":item.EQUIPMENT_RING1, "x":2, "y":106, "width":32, "height":32},
-											## ªı π›¡ˆ2
+											## ÏÉà Î∞òÏßÄ2
 											##{"index":item.EQUIPMENT_RING2, "x":75, "y":106, "width":32, "height":32},
-											## ªı ∫ß∆Æ
+											## ÏÉà Î≤®Ìä∏
 											{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 										),
 							},

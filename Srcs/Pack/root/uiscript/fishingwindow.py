@@ -20,7 +20,7 @@ window = {
 			"y" : 0,
 			"width" : 150,
 			"height" : 195,
-			"title" : "≥¨Ω√",
+			"title" : "ÎÇöÏãú",
 
 			"children" :
 			(
@@ -82,7 +82,7 @@ window = {
 							"x" : 10,
 							"y" : 10,
 
-							"text" : "π∞∞Ì±‚ ¿Ã∏ß",
+							"text" : "Î¨ºÍ≥†Í∏∞ Ïù¥Î¶Ñ",
 						},
 
 						{
@@ -215,7 +215,7 @@ window = {
 					"x" : 0,
 					"y" : 30,
 
-					"text" : "≥¨Ω√",
+					"text" : "ÎÇöÏãú",
 					"horizontal_align" : "center",
 					"vertical_align" : "bottom",
 

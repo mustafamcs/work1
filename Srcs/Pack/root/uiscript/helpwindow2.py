@@ -145,12 +145,12 @@ window = {
 				{
 					"name" : "help_02_01", "type" : "text", "outline" : 1,
 					"x" : 0, "y" : SCREEN_HEIGHT * HEIGHT_STEP*0,
-					"text" : "- °¡³ª´Ù¶ó¸¶¹Ù»ç 01",
+					"text" : "- ê°€ë‚˜ë‹¤ë¼ë§ˆë°”ì‚¬ 01",
 				},
 				{
 					"name" : "help_02_02", "type" : "text", "outline" : 1,
 					"x" : 0, "y" : HEIGHT_STEP*1,
-					"text" : "- °¡³ª´Ù¶ó¸¶¹Ù»ç 02",
+					"text" : "- ê°€ë‚˜ë‹¤ë¼ë§ˆë°”ì‚¬ 02",
 				},
 
 			),

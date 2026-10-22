@@ -235,7 +235,7 @@ window = {
 								{
 									"name" : "Guild_Name",
 									"type":"text",
-									"text":"?? ??",
+									"text":"Lonca AdÄ±",
 									"x":0,
 									"y":0,
 									"r":1.0,
@@ -260,7 +260,7 @@ window = {
 								{
 									"name" : "Character_Name",
 									"type":"text",
-									"text":"??? ??",
+									"text":"Karakter AdÄ±",
 									"x":0,
 									"y":0,
 									"r":1.0,
@@ -765,25 +765,25 @@ window["children"][0]["children"] = window["children"][0]["children"] + [
 			"horizontal_align" : "right",
 		},
 
-		{ "name" : "Quest_Name_00", "type" : "text", "text" : "ÀÌ¸§ÀÔ´Ï´Ù", "x" : 60, "y" : 14 },
-		{ "name" : "Quest_LastTime_00", "type" : "text", "text" : "³²Àº ½Ã°£ ÀÔ´Ï´Ù", "x" : 60, "y" : 30 },
-		{ "name" : "Quest_LastCount_00", "type" : "text", "text" : "³²Àº °³¼ö ÀÔ´Ï´Ù", "x" : 60, "y" : 46 },
+		{ "name" : "Quest_Name_00", "type" : "text", "text" : "ì´ë¦„ì…ë‹ˆë‹¤", "x" : 60, "y" : 14 },
+		{ "name" : "Quest_LastTime_00", "type" : "text", "text" : "ë‚¨ì€ ì‹œê°„ ì…ë‹ˆë‹¤", "x" : 60, "y" : 30 },
+		{ "name" : "Quest_LastCount_00", "type" : "text", "text" : "ë‚¨ì€ ê°œìˆ˜ ì…ë‹ˆë‹¤", "x" : 60, "y" : 46 },
 
-		{ "name" : "Quest_Name_01", "type" : "text", "text" : "ÀÌ¸§ÀÔ´Ï´Ù", "x" : 60, "y" : 74 },
-		{ "name" : "Quest_LastTime_01", "type" : "text", "text" : "³²Àº ½Ã°£ ÀÔ´Ï´Ù", "x" : 60, "y" : 90 },
-		{ "name" : "Quest_LastCount_01", "type" : "text", "text" : "³²Àº °³¼ö ÀÔ´Ï´Ù", "x" : 60, "y" : 106 },
+		{ "name" : "Quest_Name_01", "type" : "text", "text" : "ì´ë¦„ì…ë‹ˆë‹¤", "x" : 60, "y" : 74 },
+		{ "name" : "Quest_LastTime_01", "type" : "text", "text" : "ë‚¨ì€ ì‹œê°„ ì…ë‹ˆë‹¤", "x" : 60, "y" : 90 },
+		{ "name" : "Quest_LastCount_01", "type" : "text", "text" : "ë‚¨ì€ ê°œìˆ˜ ì…ë‹ˆë‹¤", "x" : 60, "y" : 106 },
 
-		{ "name" : "Quest_Name_02", "type" : "text", "text" : "ÀÌ¸§ÀÔ´Ï´Ù", "x" : 60, "y" : 134 },
-		{ "name" : "Quest_LastTime_02", "type" : "text", "text" : "³²Àº ½Ã°£ ÀÔ´Ï´Ù", "x" : 60, "y" : 150 },
-		{ "name" : "Quest_LastCount_02", "type" : "text", "text" : "³²Àº °³¼ö ÀÔ´Ï´Ù", "x" : 60, "y" : 166 },
+		{ "name" : "Quest_Name_02", "type" : "text", "text" : "ì´ë¦„ì…ë‹ˆë‹¤", "x" : 60, "y" : 134 },
+		{ "name" : "Quest_LastTime_02", "type" : "text", "text" : "ë‚¨ì€ ì‹œê°„ ì…ë‹ˆë‹¤", "x" : 60, "y" : 150 },
+		{ "name" : "Quest_LastCount_02", "type" : "text", "text" : "ë‚¨ì€ ê°œìˆ˜ ì…ë‹ˆë‹¤", "x" : 60, "y" : 166 },
 
-		{ "name" : "Quest_Name_03", "type" : "text", "text" : "ÀÌ¸§ÀÔ´Ï´Ù", "x" : 60, "y" : 194 },
-		{ "name" : "Quest_LastTime_03", "type" : "text", "text" : "³²Àº ½Ã°£ ÀÔ´Ï´Ù", "x" : 60, "y" : 210 },
-		{ "name" : "Quest_LastCount_03", "type" : "text", "text" : "³²Àº °³¼ö ÀÔ´Ï´Ù", "x" : 60, "y" : 226 },
+		{ "name" : "Quest_Name_03", "type" : "text", "text" : "ì´ë¦„ì…ë‹ˆë‹¤", "x" : 60, "y" : 194 },
+		{ "name" : "Quest_LastTime_03", "type" : "text", "text" : "ë‚¨ì€ ì‹œê°„ ì…ë‹ˆë‹¤", "x" : 60, "y" : 210 },
+		{ "name" : "Quest_LastCount_03", "type" : "text", "text" : "ë‚¨ì€ ê°œìˆ˜ ì…ë‹ˆë‹¤", "x" : 60, "y" : 226 },
 
-		{ "name" : "Quest_Name_04", "type" : "text", "text" : "ÀÌ¸§ÀÔ´Ï´Ù", "x" : 60, "y" : 254 },
-		{ "name" : "Quest_LastTime_04", "type" : "text", "text" : "³²Àº ½Ã°£ ÀÔ´Ï´Ù", "x" : 60, "y" : 270 },
-		{ "name" : "Quest_LastCount_04", "type" : "text", "text" : "³²Àº °³¼ö ÀÔ´Ï´Ù", "x" : 60, "y" : 286 },
+		{ "name" : "Quest_Name_04", "type" : "text", "text" : "ì´ë¦„ì…ë‹ˆë‹¤", "x" : 60, "y" : 254 },
+		{ "name" : "Quest_LastTime_04", "type" : "text", "text" : "ë‚¨ì€ ì‹œê°„ ì…ë‹ˆë‹¤", "x" : 60, "y" : 270 },
+		{ "name" : "Quest_LastCount_04", "type" : "text", "text" : "ë‚¨ì€ ê°œìˆ˜ ì…ë‹ˆë‹¤", "x" : 60, "y" : 286 },
 	),
 },]
 

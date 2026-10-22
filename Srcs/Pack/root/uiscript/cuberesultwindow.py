@@ -40,7 +40,7 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":"ÇÕ¼º °á°ú", "text_horizontal_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":"í•©ì„± ê²°ê³¼", "text_horizontal_align":"center" },
 					),
 				},
 
@@ -72,7 +72,7 @@ window = {
 					"vertical_align" : "bottom",
 					"horizontal_align" : "center",
 
-					"text":"ÇÕ¼º¿¡ ¼º°ø Çß½À´Ï´Ù",
+					"text":"í•©ì„±ì— ì„±ê³µ í–ˆìŠµë‹ˆë‹¤",
 					"text_horizontal_align":"center",
 				},
 

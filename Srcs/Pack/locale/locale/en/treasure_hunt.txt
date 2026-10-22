@@ -1,5 +1,5 @@
-# ÀÌº¥Æ® º¸»ó ¸ñ·Ï (index ¼ø¼­´ë·Î 0~24±îÁö ÀĞÀ½)
-# ¼öÁ¤½Ã Å¬¶óÀÌ¾ğÆ® ÆÄÀÏµµ °°ÀÌ ¼öÁ¤ ÇÊ¿ä
+# 이벤트 보상 목록 (index 순서대로 0~24까지 읽음)
+# 수정시 클라이언트 파일도 같이 수정 필요
 Group event_reward
 {
 	#index	item_vnum	count
@@ -30,17 +30,17 @@ Group event_reward
 	24	55031	1
 }
 
-# ÀÌº¥Æ® ´©Àû º¸»ó ¸ñ·Ï
-# Å¬¶óÀÌ¾ğÆ®µµ ¶È°°Àº Group Á¸Àç, ´Ù¸¥Á¡Àº È®·ü°ªÀÌ Ãß°¡ µÊ
-# vnum, count ¼öÁ¤½Ã Å¬¶óÀÌ¾ğÆ® ÆÄÀÏµµ °°ÀÌ ¼öÁ¤ ÇÊ¿ä
-# probability : È®·ü (È®·ü°ª/probability ÃÑÇÕ)
-# º¸»óÀº reward_info ±×·ì´ç º¸»óÀ» ÃÑ 15°³ ±îÁö ¼¼ÆÃÇÒ ¼ö ÀÖ´Ù.
+# 이벤트 누적 보상 목록
+# 클라이언트도 똑같은 Group 존재, 다른점은 확률값이 추가 됨
+# vnum, count 수정시 클라이언트 파일도 같이 수정 필요
+# probability : 확률 (확률값/probability 총합)
+# 보상은 reward_info 그룹당 보상을 총 15°³ 까지 세팅할 수 있다.
 Group event_accumulated_reward_list
 {
-	# 1È¸ ´©Àû
+	# 1È¸ 누적
 	Group 1
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -49,10 +49,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 2È¸ ´©Àû
+	# 2È¸ 누적
 	Group 2
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -61,10 +61,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 3È¸ ´©Àû
+	# 3È¸ 누적
 	Group 3
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -73,10 +73,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 4È¸ ´©Àû
+	# 4È¸ 누적
 	Group 4
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -85,10 +85,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 5È¸ ´©Àû
+	# 5È¸ 누적
 	Group 5
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -103,17 +103,17 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 6È¸ ´©Àû
+	# 6È¸ 누적
 	Group 6
 	{
-		# ¹öÇÁ
+		# 버프
 		Group affect_reward
 		{
 			#index	first_come	affect_type	point_type	apply_point	flag	duration
 			0	100	668	0	10	93	259200
 		}
 
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -121,10 +121,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 7È¸ ´©Àû
+	# 7È¸ 누적
 	Group 7
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -133,10 +133,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 8È¸ ´©Àû
+	# 8È¸ 누적
 	Group 8
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -151,20 +151,20 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 9È¸ ´©Àû
-	# °³·® Àç·á ¾øÀÌ °³·®ÇÒ ¼ö ÀÖ´Â ¹öÇÁ 1È¸±Ç
-	# 51È¸ ´©Àû ºÎÅÍ, 9È¸Â÷ º¸»ó¸¸ Áö±Ş
-	# ¹öÇÁ´Â °¢ ¼­¹ö´ç ¼±Âø¼ø 50¸í¿¡°Ô¸¸ Áö±Ş, 10°³ ¹Ì¸¸ ÀÌÈÄºÎÅÍ ¼­¹ö ³» °øÁö¸Ş½ÃÁö¸¦ ¶ç¿öÁØ´Ù.
+	# 9È¸ 누적
+	# 개량 재료 없이 개량할 수 있는 버프 1회권
+	# 51È¸ 누적 부터, 9회차 보상만 지급
+	# 버프는 각 서버당 선착순 50명에게만 지급, 10°³ 미만 이후부터 서버 내 공지메시지를 띄워준다.
 	Group 9
 	{
-		# ¹öÇÁ
+		# 버프
 		Group affect_reward
 		{
 			#index	first_come	affect_type	point_type	apply_point	flag	duration
 			0	50	669	0	0	94	259200
 		}
 
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -172,11 +172,11 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 10È¸ ´©Àû
-	# 11È¸Â÷ ÀÌ»ó´©Àû ´Ş¼º ½Ã, 10È¸Â÷ º¸»óÀ¸·Î °è¼Ó ¼ö·É
+	# 10È¸ 누적
+	# 11회차 이상누적 달성 시, 10회차 보상으로 계속 수령
 	Group 10
 	{
-		# ·£´ı ¾ÆÀÌÅÛ º¸»ó
+		# 랜덤 아이템 보상
 		Group random_reward
 		{
 			#index	vnum	count	probability

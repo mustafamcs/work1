@@ -1,8 +1,8 @@
-"¼º°øÀûÀ¸·Î ¼Ó¼ºÀÌ Ãß°¡ µÇ¾ú½À´Ï´Ù";
+"성공적으로 속성이 추가 되었습니다";
 "The attribute has been successfully added";
 
-"´õ ÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ¸·Î ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù";
+"더 이상 이 아이템으로 속성을 추가할 수 없습니다";
 "No more attributes can be added on this item";
 
-"º¯°æ ½ÃÅ³ ¼Ó¼ºÀÌ ¾ø½À´Ï´Ù";
+"변경 시킬 속성이 없습니다";
 "There are no attributes to change";

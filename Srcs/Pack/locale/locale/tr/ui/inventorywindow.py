@@ -8,7 +8,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 	window = {
 		"name" : "InventoryWindow",
 
-		## 600 - (width + ¿À¸¥ÂÊÀ¸·Î ºÎÅÍ ¶ç¿ì±â 24 px)
+		## 600 - (width + ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë¶€í„° ë„ìš°ê¸° 24 px)
 		"x" : SCREEN_WIDTH - 176,
 		"y" : SCREEN_HEIGHT - 37 - BOARD_HEIGHT,
 
@@ -229,7 +229,7 @@ else:
 		window = {
 			"name" : "InventoryWindow",
 
-			## 600 - (width + ¿À¸¥ÂÊÀ¸·Î ºÎÅÍ ¶ç¿ì±â 24 px)
+			## 600 - (width + ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë¶€í„° ë„ìš°ê¸° 24 px)
 			"x" : SCREEN_WIDTH - 176,
 			"y" : SCREEN_HEIGHT - 37 - 565,
 
@@ -307,14 +307,14 @@ else:
 												{"index":EQUIPMENT_START_INDEX+8, "x":75, "y":145, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+9, "x":114, "y":2, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+10, "x":75, "y":35, "width":32, "height":32},
-												## »õ ¹ÝÁö1
+												## ìƒˆ ë°˜ì§€1
 												##{"index":item.EQUIPMENT_RING1, "x":2, "y":106, "width":32, "height":32},
-												## »õ ¹ÝÁö2
+												## ìƒˆ ë°˜ì§€2
 												##{"index":item.EQUIPMENT_RING2, "x":75, "y":106, "width":32, "height":32},
-												## »õ º§Æ®
+												## ìƒˆ ë²¨íŠ¸
 												{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+27, "x":3, "y":106, "width":32, "height":32},
-												## Àå°©
+												## ìž¥ê°‘
 												{"index":item.EQUIPMENT_GLOVE, "x":75, "y":106, "width":32, "height":32},
 											),
 								},
@@ -595,7 +595,7 @@ else:
 		window = {
 			"name" : "InventoryWindow",
 
-			## 600 - (width + ¿À¸¥ÂÊÀ¸·Î ºÎÅÍ ¶ç¿ì±â 24 px)
+			## 600 - (width + ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë¶€í„° ë„ìš°ê¸° 24 px)
 			"x" : SCREEN_WIDTH - 176,
 			"y" : SCREEN_HEIGHT - 37 - 565,
 
@@ -673,11 +673,11 @@ else:
 												{"index":EQUIPMENT_START_INDEX+8, "x":75, "y":145, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+9, "x":114, "y":2, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+10, "x":75, "y":35, "width":32, "height":32},
-												## »õ ¹ÝÁö1
+												## ìƒˆ ë°˜ì§€1
 												##{"index":item.EQUIPMENT_RING1, "x":2, "y":106, "width":32, "height":32},
-												## »õ ¹ÝÁö2
+												## ìƒˆ ë°˜ì§€2
 												##{"index":item.EQUIPMENT_RING2, "x":75, "y":106, "width":32, "height":32},
-												## »õ º§Æ®
+												## ìƒˆ ë²¨íŠ¸
 												{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+27, "x":3, "y":106, "width":32, "height":32},
 											),
@@ -958,7 +958,7 @@ else:
 
 
 	if app.ENABLE_GLOVE_SYSTEM and app.ENABLE_PREMIUM_PRIVATE_SHOP:
-		# À§ ÄÚµåºí·Ï "children" ÂÊ ( -> [ ·Î º¯°æÇÔ
+		# ìœ„ ì½”ë“œë¸”ë¡ "children" ìª½ ( -> [ ë¡œ ë³€ê²½í•¨
 		window["children"][0]["children"] = window["children"][0]["children"] + [
 			{
 				"name" : "premium_private_shop_button",

@@ -1991,15 +1991,15 @@ class BuildGuildBuildingWindow(ui.ScriptWindow):
 
 	if localeInfo.IsJAPAN():
 		GUILD_CATEGORY_LIST = (
-				("HEADQUARTER", "��b���z��"),
-				("FACILITY", "�g�����z��"),
-				("OBJECT", "���̑�"),
+				("HEADQUARTER", "딈멳뙕뭱븿"),
+				("FACILITY", "둮뮗뙕뭱븿"),
+				("OBJECT", "궩궻뫜"),
 			)
 	elif localeInfo.IsYMIR() or localeInfo.IsWE_KOREA():
 		GUILD_CATEGORY_LIST = (
-				("HEADQUARTER", "���ǹ�"),
-				("FACILITY", "��ɰǹ�"),
-				("OBJECT", "���湰"),
+				("HEADQUARTER", "본건물"),
+				("FACILITY", "기능건물"),
+				("OBJECT", "조경물"),
 			)
 	elif localeInfo.IsEUROPE() or localeInfo.IsHONGKONG():
 		GUILD_CATEGORY_LIST = (

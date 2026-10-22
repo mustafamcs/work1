@@ -33,7 +33,7 @@ window = {
 			"type" : "board",
 			"style" : ("attach","ltr"),
 			
-			## CharacterWindow.py øµ«‚ πﬁ¿Ω
+			## CharacterWindow.py ÏòÅÌñ• Î∞õÏùå
 			"x" : 0,
 			"y" : 0,
 
@@ -42,7 +42,7 @@ window = {
 			
 			"children" :
 			(
-				## ≈∏¿Ã∆≤πŸ
+				## ÌÉÄÏù¥ÌãÄÎ∞î
 				{
 					"name" : "TitleBar",
 					"type" : "titlebar",
@@ -59,7 +59,7 @@ window = {
 					),
 				},
 							
-				## Ω∫≈©∑— πŸ
+				## Ïä§ÌÅ¨Î°§ Î∞î
 				{
 					"name" : "ScrollBar",
 					"type" : "scrollbar",
@@ -70,7 +70,7 @@ window = {
 					"horizontal_align" : "right",
 				},
 				
-				## »£∏Æ¡ πŸ
+				## Ìò∏Î¶¨Ï¶å Î∞î
 				{ 
 					"name" : "horizontalbar0", "type":"horizontalbar", "x":TITLE_BAR_POS_X, "y":LABEL_START_Y+LABEL_GAP*0, "width":TITLE_BAR_WIDTH, 
 					"children" : ( { "name" : "horizontalbarName0", "type" : "text", "x" : 0, "y" : 0, "text" : "", "all_align" : "center", }, ),
@@ -122,9 +122,9 @@ window = {
 				{ 
 					"name" : "horizontalbar12", "type":"horizontalbar", "x":TITLE_BAR_POS_X, "y":LABEL_START_Y+LABEL_GAP*12, "width":TITLE_BAR_WIDTH,
 					"children" : ( { "name" : "horizontalbarName12", "type" : "text", "x" : 0, "y" : 0, "text" : "", "all_align" : "center", }, ),
-				}, ## »£∏Æ¡ πŸ ≥°
+				}, ## Ìò∏Î¶¨Ï¶å Î∞î ÎÅù
 				
-				## ∂Û∫ß ##
+				## ÎùºÎ≤® ##
 				{
 					"name" : "label0", "type" : "thinboard_circle", "x" : LABEL_START_X, "y" : LABEL_START_Y+LABEL_GAP*0, "width" : LABEL_WIDTH, "height" : LABEL_HEIGHT,
 					"horizontal_align" : "center",
@@ -215,9 +215,9 @@ window = {
 					"children" : ( 
 						{ "name" : "labelvalue12", "type" : "text", "x" : 0, "y" : 0, "text" : "", "all_align" : "center", },
 					),
-				}, ## ∂Û∫ß ≥°
+				}, ## ÎùºÎ≤® ÎÅù
 				
-				## πˆ∆∞
+				## Î≤ÑÌäº
 				{ 
 							"name" : "labelname0", "type" : "button",
 							"x" : LABEL_NAME_POS_X, "y" : LABEL_START_Y+LABEL_GAP*0, 
@@ -361,7 +361,7 @@ window = {
 							"default_image" : LOCALE_PATH + "details.sub",
 							"over_image" : LOCALE_PATH + "details.sub",
 							"down_image" : LOCALE_PATH + "details.sub",
-				}, ## πˆ∆∞ ≥°
+				}, ## Î≤ÑÌäº ÎÅù
 				
 			),
 		}, ## MainBoard End

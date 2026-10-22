@@ -213,13 +213,13 @@ const char* GetFontFaceFromCodePage9x(WORD codePage)
 	switch( codePage )
 	{
 	case CP_932:
-		return "�l�r �o�S�V�b�N";
+		return "굃굍 굊긕긘긞긏";
 	case CP_949:
-		return "����ü";
+		return "굴림체";
 	case CP_936:
-		return "����";
+		return "芥竟";
 	case CP_950:
-		return "�ө���";
+		return "꾄ⁿ톱";
 	case CP_874:
 		return "Tahoma";
 	case CP_1252:

@@ -1,4 +1,4 @@
-﻿#º¹¼ş¾Æ²ÉÁø¾×
+﻿#복숭아꽃진액
 section
 npc	20018
 item	50721	1
@@ -7,7 +7,7 @@ category	ETC
 percent	100
 end
 
-#µµ¶óÁöÁø¾×
+#도라지진액
 section
 npc	20018
 item	50722	1
@@ -16,7 +16,7 @@ category	ETC
 percent	100
 end
 
-#°¨²ÉÁø¾×
+#감꽃진액
 section
 npc	20018
 item	50723	1
@@ -25,7 +25,7 @@ category	ETC
 percent	100
 end
 
-#°¡½Ã¿À°¡ÇÇÁø¾×
+#가시오가피진액
 section
 npc	20018
 item	50724	1
@@ -34,7 +34,7 @@ category	ETC
 percent	100
 end
 
-#º¹¼ş¾Æ²ÉÁø¾×
+#복숭아꽃진액
 section
 npc	20017
 item	50721	1
@@ -43,7 +43,7 @@ category	ETC
 percent	100
 end
 
-#µµ¶óÁöÁø¾×
+#도라지진액
 section
 npc	20017
 item	50722	1
@@ -52,7 +52,7 @@ category	ETC
 percent	100
 end
 
-#°¨²ÉÁø¾×
+#감꽃진액
 section
 npc	20017
 item	50723	1
@@ -61,7 +61,7 @@ category	ETC
 percent	100
 end
 
-#°¡½Ã¿À°¡ÇÇÁø¾×
+#가시오가피진액
 section
 npc	20017
 item	50724	1
@@ -70,7 +70,7 @@ category	ETC
 percent	100
 end
 
-#È°½É¾×Áø¾×
+#활심액진액
 section
 npc	20017
 item	50801	1
@@ -80,7 +80,7 @@ category	ETC
 percent	100
 end
 
-#ÇÇµ¶¼ö
+#피독수
 section
 npc	20017
 item	50802	1
@@ -90,7 +90,7 @@ category	ETC
 percent	100
 end
 
-#º¸È¯¼ö
+#보환수
 section
 npc	20017
 item	50803	100
@@ -100,7 +100,7 @@ category	ETC
 percent	100
 end
 
-#¿µº¸¼ö
+#영보수
 section
 npc	20017
 item	50804	100
@@ -111,7 +111,7 @@ percent	100
 end
 
 
-#º¹¼ş¾Æ²ÉÁø¾×
+#복숭아꽃진액
 section
 npc	20022
 item	50721	1
@@ -120,7 +120,7 @@ category	ETC
 percent	100
 end
 
-#µµ¶óÁöÁø¾×
+#도라지진액
 section
 npc	20022
 item	50722	1
@@ -129,7 +129,7 @@ category	ETC
 percent	100
 end
 
-#°¨²ÉÁø¾×
+#감꽃진액
 section
 npc	20022
 item	50723	1
@@ -138,7 +138,7 @@ category	ETC
 percent	100
 end
 
-#°¡½Ã¿À°¡ÇÇÁø¾×
+#가시오가피진액
 section
 npc	20022
 item	50724	1
@@ -147,7 +147,7 @@ category	ETC
 percent	100
 end
 
-#È°½É¾×Áø¾×
+#활심액진액
 section
 npc	20022
 item	50801	1
@@ -157,7 +157,7 @@ category	ETC
 percent	100
 end
 
-#ÇÇµ¶¼ö
+#피독수
 section
 npc	20022
 item	50802	1
@@ -167,7 +167,7 @@ category	ETC
 percent	100
 end
 
-#º¸È¯¼ö
+#보환수
 section
 npc	20022
 item	50803	100
@@ -177,7 +177,7 @@ category	ETC
 percent	100
 end
 
-#¿µº¸¼ö
+#영보수
 section
 npc	20022
 item	50804	100
@@ -188,7 +188,7 @@ percent	100
 end
 
 
-#ÁøÈ°½É¾×Áø¾×
+#진활심액진액
 section
 npc	20022
 item	50813	1
@@ -198,7 +198,7 @@ category	ETC
 percent	100
 end
 
-#ÁøÇÇµ¶¼ö
+#진피독수
 section
 npc	20022
 item	50814	1
@@ -208,7 +208,7 @@ category	ETC
 percent	100
 end
 
-#Áøº¸È¯¼ö
+#진보환수
 section
 npc	20022
 item	50815	100
@@ -218,7 +218,7 @@ category	ETC
 percent	100
 end
 
-#Áø¿µº¸¼ö
+#진영보수
 section
 npc	20022
 item	50816	100
@@ -228,7 +228,7 @@ category	ETC
 percent	100
 end
 
-#Àû»ó¾×
+#적상액
 section
 npc	20022
 item	50901	10
@@ -238,7 +238,7 @@ category	ETC
 percent	100
 end
 
-#È«»ó¾×
+#홍상액
 section
 npc	20022
 item	50901	10
@@ -248,7 +248,7 @@ category	ETC
 percent	100
 end
 
-#È²»ó¾×
+#황상액
 section
 npc	20022
 item	50901	10
@@ -258,7 +258,7 @@ category	ETC
 percent	100
 end
 
-#³ì»ó¾×
+#녹상액
 section
 npc	20022
 item	50901	10
@@ -268,7 +268,7 @@ category	ETC
 percent	100
 end
 
-#Ã»»ó¾×
+#청상액
 section
 npc	20022
 item	50901	10
@@ -278,7 +278,7 @@ category	ETC
 percent	100
 end
 
-#¹é»ó¾×
+#백상액
 section
 npc	20022
 item	50901	10
@@ -288,7 +288,7 @@ category	ETC
 percent	100
 end
 
-#°æÇèÀÇ¹°¾àÅ×½ºÆ®
+#경험의물약테스트
 #section
 #npc	20018
 #item	51001	100
@@ -298,7 +298,7 @@ end
 #percent	10
 #end
 
-#¿ë½ÅÁö°Ë
+#용신지검
 section
 npc	20383
 item	145	1
@@ -354,7 +354,7 @@ category	WEAPON
 percent	50
 end
 
-#ÆÄ¸êÁö°Ë
+#파멸지검
 section
 npc	20383
 item	155	1
@@ -410,7 +410,7 @@ category	WEAPON
 percent	50
 end
 
-#¿ÀÇàµµ
+#오행도
 section
 npc	20383
 item	1105	1
@@ -467,7 +467,7 @@ percent	50
 end
 
 
-#Ãµ·æÁö±Ã
+#천룡지궁
 section
 npc	20383
 item	2145	1
@@ -524,7 +524,7 @@ percent	50
 end
 
 
-#ÅÂ¾ç°Ë
+#태양검
 section
 npc	20383
 item	3145	1
@@ -581,7 +581,7 @@ percent	50
 end
 
 
-#¿ë½Å·É
+#용신령
 section
 npc	20383
 item	5105	1
@@ -638,7 +638,7 @@ percent	50
 end
 
 
-#¹«¾ÆÁö¼±
+#무아지선
 section
 npc	20383
 item	7145	1
@@ -695,7 +695,7 @@ percent	50
 end
 
 
-#³ì¸Í¾Æ
+#녹맹아
 section
 npc	20383
 item	6055	1
@@ -751,7 +751,7 @@ category	WEAPON
 percent	50
 end
 
-#ÅÂÀ»°©
+#태을갑
 section
 npc	20383
 item	11295	1
@@ -813,7 +813,7 @@ percent	50
 end
 
 
-#¿µº¸
+#영보
 section
 npc	20383
 item	11495	1
@@ -875,7 +875,7 @@ percent	50
 end
 
 
-#ÇöÃµ°©
+#현천갑
 section
 npc	20383
 item	11695	1
@@ -937,7 +937,7 @@ percent	50
 end
 
 
-#»ï°üÀÇ
+#삼관의
 section
 npc	20383
 item	11895	1
@@ -998,7 +998,7 @@ category	ARMOR
 percent	50
 end
 
-#À§Ãµ°©
+#위천갑
 section
 npc	20383
 item	21075	1
@@ -1059,7 +1059,7 @@ category	ARMOR
 percent	50
 end
 
-#È«¿Á°è¿­
+#홍옥계열
 section
 npc	20383
 item	50635	3
@@ -1094,7 +1094,7 @@ percent	30
 end
 
 
-#¼®·ù°è¿­
+#석류계열
 section
 npc	20383
 item	50636	3
@@ -1129,7 +1129,7 @@ percent	30
 end
 
 
-#³ìÁÖ°è¿­
+#녹주계열
 section
 npc	20383
 item	50637	3
@@ -1163,7 +1163,7 @@ category	ACCESSORY
 percent	30
 end
 
-#Ã»¿Á°è¿­
+#청옥계열
 section
 npc	20383
 item	50638	3
@@ -1197,7 +1197,7 @@ category	ACCESSORY
 percent	30
 end
 
-#¿À±¤°è¿­
+#오광계열
 section
 npc	20383
 item	50639	3
@@ -1220,7 +1220,7 @@ category	ACCESSORY
 percent	30
 end
 
-#¹ëÆ®
+#밸트
 section
 npc	20017
 item	50624	10
@@ -1337,7 +1337,7 @@ category	BELT
 percent	10
 end
 
-#ÀûÈ­¼®ÀçÁ¶
+#적화석재조
 section
 npc	20383
 item	51001	50
@@ -1350,7 +1350,7 @@ category	ETC
 percent	10
 end
 
-#Ã»È£°©
+#청호갑
 section
 npc	20413
 item	20005	1
@@ -1411,7 +1411,7 @@ category	ARMOR
 percent	50
 end
 
-#Ã»°Ç
+#청건
 section
 npc	20413
 item	20255	1
@@ -1472,7 +1472,7 @@ category	ARMOR
 percent	50
 end
 
-#Ã»¸¶°©
+#청마갑
 section
 npc	20413
 item	20505	1
@@ -1533,7 +1533,7 @@ category	ARMOR
 percent	50
 end
 
-#Ã»»óÀÇ
+#청상의
 section
 npc	20413
 item	20755	1
@@ -1594,7 +1594,7 @@ category	ARMOR
 percent	50
 end
 
-#Ã»ÇØ°©
+#청해갑
 section
 npc	20413
 item	21095	1
@@ -1655,7 +1655,7 @@ category	ARMOR
 percent	50
 end
 
-#Àû·æ°©
+#적룡갑
 section
 npc	20413
 item	20005	1
@@ -1716,7 +1716,7 @@ category	ARMOR
 percent	50
 end
 
-#ÀûÇö
+#적현
 section
 npc	20413
 item	20255	1
@@ -1777,7 +1777,7 @@ category	ARMOR
 percent	50
 end
 
-#Àû»ó°©
+#적상갑
 section
 npc	20413
 item	20505	1
@@ -1838,7 +1838,7 @@ category	ARMOR
 percent	50
 end
 
-#Àû¼±ÀÇ
+#적선의
 section
 npc	20413
 item	20755	1
@@ -1899,7 +1899,7 @@ category	ARMOR
 percent	50
 end
 
-#ÀûÃµ°©
+#적천갑
 section
 npc	20413
 item	21095	1
@@ -1960,7 +1960,7 @@ category	ARMOR
 percent	50
 end
 
-#¹éÈ£°©
+#백호갑
 section
 npc	20413
 item	20005	1
@@ -2021,7 +2021,7 @@ category	ARMOR
 percent	50
 end
 
-#¹é°Ç
+#백건
 section
 npc	20413
 item	20255	1
@@ -2082,7 +2082,7 @@ category	ARMOR
 percent	50
 end
 
-#¹é¸¶°©
+#백마갑
 section
 npc	20413
 item	20505	1
@@ -2143,7 +2143,7 @@ category	ARMOR
 percent	50
 end
 
-#¹é»óÀÇ
+#백상의
 section
 npc	20413
 item	20755	1
@@ -2204,7 +2204,7 @@ category	ARMOR
 percent	50
 end
 
-#¹éÇö°©
+#백현갑
 section
 npc	20413
 item	21095	1
@@ -2265,7 +2265,7 @@ category	ARMOR
 percent	50
 end
 
-#Èæ·æ°©
+#흑룡갑
 section
 npc	20413
 item	20005	1
@@ -2326,7 +2326,7 @@ category	ARMOR
 percent	50
 end
 
-#ÈæÇö
+#흑현
 section
 npc	20413
 item	20255	1
@@ -2387,7 +2387,7 @@ category	ARMOR
 percent	50
 end
 
-#Èæ»ó°©
+#흑상갑
 section
 npc	20413
 item	20505	1
@@ -2448,7 +2448,7 @@ category	ARMOR
 percent	50
 end
 
-#Èæ¼±
+#흑선
 section
 npc	20413
 item	20755	1
@@ -2509,7 +2509,7 @@ category	ARMOR
 percent	50
 end
 
-#ÈæÃµ°©
+#흑천갑
 section
 npc	20413
 item	21095	1
@@ -2570,7 +2570,7 @@ category	ARMOR
 percent	50
 end
 
-#È­¿°½Å¹ß
+#화염신발
 section
 npc	20413
 item	15435	1
@@ -2631,7 +2631,7 @@ category	ARMOR
 percent	50
 end
 
-#ºù¿°½Å¹ß
+#빙염신발
 section
 npc	20413
 item	15375	1
@@ -2692,7 +2692,7 @@ category	ARMOR
 percent	50
 end
 
-#ºñ´ÃÅõ±¸(ÆÄÆ¼)
+#비늘투구(파티)
 section
 npc	20421
 item	12285	1
@@ -2763,7 +2763,7 @@ percent	50
 not_remove	12289
 end
 
-#¿ëºñµÎ°Ç(ÆÄÆ¼)
+#용비두건(파티)
 section
 npc	20421
 item	12405	1
@@ -2834,7 +2834,7 @@ percent	50
 not_remove	12409
 end
 
-#±ÍÈ¥Åõ±¸(ÆÄÆ¼)
+#귀혼투구(파티)
 section
 npc	20421
 item	12545	1
@@ -2905,7 +2905,7 @@ percent	50
 not_remove	12549
 end
 
-#¹éÁ¦¸ğ(ÆÄÆ¼)
+#백제모(파티)
 section
 npc	20421
 item	12685	1
@@ -2976,7 +2976,7 @@ percent	50
 not_remove	12689
 end
 
-#¿ë¼öÅõ±¸(ÆÄÆ¼)
+#용수투구(파티)
 section
 npc	20421
 item	21545	1
@@ -3047,7 +3047,7 @@ percent	50
 not_remove	21549
 end
 
-#ºñ´ÃÅõ±¸
+#비늘투구
 section
 npc	20421
 item	12285	1
@@ -3108,7 +3108,7 @@ category	ARMOR
 percent	70
 end
 
-#¿ëºñµÎ°Ç
+#용비두건
 section
 npc	20421
 item	12405	1
@@ -3169,7 +3169,7 @@ category	ARMOR
 percent	70
 end
 
-#±ÍÈ¥Åõ±¸
+#귀혼투구
 section
 npc	20421
 item	12545	1
@@ -3230,7 +3230,7 @@ category	ARMOR
 percent	70
 end
 
-#¹éÁ¦¸ğ
+#백제모
 section
 npc	20421
 item	12685	1
@@ -3291,7 +3291,7 @@ category	ARMOR
 percent	70
 end
 
-#Ãµ¼öÅõ±¸
+#천수투구
 section
 npc	20421
 item	21545	1
@@ -3507,7 +3507,7 @@ category	EVENT
 percent	100
 end
 
-#º¹¼ş¾Æ²ÉÁø¾×
+#복숭아꽃진액
 section
 npc	9009
 item	50721	1
@@ -3516,7 +3516,7 @@ category	ETC
 percent	100
 end
 
-#µµ¶óÁöÁø¾×
+#도라지진액
 section
 npc	9009
 item	50722	1
@@ -3525,7 +3525,7 @@ category	ETC
 percent	100
 end
 
-#°¨²ÉÁø¾×
+#감꽃진액
 section
 npc	9009
 item	50723	1
@@ -3534,7 +3534,7 @@ category	ETC
 percent	100
 end
 
-#°¡½Ã¿À°¡ÇÇÁø¾×
+#가시오가피진액
 section
 npc	9009
 item	50724	1
@@ -3543,7 +3543,7 @@ category	ETC
 percent	100
 end
 
-#°¢¼ºÀÇ µ¹
+#각성의 돌
 section
 npc	20470
 item	31108	5
@@ -3584,7 +3584,7 @@ category	ETC
 percent	25
 end
 
-#Èæ·æµµ
+#흑룡도
 section
 npc	20473
 item	31115	10
@@ -3651,7 +3651,7 @@ percent	25
 end
 
 
-#Èæ·æ¸¶°Ë
+#흑룡마검
 section
 npc	20473
 item	31115	10
@@ -3718,7 +3718,7 @@ percent	25
 end
 
 
-#Èæ·æ´ë°Å
+#흑룡대거
 section
 npc	20473
 item	31115	10
@@ -3785,7 +3785,7 @@ percent	25
 end
 
 
-#Èæ·æ°¢±Ã
+#흑룡각궁
 section
 npc	20473
 item	31115	10
@@ -3852,7 +3852,7 @@ percent	25
 end
 
 
-#Èæ·æÁö°Ë
+#흑룡지검
 section
 npc	20473
 item	31115	10
@@ -3919,7 +3919,7 @@ percent	25
 end
 
 
-#Èæ·æ»ç·É
+#흑룡사령
 section
 npc	20473
 item	31115	10
@@ -3986,7 +3986,7 @@ percent	25
 end
 
 
-#Èæ·æ¼ö
+#흑룡수
 section
 npc	20473
 item	31115	10
@@ -4053,7 +4053,7 @@ percent	25
 end
 
 
-#Èæ·æ¸¶¼±
+#흑룡마선
 section
 npc	20473
 item	31115	10
@@ -4120,7 +4120,7 @@ percent	25
 end
 
 
-#Èæ·æÆ÷_¹«»ç
+#흑룡포_무사
 section
 npc	20474
 item	31114	10
@@ -4187,7 +4187,7 @@ percent	25
 end
 
 
-#Ç³·æÆ÷_ÀÚ°´
+#풍룡포_자객
 section
 npc	20474
 item	31114	10
@@ -4254,7 +4254,7 @@ percent	25
 end
 
 
-#¸¶·æÆ÷_¼ö¶ó
+#마룡포_수라
 section
 npc	20474
 item	31114	10
@@ -4321,7 +4321,7 @@ percent	25
 end
 
 
-#½Å·æÆ÷_¹«´ç
+#신룡포_무당
 section
 npc	20474
 item	31114	10
@@ -4388,7 +4388,7 @@ percent	25
 end
 
 
-#Ãµ·æÆ÷_¼öÀÎ
+#천룡포_수인
 section
 npc	20474
 item	31114	10
@@ -4454,7 +4454,7 @@ category	ARMOR
 percent	25
 end
 
-#Èæ·æÅõ±¸
+#흑룡투구
 section
 npc	20474
 item	31114	10
@@ -4520,7 +4520,7 @@ category	ARMOR
 percent	25
 end
 
-#Ç³·æÅõ±¸_ÀÚ°´
+#풍룡투구_자객
 section
 npc	20474
 item	31114	10
@@ -4587,7 +4587,7 @@ percent	25
 end
 
 
-#¸¶·æÅõ±¸_¼ö¶ó
+#마룡투구_수라
 section
 npc	20474
 item	31114	10
@@ -4654,7 +4654,7 @@ percent	25
 end
 
 
-#½Å·æÅõ±¸_¹«´ç
+#신룡투구_무당
 section
 npc	20474
 item	31114	10
@@ -4721,7 +4721,7 @@ percent	25
 end
 
 
-#Ãµ·æÅõ±¸_¼öÀÎ
+#천룡투구_수인
 section
 npc	20474
 item	31114	10
@@ -4787,7 +4787,7 @@ category	ARMOR
 percent	25
 end
 
-#¾àÀç
+#약재
 section
 npc	20018
 item	31145	20
@@ -4796,7 +4796,7 @@ category	ETC
 percent	50
 end
 
-#¿µ±â(çÏÑ¨)ÀÇ ÄÚ½ºÆ¬
+#영기(çÏÑ¨)의 코스튬
 section
 npc	20018
 item	31137	1
@@ -4808,7 +4808,7 @@ category	ACCESSORY
 percent	20
 end
 
-#¿ªÇÒ¼ö·Ã¼­(°í±Ş)
+#역할수련서(고급)
 section
 npc	20018
 item	50339	5
@@ -4817,7 +4817,7 @@ category	SKILL_BOOK
 percent	20
 end
 
-#ÅëÂû·Â(°í±Ş)
+#통찰력(고급)
 section
 npc	20018
 item	50342	5
@@ -4826,7 +4826,7 @@ category	SKILL_BOOK
 percent	20
 end
 
-#±æµå pve ¿­¼è
+#길드 pve 열쇠
 section
 npc	20650
 item	90011	100
@@ -4838,7 +4838,7 @@ category	ETC
 percent	100
 end
 
-#Á÷¾÷À¯¹°[¹«»ç]
+#직업유물[무사]
 section
 npc	20810
 item	30280	1
@@ -4848,7 +4848,7 @@ category	JOB
 percent	100
 end
 
-#Á÷¾÷À¯¹°[ÀÚ°´]
+#직업유물[자객]
 section
 npc	20810
 item	30281	1
@@ -4858,7 +4858,7 @@ category	JOB
 percent	100
 end
 
-#Á÷¾÷À¯¹°[¼ö¶ó]
+#직업유물[수라]
 section
 npc	20810
 item	30282	1
@@ -4868,7 +4868,7 @@ category	JOB
 percent	100
 end
 
-#Á÷¾÷À¯¹°[¹«´ç]
+#직업유물[무당]
 section
 npc	20810
 item	30283	1
@@ -4878,7 +4878,7 @@ category	JOB
 percent	100
 end
 
-#Á÷¾÷À¯¹°[¼öÀÎ]
+#직업유물[수인]
 section
 npc	20810
 item	30284	1
@@ -4888,7 +4888,7 @@ category	JOB
 percent	100
 end
 
-#°í±ÍÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+#고귀하게 빛나는 무기 파편
 section
 npc	20433
 item	39097	200
@@ -4898,7 +4898,7 @@ category	ETC
 percent	70
 end
 
-#°í±ÍÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+#고귀하게 빛나는 갑옷 파편
 section
 npc	20433
 item	39091	200
@@ -4908,7 +4908,7 @@ category	ETC
 percent	70
 end
 
-#°í±ÍÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+#고귀하게 빛나는 헬멧 파편
 section
 npc	20433
 item	39085	200
@@ -4918,7 +4918,7 @@ category	ETC
 percent	70
 end
 
-#¼ş°íÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+#숭고하게 빛나는 무기 파편
 section
 npc	20433
 item	39098	200
@@ -4928,7 +4928,7 @@ category	ETC
 percent	70
 end
 
-#¼ş°íÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+#숭고하게 빛나는 갑옷 파편
 section
 npc	20433
 item	39092	200
@@ -4938,7 +4938,7 @@ category	ETC
 percent	70
 end
 
-#¼ş°íÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+#숭고하게 빛나는 헬멧 파편
 section
 npc	20433
 item	39086	200
@@ -4948,7 +4948,7 @@ category	ETC
 percent	70
 end
 
-#°Å·èÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+#거룩하게 빛나는 무기 파편
 section
 npc	20433
 item	39099	200
@@ -4958,7 +4958,7 @@ category	ETC
 percent	70
 end
 
-#°Å·èÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+#거룩하게 빛나는 갑옷 파편
 section
 npc	20433
 item	39093	200
@@ -4968,7 +4968,7 @@ category	ETC
 percent	70
 end
 
-#°Å·èÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+#거룩하게 빛나는 헬멧 파편
 section
 npc	20433
 item	39087	200
@@ -4978,7 +4978,7 @@ category	ETC
 percent	70
 end
 
-#¿µ·ÕÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+#영롱하게 빛나는 무기 파편
 section
 npc	20433
 item	39102	10
@@ -4988,7 +4988,7 @@ category	ETC
 percent	70
 end
 
-#¿µ·ÕÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+#영롱하게 빛나는 갑옷 파편
 section
 npc	20433
 item	39096	10
@@ -4998,7 +4998,7 @@ category	ETC
 percent	70
 end
 
-#¿µ·ÕÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+#영롱하게 빛나는 헬멧 파편
 section
 npc	20433
 item	39090	10
@@ -5008,7 +5008,7 @@ category	ETC
 percent	70
 end
 
-#Âù¶õÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+#찬란하게 빛나는 무기 파편
 section
 npc	20433
 item	39105	10
@@ -5018,7 +5018,7 @@ category	ETC
 percent	70
 end
 
-#Âù¶õÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+#찬란하게 빛나는 갑옷 파편
 section
 npc	20433
 item	39104	10
@@ -5028,7 +5028,7 @@ category	ETC
 percent	70
 end
 
-#Âù¶õÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+#찬란하게 빛나는 헬멧 파편
 section
 npc	20433
 item	39103	10
@@ -5038,7 +5038,7 @@ category	ETC
 percent	70
 end
 
-#°í±ÍÇÑ ¼­¸ğ°Ë
+#고귀한 서모검
 section
 npc	20475
 item	187	1
@@ -5081,7 +5081,7 @@ set_value	1
 not_remove	189
 end
 
-#°í±ÍÇÑ »çÀÚ°Ë
+#고귀한 사자검
 section
 npc	20475
 item	197	1
@@ -5124,7 +5124,7 @@ set_value	1
 not_remove	199
 end
 
-#°í±ÍÇÑ ÁøÅğ¸¶µµ
+#고귀한 진퇴마도
 section
 npc	20475
 item	207	1
@@ -5167,7 +5167,7 @@ set_value	1
 not_remove	209
 end
 
-#°í±ÍÇÑ Áø¹«½Ö°Ë
+#고귀한 진무쌍검
 section
 npc	20475
 item	277	1
@@ -5210,7 +5210,7 @@ set_value	1
 not_remove	279
 end
 
-#°í±ÍÇÑ Áø±Í¾Æ°Ë
+#고귀한 진귀아검
 section
 npc	20475
 item	287	1
@@ -5253,7 +5253,7 @@ set_value	1
 not_remove	289
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁöµµ
+#고귀한 십이지도
 section
 npc	20475
 item	307	1
@@ -5296,7 +5296,7 @@ set_value	1
 not_remove	309
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁöÄ®
+#고귀한 십이지칼
 section
 npc	20475
 item	317	1
@@ -5339,7 +5339,7 @@ set_value	1
 not_remove	319
 end
 
-#°í±ÍÇÑ Èæ·æµµ
+#고귀한 흑룡도
 section
 npc	20475
 item	327	1
@@ -5466,7 +5466,7 @@ set_value	1
 not_remove	335
 end
 
-#°í±ÍÇÑ Èæ·æ¸¶°Ë
+#고귀한 흑룡마검
 section
 npc	20475
 item	347	1
@@ -5592,7 +5592,7 @@ set_value	1
 not_remove	355
 end
 
-#°í±ÍÇÑ ¿ë½ÅÁö°Ë
+#고귀한 용신지검
 section
 npc	20475
 item	467	1
@@ -5635,7 +5635,7 @@ set_value	1
 not_remove	469
 end
 
-#°í±ÍÇÑ ÆÄ¸êÁö°Ë
+#고귀한 파멸지검
 section
 npc	20475
 item	477	1
@@ -5678,7 +5678,7 @@ set_value	1
 not_remove	479
 end
 
-#°í±ÍÇÑ ÁøÆÄ¸êÁö°Ë
+#고귀한 진파멸지검
 section
 npc	20475
 item	507	1
@@ -5721,7 +5721,7 @@ set_value	1
 not_remove	509
 end
 
-#°í±ÍÇÑ ¸¶ÀÎ°Ë
+#고귀한 마인검
 section
 npc	20475
 item	1137	1
@@ -5764,7 +5764,7 @@ set_value	1
 not_remove	1139
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö´Üµµ
+#고귀한 십이지단도
 section
 npc	20475
 item	1187	1
@@ -5807,7 +5807,7 @@ set_value	1
 not_remove	1189
 end
 
-#°í±ÍÇÑ Èæ·æ´ë°Å
+#고귀한 흑룡대거
 section
 npc	20475
 item	1197	1
@@ -5934,7 +5934,7 @@ set_value	1
 not_remove	1205
 end
 
-#°í±ÍÇÑ ¿ÀÇàµµ
+#고귀한 오행도
 section
 npc	20475
 item	1347	1
@@ -5977,7 +5977,7 @@ set_value	1
 not_remove	1349
 end
 
-#°í±ÍÇÑ Áø¿ÀÇàµµ
+#고귀한 진오행도
 section
 npc	20475
 item	1507	1
@@ -6020,7 +6020,7 @@ set_value	1
 not_remove	1509
 end
 
-#°í±ÍÇÑ ÁøÈ²·æ´ë±Ã
+#고귀한 진황룡대궁
 section
 npc	20475
 item	2167	1
@@ -6063,7 +6063,7 @@ set_value	1
 not_remove	2169
 end
 
-#°í±ÍÇÑ Ã¶ÆĞ½Å±Ã
+#고귀한 철패신궁
 section
 npc	20475
 item	2177	1
@@ -6106,7 +6106,7 @@ set_value	1
 not_remove	2179
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö±Ã
+#고귀한 십이지궁
 section
 npc	20475
 item	2207	1
@@ -6149,7 +6149,7 @@ set_value	1
 not_remove	2209
 end
 
-#°í±ÍÇÑ Èæ·æ°¢±Ã
+#고귀한 흑룡각궁
 section
 npc	20475
 item	2217	1
@@ -6276,7 +6276,7 @@ set_value	1
 not_remove	2225
 end
 
-#°í±ÍÇÑ Ãµ·æÁö±Ã
+#고귀한 천룡지궁
 section
 npc	20475
 item	2377	1
@@ -6319,7 +6319,7 @@ set_value	1
 not_remove	2379
 end
 
-#°í±ÍÇÑ ÁøÃµ·æÁö±Ã
+#고귀한 진천룡지궁
 section
 npc	20475
 item	2507	1
@@ -6362,7 +6362,7 @@ set_value	1
 not_remove	2509
 end
 
-#°í±ÍÇÑ È¥¿ø°Ë
+#고귀한 혼원검
 section
 npc	20475
 item	3167	1
@@ -6405,7 +6405,7 @@ set_value	1
 not_remove	3169
 end
 
-#°í±ÍÇÑ ÅÂ¾ç°Ë
+#고귀한 태양검
 section
 npc	20475
 item	3197	1
@@ -6448,7 +6448,7 @@ set_value	1
 not_remove	3199
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö±Ø
+#고귀한 십이지극
 section
 npc	20475
 item	3227	1
@@ -6491,7 +6491,7 @@ set_value	1
 not_remove	3229
 end
 
-#°í±ÍÇÑ Èæ·æÁö°Ë
+#고귀한 흑룡지검
 section
 npc	20475
 item	3237	1
@@ -6618,7 +6618,7 @@ set_value	1
 not_remove	3245
 end
 
-#°í±ÍÇÑ ÁøÅÂ¾ç°Ë
+#고귀한 진태양검
 section
 npc	20475
 item	3507	1
@@ -6661,7 +6661,7 @@ set_value	1
 not_remove	3509
 end
 
-#°í±ÍÇÑ Áø¿ë¸¶µµ
+#고귀한 진용마도
 section
 npc	20475
 item	4047	1
@@ -6704,7 +6704,7 @@ set_value	1
 not_remove	4049
 end
 
-#°í±ÍÇÑ Ã»Á×·É
+#고귀한 청죽령
 section
 npc	20475
 item	5127	1
@@ -6747,7 +6747,7 @@ set_value	1
 not_remove	5129
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö·É
+#고귀한 십이지령
 section
 npc	20475
 item	5167	1
@@ -6790,7 +6790,7 @@ set_value	1
 not_remove	5169
 end
 
-#°í±ÍÇÑ Èæ·æ»ç·É
+#고귀한 흑룡사령
 section
 npc	20475
 item	5177	1
@@ -6917,7 +6917,7 @@ set_value	1
 not_remove	5185
 end
 
-#°í±ÍÇÑ ÁøÁøÃµ·É
+#고귀한 진진천령
 section
 npc	20475
 item	5337	1
@@ -6960,7 +6960,7 @@ set_value	1
 not_remove	5339
 end
 
-#°í±ÍÇÑ ¿ë½Å·É
+#고귀한 용신령
 section
 npc	20475
 item	5347	1
@@ -7003,7 +7003,7 @@ set_value	1
 not_remove	5349
 end
 
-#°í±ÍÇÑ Áø¿ë½Å·É
+#고귀한 진용신령
 section
 npc	20475
 item	5507	1
@@ -7046,7 +7046,7 @@ set_value	1
 not_remove	5509
 end
 
-#°í±ÍÇÑ ÀûÃ¶¼ö
+#고귀한 적철수
 section
 npc	20475
 item	6077	1
@@ -7089,7 +7089,7 @@ set_value	1
 not_remove	6079
 end
 
-#°í±ÍÇÑ Áø³ì¸Í¾Æ
+#고귀한 진녹맹아
 section
 npc	20475
 item	6087	1
@@ -7132,7 +7132,7 @@ set_value	1
 not_remove	6089
 end
 
-#°í±ÍÇÑ ÆĞ·æ¼ö
+#고귀한 패룡수
 section
 npc	20475
 item	6097	1
@@ -7175,7 +7175,7 @@ set_value	1
 not_remove	6099
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö¼ö
+#고귀한 십이지수
 section
 npc	20475
 item	6127	1
@@ -7218,7 +7218,7 @@ set_value	1
 not_remove	6129
 end
 
-#°í±ÍÇÑ Èæ·æ¼ö
+#고귀한 흑룡수
 section
 npc	20475
 item	6137	1
@@ -7345,7 +7345,7 @@ set_value	1
 not_remove	6145
 end
 
-#°í±ÍÇÑ ÁøÆĞ·æ¼ö
+#고귀한 진패룡수
 section
 npc	20475
 item	6507	1
@@ -7388,7 +7388,7 @@ set_value	1
 not_remove	6509
 end
 
-#°í±ÍÇÑ ÁøÁ¦¸¶¼±
+#고귀한 진제마선
 section
 npc	20475
 item	7197	1
@@ -7431,7 +7431,7 @@ set_value	1
 not_remove	7199
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö¼±
+#고귀한 십이지선
 section
 npc	20475
 item	7307	1
@@ -7474,7 +7474,7 @@ set_value	1
 not_remove	7309
 end
 
-#°í±ÍÇÑ Èæ·æ¸¶¼±
+#고귀한 흑룡마선
 section
 npc	20475
 item	7317	1
@@ -7601,7 +7601,7 @@ set_value	1
 not_remove	7325
 end
 
-#°í±ÍÇÑ ¹«¾ÆÁö¼±
+#고귀한 무아지선
 section
 npc	20475
 item	7377	1
@@ -7644,7 +7644,7 @@ set_value	1
 not_remove	7379
 end
 
-#°í±ÍÇÑ Áø¹«¾ÆÁö¼±
+#고귀한 진무아지선
 section
 npc	20475
 item	7507	1
@@ -7687,7 +7687,7 @@ set_value	1
 not_remove	7509
 end
 
-#°í±ÍÇÑ ¹ì·æµµ
+#고귀한 뱀룡도
 section
 npc	20475
 item	367	1
@@ -7814,7 +7814,7 @@ set_value	1
 not_remove	375
 end
 
-#°í±ÍÇÑ ¹ì·æ¸¶°Ë
+#고귀한 뱀룡마검
 section
 npc	20475
 item	387	1
@@ -7941,7 +7941,7 @@ set_value	1
 not_remove	395
 end
 
-#°í±ÍÇÑ ¹ì·æ´ë°Å
+#고귀한 뱀룡대거
 section
 npc	20475
 item	1217	1
@@ -8068,7 +8068,7 @@ set_value	1
 not_remove	1225
 end
 
-#°í±ÍÇÑ ¹ì·æ°¢±Ã
+#고귀한 뱀룡각궁
 section
 npc	20475
 item	2237	1
@@ -8195,7 +8195,7 @@ set_value	1
 not_remove	2245
 end
 
-#°í±ÍÇÑ ¹ì·æÁö°Ë
+#고귀한 뱀룡지검
 section
 npc	20475
 item	3257	1
@@ -8322,7 +8322,7 @@ set_value	1
 not_remove	3265
 end
 
-#°í±ÍÇÑ ¹ì·æ»ç·É
+#고귀한 뱀룡사령
 section
 npc	20475
 item	5207	1
@@ -8449,7 +8449,7 @@ set_value	1
 not_remove	5215
 end
 
-#°í±ÍÇÑ ¹ì·æ¼ö
+#고귀한 뱀룡수
 section
 npc	20475
 item	6157	1
@@ -8576,7 +8576,7 @@ set_value	1
 not_remove	6165
 end
 
-#°í±ÍÇÑ ¹ì·æ¸¶¼±
+#고귀한 뱀룡마선
 section
 npc	20475
 item	7337	1
@@ -8703,7 +8703,7 @@ set_value	1
 not_remove	7345
 end
 
-#¼ş°íÇÑ ¼­¸ğ°Ë		
+#숭고한 서모검		
 section		
 npc	20476	
 item	187	1
@@ -8746,7 +8746,7 @@ set_value	2
 not_remove	189	
 end		
 		
-#¼ş°íÇÑ »çÀÚ°Ë		
+#숭고한 사자검		
 section		
 npc	20476	
 item	197	1
@@ -8789,7 +8789,7 @@ set_value	2
 not_remove	199	
 end		
 		
-#¼ş°íÇÑ ÁøÅğ¸¶µµ		
+#숭고한 진퇴마도		
 section		
 npc	20476	
 item	207	1
@@ -8832,7 +8832,7 @@ set_value	2
 not_remove	209	
 end		
 		
-#¼ş°íÇÑ Áø¹«½Ö°Ë		
+#숭고한 진무쌍검		
 section		
 npc	20476	
 item	277	1
@@ -8875,7 +8875,7 @@ set_value	2
 not_remove	279	
 end		
 		
-#¼ş°íÇÑ Áø±Í¾Æ°Ë		
+#숭고한 진귀아검		
 section		
 npc	20476	
 item	287	1
@@ -8918,7 +8918,7 @@ set_value	2
 not_remove	289	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁöµµ		
+#숭고한 십이지도		
 section		
 npc	20476	
 item	307	1
@@ -8961,7 +8961,7 @@ set_value	2
 not_remove	309	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁöÄ®		
+#숭고한 십이지칼		
 section		
 npc	20476	
 item	317	1
@@ -9004,7 +9004,7 @@ set_value	2
 not_remove	319	
 end		
 		
-#¼ş°íÇÑ Èæ·æµµ		
+#숭고한 흑룡도		
 section		
 npc	20476	
 item	327	1
@@ -9131,7 +9131,7 @@ set_value	2
 not_remove	335	
 end		
 		
-#¼ş°íÇÑ Èæ·æ¸¶°Ë		
+#숭고한 흑룡마검		
 section		
 npc	20476	
 item	347	1
@@ -9257,7 +9257,7 @@ set_value	2
 not_remove	355	
 end		
 		
-#¼ş°íÇÑ ¿ë½ÅÁö°Ë		
+#숭고한 용신지검		
 section		
 npc	20476	
 item	467	1
@@ -9300,7 +9300,7 @@ set_value	2
 not_remove	469	
 end		
 		
-#¼ş°íÇÑ ÆÄ¸êÁö°Ë		
+#숭고한 파멸지검		
 section		
 npc	20476	
 item	477	1
@@ -9343,7 +9343,7 @@ set_value	2
 not_remove	479	
 end		
 		
-#¼ş°íÇÑ ÁøÆÄ¸êÁö°Ë		
+#숭고한 진파멸지검		
 section		
 npc	20476	
 item	507	1
@@ -9386,7 +9386,7 @@ set_value	2
 not_remove	509	
 end		
 		
-#¼ş°íÇÑ ¸¶ÀÎ°Ë		
+#숭고한 마인검		
 section		
 npc	20476	
 item	1137	1
@@ -9429,7 +9429,7 @@ set_value	2
 not_remove	1139	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö´Üµµ		
+#숭고한 십이지단도		
 section		
 npc	20476	
 item	1187	1
@@ -9472,7 +9472,7 @@ set_value	2
 not_remove	1189	
 end		
 		
-#¼ş°íÇÑ Èæ·æ´ë°Å		
+#숭고한 흑룡대거		
 section		
 npc	20476	
 item	1197	1
@@ -9599,7 +9599,7 @@ set_value	2
 not_remove	1205	
 end		
 		
-#¼ş°íÇÑ ¿ÀÇàµµ		
+#숭고한 오행도		
 section		
 npc	20476	
 item	1347	1
@@ -9642,7 +9642,7 @@ set_value	2
 not_remove	1349	
 end		
 		
-#¼ş°íÇÑ Áø¿ÀÇàµµ		
+#숭고한 진오행도		
 section		
 npc	20476	
 item	1507	1
@@ -9685,7 +9685,7 @@ set_value	2
 not_remove	1509	
 end		
 		
-#¼ş°íÇÑ ÁøÈ²·æ´ë±Ã		
+#숭고한 진황룡대궁		
 section		
 npc	20476	
 item	2167	1
@@ -9728,7 +9728,7 @@ set_value	2
 not_remove	2169	
 end		
 		
-#¼ş°íÇÑ Ã¶ÆĞ½Å±Ã		
+#숭고한 철패신궁		
 section		
 npc	20476	
 item	2177	1
@@ -9771,7 +9771,7 @@ set_value	2
 not_remove	2179	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö±Ã		
+#숭고한 십이지궁		
 section		
 npc	20476	
 item	2207	1
@@ -9814,7 +9814,7 @@ set_value	2
 not_remove	2209	
 end		
 		
-#¼ş°íÇÑ Èæ·æ°¢±Ã		
+#숭고한 흑룡각궁		
 section		
 npc	20476	
 item	2217	1
@@ -9941,7 +9941,7 @@ set_value	2
 not_remove	2225	
 end		
 		
-#¼ş°íÇÑ Ãµ·æÁö±Ã		
+#숭고한 천룡지궁		
 section		
 npc	20476	
 item	2377	1
@@ -9984,7 +9984,7 @@ set_value	2
 not_remove	2379	
 end		
 		
-#¼ş°íÇÑ ÁøÃµ·æÁö±Ã		
+#숭고한 진천룡지궁		
 section		
 npc	20476	
 item	2507	1
@@ -10027,7 +10027,7 @@ set_value	2
 not_remove	2509	
 end		
 		
-#¼ş°íÇÑ È¥¿ø°Ë		
+#숭고한 혼원검		
 section		
 npc	20476	
 item	3167	1
@@ -10070,7 +10070,7 @@ set_value	2
 not_remove	3169	
 end		
 		
-#¼ş°íÇÑ ÅÂ¾ç°Ë		
+#숭고한 태양검		
 section		
 npc	20476	
 item	3197	1
@@ -10113,7 +10113,7 @@ set_value	2
 not_remove	3199	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö±Ø		
+#숭고한 십이지극		
 section		
 npc	20476	
 item	3227	1
@@ -10156,7 +10156,7 @@ set_value	2
 not_remove	3229	
 end		
 		
-#¼ş°íÇÑ Èæ·æÁö°Ë		
+#숭고한 흑룡지검		
 section		
 npc	20476	
 item	3237	1
@@ -10283,7 +10283,7 @@ set_value	2
 not_remove	3245	
 end		
 		
-#¼ş°íÇÑ ÁøÅÂ¾ç°Ë		
+#숭고한 진태양검		
 section		
 npc	20476	
 item	3507	1
@@ -10326,7 +10326,7 @@ set_value	2
 not_remove	3509	
 end		
 		
-#¼ş°íÇÑ Áø¿ë¸¶µµ		
+#숭고한 진용마도		
 section		
 npc	20476	
 item	4047	1
@@ -10369,7 +10369,7 @@ set_value	2
 not_remove	4049	
 end		
 		
-#¼ş°íÇÑ Ã»Á×·É		
+#숭고한 청죽령		
 section		
 npc	20476	
 item	5127	1
@@ -10412,7 +10412,7 @@ set_value	2
 not_remove	5129	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö·É		
+#숭고한 십이지령		
 section		
 npc	20476	
 item	5167	1
@@ -10455,7 +10455,7 @@ set_value	2
 not_remove	5169	
 end		
 		
-#¼ş°íÇÑ Èæ·æ»ç·É		
+#숭고한 흑룡사령		
 section		
 npc	20476	
 item	5177	1
@@ -10582,7 +10582,7 @@ set_value	2
 not_remove	5185	
 end		
 		
-#¼ş°íÇÑ ÁøÁøÃµ·É		
+#숭고한 진진천령		
 section		
 npc	20476	
 item	5337	1
@@ -10625,7 +10625,7 @@ set_value	2
 not_remove	5339	
 end		
 		
-#¼ş°íÇÑ ¿ë½Å·É		
+#숭고한 용신령		
 section		
 npc	20476	
 item	5347	1
@@ -10668,7 +10668,7 @@ set_value	2
 not_remove	5349	
 end		
 		
-#¼ş°íÇÑ Áø¿ë½Å·É		
+#숭고한 진용신령		
 section		
 npc	20476	
 item	5507	1
@@ -10711,7 +10711,7 @@ set_value	2
 not_remove	5509	
 end		
 		
-#¼ş°íÇÑ ÀûÃ¶¼ö		
+#숭고한 적철수		
 section		
 npc	20476	
 item	6077	1
@@ -10754,7 +10754,7 @@ set_value	2
 not_remove	6079	
 end		
 		
-#¼ş°íÇÑ Áø³ì¸Í¾Æ		
+#숭고한 진녹맹아		
 section		
 npc	20476	
 item	6087	1
@@ -10797,7 +10797,7 @@ set_value	2
 not_remove	6089	
 end		
 		
-#¼ş°íÇÑ ÆĞ·æ¼ö		
+#숭고한 패룡수		
 section		
 npc	20476	
 item	6097	1
@@ -10840,7 +10840,7 @@ set_value	2
 not_remove	6099	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö¼ö		
+#숭고한 십이지수		
 section		
 npc	20476	
 item	6127	1
@@ -10883,7 +10883,7 @@ set_value	2
 not_remove	6129	
 end		
 		
-#¼ş°íÇÑ Èæ·æ¼ö		
+#숭고한 흑룡수		
 section		
 npc	20476	
 item	6137	1
@@ -11010,7 +11010,7 @@ set_value	2
 not_remove	6145	
 end		
 		
-#¼ş°íÇÑ ÁøÆĞ·æ¼ö		
+#숭고한 진패룡수		
 section		
 npc	20476	
 item	6507	1
@@ -11053,7 +11053,7 @@ set_value	2
 not_remove	6509	
 end		
 		
-#¼ş°íÇÑ ÁøÁ¦¸¶¼±		
+#숭고한 진제마선		
 section		
 npc	20476	
 item	7197	1
@@ -11096,7 +11096,7 @@ set_value	2
 not_remove	7199	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö¼±		
+#숭고한 십이지선		
 section		
 npc	20476	
 item	7307	1
@@ -11139,7 +11139,7 @@ set_value	2
 not_remove	7309	
 end		
 		
-#¼ş°íÇÑ Èæ·æ¸¶¼±		
+#숭고한 흑룡마선		
 section		
 npc	20476	
 item	7317	1
@@ -11266,7 +11266,7 @@ set_value	2
 not_remove	7325	
 end		
 		
-#¼ş°íÇÑ ¹«¾ÆÁö¼±		
+#숭고한 무아지선		
 section		
 npc	20476	
 item	7377	1
@@ -11309,7 +11309,7 @@ set_value	2
 not_remove	7379	
 end		
 		
-#¼ş°íÇÑ Áø¹«¾ÆÁö¼±		
+#숭고한 진무아지선		
 section		
 npc	20476	
 item	7507	1
@@ -11352,7 +11352,7 @@ set_value	2
 not_remove	7509	
 end		
 		
-#¼ş°íÇÑ ¹ì·æµµ		
+#숭고한 뱀룡도		
 section		
 npc	20476	
 item	367	1
@@ -11479,7 +11479,7 @@ set_value	2
 not_remove	375	
 end		
 		
-#¼ş°íÇÑ ¹ì·æ¸¶°Ë		
+#숭고한 뱀룡마검		
 section		
 npc	20476	
 item	387	1
@@ -11606,7 +11606,7 @@ set_value	2
 not_remove	395	
 end		
 		
-#¼ş°íÇÑ ¹ì·æ´ë°Å		
+#숭고한 뱀룡대거		
 section		
 npc	20476	
 item	1217	1
@@ -11733,7 +11733,7 @@ set_value	2
 not_remove	1225	
 end		
 		
-#¼ş°íÇÑ ¹ì·æ°¢±Ã		
+#숭고한 뱀룡각궁		
 section		
 npc	20476	
 item	2237	1
@@ -11860,7 +11860,7 @@ set_value	2
 not_remove	2245	
 end		
 		
-#¼ş°íÇÑ ¹ì·æÁö°Ë		
+#숭고한 뱀룡지검		
 section		
 npc	20476	
 item	3257	1
@@ -11987,7 +11987,7 @@ set_value	2
 not_remove	3265	
 end		
 		
-#¼ş°íÇÑ ¹ì·æ»ç·É		
+#숭고한 뱀룡사령		
 section		
 npc	20476	
 item	5207	1
@@ -12114,7 +12114,7 @@ set_value	2
 not_remove	5215	
 end		
 		
-#¼ş°íÇÑ ¹ì·æ¼ö		
+#숭고한 뱀룡수		
 section		
 npc	20476	
 item	6157	1
@@ -12241,7 +12241,7 @@ set_value	2
 not_remove	6165	
 end		
 		
-#¼ş°íÇÑ ¹ì·æ¸¶¼±		
+#숭고한 뱀룡마선		
 section		
 npc	20476	
 item	7337	1
@@ -12368,7 +12368,7 @@ set_value	2
 not_remove	7345	
 end		
 
-#°Å·èÇÑ ¼­¸ğ°Ë		
+#거룩한 서모검		
 section		
 npc	20477	
 item	187	1
@@ -12411,7 +12411,7 @@ set_value	3
 not_remove	189	
 end		
 		
-#°Å·èÇÑ »çÀÚ°Ë		
+#거룩한 사자검		
 section		
 npc	20477	
 item	197	1
@@ -12454,7 +12454,7 @@ set_value	3
 not_remove	199	
 end		
 		
-#°Å·èÇÑ ÁøÅğ¸¶µµ		
+#거룩한 진퇴마도		
 section		
 npc	20477	
 item	207	1
@@ -12497,7 +12497,7 @@ set_value	3
 not_remove	209	
 end		
 		
-#°Å·èÇÑ Áø¹«½Ö°Ë		
+#거룩한 진무쌍검		
 section		
 npc	20477	
 item	277	1
@@ -12540,7 +12540,7 @@ set_value	3
 not_remove	279	
 end		
 		
-#°Å·èÇÑ Áø±Í¾Æ°Ë		
+#거룩한 진귀아검		
 section		
 npc	20477	
 item	287	1
@@ -12583,7 +12583,7 @@ set_value	3
 not_remove	289	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁöµµ		
+#거룩한 십이지도		
 section		
 npc	20477	
 item	307	1
@@ -12626,7 +12626,7 @@ set_value	3
 not_remove	309	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁöÄ®		
+#거룩한 십이지칼		
 section		
 npc	20477	
 item	317	1
@@ -12669,7 +12669,7 @@ set_value	3
 not_remove	319	
 end		
 		
-#°Å·èÇÑ Èæ·æµµ		
+#거룩한 흑룡도		
 section		
 npc	20477	
 item	327	1
@@ -12796,7 +12796,7 @@ set_value	3
 not_remove	335	
 end		
 		
-#°Å·èÇÑ Èæ·æ¸¶°Ë		
+#거룩한 흑룡마검		
 section		
 npc	20477	
 item	347	1
@@ -12922,7 +12922,7 @@ set_value	3
 not_remove	355	
 end		
 		
-#°Å·èÇÑ ¿ë½ÅÁö°Ë		
+#거룩한 용신지검		
 section		
 npc	20477	
 item	467	1
@@ -12965,7 +12965,7 @@ set_value	3
 not_remove	469	
 end		
 		
-#°Å·èÇÑ ÆÄ¸êÁö°Ë		
+#거룩한 파멸지검		
 section		
 npc	20477	
 item	477	1
@@ -13008,7 +13008,7 @@ set_value	3
 not_remove	479	
 end		
 		
-#°Å·èÇÑ ÁøÆÄ¸êÁö°Ë		
+#거룩한 진파멸지검		
 section		
 npc	20477	
 item	507	1
@@ -13051,7 +13051,7 @@ set_value	3
 not_remove	509	
 end		
 		
-#°Å·èÇÑ ¸¶ÀÎ°Ë		
+#거룩한 마인검		
 section		
 npc	20477	
 item	1137	1
@@ -13094,7 +13094,7 @@ set_value	3
 not_remove	1139	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö´Üµµ		
+#거룩한 십이지단도		
 section		
 npc	20477	
 item	1187	1
@@ -13137,7 +13137,7 @@ set_value	3
 not_remove	1189	
 end		
 		
-#°Å·èÇÑ Èæ·æ´ë°Å		
+#거룩한 흑룡대거		
 section		
 npc	20477	
 item	1197	1
@@ -13264,7 +13264,7 @@ set_value	3
 not_remove	1205	
 end		
 		
-#°Å·èÇÑ ¿ÀÇàµµ		
+#거룩한 오행도		
 section		
 npc	20477	
 item	1347	1
@@ -13307,7 +13307,7 @@ set_value	3
 not_remove	1349	
 end		
 		
-#°Å·èÇÑ Áø¿ÀÇàµµ		
+#거룩한 진오행도		
 section		
 npc	20477	
 item	1507	1
@@ -13350,7 +13350,7 @@ set_value	3
 not_remove	1509	
 end		
 		
-#°Å·èÇÑ ÁøÈ²·æ´ë±Ã		
+#거룩한 진황룡대궁		
 section		
 npc	20477	
 item	2167	1
@@ -13393,7 +13393,7 @@ set_value	3
 not_remove	2169	
 end		
 		
-#°Å·èÇÑ Ã¶ÆĞ½Å±Ã		
+#거룩한 철패신궁		
 section		
 npc	20477	
 item	2177	1
@@ -13436,7 +13436,7 @@ set_value	3
 not_remove	2179	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö±Ã		
+#거룩한 십이지궁		
 section		
 npc	20477	
 item	2207	1
@@ -13479,7 +13479,7 @@ set_value	3
 not_remove	2209	
 end		
 		
-#°Å·èÇÑ Èæ·æ°¢±Ã		
+#거룩한 흑룡각궁		
 section		
 npc	20477	
 item	2217	1
@@ -13606,7 +13606,7 @@ set_value	3
 not_remove	2225	
 end		
 		
-#°Å·èÇÑ Ãµ·æÁö±Ã		
+#거룩한 천룡지궁		
 section		
 npc	20477	
 item	2377	1
@@ -13649,7 +13649,7 @@ set_value	3
 not_remove	2379	
 end		
 		
-#°Å·èÇÑ ÁøÃµ·æÁö±Ã		
+#거룩한 진천룡지궁		
 section		
 npc	20477	
 item	2507	1
@@ -13692,7 +13692,7 @@ set_value	3
 not_remove	2509	
 end		
 		
-#°Å·èÇÑ È¥¿ø°Ë		
+#거룩한 혼원검		
 section		
 npc	20477	
 item	3167	1
@@ -13735,7 +13735,7 @@ set_value	3
 not_remove	3169	
 end		
 		
-#°Å·èÇÑ ÅÂ¾ç°Ë		
+#거룩한 태양검		
 section		
 npc	20477	
 item	3197	1
@@ -13778,7 +13778,7 @@ set_value	3
 not_remove	3199	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö±Ø		
+#거룩한 십이지극		
 section		
 npc	20477	
 item	3227	1
@@ -13821,7 +13821,7 @@ set_value	3
 not_remove	3229	
 end		
 		
-#°Å·èÇÑ Èæ·æÁö°Ë		
+#거룩한 흑룡지검		
 section		
 npc	20477	
 item	3237	1
@@ -13948,7 +13948,7 @@ set_value	3
 not_remove	3245	
 end		
 		
-#°Å·èÇÑ ÁøÅÂ¾ç°Ë		
+#거룩한 진태양검		
 section		
 npc	20477	
 item	3507	1
@@ -13991,7 +13991,7 @@ set_value	3
 not_remove	3509	
 end		
 		
-#°Å·èÇÑ Áø¿ë¸¶µµ		
+#거룩한 진용마도		
 section		
 npc	20477	
 item	4047	1
@@ -14034,7 +14034,7 @@ set_value	3
 not_remove	4049	
 end		
 		
-#°Å·èÇÑ Ã»Á×·É		
+#거룩한 청죽령		
 section		
 npc	20477	
 item	5127	1
@@ -14077,7 +14077,7 @@ set_value	3
 not_remove	5129	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö·É		
+#거룩한 십이지령		
 section		
 npc	20477	
 item	5167	1
@@ -14120,7 +14120,7 @@ set_value	3
 not_remove	5169	
 end		
 		
-#°Å·èÇÑ Èæ·æ»ç·É		
+#거룩한 흑룡사령		
 section		
 npc	20477	
 item	5177	1
@@ -14247,7 +14247,7 @@ set_value	3
 not_remove	5185	
 end		
 		
-#°Å·èÇÑ ÁøÁøÃµ·É		
+#거룩한 진진천령		
 section		
 npc	20477	
 item	5337	1
@@ -14290,7 +14290,7 @@ set_value	3
 not_remove	5339	
 end		
 		
-#°Å·èÇÑ ¿ë½Å·É		
+#거룩한 용신령		
 section		
 npc	20477	
 item	5347	1
@@ -14333,7 +14333,7 @@ set_value	3
 not_remove	5349	
 end		
 		
-#°Å·èÇÑ Áø¿ë½Å·É		
+#거룩한 진용신령		
 section		
 npc	20477	
 item	5507	1
@@ -14376,7 +14376,7 @@ set_value	3
 not_remove	5509	
 end		
 		
-#°Å·èÇÑ ÀûÃ¶¼ö		
+#거룩한 적철수		
 section		
 npc	20477	
 item	6077	1
@@ -14419,7 +14419,7 @@ set_value	3
 not_remove	6079	
 end		
 		
-#°Å·èÇÑ Áø³ì¸Í¾Æ		
+#거룩한 진녹맹아		
 section		
 npc	20477	
 item	6087	1
@@ -14462,7 +14462,7 @@ set_value	3
 not_remove	6089	
 end		
 		
-#°Å·èÇÑ ÆĞ·æ¼ö		
+#거룩한 패룡수		
 section		
 npc	20477	
 item	6097	1
@@ -14505,7 +14505,7 @@ set_value	3
 not_remove	6099	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö¼ö		
+#거룩한 십이지수		
 section		
 npc	20477	
 item	6127	1
@@ -14548,7 +14548,7 @@ set_value	3
 not_remove	6129	
 end		
 		
-#°Å·èÇÑ Èæ·æ¼ö		
+#거룩한 흑룡수		
 section		
 npc	20477	
 item	6137	1
@@ -14675,7 +14675,7 @@ set_value	3
 not_remove	6145	
 end		
 		
-#°Å·èÇÑ ÁøÆĞ·æ¼ö		
+#거룩한 진패룡수		
 section		
 npc	20477	
 item	6507	1
@@ -14718,7 +14718,7 @@ set_value	3
 not_remove	6509	
 end		
 		
-#°Å·èÇÑ ÁøÁ¦¸¶¼±		
+#거룩한 진제마선		
 section		
 npc	20477	
 item	7197	1
@@ -14761,7 +14761,7 @@ set_value	3
 not_remove	7199	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö¼±		
+#거룩한 십이지선		
 section		
 npc	20477	
 item	7307	1
@@ -14804,7 +14804,7 @@ set_value	3
 not_remove	7309	
 end		
 		
-#°Å·èÇÑ Èæ·æ¸¶¼±		
+#거룩한 흑룡마선		
 section		
 npc	20477	
 item	7317	1
@@ -14931,7 +14931,7 @@ set_value	3
 not_remove	7325	
 end		
 		
-#°Å·èÇÑ ¹«¾ÆÁö¼±		
+#거룩한 무아지선		
 section		
 npc	20477	
 item	7377	1
@@ -14974,7 +14974,7 @@ set_value	3
 not_remove	7379	
 end		
 		
-#°Å·èÇÑ Áø¹«¾ÆÁö¼±		
+#거룩한 진무아지선		
 section		
 npc	20477	
 item	7507	1
@@ -15017,7 +15017,7 @@ set_value	3
 not_remove	7509	
 end		
 		
-#°Å·èÇÑ ¹ì·æµµ		
+#거룩한 뱀룡도		
 section		
 npc	20477	
 item	367	1
@@ -15144,7 +15144,7 @@ set_value	3
 not_remove	375	
 end		
 		
-#°Å·èÇÑ ¹ì·æ¸¶°Ë		
+#거룩한 뱀룡마검		
 section		
 npc	20477	
 item	387	1
@@ -15271,7 +15271,7 @@ set_value	3
 not_remove	395	
 end		
 		
-#°Å·èÇÑ ¹ì·æ´ë°Å		
+#거룩한 뱀룡대거		
 section		
 npc	20477	
 item	1217	1
@@ -15398,7 +15398,7 @@ set_value	3
 not_remove	1225	
 end		
 		
-#°Å·èÇÑ ¹ì·æ°¢±Ã		
+#거룩한 뱀룡각궁		
 section		
 npc	20477	
 item	2237	1
@@ -15525,7 +15525,7 @@ set_value	3
 not_remove	2245	
 end		
 		
-#°Å·èÇÑ ¹ì·æÁö°Ë		
+#거룩한 뱀룡지검		
 section		
 npc	20477	
 item	3257	1
@@ -15652,7 +15652,7 @@ set_value	3
 not_remove	3265	
 end		
 		
-#°Å·èÇÑ ¹ì·æ»ç·É		
+#거룩한 뱀룡사령		
 section		
 npc	20477	
 item	5207	1
@@ -15779,7 +15779,7 @@ set_value	3
 not_remove	5215	
 end		
 		
-#°Å·èÇÑ ¹ì·æ¼ö		
+#거룩한 뱀룡수		
 section		
 npc	20477	
 item	6157	1
@@ -15906,7 +15906,7 @@ set_value	3
 not_remove	6165	
 end		
 		
-#°Å·èÇÑ ¹ì·æ¸¶¼±		
+#거룩한 뱀룡마선		
 section		
 npc	20477	
 item	7337	1
@@ -16033,7 +16033,7 @@ set_value	3
 not_remove	7345	
 end		
 
-#¿µ·ÕÇÑ ¼­¸ğ°Ë		
+#영롱한 서모검		
 section		
 npc	20478	
 item	187	1
@@ -16076,7 +16076,7 @@ set_value	4
 not_remove	189	
 end		
 		
-#¿µ·ÕÇÑ »çÀÚ°Ë		
+#영롱한 사자검		
 section		
 npc	20478	
 item	197	1
@@ -16119,7 +16119,7 @@ set_value	4
 not_remove	199	
 end		
 		
-#¿µ·ÕÇÑ ÁøÅğ¸¶µµ		
+#영롱한 진퇴마도		
 section		
 npc	20478	
 item	207	1
@@ -16162,7 +16162,7 @@ set_value	4
 not_remove	209	
 end		
 		
-#¿µ·ÕÇÑ Áø¹«½Ö°Ë		
+#영롱한 진무쌍검		
 section		
 npc	20478	
 item	277	1
@@ -16205,7 +16205,7 @@ set_value	4
 not_remove	279	
 end		
 		
-#¿µ·ÕÇÑ Áø±Í¾Æ°Ë		
+#영롱한 진귀아검		
 section		
 npc	20478	
 item	287	1
@@ -16248,7 +16248,7 @@ set_value	4
 not_remove	289	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁöµµ		
+#영롱한 십이지도		
 section		
 npc	20478	
 item	307	1
@@ -16291,7 +16291,7 @@ set_value	4
 not_remove	309	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁöÄ®		
+#영롱한 십이지칼		
 section		
 npc	20478	
 item	317	1
@@ -16334,7 +16334,7 @@ set_value	4
 not_remove	319	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æµµ		
+#영롱한 흑룡도		
 section		
 npc	20478	
 item	327	1
@@ -16461,7 +16461,7 @@ set_value	4
 not_remove	335	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æ¸¶°Ë		
+#영롱한 흑룡마검		
 section		
 npc	20478	
 item	347	1
@@ -16587,7 +16587,7 @@ set_value	4
 not_remove	355	
 end		
 		
-#¿µ·ÕÇÑ ¿ë½ÅÁö°Ë		
+#영롱한 용신지검		
 section		
 npc	20478	
 item	467	1
@@ -16630,7 +16630,7 @@ set_value	4
 not_remove	469	
 end		
 		
-#¿µ·ÕÇÑ ÆÄ¸êÁö°Ë		
+#영롱한 파멸지검		
 section		
 npc	20478	
 item	477	1
@@ -16673,7 +16673,7 @@ set_value	4
 not_remove	479	
 end		
 		
-#¿µ·ÕÇÑ ÁøÆÄ¸êÁö°Ë		
+#영롱한 진파멸지검		
 section		
 npc	20478	
 item	507	1
@@ -16716,7 +16716,7 @@ set_value	4
 not_remove	509	
 end		
 		
-#¿µ·ÕÇÑ ¸¶ÀÎ°Ë		
+#영롱한 마인검		
 section		
 npc	20478	
 item	1137	1
@@ -16759,7 +16759,7 @@ set_value	4
 not_remove	1139	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö´Üµµ		
+#영롱한 십이지단도		
 section		
 npc	20478	
 item	1187	1
@@ -16802,7 +16802,7 @@ set_value	4
 not_remove	1189	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æ´ë°Å		
+#영롱한 흑룡대거		
 section		
 npc	20478	
 item	1197	1
@@ -16929,7 +16929,7 @@ set_value	4
 not_remove	1205	
 end		
 		
-#¿µ·ÕÇÑ ¿ÀÇàµµ		
+#영롱한 오행도		
 section		
 npc	20478	
 item	1347	1
@@ -16972,7 +16972,7 @@ set_value	4
 not_remove	1349	
 end		
 		
-#¿µ·ÕÇÑ Áø¿ÀÇàµµ		
+#영롱한 진오행도		
 section		
 npc	20478	
 item	1507	1
@@ -17015,7 +17015,7 @@ set_value	4
 not_remove	1509	
 end		
 		
-#¿µ·ÕÇÑ ÁøÈ²·æ´ë±Ã		
+#영롱한 진황룡대궁		
 section		
 npc	20478	
 item	2167	1
@@ -17058,7 +17058,7 @@ set_value	4
 not_remove	2169	
 end		
 		
-#¿µ·ÕÇÑ Ã¶ÆĞ½Å±Ã		
+#영롱한 철패신궁		
 section		
 npc	20478	
 item	2177	1
@@ -17101,7 +17101,7 @@ set_value	4
 not_remove	2179	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö±Ã		
+#영롱한 십이지궁		
 section		
 npc	20478	
 item	2207	1
@@ -17144,7 +17144,7 @@ set_value	4
 not_remove	2209	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æ°¢±Ã		
+#영롱한 흑룡각궁		
 section		
 npc	20478	
 item	2217	1
@@ -17271,7 +17271,7 @@ set_value	4
 not_remove	2225	
 end		
 		
-#¿µ·ÕÇÑ Ãµ·æÁö±Ã		
+#영롱한 천룡지궁		
 section		
 npc	20478	
 item	2377	1
@@ -17314,7 +17314,7 @@ set_value	4
 not_remove	2379	
 end		
 		
-#¿µ·ÕÇÑ ÁøÃµ·æÁö±Ã		
+#영롱한 진천룡지궁		
 section		
 npc	20478	
 item	2507	1
@@ -17357,7 +17357,7 @@ set_value	4
 not_remove	2509	
 end		
 		
-#¿µ·ÕÇÑ È¥¿ø°Ë		
+#영롱한 혼원검		
 section		
 npc	20478	
 item	3167	1
@@ -17400,7 +17400,7 @@ set_value	4
 not_remove	3169	
 end		
 		
-#¿µ·ÕÇÑ ÅÂ¾ç°Ë		
+#영롱한 태양검		
 section		
 npc	20478	
 item	3197	1
@@ -17443,7 +17443,7 @@ set_value	4
 not_remove	3199	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö±Ø		
+#영롱한 십이지극		
 section		
 npc	20478	
 item	3227	1
@@ -17486,7 +17486,7 @@ set_value	4
 not_remove	3229	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æÁö°Ë		
+#영롱한 흑룡지검		
 section		
 npc	20478	
 item	3237	1
@@ -17613,7 +17613,7 @@ set_value	4
 not_remove	3245	
 end		
 		
-#¿µ·ÕÇÑ ÁøÅÂ¾ç°Ë		
+#영롱한 진태양검		
 section		
 npc	20478	
 item	3507	1
@@ -17656,7 +17656,7 @@ set_value	4
 not_remove	3509	
 end		
 		
-#¿µ·ÕÇÑ Áø¿ë¸¶µµ		
+#영롱한 진용마도		
 section		
 npc	20478	
 item	4047	1
@@ -17699,7 +17699,7 @@ set_value	4
 not_remove	4049	
 end		
 		
-#¿µ·ÕÇÑ Ã»Á×·É		
+#영롱한 청죽령		
 section		
 npc	20478	
 item	5127	1
@@ -17742,7 +17742,7 @@ set_value	4
 not_remove	5129	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö·É		
+#영롱한 십이지령		
 section		
 npc	20478	
 item	5167	1
@@ -17785,7 +17785,7 @@ set_value	4
 not_remove	5169	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æ»ç·É		
+#영롱한 흑룡사령		
 section		
 npc	20478	
 item	5177	1
@@ -17912,7 +17912,7 @@ set_value	4
 not_remove	5185	
 end		
 		
-#¿µ·ÕÇÑ ÁøÁøÃµ·É		
+#영롱한 진진천령		
 section		
 npc	20478	
 item	5337	1
@@ -17955,7 +17955,7 @@ set_value	4
 not_remove	5339	
 end		
 		
-#¿µ·ÕÇÑ ¿ë½Å·É		
+#영롱한 용신령		
 section		
 npc	20478	
 item	5347	1
@@ -17998,7 +17998,7 @@ set_value	4
 not_remove	5349	
 end		
 		
-#¿µ·ÕÇÑ Áø¿ë½Å·É		
+#영롱한 진용신령		
 section		
 npc	20478	
 item	5507	1
@@ -18041,7 +18041,7 @@ set_value	4
 not_remove	5509	
 end		
 		
-#¿µ·ÕÇÑ ÀûÃ¶¼ö		
+#영롱한 적철수		
 section		
 npc	20478	
 item	6077	1
@@ -18084,7 +18084,7 @@ set_value	4
 not_remove	6079	
 end		
 		
-#¿µ·ÕÇÑ Áø³ì¸Í¾Æ		
+#영롱한 진녹맹아		
 section		
 npc	20478	
 item	6087	1
@@ -18127,7 +18127,7 @@ set_value	4
 not_remove	6089	
 end		
 		
-#¿µ·ÕÇÑ ÆĞ·æ¼ö		
+#영롱한 패룡수		
 section		
 npc	20478	
 item	6097	1
@@ -18170,7 +18170,7 @@ set_value	4
 not_remove	6099	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö¼ö		
+#영롱한 십이지수		
 section		
 npc	20478	
 item	6127	1
@@ -18213,7 +18213,7 @@ set_value	4
 not_remove	6129	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æ¼ö		
+#영롱한 흑룡수		
 section		
 npc	20478	
 item	6137	1
@@ -18340,7 +18340,7 @@ set_value	4
 not_remove	6145	
 end		
 		
-#¿µ·ÕÇÑ ÁøÆĞ·æ¼ö		
+#영롱한 진패룡수		
 section		
 npc	20478	
 item	6507	1
@@ -18383,7 +18383,7 @@ set_value	4
 not_remove	6509	
 end		
 		
-#¿µ·ÕÇÑ ÁøÁ¦¸¶¼±		
+#영롱한 진제마선		
 section		
 npc	20478	
 item	7197	1
@@ -18426,7 +18426,7 @@ set_value	4
 not_remove	7199	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö¼±		
+#영롱한 십이지선		
 section		
 npc	20478	
 item	7307	1
@@ -18469,7 +18469,7 @@ set_value	4
 not_remove	7309	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æ¸¶¼±		
+#영롱한 흑룡마선		
 section		
 npc	20478	
 item	7317	1
@@ -18596,7 +18596,7 @@ set_value	4
 not_remove	7325	
 end		
 		
-#¿µ·ÕÇÑ ¹«¾ÆÁö¼±		
+#영롱한 무아지선		
 section		
 npc	20478	
 item	7377	1
@@ -18639,7 +18639,7 @@ set_value	4
 not_remove	7379	
 end		
 		
-#¿µ·ÕÇÑ Áø¹«¾ÆÁö¼±		
+#영롱한 진무아지선		
 section		
 npc	20478	
 item	7507	1
@@ -18682,7 +18682,7 @@ set_value	4
 not_remove	7509	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æµµ		
+#영롱한 뱀룡도		
 section		
 npc	20478	
 item	367	1
@@ -18809,7 +18809,7 @@ set_value	4
 not_remove	375	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æ¸¶°Ë		
+#영롱한 뱀룡마검		
 section		
 npc	20478	
 item	387	1
@@ -18936,7 +18936,7 @@ set_value	4
 not_remove	395	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æ´ë°Å		
+#영롱한 뱀룡대거		
 section		
 npc	20478	
 item	1217	1
@@ -19063,7 +19063,7 @@ set_value	4
 not_remove	1225	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æ°¢±Ã		
+#영롱한 뱀룡각궁		
 section		
 npc	20478	
 item	2237	1
@@ -19190,7 +19190,7 @@ set_value	4
 not_remove	2245	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æÁö°Ë		
+#영롱한 뱀룡지검		
 section		
 npc	20478	
 item	3257	1
@@ -19317,7 +19317,7 @@ set_value	4
 not_remove	3265	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æ»ç·É		
+#영롱한 뱀룡사령		
 section		
 npc	20478	
 item	5207	1
@@ -19444,7 +19444,7 @@ set_value	4
 not_remove	5215	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æ¼ö		
+#영롱한 뱀룡수		
 section		
 npc	20478	
 item	6157	1
@@ -19571,7 +19571,7 @@ set_value	4
 not_remove	6165	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æ¸¶¼±		
+#영롱한 뱀룡마선		
 section		
 npc	20478	
 item	7337	1
@@ -19698,7 +19698,7 @@ set_value	4
 not_remove	7345	
 end		
 
-#Âù¶õÇÑ ¼­¸ğ°Ë		
+#찬란한 서모검		
 section		
 npc	20479	
 item	187	1
@@ -19744,7 +19744,7 @@ set_value	5
 not_remove	189	
 end		
 		
-#Âù¶õÇÑ »çÀÚ°Ë		
+#찬란한 사자검		
 section		
 npc	20479	
 item	197	1
@@ -19790,7 +19790,7 @@ set_value	5
 not_remove	199	
 end		
 		
-#Âù¶õÇÑ ÁøÅğ¸¶µµ		
+#찬란한 진퇴마도		
 section		
 npc	20479	
 item	207	1
@@ -19836,7 +19836,7 @@ set_value	5
 not_remove	209	
 end		
 		
-#Âù¶õÇÑ Áø¹«½Ö°Ë		
+#찬란한 진무쌍검		
 section		
 npc	20479	
 item	277	1
@@ -19882,7 +19882,7 @@ set_value	5
 not_remove	279	
 end		
 		
-#Âù¶õÇÑ Áø±Í¾Æ°Ë		
+#찬란한 진귀아검		
 section		
 npc	20479	
 item	287	1
@@ -19928,7 +19928,7 @@ set_value	5
 not_remove	289	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁöµµ		
+#찬란한 십이지도		
 section		
 npc	20479	
 item	307	1
@@ -19974,7 +19974,7 @@ set_value	5
 not_remove	309	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁöÄ®		
+#찬란한 십이지칼		
 section		
 npc	20479	
 item	317	1
@@ -20020,7 +20020,7 @@ set_value	5
 not_remove	319	
 end		
 		
-#Âù¶õÇÑ Èæ·æµµ		
+#찬란한 흑룡도		
 section		
 npc	20479	
 item	327	1
@@ -20156,7 +20156,7 @@ set_value	5
 not_remove	335	
 end		
 		
-#Âù¶õÇÑ Èæ·æ¸¶°Ë		
+#찬란한 흑룡마검		
 section		
 npc	20479	
 item	347	1
@@ -20292,7 +20292,7 @@ set_value	5
 not_remove	355	
 end		
 		
-#Âù¶õÇÑ ¿ë½ÅÁö°Ë		
+#찬란한 용신지검		
 section		
 npc	20479	
 item	467	1
@@ -20338,7 +20338,7 @@ set_value	5
 not_remove	469	
 end		
 		
-#Âù¶õÇÑ ÆÄ¸êÁö°Ë		
+#찬란한 파멸지검		
 section		
 npc	20479	
 item	477	1
@@ -20384,7 +20384,7 @@ set_value	5
 not_remove	479	
 end		
 		
-#Âù¶õÇÑ ÁøÆÄ¸êÁö°Ë		
+#찬란한 진파멸지검		
 section		
 npc	20479	
 item	507	1
@@ -20430,7 +20430,7 @@ set_value	5
 not_remove	509	
 end		
 		
-#Âù¶õÇÑ ¸¶ÀÎ°Ë		
+#찬란한 마인검		
 section		
 npc	20479	
 item	1137	1
@@ -20476,7 +20476,7 @@ set_value	5
 not_remove	1139	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö´Üµµ		
+#찬란한 십이지단도		
 section		
 npc	20479	
 item	1187	1
@@ -20522,7 +20522,7 @@ set_value	5
 not_remove	1189	
 end		
 		
-#Âù¶õÇÑ Èæ·æ´ë°Å		
+#찬란한 흑룡대거		
 section		
 npc	20479	
 item	1197	1
@@ -20658,7 +20658,7 @@ set_value	5
 not_remove	1205	
 end		
 		
-#Âù¶õÇÑ ¿ÀÇàµµ		
+#찬란한 오행도		
 section		
 npc	20479	
 item	1347	1
@@ -20704,7 +20704,7 @@ set_value	5
 not_remove	1349	
 end		
 		
-#Âù¶õÇÑ Áø¿ÀÇàµµ		
+#찬란한 진오행도		
 section		
 npc	20479	
 item	1507	1
@@ -20750,7 +20750,7 @@ set_value	5
 not_remove	1509	
 end		
 		
-#Âù¶õÇÑ ÁøÈ²·æ´ë±Ã		
+#찬란한 진황룡대궁		
 section		
 npc	20479	
 item	2167	1
@@ -20796,7 +20796,7 @@ set_value	5
 not_remove	2169	
 end		
 		
-#Âù¶õÇÑ Ã¶ÆĞ½Å±Ã		
+#찬란한 철패신궁		
 section		
 npc	20479	
 item	2177	1
@@ -20842,7 +20842,7 @@ set_value	5
 not_remove	2179	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö±Ã		
+#찬란한 십이지궁		
 section		
 npc	20479	
 item	2207	1
@@ -20888,7 +20888,7 @@ set_value	5
 not_remove	2209	
 end		
 		
-#Âù¶õÇÑ Èæ·æ°¢±Ã		
+#찬란한 흑룡각궁		
 section		
 npc	20479	
 item	2217	1
@@ -21024,7 +21024,7 @@ set_value	5
 not_remove	2225	
 end		
 		
-#Âù¶õÇÑ Ãµ·æÁö±Ã		
+#찬란한 천룡지궁		
 section		
 npc	20479	
 item	2377	1
@@ -21070,7 +21070,7 @@ set_value	5
 not_remove	2379	
 end		
 		
-#Âù¶õÇÑ ÁøÃµ·æÁö±Ã		
+#찬란한 진천룡지궁		
 section		
 npc	20479	
 item	2507	1
@@ -21116,7 +21116,7 @@ set_value	5
 not_remove	2509	
 end		
 		
-#Âù¶õÇÑ È¥¿ø°Ë		
+#찬란한 혼원검		
 section		
 npc	20479	
 item	3167	1
@@ -21162,7 +21162,7 @@ set_value	5
 not_remove	3169	
 end		
 		
-#Âù¶õÇÑ ÅÂ¾ç°Ë		
+#찬란한 태양검		
 section		
 npc	20479	
 item	3197	1
@@ -21208,7 +21208,7 @@ set_value	5
 not_remove	3199	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö±Ø		
+#찬란한 십이지극		
 section		
 npc	20479	
 item	3227	1
@@ -21254,7 +21254,7 @@ set_value	5
 not_remove	3229	
 end		
 		
-#Âù¶õÇÑ Èæ·æÁö°Ë		
+#찬란한 흑룡지검		
 section		
 npc	20479	
 item	3237	1
@@ -21390,7 +21390,7 @@ set_value	5
 not_remove	3245	
 end		
 		
-#Âù¶õÇÑ ÁøÅÂ¾ç°Ë		
+#찬란한 진태양검		
 section		
 npc	20479	
 item	3507	1
@@ -21436,7 +21436,7 @@ set_value	5
 not_remove	3509	
 end		
 		
-#Âù¶õÇÑ Áø¿ë¸¶µµ		
+#찬란한 진용마도		
 section		
 npc	20479	
 item	4047	1
@@ -21482,7 +21482,7 @@ set_value	5
 not_remove	4049	
 end		
 		
-#Âù¶õÇÑ Ã»Á×·É		
+#찬란한 청죽령		
 section		
 npc	20479	
 item	5127	1
@@ -21528,7 +21528,7 @@ set_value	5
 not_remove	5129	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö·É		
+#찬란한 십이지령		
 section		
 npc	20479	
 item	5167	1
@@ -21574,7 +21574,7 @@ set_value	5
 not_remove	5169	
 end		
 		
-#Âù¶õÇÑ Èæ·æ»ç·É		
+#찬란한 흑룡사령		
 section		
 npc	20479	
 item	5177	1
@@ -21710,7 +21710,7 @@ set_value	5
 not_remove	5185	
 end		
 		
-#Âù¶õÇÑ ÁøÁøÃµ·É		
+#찬란한 진진천령		
 section		
 npc	20479	
 item	5337	1
@@ -21756,7 +21756,7 @@ set_value	5
 not_remove	5339	
 end		
 		
-#Âù¶õÇÑ ¿ë½Å·É		
+#찬란한 용신령		
 section		
 npc	20479	
 item	5347	1
@@ -21802,7 +21802,7 @@ set_value	5
 not_remove	5349	
 end		
 		
-#Âù¶õÇÑ Áø¿ë½Å·É		
+#찬란한 진용신령		
 section		
 npc	20479	
 item	5507	1
@@ -21848,7 +21848,7 @@ set_value	5
 not_remove	5509	
 end		
 		
-#Âù¶õÇÑ ÀûÃ¶¼ö		
+#찬란한 적철수		
 section		
 npc	20479	
 item	6077	1
@@ -21894,7 +21894,7 @@ set_value	5
 not_remove	6079	
 end		
 		
-#Âù¶õÇÑ Áø³ì¸Í¾Æ		
+#찬란한 진녹맹아		
 section		
 npc	20479	
 item	6087	1
@@ -21940,7 +21940,7 @@ set_value	5
 not_remove	6089	
 end		
 		
-#Âù¶õÇÑ ÆĞ·æ¼ö		
+#찬란한 패룡수		
 section		
 npc	20479	
 item	6097	1
@@ -21986,7 +21986,7 @@ set_value	5
 not_remove	6099	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö¼ö		
+#찬란한 십이지수		
 section		
 npc	20479	
 item	6127	1
@@ -22032,7 +22032,7 @@ set_value	5
 not_remove	6129	
 end		
 		
-#Âù¶õÇÑ Èæ·æ¼ö		
+#찬란한 흑룡수		
 section		
 npc	20479	
 item	6137	1
@@ -22168,7 +22168,7 @@ set_value	5
 not_remove	6145	
 end		
 		
-#Âù¶õÇÑ ÁøÆĞ·æ¼ö		
+#찬란한 진패룡수		
 section		
 npc	20479	
 item	6507	1
@@ -22214,7 +22214,7 @@ set_value	5
 not_remove	6509	
 end		
 		
-#Âù¶õÇÑ ÁøÁ¦¸¶¼±		
+#찬란한 진제마선		
 section		
 npc	20479	
 item	7197	1
@@ -22260,7 +22260,7 @@ set_value	5
 not_remove	7199	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö¼±		
+#찬란한 십이지선		
 section		
 npc	20479	
 item	7307	1
@@ -22306,7 +22306,7 @@ set_value	5
 not_remove	7309	
 end		
 		
-#Âù¶õÇÑ Èæ·æ¸¶¼±		
+#찬란한 흑룡마선		
 section		
 npc	20479	
 item	7317	1
@@ -22442,7 +22442,7 @@ set_value	5
 not_remove	7325	
 end		
 		
-#Âù¶õÇÑ ¹«¾ÆÁö¼±		
+#찬란한 무아지선		
 section		
 npc	20479	
 item	7377	1
@@ -22488,7 +22488,7 @@ set_value	5
 not_remove	7379	
 end		
 		
-#Âù¶õÇÑ Áø¹«¾ÆÁö¼±		
+#찬란한 진무아지선		
 section		
 npc	20479	
 item	7507	1
@@ -22534,7 +22534,7 @@ set_value	5
 not_remove	7509	
 end		
 		
-#Âù¶õÇÑ ¹ì·æµµ		
+#찬란한 뱀룡도		
 section		
 npc	20479	
 item	367	1
@@ -22670,7 +22670,7 @@ set_value	5
 not_remove	375	
 end		
 		
-#Âù¶õÇÑ ¹ì·æ¸¶°Ë		
+#찬란한 뱀룡마검		
 section		
 npc	20479	
 item	387	1
@@ -22806,7 +22806,7 @@ set_value	5
 not_remove	395	
 end		
 		
-#Âù¶õÇÑ ¹ì·æ´ë°Å		
+#찬란한 뱀룡대거		
 section		
 npc	20479	
 item	1217	1
@@ -22942,7 +22942,7 @@ set_value	5
 not_remove	1225	
 end		
 		
-#Âù¶õÇÑ ¹ì·æ°¢±Ã		
+#찬란한 뱀룡각궁		
 section		
 npc	20479	
 item	2237	1
@@ -23078,7 +23078,7 @@ set_value	5
 not_remove	2245	
 end		
 		
-#Âù¶õÇÑ ¹ì·æÁö°Ë		
+#찬란한 뱀룡지검		
 section		
 npc	20479	
 item	3257	1
@@ -23214,7 +23214,7 @@ set_value	5
 not_remove	3265	
 end		
 		
-#Âù¶õÇÑ ¹ì·æ»ç·É		
+#찬란한 뱀룡사령		
 section		
 npc	20479	
 item	5207	1
@@ -23350,7 +23350,7 @@ set_value	5
 not_remove	5215	
 end		
 		
-#Âù¶õÇÑ ¹ì·æ¼ö		
+#찬란한 뱀룡수		
 section		
 npc	20479	
 item	6157	1
@@ -23486,7 +23486,7 @@ set_value	5
 not_remove	6165	
 end		
 		
-#Âù¶õÇÑ ¹ì·æ¸¶¼±		
+#찬란한 뱀룡마선		
 section		
 npc	20479	
 item	7337	1
@@ -23622,7 +23622,7 @@ set_value	5
 not_remove	7345	
 end		
 
-#°í±ÍÇÑ ÁøÃ»°©
+#고귀한 진청갑
 section
 npc	20475
 item	12017	1
@@ -23665,7 +23665,7 @@ set_value	1
 not_remove	12019
 end
 
-#°í±ÍÇÑ ÁøÃµ
+#고귀한 진천
 section
 npc	20475
 item	12027	1
@@ -23708,7 +23708,7 @@ set_value	1
 not_remove	12029
 end
 
-#°í±ÍÇÑ Áø¸¶°©
+#고귀한 진마갑
 section
 npc	20475
 item	12037	1
@@ -23751,7 +23751,7 @@ set_value	1
 not_remove	12039
 end
 
-#°í±ÍÇÑ Áø·æÀÇ
+#고귀한 진룡의
 section
 npc	20475
 item	12047	1
@@ -23794,7 +23794,7 @@ set_value	1
 not_remove	12049
 end
 
-#°í±ÍÇÑ ½Åºñ°©
+#고귀한 신비갑
 section
 npc	20475
 item	12057	1
@@ -23837,7 +23837,7 @@ set_value	1
 not_remove	12059
 end
 
-#°í±ÍÇÑ ½ÅÇ³
+#고귀한 신풍
 section
 npc	20475
 item	12067	1
@@ -23880,7 +23880,7 @@ set_value	1
 not_remove	12069
 end
 
-#°í±ÍÇÑ ½Å³ú°©
+#고귀한 신뇌갑
 section
 npc	20475
 item	12077	1
@@ -23923,7 +23923,7 @@ set_value	1
 not_remove	12079
 end
 
-#°í±ÍÇÑ ½Å¼ºÀÇ
+#고귀한 신성의
 section
 npc	20475
 item	12087	1
@@ -23966,7 +23966,7 @@ set_value	1
 not_remove	12089
 end
 
-#°í±ÍÇÑ ½Å¿î°©
+#고귀한 신운갑
 section
 npc	20475
 item	12097	1
@@ -24009,7 +24009,7 @@ set_value	1
 not_remove	12099
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁöÈ£°©
+#고귀한 십이지호갑
 section
 npc	20475
 item	19297	1
@@ -24052,7 +24052,7 @@ set_value	1
 not_remove	19299
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö°Ç
+#고귀한 십이지건
 section
 npc	20475
 item	19497	1
@@ -24095,7 +24095,7 @@ set_value	1
 not_remove	19499
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö¸¶°©
+#고귀한 십이지마갑
 section
 npc	20475
 item	19697	1
@@ -24138,7 +24138,7 @@ set_value	1
 not_remove	19699
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁö»óÀÇ
+#고귀한 십이지상의
 section
 npc	20475
 item	19897	1
@@ -24181,7 +24181,7 @@ set_value	1
 not_remove	19899
 end
 
-#°í±ÍÇÑ ÅÂÀ»°©
+#고귀한 태을갑
 section
 npc	20475
 item	20007	1
@@ -24224,7 +24224,7 @@ set_value	1
 not_remove	20009
 end
 
-#°í±ÍÇÑ ¿µº¸
+#고귀한 영보
 section
 npc	20475
 item	20257	1
@@ -24267,7 +24267,7 @@ set_value	1
 not_remove	20259
 end
 
-#°í±ÍÇÑ ÇöÃµ°©
+#고귀한 현천갑
 section
 npc	20475
 item	20507	1
@@ -24310,7 +24310,7 @@ set_value	1
 not_remove	20509
 end
 
-#°í±ÍÇÑ »ï°üÀÇ
+#고귀한 삼관의
 section
 npc	20475
 item	20757	1
@@ -24353,7 +24353,7 @@ set_value	1
 not_remove	20759
 end
 
-#°í±ÍÇÑ Ã»È£°©
+#고귀한 청호갑
 section
 npc	20475
 item	20767	1
@@ -24396,7 +24396,7 @@ set_value	1
 not_remove	20769
 end
 
-#°í±ÍÇÑ Ã»°Ç
+#고귀한 청건
 section
 npc	20475
 item	20777	1
@@ -24439,7 +24439,7 @@ set_value	1
 not_remove	20779
 end
 
-#°í±ÍÇÑ Ã»¸¶°©
+#고귀한 청마갑
 section
 npc	20475
 item	20787	1
@@ -24482,7 +24482,7 @@ set_value	1
 not_remove	20789
 end
 
-#°í±ÍÇÑ Ã»»óÀÇ
+#고귀한 청상의
 section
 npc	20475
 item	20797	1
@@ -24525,7 +24525,7 @@ set_value	1
 not_remove	20799
 end
 
-#°í±ÍÇÑ Ã»ÇØ°©
+#고귀한 청해갑
 section
 npc	20475
 item	20807	1
@@ -24568,7 +24568,7 @@ set_value	1
 not_remove	20809
 end
 
-#°í±ÍÇÑ Àû·æ°©
+#고귀한 적룡갑
 section
 npc	20475
 item	20817	1
@@ -24611,7 +24611,7 @@ set_value	1
 not_remove	20819
 end
 
-#°í±ÍÇÑ ÀûÇö
+#고귀한 적현
 section
 npc	20475
 item	20827	1
@@ -24654,7 +24654,7 @@ set_value	1
 not_remove	20829
 end
 
-#°í±ÍÇÑ Àû»ó°©
+#고귀한 적상갑
 section
 npc	20475
 item	20837	1
@@ -24697,7 +24697,7 @@ set_value	1
 not_remove	20839
 end
 
-#°í±ÍÇÑ Àû¼±ÀÇ
+#고귀한 적선의
 section
 npc	20475
 item	20847	1
@@ -24740,7 +24740,7 @@ set_value	1
 not_remove	20849
 end
 
-#°í±ÍÇÑ ÀûÃµ°©
+#고귀한 적천갑
 section
 npc	20475
 item	20857	1
@@ -24783,7 +24783,7 @@ set_value	1
 not_remove	20859
 end
 
-#°í±ÍÇÑ ¹éÈ£°©
+#고귀한 백호갑
 section
 npc	20475
 item	20867	1
@@ -24826,7 +24826,7 @@ set_value	1
 not_remove	20869
 end
 
-#°í±ÍÇÑ ¹é°Ç
+#고귀한 백건
 section
 npc	20475
 item	20877	1
@@ -24869,7 +24869,7 @@ set_value	1
 not_remove	20879
 end
 
-#°í±ÍÇÑ ¹é¸¶°©
+#고귀한 백마갑
 section
 npc	20475
 item	20887	1
@@ -24912,7 +24912,7 @@ set_value	1
 not_remove	20889
 end
 
-#°í±ÍÇÑ ¹é»óÀÇ
+#고귀한 백상의
 section
 npc	20475
 item	20897	1
@@ -24955,7 +24955,7 @@ set_value	1
 not_remove	20899
 end
 
-#°í±ÍÇÑ ¹éÇö°©
+#고귀한 백현갑
 section
 npc	20475
 item	20907	1
@@ -24998,7 +24998,7 @@ set_value	1
 not_remove	20909
 end
 
-#°í±ÍÇÑ Èæ·æ°©
+#고귀한 흑룡갑
 section
 npc	20475
 item	20917	1
@@ -25041,7 +25041,7 @@ set_value	1
 not_remove	20919
 end
 
-#°í±ÍÇÑ ÈæÇö
+#고귀한 흑현
 section
 npc	20475
 item	20927	1
@@ -25084,7 +25084,7 @@ set_value	1
 not_remove	20929
 end
 
-#°í±ÍÇÑ Èæ»ó°©
+#고귀한 흑상갑
 section
 npc	20475
 item	20937	1
@@ -25127,7 +25127,7 @@ set_value	1
 not_remove	20939
 end
 
-#°í±ÍÇÑ Èæ¼±
+#고귀한 흑선
 section
 npc	20475
 item	20947	1
@@ -25170,7 +25170,7 @@ set_value	1
 not_remove	20949
 end
 
-#°í±ÍÇÑ ÈæÃµ°©
+#고귀한 흑천갑
 section
 npc	20475
 item	20957	1
@@ -25213,7 +25213,7 @@ set_value	1
 not_remove	20959
 end
 
-#°í±ÍÇÑ Áø³ì°©
+#고귀한 진녹갑
 section
 npc	20475
 item	21087	1
@@ -25256,7 +25256,7 @@ set_value	1
 not_remove	21089
 end
 
-#°í±ÍÇÑ À§Ãµ°©
+#고귀한 위천갑
 section
 npc	20475
 item	21097	1
@@ -25299,7 +25299,7 @@ set_value	1
 not_remove	21099
 end
 
-#°í±ÍÇÑ ½ÊÀÌÁöÇØ°©
+#고귀한 십이지해갑
 section
 npc	20475
 item	21207	1
@@ -25342,7 +25342,7 @@ set_value	1
 not_remove	21209
 end
 
-#°í±ÍÇÑ Èæ·æÆ÷
+#고귀한 흑룡포
 section
 npc	20475
 item	21217	1
@@ -25469,7 +25469,7 @@ set_value	1
 not_remove	21225
 end
 
-#°í±ÍÇÑ Ç³·æÆ÷
+#고귀한 풍룡포
 section
 npc	20475
 item	21237	1
@@ -25596,7 +25596,7 @@ set_value	1
 not_remove	21245
 end
 
-#°í±ÍÇÑ ¸¶·æÆ÷
+#고귀한 마룡포
 section
 npc	20475
 item	21257	1
@@ -25723,7 +25723,7 @@ set_value	1
 not_remove	21265
 end
 
-#°í±ÍÇÑ ½Å·æÆ÷
+#고귀한 신룡포
 section
 npc	20475
 item	21277	1
@@ -25850,7 +25850,7 @@ set_value	1
 not_remove	21285
 end
 
-#°í±ÍÇÑ Ãµ·æÆ÷
+#고귀한 천룡포
 section
 npc	20475
 item	21297	1
@@ -25977,7 +25977,7 @@ set_value	1
 not_remove	21305
 end
 
-#°í±ÍÇÑ ¹ì·æÆ÷
+#고귀한 뱀룡포
 section
 npc	20475
 item	21317	1
@@ -26104,7 +26104,7 @@ set_value	1
 not_remove	21325
 end
 
-#°í±ÍÇÑ ¹ì´ÜÆ÷
+#고귀한 뱀단포
 section
 npc	20475
 item	21337	1
@@ -26231,7 +26231,7 @@ set_value	1
 not_remove	21345
 end
 
-#°í±ÍÇÑ ¹ì¸¶·æÆ÷
+#고귀한 뱀마룡포
 section
 npc	20475
 item	21357	1
@@ -26358,7 +26358,7 @@ set_value	1
 not_remove	21365
 end
 
-#°í±ÍÇÑ ¹ì½Å·æÆ÷
+#고귀한 뱀신룡포
 section
 npc	20475
 item	21377	1
@@ -26485,7 +26485,7 @@ set_value	1
 not_remove	21385
 end
 
-#°í±ÍÇÑ ¹ìÃµ·æÆ÷
+#고귀한 뱀천룡포
 section
 npc	20475
 item	21397	1
@@ -26612,7 +26612,7 @@ set_value	1
 not_remove	21405
 end
 
-#¼ş°íÇÑ ÁøÃ»°©		
+#숭고한 진청갑		
 section		
 npc	20476	
 item	12017	1
@@ -26655,7 +26655,7 @@ set_value	2
 not_remove	12019	
 end		
 		
-#¼ş°íÇÑ ÁøÃµ		
+#숭고한 진천		
 section		
 npc	20476	
 item	12027	1
@@ -26698,7 +26698,7 @@ set_value	2
 not_remove	12029	
 end		
 		
-#¼ş°íÇÑ Áø¸¶°©		
+#숭고한 진마갑		
 section		
 npc	20476	
 item	12037	1
@@ -26741,7 +26741,7 @@ set_value	2
 not_remove	12039	
 end		
 		
-#¼ş°íÇÑ Áø·æÀÇ		
+#숭고한 진룡의		
 section		
 npc	20476	
 item	12047	1
@@ -26784,7 +26784,7 @@ set_value	2
 not_remove	12049	
 end		
 		
-#¼ş°íÇÑ ½Åºñ°©		
+#숭고한 신비갑		
 section		
 npc	20476	
 item	12057	1
@@ -26827,7 +26827,7 @@ set_value	2
 not_remove	12059	
 end		
 		
-#¼ş°íÇÑ ½ÅÇ³		
+#숭고한 신풍		
 section		
 npc	20476	
 item	12067	1
@@ -26870,7 +26870,7 @@ set_value	2
 not_remove	12069	
 end		
 		
-#¼ş°íÇÑ ½Å³ú°©		
+#숭고한 신뇌갑		
 section		
 npc	20476	
 item	12077	1
@@ -26913,7 +26913,7 @@ set_value	2
 not_remove	12079	
 end		
 		
-#¼ş°íÇÑ ½Å¼ºÀÇ		
+#숭고한 신성의		
 section		
 npc	20476	
 item	12087	1
@@ -26956,7 +26956,7 @@ set_value	2
 not_remove	12089	
 end		
 		
-#¼ş°íÇÑ ½Å¿î°©		
+#숭고한 신운갑		
 section		
 npc	20476	
 item	12097	1
@@ -26999,7 +26999,7 @@ set_value	2
 not_remove	12099	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁöÈ£°©		
+#숭고한 십이지호갑		
 section		
 npc	20476	
 item	19297	1
@@ -27042,7 +27042,7 @@ set_value	2
 not_remove	19299	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö°Ç		
+#숭고한 십이지건		
 section		
 npc	20476	
 item	19497	1
@@ -27085,7 +27085,7 @@ set_value	2
 not_remove	19499	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö¸¶°©		
+#숭고한 십이지마갑		
 section		
 npc	20476	
 item	19697	1
@@ -27128,7 +27128,7 @@ set_value	2
 not_remove	19699	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁö»óÀÇ		
+#숭고한 십이지상의		
 section		
 npc	20476	
 item	19897	1
@@ -27171,7 +27171,7 @@ set_value	2
 not_remove	19899	
 end		
 		
-#¼ş°íÇÑ ÅÂÀ»°©		
+#숭고한 태을갑		
 section		
 npc	20476	
 item	20007	1
@@ -27214,7 +27214,7 @@ set_value	2
 not_remove	20009	
 end		
 		
-#¼ş°íÇÑ ¿µº¸		
+#숭고한 영보		
 section		
 npc	20476	
 item	20257	1
@@ -27257,7 +27257,7 @@ set_value	2
 not_remove	20259	
 end		
 		
-#¼ş°íÇÑ ÇöÃµ°©		
+#숭고한 현천갑		
 section		
 npc	20476	
 item	20507	1
@@ -27300,7 +27300,7 @@ set_value	2
 not_remove	20509	
 end		
 		
-#¼ş°íÇÑ »ï°üÀÇ		
+#숭고한 삼관의		
 section		
 npc	20476	
 item	20757	1
@@ -27343,7 +27343,7 @@ set_value	2
 not_remove	20759	
 end		
 		
-#¼ş°íÇÑ Ã»È£°©		
+#숭고한 청호갑		
 section		
 npc	20476	
 item	20767	1
@@ -27386,7 +27386,7 @@ set_value	2
 not_remove	20769	
 end		
 		
-#¼ş°íÇÑ Ã»°Ç		
+#숭고한 청건		
 section		
 npc	20476	
 item	20777	1
@@ -27429,7 +27429,7 @@ set_value	2
 not_remove	20779	
 end		
 		
-#¼ş°íÇÑ Ã»¸¶°©		
+#숭고한 청마갑		
 section		
 npc	20476	
 item	20787	1
@@ -27472,7 +27472,7 @@ set_value	2
 not_remove	20789	
 end		
 		
-#¼ş°íÇÑ Ã»»óÀÇ		
+#숭고한 청상의		
 section		
 npc	20476	
 item	20797	1
@@ -27515,7 +27515,7 @@ set_value	2
 not_remove	20799	
 end		
 		
-#¼ş°íÇÑ Ã»ÇØ°©		
+#숭고한 청해갑		
 section		
 npc	20476	
 item	20807	1
@@ -27558,7 +27558,7 @@ set_value	2
 not_remove	20809	
 end		
 		
-#¼ş°íÇÑ Àû·æ°©		
+#숭고한 적룡갑		
 section		
 npc	20476	
 item	20817	1
@@ -27601,7 +27601,7 @@ set_value	2
 not_remove	20819	
 end		
 		
-#¼ş°íÇÑ ÀûÇö		
+#숭고한 적현		
 section		
 npc	20476	
 item	20827	1
@@ -27644,7 +27644,7 @@ set_value	2
 not_remove	20829	
 end		
 		
-#¼ş°íÇÑ Àû»ó°©		
+#숭고한 적상갑		
 section		
 npc	20476	
 item	20837	1
@@ -27687,7 +27687,7 @@ set_value	2
 not_remove	20839	
 end		
 		
-#¼ş°íÇÑ Àû¼±ÀÇ		
+#숭고한 적선의		
 section		
 npc	20476	
 item	20847	1
@@ -27730,7 +27730,7 @@ set_value	2
 not_remove	20849	
 end		
 		
-#¼ş°íÇÑ ÀûÃµ°©		
+#숭고한 적천갑		
 section		
 npc	20476	
 item	20857	1
@@ -27773,7 +27773,7 @@ set_value	2
 not_remove	20859	
 end		
 		
-#¼ş°íÇÑ ¹éÈ£°©		
+#숭고한 백호갑		
 section		
 npc	20476	
 item	20867	1
@@ -27816,7 +27816,7 @@ set_value	2
 not_remove	20869	
 end		
 		
-#¼ş°íÇÑ ¹é°Ç		
+#숭고한 백건		
 section		
 npc	20476	
 item	20877	1
@@ -27859,7 +27859,7 @@ set_value	2
 not_remove	20879	
 end		
 		
-#¼ş°íÇÑ ¹é¸¶°©		
+#숭고한 백마갑		
 section		
 npc	20476	
 item	20887	1
@@ -27902,7 +27902,7 @@ set_value	2
 not_remove	20889	
 end		
 		
-#¼ş°íÇÑ ¹é»óÀÇ		
+#숭고한 백상의		
 section		
 npc	20476	
 item	20897	1
@@ -27945,7 +27945,7 @@ set_value	2
 not_remove	20899	
 end		
 		
-#¼ş°íÇÑ ¹éÇö°©		
+#숭고한 백현갑		
 section		
 npc	20476	
 item	20907	1
@@ -27988,7 +27988,7 @@ set_value	2
 not_remove	20909	
 end		
 		
-#¼ş°íÇÑ Èæ·æ°©		
+#숭고한 흑룡갑		
 section		
 npc	20476	
 item	20917	1
@@ -28031,7 +28031,7 @@ set_value	2
 not_remove	20919	
 end		
 		
-#¼ş°íÇÑ ÈæÇö		
+#숭고한 흑현		
 section		
 npc	20476	
 item	20927	1
@@ -28074,7 +28074,7 @@ set_value	2
 not_remove	20929	
 end		
 		
-#¼ş°íÇÑ Èæ»ó°©		
+#숭고한 흑상갑		
 section		
 npc	20476	
 item	20937	1
@@ -28117,7 +28117,7 @@ set_value	2
 not_remove	20939	
 end		
 		
-#¼ş°íÇÑ Èæ¼±		
+#숭고한 흑선		
 section		
 npc	20476	
 item	20947	1
@@ -28160,7 +28160,7 @@ set_value	2
 not_remove	20949	
 end		
 		
-#¼ş°íÇÑ ÈæÃµ°©		
+#숭고한 흑천갑		
 section		
 npc	20476	
 item	20957	1
@@ -28203,7 +28203,7 @@ set_value	2
 not_remove	20959	
 end		
 		
-#¼ş°íÇÑ Áø³ì°©		
+#숭고한 진녹갑		
 section		
 npc	20476	
 item	21087	1
@@ -28246,7 +28246,7 @@ set_value	2
 not_remove	21089	
 end		
 		
-#¼ş°íÇÑ À§Ãµ°©		
+#숭고한 위천갑		
 section		
 npc	20476	
 item	21097	1
@@ -28289,7 +28289,7 @@ set_value	2
 not_remove	21099	
 end		
 		
-#¼ş°íÇÑ ½ÊÀÌÁöÇØ°©		
+#숭고한 십이지해갑		
 section		
 npc	20476	
 item	21207	1
@@ -28332,7 +28332,7 @@ set_value	2
 not_remove	21209	
 end		
 		
-#¼ş°íÇÑ Èæ·æÆ÷		
+#숭고한 흑룡포		
 section		
 npc	20476	
 item	21217	1
@@ -28459,7 +28459,7 @@ set_value	2
 not_remove	21225	
 end		
 		
-#¼ş°íÇÑ Ç³·æÆ÷		
+#숭고한 풍룡포		
 section		
 npc	20476	
 item	21237	1
@@ -28586,7 +28586,7 @@ set_value	2
 not_remove	21245	
 end		
 		
-#¼ş°íÇÑ ¸¶·æÆ÷		
+#숭고한 마룡포		
 section		
 npc	20476	
 item	21257	1
@@ -28713,7 +28713,7 @@ set_value	2
 not_remove	21265	
 end		
 		
-#¼ş°íÇÑ ½Å·æÆ÷		
+#숭고한 신룡포		
 section		
 npc	20476	
 item	21277	1
@@ -28840,7 +28840,7 @@ set_value	2
 not_remove	21285	
 end		
 		
-#¼ş°íÇÑ Ãµ·æÆ÷		
+#숭고한 천룡포		
 section		
 npc	20476	
 item	21297	1
@@ -28967,7 +28967,7 @@ set_value	2
 not_remove	21305	
 end		
 		
-#¼ş°íÇÑ ¹ì·æÆ÷		
+#숭고한 뱀룡포		
 section		
 npc	20476	
 item	21317	1
@@ -29094,7 +29094,7 @@ set_value	2
 not_remove	21325	
 end		
 		
-#¼ş°íÇÑ ¹ì´ÜÆ÷		
+#숭고한 뱀단포		
 section		
 npc	20476	
 item	21337	1
@@ -29221,7 +29221,7 @@ set_value	2
 not_remove	21345	
 end		
 		
-#¼ş°íÇÑ ¸¶·æÆ÷		
+#숭고한 마룡포		
 section		
 npc	20476	
 item	21357	1
@@ -29348,7 +29348,7 @@ set_value	2
 not_remove	21365	
 end		
 		
-#¼ş°íÇÑ ¹ì½Å·æÆ÷		
+#숭고한 뱀신룡포		
 section		
 npc	20476	
 item	21377	1
@@ -29475,7 +29475,7 @@ set_value	2
 not_remove	21385	
 end		
 		
-#¼ş°íÇÑ ¹ìÃµ·æÆ÷		
+#숭고한 뱀천룡포		
 section		
 npc	20476	
 item	21397	1
@@ -29602,7 +29602,7 @@ set_value	2
 not_remove	21405	
 end		
 
-#°Å·èÇÑ ÁøÃ»°©		
+#거룩한 진청갑		
 section		
 npc	20477	
 item	12017	1
@@ -29645,7 +29645,7 @@ set_value	3
 not_remove	12019	
 end		
 		
-#°Å·èÇÑ ÁøÃµ		
+#거룩한 진천		
 section		
 npc	20477	
 item	12027	1
@@ -29688,7 +29688,7 @@ set_value	3
 not_remove	12029	
 end		
 		
-#°Å·èÇÑ Áø¸¶°©		
+#거룩한 진마갑		
 section		
 npc	20477	
 item	12037	1
@@ -29731,7 +29731,7 @@ set_value	3
 not_remove	12039	
 end		
 		
-#°Å·èÇÑ Áø·æÀÇ		
+#거룩한 진룡의		
 section		
 npc	20477	
 item	12047	1
@@ -29774,7 +29774,7 @@ set_value	3
 not_remove	12049	
 end		
 		
-#°Å·èÇÑ ½Åºñ°©		
+#거룩한 신비갑		
 section		
 npc	20477	
 item	12057	1
@@ -29817,7 +29817,7 @@ set_value	3
 not_remove	12059	
 end		
 		
-#°Å·èÇÑ ½ÅÇ³		
+#거룩한 신풍		
 section		
 npc	20477	
 item	12067	1
@@ -29860,7 +29860,7 @@ set_value	3
 not_remove	12069	
 end		
 		
-#°Å·èÇÑ ½Å³ú°©		
+#거룩한 신뇌갑		
 section		
 npc	20477	
 item	12077	1
@@ -29903,7 +29903,7 @@ set_value	3
 not_remove	12079	
 end		
 		
-#°Å·èÇÑ ½Å¼ºÀÇ		
+#거룩한 신성의		
 section		
 npc	20477	
 item	12087	1
@@ -29946,7 +29946,7 @@ set_value	3
 not_remove	12089	
 end		
 		
-#°Å·èÇÑ ½Å¿î°©		
+#거룩한 신운갑		
 section		
 npc	20477	
 item	12097	1
@@ -29989,7 +29989,7 @@ set_value	3
 not_remove	12099	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁöÈ£°©		
+#거룩한 십이지호갑		
 section		
 npc	20477	
 item	19297	1
@@ -30032,7 +30032,7 @@ set_value	3
 not_remove	19299	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö°Ç		
+#거룩한 십이지건		
 section		
 npc	20477	
 item	19497	1
@@ -30075,7 +30075,7 @@ set_value	3
 not_remove	19499	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö¸¶°©		
+#거룩한 십이지마갑		
 section		
 npc	20477	
 item	19697	1
@@ -30118,7 +30118,7 @@ set_value	3
 not_remove	19699	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁö»óÀÇ		
+#거룩한 십이지상의		
 section		
 npc	20477	
 item	19897	1
@@ -30161,7 +30161,7 @@ set_value	3
 not_remove	19899	
 end		
 		
-#°Å·èÇÑ ÅÂÀ»°©		
+#거룩한 태을갑		
 section		
 npc	20477	
 item	20007	1
@@ -30204,7 +30204,7 @@ set_value	3
 not_remove	20009	
 end		
 		
-#°Å·èÇÑ ¿µº¸		
+#거룩한 영보		
 section		
 npc	20477	
 item	20257	1
@@ -30247,7 +30247,7 @@ set_value	3
 not_remove	20259	
 end		
 		
-#°Å·èÇÑ ÇöÃµ°©		
+#거룩한 현천갑		
 section		
 npc	20477	
 item	20507	1
@@ -30290,7 +30290,7 @@ set_value	3
 not_remove	20509	
 end		
 		
-#°Å·èÇÑ »ï°üÀÇ		
+#거룩한 삼관의		
 section		
 npc	20477	
 item	20757	1
@@ -30333,7 +30333,7 @@ set_value	3
 not_remove	20759	
 end		
 		
-#°Å·èÇÑ Ã»È£°©		
+#거룩한 청호갑		
 section		
 npc	20477	
 item	20767	1
@@ -30376,7 +30376,7 @@ set_value	3
 not_remove	20769	
 end		
 		
-#°Å·èÇÑ Ã»°Ç		
+#거룩한 청건		
 section		
 npc	20477	
 item	20777	1
@@ -30419,7 +30419,7 @@ set_value	3
 not_remove	20779	
 end		
 		
-#°Å·èÇÑ Ã»¸¶°©		
+#거룩한 청마갑		
 section		
 npc	20477	
 item	20787	1
@@ -30462,7 +30462,7 @@ set_value	3
 not_remove	20789	
 end		
 		
-#°Å·èÇÑ Ã»»óÀÇ		
+#거룩한 청상의		
 section		
 npc	20477	
 item	20797	1
@@ -30505,7 +30505,7 @@ set_value	3
 not_remove	20799	
 end		
 		
-#°Å·èÇÑ Ã»ÇØ°©		
+#거룩한 청해갑		
 section		
 npc	20477	
 item	20807	1
@@ -30548,7 +30548,7 @@ set_value	3
 not_remove	20809	
 end		
 		
-#°Å·èÇÑ Àû·æ°©		
+#거룩한 적룡갑		
 section		
 npc	20477	
 item	20817	1
@@ -30591,7 +30591,7 @@ set_value	3
 not_remove	20819	
 end		
 		
-#°Å·èÇÑ ÀûÇö		
+#거룩한 적현		
 section		
 npc	20477	
 item	20827	1
@@ -30634,7 +30634,7 @@ set_value	3
 not_remove	20829	
 end		
 		
-#°Å·èÇÑ Àû»ó°©		
+#거룩한 적상갑		
 section		
 npc	20477	
 item	20837	1
@@ -30677,7 +30677,7 @@ set_value	3
 not_remove	20839	
 end		
 		
-#°Å·èÇÑ Àû¼±ÀÇ		
+#거룩한 적선의		
 section		
 npc	20477	
 item	20847	1
@@ -30720,7 +30720,7 @@ set_value	3
 not_remove	20849	
 end		
 		
-#°Å·èÇÑ ÀûÃµ°©		
+#거룩한 적천갑		
 section		
 npc	20477	
 item	20857	1
@@ -30763,7 +30763,7 @@ set_value	3
 not_remove	20859	
 end		
 		
-#°Å·èÇÑ ¹éÈ£°©		
+#거룩한 백호갑		
 section		
 npc	20477	
 item	20867	1
@@ -30806,7 +30806,7 @@ set_value	3
 not_remove	20869	
 end		
 		
-#°Å·èÇÑ ¹é°Ç		
+#거룩한 백건		
 section		
 npc	20477	
 item	20877	1
@@ -30849,7 +30849,7 @@ set_value	3
 not_remove	20879	
 end		
 		
-#°Å·èÇÑ ¹é¸¶°©		
+#거룩한 백마갑		
 section		
 npc	20477	
 item	20887	1
@@ -30892,7 +30892,7 @@ set_value	3
 not_remove	20889	
 end		
 		
-#°Å·èÇÑ ¹é»óÀÇ		
+#거룩한 백상의		
 section		
 npc	20477	
 item	20897	1
@@ -30935,7 +30935,7 @@ set_value	3
 not_remove	20899	
 end		
 		
-#°Å·èÇÑ ¹éÇö°©		
+#거룩한 백현갑		
 section		
 npc	20477	
 item	20907	1
@@ -30978,7 +30978,7 @@ set_value	3
 not_remove	20909	
 end		
 		
-#°Å·èÇÑ Èæ·æ°©		
+#거룩한 흑룡갑		
 section		
 npc	20477	
 item	20917	1
@@ -31021,7 +31021,7 @@ set_value	3
 not_remove	20919	
 end		
 		
-#°Å·èÇÑ ÈæÇö		
+#거룩한 흑현		
 section		
 npc	20477	
 item	20927	1
@@ -31064,7 +31064,7 @@ set_value	3
 not_remove	20929	
 end		
 		
-#°Å·èÇÑ Èæ»ó°©		
+#거룩한 흑상갑		
 section		
 npc	20477	
 item	20937	1
@@ -31107,7 +31107,7 @@ set_value	3
 not_remove	20939	
 end		
 		
-#°Å·èÇÑ Èæ¼±		
+#거룩한 흑선		
 section		
 npc	20477	
 item	20947	1
@@ -31150,7 +31150,7 @@ set_value	3
 not_remove	20949	
 end		
 		
-#°Å·èÇÑ ÈæÃµ°©		
+#거룩한 흑천갑		
 section		
 npc	20477	
 item	20957	1
@@ -31193,7 +31193,7 @@ set_value	3
 not_remove	20959	
 end		
 		
-#°Å·èÇÑ Áø³ì°©		
+#거룩한 진녹갑		
 section		
 npc	20477	
 item	21087	1
@@ -31236,7 +31236,7 @@ set_value	3
 not_remove	21089	
 end		
 		
-#°Å·èÇÑ À§Ãµ°©		
+#거룩한 위천갑		
 section		
 npc	20477	
 item	21097	1
@@ -31279,7 +31279,7 @@ set_value	3
 not_remove	21099	
 end		
 		
-#°Å·èÇÑ ½ÊÀÌÁöÇØ°©		
+#거룩한 십이지해갑		
 section		
 npc	20477	
 item	21207	1
@@ -31322,7 +31322,7 @@ set_value	3
 not_remove	21209	
 end		
 		
-#°Å·èÇÑ Èæ·æÆ÷		
+#거룩한 흑룡포		
 section		
 npc	20477	
 item	21217	1
@@ -31449,7 +31449,7 @@ set_value	3
 not_remove	21225	
 end		
 		
-#°Å·èÇÑ Ç³·æÆ÷		
+#거룩한 풍룡포		
 section		
 npc	20477	
 item	21237	1
@@ -31576,7 +31576,7 @@ set_value	3
 not_remove	21245	
 end		
 		
-#°Å·èÇÑ ¸¶·æÆ÷		
+#거룩한 마룡포		
 section		
 npc	20477	
 item	21257	1
@@ -31703,7 +31703,7 @@ set_value	3
 not_remove	21265	
 end		
 		
-#°Å·èÇÑ ½Å·æÆ÷		
+#거룩한 신룡포		
 section		
 npc	20477	
 item	21277	1
@@ -31830,7 +31830,7 @@ set_value	3
 not_remove	21285	
 end		
 		
-#°Å·èÇÑ Ãµ·æÆ÷		
+#거룩한 천룡포		
 section		
 npc	20477	
 item	21297	1
@@ -31957,7 +31957,7 @@ set_value	3
 not_remove	21305	
 end		
 		
-#°Å·èÇÑ ¹ì·æÆ÷		
+#거룩한 뱀룡포		
 section		
 npc	20477	
 item	21317	1
@@ -32084,7 +32084,7 @@ set_value	3
 not_remove	21325	
 end		
 		
-#°Å·èÇÑ ¹ì´ÜÆ÷		
+#거룩한 뱀단포		
 section		
 npc	20477	
 item	21337	1
@@ -32211,7 +32211,7 @@ set_value	3
 not_remove	21345	
 end		
 		
-#°Å·èÇÑ ¹ì¸¶·æÆ÷		
+#거룩한 뱀마룡포		
 section		
 npc	20477	
 item	21357	1
@@ -32338,7 +32338,7 @@ set_value	3
 not_remove	21365	
 end		
 		
-#°Å·èÇÑ ¹ì½Å·æÆ÷		
+#거룩한 뱀신룡포		
 section		
 npc	20477	
 item	21377	1
@@ -32465,7 +32465,7 @@ set_value	3
 not_remove	21385	
 end		
 		
-#°Å·èÇÑ ¹ìÃµ·æÆ÷		
+#거룩한 뱀천룡포		
 section		
 npc	20477	
 item	21397	1
@@ -32592,7 +32592,7 @@ set_value	3
 not_remove	21405	
 end		
 
-#¿µ·ÕÇÑ ÁøÃ»°©		
+#영롱한 진청갑		
 section		
 npc	20478	
 item	12017	1
@@ -32635,7 +32635,7 @@ set_value	4
 not_remove	12019	
 end		
 		
-#¿µ·ÕÇÑ ÁøÃµ		
+#영롱한 진천		
 section		
 npc	20478	
 item	12027	1
@@ -32678,7 +32678,7 @@ set_value	4
 not_remove	12029	
 end		
 		
-#¿µ·ÕÇÑ Áø¸¶°©		
+#영롱한 진마갑		
 section		
 npc	20478	
 item	12037	1
@@ -32721,7 +32721,7 @@ set_value	4
 not_remove	12039	
 end		
 		
-#¿µ·ÕÇÑ Áø·æÀÇ		
+#영롱한 진룡의		
 section		
 npc	20478	
 item	12047	1
@@ -32764,7 +32764,7 @@ set_value	4
 not_remove	12049	
 end		
 		
-#¿µ·ÕÇÑ ½Åºñ°©		
+#영롱한 신비갑		
 section		
 npc	20478	
 item	12057	1
@@ -32807,7 +32807,7 @@ set_value	4
 not_remove	12059	
 end		
 		
-#¿µ·ÕÇÑ ½ÅÇ³		
+#영롱한 신풍		
 section		
 npc	20478	
 item	12067	1
@@ -32850,7 +32850,7 @@ set_value	4
 not_remove	12069	
 end		
 		
-#¿µ·ÕÇÑ ½Å³ú°©		
+#영롱한 신뇌갑		
 section		
 npc	20478	
 item	12077	1
@@ -32893,7 +32893,7 @@ set_value	4
 not_remove	12079	
 end		
 		
-#¿µ·ÕÇÑ ½Å¼ºÀÇ		
+#영롱한 신성의		
 section		
 npc	20478	
 item	12087	1
@@ -32936,7 +32936,7 @@ set_value	4
 not_remove	12089	
 end		
 		
-#¿µ·ÕÇÑ ½Å¿î°©		
+#영롱한 신운갑		
 section		
 npc	20478	
 item	12097	1
@@ -32979,7 +32979,7 @@ set_value	4
 not_remove	12099	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁöÈ£°©		
+#영롱한 십이지호갑		
 section		
 npc	20478	
 item	19297	1
@@ -33022,7 +33022,7 @@ set_value	4
 not_remove	19299	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö°Ç		
+#영롱한 십이지건		
 section		
 npc	20478	
 item	19497	1
@@ -33065,7 +33065,7 @@ set_value	4
 not_remove	19499	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö¸¶°©		
+#영롱한 십이지마갑		
 section		
 npc	20478	
 item	19697	1
@@ -33108,7 +33108,7 @@ set_value	4
 not_remove	19699	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁö»óÀÇ		
+#영롱한 십이지상의		
 section		
 npc	20478	
 item	19897	1
@@ -33151,7 +33151,7 @@ set_value	4
 not_remove	19899	
 end		
 		
-#¿µ·ÕÇÑ ÅÂÀ»°©		
+#영롱한 태을갑		
 section		
 npc	20478	
 item	20007	1
@@ -33194,7 +33194,7 @@ set_value	4
 not_remove	20009	
 end		
 		
-#¿µ·ÕÇÑ ¿µº¸		
+#영롱한 영보		
 section		
 npc	20478	
 item	20257	1
@@ -33237,7 +33237,7 @@ set_value	4
 not_remove	20259	
 end		
 		
-#¿µ·ÕÇÑ ÇöÃµ°©		
+#영롱한 현천갑		
 section		
 npc	20478	
 item	20507	1
@@ -33280,7 +33280,7 @@ set_value	4
 not_remove	20509	
 end		
 		
-#¿µ·ÕÇÑ »ï°üÀÇ		
+#영롱한 삼관의		
 section		
 npc	20478	
 item	20757	1
@@ -33323,7 +33323,7 @@ set_value	4
 not_remove	20759	
 end		
 		
-#¿µ·ÕÇÑ Ã»È£°©		
+#영롱한 청호갑		
 section		
 npc	20478	
 item	20767	1
@@ -33366,7 +33366,7 @@ set_value	4
 not_remove	20769	
 end		
 		
-#¿µ·ÕÇÑ Ã»°Ç		
+#영롱한 청건		
 section		
 npc	20478	
 item	20777	1
@@ -33409,7 +33409,7 @@ set_value	4
 not_remove	20779	
 end		
 		
-#¿µ·ÕÇÑ Ã»¸¶°©		
+#영롱한 청마갑		
 section		
 npc	20478	
 item	20787	1
@@ -33452,7 +33452,7 @@ set_value	4
 not_remove	20789	
 end		
 		
-#¿µ·ÕÇÑ Ã»»óÀÇ		
+#영롱한 청상의		
 section		
 npc	20478	
 item	20797	1
@@ -33495,7 +33495,7 @@ set_value	4
 not_remove	20799	
 end		
 		
-#¿µ·ÕÇÑ Ã»ÇØ°©		
+#영롱한 청해갑		
 section		
 npc	20478	
 item	20807	1
@@ -33538,7 +33538,7 @@ set_value	4
 not_remove	20809	
 end		
 		
-#¿µ·ÕÇÑ Àû·æ°©		
+#영롱한 적룡갑		
 section		
 npc	20478	
 item	20817	1
@@ -33581,7 +33581,7 @@ set_value	4
 not_remove	20819	
 end		
 		
-#¿µ·ÕÇÑ ÀûÇö		
+#영롱한 적현		
 section		
 npc	20478	
 item	20827	1
@@ -33624,7 +33624,7 @@ set_value	4
 not_remove	20829	
 end		
 		
-#¿µ·ÕÇÑ Àû»ó°©		
+#영롱한 적상갑		
 section		
 npc	20478	
 item	20837	1
@@ -33667,7 +33667,7 @@ set_value	4
 not_remove	20839	
 end		
 		
-#¿µ·ÕÇÑ Àû¼±ÀÇ		
+#영롱한 적선의		
 section		
 npc	20478	
 item	20847	1
@@ -33710,7 +33710,7 @@ set_value	4
 not_remove	20849	
 end		
 		
-#¿µ·ÕÇÑ ÀûÃµ°©		
+#영롱한 적천갑		
 section		
 npc	20478	
 item	20857	1
@@ -33753,7 +33753,7 @@ set_value	4
 not_remove	20859	
 end		
 		
-#¿µ·ÕÇÑ ¹éÈ£°©		
+#영롱한 백호갑		
 section		
 npc	20478	
 item	20867	1
@@ -33796,7 +33796,7 @@ set_value	4
 not_remove	20869	
 end		
 		
-#¿µ·ÕÇÑ ¹é°Ç		
+#영롱한 백건		
 section		
 npc	20478	
 item	20877	1
@@ -33839,7 +33839,7 @@ set_value	4
 not_remove	20879	
 end		
 		
-#¿µ·ÕÇÑ ¹é¸¶°©		
+#영롱한 백마갑		
 section		
 npc	20478	
 item	20887	1
@@ -33882,7 +33882,7 @@ set_value	4
 not_remove	20889	
 end		
 		
-#¿µ·ÕÇÑ ¹é»óÀÇ		
+#영롱한 백상의		
 section		
 npc	20478	
 item	20897	1
@@ -33925,7 +33925,7 @@ set_value	4
 not_remove	20899	
 end		
 		
-#¿µ·ÕÇÑ ¹éÇö°©		
+#영롱한 백현갑		
 section		
 npc	20478	
 item	20907	1
@@ -33968,7 +33968,7 @@ set_value	4
 not_remove	20909	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æ°©		
+#영롱한 흑룡갑		
 section		
 npc	20478	
 item	20917	1
@@ -34011,7 +34011,7 @@ set_value	4
 not_remove	20919	
 end		
 		
-#¿µ·ÕÇÑ ÈæÇö		
+#영롱한 흑현		
 section		
 npc	20478	
 item	20927	1
@@ -34054,7 +34054,7 @@ set_value	4
 not_remove	20929	
 end		
 		
-#¿µ·ÕÇÑ Èæ»ó°©		
+#영롱한 흑상갑		
 section		
 npc	20478	
 item	20937	1
@@ -34097,7 +34097,7 @@ set_value	4
 not_remove	20939	
 end		
 		
-#¿µ·ÕÇÑ Èæ¼±		
+#영롱한 흑선		
 section		
 npc	20478	
 item	20947	1
@@ -34140,7 +34140,7 @@ set_value	4
 not_remove	20949	
 end		
 		
-#¿µ·ÕÇÑ ÈæÃµ°©		
+#영롱한 흑천갑		
 section		
 npc	20478	
 item	20957	1
@@ -34183,7 +34183,7 @@ set_value	4
 not_remove	20959	
 end		
 		
-#¿µ·ÕÇÑ Áø³ì°©		
+#영롱한 진녹갑		
 section		
 npc	20478	
 item	21087	1
@@ -34226,7 +34226,7 @@ set_value	4
 not_remove	21089	
 end		
 		
-#¿µ·ÕÇÑ À§Ãµ°©		
+#영롱한 위천갑		
 section		
 npc	20478	
 item	21097	1
@@ -34269,7 +34269,7 @@ set_value	4
 not_remove	21099	
 end		
 		
-#¿µ·ÕÇÑ ½ÊÀÌÁöÇØ°©		
+#영롱한 십이지해갑		
 section		
 npc	20478	
 item	21207	1
@@ -34312,7 +34312,7 @@ set_value	4
 not_remove	21209	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æÆ÷		
+#영롱한 흑룡포		
 section		
 npc	20478	
 item	21217	1
@@ -34439,7 +34439,7 @@ set_value	4
 not_remove	21225	
 end		
 		
-#¿µ·ÕÇÑ Ç³·æÆ÷		
+#영롱한 풍룡포		
 section		
 npc	20478	
 item	21237	1
@@ -34566,7 +34566,7 @@ set_value	4
 not_remove	21245	
 end		
 		
-#¿µ·ÕÇÑ ¸¶·æÆ÷		
+#영롱한 마룡포		
 section		
 npc	20478	
 item	21257	1
@@ -34693,7 +34693,7 @@ set_value	4
 not_remove	21265	
 end		
 		
-#¿µ·ÕÇÑ ½Å·æÆ÷		
+#영롱한 신룡포		
 section		
 npc	20478	
 item	21277	1
@@ -34820,7 +34820,7 @@ set_value	4
 not_remove	21285	
 end		
 		
-#¿µ·ÕÇÑ Ãµ·æÆ÷		
+#영롱한 천룡포		
 section		
 npc	20478	
 item	21297	1
@@ -34947,7 +34947,7 @@ set_value	4
 not_remove	21305	
 end		
 		
-#¿µ·ÕÇÑ ¹ì·æÆ÷		
+#영롱한 뱀룡포		
 section		
 npc	20478	
 item	21317	1
@@ -35074,7 +35074,7 @@ set_value	4
 not_remove	21325	
 end		
 		
-#¿µ·ÕÇÑ ¹ì´ÜÆ÷		
+#영롱한 뱀단포		
 section		
 npc	20478	
 item	21337	1
@@ -35201,7 +35201,7 @@ set_value	4
 not_remove	21345	
 end		
 		
-#¿µ·ÕÇÑ ¹ì¸¶·æÆ÷		
+#영롱한 뱀마룡포		
 section		
 npc	20478	
 item	21357	1
@@ -35328,7 +35328,7 @@ set_value	4
 not_remove	21365	
 end		
 		
-#¿µ·ÕÇÑ ¹ì½Å·æÆ÷		
+#영롱한 뱀신룡포		
 section		
 npc	20478	
 item	21377	1
@@ -35455,7 +35455,7 @@ set_value	4
 not_remove	21385	
 end		
 		
-#¿µ·ÕÇÑ ¹ìÃµ·æÆ÷		
+#영롱한 뱀천룡포		
 section		
 npc	20478	
 item	21397	1
@@ -35582,7 +35582,7 @@ set_value	4
 not_remove	21405	
 end		
 
-#Âù¶õÇÑ ÁøÃ»°©		
+#찬란한 진청갑		
 section		
 npc	20479	
 item	12017	1
@@ -35628,7 +35628,7 @@ set_value	5
 not_remove	12019	
 end		
 		
-#Âù¶õÇÑ ÁøÃµ		
+#찬란한 진천		
 section		
 npc	20479	
 item	12027	1
@@ -35674,7 +35674,7 @@ set_value	5
 not_remove	12029	
 end		
 		
-#Âù¶õÇÑ Áø¸¶°©		
+#찬란한 진마갑		
 section		
 npc	20479	
 item	12037	1
@@ -35720,7 +35720,7 @@ set_value	5
 not_remove	12039	
 end		
 		
-#Âù¶õÇÑ Áø·æÀÇ		
+#찬란한 진룡의		
 section		
 npc	20479	
 item	12047	1
@@ -35766,7 +35766,7 @@ set_value	5
 not_remove	12049	
 end		
 		
-#Âù¶õÇÑ ½Åºñ°©		
+#찬란한 신비갑		
 section		
 npc	20479	
 item	12057	1
@@ -35812,7 +35812,7 @@ set_value	5
 not_remove	12059	
 end		
 		
-#Âù¶õÇÑ ½ÅÇ³		
+#찬란한 신풍		
 section		
 npc	20479	
 item	12067	1
@@ -35858,7 +35858,7 @@ set_value	5
 not_remove	12069	
 end		
 		
-#Âù¶õÇÑ ½Å³ú°©		
+#찬란한 신뇌갑		
 section		
 npc	20479	
 item	12077	1
@@ -35904,7 +35904,7 @@ set_value	5
 not_remove	12079	
 end		
 		
-#Âù¶õÇÑ ½Å¼ºÀÇ		
+#찬란한 신성의		
 section		
 npc	20479	
 item	12087	1
@@ -35950,7 +35950,7 @@ set_value	5
 not_remove	12089	
 end		
 		
-#Âù¶õÇÑ ½Å¿î°©		
+#찬란한 신운갑		
 section		
 npc	20479	
 item	12097	1
@@ -35996,7 +35996,7 @@ set_value	5
 not_remove	12099	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁöÈ£°©		
+#찬란한 십이지호갑		
 section		
 npc	20479	
 item	19297	1
@@ -36042,7 +36042,7 @@ set_value	5
 not_remove	19299	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö°Ç		
+#찬란한 십이지건		
 section		
 npc	20479	
 item	19497	1
@@ -36088,7 +36088,7 @@ set_value	5
 not_remove	19499	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö¸¶°©		
+#찬란한 십이지마갑		
 section		
 npc	20479	
 item	19697	1
@@ -36134,7 +36134,7 @@ set_value	5
 not_remove	19699	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁö»óÀÇ		
+#찬란한 십이지상의		
 section		
 npc	20479	
 item	19897	1
@@ -36180,7 +36180,7 @@ set_value	5
 not_remove	19899	
 end		
 		
-#Âù¶õÇÑ ÅÂÀ»°©		
+#찬란한 태을갑		
 section		
 npc	20479	
 item	20007	1
@@ -36226,7 +36226,7 @@ set_value	5
 not_remove	20009	
 end		
 		
-#Âù¶õÇÑ ¿µº¸		
+#찬란한 영보		
 section		
 npc	20479	
 item	20257	1
@@ -36272,7 +36272,7 @@ set_value	5
 not_remove	20259	
 end		
 		
-#Âù¶õÇÑ ÇöÃµ°©		
+#찬란한 현천갑		
 section		
 npc	20479	
 item	20507	1
@@ -36318,7 +36318,7 @@ set_value	5
 not_remove	20509	
 end		
 		
-#Âù¶õÇÑ »ï°üÀÇ		
+#찬란한 삼관의		
 section		
 npc	20479	
 item	20757	1
@@ -36364,7 +36364,7 @@ set_value	5
 not_remove	20759	
 end		
 		
-#Âù¶õÇÑ Ã»È£°©		
+#찬란한 청호갑		
 section		
 npc	20479	
 item	20767	1
@@ -36410,7 +36410,7 @@ set_value	5
 not_remove	20769	
 end		
 		
-#Âù¶õÇÑ Ã»°Ç		
+#찬란한 청건		
 section		
 npc	20479	
 item	20777	1
@@ -36456,7 +36456,7 @@ set_value	5
 not_remove	20779	
 end		
 		
-#Âù¶õÇÑ Ã»¸¶°©		
+#찬란한 청마갑		
 section		
 npc	20479	
 item	20787	1
@@ -36502,7 +36502,7 @@ set_value	5
 not_remove	20789	
 end		
 		
-#Âù¶õÇÑ Ã»»óÀÇ		
+#찬란한 청상의		
 section		
 npc	20479	
 item	20797	1
@@ -36548,7 +36548,7 @@ set_value	5
 not_remove	20799	
 end		
 		
-#Âù¶õÇÑ Ã»ÇØ°©		
+#찬란한 청해갑		
 section		
 npc	20479	
 item	20807	1
@@ -36594,7 +36594,7 @@ set_value	5
 not_remove	20809	
 end		
 		
-#Âù¶õÇÑ Àû·æ°©		
+#찬란한 적룡갑		
 section		
 npc	20479	
 item	20817	1
@@ -36640,7 +36640,7 @@ set_value	5
 not_remove	20819	
 end		
 		
-#Âù¶õÇÑ ÀûÇö		
+#찬란한 적현		
 section		
 npc	20479	
 item	20827	1
@@ -36686,7 +36686,7 @@ set_value	5
 not_remove	20829	
 end		
 		
-#Âù¶õÇÑ Àû»ó°©		
+#찬란한 적상갑		
 section		
 npc	20479	
 item	20837	1
@@ -36732,7 +36732,7 @@ set_value	5
 not_remove	20839	
 end		
 		
-#Âù¶õÇÑ Àû¼±ÀÇ		
+#찬란한 적선의		
 section		
 npc	20479	
 item	20847	1
@@ -36778,7 +36778,7 @@ set_value	5
 not_remove	20849	
 end		
 		
-#Âù¶õÇÑ ÀûÃµ°©		
+#찬란한 적천갑		
 section		
 npc	20479	
 item	20857	1
@@ -36824,7 +36824,7 @@ set_value	5
 not_remove	20859	
 end		
 		
-#Âù¶õÇÑ ¹éÈ£°©		
+#찬란한 백호갑		
 section		
 npc	20479	
 item	20867	1
@@ -36870,7 +36870,7 @@ set_value	5
 not_remove	20869	
 end		
 		
-#Âù¶õÇÑ ¹é°Ç		
+#찬란한 백건		
 section		
 npc	20479	
 item	20877	1
@@ -36916,7 +36916,7 @@ set_value	5
 not_remove	20879	
 end		
 		
-#Âù¶õÇÑ ¹é¸¶°©		
+#찬란한 백마갑		
 section		
 npc	20479	
 item	20887	1
@@ -36962,7 +36962,7 @@ set_value	5
 not_remove	20889	
 end		
 		
-#Âù¶õÇÑ ¹é»óÀÇ		
+#찬란한 백상의		
 section		
 npc	20479	
 item	20897	1
@@ -37008,7 +37008,7 @@ set_value	5
 not_remove	20899	
 end		
 		
-#Âù¶õÇÑ ¹éÇö°©		
+#찬란한 백현갑		
 section		
 npc	20479	
 item	20907	1
@@ -37054,7 +37054,7 @@ set_value	5
 not_remove	20909	
 end		
 		
-#Âù¶õÇÑ Èæ·æ°©		
+#찬란한 흑룡갑		
 section		
 npc	20479	
 item	20917	1
@@ -37100,7 +37100,7 @@ set_value	5
 not_remove	20919	
 end		
 		
-#Âù¶õÇÑ ÈæÇö		
+#찬란한 흑현		
 section		
 npc	20479	
 item	20927	1
@@ -37146,7 +37146,7 @@ set_value	5
 not_remove	20929	
 end		
 		
-#Âù¶õÇÑ Èæ»ó°©		
+#찬란한 흑상갑		
 section		
 npc	20479	
 item	20937	1
@@ -37192,7 +37192,7 @@ set_value	5
 not_remove	20939	
 end		
 		
-#Âù¶õÇÑ Èæ¼±		
+#찬란한 흑선		
 section		
 npc	20479	
 item	20947	1
@@ -37238,7 +37238,7 @@ set_value	5
 not_remove	20949	
 end		
 		
-#Âù¶õÇÑ ÈæÃµ°©		
+#찬란한 흑천갑		
 section		
 npc	20479	
 item	20957	1
@@ -37284,7 +37284,7 @@ set_value	5
 not_remove	20959	
 end		
 		
-#Âù¶õÇÑ Áø³ì°©		
+#찬란한 진녹갑		
 section		
 npc	20479	
 item	21087	1
@@ -37330,7 +37330,7 @@ set_value	5
 not_remove	21089	
 end		
 		
-#Âù¶õÇÑ À§Ãµ°©		
+#찬란한 위천갑		
 section		
 npc	20479	
 item	21097	1
@@ -37376,7 +37376,7 @@ set_value	5
 not_remove	21099	
 end		
 		
-#Âù¶õÇÑ ½ÊÀÌÁöÇØ°©		
+#찬란한 십이지해갑		
 section		
 npc	20479	
 item	21207	1
@@ -37422,7 +37422,7 @@ set_value	5
 not_remove	21209	
 end		
 		
-#Âù¶õÇÑ Èæ·æÆ÷		
+#찬란한 흑룡포		
 section		
 npc	20479	
 item	21217	1
@@ -37558,7 +37558,7 @@ set_value	5
 not_remove	21225	
 end		
 		
-#Âù¶õÇÑ Ç³·æÆ÷		
+#찬란한 풍룡포		
 section		
 npc	20479	
 item	21237	1
@@ -37694,7 +37694,7 @@ set_value	5
 not_remove	21245	
 end		
 		
-#Âù¶õÇÑ ¸¶·æÆ÷		
+#찬란한 마룡포		
 section		
 npc	20479	
 item	21257	1
@@ -37830,7 +37830,7 @@ set_value	5
 not_remove	21265	
 end		
 		
-#Âù¶õÇÑ ½Å·æÆ÷		
+#찬란한 신룡포		
 section		
 npc	20479	
 item	21277	1
@@ -37966,7 +37966,7 @@ set_value	5
 not_remove	21285	
 end		
 		
-#Âù¶õÇÑ Ãµ·æÆ÷		
+#찬란한 천룡포		
 section		
 npc	20479	
 item	21297	1
@@ -38102,7 +38102,7 @@ set_value	5
 not_remove	21305	
 end		
 		
-#Âù¶õÇÑ ¹ì·æÆ÷		
+#찬란한 뱀룡포		
 section		
 npc	20479	
 item	21317	1
@@ -38238,7 +38238,7 @@ set_value	5
 not_remove	21325	
 end		
 		
-#Âù¶õÇÑ ¹ì´ÜÆ÷		
+#찬란한 뱀단포		
 section		
 npc	20479	
 item	21337	1
@@ -38374,7 +38374,7 @@ set_value	5
 not_remove	21345	
 end		
 		
-#Âù¶õÇÑ ¹ì¸¶·æÆ÷		
+#찬란한 뱀마룡포		
 section		
 npc	20479	
 item	21357	1
@@ -38510,7 +38510,7 @@ set_value	5
 not_remove	21365	
 end		
 		
-#Âù¶õÇÑ ¹ì½Å·æÆ÷		
+#찬란한 뱀신룡포		
 section		
 npc	20479	
 item	21377	1
@@ -38646,7 +38646,7 @@ set_value	5
 not_remove	21385	
 end		
 		
-#Âù¶õÇÑ ¹ìÃµ·æÆ÷		
+#찬란한 뱀천룡포		
 section		
 npc	20479	
 item	21397	1
@@ -38782,7 +38782,7 @@ set_value	5
 not_remove	21405	
 end		
 		
-#°í±ÍÇÑ Åõ±ÍÅõ±¸		
+#고귀한 투귀투구		
 section		
 npc	20475	
 item	12287	1
@@ -38825,7 +38825,7 @@ set_value	1
 not_remove	12289
 end
 
-#°í±ÍÇÑ ÆĞÁÖµÎ°Ç
+#고귀한 패주두건
 section
 npc	20475
 item	12407	1
@@ -38868,7 +38868,7 @@ set_value	1
 not_remove	12409
 end
 
-#°í±ÍÇÑ ¼ö¶ó80
+#고귀한 수라80
 section
 npc	20475
 item	12547	1
@@ -38911,7 +38911,7 @@ set_value	1
 not_remove	12549
 end
 
-#°í±ÍÇÑ ¹«´ç80
+#고귀한 무당80
 section
 npc	20475
 item	12687	1
@@ -38954,7 +38954,7 @@ set_value	1
 not_remove	12689
 end
 
-#°í±ÍÇÑ ³ì¸²Åõ±¸
+#고귀한 녹림투구
 section
 npc	20475
 item	21547	1
@@ -38997,7 +38997,7 @@ set_value	1
 not_remove	21549
 end
 
-#°í±ÍÇÑ ºñ´ÃÅõ±¸
+#고귀한 비늘투구
 section
 npc	20475
 item	12697	1
@@ -39040,7 +39040,7 @@ set_value	1
 not_remove	12699
 end
 
-#°í±ÍÇÑ ¿ëºñµÎ°Ç
+#고귀한 용비두건
 section
 npc	20475
 item	12707	1
@@ -39083,7 +39083,7 @@ set_value	1
 not_remove	12709
 end
 
-#°í±ÍÇÑ ±ÍÈ¥Åõ±¸
+#고귀한 귀혼투구
 section
 npc	20475
 item	12717	1
@@ -39126,7 +39126,7 @@ set_value	1
 not_remove	12719
 end
 
-#°í±ÍÇÑ ¹éÁ¦¸ğ
+#고귀한 백제모
 section
 npc	20475
 item	12727	1
@@ -39169,7 +39169,7 @@ set_value	1
 not_remove	12729
 end
 
-#°í±ÍÇÑ ¿ë¼öÅõ±¸
+#고귀한 용수투구
 section
 npc	20475
 item	21557	1
@@ -39212,7 +39212,7 @@ set_value	1
 not_remove	21559
 end
 
-#°í±ÍÇÑ ºñ´ÃÅõ±¸
+#고귀한 비늘투구
 section
 npc	20475
 item	12737	1
@@ -39255,7 +39255,7 @@ set_value	1
 not_remove	12739
 end
 
-#°í±ÍÇÑ ¿ëºñµÎ°Ç
+#고귀한 용비두건
 section
 npc	20475
 item	12747	1
@@ -39298,7 +39298,7 @@ set_value	1
 not_remove	12749
 end
 
-#°í±ÍÇÑ ±ÍÈ¥Åõ±¸
+#고귀한 귀혼투구
 section
 npc	20475
 item	12757	1
@@ -39341,7 +39341,7 @@ set_value	1
 not_remove	12759
 end
 
-#°í±ÍÇÑ ¹éÁ¦¸ğ
+#고귀한 백제모
 section
 npc	20475
 item	12767	1
@@ -39384,7 +39384,7 @@ set_value	1
 not_remove	12769
 end
 
-#°í±ÍÇÑ ¿ë¼öÅõ±¸
+#고귀한 용수투구
 section
 npc	20475
 item	12777	1
@@ -39427,7 +39427,7 @@ set_value	1
 not_remove	12779
 end
 
-#°í±ÍÇÑ Èæ·æÅõ±¸
+#고귀한 흑룡투구
 section
 npc	20475
 item	12787	1
@@ -39554,7 +39554,7 @@ set_value	1
 not_remove	12795
 end
 
-#°í±ÍÇÑ Ç³·æÅõ±¸
+#고귀한 풍룡투구
 section
 npc	20475
 item	12807	1
@@ -39681,7 +39681,7 @@ set_value	1
 not_remove	12815
 end
 
-#°í±ÍÇÑ ¸¶·æÅõ±¸
+#고귀한 마룡투구
 section
 npc	20475
 item	12827	1
@@ -39808,7 +39808,7 @@ set_value	1
 not_remove	12835
 end
 
-#°í±ÍÇÑ ½Å·æÅõ±¸
+#고귀한 신룡투구
 section
 npc	20475
 item	12847	1
@@ -39935,7 +39935,7 @@ set_value	1
 not_remove	12855
 end
 
-#°í±ÍÇÑ Ãµ·æÅõ±¸
+#고귀한 천룡투구
 section
 npc	20475
 item	12867	1
@@ -40062,7 +40062,7 @@ set_value	1
 not_remove	12875
 end
 
-#¼ş°íÇÑ Åõ±ÍÅõ±¸		
+#숭고한 투귀투구		
 section		
 npc	20476	
 item	12287	1
@@ -40105,7 +40105,7 @@ set_value	2
 not_remove	12289	
 end		
 		
-#¼ş°íÇÑ ÆĞÁÖµÎ°Ç		
+#숭고한 패주두건		
 section		
 npc	20476	
 item	12407	1
@@ -40148,7 +40148,7 @@ set_value	2
 not_remove	12409	
 end		
 		
-#¼ş°íÇÑ ¼ö¶ó80		
+#숭고한 수라80		
 section		
 npc	20476	
 item	12547	1
@@ -40191,7 +40191,7 @@ set_value	2
 not_remove	12549	
 end		
 		
-#¼ş°íÇÑ ¹«´ç80		
+#숭고한 무당80		
 section		
 npc	20476	
 item	12687	1
@@ -40234,7 +40234,7 @@ set_value	2
 not_remove	12689	
 end		
 		
-#¼ş°íÇÑ ³ì¸²Åõ±¸		
+#숭고한 녹림투구		
 section		
 npc	20476	
 item	21547	1
@@ -40277,7 +40277,7 @@ set_value	2
 not_remove	21549	
 end		
 		
-#¼ş°íÇÑ ºñ´ÃÅõ±¸		
+#숭고한 비늘투구		
 section		
 npc	20476	
 item	12697	1
@@ -40320,7 +40320,7 @@ set_value	2
 not_remove	12699	
 end		
 		
-#¼ş°íÇÑ ¿ëºñµÎ°Ç		
+#숭고한 용비두건		
 section		
 npc	20476	
 item	12707	1
@@ -40363,7 +40363,7 @@ set_value	2
 not_remove	12709	
 end		
 		
-#¼ş°íÇÑ ±ÍÈ¥Åõ±¸		
+#숭고한 귀혼투구		
 section		
 npc	20476	
 item	12717	1
@@ -40406,7 +40406,7 @@ set_value	2
 not_remove	12719	
 end		
 		
-#¼ş°íÇÑ ¹éÁ¦¸ğ		
+#숭고한 백제모		
 section		
 npc	20476	
 item	12727	1
@@ -40449,7 +40449,7 @@ set_value	2
 not_remove	12729	
 end		
 		
-#¼ş°íÇÑ ¿ë¼öÅõ±¸		
+#숭고한 용수투구		
 section		
 npc	20476	
 item	21557	1
@@ -40492,7 +40492,7 @@ set_value	2
 not_remove	21559	
 end		
 		
-#¼ş°íÇÑ ºñ´ÃÅõ±¸		
+#숭고한 비늘투구		
 section		
 npc	20476	
 item	12737	1
@@ -40535,7 +40535,7 @@ set_value	2
 not_remove	12739	
 end		
 		
-#¼ş°íÇÑ ¿ëºñµÎ°Ç		
+#숭고한 용비두건		
 section		
 npc	20476	
 item	12747	1
@@ -40578,7 +40578,7 @@ set_value	2
 not_remove	12749	
 end		
 		
-#¼ş°íÇÑ ±ÍÈ¥Åõ±¸		
+#숭고한 귀혼투구		
 section		
 npc	20476	
 item	12757	1
@@ -40621,7 +40621,7 @@ set_value	2
 not_remove	12759	
 end		
 		
-#¼ş°íÇÑ ¹éÁ¦¸ğ		
+#숭고한 백제모		
 section		
 npc	20476	
 item	12767	1
@@ -40664,7 +40664,7 @@ set_value	2
 not_remove	12769	
 end		
 		
-#¼ş°íÇÑ ¿ë¼öÅõ±¸		
+#숭고한 용수투구		
 section		
 npc	20476	
 item	12777	1
@@ -40707,7 +40707,7 @@ set_value	2
 not_remove	12779	
 end		
 		
-#¼ş°íÇÑ Èæ·æÅõ±¸		
+#숭고한 흑룡투구		
 section		
 npc	20476	
 item	12787	1
@@ -40834,7 +40834,7 @@ set_value	2
 not_remove	12795	
 end		
 		
-#¼ş°íÇÑ Ç³·æÅõ±¸		
+#숭고한 풍룡투구		
 section		
 npc	20476	
 item	12807	1
@@ -40961,7 +40961,7 @@ set_value	2
 not_remove	12815	
 end		
 		
-#¼ş°íÇÑ ¸¶·æÅõ±¸		
+#숭고한 마룡투구		
 section		
 npc	20476	
 item	12827	1
@@ -41088,7 +41088,7 @@ set_value	2
 not_remove	12835	
 end		
 		
-#¼ş°íÇÑ ½Å·æÅõ±¸		
+#숭고한 신룡투구		
 section		
 npc	20476	
 item	12847	1
@@ -41215,7 +41215,7 @@ set_value	2
 not_remove	12855	
 end		
 		
-#¼ş°íÇÑ Ãµ·æÅõ±¸		
+#숭고한 천룡투구		
 section		
 npc	20476	
 item	12867	1
@@ -41342,7 +41342,7 @@ set_value	2
 not_remove	12875	
 end		
 
-#°Å·èÇÑ Åõ±ÍÅõ±¸		
+#거룩한 투귀투구		
 section		
 npc	20477	
 item	12287	1
@@ -41385,7 +41385,7 @@ set_value	3
 not_remove	12289	
 end		
 		
-#°Å·èÇÑ ÆĞÁÖµÎ°Ç		
+#거룩한 패주두건		
 section		
 npc	20477	
 item	12407	1
@@ -41428,7 +41428,7 @@ set_value	3
 not_remove	12409	
 end		
 		
-#°Å·èÇÑ ¼ö¶ó80		
+#거룩한 수라80		
 section		
 npc	20477	
 item	12547	1
@@ -41471,7 +41471,7 @@ set_value	3
 not_remove	12549	
 end		
 		
-#°Å·èÇÑ ¹«´ç80		
+#거룩한 무당80		
 section		
 npc	20477	
 item	12687	1
@@ -41514,7 +41514,7 @@ set_value	3
 not_remove	12689	
 end		
 		
-#°Å·èÇÑ ³ì¸²Åõ±¸		
+#거룩한 녹림투구		
 section		
 npc	20477	
 item	21547	1
@@ -41557,7 +41557,7 @@ set_value	3
 not_remove	21549	
 end		
 		
-#°Å·èÇÑ ºñ´ÃÅõ±¸		
+#거룩한 비늘투구		
 section		
 npc	20477	
 item	12697	1
@@ -41600,7 +41600,7 @@ set_value	3
 not_remove	12699	
 end		
 		
-#°Å·èÇÑ ¿ëºñµÎ°Ç		
+#거룩한 용비두건		
 section		
 npc	20477	
 item	12707	1
@@ -41643,7 +41643,7 @@ set_value	3
 not_remove	12709	
 end		
 		
-#°Å·èÇÑ ±ÍÈ¥Åõ±¸		
+#거룩한 귀혼투구		
 section		
 npc	20477	
 item	12717	1
@@ -41686,7 +41686,7 @@ set_value	3
 not_remove	12719	
 end		
 		
-#°Å·èÇÑ ¹éÁ¦¸ğ		
+#거룩한 백제모		
 section		
 npc	20477	
 item	12727	1
@@ -41729,7 +41729,7 @@ set_value	3
 not_remove	12729	
 end		
 		
-#°Å·èÇÑ ¿ë¼öÅõ±¸		
+#거룩한 용수투구		
 section		
 npc	20477	
 item	21557	1
@@ -41772,7 +41772,7 @@ set_value	3
 not_remove	21559	
 end		
 		
-#°Å·èÇÑ ºñ´ÃÅõ±¸		
+#거룩한 비늘투구		
 section		
 npc	20477	
 item	12737	1
@@ -41815,7 +41815,7 @@ set_value	3
 not_remove	12739	
 end		
 		
-#°Å·èÇÑ ¿ëºñµÎ°Ç		
+#거룩한 용비두건		
 section		
 npc	20477	
 item	12747	1
@@ -41858,7 +41858,7 @@ set_value	3
 not_remove	12749	
 end		
 		
-#°Å·èÇÑ ±ÍÈ¥Åõ±¸		
+#거룩한 귀혼투구		
 section		
 npc	20477	
 item	12757	1
@@ -41901,7 +41901,7 @@ set_value	3
 not_remove	12759	
 end		
 		
-#°Å·èÇÑ ¹éÁ¦¸ğ		
+#거룩한 백제모		
 section		
 npc	20477	
 item	12767	1
@@ -41944,7 +41944,7 @@ set_value	3
 not_remove	12769	
 end		
 		
-#°Å·èÇÑ ¿ë¼öÅõ±¸		
+#거룩한 용수투구		
 section		
 npc	20477	
 item	12777	1
@@ -41987,7 +41987,7 @@ set_value	3
 not_remove	12779	
 end		
 		
-#°Å·èÇÑ Èæ·æÅõ±¸		
+#거룩한 흑룡투구		
 section		
 npc	20477	
 item	12787	1
@@ -42114,7 +42114,7 @@ set_value	3
 not_remove	12795	
 end		
 		
-#°Å·èÇÑ Ç³·æÅõ±¸		
+#거룩한 풍룡투구		
 section		
 npc	20477	
 item	12807	1
@@ -42241,7 +42241,7 @@ set_value	3
 not_remove	12815	
 end		
 		
-#°Å·èÇÑ ¸¶·æÅõ±¸		
+#거룩한 마룡투구		
 section		
 npc	20477	
 item	12827	1
@@ -42368,7 +42368,7 @@ set_value	3
 not_remove	12835	
 end		
 		
-#°Å·èÇÑ ½Å·æÅõ±¸		
+#거룩한 신룡투구		
 section		
 npc	20477	
 item	12847	1
@@ -42495,7 +42495,7 @@ set_value	3
 not_remove	12855	
 end		
 		
-#°Å·èÇÑ Ãµ·æÅõ±¸		
+#거룩한 천룡투구		
 section		
 npc	20477	
 item	12867	1
@@ -42622,7 +42622,7 @@ set_value	3
 not_remove	12875	
 end		
 
-#¿µ·ÕÇÑ Åõ±ÍÅõ±¸		
+#영롱한 투귀투구		
 section		
 npc	20478	
 item	12287	1
@@ -42665,7 +42665,7 @@ set_value	4
 not_remove	12289	
 end		
 		
-#¿µ·ÕÇÑ ÆĞÁÖµÎ°Ç		
+#영롱한 패주두건		
 section		
 npc	20478	
 item	12407	1
@@ -42708,7 +42708,7 @@ set_value	4
 not_remove	12409	
 end		
 		
-#¿µ·ÕÇÑ ¼ö¶ó80		
+#영롱한 수라80		
 section		
 npc	20478	
 item	12547	1
@@ -42751,7 +42751,7 @@ set_value	4
 not_remove	12549	
 end		
 		
-#¿µ·ÕÇÑ ¹«´ç80		
+#영롱한 무당80		
 section		
 npc	20478	
 item	12687	1
@@ -42794,7 +42794,7 @@ set_value	4
 not_remove	12689	
 end		
 		
-#¿µ·ÕÇÑ ³ì¸²Åõ±¸		
+#영롱한 녹림투구		
 section		
 npc	20478	
 item	21547	1
@@ -42837,7 +42837,7 @@ set_value	4
 not_remove	21549	
 end		
 		
-#¿µ·ÕÇÑ ºñ´ÃÅõ±¸		
+#영롱한 비늘투구		
 section		
 npc	20478	
 item	12697	1
@@ -42880,7 +42880,7 @@ set_value	4
 not_remove	12699	
 end		
 		
-#¿µ·ÕÇÑ ¿ëºñµÎ°Ç		
+#영롱한 용비두건		
 section		
 npc	20478	
 item	12707	1
@@ -42923,7 +42923,7 @@ set_value	4
 not_remove	12709	
 end		
 		
-#¿µ·ÕÇÑ ±ÍÈ¥Åõ±¸		
+#영롱한 귀혼투구		
 section		
 npc	20478	
 item	12717	1
@@ -42966,7 +42966,7 @@ set_value	4
 not_remove	12719	
 end		
 		
-#¿µ·ÕÇÑ ¹éÁ¦¸ğ		
+#영롱한 백제모		
 section		
 npc	20478	
 item	12727	1
@@ -43009,7 +43009,7 @@ set_value	4
 not_remove	12729	
 end		
 		
-#¿µ·ÕÇÑ ¿ë¼öÅõ±¸		
+#영롱한 용수투구		
 section		
 npc	20478	
 item	21557	1
@@ -43052,7 +43052,7 @@ set_value	4
 not_remove	21559	
 end		
 		
-#¿µ·ÕÇÑ ºñ´ÃÅõ±¸		
+#영롱한 비늘투구		
 section		
 npc	20478	
 item	12737	1
@@ -43095,7 +43095,7 @@ set_value	4
 not_remove	12739	
 end		
 		
-#¿µ·ÕÇÑ ¿ëºñµÎ°Ç		
+#영롱한 용비두건		
 section		
 npc	20478	
 item	12747	1
@@ -43138,7 +43138,7 @@ set_value	4
 not_remove	12749	
 end		
 		
-#¿µ·ÕÇÑ ±ÍÈ¥Åõ±¸		
+#영롱한 귀혼투구		
 section		
 npc	20478	
 item	12757	1
@@ -43181,7 +43181,7 @@ set_value	4
 not_remove	12759	
 end		
 		
-#¿µ·ÕÇÑ ¹éÁ¦¸ğ		
+#영롱한 백제모		
 section		
 npc	20478	
 item	12767	1
@@ -43224,7 +43224,7 @@ set_value	4
 not_remove	12769	
 end		
 		
-#¿µ·ÕÇÑ ¿ë¼öÅõ±¸		
+#영롱한 용수투구		
 section		
 npc	20478	
 item	12777	1
@@ -43267,7 +43267,7 @@ set_value	4
 not_remove	12779	
 end		
 		
-#¿µ·ÕÇÑ Èæ·æÅõ±¸		
+#영롱한 흑룡투구		
 section		
 npc	20478	
 item	12787	1
@@ -43394,7 +43394,7 @@ set_value	4
 not_remove	12795	
 end		
 		
-#¿µ·ÕÇÑ Ç³·æÅõ±¸		
+#영롱한 풍룡투구		
 section		
 npc	20478	
 item	12807	1
@@ -43521,7 +43521,7 @@ set_value	4
 not_remove	12815	
 end		
 		
-#¿µ·ÕÇÑ ¸¶·æÅõ±¸		
+#영롱한 마룡투구		
 section		
 npc	20478	
 item	12827	1
@@ -43648,7 +43648,7 @@ set_value	4
 not_remove	12835	
 end		
 		
-#¿µ·ÕÇÑ ½Å·æÅõ±¸		
+#영롱한 신룡투구		
 section		
 npc	20478	
 item	12847	1
@@ -43775,7 +43775,7 @@ set_value	4
 not_remove	12855	
 end		
 		
-#¿µ·ÕÇÑ Ãµ·æÅõ±¸		
+#영롱한 천룡투구		
 section		
 npc	20478	
 item	12867	1
@@ -43902,7 +43902,7 @@ set_value	4
 not_remove	12875	
 end		
 
-#Âù¶õÇÑ Åõ±ÍÅõ±¸		
+#찬란한 투귀투구		
 section		
 npc	20479	
 item	12287	1
@@ -43948,7 +43948,7 @@ set_value	5
 not_remove	12289	
 end		
 		
-#Âù¶õÇÑ ÆĞÁÖµÎ°Ç		
+#찬란한 패주두건		
 section		
 npc	20479	
 item	12407	1
@@ -43994,7 +43994,7 @@ set_value	5
 not_remove	12409	
 end		
 		
-#Âù¶õÇÑ ¼ö¶ó80		
+#찬란한 수라80		
 section		
 npc	20479	
 item	12547	1
@@ -44040,7 +44040,7 @@ set_value	5
 not_remove	12549	
 end		
 		
-#Âù¶õÇÑ ¹«´ç80		
+#찬란한 무당80		
 section		
 npc	20479	
 item	12687	1
@@ -44086,7 +44086,7 @@ set_value	5
 not_remove	12689	
 end		
 		
-#Âù¶õÇÑ ³ì¸²Åõ±¸		
+#찬란한 녹림투구		
 section		
 npc	20479	
 item	21547	1
@@ -44132,7 +44132,7 @@ set_value	5
 not_remove	21549	
 end		
 		
-#Âù¶õÇÑ ºñ´ÃÅõ±¸		
+#찬란한 비늘투구		
 section		
 npc	20479	
 item	12697	1
@@ -44178,7 +44178,7 @@ set_value	5
 not_remove	12699	
 end		
 		
-#Âù¶õÇÑ ¿ëºñµÎ°Ç		
+#찬란한 용비두건		
 section		
 npc	20479	
 item	12707	1
@@ -44224,7 +44224,7 @@ set_value	5
 not_remove	12709	
 end		
 		
-#Âù¶õÇÑ ±ÍÈ¥Åõ±¸		
+#찬란한 귀혼투구		
 section		
 npc	20479	
 item	12717	1
@@ -44270,7 +44270,7 @@ set_value	5
 not_remove	12719	
 end		
 		
-#Âù¶õÇÑ ¹éÁ¦¸ğ		
+#찬란한 백제모		
 section		
 npc	20479	
 item	12727	1
@@ -44316,7 +44316,7 @@ set_value	5
 not_remove	12729	
 end		
 		
-#Âù¶õÇÑ ¿ë¼öÅõ±¸		
+#찬란한 용수투구		
 section		
 npc	20479	
 item	21557	1
@@ -44362,7 +44362,7 @@ set_value	5
 not_remove	21559	
 end		
 		
-#Âù¶õÇÑ ºñ´ÃÅõ±¸		
+#찬란한 비늘투구		
 section		
 npc	20479	
 item	12737	1
@@ -44408,7 +44408,7 @@ set_value	5
 not_remove	12739	
 end		
 		
-#Âù¶õÇÑ ¿ëºñµÎ°Ç		
+#찬란한 용비두건		
 section		
 npc	20479	
 item	12747	1
@@ -44454,7 +44454,7 @@ set_value	5
 not_remove	12749	
 end		
 		
-#Âù¶õÇÑ ±ÍÈ¥Åõ±¸		
+#찬란한 귀혼투구		
 section		
 npc	20479	
 item	12757	1
@@ -44500,7 +44500,7 @@ set_value	5
 not_remove	12759	
 end		
 		
-#Âù¶õÇÑ ¹éÁ¦¸ğ		
+#찬란한 백제모		
 section		
 npc	20479	
 item	12767	1
@@ -44546,7 +44546,7 @@ set_value	5
 not_remove	12769	
 end		
 		
-#Âù¶õÇÑ ¿ë¼öÅõ±¸		
+#찬란한 용수투구		
 section		
 npc	20479	
 item	12777	1
@@ -44592,7 +44592,7 @@ set_value	5
 not_remove	12779	
 end		
 		
-#Âù¶õÇÑ Èæ·æÅõ±¸		
+#찬란한 흑룡투구		
 section		
 npc	20479	
 item	12787	1
@@ -44728,7 +44728,7 @@ set_value	5
 not_remove	12795	
 end		
 		
-#Âù¶õÇÑ Ç³·æÅõ±¸		
+#찬란한 풍룡투구		
 section		
 npc	20479	
 item	12807	1
@@ -44864,7 +44864,7 @@ set_value	5
 not_remove	12815	
 end		
 		
-#Âù¶õÇÑ ¸¶·æÅõ±¸		
+#찬란한 마룡투구		
 section		
 npc	20479	
 item	12827	1
@@ -45000,7 +45000,7 @@ set_value	5
 not_remove	12835	
 end		
 		
-#Âù¶õÇÑ ½Å·æÅõ±¸		
+#찬란한 신룡투구		
 section		
 npc	20479	
 item	12847	1
@@ -45136,7 +45136,7 @@ set_value	5
 not_remove	12855	
 end		
 		
-#Âù¶õÇÑ Ãµ·æÅõ±¸		
+#찬란한 천룡투구		
 section		
 npc	20479	
 item	12867	1
@@ -45272,7 +45272,7 @@ set_value	5
 not_remove	12875	
 end		
 
-#È­¿°Á¤·É
+#화염정령
 section
 npc	20433
 item	39117	2
@@ -45283,7 +45283,7 @@ category	PET
 percent	100
 end
 
-#³Ã±âÁ¤·É
+#냉기정령
 section
 npc	20433
 item	39117	2
@@ -45294,7 +45294,7 @@ category	PET
 percent	100
 end
 
-#Àü±âÁ¤·É
+#전기정령
 section
 npc	20433
 item	39117	2
@@ -45305,7 +45305,7 @@ category	PET
 percent	100
 end
 
-#¹Ù¶÷Á¤·É
+#바람정령
 section
 npc	20433
 item	39117	2
@@ -45316,7 +45316,7 @@ category	PET
 percent	100
 end
 
-#´ëÁöÁ¤·É
+#대지정령
 section
 npc	20433
 item	39117	2
@@ -45327,7 +45327,7 @@ category	PET
 percent	100
 end
 
-#¾îµÒÁ¤·É
+#어둠정령
 section
 npc	20433
 item	39117	2
@@ -45338,7 +45338,7 @@ category	PET
 percent	100
 end
 
-#ÈûÀÇÀå°©
+#힘의장갑
 section
 npc	20823
 item	31247	10
@@ -45352,7 +45352,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#Ç×·ÂÀÇÀå°©
+#항력의장갑
 section
 npc	20823
 item	31248	10
@@ -45366,7 +45366,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#½ÅÃ¼ÀÇÀå°©
+#신체의장갑
 section
 npc	20823
 item	31249	10
@@ -45380,7 +45380,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#±İ¼Óº¹´ë
+#금속복대
 section
 npc	20823
 item	30666	30
@@ -45394,7 +45394,7 @@ category	BELT
 percent	30
 end
 
-#Áö¼ºÀÇÀå°©
+#지성의장갑
 section
 npc	20823
 item	31250	10
@@ -45408,7 +45408,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#ÈûÀÇÀå°©
+#힘의장갑
 section
 npc	20828
 item	31247	10
@@ -45422,7 +45422,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#Ç×·ÂÀÇÀå°©
+#항력의장갑
 section
 npc	20828
 item	31248	10
@@ -45436,7 +45436,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#½ÅÃ¼ÀÇÀå°©
+#신체의장갑
 section
 npc	20828
 item	31249	10
@@ -45450,7 +45450,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#Áö¼ºÀÇÀå°©
+#지성의장갑
 section
 npc	20828
 item	31250	10
@@ -45464,7 +45464,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#Ã¶ÆÈÂî
+#철팔찌
 section
 npc	20823
 item	50664	10
@@ -45476,7 +45476,7 @@ category	ACCESSORY
 percent	30
 end
 
-#Ã¶±Í°ÉÀÌ
+#철귀걸이
 section
 npc	20823
 item	50664	10
@@ -45488,7 +45488,7 @@ category	ACCESSORY
 percent	30
 end
 
-#Ã¶¸ñ°ÉÀÌ
+#철목걸이
 section
 npc	20823
 item	50664	10
@@ -45500,7 +45500,7 @@ category	ACCESSORY
 percent	30
 end
 
-#È²Ã¶ÆÈÂî
+#황철팔찌
 section
 npc	20823
 item	50661	10
@@ -45513,7 +45513,7 @@ category	ACCESSORY
 percent	30
 end
 
-#È²Ã¶±Í°ÉÀÌ
+#황철귀걸이
 section
 npc	20823
 item	50661	10
@@ -45526,7 +45526,7 @@ category	ACCESSORY
 percent	30
 end
 
-#È²Ã¶¸ñ°ÉÀÌ
+#황철목걸이
 section
 npc	20823
 item	50661	10
@@ -45539,7 +45539,7 @@ category	ACCESSORY
 percent	30
 end
 
-#Èæ¼öÁ¤ÆÈÂî
+#흑수정팔찌
 section
 npc	20823
 item	50662	10
@@ -45552,7 +45552,7 @@ category	ACCESSORY
 percent	30
 end
 
-#Èæ¼öÁ¤±Í°ÉÀÌ
+#흑수정귀걸이
 section
 npc	20823
 item	50662	10
@@ -45565,7 +45565,7 @@ category	ACCESSORY
 percent	30
 end
 
-#Èæ¼öÁ¤¸ñ°ÉÀÌ
+#흑수정목걸이
 section
 npc	20823
 item	50662	10
@@ -45578,7 +45578,7 @@ category	ACCESSORY
 percent	30
 end
 
-#¿¬¼öÁ¤ÆÈÂî
+#연수정팔찌
 section
 npc	20823
 item	50663	10
@@ -45591,7 +45591,7 @@ category	ACCESSORY
 percent	30
 end
 
-#¿¬¼öÁ¤±Í°ÉÀÌ
+#연수정귀걸이
 section
 npc	20823
 item	50663	10
@@ -45604,7 +45604,7 @@ category	ACCESSORY
 percent	30
 end
 
-#¿¬¼öÁ¤¸ñ°ÉÀÌ
+#연수정목걸이
 section
 npc	20823
 item	50663	10
@@ -45617,7 +45617,7 @@ category	ACCESSORY
 percent	30
 end
 
-#¼º¸¶¼®
+#성마석
 section
 npc	20823
 item	28046	1
@@ -45628,7 +45628,7 @@ category	ETC
 percent	30
 end
 
-#¼º¸¶¼®
+#성마석
 section
 npc	20823
 item	28146	1
@@ -45639,7 +45639,7 @@ category	ETC
 percent	30
 end
 
-#¼º¸¶¼®
+#성마석
 section
 npc	20823
 item	28246	1
@@ -45650,7 +45650,7 @@ category	ETC
 percent	30
 end
 
-#¼º¸¶¼®
+#성마석
 section
 npc	20823
 item	28346	1
@@ -45661,7 +45661,7 @@ category	ETC
 percent	30
 end
 
-#¼º¸¶¼®
+#성마석
 section
 npc	20823
 item	28446	1
@@ -45672,7 +45672,7 @@ category	ETC
 percent	30
 end
 
-#8Â÷¹«»ç°©¿Ê
+#8차무사갑옷
 section
 npc	20807
 item	21326	1
@@ -45687,7 +45687,7 @@ category	ARMOR
 percent	50
 end
 
-#8Â÷ÀÚ°´°©¿Ê
+#8차자객갑옷
 section
 npc	20807
 item	21346	1
@@ -45702,7 +45702,7 @@ category	ARMOR
 percent	50
 end
 
-#8Â÷¼ö¶ó°©¿Ê
+#8차수라갑옷
 section
 npc	20807
 item	21366	1
@@ -45717,7 +45717,7 @@ category	ARMOR
 percent	50
 end
 
-#8Â÷¹«´ç°©¿Ê
+#8차무당갑옷
 section
 npc	20807
 item	21386	1
@@ -45732,7 +45732,7 @@ category	ARMOR
 percent	50
 end
 
-#8Â÷¼öÀÎ°©¿Ê
+#8차수인갑옷
 section
 npc	20807
 item	21406	1
@@ -45747,7 +45747,7 @@ category	ARMOR
 percent	50
 end
 
-#8Â÷ÇÑ¼Õ°Ë
+#8차한손검
 section
 npc	20807
 item	376	1
@@ -45762,7 +45762,7 @@ category	WEAPON
 percent	50
 end
 
-#8Â÷¾ç¼Õ°Ë
+#8차양손검
 section
 npc	20807
 item	3266	1
@@ -45777,7 +45777,7 @@ category	WEAPON
 percent	50
 end
 
-#8Â÷¼ö¶ó°Ë
+#8차수라검
 section
 npc	20807
 item	396	1
@@ -45792,7 +45792,7 @@ category	WEAPON
 percent	50
 end
 
-#8Â÷´Ü°Ë
+#8차단검
 section
 npc	20807
 item	1226	1
@@ -45807,7 +45807,7 @@ category	WEAPON
 percent	50
 end
 
-#8Â÷°¢±Ã
+#8차각궁
 section
 npc	20807
 item	2246	1
@@ -45822,7 +45822,7 @@ category	WEAPON
 percent	50
 end
 
-#8Â÷ºÎÃ¤
+#8차부채
 section
 npc	20807
 item	7346	1
@@ -45837,7 +45837,7 @@ category	WEAPON
 percent	50
 end
 
-#8Â÷¹æ¿ï
+#8차방울
 section
 npc	20807
 item	5216	1
@@ -45852,7 +45852,7 @@ category	WEAPON
 percent	50
 end
 
-#8Â÷¼öÀÎ¹«±â
+#8차수인무기
 section
 npc	20807
 item	6166	1
@@ -45867,7 +45867,7 @@ category	WEAPON
 percent	50
 end
 
-#¹ì°¡·ç
+#뱀가루
 section
 npc	20807
 item	31257	30
@@ -45877,7 +45877,7 @@ category	ETC
 percent	100
 end
 
-#¹ì°¡·ç
+#뱀가루
 section
 npc	20807
 item	31258	30
@@ -45887,7 +45887,7 @@ category	ETC
 percent	100
 end
 
-#2Â÷ÈûÀÇÀå°©
+#2차힘의장갑
 section
 npc	20823
 item	23000	1
@@ -46008,7 +46008,7 @@ category	ARMOR_GLOVE
 percent	100
 end
 
-#2Â÷Ç×·ÂÀÇÀå°©
+#2차항력의장갑
 section
 npc	20823
 item	23010	1
@@ -46130,7 +46130,7 @@ category	ARMOR_GLOVE
 percent	100
 end
 
-#2Â÷½ÅÃ¼ÀÇÀå°©
+#2차신체의장갑
 section
 npc	20823
 item	23020	1
@@ -46251,7 +46251,7 @@ category	ARMOR_GLOVE
 percent	100
 end
 
-#2Â÷Áö¼ºÀÇÀå°©
+#2차지성의장갑
 section
 npc	20823
 item	23030	1
@@ -46624,7 +46624,7 @@ category	ETC
 percent	90
 end
 
-#³ë¸®°³°áÁ¤Ã¼
+#노리개결정체
 section
 npc	20850
 item	81000	1
@@ -46638,7 +46638,7 @@ category	ETC
 percent	90
 end
 
-#½Åºñ³ë¸®°³
+#신비노리개
 section
 npc	20850
 item	31270	1
@@ -46650,7 +46650,7 @@ category	ACCESSORY
 percent	100
 end
 
-#¿°¿Õ°¢ÆĞ
+#염왕각패
 section
 npc	20433
 item	30661	30
@@ -46664,7 +46664,7 @@ category	ARMOR
 percent	100
 end
 
-#¿°ÆÄ¼®
+#염파석
 section
 npc	20433
 item	30659	5
@@ -46676,7 +46676,7 @@ category	ETC
 percent	50
 end
 
-#±Ø¶ôÁ¶¼ÒÈ¯ÆĞ
+#극락조소환패
 section
 npc	20433
 item	30662	10
@@ -46687,7 +46687,7 @@ category	PET
 percent	30
 end
 
-#Ã¶°¡ÀÎ(º§Æ®)_º°2
+#철가인(벨트)_º°2
 section
 npc	20017
 item	79605	2
@@ -46699,7 +46699,7 @@ subcategory	1
 percent	40
 end
 
-#Ã¶°¡ÀÎ(º§Æ®)_º°3
+#철가인(벨트)_º°3
 section
 npc	20017
 item	79606	2
@@ -46711,7 +46711,7 @@ subcategory	1
 percent	40
 end
 
-#Ã¶°¡ÀÎ(º§Æ®)_º°4
+#철가인(벨트)_º°4
 section
 npc	20017
 item	79607	2
@@ -46723,7 +46723,7 @@ subcategory	1
 percent	40
 end
 
-#Ã¶°¡ÀÎ(º§Æ®)_º°5
+#철가인(벨트)_º°5
 section
 npc	20017
 item	79608	2
@@ -46735,7 +46735,7 @@ subcategory	1
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¹«±â)_º°2
+#철가인(무기)_º°2
 section
 npc	20017
 item	79610	2
@@ -46747,7 +46747,7 @@ subcategory	2
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¹«±â)_º°3
+#철가인(무기)_º°3
 section
 npc	20017
 item	79611	2
@@ -46759,7 +46759,7 @@ subcategory	2
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¹«±â)_º°4
+#철가인(무기)_º°4
 section
 npc	20017
 item	79612	2
@@ -46771,7 +46771,7 @@ subcategory	2
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¹«±â)_º°5
+#철가인(무기)_º°5
 section
 npc	20017
 item	79613	2
@@ -46783,7 +46783,7 @@ subcategory	2
 percent	40
 end
 
-#Ã¶°¡ÀÎ(°©¿Ê)_º°2
+#철가인(갑옷)_º°2
 section
 npc	20017
 item	79615	2
@@ -46795,7 +46795,7 @@ subcategory	3
 percent	40
 end
 
-#Ã¶°¡ÀÎ(°©¿Ê)_º°3
+#철가인(갑옷)_º°3
 section
 npc	20017
 item	79616	2
@@ -46807,7 +46807,7 @@ subcategory	3
 percent	40
 end
 
-#Ã¶°¡ÀÎ(°©¿Ê)_º°4
+#철가인(갑옷)_º°4
 section
 npc	20017
 item	79617	2
@@ -46819,7 +46819,7 @@ subcategory	3
 percent	40
 end
 
-#Ã¶°¡ÀÎ(°©¿Ê)_º°5
+#철가인(갑옷)_º°5
 section
 npc	20017
 item	79618	2
@@ -46831,7 +46831,7 @@ subcategory	3
 percent	40
 end
 
-#Ã¶°¡ÀÎ(±âÅ¸)_º°2
+#철가인(기타)_º°2
 section
 npc	20017
 item	79620	2
@@ -46843,7 +46843,7 @@ subcategory	4
 percent	40
 end
 
-#Ã¶°¡ÀÎ(±âÅ¸)_º°3
+#철가인(기타)_º°3
 section
 npc	20017
 item	79621	2
@@ -46855,7 +46855,7 @@ subcategory	4
 percent	40
 end
 
-#Ã¶°¡ÀÎ(±âÅ¸)_º°4
+#철가인(기타)_º°4
 section
 npc	20017
 item	79622	2
@@ -46867,7 +46867,7 @@ subcategory	4
 percent	40
 end
 
-#Ã¶°¡ÀÎ(±âÅ¸)_º°5
+#철가인(기타)_º°5
 section
 npc	20017
 item	79623	2
@@ -46879,7 +46879,7 @@ subcategory	4
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¿¢¼¼¼­¸®)_º°2
+#철가인(엑세서리)_º°2
 section
 npc	20017
 item	79625	2
@@ -46891,7 +46891,7 @@ subcategory	5
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¿¢¼¼¼­¸®)_º°3
+#철가인(엑세서리)_º°3
 section
 npc	20017
 item	79626	2
@@ -46903,7 +46903,7 @@ subcategory	5
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¿¢¼¼¼­¸®)_º°4
+#철가인(엑세서리)_º°4
 section
 npc	20017
 item	79627	2
@@ -46915,7 +46915,7 @@ subcategory	5
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¿¢¼¼¼­¸®)_º°5
+#철가인(엑세서리)_º°5
 section
 npc	20017
 item	79628	2
@@ -46927,7 +46927,7 @@ subcategory	5
 percent	40
 end
 
-#Ã¶°¡ÀÎ(½ºÅ³ºÏ)_º°2
+#철가인(스킬북)_º°2
 section
 npc	20017
 item	79630	2
@@ -46939,7 +46939,7 @@ subcategory	6
 percent	40
 end
 
-#Ã¶°¡ÀÎ(½ºÅ³ºÏ)_º°3
+#철가인(스킬북)_º°3
 section
 npc	20017
 item	79631	2
@@ -46951,7 +46951,7 @@ subcategory	6
 percent	40
 end
 
-#Ã¶°¡ÀÎ(½ºÅ³ºÏ)_º°4
+#철가인(스킬북)_º°4
 section
 npc	20017
 item	79632	2
@@ -46963,7 +46963,7 @@ subcategory	6
 percent	40
 end
 
-#Ã¶°¡ÀÎ(½ºÅ³ºÏ)_º°5
+#철가인(스킬북)_º°5
 section
 npc	20017
 item	79633	2
@@ -46975,7 +46975,7 @@ subcategory	6
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®¹«±â)_º°2
+#철가인(세트무기)_º°2
 section
 npc	20017
 item	79635	2
@@ -46987,7 +46987,7 @@ subcategory	7
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®¹«±â)_º°3
+#철가인(세트무기)_º°3
 section
 npc	20017
 item	79636	2
@@ -46999,7 +46999,7 @@ subcategory	7
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®¹«±â)_º°4
+#철가인(세트무기)_º°4
 section
 npc	20017
 item	79637	2
@@ -47011,7 +47011,7 @@ subcategory	7
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®¹«±â)_º°5
+#철가인(세트무기)_º°5
 section
 npc	20017
 item	79638	2
@@ -47023,7 +47023,7 @@ subcategory	7
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®Çï¸ä)_º°2
+#철가인(세트헬멧)_º°2
 section
 npc	20017
 item	79640	2
@@ -47035,7 +47035,7 @@ subcategory	8
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®Çï¸ä)_º°3
+#철가인(세트헬멧)_º°3
 section
 npc	20017
 item	79641	2
@@ -47047,7 +47047,7 @@ subcategory	8
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®Çï¸ä)_º°4
+#철가인(세트헬멧)_º°4
 section
 npc	20017
 item	79642	2
@@ -47059,7 +47059,7 @@ subcategory	8
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®Çï¸ä)_º°5
+#철가인(세트헬멧)_º°5
 section
 npc	20017
 item	79643	2
@@ -47071,7 +47071,7 @@ subcategory	8
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®°©¿Ê)_º°2
+#철가인(세트갑옷)_º°2
 section
 npc	20017
 item	79645	2
@@ -47083,7 +47083,7 @@ subcategory	9
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®°©¿Ê)_º°3
+#철가인(세트갑옷)_º°3
 section
 npc	20017
 item	79646	2
@@ -47095,7 +47095,7 @@ subcategory	9
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®°©¿Ê)_º°4
+#철가인(세트갑옷)_º°4
 section
 npc	20017
 item	79647	2
@@ -47107,7 +47107,7 @@ subcategory	9
 percent	40
 end
 
-#Ã¶°¡ÀÎ(¼¼Æ®°©¿Ê)_º°5
+#철가인(세트갑옷)_º°5
 section
 npc	20017
 item	79648	2
@@ -47119,7 +47119,7 @@ subcategory	9
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Àå°©)_º°2
+#철가인(장갑)_º°2
 section
 npc	20017
 item	79650	2
@@ -47131,7 +47131,7 @@ subcategory	10
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Àå°©)_º°3
+#철가인(장갑)_º°3
 section
 npc	20017
 item	79651	2
@@ -47143,7 +47143,7 @@ subcategory	10
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Àå°©)_º°4
+#철가인(장갑)_º°4
 section
 npc	20017
 item	79652	2
@@ -47155,7 +47155,7 @@ subcategory	10
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Àå°©)_º°5
+#철가인(장갑)_º°5
 section
 npc	20017
 item	79653	2
@@ -47167,7 +47167,7 @@ subcategory	10
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Æê)_º°2
+#철가인(펫)_º°2
 section
 npc	20017
 item	79655	2
@@ -47179,7 +47179,7 @@ subcategory	11
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Æê)_º°3
+#철가인(펫)_º°3
 section
 npc	20017
 item	79656	2
@@ -47191,7 +47191,7 @@ subcategory	11
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Æê)_º°4
+#철가인(펫)_º°4
 section
 npc	20017
 item	79657	2
@@ -47203,7 +47203,7 @@ subcategory	11
 percent	40
 end
 
-#Ã¶°¡ÀÎ(Æê)_º°5
+#철가인(펫)_º°5
 section
 npc	20017
 item	79658	2

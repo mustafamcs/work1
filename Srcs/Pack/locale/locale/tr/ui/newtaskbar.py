@@ -305,7 +305,7 @@ window = {
 			"down_image" : ROOT + "TaskBar/Mouse_Button_Move_03.sub",
 		},
 		## ENABLE_GEM_SYSTEM
-		## ³ª¶óº°·Î µû·Î ÀÖ´Â ÆÄÀÏÀÌ±â ¶§¹®¿¡ ±»ÀÌ µðÆÄÀÎÀ¸·Î °É·¯¼­ ÀÛ¾÷ ¾ÈÇÔ.
+		## ë‚˜ë¼ë³„ë¡œ ë”°ë¡œ ìžˆëŠ” íŒŒì¼ì´ê¸° ë•Œë¬¸ì— êµ³ì´ ë””íŒŒì¸ìœ¼ë¡œ ê±¸ëŸ¬ì„œ ìž‘ì—… ì•ˆí•¨.
 		{
 			"name" : "ExpandMoneyButton",
 			"type" : "button",

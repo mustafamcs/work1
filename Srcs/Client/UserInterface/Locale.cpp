@@ -245,7 +245,7 @@ struct SLOCALEDATA
 	WORD		wCodePage;
 	const char*	szSecurityKey;
 } gs_stLocaleData[] = {
-	{ LSS_EUROPE,	"tr",			1254,	"1234abcd5678efgh"	},		// Turkey
+	{ LSS_EUROPE,	"tr",			65001,	"1234abcd5678efgh"	},		// Turkey
 	{ LSS_EUROPE,	"en",			1252,	"1234abcd5678efgh"	},		// English
 	{ NULL,			NULL,			0,		"testtesttesttest"	}
 };

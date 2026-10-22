@@ -1,8 +1,8 @@
-﻿#Group NormalÀº ¸Ç Ã³À½¿¡ À§Ä¡ÇØ¾ß ÇÕ´Ï´Ù.
-#Group ÀÌ¸§Àº ¾Æ¹«°Å³ª »ó°ü¾ø½À´Ï´Ù.
-#¾ø´Â tip_vnumÀÏ °æ¿ì ¾Æ¹«°Íµµ Ç¥±âµÇÁö ¾Ê½À´Ï´Ù.
-#¾ø´Â map_indexÀÏ °æ¿ì ¸Ç Ã³À½ Group(ÇöÀç - Group Normal)ÇØ´çÇÏ´Â tip_vnumÀÌ »ç¿ëµË´Ï´Ù.
-#map_indexÀÇ °ªÀ» ºñ¿ö ³õÀ» °æ¿ì Group NormalÀÇ tip_vnumÀ» »ç¿ëÇÕ´Ï´Ù.
+﻿#Group NormalÀº 맨 처음에 위치해야 합니다.
+#Group 이름은 아무거나 상관없습니다.
+#없는 tip_vnumÀÏ 경우 아무것도 표기되지 않습니다.
+#없는 map_indexÀÏ 경우 맨 처음 Group(현재 - Group Normal)해당하는 tip_vnumÀÌ 사용됩니다.
+#map_indexÀÇ 값을 비워 놓을 경우 Group NormalÀÇ tip_vnumÀ» 사용합니다.
 Group Normal
 {
 	list tip_vnum

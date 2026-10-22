@@ -15,12 +15,12 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// ÀÏº»¾î resources
+// ì¼ë³¸ì–´ resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 #ifdef _WIN32
 LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
-#pragma code_page(932)
+#pragma code_page(65001)
 #endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
@@ -33,17 +33,17 @@ BEGIN
     IDS_POSSESSIVE_MORPHENE "'s"
 END
 
-#endif    // ÀÏº»¾î resources
+#endif    // ì¼ë³¸ì–´ resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// Áß±¹¾î(Áß±¹) resources
+// ì¤‘êµ­ì–´(ì¤‘êµ­) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 #ifdef _WIN32
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
-#pragma code_page(936)
+#pragma code_page(65001)
 #endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
@@ -54,21 +54,21 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 STRINGTABLE
 BEGIN
     IDS_POSSESSIVE_MORPHENE "'s"
-    IDS_WARN_BAD_DRIVER     "Ï£ÍûÄúÄÜ¸üÐÂÏÔ¿¨Çý¶¯¡£"
-    IDS_WARN_NO_TNL         "ÄúµÄÏÔ¿¨²»Ö§³Ö3D TnL Ó²¼þ¼ÓËÙ\nÓÎÏ·½«ÎÞ·¨Õý³£ÔËÐÐ¡£"
+    IDS_WARN_BAD_DRIVER     "å¥å¯¡í€­ì½˜ë«˜åŠ¤éž«ì—¥í˜œë•¡ã€‚"
+    IDS_WARN_NO_TNL         "í€­ë¨éž«ì—¥ê¼‡é€£ë„£3D TnL è¢’ìˆ­ì†é†µ\nè¸ç‹—ì‰¥è½Ÿëž¬æ”£ë½é “ï¤‰ã€‚"
 END
 
-#endif    // Áß±¹¾î(Áß±¹) resources
+#endif    // ì¤‘êµ­ì–´(ì¤‘êµ­) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// ÇÑ±¹¾î resources
+// í•œêµ­ì–´ resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
 #ifdef _WIN32
 LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
-#pragma code_page(949)
+#pragma code_page(65001)
 #endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
@@ -204,26 +204,26 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APP_NAME            "¸ÞÆ¾2"
-    IDS_POSSESSIVE_MORPHENE "ÀÇ"
-    IDS_WARN_BAD_DRIVER     "±×·¡ÇÈ µå¶óÀÌ¹ö¸¦ ¾÷µ¥ÀÌÆ® ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù."
-    IDS_WARN_NO_TNL         "»ç¿ëÇÏ°í °è½Å ½Ã½ºÅÛÀÇ ±×·¡ÇÈÄ«µå´Â 3D TnL ÇÏµå¿þ¾î °¡¼ÓÀÌ Áö¿øµÇÁö ¾Ê¾Æ\n°ÔÀÓÀÌ ´À¸®°Ô ½ÇÇàµÇ°Å³ª Á¦´ë·Î ½ÇÇàµÇÁö ¾ÊÀ»¼ö ÀÖ½À´Ï´Ù."
-    IDS_ERR_CANNOT_READ_FILE "%s ÆÄÀÏÀ» ÀÐÀ» ¼ö ¾ø½À´Ï´Ù."
-    IDS_ERR_NOT_LATEST_FILE "'%s' ÆÄÀÏÀº ÃÖ½Å¹öÀüÀÌ ¾Æ´Õ´Ï´Ù. ·±Ã³¸¦ ´Ù½Ã ½ÇÇàÇØÁÖ¼¼¿ä."
-    IDS_ERR_MUST_LAUNCH_FROM_PATCHER "Å¬¶óÀÌ¾ðÆ®´Â ÆÐÃ³¸¦ »ç¿ëÇØ¼­ ½ÇÇàµÇ¾î¾ß ÇÕ´Ï´Ù."
+    IDS_APP_NAME            "ë©”í‹´2"
+    IDS_POSSESSIVE_MORPHENE "ì˜"
+    IDS_WARN_BAD_DRIVER     "ê·¸ëž˜í”½ ë“œë¼ì´ë²„ë¥¼ ì—…ë°ì´íŠ¸ í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤."
+    IDS_WARN_NO_TNL         "ì‚¬ìš©í•˜ê³  ê³„ì‹  ì‹œìŠ¤í…œì˜ ê·¸ëž˜í”½ì¹´ë“œëŠ” 3D TnL í•˜ë“œì›¨ì–´ ê°€ì†ì´ ì§€ì›ë˜ì§€ ì•Šì•„\nê²Œìž„ì´ ëŠë¦¬ê²Œ ì‹¤í–‰ë˜ê±°ë‚˜ ì œëŒ€ë¡œ ì‹¤í–‰ë˜ì§€ ì•Šì„ìˆ˜ ìžˆìŠµë‹ˆë‹¤."
+    IDS_ERR_CANNOT_READ_FILE "%s íŒŒì¼ì„ ì½ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤."
+    IDS_ERR_NOT_LATEST_FILE "'%s' íŒŒì¼ì€ ìµœì‹ ë²„ì „ì´ ì•„ë‹™ë‹ˆë‹¤. ëŸ°ì²˜ë¥¼ ë‹¤ì‹œ ì‹¤í–‰í•´ì£¼ì„¸ìš”."
+    IDS_ERR_MUST_LAUNCH_FROM_PATCHER "í´ë¼ì´ì–¸íŠ¸ëŠ” íŒ¨ì²˜ë¥¼ ì‚¬ìš©í•´ì„œ ì‹¤í–‰ë˜ì–´ì•¼ í•©ë‹ˆë‹¤."
 END
 
-#endif    // ÇÑ±¹¾î resources
+#endif    // í•œêµ­ì–´ resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// ¿µ¾î(¹Ì±¹) resources
+// ì˜ì–´(ë¯¸êµ­) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 #ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
-#pragma code_page(1252)
+#pragma code_page(65001)
 #endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
@@ -242,7 +242,7 @@ BEGIN
     IDS_ERR_MUST_LAUNCH_FROM_PATCHER "Please run patcher."
 END
 
-#endif    // ¿µ¾î(¹Ì±¹) resources
+#endif    // ì˜ì–´(ë¯¸êµ­) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
