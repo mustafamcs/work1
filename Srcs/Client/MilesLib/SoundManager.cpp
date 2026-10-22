@@ -473,7 +473,7 @@ void CSoundManager::FadeLimitOutMusic(const char * c_szFileName, float fLimitVol
 	DWORD dwIndex;
 	if (!GetMusicIndex(c_szFileName, &dwIndex))
 	{
-		Tracenf("FadeOutMusic: %s - ERROR NOT EXIST", c_szFileName);
+		Tracenf("FadeOutMusic: %s - HATA MEVCUT DEGIL", c_szFileName);
 		return;
 	}
 
@@ -498,7 +498,7 @@ void CSoundManager::FadeOutMusic(const char * c_szFileName, float fVolumeSpeed)
 	DWORD dwIndex;
 	if (!GetMusicIndex(c_szFileName, &dwIndex))
 	{
-		Tracenf("FadeOutMusic: %s - ERROR NOT EXIST", c_szFileName);
+		Tracenf("FadeOutMusic: %s - HATA MEVCUT DEGIL", c_szFileName);
 		return;
 	}
 

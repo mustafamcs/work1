@@ -149,7 +149,7 @@ public:
 		auto mode2 = w2s(mode);
 		if (!fn2 || !mode2)
 		{
-			printf("failed open conversion of %ws %ws\n", filename.data(), mode);
+			printf("%ws %ws dönüşümü açılamadı\n", filename.data(), mode);
 			return;
 		}
 		m_ptr_ = std::fopen(fn2->c_str(), mode2->c_str());

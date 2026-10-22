@@ -126,13 +126,13 @@ bool ProcessScanner_Create()
 	gs_hThread=(HANDLE)_beginthread(ProcessScanner_Thread, 64*1024, NULL);
 	if (INVALID_HANDLE_VALUE==gs_hThread)
 	{
-		LogBox("CreateThread Error");
+		LogBox("CreateThread Hatasi");
 		return false;
 	}
 
 	if (!SetThreadPriority(gs_hThread, THREAD_PRIORITY_LOWEST))
 	{
-		LogBox("SetThreadPriority Error");
+		LogBox("SetThreadPriority Hatasi");
 		return false;
 	}
 

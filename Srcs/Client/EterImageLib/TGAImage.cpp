@@ -137,8 +137,8 @@ bool CTGAImage::LoadFromMemory(int iSize, const BYTE * c_pbMem)
 
 								if (i > hxw)
 								{
-									assert(!"RLE overflow");
-									printf("RLE overflow");
+									assert(!"RLE taşması");
+									printf("RLE taşması");
 									return false;
 								}
 								--rle;
@@ -159,8 +159,8 @@ bool CTGAImage::LoadFromMemory(int iSize, const BYTE * c_pbMem)
 
 								if (i > hxw)
 								{
-									assert(!"RLE overflow");
-									printf("RLE overflow");
+									assert(!"RLE taşması");
+									printf("RLE taşması");
 									return false;
 								}
 								--rle;
@@ -189,8 +189,8 @@ bool CTGAImage::LoadFromMemory(int iSize, const BYTE * c_pbMem)
 
 								if (i > hxw)
 								{
-									assert(!"RLE overflow");
-									printf("RLE overflow");
+									assert(!"RLE taşması");
+									printf("RLE taşması");
 									return false;
 								}
 								--rle;
@@ -211,8 +211,8 @@ bool CTGAImage::LoadFromMemory(int iSize, const BYTE * c_pbMem)
 
 								if (i > hxw)
 								{
-									assert(!"RLE overflow");
-									printf("RLE overflow");
+									assert(!"RLE taşması");
+									printf("RLE taşması");
 									return false;
 								}
 

@@ -535,7 +535,7 @@ bool CPythonApplication::Process()
 		if ( dt >= 500 )
 		{
 			s_uiNextFrameTime += nAdjustTime;
-			printf("FrameSkip Adjusting... %d\n",nAdjustTime);
+			printf("FrameSkip Ayarlanıyor... %d\n",nAdjustTime);
 			CTimer::Instance().Adjust(nAdjustTime);
 		}
 		s_bFrameSkip = true;

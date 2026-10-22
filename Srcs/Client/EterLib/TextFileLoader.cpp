@@ -293,7 +293,7 @@ bool CTextFileLoader::LoadGroup(TGroupNode * pGroupNode)
 
 			if (1 == stTokenVector.size())
 			{
-				TraceError("CTextFileLoader::LoadGroup : must have a value (filename: %s line: %d key: %s)",
+				TraceError("CTextFileLoader::LoadGroup : bir değer olmalı (dosya: %s satır: %d anahtar: %s)",
 							m_strFileName.c_str(),
 							m_dwcurLineIndex,
 							key.c_str());

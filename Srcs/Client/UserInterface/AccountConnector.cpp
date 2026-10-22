@@ -218,7 +218,7 @@ bool CAccountConnector::__AuthState_RecvHandshake()
 		kPacketHandshake.dwTime = kPacketHandshake.dwTime + kPacketHandshake.lDelta + kPacketHandshake.lDelta;
 		kPacketHandshake.lDelta = 0;
 
-		Tracenf("HANDSHAKE SEND %u", kPacketHandshake.dwTime);
+		Tracenf("HANDSHAKE GONDER %u", kPacketHandshake.dwTime);
 
 		if (!Send(sizeof(kPacketHandshake), &kPacketHandshake))
 		{
@@ -347,7 +347,7 @@ bool CAccountConnector::__AuthState_RecvKeyAgreement()
 		return false;
 	}
 
-	Tracenf("KEY_AGREEMENT RECV %u", packet.wDataLength);
+	Tracenf("KEY_AGREEMENT ALDI %u", packet.wDataLength);
 
 	TPacketKeyAgreement packetToSend;
 	size_t dataLength = TPacketKeyAgreement::MAX_DATA_LEN;
@@ -370,7 +370,7 @@ bool CAccountConnector::__AuthState_RecvKeyAgreement()
 			Tracen(" CAccountConnector::__AuthState_RecvKeyAgreement - SendKeyAgreement Error");
 			return false;
 		}
-		Tracenf("KEY_AGREEMENT SEND %u", packetToSend.wDataLength);
+		Tracenf("KEY_AGREEMENT GONDER %u", packetToSend.wDataLength);
 	}
 	else
 	{
@@ -388,7 +388,7 @@ bool CAccountConnector::__AuthState_RecvKeyAgreementCompleted()
 		return false;
 	}
 
-	Tracenf("KEY_AGREEMENT_COMPLETED RECV");
+	Tracenf("KEY_AGREEMENT_COMPLETED ALDI");
 
 	ActivateCipher();
 

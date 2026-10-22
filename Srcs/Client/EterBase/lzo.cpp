@@ -191,7 +191,7 @@ bool CLZObject::BeginDecompress(const void * pvIn)
 	static unsigned count = 0;
 	sum += pHeader->dwRealSize;
 	count++;
-	printf("decompress cur: %d, ave: %d\n", pHeader->dwRealSize, sum/count);
+	printf("sıkıştırma açma şu anki: %d, ort: %d\n", pHeader->dwRealSize, sum/count);
 	*/
 	m_dwBufferSize = pHeader->dwRealSize;
 	m_pbBuffer = gs_freeMemMgr.Alloc(m_dwBufferSize);
@@ -271,7 +271,7 @@ bool CLZObject::Decompress(DWORD * pdwKey)
 
 		if (LZO_E_OK != (r = lzo1x_decompress(pbDecryptedBuffer + sizeof(DWORD), m_pHeader->dwCompressedSize, m_pbBuffer, (lzo_uint*) &uiSize, NULL)))
 		{
-			TraceError("LZObject: Decompress failed(decrypt) ret %d\n", r);
+			TraceError("LZObject: Sıkıştırma açma başarısız(şifre çözme) ret %d\n", r);
 			return false;
 		}
     }
@@ -282,7 +282,7 @@ bool CLZObject::Decompress(DWORD * pdwKey)
 		//if (LZO_E_OK != (r = lzo1x_decompress_safe(m_pbIn, m_pHeader->dwCompressedSize, m_pbBuffer, (lzo_uint*) &uiSize, NULL)))
 		if (LZO_E_OK != (r = lzo1x_decompress(m_pbIn, m_pHeader->dwCompressedSize, m_pbBuffer, (lzo_uint*) &uiSize, NULL)))
 		{
-			TraceError("LZObject: Decompress failed : ret %d, CompressedSize %d\n", r, m_pHeader->dwCompressedSize);
+			TraceError("LZObject: Sıkıştırma açma başarısız : ret %d, SıkıştırılmışBoyut %d\n", r, m_pHeader->dwCompressedSize);
 			return false;
 		}
     }

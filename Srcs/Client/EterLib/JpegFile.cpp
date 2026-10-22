@@ -63,7 +63,7 @@ static void mem_init_destination(j_compress_ptr cinfo)
 
 static boolean mem_empty_output_buffer(j_compress_ptr cinfo)
 {
-    printf("jpeg mem overflow!\n");
+    printf("jpeg bellek taşması!\n");
     exit(1);
 }
 
@@ -301,7 +301,7 @@ int jpeg_load(const char*filename, unsigned char**dest, int*_width, int*_height)
 
     FILE*fi = fopen(filename, "rb");
     if(!fi) {
-        fprintf(stderr, "Couldn't open file %s\n", filename);
+        fprintf(stderr, "%s dosyası açılamadı\n", filename);
 	return 0;
     }
 
@@ -337,7 +337,7 @@ int jpeg_load(const char*filename, unsigned char**dest, int*_width, int*_height)
 		line[x].b = js[x*3+2];
 	    }
 	} else if (cinfo.out_color_space == JCS_YCCK) {
-	    fprintf(stderr, "Error: Can't convert YCCK to RGB.\n");
+	    fprintf(stderr, "Hata: YCCK RGB'ye dönüştürülemiyor.\n");
 	    return 0;
 	} else if (cinfo.out_color_space == JCS_YCbCr) {
 	    for (x = 0; x < width; x++) {

@@ -420,7 +420,7 @@ PyObject *_PyMarshal_ReadLastObjectFromFile(FILE *fp)
 
 	if (PyErr_Occurred())
 	{
-		fprintf(stderr, "XXX rd_object called with exception set\n");
+		fprintf(stderr, "XXX rd_object istisna ile çağrıldı\n");
 		return NULL;
 	}
 
@@ -455,7 +455,7 @@ PyObject * _PyMarshal_ReadObjectFromFile(FILE *fp)
 {
 	RFILE rf;
 	if (PyErr_Occurred()) {
-		fprintf(stderr, "XXX rd_object called with exception set\n");
+		fprintf(stderr, "XXX rd_object istisna ile çağrıldı\n");
 		return NULL;
 	}
 	rf.fp = fp;
@@ -466,7 +466,7 @@ PyObject * _PyMarshal_ReadObjectFromString(char *str, int len)
 {
 	RFILE rf;
 	if (PyErr_Occurred()) {
-		fprintf(stderr, "XXX rds_object called with exception set\n");
+		fprintf(stderr, "XXX rds_object istisna ile çağrıldı\n");
 		return NULL;
 	}
 	rf.fp = NULL;

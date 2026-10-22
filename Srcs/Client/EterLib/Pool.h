@@ -117,7 +117,7 @@ class CDynamicPoolEx
 
 #ifdef _DEBUG
 			char szText[256];
-			sprintf(szText, "--------------------------------------------------------------------- %s Pool Capacity %d\n", typeid(T).name(), m_uUsedCapacity);
+			sprintf(szText, "--------------------------------------------------------------------- %s Havuz Kapasitesi %d\n", typeid(T).name(), m_uUsedCapacity);
 			OutputDebugString(szText);
 			printf(szText);
 #endif
@@ -134,7 +134,7 @@ class CDynamicPoolEx
 			if (!m_kVct_pkData.empty())
 			{
 				char szText[256];
-				sprintf(szText, "--------------------------------------------------------------------- %s Pool Destroy\n", typeid(T).name());
+				sprintf(szText, "--------------------------------------------------------------------- %s Havuz Yok Edildi\n", typeid(T).name());
 				OutputDebugString(szText);
 				printf(szText);
 			}

@@ -88,7 +88,7 @@ bool CGuildMarkManager::SaveMarkIndex()
 
 	if (!fp)
 	{
-		sys_err("MarkManager::SaveMarkData: cannot open index file.");
+		sys_err("MarkManager::SaveMarkData: indeks dosyası açılamıyor.");
 		return false;
 	}
 
@@ -96,7 +96,7 @@ bool CGuildMarkManager::SaveMarkIndex()
 		fprintf(fp, "%d %d\n", it->first, it->second);
 
 	fclose(fp);
-	sys_log(0, "MarkManager::SaveMarkData: index count %d", m_mapGID_MarkID.size());
+	sys_log(0, "MarkManager::SaveMarkData: indeks sayısı %d", m_mapGID_MarkID.size());
 	return true;
 }
 
@@ -124,7 +124,7 @@ void CGuildMarkManager::SaveMarkImage(DWORD imgIdx)
 
 	if (GetMarkImageFilename(imgIdx, path))
 		if (!__GetImage(imgIdx)->Save(path.c_str()))
-			sys_err("%s Save failed\n", path.c_str());
+			sys_err("%s kayıt başarısız\n", path.c_str());
 }
 
 CGuildMarkImage * CGuildMarkManager::__GetImage(DWORD imgIdx)
@@ -219,7 +219,7 @@ DWORD CGuildMarkManager::SaveMark(DWORD guildID, BYTE * pbMarkImage)
 	{
 		if ((idMark = __AllocMarkID(guildID)) == INVALID_MARK_ID)
 		{
-			sys_err("CGuildMarkManager: cannot alloc mark id %u", guildID);
+			sys_err("CGuildMarkManager: mark id %u ayrılamıyor", guildID);
 			return false;
 		}
 		else
@@ -271,7 +271,7 @@ void CGuildMarkManager::GetDiffBlocks(DWORD imgIdx, const DWORD * crcList, std::
 
 	if (m_mapIdx_Image.end() == m_mapIdx_Image.find(imgIdx))
 	{
-		sys_log(0, "invalid idx %u", imgIdx); // @warme668
+		sys_log(0, "geçersiz idx %u", imgIdx); // @warme668
 		return;
 	}
 
@@ -297,7 +297,7 @@ bool CGuildMarkManager::GetBlockCRCList(DWORD imgIdx, DWORD * crcList)
 {
 	if (m_mapIdx_Image.end() == m_mapIdx_Image.find(imgIdx))
 	{
-		sys_log(0, "invalid idx %u", imgIdx); // @warme668
+		sys_log(0, "geçersiz idx %u", imgIdx); // @warme668
 		return false;
 	}
 
@@ -357,7 +357,7 @@ void CGuildMarkManager::SaveSymbol(const char* filename)
 	FILE* fp = fopen(filename, "wb");
 	if (!fp)
 	{
-		sys_err("Cannot open Symbol file (name: %s)", filename);
+		sys_err("Sembol dosyası açılamıyor (isim: %s)", filename);
 		return;
 	}
 
@@ -378,7 +378,7 @@ void CGuildMarkManager::SaveSymbol(const char* filename)
 
 void CGuildMarkManager::UploadSymbol(DWORD guildID, int iSize, const BYTE* pbyData)
 {
-	sys_log(0, "GuildSymbolUpload guildID %lu Size %d", guildID, iSize);
+	sys_log(0, "GuildSymbolUpload guildID %lu Boyut %d", guildID, iSize);
 
 	if (m_mapSymbol.find(guildID) == m_mapSymbol.end())
 		m_mapSymbol.insert(std::make_pair(guildID, TGuildSymbol()));
@@ -428,7 +428,7 @@ void SaveMark(DWORD guildID, const char * filename)
 		mgr->SaveMark(guildID, data);
 	}
 	else
-		printf("%s cannot open file.\n", filename);
+		printf("%s dosya açılamıyor.\n", filename);
 }
 
 int main(int argc, char **argv)
@@ -471,7 +471,7 @@ int main(int argc, char **argv)
 
 	for (itertype(mapDiff) it = mapDiff.begin(); it != mapDiff.end(); ++it)
 	{
-		printf("Put Block pos %u crc %u\n", it->first, it->second->m_crc);
+		printf("Blok Koy konum %u crc %u\n", it->first, it->second->m_crc);
 		mgr->SaveBlockFromCompressedData(0, it->first, it->second->m_abCompBuf, it->second->m_sizeCompBuf);
 	}
 

@@ -571,7 +571,7 @@ inline auto vsprintf(
 
   **Example**::
 
-    std::string message = fmt::sprintf("The answer is %d", 42);
+    std::string message = fmt::sprintf("Cevap %d", 42);
   \endrst
 */
 template <typename S, typename... T,
@@ -624,7 +624,7 @@ inline auto vprintf(
 
   **Example**::
 
-    fmt::printf("Elapsed time: %.2f seconds", 1.23);
+    fmt::printf("Geçen süre: %.2f saniye", 1.23);
   \endrst
  */
 template <typename S, typename... T, FMT_ENABLE_IF(detail::is_string<S>::value)>

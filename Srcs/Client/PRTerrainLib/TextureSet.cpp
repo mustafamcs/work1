@@ -257,7 +257,7 @@ bool CTextureSet::Save(const char * c_pszFileName)
 	{
 		TTerrainTexture & rTex = m_Textures[i];
 
-		fprintf(pFile, "Start Texture%03d\n", i);
+		fprintf(pFile, "Başlangıç Dokusu%03d\n", i);
 		fprintf(pFile, "    \"%s\"\n", rTex.stFilename.c_str());
 		fprintf(pFile, "    %f\n", rTex.UScale);
 		fprintf(pFile, "    %f\n", rTex.VScale);
@@ -266,7 +266,7 @@ bool CTextureSet::Save(const char * c_pszFileName)
 		fprintf(pFile, "    %d\n", rTex.bSplat);
 		fprintf(pFile, "    %hu\n", rTex.Begin);
 		fprintf(pFile, "    %hu\n", rTex.End);
-		fprintf(pFile, "End Texture%03d\n", i);
+		fprintf(pFile, "Son Doku%03d\n", i);
 	}
 
 	fclose(pFile);

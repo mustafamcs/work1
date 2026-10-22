@@ -40,7 +40,7 @@ void CCamera::ProcessTerrainCollision()
 		if (D3DXVec3Length(&val) < 2.0f * m_fTerrainCollisionRadius)
 		{
 			D3DXVECTOR3 v3NewEye = v3CollisionPoint + 2.0f * m_fTerrainCollisionRadius * m_v3Up;
-			//printf("CameraBottomToTerrain new %f > old %f", v3NewEye.z, m_v3Eye.z);
+			//printf("CameraBottomToTerrain yeni %f > eski %f", v3NewEye.z, m_v3Eye.z);
 			SetEye(v3NewEye);
 		}
 	}

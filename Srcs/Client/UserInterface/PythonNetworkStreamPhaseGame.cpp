@@ -2167,7 +2167,7 @@ bool CPythonNetworkStream::RecvRequestMakeGuild()
 	TPacketGCBlank blank;
 	if (!Recv(sizeof(blank), &blank))
 	{
-		Tracen("RecvRequestMakeGuild Packet Error");
+		Tracen("LoncaOlusturmaIstegi Paket Hatasi");
 		return false;
 	}
 
@@ -2545,7 +2545,7 @@ bool CPythonNetworkStream::RecvDamageInfoPacket()
 
 	if (!Recv(sizeof(TPacketGCDamageInfo), &DamageInfoPacket))
 	{
-		Tracen("Recv Target Packet Error");
+		Tracen("Hedef Paketi Alma Hatasi");
 		return false;
 	}
 
@@ -2568,7 +2568,7 @@ bool CPythonNetworkStream::RecvTargetPacket()
 
 	if (!Recv(sizeof(TPacketGCTarget), &TargetPacket))
 	{
-		Tracen("Recv Target Packet Error");
+		Tracen("Hedef Paketi Alma Hatasi");
 		return false;
 	}
 
@@ -2671,7 +2671,7 @@ bool CPythonNetworkStream::RecvChangeSpeedPacket()
 
 	if (!Recv(sizeof(TPacketGCChangeSpeed), &SpeedPacket))
 	{
-		Tracen("Recv Speed Packet Error");
+		Tracen("Hiz Paketi Alma Hatasi");
 		return false;
 	}
 

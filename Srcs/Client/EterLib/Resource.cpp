@@ -46,7 +46,7 @@ void CResource::Load()
 	CMappedFile	file;
 	LPCVOID		fileData;
 
-	//Tracenf("Load %s", c_szFileName);
+	//Tracenf("Yukleniyor %s", c_szFileName);
 
 	if (CEterPackManager::Instance().Get(file, c_szFileName, &fileData))
 	{

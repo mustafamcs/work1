@@ -94,13 +94,13 @@ bool NSound::SaveSoundInformationPiece(const char * c_szFileName, NSound::TSound
 	if (!File)
 	{
 		char szErrorText[256+1];
-		_snprintf(szErrorText, sizeof(szErrorText), "Failed to save file (%s).\nPlease check if it is read-only or you have no space on the disk.\n", c_szFileName);
+		_snprintf(szErrorText, sizeof(szErrorText), "Dosya kaydedilemedi (%s).\nDosyanın salt-okunur olmadığını veya diskte yer olduğunu kontrol edin.\n", c_szFileName);
 		LogBox(szErrorText, "Error");
 		SetResultString((strResult + " Cannot open file for writing").c_str());
 		return false;
 	}
 
-	fprintf(File, "ScriptType        CharacterSoundInformation\n");
+	fprintf(File, "ScriptTipi        CharacterSoundInformation\n");
 	fprintf(File, "\n");
 
 	fprintf(File, "SoundDataCount    %d\n", rSoundDataVector.size());

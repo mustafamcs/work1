@@ -395,7 +395,7 @@ bool CGuildMarkUploader::__LoginState_RecvKeyAgreement()
 		return false;
 	}
 
-	Tracenf("KEY_AGREEMENT RECV %u", packet.wDataLength);
+	Tracenf("KEY_AGREEMENT ALDI %u", packet.wDataLength);
 
 	TPacketKeyAgreement packetToSend;
 	size_t dataLength = TPacketKeyAgreement::MAX_DATA_LEN;
@@ -418,7 +418,7 @@ bool CGuildMarkUploader::__LoginState_RecvKeyAgreement()
 			Tracen(" CAccountConnector::__AuthState_RecvKeyAgreement - SendKeyAgreement Error");
 			return false;
 		}
-		Tracenf("KEY_AGREEMENT SEND %u", packetToSend.wDataLength);
+		Tracenf("KEY_AGREEMENT GONDER %u", packetToSend.wDataLength);
 	}
 	else
 	{
@@ -436,7 +436,7 @@ bool CGuildMarkUploader::__LoginState_RecvKeyAgreementCompleted()
 		return false;
 	}
 
-	Tracenf("KEY_AGREEMENT_COMPLETED RECV");
+	Tracenf("KEY_AGREEMENT_COMPLETED ALDI");
 
 	ActivateCipher();
 

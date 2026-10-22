@@ -105,7 +105,7 @@
 { "ER_WRONG_DB_NAME", 1102, "Incorrect database name \'%-.100s\'" },
 { "ER_WRONG_TABLE_NAME", 1103, "Incorrect table name \'%-.100s\'" },
 { "ER_TOO_BIG_SELECT", 1104, "The SELECT would examine more than MAX_JOIN_SIZE rows; check your WHERE and use SET SQL_BIG_SELECTS=1 or SET MAX_JOIN_SIZE=# if the SELECT is okay" },
-{ "ER_UNKNOWN_ERROR", 1105, "Unknown error" },
+{ "ER_UNKNOWN_ERROR", 1105, "Bilinmeyen hata" },
 { "ER_UNKNOWN_PROCEDURE", 1106, "Unknown procedure \'%-.192s\'" },
 { "ER_WRONG_PARAMCOUNT_TO_PROCEDURE", 1107, "Incorrect parameter count to procedure \'%-.192s\'" },
 { "ER_WRONG_PARAMETERS_TO_PROCEDURE", 1108, "Incorrect parameters to procedure \'%-.192s\'" },

@@ -275,7 +275,7 @@ size_t Arabic_MakeShape(wchar_t* src, size_t srcLen, wchar_t* dst, size_t dstLen
 					(!Arabic_IsInMap(prev)) ||
 					(!Arabic_GetMap(prev, INITIAL) && !Arabic_GetMap(prev, MEDIAL)))
 				{
-					//printf("\tprev not defined\n");
+					//printf("\tönceki tanımlı değil\n");
 					prev = 0;
 				}
 			}
@@ -297,7 +297,7 @@ size_t Arabic_MakeShape(wchar_t* src, size_t srcLen, wchar_t* dst, size_t dstLen
 					(!Arabic_IsInMap(next)) ||
 					(!Arabic_GetMap(next, MEDIAL) && !Arabic_GetMap(next, FINAL) && !Arabic_IsNext(next)))
 				{
-					//printf("\tnext not defined\n");
+					//printf("\tsonraki tanımlı değil\n");
 					next = 0;
 				}
 			}
@@ -316,23 +316,23 @@ size_t Arabic_MakeShape(wchar_t* src, size_t srcLen, wchar_t* dst, size_t dstLen
 			}
 			else if (prev && next && (dst[dstIndex] = Arabic_GetMap(cur, MEDIAL)))
 			{
-				//printf("\tGot prev & next:%x\n", dst[dstIndex]);
+				//printf("\tÖnceki ve sonraki alındı:%x\n", dst[dstIndex]);
 				dstIndex++;
 			}
 			else if (prev && (dst[dstIndex] = Arabic_GetMap(cur, FINAL)))
 			{
-				//printf("\tGot prev:%x\n", dst[dstIndex]);
+				//printf("\tÖnceki alındı:%x\n", dst[dstIndex]);
 				dstIndex++;
 			}
 			else if (next && (dst[dstIndex] = Arabic_GetMap(cur, INITIAL)))
 			{
-				//printf("\tGot next:%x\n", dst[dstIndex]);
+				//printf("\tSonraki alındı:%x\n", dst[dstIndex]);
 				dstIndex++;
 			}
 			else
 			{
 				dst[dstIndex] = Arabic_GetMap(cur, ISOLATED);
-				//printf("\tGot nothing:%x\n", dst[dstIndex]);
+				//printf("\tHiçbir şey alınmadı:%x\n", dst[dstIndex]);
 				dstIndex++;
 			}
 		}

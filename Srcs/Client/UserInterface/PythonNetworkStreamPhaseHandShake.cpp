@@ -49,7 +49,7 @@ void CPythonNetworkStream::HandShakePhase()
 				m_HandshakeData.dwTime = m_HandshakeData.dwTime + m_HandshakeData.lDelta + m_HandshakeData.lDelta;
 				m_HandshakeData.lDelta = 0;
 
-				Tracenf("HANDSHAKE SEND %u", m_HandshakeData.dwTime);
+				Tracenf("HANDSHAKE GONDER %u", m_HandshakeData.dwTime);
 
 				if (!Send(sizeof(TPacketGCHandshake), &m_HandshakeData))
 				{
@@ -133,7 +133,7 @@ bool CPythonNetworkStream::RecvHandshakePacket()
 	kHandshakeData.dwTime = kHandshakeData.dwTime + kHandshakeData.lDelta + kHandshakeData.lDelta;
 	kHandshakeData.lDelta = 0;
 
-	Tracenf("HANDSHAKE SEND %u", kHandshakeData.dwTime);
+	Tracenf("HANDSHAKE GONDER %u", kHandshakeData.dwTime);
 
 	kHandshakeData.header = HEADER_CG_TIME_SYNC;
 	if (!Send(sizeof(TPacketGCHandshake), &kHandshakeData))
@@ -210,7 +210,7 @@ bool CPythonNetworkStream::RecvKeyAgreementPacket()
 		return false;
 	}
 
-	Tracenf("KEY_AGREEMENT RECV %u", packet.wDataLength);
+	Tracenf("KEY_AGREEMENT ALDI %u", packet.wDataLength);
 
 	TPacketKeyAgreement packetToSend;
 	size_t dataLength = TPacketKeyAgreement::MAX_DATA_LEN;
@@ -233,7 +233,7 @@ bool CPythonNetworkStream::RecvKeyAgreementPacket()
 			assert(!"Failed Sending KeyAgreement");
 			return false;
 		}
-		Tracenf("KEY_AGREEMENT SEND %u", packetToSend.wDataLength);
+		Tracenf("KEY_AGREEMENT GONDER %u", packetToSend.wDataLength);
 	}
 	else
 	{
@@ -251,7 +251,7 @@ bool CPythonNetworkStream::RecvKeyAgreementCompletedPacket()
 		return false;
 	}
 
-	Tracenf("KEY_AGREEMENT_COMPLETED RECV");
+	Tracenf("KEY_AGREEMENT_COMPLETED ALDI");
 
 	ActivateCipher();
 

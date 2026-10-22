@@ -449,7 +449,7 @@ bool CSpeedTreeWrapper::LoadTree(const char * pszSptFile, const BYTE * c_pbBlock
 		bSuccess = true;
 	}
 	else // tree failed to compute
-		fprintf(stderr, "\nFatal Error, cannot compute tree [%s]\n\n", CSpeedTreeRT::GetCurrentError());
+		fprintf(stderr, "\nÖlümcül Hata, ağaç hesaplanamıyor [%s]\n\n", CSpeedTreeRT::GetCurrentError());
 
     return bSuccess;
 }
@@ -789,7 +789,7 @@ CSpeedTreeWrapper * CSpeedTreeWrapper::MakeInstance()
     }
     else
 	{
-		fprintf(stderr, "SpeedTreeRT Error: %s\n", m_pSpeedTree->GetCurrentError());
+		fprintf(stderr, "SpeedTreeRT Hatası: %s\n", m_pSpeedTree->GetCurrentError());
         delete pInstance;
         pInstance = NULL;
 	}

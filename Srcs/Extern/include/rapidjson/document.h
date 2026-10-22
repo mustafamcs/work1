@@ -2304,7 +2304,7 @@ public:
           Document doc;
           ParseResult ok = doc.Parse(json);
           if (!ok)
-            printf( "JSON parse error: %s (%u)\n", GetParseError_En(ok.Code()), ok.Offset());
+            printf( "JSON ayrıştırma hatası: %s (%u)\n", GetParseError_En(ok.Code()), ok.Offset());
         \endcode
      */
 #endif

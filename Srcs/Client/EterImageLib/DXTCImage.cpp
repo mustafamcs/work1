@@ -1038,18 +1038,18 @@ void CDXTCImage::RunTimingSession()
 	LARGE_INTEGER freq;
 	QueryPerformanceFrequency(& freq);
 
-	fprintf(pf, "\nCounter freq = %u  %d \n", freq.LowPart, freq.HighPart);
+	fprintf(pf, "\nSayaç frekansı = %u  %d \n", freq.LowPart, freq.HighPart);
 	fprintf(pf, "start:  %u  %u       end:  %u  %u\n", start_clk.LowPart, start_clk.HighPart, end_clk.LowPart, end_clk.HighPart);
 
-	Tracef("\nCounter freq = %u  %d \n", freq.LowPart, freq.HighPart);
+	Tracef("\nSayaç frekansı = %u  %d \n", freq.LowPart, freq.HighPart);
 	Tracef("start:  %u  %u       end:  %u  %u\n", start_clk.LowPart, start_clk.HighPart, end_clk.LowPart, end_clk.HighPart);
 
 	double dur = ((double)end_clk.LowPart - (double)start_clk.LowPart) / (double)freq.LowPart;
 
-	fprintf(pf, "Total timing session took:  %u cycles = %f seconds\n", (end_clk.LowPart - start_clk.LowPart), dur);
+	fprintf(pf, "Toplam zamanlama oturumu:  %u döngü = %f saniye\n", (end_clk.LowPart - start_clk.LowPart), dur);
 	fprintf(pf, "\n\n");
 
-	Tracef("Total timing session took:  %u cycles = %f seconds\n", (end_clk.LowPart - start_clk.LowPart), dur);
+	Tracef("Toplam zamanlama oturumu:  %u döngü = %f saniye\n", (end_clk.LowPart - start_clk.LowPart), dur);
 	Tracef("\n\n");
 
 	for (n = 0; n < NMETHOD; ++n)

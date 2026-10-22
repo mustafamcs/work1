@@ -78,19 +78,19 @@ RAPIDJSON_NAMESPACE_BEGIN
 namespace internal {
 
 inline void PrintInvalidKeyword(const char* keyword) {
-    printf("Fail keyword: %s\n", keyword);
+    printf("Anahtar kelime hatası: %s\n", keyword);
 }
 
 inline void PrintInvalidKeyword(const wchar_t* keyword) {
-    wprintf(L"Fail keyword: %ls\n", keyword);
+    wprintf(L"Anahtar kelime hatası: %ls\n", keyword);
 }
 
 inline void PrintInvalidDocument(const char* document) {
-    printf("Fail document: %s\n\n", document);
+    printf("Belge hatası: %s\n\n", document);
 }
 
 inline void PrintInvalidDocument(const wchar_t* document) {
-    wprintf(L"Fail document: %ls\n\n", document);
+    wprintf(L"Belge hatası: %ls\n\n", document);
 }
 
 inline void PrintValidatorPointers(unsigned depth, const char* s, const char* d) {

@@ -53,7 +53,7 @@ bool CSoundManager3D::Initialize()
 	{
 //		assert(!"AIL_open_3D_provider error");
 //		char buf[64];
-//		sprintf(buf, "Error AIL_open_3D_provider: %s\n", AIL_last_error());
+//		sprintf(buf, "Hata AIL_open_3D_provider: %s\n", AIL_last_error());
 //		OutputDebugString(buf);
 
 		CSoundBase::Destroy();

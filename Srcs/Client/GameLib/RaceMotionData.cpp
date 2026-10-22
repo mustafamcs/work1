@@ -505,7 +505,7 @@ bool CRaceMotionData::SaveMotionData(const char * c_szFileName)
 		return false;
 	}
 
-	fprintf(File, "ScriptType               MotionData\n");
+	fprintf(File, "ScriptTipi               MotionData\n");
 	fprintf(File, "\n");
 
 	fprintf(File, "MotionFileName           \"%s\"\n", m_strMotionFileName.c_str());
@@ -518,7 +518,7 @@ bool CRaceMotionData::SaveMotionData(const char * c_szFileName)
 
 	if (m_isComboMotion)
 	{
-		fprintf(File, "Group ComboInputData\n");
+		fprintf(File, "Grup ComboInputData\n");
 		fprintf(File, "{\n");
 		fprintf(File, "    PreInputTime             %f\n", m_ComboInputData.fInputStartTime);
 		fprintf(File, "    DirectInputTime          %f\n", m_ComboInputData.fNextComboTime);
@@ -529,7 +529,7 @@ bool CRaceMotionData::SaveMotionData(const char * c_szFileName)
 
 	if (m_isAttackingMotion)
 	{
-		fprintf(File, "Group AttackingData\n");
+		fprintf(File, "Grup AttackingData\n");
 		fprintf(File, "{\n");
 		NRaceData::SaveMotionAttackData(File, 1, m_MotionAttackData);
 		fprintf(File, "}\n");
@@ -538,7 +538,7 @@ bool CRaceMotionData::SaveMotionData(const char * c_szFileName)
 
 	if (m_isLoopMotion)
 	{
-		fprintf(File, "Group LoopData\n");
+		fprintf(File, "Grup LoopData\n");
 		fprintf(File, "{\n");
 		fprintf(File, "    MotionLoopCount          %d\n", m_iLoopCount);
 		fprintf(File, "    LoopCancelEnable         %d\n", m_bCancelEnableSkill);
@@ -550,7 +550,7 @@ bool CRaceMotionData::SaveMotionData(const char * c_szFileName)
 
 	if (!m_MotionEventDataVector.empty())
 	{
-		fprintf(File, "Group MotionEventData\n");
+		fprintf(File, "Grup MotionEventData\n");
 		fprintf(File, "{\n");
 		fprintf(File, "    MotionEventDataCount     %d\n", m_MotionEventDataVector.size());
 

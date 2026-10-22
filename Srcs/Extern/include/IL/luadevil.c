@@ -376,7 +376,7 @@ int main (int argc, char **argv) {
   int status;
   struct Smain s;
   lua_State *L = lua_open();  /* create state */
-  printf("DevIL embedded lua interpreter\n");
+  printf("DevIL gömülü lua yorumlayıcı\n");
 //@TODO: Where the heck is this defined?
   //Devil_Init(L);
   if (L == NULL) {

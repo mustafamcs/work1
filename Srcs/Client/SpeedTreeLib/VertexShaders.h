@@ -159,14 +159,14 @@ static DWORD LoadBranchShader(LPDIRECT3DDEVICE8 pDx)
 		if (pDx->CreateVertexShader(pBranchShaderDecl, (DWORD*) pCode->GetBufferPointer( ), &dwShader, 0) != D3D_OK)
 		{
 			char szError[1024];
-			sprintf(szError, "Failed to create branch vertex shader.");
+			sprintf(szError, "Dal vertex shader oluşturulamadı.");
 			MessageBox(NULL, szError, "Vertex Shader Error", MB_ICONSTOP);
 		}
 	}
 	else
     {
         char szError[1024];
-	    sprintf(szError, "Failed to assemble branch vertex shader.\nThe error reported is [ %s ].\n", (const char*)pError->GetBufferPointer());
+	    sprintf(szError, "Dal vertex shader derlenemedi.\nBildirilen hata [ %s ].\n", (const char*)pError->GetBufferPointer());
 	    MessageBox(NULL, szError, "Vertex Shader Error", MB_ICONSTOP);
     }
 

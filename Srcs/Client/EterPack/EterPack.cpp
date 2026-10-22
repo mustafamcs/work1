@@ -180,7 +180,7 @@ void CMakePackLog::__WriteError(const char* c_szBuf, int nBufLen)
 
 	fwrite(c_szBuf, nBufLen, 1, m_fp_err);
 
-	printf("Error: %s", c_szBuf);
+	printf("Hata: %s", c_szBuf);
 }
 
 void CMakePackLog::FlushError()
