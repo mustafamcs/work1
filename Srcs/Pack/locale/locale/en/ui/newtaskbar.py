@@ -54,22 +54,22 @@ window = {
 					## icon_name
 					"images" :
 					(
-						"locale/en/ui/Mall/coin_0000.sub",
-						"locale/en/ui/Mall/coin_0001.sub",
-						"locale/en/ui/Mall/coin_0002.sub",
-						"locale/en/ui/Mall/coin_0003.sub",
-						"locale/en/ui/Mall/coin_0004.sub",
-						"locale/en/ui/Mall/coin_0005.sub",
-						"locale/en/ui/Mall/coin_0006.sub",
-						"locale/en/ui/Mall/coin_0007.sub",
-						"locale/en/ui/Mall/coin_0008.sub",
-						"locale/en/ui/Mall/coin_0009.sub",
-						"locale/en/ui/Mall/coin_0011.sub",
-						"locale/en/ui/Mall/coin_0012.sub",
-						"locale/en/ui/Mall/coin_0013.sub",
-						"locale/en/ui/Mall/coin_0014.sub",
-						"locale/en/ui/Mall/coin_0015.sub",
-						"locale/en/ui/Mall/coin_0016.sub",
+						"locale/tr/ui/Mall/coin_0000.sub",
+						"locale/tr/ui/Mall/coin_0001.sub",
+						"locale/tr/ui/Mall/coin_0002.sub",
+						"locale/tr/ui/Mall/coin_0003.sub",
+						"locale/tr/ui/Mall/coin_0004.sub",
+						"locale/tr/ui/Mall/coin_0005.sub",
+						"locale/tr/ui/Mall/coin_0006.sub",
+						"locale/tr/ui/Mall/coin_0007.sub",
+						"locale/tr/ui/Mall/coin_0008.sub",
+						"locale/tr/ui/Mall/coin_0009.sub",
+						"locale/tr/ui/Mall/coin_0011.sub",
+						"locale/tr/ui/Mall/coin_0012.sub",
+						"locale/tr/ui/Mall/coin_0013.sub",
+						"locale/tr/ui/Mall/coin_0014.sub",
+						"locale/tr/ui/Mall/coin_0015.sub",
+						"locale/tr/ui/Mall/coin_0016.sub",
 					)
 				},
 				{
@@ -85,22 +85,22 @@ window = {
 					## icon_name
 					"images" :
 					(
-						"locale/en/ui/Mall/coin_0000.sub",
-						"locale/en/ui/Mall/coin_0001.sub",
-						"locale/en/ui/Mall/coin_0002.sub",
-						"locale/en/ui/Mall/coin_0003.sub",
-						"locale/en/ui/Mall/coin_0004.sub",
-						"locale/en/ui/Mall/coin_0005.sub",
-						"locale/en/ui/Mall/coin_0006.sub",
-						"locale/en/ui/Mall/coin_0007.sub",
-						"locale/en/ui/Mall/coin_0008.sub",
-						"locale/en/ui/Mall/coin_0009.sub",
-						"locale/en/ui/Mall/coin_0011.sub",
-						"locale/en/ui/Mall/coin_0012.sub",
-						"locale/en/ui/Mall/coin_0013.sub",
-						"locale/en/ui/Mall/coin_0014.sub",
-						"locale/en/ui/Mall/coin_0015.sub",
-						"locale/en/ui/Mall/coin_0016.sub",
+						"locale/tr/ui/Mall/coin_0000.sub",
+						"locale/tr/ui/Mall/coin_0001.sub",
+						"locale/tr/ui/Mall/coin_0002.sub",
+						"locale/tr/ui/Mall/coin_0003.sub",
+						"locale/tr/ui/Mall/coin_0004.sub",
+						"locale/tr/ui/Mall/coin_0005.sub",
+						"locale/tr/ui/Mall/coin_0006.sub",
+						"locale/tr/ui/Mall/coin_0007.sub",
+						"locale/tr/ui/Mall/coin_0008.sub",
+						"locale/tr/ui/Mall/coin_0009.sub",
+						"locale/tr/ui/Mall/coin_0011.sub",
+						"locale/tr/ui/Mall/coin_0012.sub",
+						"locale/tr/ui/Mall/coin_0013.sub",
+						"locale/tr/ui/Mall/coin_0014.sub",
+						"locale/tr/ui/Mall/coin_0015.sub",
+						"locale/tr/ui/Mall/coin_0016.sub",
 					)
 				},
 				{
@@ -305,7 +305,7 @@ window = {
 			"down_image" : ROOT + "TaskBar/Mouse_Button_Move_03.sub",
 		},
 		## ENABLE_GEM_SYSTEM
-		## separate file per country, no need to filter with define.
+		## ülke başına ayrı dosya olduğu için define ile filtrelemeye gerek yok.
 		{
 			"name" : "ExpandMoneyButton",
 			"type" : "button",

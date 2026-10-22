@@ -1,4 +1,4 @@
-group floor_element		
+﻿grup floor_element		
 {		
 	#floor	element
 	1	FIRE

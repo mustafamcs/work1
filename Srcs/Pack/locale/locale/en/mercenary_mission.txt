@@ -1,15 +1,15 @@
-# mission name 1: exterm(low) 2: exterm(high) 3: destroy 4: explore																			
-# regions available per spawn id																			
-# 1 1: Seungryong Valley 2: Yongbi Desert 3: Spider Dungeon 4: Milgyo 5: Demon Tower 6: Heavenly Garb Cave 7: Hungry Ghost Cave 8:White Dragon Castle 9:Red Dragon Castle 10: Green Forest 11: Dongkwang Plain 																			
-# 2 1: Seungryong Valley 2: Yongbi Desert 3: Spider Dungeon 4: Milgyo 5: Demon Tower 6: Heavenly Garb Cave 7: Hungry Ghost Cave 8:White Dragon Castle 9:Red Dragon Castle 10: Green Forest 11: Dongkwang Plain 12:Mystery Dungeon																			
-# 3 1: Seungryong Valley 2: Yongbi Desert 3: Spider Dungeon 4: Milgyo 5: Demon Tower 6: Heavenly Garb Cave 7: Hungry Ghost Cave 8:White Dragon Castle 9:Red Dragon Castle 10: Green Forest 11: Dongkwang Plain 12:Mystery Dungeon 13: Snake Valley																			
-# 4 1: Seungryong Valley 2: Yongbi Desert 3: Spider Dungeon 4: Milgyo 5: Demon Tower 6: Heavenly Garb Cave 7: Hungry Ghost Cave 8:White Dragon Castle 9:Red Dragon Castle 10: Green Forest 11: Dongkwang Plain 12:Mystery Dungeon 13: Snake Valley 14: Snake Temple																			
-# 5 1: Seungryong Valley 2: Yongbi Desert 3: Spider Dungeon 4: Milgyo 5: Demon Tower 6: Heavenly Garb Cave 7: Hungry Ghost Cave 8:White Dragon Castle 9:Red Dragon Castle 10: Green Forest 11: Dongkwang Plain 12:Mystery Dungeon 13: Snake Valley 14: Snake Temple 15: White Dragon Cave																			
-# 6 1: Seungryong Valley 2: Yongbi Desert 3: Spider Dungeon 4: Milgyo 5: Demon Tower 6: Heavenly Garb Cave 7: Hungry Ghost Cave 8:White Dragon Castle 9:Red Dragon Castle 10: Green Forest 11: Dongkwang Plain 12:Mystery Dungeon 13: Snake Valley 14: Snake Temple 15: White Dragon Cave																			
-# 7 1: Seungryong Valley 2: Yongbi Desert 3: Spider Dungeon 4: Milgyo 5: Demon Tower 6: Heavenly Garb Cave 7: Hungry Ghost Cave 8:White Dragon Castle 9:Red Dragon Castle 10: Green Forest 11: Dongkwang Plain 12:Mystery Dungeon 13: Snake Valley 14: Snake Temple 15: White Dragon Cave																			
-# Max creation number count : 7																			
-# If max creation number or possible regions change, tell the programmer																			
-#creation_no	region	mission_name	mercenary_level	required_activity	required_activity_extra_member_mult	success_rate	success_rate_extra_member_mult	PC_conqueror_exp_reward	yang_reward	reward_itemVNUM1	rewarditemCOUNT1	rewarditemVNUM2	rewarditemCOUNT2	rewarditemVNUM3	rewarditemCOUNT3	rewarditemVNUM4	rewarditemCOUNT4	rewarditemVNUM5	rewarditemCOUNT5
+﻿# görev adı 1: yok et(alt) 2: yok et(üst) 3: imha 4: keşif																			
+# üretim numarasına göre geçerli bölgeler																			
+# 1 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 																			
+# 2 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan																			
+# 3 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi																			
+# 4 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı																			
+# 5 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı 15: Beyaz Ejder Mağarası																			
+# 6 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı 15: Beyaz Ejder Mağarası																			
+# 7 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı 15: Beyaz Ejder Mağarası																			
+# Maksimum oluşturma numarası sayısı : 7																			
+# Maksimum oluşturma numarası sayısı, mümkün bölge değişikliği olursa programcıya söyleyin																			
+#oluşturma_no	bölge	misyon_adı	paralı_seviye	gerekli_aktivite	gerekli_aktivite_ek_katılım_çarpanı	başarı_olasılığı	başarı_olasılığı_ek_katılım_çarpanı	PC_fatih_deneyim_ödülü	yang_ödülü	ödül_eşya_VNUM1	ödül_eşyaCOUNT1	ödül_eşyaVNUM2	ödül_eşyaCOUNT2	ödül_eşyaVNUM3	ödül_eşyaCOUNT3	ödül_eşyaVNUM4	ödül_eşyaCOUNT4	ödül_eşyaVNUM5	ödül_eşyaCOUNT5
 1	1	1	1	100	3	46	1	900	70000	83100	1	83115	1	39067	1	0	0	0	0
 1	1	2	1	100	3	46	1	900	40000	83100	1	83118	1	83036	1	0	0	0	0
 1	1	3	1	100	3	46	1	900	75000	83100	1	83124	1	50529	1	0	0	0	0

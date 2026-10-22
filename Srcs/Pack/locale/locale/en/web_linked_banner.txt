@@ -1,4 +1,4 @@
-Group Info
+﻿Group Info
 {
 
 	on_off	0
@@ -9,7 +9,7 @@ Group Banner
 	
 	Group Link_Metin2_Account_With_Steam
 	{
-		text		"Leaving Steam: Migrate to the Gameforge Client!"
-		url			"https://en.metin2.gameforge.com/steam/moveingame"
+		text		"Steam vedası: Gameforge istemcisine taşın!"
+		url			"https://tr.metin2.gameforge.com/steam/moveingame"
 	}
 }

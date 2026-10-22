@@ -1,40 +1,40 @@
-1	Alpha Wolves
-2	Leader of the Pack
-3	Unique
-4	Tiger, Bear, Boar
-5	Revenge of the White Oath
-6	Revenge of the Black Storm
-7	Brothers
-8	Family Ties
-9	Cruel and Brutal
-10	Hardly Human
-11	Eternal Guardians
-12	Nephrite Guardians
-13	Rulers of the Thunder Mountains
-14	Trouble on Gautama Cliff
-15	Monkeys Uncles
-16	Cave Rulers
-17	Devilish
-18	Sung Mahis Servants
-19	The End Justifies the Means
-20	Forest Guardians
-21	Sung Mahis Generals
-22	Zodiac of Lightning
-23	Zodiac of Fire
-24	Zodiac of Ice
-25	Zodiac of Wind
-26	Zodiac of Earth
-27	Zodiac of Darkness
-28	Guardian of the Levels
-29	Sung Mahi's Quag
-30	Half-Human Ruler
-31	Icy Guardian
-32	The Cave Trio
-33	The Poisonous Queen
-34	The Burning Tower
-35	The Frozen Tower
-36	The Electrified Tower
-37	The Stormy Tower
-38	The Steadfast Tower
-39	The Dark Tower
-40	Alastor's End
+﻿1	Alfa kurtlar
+2	Sürü lideri
+3	Eşsiz
+4	Kaplan, ayı, domuz
+5	Beyaz yeminin intikamı.
+6	Kara ölümün intikamı.
+7	Kardeşler
+8	Aile bağları.
+9	Zalim ve acımasız
+10	Neredeyse hiç insani değil
+11	Ebedi Bekçiler
+12	Nefrit Bekçisi
+13	Yıldırım Dağları'nın Hükümdarı.
+14	Gautama Uçurumunda Bela
+15	Maymun Kardeşliği
+16	Mağara Hükümdarı.
+17	Şeytani
+18	Sung Mahi'nin Hizmetçileri
+19	Amaca giden her yol mubahtır
+20	Orman Bekçileri
+21	Sung Mahi'nin Generalleri
+22	Şimşek Zodyakı.
+23	Ateş Zodyakı.
+24	Buz Zodyakı.
+25	Rüzgar Zodyakı.
+26	Toprak Zodyakı.
+27	Karanlığın Zodyakı.
+28	Katların bekçisi
+29	Sung Mahi'nin Myr'i
+30	Yarı-insan hükumdar
+31	Buzlu bekçiler
+32	Mağara üçlüsü.
+33	Zehirli kraliçe
+34	Yanan kule
+35	Donmuş kule
+36	Elektrikli kule
+37	Fırtınalı kule
+38	Sarsılmaz kule
+39	Karanlık kule
+40	Alastor'un sonu

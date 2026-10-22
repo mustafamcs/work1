@@ -1,4 +1,4 @@
-1	ETC	icon/item/money.tga	d:/ymir work/item/etc/money.gr2
+﻿1	ETC	icon/item/money.tga	d:/ymir work/item/etc/money.gr2
 2	ETC	icon/item/dummy.tga
 10	WEAPON	icon/item/00010.tga	d:/ymir work/item/weapon/00010.gr2
 11	WEAPON	icon/item/00010.tga	d:/ymir work/item/weapon/00010.gr2

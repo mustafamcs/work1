@@ -1,1677 +1,1667 @@
-1	Everyone will be teleported into the city shortly.
-2	This item does not exist.
-3	The box suddenly exploded! You have lost Hit Points (HP).
-4	[Guild] The guild territory sale has failed.
-5	[Guild] The guild territory sale cannot be completed as there is insufficient Yang in the guild bank.
-6	[Guild] You cannot leave the guild while a vote is in progress.
-7	[Guild] The player is offline or on another map.
-8	[Guild] You cannot select combatants whilst the guild is in a war.
-9	[Guild] You cannot start another vote whilst one is in progress.
-10	[Guild] This action is not possible during a war.
-11	[Guild] Cannot be upgraded as the guild bank is full.
-12	[Guild] You cannot use the Guild Warehouse whilst a vote is in progress.
-13	If you inhale the green smoke that is coming out of the box, the poison will spread through your body!
-14	[Guild] You cannot carry out this action whilst the Guild Warehouse is open.
-15	[Guild] You cannot change guild leader whilst at war.
-16	[Guild] %s has used %s.
-17	[Guild] You do not have permission to use guild skills.
-18	[Guild] You are now in observer mode because you have reached the respawn limit.
-19	[Guild] Please check members and leaders.
-20	[Guild] Please check enemy members and leaders.
-21	[Guild] Certain members are offline or on another map.
-22	[Guild] Certain members of the enemy guild are offline or on another map.
-23	[Guild] There are not enough participants online.
-24	You have received %s, %d units.
-25	[Guild] You cannot carry out this action during a war.
-26	[Guild] You can use it in 10 seconds.
-27	[Guild] The character must be at least level 40 to receive the guild leadership.
-28	[Guild] %s has won.
-29	[Guild] Draw
-30	[Guild] You cannot remove anyone from the guild whilst at war.
-31	[Guild] You cannot start a vote to remove the guild leader.
-32	[Guild] You cannot start a vote to remove yourself from the guild.
-33	[Guild] You need the Ring of Successor to transfer the guild.
-34	[Guild] Not enough space in the guild bank.
-35	The box contains %s.
-36	[Guild] You must wait at least 12 hours after using the Guild Warehouse before leaving the guild.
-37	Guild [%s]! The final objective has appeared. Destroy all objectives to win this war!
-38	[Guild] War ends in 5 minutes.
-39	[Guild] War ends in 1 minute.
-40	[Guild] No guild present with a guild advertisement.
-41	[Guild] No guild has defeated the dragon yet.
-42	[Guild] Rankings update.
-43	[Guild] The battle against Dragon Queen Meley is starting.
-44	[Guild] The gates to Meley's Lair are open. The time limit in the dungeon is one hour.
-45	[Guild] You have defeated Meley the Dragon Queen!
-46	This key does not seem to fit the lock.
-47	[Guild] Required time: %d min. %d sec.
-48	[Guild] For your own safety, you will be teleported away from the nest in 10 minutes.
-49	[Guild] Time's up.
-50	[Guild] The gates to the lair are closed once more.
-51	[Guild] For your own safety, you will be teleported away from the nest in 1 minute.
-52	[Guild] The lair will close in %d min.
-53	[Guild] You have cancelled the fight in Meley's Lair.
-54	[Guild] You cannot declare a guild war whilst fighting in the dragon cave.
-55	[Guild] The enemy guild is currently fighting in the dragon cave.
-56	You have not received anything.
-57	[Guild] Successfully registered for Meley's Lair.
-58	[Guild] Visit the Dragon Watcher Dolnarr to enter the dragon cave.
-59	The summer event has started. Visit Summer in town. She'll give you some tasty refreshments.
-60	The summer event will end soon. Summer will keep the towns supplied with tasty refreshments for 7 more days.
-61	This effect is already active.
-62	[Guild] You can only make one transaction every 10 seconds.
-63	[Guild] Another member is currently using the guild bank.
-64	[Guild] Guild [%s] has lost the war against [%s].
-65	Account limit reached. You cannot open this box.
-66	[Guild] Your guild does not have enough Yang in the account. Please deposit more Yang and try again.
-67	You do not have enough Yang to use this item.
-68	[Guild] Object moved successfully.
-69	[Guild] You cannot use this guild logo. Please try again.
-70	[Transmutation] You cannot equip the transmuted item as it does not match your gender.
-71	[Transmutation] You cannot equip the transmuted item as it does not match your class.
-72	[Monster Card] Mission level: %d. You've defeated the monster: %s.
-73	[Monster Card] You've completed your monster mission. Collect your Monster Card now.
-74	[Monster Card] You don't have enough space in your inventory.
-75	[Monster Card] [%s] Level up complete.
-76	[Monster Card] You can now watch the monster's movement animation.
-77	[Monster Card] You can now transform into the monster.
-78	You have lowered your Skill Level.
-79	[Monster Card] You can now teleport to the monster's location.
-80	[Guild] As a combatant you cannot spectate your own guild war.
-81	[Guild] The guild has set a minimum level for applicants (min. level: %d).
-82	[Guild] You can only make one transaction every 10 seconds.
-83	[Guild] Guild %s has purchased territory.
-84	[Guild] A Dragon's Temple fight is running on another channel.
-85	[Guild] The logo server is currently undergoing maintenance.
-86	[Guild] The logo server is currently undergoing maintenance.
-87	[Guild] This land belongs to another player.
-88	You cannot lower your Skill Level.
-89	You must be level %d to enter the Combat Zone.
-90	You cannot enter the Combat Zone from this map.
-91	You must close all windows before entering or leaving the Combat Zone.
-92	You cannot leave the Combat Zone when you are dead.
-93	You are entering the Combat Zone. Please wait.
-94	You are leaving the Combat Zone. Please wait.
-95	Next entry available in %d minute(s).
-96	Next entry available in %d second(s).
-97	You cannot use this item here.
-98	You cannot use this item here.
-99	This effect is already activated.
-100	You need a Reincarnation item to revive instantly.
-101	The Combat Zone is now open.
-102	The Combat Zone is now closed.
-103	The Combat Zone will open in %d minute(s).
-104	The Combat Zone will close in %d minute(s).
-105	An event is running and you will receive double points.
-106	The event in the Combat Zone has finished.
-107	You have announced your withdrawal from the Combat Zone and can leave in %d minutes.
-108	A player has announced their withdrawal. Kill them to earn more points!
-109	Your withdrawal announcement was cancelled.
-110	You do not have enough space in your inventory to accept the reward.
-111	This item can only be used in an Internet cafe.
-112	Your withdrawal announcement is active.
-113	You cannot enter the Combat Zone at the moment.
-114	Well done! For reaching rank %d in the Combat Zone rankings, you will be rewarded a special accolade.
-115	You currently have %d point(s). Your total score is %d.
-116	You cannot use this item during your withdrawal from the Combat Zone.
-117	You cannot declare wars in the Combat Zone.
-118	This action is not possible on this map.
-119	Remaining number: %d
-120	[Guild] The guild's treasury has reached the maximum.
-121	[Guild] You cannot withdraw any Yang as you have more than 2 billion Yang.
-122	That is over the limit.
-123	[Guild] You cannot withdraw Yang while another window is open.
-124	The guild war declaration expires in 3 minutes.
-125	Entering the Combat Zone in %d seconds.
-126	Leaving the Combat Zone in %d seconds.
-127	You have lost %d points. Remaining points: %d
-128	Unfortunately you don't have enough space in your inventory.
-129	You don't receive any points for this player.
-130	You have announced your withdrawal from the Combat Zone and can leave in %d seconds.
-131	The event has started!
-132	Used Moon Cake or Seed.
-133	Remove %s from your friends list to continue.
-134	%s is now blocked.
-135	%s is no longer blocked.
-136	%s is already being blocked.
-137	You cannot block your spouse.
-138	Unblock %s to continue.
-139	%s has blocked you.
-140	The monster from the current event has appeared.
-141	You don't have enough Anniversary Flags.
-142	The Anniversary Event has started!
-143	You cannot wear a Wedding Ring if you are not married.
-144	The Anniversary Event ends in %d minute(s).
-145	You cannot use this item while wearing another costume.
-146	You cannot equip this item while wearing a Wedding Dress or a Tuxedo.
-147	You cannot do this while the item is equipped.
-148	[Guild] You cannot deposit or withdraw Yang from the guild account while another window is open.
-149	[Guild] You cannot carry out this action while depositing or withdrawing Yang from the guild account.
-150	[Guild] The Deposit Yang or Withdraw Yang window is already open.
-151	[Guild] You cannot deposit or withdraw Yang from the guild account while your pet is summoned.
-152	%s will appear here: %s
-153	Valley of Seungryong
-154	You cannot use the Event Detector from this position.
-155	Mount Sohan
-156	Yongbi Desert
+﻿1	Herkes şehre ışınlanacak.
+2	Bu eşya mevcut değil.
+3	Kutu patladı! HP seviyen düştü.
+4	[Lonca] Lonca bölgesi satışı başarısız.
+5	[Lonca] Lonca bankasında yeterince Yang bulunmadığı için lonca satılamıyor.
+6	[Lonca] Bir anket esnasında loncayı terk edemezsin.
+7	[Lonca] Oyuncu çevrimdışı veya başka bir haritada bulunuyor.
+8	[Lonca] Lonca savaş halindeyken savaşçı belirleyemezsin.
+9	[Lonca] Bir anket esnasında başka bir anket başlatamazsın.
+10	[Lonca] Bu eylem savaş esnasında mümkün değil.
+11	[Lonca] Lonca bankası dolu olduğu için geliştirme mümkün değil.
+12	[Lonca] Bir anket esnasında lonca deposunu kullanamazsın.
+13	Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!
+14	[Lonca] Lonca deposu açıkken bu eylemi gerçekleştiremezsin.
+15	[Lonca] Bir savaş esnasında lonca liderini değiştiremezsin.
+16	[Lonca]%s %s kullandı.
+17	[Lonca] Lonca becerilerini kullanma yetkin yok.
+18	[Lonca] Yeniden diriltme sınırına eriştiğin için şu anda seyirci modundasın.
+19	[Lonca] Lütfen üyeleri ve liderleri kontrol et.
+20	[Lonca] Lütfen rakip üyeleri ve liderleri kontrol et.
+21	[Lonca] Bazı üyeler çevrim dışı ya da başka bir haritada.
+22	[Lonca] Rakip loncanın bazı üyeleri çevrim dışı ya da başka bir haritada.
+23	[Lonca] Yeterli sayıda katılımcı çevrim içi değil
+24	%s : %d adet kazandın.
+25	[Lonca] Bu eylemi bir savaş esnasında gerçekleştiremezsin.
+26	[Lonca] 10 saniye içinde kullanabilirsin.
+27	[Lonca] Loncayı devralması için karakterin seviyesi en az 40 olmalı.
+28	[Lonca] %s kazandı.
+29	[Lonca] Berabere
+30	[Lonca] Bir savaş esnasında kimseyi loncadan çıkaramazsın.
+31	[Lonca] Lonca liderini çıkarmak için bir anket başlatamazsın.
+32	[Lonca] Kendini loncadan çıkarmak için bir anket başlatamazsın.
+33	[Lonca] Loncayı devretmek için Yer Değiştirme Yüzüğü'ne ihtiyacın var.
+34	[Lonca] Lonca bankasında yeterli alan yok.
+35	Kutuda %s var.
+36	[Lonca] Loncayı en erken 12 saat sonra, lonca deposunu kullandıktan sınra terk edebilirsin.
+37	[%s] Loncası! Son hedef belirdi. Tüm hedefleri yok edin ve bu savaşı kazanın!
+38	[Lonca] Savaş 5 dakika içinde sona erecek.
+39	[Lonca] Savaş 1 dakika içinde sona erecek.
+40	[Lonca] Lonca duyurusu olan lonca yok.
+41	[Lonca] Henüz hiçbir lonca ejderhayı yenemedi.
+42	[Lonca] En iyiler listesi yenilendi
+43	[Lonca] Ejderha Kraliçesi Meley'e karşı verilen savaş başladı.
+44	[Lonca] Meley'in İni'nin kapısı açılıyor. En fazla bir saat kalabilirsiniz.
+45	[Lonca] Ejderha Kraliçesi Meley'i yendiniz!
+46	Bu anahtar kilide uygun görünmüyor.
+47	[Lonca] Gereken süre: %d dak. %d san.
+48	[Lonca] Güvenliğiniz için 10 dakika sonra İn'den ışınlanacaksınız.
+49	[Lonca] Süre doldu.
+50	[Lonca] İn'in kapısı tekrar kapanıyor.
+51	[Lonca] Güvenliğiniz için 1 dakika sonra İn'den ışınlanacaksınız.
+52	[Lonca] İn %d dak. sonra kapancak.
+53	[Lonca] Meley'in İni'ndeki savaşı iptal ettiniz.
+54	[Lonca] Ejderha Mağarası'nda iken lonca savaşı ilan edemezsin.
+55	[Lonca] Rakip lonca şu anda Ejderha Mağarası'nda savaşta.
+56	Hiç bir şey kazanamadın.
+57	[Lonca] Meley'in İni için kayıt başarıyla tamamlandı.
+58	[Lonca] Erjderha Mağarasına girmek için Ejderha Bekçisi Dolnarr'ı ziyaret et.
+59	Yaz Etkinliği başlıyor. Şehir'de Summer'i ziyaret edin. Sizlere serinletici lezzetler sunacak.
+60	Yaz Etkinliği yakında son bulacak.
+61	Bu efekt zaten etkin.
+62	[Lonca] Her 10 saniyede bir işlem gerçekleştirebilirsin.
+63	[Lonca] Başka bir üye şu anda lonca bankasını kullanıyor.
+64	[Lonca] [%s] loncası [%s] loncasına karşı savaşı kaybetti.
+65	Maksimum Yang sayısına ulaştığın için bu kutuyu açamazsın.
+66	[Lonca] Senin loncanın lonca hesabında yeterli Yang yok. Lütfen daha fazla Yang yatırın ve tekrar deneyin.
+67	Bu eşyayı kullanmak için yeterli Yang a sahip değilsin.
+68	[Lonca] Nesne başarıyla kaydırıldı.
+69	[Lonca] Bu lonca logosunu kullanamazsın! Lütfen tekrar dene.
+70	[Yansıtma] Yansıtılan nesneyi kuşanamazsın çünkü bu nesne diğer cinsiyet için.
+71	[Yansıtma] Yansıtılan nesneyi kuşanamazsın çünkü sınıfı farklı.
+72	[Canavar kartı] %d. görev sınıfında %s canavarını alt ettin.
+73	[Canavar kartı] Bir canavar görevi tamamladın. Şimdi bir canavar kartı kap!
+74	[Canavar kartı] Envanterinde yer yok.
+75	[Canavar kartı] [%s] Seviye atlamayı tamamladın.
+76	[Canavar Kartı] Şimdi canavarın hareket animasyonunu izleyebilirsin.
+77	[Canavar Kartı] Şimdi bu canavara dönüşebilirsin.
+78	Beceri seviyeni düşürdün.
+79	[Canavar Kartı] Şimdi bu canavarın yakınına ışınlanabilirsin.
+80	[Lonca] Bir savaşçı olarak kendi lonca savaşını izleyemezsin.
+81	[Lonca] Lonca başvuru için minimum seviye ekledi (minimum seviye: %d).
+82	[Lonca] Sadece her 10 saniyede bir işlem gerçekleştirebilirsin.
+83	[Lonca] %s loncası bölge satın aldı.
+84	[Lonca] Başka bir kanalda bir Ejderha Tapınağı yapılıyor.
+85	[Lonca] Logo sunucusu bakıma alındı.
+86	[Lonca] Logo sunucusu bakıma alındı.
+87	[Lonca] Bu arsa başka bir oyuncuya ait.
+88	Beceri seviyeni düşüremezsin.
+89	Savaş Bölgesine seviye %d itibarıyla girebilirsin.
+90	Maalesef bu harita üzerinden Savaş Bölgesi'ne giremezsin.
+91	Savaş bölgesine girmek veya onu terk etmek için bütün pencereleri kapatmalısın.
+92	Ölü iken Savaş Bölgesi'ni terk edemezsin.
+93	Savaş Bölgesi'ne giriyorsun. Lütfen bekle.
+94	Savaş Bölgesi'ni terk ediyorsun. Lütfen bekle.
+95	Bir sonraki giriş %d dakika sonra mümkün.
+96	Bir sonraki giriş %d saniye sonra mümkün.
+97	Bu eşyayı burada kullanamazsın.
+98	Bu eşyayı burada kullanamazsın.
+99	Bu etki zaten çalışıyor.
+100	Hemen dirilmek için bir Reenkarnasyon nesnesine ihtiyacın var.
+101	Savaş Bölgesi açıldı.
+102	Savaş Bölgesi kapatıldı.
+103	Savaş Bölgesi %d dakika sonra açılacak.
+104	Savaş Bölgesi %d dakika sonra kapatılacak.
+105	Aktif bir etkinlik var ve iki katı puan alabilirsin.
+106	Savaş Bölgesi'ndeki etkinlik sona erdi.
+107	Geri çekileceğini bildirdin ve %d dakika sonra Savaş Bölgesi'ni terk edebilirsin.
+108	Bir oyuncu geri çekileceğini bildirdi. Daha fazla puan almak için onu öldür!
+109	Geri çekilme bildirimin kaldırıldı.
+110	Ödüller için evanter kapasiten yeterli değil.
+111	Bu nesne sadece internet cafede kullanılabilir.
+112	Geri çekilme bildirimin etkin.
+113	Şu anda Savaş Bölgesi'ne girilemiyor.
+114	Harika! Savaş Bölgesi sıralamasında %d. sıraya ulaştın. Bunun için özel bir ödül alacaksın.
+115	Şu anda %d puanın var. Toplam puanın %d.
+116	Bu nesneyi Savaş Bölgesi'nden geri çekilirken kullanamazsın.
+117	Savaş Bölgesi'nde savaş ilan edemezsin.
+118	Bu eylem bu haritada mümkün değil.
+119	Kalan Sayı: %d
+120	[Lonca] Lonca serveti maksimuma ulaştı.
+121	[Lonca] 2 milyardan fazla Yang'a sahip olduğun için Yang çekemezsin.
+122	Bu limitin üzerinde.
+123	[Lonca] Başka bir pencere açık olunca Yang çekemezsin.
+124	Lonca savaş ilanı 3 dakika sonra devre dışı.
+125	Savaş Bölgesi'ne girişe %d saniye kaldı.
+126	Savaş Bölgesi'nden çıkışa %d saniye kaldı.
+127	%d Puan kaybettin. Kalan puanlar: %d
+128	Ne yazıkki envanterinde yeterince yer yok.
+129	Bu oyuncu için puan alamazsın.
+130	Geri çekileceğini bildirdin, Savaş Bölgesi'ni %d saniye sonra terk edebilirsin.
+131	Etkinlik başladı!
+132	Tohum ya da ay pastası kullanıldı.
+133	Devam etmek için %s karakterini arkadaş listenden sil.
+134	%s şu andan itibaren engellenecek.
+135	%s artık engellenmeyecek.
+136	%s zaten senin tarafından engellendi.
+138	Devam etmek için %s üzerindeki engellemeyi kaldır.
+139	%s seni engelledi.
+140	Güncel etkinliğin canavarı belirdi.
+141	Yeterince yıl dönümü bayrağına sahip değilsin.
+142	Yıl dönümü etkinliği başladı!
+143	Evli değilsen nikah yüzüğü takamazsın.
+144	Yıl dönümü etkinliği %d dakika içinde sona erecek.
+145	Başka bir kostüm taşırken bu nesneyi kullanamazsın.
+146	Gelinlik veya Smokin giyerken bu eşyayı kuşanamazsın.
+147	Bu nesneyi kuşandığın sürece bu eylemi gerçekleştiremezsin.
+148	[Lonca] Başka bir pencere açık olduğu sürece lonca hesabına ne Yang yatırabilirsin ne de çekebilirsin.
+149	[Lonca] Lonca hesabına Yang yatırırken veya çekerken bu işlemi gerçekleştiremezsin.
+150	[Lonca] 'Yang yatır' veya 'Yang öde' penceresi zaten açık.
+151	[Lonca] Bir pet çağırırken lonca hesabına ne Yang yatırabilir ne de çekebilirsin.
+152	%s şurada görülür: %s
+153	Seungryong Vadisi
+154	Etkinlik Dedektörünü bu pozisyondayken kullanamazsın.
+155	Sohan Dağı
+156	Yongbi Çölü
 157	Doyyumhwan
-158	The Ramadan Event has begun!
-159	The Ramadan Event has ended.
-160	You cannot change channel.
-161	Please wait a moment. Changing channel...
-162	This item cannot be absorbed.
-163	This item cannot be transmuted.
-164	Enchant Item cannot be used on this item.
-165	The Event Detector vanished in a mysterious light.
-166	Reinforce Item cannot be used on this item.
-167	Items can only be traded on the same map.
-168	Cannot connect to the channel at this time. Please try again later.
-169	[Group] You cannot do this while the group search is active.
-170	[Gaya] You don't have enough Glimmerstones.
-171	[Gaya] You don't have enough Yang to cut Glimmerstones.
-172	[Gaya] You already have the maximum amount of Gaya.
-173	[Gaya] Cutting successful.
-174	[Gaya] Cutting failed.
-175	[Gaya] The item list has been refreshed.
-176	The Event Detector has vanished.
-177	[Gaya] You don't have enough Gaya.
-178	[Gaya] You cannot purchase this item.
-179	[Gaya] Your inventory is full.
-180	[Gaya] You don't have a Refresh Gaya Market item.
-181	[Gaya] You must open the Gaya Market first.
-182	[Gaya] You cannot unlock any more slots on the Gaya Market.
-183	[Gaya] You don't have enough %s. You need %d more to unlock an additional slot.
-184	[Gaya] The Gaya Market is currently unavailable.
-185	[Gaya] The Gaya Market is already open.
-186	[Gaya] You can only open the Gaya Market once you have closed the other windows.
-187	The Compass for Metin Stones does not work in dungeons.
-188	[Group] The battle has begun.
-189	[Group] You have 1 hour to complete the dungeon.
-190	[Group] You have completed your task with distinction!
-191	[Group] Time until teleportation: %d min. %d sec.
-192	[Group] You will be transported from the dungeon in 10 minutes.
-193	[Group] You are now registered for Meley's Lair.
-194	[Group] Please talk to the relevant NPC to enter.
-195	[Group] You have conceded.
-196	[Group] You will be teleported to the city in 1 minute.
-197	Visit %s to collect your reward.
-198	The Compass for Metin Stones has vanished in the mysterious light.
-199	[Group] The rankings for groups in Meley's Lair is being compiled.
-200	[Group] You cannot leave the dungeon at the moment.
-201	[Group] Your time in the dungeon is up.
-202	[Group] You have left the dungeon.
-203	[Group] The dungeon will close in %d min.
-204	Receive: %s - %d
-205	You cannot open a shop while you are turned to stone.
-206	You cannot use items while you are turned to stone.
-207	This command can only be used in the Zodiac Temple.
-208	You don't have enough insignia.
-209	The Compass for Metin Stones has vanished.
-210	You have not yet completed all missions.
-211	You need more Aventurine and Aureolin Treasures to receive your reward.
-212	You have revived %s.
-213	You have been revived by %s.
-214	You don't have enough items to revive anyone.
-215	You have been revived.
-216	You cannot use that at this location.
-217	You cannot use it at the moment.
-218	%s has been revived.
-219	First level cleared. Return to Monk Milbon.
-220	You have won %s items.
-221	You find a simple Piece of Stone in the Clam.
-222	All group members have been turned to stone. Mission failed.
-223	All levels cleared. You will now be teleported to the bonus level.
-224	Mission complete. As soon as the group leader hits the button, you will be teleported directly to level %d.
-225	The mission was unsuccessful.
-226	Wipe out! If no one is revived within one minute, your dungeon adventure will be over.
-227	Time's up.
-228	This temple's gates open on another day.
-229	All group members must be located on the same map to enter.
-230	You are not the group leader.
-231	There are %d Zodiac Temple(s) in the area. Enter the relevant command to teleport to one of them (1-%d).
-232	The Clam has vanished.
-233	There is no Zodiac Temple on this map.
-234	Destroy Metin stones.
-235	Bonus level: Destroy Metin stones.
-236	Destroy Metin stones.
-237	Destroy Metin stones.
-238	Defeat 5 Zodiac bosses.
-239	Bonus level: You have 5 minutes to trade with the merchant and stock up on supplies.
-240	Destroy Metin stones.
-241	Destroy Metin stones.
-242	Destroy all Metin stones.
-243	There is a White Pearl inside the Clam.
-244	Destroy all Metin stones and defeat the Zodiac boss.
-245	Destroy all Metin stones.
-246	Defeat all monsters.
-247	Defeat all monsters.
-248	Defeat monsters.
-249	Defeat monsters.
-250	Defeat all monsters.
-251	You just missed the bonus level.
-252	Defeat all Zodiac bosses.
-253	There is a Blue Pearl inside the Clam.
-254	Defeat the Zodiac boss.
-255	Defeat the Zodiac boss.
-256	Defeat the Zodiac boss without dying.
-257	Defeat all monsters without dying.
-258	Time's up. Better luck next time.
-259	Defeat the Zodiac boss.
-260	Defeat all enemies!
-261	Bonus level: Destroy a Metin stone.
-262	Destroy a Metin stone. If you are successful, you'll receive a bonus buff.
-263	%d minutes remaining to register for the PvP tournament!
-264	There is a Blood-Red Pearl inside the Clam.
-265	You cannot enter the PvP tournament combat arena.
-266	You cannot transform during the PvP tournament.
-267	%d more until the battle begins!
-268	The battle has begun.
-269	Winner: %s / Loser: %s
-270	%s has left the arena. %s wins.
-271	Registration for the PvP tournament complete.
-272	The PvP tournament starts in %d min.
+158	Ramazan Etkinliği başlıyor!
+159	Ramazan etkinliği sona erdi.
+160	Kanalı değiştiremezsin.
+161	Biraz bekle lütfen. Kanal değiştiriliyor.
+162	Nesne alınamıyor.
+163	Bu nesne dönüştürülemez.
+164	Efsun nesnesi bu nesneye uygulanamaz.
+165	Etkinlik Dedektörü gizemli bir ışıkla birlikte yok oldu.
+166	Arttırma kağıdı bu nesneye uygulanamaz.
+167	Nesne ticareti sadece aynı harita üzerinde yapılabilir.
+168	Şu an kanalla bağlantı kurulamıyor. Lütfen daha sonra tekrar dene.
+169	[Grup] Grup araması etkinken bu işlemi gerçekleştiremezsin.
+170	[Gaya] Yeterli süs taşına sahip değilsin.
+171	[Gaya] Süs taşı biletmeye yetecek kadar Yang'ın yok.
+172	[Gaya] Zaten maksimum sayıda Gayaya sahipsin.
+173	[Gaya] Bileme işlemi başarılı oldu.
+174	[Gaya] Bileme işlemi başarısız oldu.
+175	[Gaya] Eşya listesi yenilendi.
+176	Etkinlik Dedektörü kayboldu.
+177	[Gaya] Yeterli Gayaya sahip değilsin.
+178	[Gaya] Bu nesneyi satın alamazsın.
+179	[Gaya] Envanterin dolu.
+180	[Gaya] 'Gaya mağazasını sıfırlaya' sahip değilsin.
+181	[Gaya] Önce Gaya mağazasını açman gerekiyor.
+182	[Gaya] Gaya mağazasında başka yer açamazsın.
+183	[Gaya] Yeterli %s yok. Bir yer daha açabilmek için daha çok %d lazım.
+184	[Gaya] Gaya mağazası şu anda kullanılamıyor.
+185	[Gaya] Gaya mağazası zaten açık.
+186	[Gaya] Gaya mağazasını ancak diğer pencerelerini kapattığında açabilirsin.
+187	Metin Taşı Dedektörü zindanda çalışmıyor.
+188	[Grup] Savaş başladı.
+189	[Grup] Zindanı başarıyla tamamlamak için 1 saatiniz var.
+190	[Grup] Görevinizi takdirle başardınız!
+191	[Grup] Işınlanmaya kalan süre: %d dak. %d san.
+192	[Grup] 10 dakika içinde zindandan ışınlanırsınız.
+193	[Grup] Şimdi Meley'in İni için kaydoldunuz.
+194	[Grup] Giriş yapmak için yetkili YZK'ya başvurun.
+195	[Grup] Pes ettiniz.
+196	[Grup] Bir dakika içerisinde şehre taşınacaksın.
+197	Ödülünü alacağın yer: %s.
+198	Metin Taşı Dedektörü gizemli ışıkla birlikte kayboldu.
+199	[Grup] Meley'in İni'ndeki grup dövüşündeki en iyiler listesi hazırlanıyor.
+200	[Grup] Şu anda bu zindandan çıkamazsın.
+201	[Grup] Zindan süresi doldu.
+202	[Grup] Zindandan çıktın.
+203	[Grup] Zindan %d dak. sonra sona erecek.
+204	Al: %s - %d
+205	Taş gibi donduğun sürece dükkan açamazsın.
+206	Taş gibi donduğun sürece nesne kullanamazsın.
+207	Bu komut sadece Zodyak tapınağında uygulanabilir.
+208	Yeterli nişanın yok.
+209	Metin Taşı Dedektörü kayboldu.
+210	Henüz tüm görevleri yerine getirmedin.
+211	Ödülünü almak için daha fazla Aventurin ve Aurelin hazinesine ihtiyacın var.
+212	%s karakterini dirilttin.
+213	%s tarafından diriltildin.
+214	Diriltme işlemi için yeterince nesnen yok.
+215	Diriltildin.
+216	Bunu burada kullanamazsın.
+217	Bunu şu an kullanamazsın.
+218	%s diriltildi.
+219	1. kat halloldu. Keşiş Milbon'a geri dönün.
+220	%s eşyasını kazandın.
+221	İstiridyenin içinde sadece sıradan bir taş parçası var.
+222	Tüm üyeler taşa döndü. Misyon başarısız oldu.
+223	Tüm katlar halloldu. Şimdi bonus katına ışınlanıyorsunuz.
+224	Misyon tamamlandı. Grup lideri "atla" butonunu kullandığı anda, doğrudan %d. kata ışınlanırsınız.
+225	Misyon başarılı olmadı.
+226	İşi bitti! Bir dakika içerisinde kimse diriltilmezse zindandaki süreniz dolar.
+227	Zaman doldu.
+228	Bu tapınağın kapısı başka bir gün açılır.
+229	Giriş yapmak için tüm grup üyeleri aynı haritada bulunmak zorundadır.
+230	Grup lideri değilsin.
+231	Çevrede %d Zodyak tapınağı var. Birine ışınlanmak için ilgili komutu gir (1- %d).
+232	İstiridye kayboldu.
+233	Bu haritada Zodyak tapınağı yok.
+234	Metin taşlarını imha et.
+235	Bonus katı: Metin taşlarını imha et
+236	Metin taşlarını imha et.
+237	Metin taşlarını imha et.
+238	5 Zodyak patronu alt et.
+239	Bonus katı: Şimdi 5 dakika boyunca tüccardan alışveriş yaparak stoklarınızı doldurabilirsiniz.
+240	Metin taşlarını imha et.
+241	Metin taşlarını imha et.
+242	Tüm Metin taşlarını imha et.
+243	İstiridyenin içinde Beyaz bir inci var.
+244	Tüm Metin taşlarını imha et ve Zodyak patronunu öldür.
+245	Tüm Metin taşlarını imha et.
+246	Tüm canavarları alt et.
+247	Tüm canavarları alt et.
+248	Canavarları yen.
+249	Canavarları yen.
+250	Tüm canavarları alt et.
+251	Bonus katını kıl payıyla kaçırdın.
+252	Tüm Zodyak patronlarını alt et.
+253	İstiridyenin içinde Mavi bir inci var.
+254	Zodyak patronunu alt et.
+255	Zodyak patronunu alt et.
+256	Zodyak patronunu hiç ölmeden alt et.
+257	Tüm canavarları hiç ölmeden alt et.
+258	Zaman doldu. Şansını bir dahaki sefer dene.
+259	Zodyak patronunu alt et.
+260	Tüm rakipleri alt et!
+261	Bonus katı: Bir Metin taşı imha et.
+262	Bir Metin taşı imha et! Başarılı olursan bir bonus güçlendirici kazanırsın.
+263	PvP turnuvasına kaydolmak için %d dakika kaldı!
+264	İstiridyenin içinde kan kırmızı bir inci var.
+265	PvP turnuvasının savaş arenasına giriş yapamazsın.
+266	PvP turnuvasında kendini dönüştüremezsin.
+267	Savaşın başlamasına %d kaldı!
+268	Savaş başladı.
+269	Kazanan: %s / Kaybeden: %s
+270	%s Arena'yı terk etti. %s kazandı.
+271	PvP turnuvasına kayıtlar kapandı.
+272	PvP turnuvası %d dakika içinde başlayacak.
 273	Final
-274	It isn't easy to understand this book.
-275	Semifinal
-276	Round %u
-277	No winner
-278	The PvP tournament is over.
-279	%s is the tournament victor!
-280	Participants: %s
-281	Remaining participants: %u
-282	Current participants: %u
-283	You have registered for the PvP tournament.
-284	This book will not help you.
-285	You have not registered for the PvP tournament.
-286	This command can only be used on the PvP tournament map.
-287	Yut Nori has started!
-288	Collect Birch Branches, craft Yut Nori Boards from them and play the exciting minigame.
-289	Fantastic prizes await!
-290	Yut Nori has finished.
-291	Go to the Yut Nori Table to collect your reward.
-293	[Soul System] Use %s to receive the effect.
-294	[Soul System] %s is already at the highest level.
-295	You need to have a minimum level of 30 to understand this book.
-296	[Soul System] The soul is active.
+274	Bu kitabı anlamak kolay değil.
+275	Yarı Final
+276	%u. Tur
+277	Kazanan yok
+278	PvP turnuvası bitti.
+279	Turnuvanın galibi %s!
+280	Katılımcı: %s
+281	Kalan katılımcı: %u
+282	Mevcut katılımcı: %u
+283	PvP turnuvasına kaydoldun.
+284	Bu kitap sana yardım etmeyecek.
+285	PvP turnuvasına kaydolmadın.
+286	Bu komut sadece PvP turnuvasının haritasında uygulanabilir.
+287	Yutnori başladı!
+288	Huş gövdeleri toplayıp bunlardan Yutnori oyun tahtaları yap ve heyecanlı mini oyuna katıl.
+289	Harika ödüller seni bekliyor!
+290	Yutnori bitti.
+291	Ödülünü almak için Yutnori masasına git.
+293	[Ruh sistemi] Efekti almak için %s kullan.
+294	[Ruh sistemi] %s zaten en yüksek seviyede.
+295	Bu kitabı anlaman için 30.Seviyede olman gerekiyor.
+296	[Ruh sistemi] Ruh etkin.
 297	
-298	[Monster Bash Event] Map %s is reporting sightings of %s.
-299	County Yayang
-300	County Bokjung
-301	County Bakra
-302	Hwang Temple
-303	Kuahlo Dong (Spiders Dungeon)
-304	Spider Dungeon 2
-305	You need a minimum level of 50 to understand this book.
-306	Gautama Cliff
-307	Nephrite Bay
-308	Thunder Mountains
-309	Enchanted Forest
-310	Grotto of Exile
-311	Grotto of Exile 2
-312	You cannot enter while you are mounted.
-313	This cannot be used on equipped items.
-314	Red Forest
-315	Snakefield
-316	You can't train any more Combos.
-317	You still require %d %s(s).
-318	The event is over. You cannot use this item any more.
-319	The maximum level has already been reached.
-320	Success! The %s effect has been increased to level %d.
-321	Failure! The attempt to upgrade the %s effect to level %d failed.
-322	Success! The %s effect is now active.
-323	Failure! The attempt to change to the %s effect failed.
-324	Success! The %s effect is now active.
-325	Failure! The %s effect was not activated.
-326	The Flower Power Event has started.
-327	%s has captured the flag of %s!
-328	You already understand this language.
-329	The Flower Power Event has ended.
-330	You must wait a while before opening your mailbox again.
-331	Please close all other windows to open your mailbox.
-332	Your mailbox is full.
-333	Please empty your mailbox to be able to receive new messages.
-334	You cannot use that at the moment.
-335	[Guild] You cannot use guild skills in field guild wars.
-336	[Guild] That can only be used in guild wars.
-338	[Guild] Deposited: %d Yang
-339	You cannot improve this skill any further.
-340	[Guild] The purchase was cancelled as you already own guild territory.
-341	[Guild] The purchase was cancelled as your guild already owns guild territory.
-342	[Catch the King] Your score isn't good enough for a prize.
-343	[Catch the King] Play a game of Catch the King now!
-344	[Okey Event] Defeat monsters, collect cards and play a game of okey.
-345	[Okey Event] Amazing prizes await!
-346	[Catch the King] Catch the King has ended.
-349	[Catch the King] %s earned %d points in Catch the King.
-350	You have to improve your Level to read this Book.
-351	You have already used the Researcher's Elixir.
-352	The 'Ship Defence' dungeon is ready. The fisherman will let you board now.
-353	We're under attack from sea monsters! Get ready to fight!
-354	They're attacking again! Ready your weapons!
-355	Land sighted! You have successfully protected the mast and reached the new continent after a long and weary journey. Continue to the portal.
-356	Your mast has been smashed. You fought valiantly, but the battle is lost.
-357	You must abandon the ship in %d sec.
-358	You must abandon the ship in %d min.
-359	The sea battle starts in %d sec.
-360	The book is too hard for practising.
-361	Hurry! You have %d minutes to travel through the portal to reach the mainland.
-362	You must leave the ship now as you have not started the sea battle.
-363	If you don't start the sea battle within 1 minute, you will have to leave the ship.
-364	%s's remaining HP: %d%%
-365	SOS! The mast has been smashed and your ship is sinking. You will now be teleported to Cape Dragon Fire.
-366	Wave %d: For %d sec. you must protect the %s with all your strength.
-367	Wave %d: While protecting the %s, defeat %s.
-368	You have successfully protected the mast. Keep it up! Get ready for the next wave.
-369	The next wave begins in %d sec.
+298	[Canavar Avı Etkinliği] %s haritasında %s belirdi.
+299	Jayang Şehri
+300	Bokjung Şehri
+301	Bakra Şehri
+302	Hwang Tapınağı
+303	Kuahlo Dong (Örümcek Zindanı)
+304	Örümcek Zindanı 2
+305	Bu kitabı anlaman için 50.Seviyede olman gerekiyor.
+306	Gautama Uçurumu
+307	Nefrit Körfezi
+308	Yıldırım Dağları
+309	Efsunlu Orman
+310	Sürgün Mağarası
+311	Sürgün Mağarası 2
+312	Binek hayvanın üzerindeyken giremezsin.
+313	Bu kuşanılmış nesneler üzerinde uygulanamaz.
+314	Kızıl Orman
+315	Yılan Vadisi
+316	Daha fazla kombo geliştiremezsin.
+317	Daha ihtiyacın var: %d %s.
+318	Etkinlik sonlandırıldı. Bu nesneyi artık kullanamazsın.
+319	Maksimum seviyeye zaten ulaşıldı.
+320	Başarılı! %s etkisi şu seviyeye yükseltildi: %d
+321	Başarısız! %s etkisinin şu seviyeye yükseltilmesi başarısız: %d
+322	Başarılı! %s etkisi şu andan itibaren etkin.
+323	Başarısız! %s üzerindeki etkilerin değişikliği başarısız.
+324	Başarılı! %s etkisi şu andan itibaren etkin.
+325	Başarısız! %s etkisi etkinleştirilmedi.
+326	Çiçek çocuklar etkinliği başladı.
+327	%s Loncası %s Loncasının bayrağını ele geçirdi!
+328	Bu dili zaten anlıyorsun.
+329	Çiçek çocuklar etkinliği sonlandırıldı.
+330	Posta kutunu tekrar açmadan önce biraz beklemelisin.
+331	Posta kutunu açmak için lütfen diğer tüm pencereleri kapat.
+332	Posta kutun dolu.
+333	Yeni mesajlar almak için lütfen posta kutunu boşalt.
+334	Bunu şu anda kullanamazsın.
+335	[Lonca] Lonca savaşı alannında lonca yeteneklerini kullanamazsın.
+336	[Lonca] Bunu sadece lonca savaşında kullanabilirsin.
+338	[Lonca] Yatırdı: %d Yang
+339	Bu beceriyi daha fazla yükseltemezsin.
+340	[Lonca] Zaten Lonca bölgesine sahip olduğun için satın alım işlemi iptal edildi.
+341	[Lonca] Loncan zaten Lonca bölgesine sahip olduğu için satın alım işlemi iptal edildi.
+342	[Kralı yakala] Puanın bir ödül için yeterli değil.
+343	[Kralı yakala] Şimdi bir tur "Kralı yakala" oyna!
+344	[Okey Etkinliği] Canavarları yen, kartları topla ve bir tur okey oyna.
+345	[Okey Etkinliği] Harika ödüller seni bekliyor!
+346	[Kralı yakala] "Kralı yakala" sona erdi!
+349	[Kralı yakala] %s Kralı yakala'da %d puan aldı.
+350	Bu kitabı anlayabilmek için seviyeni yükseltmelisin.
+351	Araştırmacının özütünü zaten kullandın.
+352	"Gemi savunması" zindanı hazır. Balıkçı sizi gemiye alacak.
+353	Deniz canavarları tarafından saldırıya uğruyoruz! Savaşa hazırlanın!
+354	Yine saldırıyorlar! Savaşmaya hazır olun!
+355	Kara göründü! Gemi direğini başarıyla savundunuz ve uzun bir yolculuktan sonra yeni kıtaya ulaştınız. Portala gidin.
+356	Direğiniz parçalandı. Cesurca savaştınız, ama savaşı kaybettiniz.
+357	Gemiden %d sn. içinde vazgeçmelisiniz.
+358	Gemiden %d dk.
+359	Deniz savaşı %d sn. içinde başlayacak
+360	Kitabın öğrenilmesi zor.
+361	Acele edin! Portal üzerinden karaya ulaşmanız için %d dak. kaldı.
+362	Deniz savaşını başlatmamış olduğunuz için şimdi gemiyi terk etmelisiniz.
+363	Deniz savaşını 1 dakika içinde başlatmazsanız, gemiyi terk etmek zorundasınız.
+364	%s ögesinden kalan HP: %%%d
+365	SOS! Direk parçalandı ve geminiz batıyor. Şimdi Ejderha Ateşi Burnu'na ışınlanacaksınız.
+366	%d. Dalga: %d sn. boyunca tüm gücünüzle %s ögesini savunun.
+367	%d. Dalga: %s savunması esnasında, %s kişisini mağlup edin.
+368	Direği başarıyla savundunuz. Aferin! Bir sonraki dalgaya hazırlanın.
+369	Bir sonraki dalga %d sn. içinde başlayacak.
 370	%s
-371	You cannot train with this Book any more.
-372	You can only withdraw from the battle in %d sec.
-373	You cannot carry out this action at the moment.
-374	You have to wait %d sec. after opening the Mailbox before you can switch channels or teleport.
-375	Taxes are set to %d%%.
-376	You need a minimum level of 50 to get riding training.
-377	You have escaped the evil ghost curse with the help of an Exorcism Scroll.
-378	You cannot read any more Riding Guides.
-379	You read the Horse Riding Manual and received a Riding Point.
-380	You can use this point to improve your riding skill!
-381	The guild %s's flag has been stolen by player %s.
-382	You did not understand the riding guide.
-383	Your mind is clear. You can concentrate really well now.
-384	Your rank has increased by %d points.
-385	You cannot dye or bleach your current hairstyle.
-386	You need to have reached level %d to be able to dye your hair again.
-387	This item can only be opened by the another gender.
-388	You cannot use this from your current position.
-389	You are ready to warp, so you cannot use the Scroll of the Location.
-390	You are being brought back to the place of origin.
-391	%s%s cannot be used in a dungeon.
-392	[Quest] You have already received your reward.
+371	Bu kitapla daha fazla eğitim yapamazsın.
+372	Ancak %d sn. içinde savaştan çekilebilirsin.
+373	Bu eylem şu anda yapılamaz.
+374	Kanalı değiştirmek veya ışınlanmak için posta kutusunu açtıktan sonra %d saniye beklemelisin.
+375	Vergi %%%d olarak ayarlandı.
+376	Binicilik Eğitimi almak için 50'inci seviyeye ulaşmış olman gerekiyor.
+377	Kötü ruhların lanetinden Kötü Ruh Kovma Kağıdının yardımıyla kurtuldun.
+378	Daha fazla Binicilik Rehberi okuyamazsın.
+379	Binicilik Kılavuzu'nu okudun ve bir tane Binicilik Puanı kazandın.
+380	Bu puanı Biniciliğini geliştirmek için kullanabilirsin!
+381	%s loncasının bayrağı, %s tarafından çalındı.
+382	Binicilik Rehberini anlamadın.
+383	Zihnin açık. Şimdi iyi konsantre olabilirsin.
+384	Sıralama %d puan yükseldi.
+385	Şu anki saç stilini beyazlatamaz veya boyayamazsın.
+386	Saçını tekrar boyayabilmek için %d. seviyeye ulaşman gerekli.
+387	Bu eşya sadece karşı cins tarafından açılabilir.
+388	Şu anki pozisyonunda bunu kullanamazsın.
+389	Işınlanmaya hazırsın, bu nedenle geri dönüş kağıdını kullanamazsın.
+390	Başlangıç yerine geri gönderiliyorsun.
+391	%s%s zindanda kullanılamaz.
+392	[Quest] Ödülünü aldın zaten.
 393	the
 394	the
-395	There aren't any Pieces of Broken Stone available for removal.
-396	You cannot change the upgrade of this item.
-397	There is no upgrade that you can change.
-398	You can only do this %d minutes after an upgrade. (%d minutes left)
-399	You have changed the upgrade.
-400	Upgrade successfully added.
-401	No upgrade added.
-402	You must use the Blessing Marble in order to add another bonus to this item.
-403	You cannot use this in the duel arena.
-404	This item can no longer be improved. The maximum number of bonuses has been reached.
-405	You can only use the Blessing Marble with an item which already has 4 bonuses.
-406	Socket successfully added.
-407	No socket added.
-408	No additional sockets could be added to this item.
-409	You cannot add a socket to this item.
-410	Arming successful.
-411	Arming has failed.
-412	You have to add a socket first. Use a diamond in order to do this.
-413	There are no sockets for gemstones in this item.
-414	You can do this when you wear an Emotion Mask.
-415	You have to add a socket if you want to use a Diamond.
-416	No more gems can be added to this item.
-417	These items cannot be used together.
-418	You cannot change the Bait whilst fishing.
-419	You are exchanging the current Bait for %s.
-420	You attached %s to the hook as bait.
-421	You are missing some ingredients to make the potion.
-422	You do not have enough material (%s).
-423	You do not have enough empty bottles.
-424	The potion production has failed.
-425	Only women can do this.
-426	You cannot attach several stones of the same type.
-427	This Spirit Stone cannot be attached to this type of item.
-428	You cannot attach this Spirit Stone to a weapon.
-429	You have attached the Spirit Stone successfully.
-430	The Spirit Stone broke while being attached.
-431	No slot free.
-432	This function is not available right now.
-433	You cannot use a Scroll of the Location whilst taking part in a kingdom battle.
-434	After opening the Storeroom you cannot use a Scroll of the Location for %d seconds.
-435	You cannot use a Scroll of the Location while another window is open.
-436	This person does not exist.
-437	After a trade, you cannot use a scroll for another %d seconds.
-438	After opening a storeroom you cannot use a Scroll of the Location for another %d seconds.
-439	You cannot use the Scroll of the Location because the distance is too small.
-440	After a trade you cannot use a Scroll of the Location for %d seconds.
-441	You cannot open the Storeroom if another window is already open.
-442	You cannot drop this item.
-443	The dropped item will vanish in 5 minutes.
-444	%s received
-445	You have too many items in your inventory.
-446	%s receives %s.
-447	Everyone will be teleported into the city shortly.
-448	You are too near.
-449	Item Trade: %s, %s
-450	You cannot change the equipped item while you are transformed.
-451	You have to stand still to equip the item.
-452	Monkey Herbs cannot be fed to living horses. It is used to revive dead horses.
-453	You cannot feed a dead Horse.
-454	You fed the Horse with Herbs.
-455	You have fed the Horse.
-456	Your level is too low to wear this Hairstyle.
-457	You already have this Hairstyle.
-458	You have already transformed.
-459	You are too far away.
-460	That's the wrong trading item.
-461	You cannot transform into a monster who has a higher level than you.
-462	Your level is too low to equip this item.
-463	You are not strong enough to equip yourself with this item.
-464	Your intelligence is too low to equip yourself with this item.
-465	Your dexterity is too low to equip yourself with this item.
-466	Your vitality is too low to equip yourself with this item.
-467	You cannot use this item because you are not married.
-468	You cannot equip this item twice.
-469	Time left until the removal of the socket of %s: %d
-470	This action can only be done with another gender.
-471	A gem socketed in the %s has vanished.
-472	[Guild] This guild name is invalid.
-473	[Guild] This guild name is already taken.
-474	[Guild] You cannot found a guild.
-475	The guild %s has declared war on %s!
-476	[Guild] %s has refused the Guild war.
-477	The guild war between %s and %s will start in a few seconds!
-478	The guild war between %s and %s has begun!
-479	The guild war between %s and %s has ended in a draw.
-480	%s has won the guild war against %s.
-481	You need your fellow player's approval for this.
-482	[Guild] The guild war has been cancelled.
-483	The guild war between %s and %s has been cancelled.
-484	Close
-485	Action cancelled. You have entered a battle.
-486	Someone has logged into your account. You will be disconnected from the server.
-487	A mysterious light appears from the tree.
-488	%d Playtime added to your account. (Payment number %d)
-489	You can participate in the guild battle in viewer mode.
-490	While choosing a character, an icon appears.
-491	There are no opponents.
-492	The battle with %s has begun!
-493	If no enemy can be found, the guild war will be ended automatically.
-494	Because the guild war finished early, the result will judged as a draw.
-495	The energy is reflected because of the Emperors Blessing.
-496	After %d seconds you can use the Emperors Blessing.
-497	Not enough tax income : %d.
-498	[TEST_ONLY]Tax : %d
-499	Transformation error.
-500	You learned the transmutation completely.
-501	Please call your Horse first.
-502	You have sent your horse away.
-503	%s challenged you to a battle!
-504	You have to get off your Horse.
-505	You cannot feed your Horse whilst sitting on it.
-506	You have fed the Horse with %s%s.
-507	You need %s.
-508	%d seconds until Exit.
-509	The game will be closed in %d seconds.
-510	%d seconds until Exit.
-511	Your logout has been cancelled.
-512	Back to login window. Please wait.
-513	You have been disconnected from the server. Please wait.
-514	You have challenged %s to a battle.
-515	You are changing character. Please wait.
-516	A new start is not possible at the moment. Please wait %d seconds.
-517	You cannot restart yet. Please wait another %d seconds.
-518	You cannot restart yet. Please wait another %d seconds.
-519	You cannot restart in the city yet. Wait another %d seconds.
-520	The waiting time has expired. You will be revived in the city.
-521	You cannot change your status while you are transformed.
-522	This player is currently fighting.
-523	[Guild] It does not belong to the guild.
-524	[Guild] You do not have the authority to change the level of the guild skills.
-525	Your choice is incorrect.
-526	[Storeroom] You have entered an incorrect password.
-527	[Storeroom] The Storeroom is already open.
-528	[Storeroom] You have to wait 10 seconds before you can open the Storeroom again.
-529	[Storeroom] You are too far away to open the storeroom.
-530	[Group] The server cannot execute this group request.
-531	[Group] You cannot leave a group while you are in a dungeon.
-532	[Group] You have left the group.
-533	[Guild] Your guild is already participating in another war.
-534	[Guild] No one is entitled to a guild war.
-535	[Guild] No guild with this name exists.
-536	There already is a candidacy.
-537	[Guild] This guild is already participating in a war.
-538	[Guild] Not enough Yang to participate in a guild war.
-539	[Guild] The guild does not have enough Yang to participate in a guild war.
-540	[Guild] This Guild is already scheduled for another war.
-541	[Guild] This guild is already participating in another war.
-542	[Guild] Guild level is too low to participate in a guild war.
-543	[Guild] A minimum of %d players are needed to participate in a guild war.
-544	[Guild] The guild does not have enough points to participate in a guild war.
-545	[Guild] The guild does not have enough members to participate in a guild war.
-546	Your level has to be higher than 20 to register a cell phone number.
-547	You do not have the emperor qualification.
-548	%s declined the invitation.
-549	You cannot accept the invitation because you are already in the group.
-550	Only the emperor can use this.
-551	Cooldown time for approximately %d seconds
-552	Lack of Taxes. Current Capital : %u Missing Capital : %u
-553	Command: warpto <character name>
-554	You cannot be warped to an unknown player.
-555	Adding player %d into the channel. (Present channel %d)
-556	Warp to player %s.
-557	You cannot call unknown players.
-558	[Guild] There are no experience points for hunting during a guild war.
-559	When the Blessing of the Emperor is used %s the HP and SP are restored again.
-560	My information about the emperor
-561	[%sMonarch] : %s Yang owned %lld
-562	[%sMonarch] : %s
-563	Information about the emperor
-564	Only an emperor can use this.
-565	Choose a number between 1 and 50.
-566	Taxes are set to %d %%.
-567	The Monster cannot be called. Check the Mob Number.
-568	Hit Points +%d
-569	Spell Points +%d
-570	The Emperor Blessing is activated.
-571	Endurance +%d
-572	Intelligence +%d
-573	Strength +%d
-574	Dexterity +%d
-575	Attack Speed +%d
-576	Movement Speed %d
-577	Cooldown Time -%d
-578	Energy Recovery +%d
-579	Spell Point Recovery +%d
-580	Poison Attack %d
-581	Is being prepared. Can be used after %d .
+395	Silinecek taş parçası kırıkları yok.
+396	Bu eşyanın geliştirilmesini değiştiremezsin.
+397	Değiştirebileceğin hiçbir geliştirme yok.
+398	Bunu bir geliştirmeden en az %d dakika sonra yapabilirsin. (%d dakika kaldı)
+399	Geliştirmeyi değiştirdin.
+400	Geliştirme başarıyla eklendi.
+401	Geliştirme eklenmedi.
+402	Kutsama Küresini bu eşyaya başka bir bonus eklemek için kullanmalısın.
+403	Bunu arenada kullanamazsın.
+404	Bu eşya geliştirilemez. Maksimum bonus sayısına ulaşıldı.
+405	Kutsama Küresini üzerinde zaten 4 bonus olan eşyalar için kullanabilirsiniz.
+406	Slot başarıyla eklendi.
+407	Slot eklenmedi.
+408	Bu nesneye daha fazla slot eklenmiyor.
+409	Bu nesneye slot eklenmiyor.
+410	Silahlanma başarılı.
+411	Silahlanma başarısız.
+412	İlk önce bir slot eklemen gerekiyor. Bunu yapmak için bir elmas kullan.
+413	Bu nesnede mücevher slotu yok.
+414	Bunu Duygu Maskesi taktığında yapabilirsin.
+415	Elmas kullanmak istiyorsan bir slot eklemen gerekiyor.
+416	Bu nesneye daha fazla mücevher eklenemiyor.
+417	Bu nesneler birleştirilerek kullanılmıyor.
+418	Balık tutarken yemi değiştiremezsin.
+419	Şu anki yemi %s ile değiştirdin.
+420	Çengele yem olarak %s taktın.
+421	İksir hazırlamak için tüm malzemelere sahip değilsin.
+422	Yeterli malzemen yok (%s).
+423	Yeterince boş şişen yok.
+424	İksir hazırlama işlemi başarısız.
+425	Bunu sadece bayanlar yapabilir.
+426	Aynı türden çok sayıda zihin taşı ekleyemezsin.
+427	Bu zihin taşı böyle bir nesneye eklenemez.
+428	Bu zihin taşını silaha takamazsın.
+429	Zihin taşını başarıyla taktın.
+430	Zihin taşı yerleştirirken kırıldı.
+431	Boş yer yok.
+432	Şu anda eşinize teleport olamazsınız.
+433	Katılmış olduğun bir krallık savaşı devam ederken geri dönüş kağıdı kullanamazsın.
+434	Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.
+435	Başka pencere açık olduğu sürece geri dönüş kağıdı kullanamazsın.
+436	Kişi bulunamadı.
+437	Ticaretten sonra %d saniye Parşömen kullanamazsın.
+438	Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.
+439	Mesafe çok yakın olduğu için geri dönüş kağıdı kullanamazsın.
+440	Ticaretten sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.
+441	Başka bir pencere açıkken depo açamazsın.
+442	Bu eşyayı düşüremezsin.
+443	Düşürülen eşya 5 dakika içinde yok olacak.
+444	%s Kazandın.
+445	Çok fazla eşya taşıyorsun.
+446	%s şunu kazandı: %s.
+447	Kısa zamanda herkes seçilen şehre ışınlanacak.
+448	Çok yakınsın.
+449	Eşya Ticareti:  %s, %s
+450	Dönüşüm esnasında ekipmanını değiştiremezsin.
+451	Eşya giyebilmek için hareketsiz olman gerekli.
+452	Maymun Bitkisi yem olarak kullanılamaz. Ölmüş atları canlandırmak için kullanılır.
+453	Ölü Atı besleyemezsin.
+454	Atı otlarla beslediniz.
+455	Atı besledin.
+456	Bu saç şekli için seviyen çok düşük.
+457	Zaten bu saç şekline sahipsin.
+458	Dönüşmüş haldesin zaten.
+459	Çok uzaksın.
+460	Bu yanlış ticaret eşyası.
+461	Kendinden daha yüksek seviyeli bir canavara dönüşemezsin.
+462	Seviyen çok düşük olduğu için bu nesneyi kullanamıyorsun.
+463	Bu nesneyi kullanmak için yeterli güce sahip değilsin.
+464	Zekân çok düşük olduğu için bu nesneyi kullanamıyorsun.
+465	Bu nesneyi kullanabilmek için yeterli çevikliğe sahip değilsin.
+466	Bu nesneyi kullanmak için yeterli canlılığa sahip değilsin.
+467	Evli olmadığın için bu eşyayı kullanamazsın.
+468	2.kez bu eşyayı giyemezsin.
+469	%sgirişinin silinmesine kalan süre : %d
+470	Bu sadece diğer cinsiyetle birlikte yapılabilen bir aksiyon.
+471	%s Mücevherinden bir değerli taş kayboldu.
+472	[Guild] Lonca adı hatalı.
+473	[Guild] Bu Lonca adı zaten kullanılıyor.
+474	[Guild] Lonca kuramazsın.
+475	%s, %s loncasına karşı savaş ilan etti!
+476	[Guild] %s Lonca savaşını reddetti.
+477	%s ile %s arasındaki lonca savaşı birkaç dakika içinde başlayacak!
+478	%s ile %s arasında lonca savaşı başladı!
+479	%s ile %s arasındaki lonca savaşı berabere sonuçlandı!
+480	Lonca savaşında %s, %s loncasına karşı kazandı.
+481	Bunun için eşinin onayı gerekli.
+482	[Guild] Lonca savaşı iptal oldu.
+483	%s ile %s arasındaki lonca savaşı iptal oldu!
+484	Kapat
+485	Hareket iptal edildi. Bir savaşa girdin.
+486	Biri hesabınıza giriş yaptı. Bağlantınız kesilecek.
+487	Ağaçtan gizemli bir ışık yayılıyor.
+488	%d oyun süresi hesabınıza eklendi. (Ödeme Numarası %d)
+489	Lonca savaşına izleyici olarak katılabilirsin.
+490	Bir karakter seçerken <izlemeyi bitir> butonu görünür.
+491	Burada düşman yok.
+492	%s ile olan savaş başladı!
+493	Eğer düşman bulunamazsa Lonca Savaşı otomatik olarak biter.
+494	Lonca Savaşı vaktinden önce bittiği için sonuç berabere sayılıyor.
+495	İmparatorların Kutsaması nedeniyle enerji yansıtıldı.
+496	%d saniye sonra İmparator Kutsamasını kullanabilirsin.
+497	Yetersiz vergi geliri : %d
+498	[TEST_ONLY]Vergi : %d
+499	Dönüşüm sırasında hata oluştu.
+500	Dönüşümü tamamen öğrendin.
+501	Lütfen önce atını çağır.
+502	Atını gönderdin.
+503	%s seni savaşa davet ediyor!
+504	Atından inmelisin.
+505	Atının üzerinde otururken onu besleyemezsin.
+506	Ata %s%s yedirdin.
+507	%s gerekli.
+508	%d saniye sonra oyun kapanacak.
+509	Oyun %d saniye sonra kapanacak.
+510	%d saniye sonra oyun kapanacak.
+511	Çıkışınız iptal edildi.
+512	Giriş ekranına dön. Lütfen bekleyin.
+513	Serverla olan bağlantınız kesiliyor. Lütfen bekleyin.
+514	%s savaşa davet ettiniz.
+515	Karakteri değiştirdiniz. Lütfen bekleyin.
+516	Yeniden dirilme henüz mümkün değil. %d saniye bekle.
+517	Yeniden dirilme henüz mümkün değil. %d saniye bekle.
+518	Yeniden dirilme henüz mümkün değil. %d saniye bekle.
+519	Şehirde yeniden dirilme henüz mümkün değil. %d saniye bekle.
+520	Bekleme süresi doldu. Şehirde yeniden diriltileceksin.
+521	Dönüşmüş durumda olduğunuz sürece statünüzü değiştiremezsiniz.
+522	Oyuncu zaten dövüşüyor.
+523	[Guild] Bu Loncaya ait değil.
+524	[Guild] Lonca Becerilerinin Seviyesini değiştiremezsin.
+525	Seçiminiz yanlış.
+526	[Storages] Yanlış şifre girdin.
+527	[Storages] Depo zaten açık.
+528	[Storages] Yeniden depo açmak için 10 saniye beklemelisin.
+529	[Storeroom] Depoya uzak olduğun için açamıyorsun.
+530	[Group] Sunucu grup isteğini gerçekleştiremedi.
+531	[Group] Zindandayken gruptan ayrılamazsın.
+532	[Group] Gruptan ayrıldın.
+533	[Guild] Loncanız zaten başka bir savaşa katılıyor.
+534	[Guild] Lonca savaşı için kimse yetkilendirilmedi.
+535	[Guild] Bu isimde bir Lonca bulunamadı.
+536	Zaten bir aday var.
+537	[Guild] Bu Lonca zaten bir savaşa katılıyor.
+538	[Guild] Lonca savaşına katılmak için yeterli Yang yok.
+539	[Guild] Bu Lonca, Lonca savaşı yapmak için yeterli Yang'a sahip değil.
+540	[Guild] Bu Lonca zaten başka bir Lonca savaşı için kayıt edilmiş.
+541	[Guild] Loncanız zaten başka bir savaşa katılıyor.
+542	[Guild] Sıralama Lonca Savaşına katılabilmek için çok düşük.
+543	[Guild] Lonca savaşına en az %d oyuncu katılması gerekiyor.
+544	[Guild] Lonca bir savaşta yer almak için yeterli Sıralama Puanına sahip değil.
+545	[Guild] Lonca, Lonca Savaşına katılabilmek için yeterli üyeye sahip değil.
+546	Cep telefonu numarası kaydedebilmek için 20.Seviyeden yüksek olmalısın.
+547	İmparator olmak için gerekli özelliklere sahip değilsin.
+549	Daveti kabul edemezsin, zaten bir grubun var.
+550	Bunu sadece İmparator kullanabilir.
+551	Dinlenme Süresi yaklaşık %d saniye
+552	Vergi eksikliği. Mevcut Sermaye : %u Eksik Sermaye : %u
+553	Sıra: warpto <character name>
+554	Bilinmeyen bir oyuncuya nakledemezsiniz.
+555	Oyuncu %d kanala ekleniyor. (Bulunulan kanal: %d)
+556	%s yanına naklet.
+557	Bilinmeyen bir oyuncuyu arayamazsın.
+558	[Guild] Lonca savaşı sırasında avlanma, Tecrübe Puanı kazandırmıyor.
+559	İmparator kutsaması kullanıldığı zaman %s HP ve SP yeniden yüklenir.
+560	Benim İmparatorluk Bilgim
+561	[%sHükümdar] : %s Yang Sahip olunan %lld
+562	[%sHükümdar] : %s
+563	İmparator Bilgisi
+564	Bunu sadece bir İmparator kullanabilir.
+565	1 - 50 arasında bir rakam seç.
+566	Vergi ayarlandı: %d %%.
+567	Canavar çağrılamaz. Mob numarasını kontrol ediniz.
+568	Hayat Puanları +%d
+569	Mana Puanı +%d
+570	İmparator Kutsaması aktif.
+571	Dayanıklılık +%d
+572	Zeka +%d
+573	Güç +%d
+574	Çeviklik +%d
+575	Saldırı Hızı +%d
+576	Hareket Hızı %d
+577	Dinlenme Süresi -%d
+578	Geri Kazanılan Enerji +%d
+579	Geri Kazanılan SP +%d
+580	Zehirli Saldırı %d
+581	Hazırlandı. %d sonra kullanılabilir.
 582	Star +%d
-583	Speed Reduction +%d
-584	Critical Attack with a chance of %d%%
-585	Chance of a Speared Attack of %d%%
-586	Player's Attack Power against Monsters +%d%%
-587	Horse's Attack Power against Monsters +%d%%
-588	Attack Boost against Wonggui + %d%%
-589	Attack Boost against Milgyo + %d%%
-590	Attack boost against zombies + %d%%
-591	Attack boost against devils + %d%%
-592	Due to Emperor Sa-Za-Hu, the player %s will receive an attack power increase of 10 %% for 3 minutes in this area.
-593	Absorbing of Energy %d%% while attacking.
-594	Absorption of Spell Points (SP) %d%% while attacking.
-595	With a chance of %d%% Spell Points (SP) will be taken from the enemy.
-596	Absorbing of Spell Points (SP) with a chance of %d%%
-597	%d%% Chance of blocking a close-combat attack
-598	%d%% Chance of blocking a long range attack
-599	One-Handed Sword defence %d%%
-600	Two-Handed Sword Defence %d%%
-601	Two-Handed Sword Defence %d%%
-602	Bell Defence %d%%
-603	By the Emperor Geum-Gang-Gwon the player %s gets 10 %% more armour for 3 minutes.
-604	Fan Defence %d%%
-605	Distant Attack Resistance %d%%
-606	Fire Resistance %d%%
-607	Lightning Resistance %d%%
-608	Magic Resistance %d%%
-609	Wind Resistance %d%%
-610	Reflect Direct Hit: %d%%
-611	Reflect Curse: %d%%
-612	Poison Resistance %d%%
-613	Spell Points (SP) will be increased by %d%% if you win.
-614	The event is already running. (Flag: %d)
-615	Experience increases by %d%% if you win against an opponent.
-616	Increase of Yang up to %d%% if you win.
-617	Increase of captured Items up to %d%% if you win.
-618	Power increase of up to %d%% after taking the potion.
-619	%d%% Chance of filling up Hit Points after a victory.
-620	No Dizziness %d%%
-621	No Slowing Down %d%%
-622	No falling down %d%%
-623	Attack Power + %d
-624	Armour + %d
-625	OX quiz script could not be loaded.
-626	Magical Attack + %d
-627	Magical Defence + %d
-628	Maximum Endurance + %d
-629	Strong against Warriors + %d%%
-630	Strong against Ninjas + %d%%
-631	Strong against Sura + %d%%
-632	Strong against Shamans + %d%%
-633	Strength against monsters + %d%%
-634	Attack + %d%%
-635	Defence + %d%%
-636	OX quiz script has loaded.
-637	Experience %d%%
-638	Chance to find an Item %.1f
-639	Chance to find Yang %.1f
-640	Maximum Energy +%d%%
-641	Maximum Energy +%d%%
-642	Skill Damage %d%%
-643	Hit Damage %d%%
-644	Resistance against Skill Damage %d%%
-645	Resistance against Hits %d%%
-646	%d%% Resistance against Warrior Attacks
-647	Welcome to Metin2.
-648	%d%% Resistance against Ninja Attacks
-649	%d%% Resistance against Sura Attacks
-650	%d%% Resistance against Shaman Attacks
-651	(Procedure: %d y- %d m - %d d)
-652	Your chat is blocked.
-653	You need a higher level to be able to call.
-654	You need a minimum level of %d to be able to call.
-655	You are not in this Group.
-656	You did not join this Guild.
-657	The player has rejected your request to add him to your friend list.
-658	OX Event has started.
-659	[Friends] You cannot add a GM to your list.
-660	%s is not online.
-661	After a trade, you have to wait %d seconds before you can open a shop.
-662	You can trade again in %d seconds.
-663	You have more than 2 Billion Yang. You cannot trade.
-664	You cannot open a private shop while another window is open.
-665	The player has more than 2 Billion Yang. You cannot trade with him.
-666	[Storeroom] No movement possible.
-667	[Storeroom] The item cannot be stored.
-668	[Group] The player who invited you is not online.
-669	The Guild Battle cannot be started because the server is not online.
-670	Uriel allowed to enter.
-671	[Group] Only the group leader can change this.
-672	[Group] The target is not a member of your group.
-673	[Group] You cannot kick out a player while you are in a dungeon.
-674	[Group] You cannot kick out a player while you are in a dungeon.
-675	[Group] You have been out kicked of the group.
-676	[Group] You cannot leave a group while you are in a dungeon.
-677	[Group] You cannot kick out group members.
-678	[Guild] After disbanding a guild, you cannot create a new one for %d days.
-679	[Guild] After leaving a guild, you cannot create a new one for %d days.
-680	This guild name is invalid.
-681	We request the participation of a lot of players.
-682	[Guild] [%s] guild has been created.
-683	[Guild] Creation of the guild has failed.
-684	[Group] Only the group leader can use group skills.
-685	[Group] The target has not been found.
-686	[Guild] That is not the correct amount of Yang.
-687	[Guild] You do not have enough Yang.
-688	[Guild] The person you were searching for cannot be found.
-689	[Guild] This person is not in the same guild.
-690	[Guild] You do not have the authority to kick out guild members.
-691	[Guild] The guild member %s has been kicked out of the Guild.
-692	OX The Event has not ended yet. An error has occurred. (flag: %d)
-693	[Guild] You have kicked a guild member out.
-694	[Guild] You do not have the authority to change your rank name.
-695	[Guild] The guild leader's rights cannot be changed.
-696	[Guild] This rank name is invalid.
-697	[Guild] You do not have the authority to change your position.
-698	[Guild] The rights of the guild leader cannot be changed.
-699	[Guild] %u experience points used.
-700	[Guild] Experience usage has failed.
-701	[Guild] Insufficient Yang in the guild treasury.
-702	[Guild] Dragon ghost was not restored.
-703	The OX Event will be restarted shortly.
-704	[Guild] You do not have the authority to make an announcement.
-705	[Guild] You do not have the authority to change the position.
-706	[Guild] The guild leader's position cannot be changed.
-707	[Guild] You cannot make yourself guild leader.
-708	[Guild] You do not have the authority to choose the guild leader.
-709	[Guild] You cannot choose any more guild leaders.
-710	You cannot trade this item.
-711	Illegal software has been detected. The game is being shut down.
-712	You have more than 2 Billion Yang with you. You cannot trade.
-713	Invalid Yang.
-714	The present event is limited to one area.
-715	Start Item Roulette.
-716	Start Yang Roulette.
-717	The player is online. Please use whisper to chat.
-718	The cell phone number is not registered.
-719	You need to be at least on level 20 to be able to send text messages.
-720	You need 2000 DT to send a text message.
-721	Your text message has been sent.
-722	%s of the Guild %s raised up to %d%% !
-723	%s of the Guild %s normal again.
-724	%s: %s has increased by %d%%!
-725	OX Event is being closed.
-726	%s 's %s normal again.
-727	Your mining points have reached their maximum. (%d)
-728	Your mining points have reached their maximum level.
-729	You can get lumberjack Deokbae to upgrade your Pickaxe.
-730	Your Mining Points have increased! (%d/%d)
-731	You cannot mine without a Pick.
-732	Nothing to mine here.
-733	The mining has been successful.
-734	The mining has failed.
-735	[Friends] You have added %s as a friend.
-736	The player will be teleported into the city shortly.
-737	[Friends] You have deleted %s from the list.
-738	A critical server error has occurred. The server will restart automatically.
-739	You will be disconnected automatically in 10 seconds.
-740	You can connect again after 5 minutes.
-741	(%s) guild has been created. [Temporary]
-742	This guild is at war.
-743	%s: This guild does not exist.
-744	A guild with this name or number does not exist.
-745	The building does not exist.
-746	This type of building can only be erected once.
-747	Close the OX event card first. (Flag: %d)
-748	The Main Building has to be erected first.
-749	Building failed because of incorrect pricing.
-750	Your guild does not have enough Yang to erect this building.
-751	You do not have enough resources to build a building.
-752	You cannot erect a building at this place.
-753	This character does not exist.
-754	Duel has not been successfully cancelled.
-755	Duel cancelled successfully.
-756	The duel has been successfully started.
-757	There is a problem with initiating the duel.
-758	No errors occurred.
-759	There are no combatants.
-760	No status points left.
-761	Remaining status points are too low.
-762	You entered an incorrect value.
-763	Suborder or the Order is incorrect.
-764	Broken contract between player %d and player %d.
-765	Turn the Roulette for %d Yang.
-766	The Item log placed into the syslog.
-767	Information for the Kingdoms
-768	Choose the Map Information of the Holy Land %d Entrance %d %d %d
-769	An error has occurred.
-770	%s killcount %d mobkillcount %d bosskillcount %d Number Holy Land %d
-771	Information about the status of the kingdom battle
-772	Your request is loading. Please wait.
-773	You cannot open a Storeroom while another window is open.
-774	[Storeroom] Storeroom password has been changed.
-775	[Storeroom] You have entered the wrong password.
-776	Your playing time is going to run out in %d minutes.
-777	Regularly voted.
-778	Already voted.
-779	%s player already in the vote.
-780	You have declared war on this guild.
-781	OX Event is over. No errors occurred. (Flag: %d)
-782	Cannot run for office.
-783	%s still has %u Yang available.
-784	%s still has %d Yang available.
-785	You do not have enough Yang.
-786	%s is deleted as an Emperor Candidate.
-787	%s is not a candidate for the emperor elections.
-788	%s has been nominated as emperor.
-789	%s cannot be nominated as emperor.
-790	The %s Emperor gets driven out.
-791	The %s Emperor cannot be driven out.
-792	OX Event is not accepting any more participants.
-793	Shinsoo Kingdom
-794	Chunjo Kingdom
-795	Jinno Kingdom
-796	Your fishing points have increased! (%d/%d)
-797	You have reached the maximum number of fishing points.
-798	Go to the Fisherman and get your Fishing Pole upgraded!
-799	You lost your bait to the fish.
-800	You have caught a fish! (%s)
-801	The length of the captured fish is %.2fcm.
-802	Fishing Event 'Great Zander'
-803	OX The other event participants are being noted down.
-804	Fishing Event 'Carp'
+583	Hız azalması +%d
+584	Kritik saldırı şansı %%%d
+585	Delici saldırı şansı %%%d
+586	Yaratıklara karşı oyuncunun saldırı gücü +%%%d
+587	Yaratıklara karşı Atın saldırı gücü +%%%d
+588	Wonggui karşısında saldırı artışı  +%%%d
+589	Milgyo karşısında saldırı artışı +%%%d
+590	Ölümsüzlere karşı saldırı artışı: +%%%d
+591	Şeytanlara karşı saldırı artışı: +%%%d
+592	İmparator Sa-Za-Hu sayesinde, oyuncu bu alanda %s 3 dakika için %%10 daha fazla saldırı gücü aldı.
+593	Saldırı sırasında %%%d enerji emildi.
+594	Saldırı sırasında %%%d SP emildi.
+595	%%%d oranında SP düşmandan çalma şansı.
+596	Oranında SP emiliyor %%%d.
+597	Yakın dövüş saldırısını engelleme şansı %%%d
+598	Uzak dövüş saldırısını engelleme şansı %%%d
+599	Kılıç Savunması %%%d
+600	Çift-El Savunması %%%d
+601	Çift-El Savunması %%%d
+602	Çan Savunması %%%d
+603	İmparator Geum-Gang-Gwon sayesinde, oyuncu %s 3 dakika süreyle %%10 daha fazla savunma aldı.
+604	Yelpaze Savunması %%%d
+605	Uzak Dövüş Direnci %%%d
+606	Ateşe dayanıklılık %%%d
+607	Şimşek direnci %%%d
+608	Büyü Savunması %%%d
+609	Rüzgara Dayanıklılık %%%d
+610	Doğrudan Vuruş Yansıtma: %%%d
+611	Lanet Yansıtma: %%%d
+612	Zehire karşı koyma %%%d
+613	Eğer kazanırsan SP %%%d artacak.
+614	Etkinlik başladı bile. (Flag: %d)
+615	Eğer kazanırsan tecrübe %%%d artacak.
+616	Eğer kazanırsan Yang %%%d artacak.
+617	Eğer kazanırsan ele geçirilen nesne %%%d artacak.
+618	İksir kullandığın zaman güç %%%d artacak.
+619	Kazandıktan sonra hayat puanın %%%d oranında artacak.
+620	Baş dönmesi yok %%%d
+621	Yavaşlama yok %%%d
+622	Düşmek yok %%%d
+623	Saldırı gücü + %d
+624	Zırh + %d
+625	OX Quiz metni yüklenemedi.
+626	Büyülü Saldırı + %d
+627	Büyü Savunması + %d
+628	Max. Dayanıklılık + %d
+629	Savaşçılara karşı güçlü +%%%d
+630	Ninjalara karşı güçlü +%%%d
+631	Suralara karşı güçlü +%%%d
+632	Şamanlara karşı güçlü +%%%d
+633	Canavarlara karşı güçlü +%%%d
+634	Saldırı +%%%d
+635	Savunma +%%%d
+636	OX Quiz metni yüklendi.
+637	Tecrübe %%%d
+638	Nesne bulma oranı %.1f
+639	Yang bulma şansı %.1f
+640	Enerji üst sınırı +%%%d
+641	Enerji üst sınırı +%%%d
+642	Beceri Hasarı %%%d
+643	Vuruş Hasarı %%%d
+644	Beceri hasarına dayanıklılık %%%d
+645	Vuruş direnci %%%d
+646	Savaşçı ataklarında %%%d dayanıklılık
+647	Metin2'ye Hoşgeldin.
+648	Ninja ataklarında %%%d dayanıklılık
+649	Sura ataklarında %%%d dayanıklılık
+650	Şaman ataklarında %%%d dayanıklılık
+651	(Prosedür: %d y- %d m - %d d)
+652	Sohbetiniz engellendi.
+653	Çağırmak için daha yüksek seviyede olman gerekiyor.
+654	Çağırmak için en az %d. seviyede olman gerekiyor.
+655	Bu Grupta değilsin.
+656	Loncaya katılamadın.
+657	Oyuncu, arkadaş listene eklenmeyi reddetti.
+658	OX Etkinlik başladı.
+659	[Friends] Listene bir GM ekleyemezsin.
+660	%s çevrimiçi değil.
+661	Ticaret yaptıktan %d saniye sonra dükkân açabilirsin.
+662	%d saniye içinde tekrar ticaret yapabilirsin.
+663	2 milyardan fazla Yang'ın var.Ticaret yapamazsın.
+664	Başka bir pencere açıkken özel dükkan açamazsın.
+665	Bu, 2 milyar Yang üst sınırını aşacağı için ticaret yapamazsın.
+666	[Storages] Hareket mümkün değil.
+667	[Storages] Eşya depolanamaz.
+668	[Group] Davet edilen oyuncu çevrimiçi değil.
+669	Sunucu çevrimiçi olmadığı için Lonca Savaşı başlayamaz.
+670	Uriel girmene izin verdi.
+671	[Group] Bunu sadece Grup Lideri değiştirebilir.
+672	[Group] Hedef grubunuzun üyesi değil.
+673	[Group] Zindandayken oyuncu atamazsın.
+674	[Group] Zindandayken oyuncu atamazsın.
+675	[Group] Gruptan atıldın.
+676	[Group] Zindandayken gruptan ayrılamazsın.
+677	[Group] Grup üyelerini atamazsın.
+678	[Guild] Lonca silindikten sonra, %d gün yeni Lonca kuramazsın.
+679	[Guild] Bir Loncadan ayrıldıktan sonra  %d gün yeni Lonca kuramazsın.
+680	Lonca ismi geçersiz.
+681	Katılım için birçok oyuncu arıyoruz.
+682	[Guild] [%s] Lonca kuruldu.
+683	[Guild] Lonca kurulamadı.
+684	[Group] Grup Becerilerini sadece grup lideri kullanabilir.
+685	[Group] Hedef bulunamadı.
+686	[Guild] Yanlış Yang toplamı.
+687	[Guild] Yeterli Yang yok.
+688	[Guild] İstenen oyuncu bulunamadı.
+689	[Guild] Oyuncu aynı Loncada değil.
+690	[Guild] Lonca Üyelerini atamazsın.
+691	[Guild] Lonca Üyesi %s Loncadan atıldı.
+692	OX Etkinlik henüz bitmedi. Hatalar oluştu. (Flag: %d)
+693	[Guild] Lonca üyesini attın.
+694	[Guild] Rütbe ismini değiştiremezsin.
+695	[Guild] Lonca Liderinin gücü değiştirilemez.
+696	[Guild] Bu rütbe ismi geçersiz.
+697	[Guild] Pozisyonunu değiştiremezsin.
+698	[Guild] Lonca Liderinin yetkileri değiştirilemez.
+699	[Guild] %u Tecrübe kullanıldı.
+700	[Guild] Tecrübe kullanımı başarısız oldu.
+701	[Lonca] Lonca kasasında yeterli Yang yok.
+702	[Guild] Ejderha hayaleti yüklenemedi.
+703	Kısa süre içinde OX Etkinlik tekrar başlayacak.
+704	[Guild] Duyuru yapamazsın.
+705	[Guild] Pozisyonunu değiştiremezsin.
+706	[Guild] Lonca liderinin rütbesi değiştirilemez.
+707	[Guild] Kendini Lonca lideri yapamazsın.
+708	[Guild] Lideri seçemezsin.
+709	[Guild] Daha fazla Lider seçemezsin.
+710	Bu nesneyle ticaret yapamazsın.
+711	Yasadışı yazılım tespit edildi. Oyun kapatılacak.
+712	2 milyardan fazla Yang sahibisiniz. Ticaret yapamazsınız.
+713	Geçersiz Yang.
+714	Geçerli etkinlik bir alanla kısıtlı.
+715	Nesne Ruleti Başlat.
+716	Yang Ruleti Başlat.
+717	Oyuncu online. Lütfen fısıltı kullanın.
+718	Cep telefonu numarası kayıtlı değil.
+719	Yazılı mesaj yollayabilmek için en az 20.Seviye olman gerekli.
+720	Yazılı mesaj yollamak için 2000 Yang gerekli.
+721	Yazılı mesajınız yollandı.
+722	Loncanın %s %s %%%d derecesine yükseldi!
+723	Loncanın %s %s tekrar normal.
+724	%s: %s, %%%d oranında yükseldi!
+725	OX Etkinliği sona eriyor.
+726	%s 's %s tekrar normal.
+727	Madencilik Puanın maksimuma ulaştı. (%d)
+728	Madencilik Puanlarınız en üst Seviyeye ulaştı.
+729	Kazmanı, oduncu Deokbae'nin yardımıyla geliştirebilirsin.
+730	Madencilik Puanların arttı! (%d/%d)
+731	Kazma olmadan madencilik yapamazsın.
+732	Burada maden yok.
+733	Madencilik başarılı.
+734	Madencilik başarısız.
+735	[Friends] %s arkadaş olarak eklendi.
+736	Kısa süre içinde oyuncu şehre ışınlanacak.
+737	[Friends] %s listenden silindi.
+738	Kritik sunucu hatası. Sunucu otomatik olarak yeniden başlatılacak.
+739	10 saniye içinde bağlantınız kesilecek.
+740	5 dakika sonra tekrar bağlanabilirsiniz.
+741	(%s) Lonca kuruldu. [Temporary]
+742	Bu lonca savaşta.
+743	%s: Lonca bulunamadı.
+744	Belirtilen isim veya numarada lonca mevcut değil.
+745	Bina mevcut değil.
+746	Bu tip binalar sadece bir kez inşa edilebilir.
+747	Önce OX Etkinlik haritasını kapat. (Flag: %d)
+748	İlk olarak temel binaları inşa etmelisin.
+749	Yanlış fiyat nedeniyle bina inşa edilemedi.
+750	Binayi inşa edebilmek için loncan yeterli Yang'a sahip değil.
+751	Bu binayı inşa edebilmek için yeterli kaynağın yok.
+752	Bu alana bir bina inşa edemezsin.
+753	Karakter bulunamadı.
+754	Düello iptal edilmedi.
+755	Düello iptali başarılı.
+756	Düello başarıyla başladı.
+757	Düellonun başlamasıyla ilgili bir problem var.
+758	Hata oluşmadı.
+759	Burada savaşçı yok.
+760	Statü Puanı kalmadı.
+761	Kalan Statü puanları çok düşük.
+762	Yanlış değer girdin.
+763	Sıralama veya alt sıralama yanlış.
+764	%d ve %d oyuncuları arasındaki anlaşma bozuldu.
+765	%d Yang için rulet çevir.
+766	Nesne logları, sistem loglarının içine yerleştirildi.
+767	Krallık Bilgileri
+768	Haritadan kutsal alan bilgisini seç %d Giriş Yap %d %d %d
+769	Bir hata oluştu.
+770	%s öldürülen %d öldürülen mob %d öldürülen lider %d Kutsal alan numarası %d
+771	İmparatorluk savaşı hakkında bilgi
+772	İsteğin yükleniyor. Anlayışın için teşekkür ederiz.
+773	Başka bir pencere açıkken depo açamazsın.
+774	[Storeroom] Depo şifresi değişti.
+775	[Storages] Yanlış şifre girdin.
+776	Oyun süreniz %d dakika içinde doluyor.
+777	Düzenli olarak oylanır.
+778	Zaten oy vermiştin.
+779	%s oyuncu zaten oylamada.
+780	Bu Loncaya savaş ilan ettin.
+781	OX Etkinlik bitti. Herhangi bir hata oluşmadı. (Flag: %d)
+782	Oylanamaz.
+783	%s hala %u Yang sahibi.
+784	%s hala %d Yang sahibi
+785	Yeterli Yang'a sahip değilsin.
+786	İmparator adayı olarak %s silindi.
+787	%s İmparator olmak için bir aday değil.
+788	%s İmparator adayı olarak gösterildi.
+789	%s İmparatorluğa aday olamaz.
+790	%s İmparatorluk görevini bıraktı.
+791	%s İmparatoru görevi bırakamaz.
+792	OX Etkinliğine daha fazla oyuncu katılamaz.
+793	Shinsoo Krallığı
+794	Chunjo Krallığı
+795	Jinno Krallığı
+796	Balıkçılık puanınız arttı! (%d/%d)
+797	Maksimum Balıkçılık Puanı'na ulaştın.
+798	Balıkçının yanına git ve onun yardımıyla oltanı geliştir!
+799	Balık yemini kaybettin.
+800	Bir balık yakaladın! (%s)
+801	Yakalanan balığın uzunluğu %.2fcm.
+802	Balıkçılık olayı 'Büyük Sudak Balığı'
+803	OX Etkinlikteki diğer katılımcılar listelendi.
+804	Balıkçılık olayı 'Sazan Balığı'
 805	%s: %d
-806	You have caught %d of %d .
-807	The fish vanished in the depths of the water.
-808	There is a Clam inside the Fish.
-809	There is a Worm inside the Fish.
-810	You are roasting %s over the fire.
-811	You cannot trade because you are carrying more than 2 billion Yang.
-812	You can't give your shop an invalid name.
-813	You can't sell Item-Shop items in a private shop.
-814	OX The other event participants have not been noted down.
-815	Mining is finished.
-816	You need a Pickaxe in order to extract ore!
-817	Please choose a Fishing Pole.
-818	Place the Bait on the Hook first.
-819	You can't go fishing without a fishing pole!
-820	[Group] You cannot make a request because the group leader is not online.
-821	[Group] You cannot form a group with players from another kingdom.
-822	[Group] You cannot invite players while you are in a dungeon.
-823	[Group] You cannot invite a player while you are in observer mode.
-824	[Group] Only players with a level difference of -30 to +30 can be invited.
-825	Number of other participants : %d
-826	[Group] You cannot invite this player, as their level is too low.
-827	[Group] You cannot invite this player, as their level is too high.
-828	[Group] You cannot invite any more players into your group.
-829	You want to join %s's group.
-830	This player is not in this group.
-831	[Group] You cannot join this group because it is already full.
-832	[Group] You do not have the right to invite someone.
-833	[Group] %s has declined your group invitation.
-834	[Group] %s is already in the group.
-835	[Group] You cannot accept an invitation into a dungeon.
-836	OX Event is finishing.
-837	[Group] You cannot accept the invitation.
-838	[Group] %s has declined your invitation.
-839	[Group] %s has joined your group.
-840	[Group] %s has joined your Group.
-841	You can't use a private shop now.
-842	This player is already trading with another player.
-843	Metin2 Confirmation Number: %s
-844	Your Confirmation Number is not correct. Please try again.
-845	The mobile phone number is registered.
-846	You cannot teleport to the player.
-847	OX The prize has been awarded. ID: %d Quantity: %d
-848	This player is not online.
-849	The player is playing on channel %d. (You are on channel %d.)
-850	After opening the Storeroom, you cannot go anywhere else for %d seconds.
-851	You cannot go elsewhere for a period of time after the trade.
-852	After trading you cannot go elsewhere for %d seconds.
-853	The duel has finished, because your combatant vanished.
-854	There is no limit for Potions.
-855	You can use up to %d potions.
-856	The fight will start in 10 seconds.
-857	The duel has begun.
-858	TRUE
-859	The duel is being finished because there is a problem in the duel arena.
-860	The duel has finished because of a timeout.
-861	In 10 seconds you will be teleported into the city.
-862	The duel has been stopped because there is a problem in the arena.
-863	Your combatant has got some problems. The duel is being cancelled.
-864	The duel is being cancelled as there is a problem with the combatant.
-865	%s has won the duel.
-866	%s has won.
-867	You will be teleported into the city in 10 seconds.
-868	The next round will begin in 10 seconds.
-869	FALSE
-870	The combatants have been separated. The duel has been stopped.
-871	The quota of the Item Drop is at the moment plus %d%%
-872	The quota of the Yang Drop is at the moment plus %d%%
-873	The drop rate for Yang rain is currently %d%% higher.
-874	The experience bonus is currently an additional %d%%.
-875	You do not have the correct client version. Please install the normal patch.
-876	You cannot trade in the shop while another window is open.
-877	You are too far away from the shop to buy something.
-878	You are too far away from the shop to sell something.
-879	You cannot trade because you are carrying more than 2 billion Yang.
-880	Total number of the Quiz: %d
-881	This sale will be taxed %d%%.
-882	You cannot ride a Horse while you are transformed.
-883	You cannot ride while you are wearing a Wedding Dress or a Tuxedo.
-884	You do not have a Horse.
-885	Your Horse is dead.
-886	Your Horse's endurance is too low.
-887	Calling the Horse has failed.
-888	's Horse
-889	The wedding is finishing soon.
-890	Will be left automatically.
-891	The war is already over.
-892	The result will follow in 10 seconds.
-893	You cannot trade while observing.
-894	If the window is open, you cannot trade with others.
-895	The other person is currently busy so you cannot trade right now.
-896	The other person has cancelled the trade.
-897	Not enough Yang or not enough space in the inventory.
-898	The other person does not have enough Yang or does not have any space left in their inventory.
-899	The other person has no space left in their inventory.
-900	The trade with %s has been successful.
-901	You did not lose any Experience because of the Blessing of the Dragon God.
-902	Current score: Shinsoo %d, Chunjo %d, Jinno %d
-903	The correct answer is:
+806	%d nın %d Yakaladın.
+807	Balık derin suda kayboldu.
+808	Balığın içinde bir istiridye var.
+809	Balığın içinde bir solucan var.
+810	Ateşte %s kızartıyorsun.
+811	Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.
+812	Depona hatalı bir isim veremezsin.
+813	Nesne Market eşyalarını özel markette satamazsın.
+814	OX Etkinlikteki diğer katılımcılar listelenemedi.
+815	Madencilik bitti.
+816	Maden çıkarmak için bir kazmaya ihtiyacın var!
+817	Lütfen bir olta seç.
+818	Önce yemi çengele geçir.
+819	Oltasız balığa gidemezsin.
+820	[Group] İstekte bulunamazsın çünkü grup lideri çevrim içi değil.
+821	[Group] Diğer Krallıktan olan oyuncularla grup oluşturamazsın.
+822	[Group] Zindandayken oyuncu davet edemezsin.
+823	[Group] İzleyici modundayken oyuncu davet edemezsin.
+824	[Group] -30 ile +30 Seviye aralığında olan oyuncuları davet edebilirsin.
+825	Diğer Katılımcıların sayısı : %d
+826	[Group] Bu oyuncuyu seviyesi çok düşük olduğu için davet edemezsin.
+827	[Group] Bu oyuncuyu seviyesi çok yüksek olduğu için davet edemezsin.
+828	[Group] Gruba daha fazla oyuncu davet edemezsin.
+829	%s Grubuna katılmak istiyor musun?
+830	Oyuncu bu grupta değil.
+831	[Group] Bu grup dolu olduğu için katılamazsın.
+832	[Grup] Birini davet etmek için yetkin yok.
+833	[Group] %s Grup davetini reddetti.
+834	[Group] %s zaten grupta.
+835	[Group] Zindandayken davet kabul edemezsin.
+836	OX Etkinlik bitti.
+837	[Group] Daveti kabul edemezsin.
+838	[Group] %s davetini reddetti.
+839	[Group] %s Grubunuza katıldı.
+840	[Group] %s Grubunuza katıldı.
+841	Şu anda özel depoyu kullanamazsın.
+842	Bu oyuncu zaten başkasıyla ticaret yapıyor.
+843	Metin2 Onay Numarası: %s
+844	Onay Numaranız doğru değil. Lütfen tekrar deneyin.
+845	Cep telefonu numarası kayıtlı.
+846	Bu oyuncuya ışınlanamazsın.
+847	OX Ödül verildi. İsim: %d Değer: %d
+848	Oyuncu çevrimdışı.
+849	Oyuncu %d numaralı kanalda. (Sen %d numaralı kanaldasın.)
+850	Depo açtıktan sonra %d saniye başka bir yere gidemezsin.
+851	Ticaretten sonra bir süre bir yere gidemezsin.
+852	Ticaretten sonra %d saniye bir yere gidemezsin.
+853	Düello bitti çünkü savaşçınız gözden kayboldu.
+854	Burada iksirler için herhangi bir sınırlama yok.
+855	%d iksir kullanabilirsiniz.
+856	Savaş 10 saniye içerisinde başlayacak.
+857	Düello başladı.
+858	DOĞRU
+859	Arenadaki bir problemden dolayı düello bitti.
+860	Süre bittiği için düello sona erdi.
+861	10 Saniye içerisinde şehre ışınlanmış olacaksınız.
+862	Arena ile ilgili bir problem olduğu için düello sona erdi.
+863	Savaşçınızla ilgili bir problem olduğu için düello sona erdi.
+864	Savaşçınızla ilgili bir problem olduğu için düello sona erdi.
+865	Düelloyu %s kazandı.
+866	%s kazandı.
+867	10 saniye içerisinde şehre ışınlanmış olacaksınız.
+868	Bir sonraki raund 10 saniye içerisinde başlayacak.
+869	YANLIŞ
+870	Savaşçılar ayrıldı. Düello sona erdi.
+871	Düşen nesne yüzdesi şu anda +%%%d
+872	Düşen Yang yüzdesi şu anda +%%%d
+873	Yang yağmurunun düşme oranı şu anda artı %%%d.
+874	Tecrübe puanı bonusu şu anda %%%d oranında arttırıldı.
+875	İstemci versiyonunuz hatalı. Lütfen normal sürümü yükleyin.
+876	Başka bir pencere açıkken dükkanda ticaret yapamazsın.
+877	Almak için depodan çok uzaksın.
+878	Satmak için depodan çok uzaksın.
+879	Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.
+880	Toplam Quiz sayısı: %d
+881	Satış için %%%d vergi alınacak.
+882	Dönüşmüş durumdayken ata binemezsin.
+883	Gelinlik veya Smokin giyerken ata binemezsin.
+884	Atın yok.
+885	Atın öldü.
+886	Atının dayanıklılığı çok az.
+887	At çağırma işlemi başarısız.
+888	At
+889	Düğün kısa süre sonra bitecek.
+890	Otomatik olarak geçecek.
+891	Savaş çoktan sona erdi.
+892	Sonucu 10 saniye içinde alacaksın.
+893	İzleme sırasında ticaret yapamazsın.
+894	Pencereler açıkken başkaları ile ticaret yapamazsın.
+895	Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.
+896	Diğer oyuncu ticareti iptal etti.
+897	Yeterli Yang veya envanter boş yer yok.
+898	Diğer kişide yeterli Yang veya envanterinde boş yer yok.
+899	Diğer kişinin envanterinde hiç boş yer yok.
+900	%s ile olan ticaret başarıyla gerçekleşti.
+901	Ejderha Tanrının korumasında olduğun için tecrübe kaybetmedin.
+902	Mevcut Puan Durumu: Shinsoo %d, Chunjo %d, Jinno %d
+903	Doğru cevap:
 904	%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d
-905	The devil of the hallowed place: [ENTER][ENTER]
-906	, you don't have any right to be here! The members of your kingdom will leave this hallowed ground in 10 seconds.
-907	%s has been defeated and drops out of the Kingdom Battle.
-908	Number of Monsters in the Kingdom Battle:
-909	If you defeat the Guard of the Holy Place, you will become the owner of it.
-910	You did not drop any Item(s) as you are protected by the Dragon God.
-911	Additional Stabbing Weapon Damage %d
-912	%s block! (%d%%)
-913	%s avoid! (%d%%)
-914	Yes (O)
-915	%s[%d]'s Attack Position: %d %d
-916	Please enter the Order in full length.
-917	You cannot do this whilst sitting on a Horse.
-918	You cannot do that while you are lying on the ground.
-919	In my Dreams? What?
-920	Get up first.
-921	This command does not exist.
-922	[Group] This group has been disbanded.
-923	[Group] You cannot call the target.
-924	[Group] You cannot call group members over to your current position.
-925	No (X)
-926	Your group works well together, and group members near the group leader will receive an experience bonus.
-927	Leader
-928	Member
-929	[Guild] Provided Experience is larger then left Experience.
-930	[Guild] This message cannot be deleted.
-931	[Guild] Not enough Dragon Ghost. (%d, %d)
-932	[Guild] You cannot use the guild skills yet.
-933	[Guild] %d skill has been applied (%d, %d) to %u.
-934	[Guild] This player is on channel %d. (Current channel: %d)
-935	[Guild] This player is not online.
-936	In 5 sec. everyone who gave an incorrect answer will be removed.
-937	[Guild] This guild skill can only be used during war.
-938	[Guild] %u Dragon ghost points have been restored.
-939	[Guild] Only the guild leader can withdraw Yang.
-940	[Guild] The player has declined the guild invitation.
-941	[Guild] You do not have the authority to invite someone to join the guild.
-942	[Guild] You cannot invite players from another kingdom into the guild.
-943	[Guild] This player can be invited again after %d day(s).
-944	[Guild] After the rearrangement you can invite members again after %d days.
-945	[Guild] This person is already a member of another Guild.
-946	[Guild] The maximum guild capacity has been reached.
-947	Ready for the next question?
-948	You cannot train this skill.
-949	You cannot train this skill up to Grand Master level.
-950	You already are a Master of this skill. You cannot train this skill any further.
-951	Your Skill is not high enough to become a Grand Master.
-952	That did not work. Damn!
-953	Training has failed. Please try again later.
-954	My body is full of energy!
-955	The training seems to be working already...
-956	You successfully finished your training with the book.
-957	You cannot read this due to your lack of experience.
-958	Question.
-959	You cannot train this skill with a Book.
-960	This skill's level is not high enough to be trained with a Book.
-961	I'm making progress, but I still haven't understood everything.
-962	These instructions are difficult to understand. I have to carry on studying.
-963	I understand this chapter. But I've got to carry on working hard.
-964	You have successfully finished your training with the Book.
-965	Teleportation has failed.
-966	No Horse here. Ask the Stable Boy.
-967	Please use an item to call a Horse.
-968	%s FP-Consumption: %d
-969	If it's correct, then go to O. If it's wrong, go to X.
-970	I am burning inside, but it is calming down my body. My Chi has to stabilise.
-971	A little slow, but steady... Without stopping!
-972	Yes, that feels great. My body is full of Chi.
-973	I have read it! Now the Chi will spread through my body.
-974	The training is completed.
-975	I am on the last page of the book. The training is nearly finished!
-976	Nearly finished! Just a little bit more to go!
-977	Eureka! I have nearly finished reading it!
-978	Only a few more pages and then I'll have read everything.
-979	I feel refreshed.
-980	Correct!
-981	Now I understand it!
-982	Okay I have to stay concentrated!
-983	I keep reading the same line over and over again.
-984	I do not want to learn any more.
-985	It is a lot more complicated and more difficult to understand than I thought.
-986	It's hard for me to concentrate. I should take a break.
-987	Your chat has been temporary blocked for spam.
-988	Your chat block has been lifted.
-989	The Build window is already open.
-990	You cannot build something while another trade/storeroom window is open.
-991	No further improvements possible.
-992	The build window is not open.
-993	You do not have the right material.
-994	[Guild] Please try again later.
-995	You have to read %d more skill books to improve this skill.
-996	[Guild] Please try again later.
-997	You are only able to use this function while you are at the castle.
-998	TEST: The Gold Bar has been paid back to your kingdom's safe.
-999	TEST: In your kingdom's safe there are: %d
-1000	TEST: You cannot pay the Gold Bar back into your kingdom's safe.
-1001	[Guild] The guild has reached %d points.
-1002	This item cannot be improved.
-1003	The free weapon improvements can only be used on weapons up to level 20.
-1004	You cannot use this item because you do not fulfil all the requirements.
-1005	You are not able to use that item because you do not have the right gender.
-1006	Use: transfer <name>
-1007	This function can only be used by the emperor.
-1008	You cannot recruit players from another kingdom.
-1009	The player %s is on channel %d at the moment. (Your channel: %d)
-1010	You have recruited %s players.
-1011	There is no user with this name.
-1012	You cannot recruit yourself.
-1013	Your level is too low to use this item.
-1014	You cannot upgrade anything while another window is open.
-1015	The emperor of %s has changed to %s.
-1016	There are %s wars to inflame the bonfires.
-1017	%s has successfully defended.
-1018	30 minutes from now on the player %s can get a reward because he destroyed the bonfire.
-1020	A bonfire was inflamed at %s to warn because of a battle.
-1021	%s has destroyed the bonfire.
-1022	%s lost the war as they have not been able to defend the castle.
-1023	%s has destroyed all the bonfires.
-1024	Not enough Yang for an upgrade.
-1025	You can only open the shop if you take off your armour.
-1026	You cannot use it whilst riding a Horse.
-1027	For this action you need: %s
-1028	%d hours %d minutes %d seconds left on your chat block
-1029	%d hours %d seconds left on your chat block
-1030	%d minutes %d seconds left on your chat block
-1031	Yang rain drop rate
-1032	There is no stone available for removal.
-1033	Cannot be used yet.
-1034	The time limit on the test server has been exceeded.
-1035	Not the right material for an upgrade.
-1036	The rank points cannot be increased further.
-1037	All kingdoms
-1038	Item drop rate in percent
-1039	Yang drop rate in percent
-1040	Experience percentage
-1041	You cannot read a book while you are transformed.
-1042	%d seconds left on your chat block
-1043	You cannot express emotions whilst riding a horse.
-1044	You cannot use emotions with a player who is riding on a Horse.
-1045	The Scroll of War does not work on items with +4 or above.
-1046	%s rolled dice. He/she got %d (%d-%d).
-1047	You rolled dice. You got %d (%d-%d).
-1048	[Guild] The enemy's guild leader is offline.
-1049	You cannot get on the horse while you are lying on the ground.
-1050	[Guild] This guild is taking part in a battle at the moment.
-1051	You cannot fish here.
-1052	[Guild] Your guild has already reached the maximum level.
-1053	You cannot transform while you are riding.
-1054	You're already riding. Get off first.
-1055	You cannot add the person standing opposite you to your friends.
-1056	You cannot upgrade items with this Scroll.
-1057	The dropped item will disappear after %d minutes.
-1058	[Guild] The person standing opposite you cannot receive the invitation.
-1059	You cannot sell equipped items.
-1060	Equipped items cannot be sold in the private shop.
-1061	[Storeroom] You cannot move this item into your storeroom.
-1062	You cannot throw the Gold away yet.
-1063	Your inventory is full. Item cannot be picked up.
-1064	The level of your item is too high.
-1065	Can only be used on weapons and armour.
-1066	You cannot recharge this Dragon Stone.
-1067	You can only be rewarded once for the Demon Tower Quest.
-1068	Dragon Stone has been removed.
-1069	You cannot move the item within the refinement window.
-1071	There is currently no Metin Stone on this map.
-1072	Dragon Stone remaining duration has been extracted.
-1073	Remaining duration extraction failed.
-1074	Removal of Dragon Stone failed. But you have received the following: %s
-1075	Removal of Dragon Stone failed.
-1076	This item is not required for improving the clarity level.
-1077	This item cannot be advanced this way.
-1078	Improvement of the clarity level successful.
-1079	Refinement up one class failed.
-1080	This item is not required for refinement.
-1081	This Dragon Stone cannot be used for refinement.
-1082	Refinement up one class was successful.
-1083	Improvement of the clarity level failed.
-1084	You do not own the materials required to strengthen the Dragon Stone.
-1085	This Dragon Stone cannot be used for strengthening.
-1086	You cannot combine identical Advancement Scrolls.
-1087	Strengthening was successful.
-1088	Strengthening failed.
-1089	The Dragon Stone is not activated.
-1090	You are already carrying a Dragon Stone of this type.
-1091	The Dragon Stone cannot be removed.
-1092	You have already equipped this kind of Dragon Stone.
-1093	%d seconds have been added.
-1094	Before you open the Cor Draconis, you have to complete the Dragon Stone quest and activate the Dragon Stone Alchemy.
-1095	You can only discard the belt when there are no longer any items in its inventory.
-1096	You can combine the Blessing Scroll with the Magic Iron Ore.
-1097	You cannot equip this item in your belt inventory.
-1098	You cannot ride in this dungeon.
-1099	You can use a maximum of 200 ingredients at once.
-1100	You cannot sell soulbound items in a private shop.
-1101	You cannot change the attributes of a soulbound item.
-1102	You cannot use a soulbound item.
-1103	You cannot drop a soulbound item.
-1104	You cannot give away a soulbound item.
-1105	You cannot soulbind items on this server.
-1106	You cannot bind this item to your soul.
-1107	You have invested %d Yang.
-1108	There is no Stone available to take out.
-1109	This item is already soulbound.
-1110	The soulbind on this item is already in the process of being removed.
-1111	This item is not soulbound.
-1112	You cannot improve a soulbound item.
-1113	You cannot sell a soulbound item.
-1114	You cannot open this chest because you do not have enough space in your inventory.
-1115	You cannot open a private shop while you are trading with others.
-1116	You cannot use this item while you are trading.
-1117	You cannot use a Scroll of the Location while the window for the Shoulder Sash is open.
-1118	You cannot trade while another window is open.
-1119	You cannot store this location.
-1120	You can only use Shoulder Sashes as well as weapons and armour pieces.
-1121	Drag the items into the window.
-1122	This has already been customised.
-1123	The sash cannot take on any further bonuses.
-1124	You can only use Shoulder Sashes.
-1125	These sashes cannot be combined.
-1126	Failed!
-1127	Success!
-1128	You do not have enough money for the combination.
-1129	You cannot use this item while the windows for absorption and combination are open.
-1130	There isn't enough space in your inventory.
-1131	%s was successful! A %d%% absorption rate on their new %s. Congratulations!
-1132	You cannot use any soulbound items.
-1133	You cannot sell items you are currently using in a private shop.
-1134	You cannot use this bundle whilst riding.
-1135	Time's up. First round over.
-1136	Time's up. Second round over.
-1137	Time remaining to finish first round: %d minutes.
-1138	Time remaining to finish second round: %d minutes.
-1139	Safe zone has now been deactivated.
-1140	Time remaining until safe zone is deactivated: %d minutes.
-1141	You cannot teleport to a safe position in a foreign Kingdom.
-1142	The answer will appear in 20 seconds.
-1143	In 15 sec. everyone who gave an incorrect answer will be removed.
-1144	Your level is too low to summon the pet.
-1145	No item chosen for the combination.
-1146	You have summoned %s.
-1147	You have dismissed %s.
-1148	%s has reached level %d!
-1149	%s is currently fast asleep.
-1150	%s has hatched!
-1151	Your pet enthusiastically tucks into the Protein Snack.
-1152	You don't have enough HP.
-1153	%s wakes up and dives into the tasty meal.
-1154	%s is now in a Transport Box.
-1155	%s emerges from the Transport Box.
-1156	%s has evolved to %s! Excellent!
-1157	%s refuses to eat anything!
-1158	The event has ended as none of the kingdoms entered.
-1159	You have transferred the bonuses successfully.
-1160	You don't have enough Yang to trade books with me.
-1161	Please enter another name.
-1162	You don't have enough Spell Points (SP) to use this.
-1163	You cannot trade whilst your partner's Incubator is open.
-1164	You cannot use the Incubator whilst trading or whilst you have your storeroom or private shop open.
-1165	You cannot open a private shop whilst summoning your pet.
-1166	You cannot trade whilst summoning your pet.
-1167	You cannot trade whilst your partner is summoning their pet.
-1168	Your pet has gathered enough experience. It now requires Item EXP to reach the next stage of evolution.
-1169	Your pet is ready to evolve. Use Pet Books to achieve this.
-1170	Your pet has already reached the highest stage of evolution.
-1171	The name entered is too short.
-1172	You'll reach your destination in %d seconds.
-1173	You do not have enough Yang.
-1174	You've taught your pet well! It's quickly learning its new skills!
-1175	Experience has increased to %d points.
-1176	Your pet has already learnt this skill and refuses to practice it again.
-1177	%s skill activated. HP restored by %d.
-1178	Acquire the Valiant Pet Book for your pet's hero training.
-1179	Your pet must be level %d to train and promote it to the next stage of evolution.
-1180	Your pet must be %d days old to train and promote it to the next stage of evolution.
-1181	Your pet must have 100% experience to train and promote it to the next stage of evolution.
-1182	%s effect activated.
-1183	Your level is too low to use this item.
-1184	%s effect not activated.
-1185	%s skill activated. You will now receive no damage.
-1186	%s skill activated. Slow, poison and bleeding effects were removed.
-1187	You receive your bonuses.
-1188	The window is already open.
-1189	Magic penetration of %d%%.
-1190	%s recovers from the exhaustion.
-1191	You cannot use the item here.
-1192	You cannot summon your pet whilst trading.
-1193	You cannot open a private shop.
-1194	You can only use a Moon Cake every 5 seconds.
-1195	%s is insufficient. You need %d for the next stage of evolution.
-1196	The pet's level cannot be higher than the player's.
-1197	the level Young
-1198	the level Wild
-1199	the level Valiant
-1200	the level Heroic
-1201	@*** Rolling for the following item: %s ***
-1202	@*** ->%*s - Dice score: %4d ***
-1203	$*** Winner of the item %s is: %s ***
-1204	New absorption rate: %d
-1205	You cannot use this item in a duel.
-1206	Maximum absorption rate reached.
-1207	You have already learned this skill.
-1208	There are no items matching your search.
-1209	Enough Pumpkin Lanterns have been collected.
-1210	Ask Sam Pumpkin if you've earned a reward.
-1211	The Halloween Event has begun!
-1212	Go and talk to Sam Pumpkin!
-1213	The Halloween Event has finished. Don't forget to collect your rewards!
-1214	Delivered Pumpkin Lanterns: %d
-1215	Total Pumpkin Lanterns: %d
-1216	You have won %d Yang.
-1217	You cannot build a campfire here.
-1218	This player is already trading with someone else.
-1219	You need to equip a weapon first.
-1220	You cannot use this costume for this weapon.
-1221	If you want to change weapons, you must remove the weapon skin first.
-1224	Your game of okey has started!
-1225	You cannot draw any more cards.
-1226	You cannot discard cards when you have already selected some.
-1227	You cannot draw any more cards when you have already selected some.
-1228	You cannot build a campfire under water.
-1229	Your inventory is full.
-1230	You can only receive your prize once you have made space in your inventory.
-1231	%s earned %d points in a game of okey.
-1233	The Okey Event has started!
-1234	The Okey Event is over!
-1235	[Okey Event] If you make it into the top rankings, you have 7 days to collect your prize.
-1236	You cannot do this whilst playing okey.
-1237	Closed. You should look for the key.
-1238	The Ritual Stone only works with items above level 80.
-1245	You cannot expand your inventory while trading.
-1246	The Okey Event has started!
-1247	The Okey Event is over!
-1248	This item cannot be opened with a key.
-1249	Monsters have appeared in the Valley of Seungryong, Mount Sohan, Doyyumhwan and in the Yongbi Desert!
-1250	Comb through the areas and eliminate them. Gather hit points and exchange them for chests.
-1251	The Boss Reaper Event ends in %d minute(s).
-1252	Mr B and the boss monsters disappear in %d minute(s).
-1253	You have earned your daily target  collect your reward.
-1254	You cannot make use of weapon skins while you are wearing a Wedding Dress or a Tuxedo.
-1255	The other person is currently busy so you cannot trade right now.
-1256	You cannot wear a Wedding Dress or a Tuxedo when you are already wearing a weapon skin.
-1257	Round %d is starting
-1258	That's the right key.
-1259	[Guild] You have already donated the maximum amount of EXP.
-1260	[Guild] Guild advertisement launched.
-1261	[Guild] Guild advertisement extended.
-1262	[Guild] The list is being updated. Please try again later.
-1263	[Guild] No guild found.
-1264	[Guild] You have already applied to this guild.
-1265	[Guild] Your application has been registered.
-1266	[Guild] Player %s has applied to join you.
-1267	[Guild] The list is being updated. Please try again later.
-1268	[Guild] No guild advertisements available.
-1269	You have received %d Yang.
-1270	[Guild] No applications available.
-1271	[Guild] The guild advertisement will run for %s.
-1272	[Guild] Your guild advertisement will expire soon.
-1273	[Guild] %d Yang received.
-1274	[Guild] After deduction of %d%% taxes you receive %d Yang.
-1275	[Guild] You cannot start a war whilst a vote is in progress.
-1276	[Guild] You cannot disband the guild whilst a vote is in progress.
-1277	[Guild] You cannot invite someone to the guild whilst a vote is in progress.
-1278	[Guild] You can only construct one Guild Warehouse.
-1279	A mysterious light comes out of the box.
-1280	[Guild] Please try again in 10 seconds.
-1281	[Guild] Another guild member is currently using this.
-1282	[Guild] There are still items in the Guild Warehouse.
-1283	[Guild] You have voted against.
-1284	[Guild] You have voted for.
-1285	[Guild] The member is currently offline.
-1286	[Guild] There are no votes in progress.
-1287	[Guild] Starting 'Guild Leader Transfer' vote.
-1288	[Guild] Starting 'Remove Member' vote.
-1289	[Guild] Starting 'Guild Territory Sale' vote.
-1290	You have received %d experience points.
-1291	[Guild] Starting 'Guild Territory Abandonment' vote.
-1292	[Guild] 'Guild Leader Transfer' vote in progress.
-1293	[Guild] 'Remove Member' vote in progress.
-1294	[Guild] 'Guild Territory Sale' vote in progress.
-1295	[Guild] 'Guild Territory Abandonment' vote in progress.
-1296	[Guild] The Guild Warehouse is currently in use.
-1297	[Guild] You must wait 10 seconds before reopening the Guild Warehouse.
-1298	[Guild] Your guild doesn't have a warehouse.
-1299	Look what came out of the box!
-1300	[Guild] The vote relating to this player failed. Please try again in %d months, %d days, %d hours and %d minutes.
-1301	[Guild] The guild member has been removed from the guild for inactivity.
-1302	[Guild] You have taken part in the current vote.
-1303	[Guild] You cannot start a vote for your own character.
-1304	[Guild] You cannot start a vote during a war.
-1305	[Guild] You cannot sell the guild territory to yourself.
-1306	[Guild] This guild does not exist.
-1307	[Guild] You cannot start a vote during a war.
-1308	[Guild] The guild level is too low.
-1309	[Guild] Your members rejected the last vote. Please try again in %d months, %d days, %d hours and %d minutes.
-1310	If you inhale the red smoke coming out of the box, your speed will increase!
-1311	[Guild] You cannot start a vote during a war.
-1312	[Guild] Your members rejected the last vote. Please try again in %d months, %d days, %d hours and %d minutes.
-1313	[Guild] You must conduct a vote before selling your guild territory.
-1314	[Guild] This guild is not the one entered in the guild territory sale vote.
-1315	[Guild] Your members rejected the last vote to sell. Try again.
-1316	[Guild] You cannot sell the guild territory to yourself.
-1317	[Guild] The guild leader is offline or on another map.
-1318	[Guild] The guild already owns guild territory.
-1319	[Guild] No guild territory found.
-1320	[Guild] The guild territory sale is complete.
-1321	You can only use this item during the current event.
-1322	An error has occurred. The bonuses could not be changed.
-1323	You cannot summon your mount/pet right now.
-1330	You cannot use a sash with a bonus for the target.
-1331	You cannot use a sash without a bonus as the source.
-1332	You cannot transfer the bonus as the sashes have different absorption rates.
-1333	You cannot transfer the bonus as the sashes have different grades.
-1334	Failure! The absorption rate was reduced by 1%.
-1335	Partial success! The absorption rate was reduced by 1%.
-1336	Success! The bonus was transferred successfully.
-1337	You cannot drop items during the bonus transfer.
-1338	You cannot move items during the bonus transfer.
-1339	You cannot sell items during the bonus transfer.
-1340	Not possible while transferring bonuses.
-1341	This is not possible while the other player is transferring bonuses.
-1342	To determine a pet's destiny you need a Pet Destiny Orb.
-1343	Activate your pet first.
-1344	While modifying your pet's stats, you cannot trade, sell items, use the storeroom etc.
-1345	You cannot use items while modifying your pet's stats.
-1346	You cannot drop items while modifying your pet's stats.
-1347	You cannot move items while modifying your pet's stats.
-1348	You cannot trade while your trading partner is modifying their pet's stats.
-1349	You cannot speak with an NPC while modifying your pet's stats.
-1350	Your pet's stats have been modified.
-1351	You can open it 3 seconds after closing the menu for modifying pet stats.
-1352	All slots are occupied.
-1399	The player cannot accept your invitation at this time.
-1400	After using the Tincture of Kingdoms, you cannot accept invitations in this kingdom any more.
-1401	%s's pet skill has been activated. %s uses Feather Walk.
-1403	A name has already been registered.
-1404	Please remove the equipped Dragon Stone before using this item.
-1405	You cannot declare a guild war here.
-1406	Reward
-1407	Reward for rank %d
-1408	The boss has been defeated! You will be teleported back to the Zodiac Temple shortly.
-1409	Sadly you were unable to stop the Apocalypse. You will be teleported back to the Zodiac Temple shortly.
-1410	You have entered the dungeon %s with difficulty %d. The battle starts in %d seconds.
-1411	You cannot talk to NPCs while the Fortune Chest is open.
-1412	You cannot use items while the Fortune Chest is open.
-1413	You cannot drop items while the Fortune Chest is open.
-1414	You cannot move items while the Fortune Chest is open.
-1415	You cannot trade while the Fortune Chest is open.
-1416	You cannot trade while your partner's Fortune Chest is open.
-1417	You have entered the dungeon %s. The battle starts in %d seconds.
-1418	The Zodiac Apocalypse is not currently active.
-1419	The Zodiac Apocalypse has already started.
-1420	Your Dragon Stone's bonus has been changed.
-1421	[Catch the King] Defeat monsters to collect King Cards. You need 25 cards for a King Deck.
-1422	[Catch the King] Loads of great prizes await!
-1423	[Catch the King] If you make it into the top rankings, you'll receive your prize from the game table.
-1426	You have received a storage bonus of %d%% EXP.
-1427	You have received a storage bonus of %d defence.
-1428	You have received a storage bonus of %d%% HP.
-1429	You have received a storage bonus of %d%% strength against monsters.
-1430	Make sure you have enough space in your inventory before you go fishing.
-1431	You cannot move items while the bonus change window is open.
-1432	Unlucky, there was no treasure in the fish's belly.
-1433	You cannot fish when your pet is hatched.
-1434	You cannot fish while your pet is summoned.
-1435	You cannot fish while the pet bonus change window is open.
-1436	You cannot carry out this action while the window for combining or absorbing Shoulder Sashes is open.
-1437	You cannot carry out this action while the Shoulder Sash bonus transfer window is open.
-1438	You cannot carry out this action while the bonus transfer window is open.
-1439	You cannot fish while other windows are open.
-1440	You cannot carry out this action while fishing.
-1441	Remaining time: %.2f | Fish difficulty: %u | Difficulty reduction: %d
-1442	All Combat Zone rankings have been reset.
-1443	Deliver equipped weapon skin.
-1444	Your inventory is full.
-1450	%s improvement failed.
-1451	%s improvement successful.
-1452	The Altar of Blood has appeared.
-1453	You have captured a soul.
-1454	[Ritual of Blood] You don't have enough space in your inventory.
-1455	[Ritual of Blood] You don't have enough souls.
-1456	[Ritual of Blood] You don't have enough Yang.
-1457	The Ritual of Blood has started. Buy special items to get better rewards.
-1458	The Ritual of Blood is over. Try again another time.
-1459	Upgrade change failed.
-1460	This item is only available in Meleys Lair.
-1461	The Compass was used, but the Guard wasnt found.
-1462	You cannot do this whilst carrying out another action.
-1463	You cannot do this whilst carrying out another action.
-1464	You cannot improve your weapon while your pet is summoned.
-1465	You need %d perpendicular slots in your inventory to open the Chest.
-1466	You don't have enough space in your inventory.
-1467	[Storeroom] An item that is currently being used cannot be stored.
-1468	[Aura] Does not work with soulbound items.
-1469	[Aura] Does not work with an Aura Outfit onto which an item has already been transmitted.
-1470	[Aura] Your Aura Outfit has reached the maximum level.
-1471	[Aura] You cannot evolve your Aura Outfit until you have improved it.
-1472	[Aura] Only Aura Outfit can be inserted.
-1473	[Aura] Only Aura Outfit, Shield, Necklace, Earring or Armband can be inserted.
-1474	[Aura] Cannot be improved.
-1475	[Aura] Can only be done once an Aura Outfit has been inserted.
-1476	[Aura] The amount of inserted materials has been adjusted to match the required amount.
-1477	[Aura] Cannot be evolved.
-1478	[Aura] You cannot evolve your Aura Outfit until you have improved it.
-1479	[Aura] You have to insert items.
-1480	[Aura] Improvement successful. Evolution is now possible.
-1481	[Aura] Improvement successful!
-1482	[Aura] You dont have enough money to evolve your Aura Outfit.
-1483	[Aura] Evolution successful!
-1484	[Aura] Successful!
-1485	[Guild] %d EXP has been donated.
-1486	You cannot feed your pet while the refinement window is open.
-1487	The Battle of the Five Shrines has begun! It will last %d days.
-1488	The Battle of the Five Shrines is over. The next battle starts in %d hour(s).
-1489	The interface cannot be opened while you are mounted.
-1490	The event is not currently active.
-1491	You cannot neither trade or move, nor sell, drop or store items while summoning a mount.
-1492	The battle has been terminated as a result of an unexpected issue.
-1493	The Battle of the Five Shrines ends in %d minute(s).
-1494	You require %s x %d more.
-1495	A level-%d Dragon Portal has opened. Take the dungeon by storm!
-1496	A level-%d Dragon Portal can now be entered.
-1497	We've slain the boss!
-1498	%d guild EXP received!
-1499	The time to enter the Dragon Portal has expired.
-1500	The dungeon will be closed if you do not start the battle within %d minute(s).
-1501	Battle not started. Dungeon closed.
-1502	%s has occupied %s!
-1503	You cannot donate while your pet is summoned.
-1504	This character isn't available to duel.
-1505	Total %d: You can still unpack %d.
-1506	Unpack the next gift in %d minutes.
-1507	%s is attacking %s!
-1508	%s has reached the personal score of %d!
-1509	Reward for Ritual of Blood
-1510	Insufficient space in your inventory. The reward will be sent to your mailbox.
-1511	The group members are too far away to receive the item.
-1512	Maximum guild level reached. No more donations possible.
-1513	[Duel of the Seers] The Duel of the Seers has begun!
-1514	[Duel of the Seers] You receive a quest for the minigame.
-1515	[Duel of the Seers] Rich treasures await!
-1516	[Duel of the Seers] The Duel of the Seers is over.
-1517	[Duel of the Seers] Check your rank and claim your reward.
-1518	[Duel of the Seers] You don't have enough Seer Coins.
-1519	[DS] Your rank reward
-1520	[Duel of the Seers] You have increased your donations count by 1.
-1521	You cannot use this item on soulbound items.
-1522	You cannot take part in the Battle Royale.
-1524	You have to leave your group first.
-1525	You cannot enter, because the countdown has already begun.
-1527	This is the winner of the Battle Royale: %s
-1528	%s killed %s.
-1529	The countdown has begun. The Battle Royale starts in %d seconds.
-1530	The Battle Royale cannot begin, because there are too few participants.
-1531	The Battle Royale has begun. The first area will be shown in %d seconds.
-1532	The Combat Zone has been updated. It will be closed off in %d seconds.
-1533	The Combat Zone will be closed off in %d seconds.
-1534	The electrical field has stopped. The next Combat Zone will be shown in %d seconds.
-1535	The Battle Royale ends in %d seconds.
-1536	You cannot do that during a Battle Royale.
-1537	You cannot register for that on this map.
-1538	You cannot register for that on the Battle Royale server.
-1540	You cannot cancel this on the Battle Royale server.
-1541	The Battle Royale has begun!!
-1542	The Battle Royale has ended!!
-1543	There are no more Combat Zones. The whole area will be closed off in %d seconds.
-1544	You have no debuff at the moment.
-1545	You need a Battle Royale Ticket to participate.
-1546	A special supply pack has been dropped somewhere.
-1547	[Relic Bonus] You are already wearing a Soul Relic.
-1548	You cannot use that here.
-1549	Teleportation to the Plateau of Primal Forces has failed.
-1550	You cannot use that any more.
-1551	You don't have enough Gaya.
-1552	Battle Royale participants status: (%u/%u)
-1553	Registration for the Battle Royale has been closed.
-1554	Please try again later.
-1555	You cannot do this whilst performing another action.
-1556	PvP Tournament
-1557	Reward for winning a round
-1558	Reward for winning a tournament
-1559	Duel of the Seers Prizes
-1560	Your inventory is full. Your reward will be delivered by post.
-1561	The reward from the Duel of the Seers will be delivered by post since your inventory was full.
-1562	You have received %u EXP for your Champion Level.
-1574	Please try again later.
+905	Kutsal Yerin Şeytanı: [ENTER][ENTER]
+906	, burada olmaya hakkın yok. 10 saniye içinde krallığına bağlı olanlar bu kutsal toprakları terk edecek.
+907	%s Krallığı yenildi ve krallık savaşından çıktı.
+908	Krallık savaşındaki yaratıkların sayısı:
+909	Eğer Kutsal Alanın Bekçisini öldürürsen, onun sahibi olacaksın.
+910	Ejderha tanrısının korumasında olduğun için sıralama puanı kaybetmedin.
+911	Ek olarak verilen zarar %d
+912	%s engelle! (%%%d)
+913	%s kaç! (%%%d)
+914	Evet (O)
+915	%s[%d] Saldırı pozisyonu: %d %d
+916	Lütfen düzenlemenin tam ismini giriniz.
+917	Bunu at üzerinde yapamazsınız.
+918	Bunu düşmüş haldeyken yapamazsın.
+919	Rüyamda? Ne?
+920	Önce kalk.
+921	Bu düzenleme mevcut değil.
+922	[Grup] Grup silindi.
+923	[Grup] Hedefi çağıramazsın.
+924	[Grup] Bulunduğun pozisyonda grup üyelerini çağıramazsın.
+925	Hayır (X)
+926	Grubun iyi bir ortak çalışma ortaya koyuyor, liderin yakınında bulunan grup üyeleri bir tecrübe bonusu kazanıyor.
+927	Lider
+928	Üye
+929	[Guild] Sağlanan tecrübe kaybedilenden tecrübeden daha fazla.
+930	[Guild] Mesaj silinemez.
+931	[Guild] Yeterli Ejderha hayaleti yok. (%d, %d)
+932	[Guild] Henüz Lonca Becerilerini kullanamazsın.
+933	[Guild] %d becerisi (%d, %d) %u üzerine uygulandı.
+934	[Guild]  Oyuncu şu an %d kanalında. (Bulunulan kanal: %d)
+935	[Guild] Oyuncu çevrim dışı.
+936	Yanlış cevap veren katılımcılar 5 saniye sonra silinecekler.
+937	[Guild] Bu Lonca Becerisi sadece savaşlarda kullanılabilir.
+938	[Guild] %u oranında Ejderha Hayaleti Puanı yüklendi.
+939	[Guild] Sadece Lonca lideri Yang çekebilir.
+940	[Guild] Oyuncu Lonca davetini reddetti.
+941	[Guild] Loncaya birini davet edemezsin.
+942	[Guild] Diğer Krallıklardan olan oyuncuları Loncaya davet edemezsin.
+943	[Lonca] Bu oyuncuyu %d gün sonra tekrar davet edebilirsin.
+944	[Guild] Düzenlemeden sonraki  %d gün içinde üyeleri davet edebilirsin.
+945	[Guild] Bu oyuncu zaten başka bir Loncaya üye.
+946	[Guild] Lonca kapasitesi maximum seviyeye ulaştı.
+947	Sonraki soru için hazır mısın?
+948	Bu beceriyi geliştiremezsiniz.
+949	Bu beceriyi Grand Master seviyesine geliştiremezsiniz.
+950	Zaten bu beceride master konumundasın. Onu geliştiremezsin.
+951	Becerin Grand Master seviyesi için yeterince yüksek değil.
+952	Çalışmadı. Lanet olsun!
+953	Eğitim başarısız. Lütfen sonra tekrar deneyin.
+954	Bedenim güçle dolu!
+955	Eğitim yavaş yavaş fayda ediyor...
+956	Kitapla olan eğitimini başarıyla tamamladın.
+957	Bu kadar tecrübesizken bunu okuyamazsın.
+958	Soru.
+959	Bu beceriyi kitap okuyarak geliştiremezsin.
+960	Bu becerin kitap okuyarak geliştirebilmek için yeterli seviyede değil.
+961	İlerleyebiliyorum ama henüz hepsini anlamış değilim.
+962	Bu talimatları anlamak kolay değil. Biraz daha çalışmam gerekiyor.
+963	Bu bölümü anladım. Yine de çok çalışmam gerekiyor.
+964	Kitapla olan eğitimini başarıyla tamamladın.
+965	Işınlama başarısız.
+966	Burada at yok. Seyise sor.
+967	Lütfen at çağırma nesnesini kullan.
+968	%s FP Kullanımı: %d
+969	Doğruysa O'ya git, yanlışsa X'e git.
+970	İçim yanıyor fakat vücudumu sakinleştiriyor.
+971	Yavaşça, fakat sürekli... Ara vermeksizin.
+972	Evet, bu his mükemmel. Bedenim Chi ile dolu.
+973	Okudum! Şimdi Chi tüm vücudumu kaplıyor.
+974	Eğitim tamamlandı.
+975	Kitabın son sayfasındayım. Eğitim neredeyse bitmek üzere!
+976	Nerdeyse bitti! Sadece azıcık kaldı!
+977	Aydınlandım! Neredeyse hepsini okudum!
+978	Sadece birkaç sayfa kaldı, onları da okuduktan sonra hepsini okumuş oluyorum.
+979	Yenilenmiş hissediyorum.
+980	Doğru!
+981	Şimdi anladım!
+982	Tamam, konsantre kalmalıyım!
+983	Aynı satırı tekrar okuyup duruyorum.
+984	Daha fazla bir şey öğrenmek istemiyorum.
+985	Bu yöntem düşündüğümden çok daha karışık.
+986	Konsantre olamıyorum. Mola vermem gerekiyor.
+987	Sohbetin, spam nedeniyle geçici olarak engellendi.
+988	Sohbet blokunuz kaldırıldı.
+989	İnşa penceresi zaten açık.
+990	Başka bir Ticaret/Depo penceresi açıkken herhangi birşey inşa edemezsiniz.
+991	Daha fazla geliştirme imkansız.
+992	İnşa penceresi açık değil.
+993	Doğru maddeye sahip değilsiniz.
+994	[Guild] Lütfen daha sonra tekrar deneyin.
+995	Bu yeteneği geliştirmek için %d Yetenek Kitabı daha okumalısınız.
+996	[Guild] Lütfen daha sonra tekrar deneyin.
+997	Bu özelliği sadece kaledeyken kullanabilirsin.
+998	TEST: Altın külçe krallığınızın kasasına geri ödendi.
+999	TEST: Krallığınızın kasasında bulunan: %d
+1000	TEST: Altın külçeyi krallığınızın kasasına gönderme yetkiniz yok.
+1001	[Guild] Lonca %d puana ulaştı.
+1002	Bu eşya daha iyi hale gelemez.
+1003	Ücretsiz silah geliştirmeleri ancak seviye 20'ye kadar olan silahlarda kullanılabilir.
+1004	Gerekli özelliklere sahip olmadığın için bu eşyayı kullanamazsın.
+1005	Doğru cinsiyette olmadığınız için bu eşyayı kullanamazsınız.
+1006	Kullan: transfer <name>
+1007	Bu özellik sadece İmparator tarafından kullanılabilir.
+1008	Başka krallıktan olan oyuncuları birliğine dahil edemezsin.
+1009	%s şuanda %d kanalında. (Kanalınız: %d)
+1010	%s oyuncuları iyileştirdin.
+1011	Bu isimde bir kullanıcı yok.
+1012	Kendini birliğine ekleyemezsin.
+1013	Seviyeniz eşyanın yükseltmeden sonraki seviyesinden düşük.
+1014	Başka bir pencere açıkken yükseltme yapamazsın.
+1015	%s İmparatoru %s oldu.
+1016	Ateşleri yakmak için %s savaşları var.
+1017	%s başarıyla savundu.
+1018	%s ateşi yok ettiği için şu andan itibaren 30 dakika boyunca bir ödül alabilir.
+1020	%s de savaş yüzünden bir uyarı ateşi yakıldı.
+1021	%s ateşi yok etti.
+1022	%s kaleyi koruyamadığı için savaşı kaybetti.
+1023	%s ateşi yok etti.
+1024	Geliştirme için yeterli Yang yok.
+1025	Sadece zırhınızı çıkardığınızda bir dükkan açabilirsiniz.
+1026	Ata binerken bunu kullanamazsınız.
+1027	Bu hareket için gereken: %s
+1028	Sohbet bloklamanızın kalkmasına %d saat %d dakika %d saniye kaldı
+1029	Sohbet bloklamanızın kalkmasına %d saat %d saniye kaldı
+1030	Sohbet bloklamanızın kalkmasına %d dakika %d saniye kaldı
+1031	Yang yağmuru düşme oranı
+1032	Çıkartılacak taş yok.
+1033	Henüz kullanılamaz.
+1034	Test sunucusundaki zaman limiti aşıldı.
+1035	Yükseltme için yeterli malzeme yok.
+1036	Sıralama Puanları daha fazla arttırılamıyor.
+1037	Tüm Krallıklar
+1038	Eşya düşürme oran yüzdesi
+1039	Yang düşürme oranı yüzdesi
+1040	Deneyim yüzdesi
+1041	Dönüşüm halindeyken kitap okuyamazsın.
+1042	Sohbet engelinizin kalkmasına %d saniye kaldı
+1043	At sürerken duygularınızı ifade edemezsiniz.
+1044	At süren bir kişiye duygularınızı ifade edemezsiniz.
+1045	Savaş Kağıdı, +4'ün üzerinde olan nesnelerle işlemiyor.
+1046	%s zar attı. Sonuç %d (%d-%d).
+1047	Zar atınız. Sonuç %d (%d-%d).
+1048	[Lonca] Düşman lonca lideri çevrimdışı.
+1049	Yerde yatarken ata binemezsin.
+1050	[Lonca] Bu lonca şu anda savaşta.
+1051	Burada balık tutamazsın.
+1052	[Lonca] Loncanız zaten en yüksek seviyeye ulaştı.
+1053	Ata binerken dönüşemezsin.
+1054	Zaten bir binektesin. Önce in.
+1055	Karşındaki kişiyi arkadaşlarına ekleyemiyorsun.
+1056	Bu role ile yükseltemezsiniz.
+1057	Düşürülen eşya %d dakika sonra kaybolacak.
+1058	[Guild] Karşındaki kişi davetiyeyi alamıyor.
+1059	Üzerinde olan nesneleri satamazsın.
+1060	Üzerinde olan nesneler özel dükkânda satılamıyor.
+1061	[Storeroom] Bu eşyayı depona süremezsin.
+1062	Altın'ı henüz atamazsın.
+1063	Envanterin dolu. Eşyayı koyacak yer yok.
+1064	Eşyanın seviyesi çok yüksek.
+1065	Yalnızca silahlara ve zırhlara uygulanabilir.
+1066	Bu ejderha taşı tekrar yüklenemez.
+1067	Şeytan Kulesi görevi için sadece bir kez ödüllendirilebilirsiniz.
+1068	Ejderha taşı başarıyla çıkarıldı.
+1069	Bu nesne, arındırma paneli içerisinde sürüklenemez.
+1071	Bu haritada şu anda Metin Taşı bulunmuyor.
+1072	Ejderha taşında kalan süreyi çıkarma işlemi başarılıydı.
+1073	Kalan süreyi çıkarma işlemi başarısızdı.
+1074	Ejderha taşı çıkarılamadı, ama şunu elde ettin: %s
+1075	Ejderha taşı çıkarılamadı.
+1076	Bu nesneye saflık derecesini geliştirmek için ihtiyaç duyulmaz.
+1077	Bu eşya bu şekilde yükseltilemez.
+1078	Saflık derecesini geliştirme işlemi başarılıydı.
+1079	Arındırmayı bir sınıf daha yükseltme işlemi başarısızdı.
+1080	Bu nesneye arındırmada ihtiyaç duyulmaz.
+1081	Bu ejderha taşı, arındırmada kullanılamaz.
+1082	Arındırmayı bir sınıf daha yükseltme işlemi başarılıydı.
+1083	Saflık derecesini geliştirme işlemi başarısızdı.
+1084	Ejderha taşını güçlendirmek için gerekli malzemeye sahip değilisn.
+1085	Bu ejderha taşı güçlendirmek için kullanılamaz.
+1086	Benzer roleleri birleştiremezsiniz.
+1087	Güçlendirme başarılıydı.
+1088	Güçlendirme başarısız
+1089	Ejderha taşı etkinleştirilmedi.
+1090	Üzerinde zaten bu türden bir ejderha taşı bulunuyor.
+1091	Ejderha taşı çıkarılamaz.
+1092	Böyle bir ejderha taşı kuşandın bile.
+1093	%d saniye eklendi.
+1094	Cor Draconis'i açmadan önce Ejderha Taşı görevi tamamlanmış olmalı ve Ejderha Taşı Simyası etkinleştirilmiş olmalı.
+1095	Eşyaya ait envanter tamamen boş olmadığı sürece kemeri çıkaramazsın.
+1096	Kutsama Kağıdı ve Büyülü Demir Madeni birleştirebilirsin.
+1097	Bu eşyayı kemer envanterinde donanamazsın.
+1098	Bu zindanda binek kullanamazsın.
+1099	Aynı anda maksimum 200 bileşen kullanabilirsin.
+1100	Ruha bağlı bir objeyi özel markette satamazsın.
+1101	Ruha bağlı bir objenin özelliklerini değiştiremezsin.
+1102	Ruha bağlı bir objeyi kullanamazsın.
+1103	Ruha bağlı bir objeyi düşüremezsin.
+1104	Ruha bağlı bir objeyi başkasına veremezsin.
+1105	Bu sunucuda ruhuna obje bağlayamazsın.
+1106	Bu objeyi ruhuna bağlayamazsın.
+1107	%d Yang yatırdın.
+1108	Çıkartılacak metin taşı yok.
+1109	Bu obje zaten ruha bağlı.
+1110	Bu obje, ruhtan ayrılma sürecinde.
+1111	Bu obje, ruha bağlı bir obje değil.
+1112	Ruha bağlı bir objeyi geliştiremezsin.
+1113	Ruha bağlı bir objeyi satamazsın.
+1114	Envanterinde yeterince yerin olmadığından, sandığı açamazsın.
+1115	Başkasıyla ticaret yaparken özel depo açamazsın.
+1116	Ticaret yaparken bu nesneyi kullanamazsın.
+1117	Omuz kuşağı penceresi açıkken geri dönüş kağıdı kullanamazsın.
+1118	Başka bir pencere açık olunca ticaret yapamazsın.
+1119	Bu yeri kaydedemezsin.
+1120	Sadece omuz kuşakları, silah ve zırhlar kullanabilirsin.
+1121	Nesneleri pencereye çek.
+1122	Bu kişiye özel üretimdir.
+1123	Bu kuşak başka bonus ememez.
+1124	Sadece omuz kuşakları kullanabilirsin.
+1125	Bu kuşaklar birbiriyle kombine edilemez.
+1126	Olmadı!
+1127	Oldu!
+1128	Kombinasyon için yeterli paran yok.
+1129	Emiş ve kombinasyon pencereleri açıkken bu nesneyi kullanamazsın.
+1130	Envanterde yeterli boşluk yok.
+1131	%s başarılı! %%%d Emiş oranı ile yeni %s. Tebrikler!
+1132	Ruha bağlı nesne kullanamazsın.
+1133	Şu an kullandığın hiçbir eşyayı özel bir dükkanda satamazsın.
+1134	Bineğinin sırtındayken bu paketi kullanamazsın.
+1135	Süre doldu. İlk tur sona erdi.
+1136	Süre doldu. İkinci tur sona erdi.
+1137	İlk turu tamamlamak için kalan süre: %d dakika.
+1138	İkinci turu tamamlamak için kalan süre: %d dakika.
+1139	Güvenli Alan devre dışı.
+1140	Güvenli Alan'ın devre dışı bırakılmasına kalan süre: %d dakika.
+1141	Yabancı Krallıkta güvenli bir yere ışınlanamazsın.
+1142	Yanıtın 20 saniye içinde belirecek.
+1143	Yanlış cevap veren tüm katılımcılar 15 saniye sonra silinecek.
+1144	Pet çağırmak için seviyen çok düşük.
+1145	Kombinasyon için eşya seçilmedi.
+1146	Çağırdın: %s
+1147	Geri gönderdin: %s
+1148	%s %d. seviyeye erişti!
+1149	%s şimdi derin uykuda.
+1150	%s yumurtadan çıktı!
+1151	Petin heyecanla protein lokmalarını yiyor.
+1152	Yeterli HP yok.
+1153	%s uyanıyor ve hemen lezzetli öğününe dalıyor.
+1154	%s şimdi bir nakliye kutusunda.
+1155	%s nakliye kutusundan çıkıyor.
+1156	%s %s erişti! Harika!
+1157	%s beslenmeyi reddediyor!
+1158	İki krallık da katılmadığı için etkinlik sonlandırıldı.
+1159	Bonusları başarıyla aktardın.
+1160	Sahip olduğun Yang benimle kitap takas etmeye yetmiyor.
+1161	Lütfen başka bir isim gir.
+1162	Bunu kullanmak için yeterli manaya sahip değilsin.
+1163	Karşındaki kişinin kuluçka makinesi açıkken ticaret yapamazsın.
+1164	Ticaret yaparken, kampın ya da özel dükkanın açıkken kuluçka makinesini kullanamazsın.
+1165	Petini çağırırken özel dükkan açamazsın.
+1166	Petini çağırırken ticaret yapamazsın.
+1167	Karşındaki kişi petini çağırırken ticaret yapamazsın.
+1168	Petin yeterli deneyim topladı. Bir sonraki gelişme aşamasına ulaşması için şimdi de nesne EXP'ye ihtiyacı var.
+1169	Petin bir sonraki gelişme aşamasına hazır değil. Bunun için pet kitaplarını kullan.
+1170	Petin zaten en yüksek gelişme aşamasına ulaştı.
+1171	Girilen isim çok kısa.
+1172	%d saniye içinde hedefte olacaksın.
+1173	Yeterli Yang'a sahip değilsin.
+1174	Petini iyi eğitiyorsun, yeni becerilerini çabuk öğreniyor!
+1175	Deneyim %d puana yükseldi.
+1176	Petin bu beceriyi zaten öğrendi ve eğitimi reddediyor.
+1177	%s becerisi etkinleştirildi. %d HP yüklendi.
+1178	Petinin kahraman eğitimi için cesur pet kitabını edin.
+1179	Petin, eğitilmesi ve bir sonraki gelişme aşamasına yükselmesi için %d. seviyede olmalı.
+1180	Petin, eğitim ve bir sonraki gelişme aşamasına yükselmek için %d günlük olmalı.
+1181	Petin, eğitilmesi ve bir sonraki gelişme aşamasına yükselmesi için %100 deneyime sahip olmalı.
+1182	%s etkisi etkinleştirildi.
+1183	Seviyen eşyanın geliştirmeden sonraki seviyesinden düşük.
+1184	%s etkisi etkinleştirilmedi.
+1185	%s becerisi etkinleştirildi. Artık hasar almayacaksın.
+1186	%s etkisi etkinleştirildi. Yavaşlama, zehir ve kanama etkileri kaldırıldı.
+1187	Bonusların sende kalacak.
+1188	Penceren zaten açık.
+1189	Büyü bozma %%%d.
+1190	%s yorgunluğunu atıyor.
+1191	Eşyayı burada kullanamazsın.
+1192	Ticaret yaparken petini çağıramazsın.
+1193	Özel dükkan açamazsın.
+1194	Her 5 saniyede bir Ay Pastası kullanabilirsin.
+1195	%s yeterli değil. Bir sonraki gelişme aşaması için ihtyiacın olan: %d.
+1196	Petin seviyesi oyuncunun seviyesinden daha yüksek olamaz.
+1197	Genç basamağına
+1198	Yabani basamağına
+1199	Cesur basamağına
+1200	Kahraman Eğitimi basamağına
+1201	@*** Zar büyük nesne için atılıyor: %s ***
+1202	@*** ->%*s - Zar sonucu: %4d ***
+1203	$*** %s nesnesinin kazananı: %s ***
+1204	Yeni emiş oranı: %d
+1205	Bu eşyayı düelloda kullanamazsın.
+1206	Maksimum emiş oranına ulaşıldı.
+1207	Bu beceriyi zaten öğrenmiştin.
+1208	Aramana uygun bir nesne yok.
+1209	Yeterince bal kabağı feneri toplandı.
+1210	Bir ödülü hak edip hak etmediğini Sam Pumpkin'e sor.
+1211	Cadılar Bayramı başlıyor!
+1212	Sam Pumpkin'le konuş!
+1213	Cadılar Bayramı sona eriyor. Ödüllerinizi teslim almayı unutmayın!
+1214	Verilen bal kabağı fenerleri: %d
+1215	Toplam bal kabağı feneri sayısı: %d
+1216	%d Yang kazandın.
+1217	Buraya kamp ateşi yakamazsın.
+1218	Bu oyuncu başka bir oyuncuyla ticaret yapıyor.
+1219	Bunun için öncelikle bir silah kuşanman gerekiyor.
+1220	Bu kostümü bu silah için alamazsın.
+1221	Silahı değiştirmek istediğinde önce silah görünümünü çıkarmalısın.
+1224	Okey turun başladı!
+1225	Başka kart çekemezsin.
+1226	Kartları seçtiğinde kart atamazsın.
+1227	Kartları seçtiğinde başka kart çekemezsin.
+1228	Suyun altında kamp ateşi yakamazsın.
+1229	Envanterin dolu.
+1230	Ödülünü ancak envanterinde yer açılınca teslim alabilirsin.
+1231	%s bir okey turunda %d puan topladı.
+1233	Okey etkinliği başlıyor!
+1234	Okey etkinliği sona erdi!
+1235	[Okey Etkinliği] Eğer en iyiler listesine girmeyi başardıysan, an itibarıyla 7 gün içinde ödülünü alabilirsin.
+1236	Okey oynarken bu eylemi gerçekleştiremezsin.
+1237	Kapalı. Anahtarı aramalısın.
+1238	Bu ritüel taşı sadece seviye 80 üzerindeki nesnelerde çalışır.
+1245	Ticaret yaparken envanteri genişletemezsin.
+1246	Okey etkinliği başlıyor!
+1247	Okey etkinliği sona erdi!
+1248	Bu eşya bir anahtarla açılamaz.
+1249	Seungryong Vadisi, Sohan Dağı, Doyyumhwan ve Yongbi Çölü canavar dolu!
+1250	Bölgeleri tarayın ve onları yok edin. Hayat puanı toplayın ve bunları sandıklarla takas edin.
+1251	Patron Avcısı etkinliği %d dakika içinde sona erecek.
+1252	Bay B. ve patron canavar %d dakika içinde kaybolacak).
+1253	Günlük hedefine ulaştın - ödülünü al.
+1254	Gelinlik veya smokin giyerken silah görünümlerini kullanamazsın.
+1255	Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.
+1256	Silah görünümü taşırken gelinlik veya smokin giyemezsin.
+1257	%d. tur başlıyor.
+1258	Doğru anahtar.
+1259	[Lonca] Maksimum EXP miktarını zaten bağışladın.
+1260	[Lonca] Lonca duyurusu başlatıldı.
+1261	[Lonca] Lonca duyurusu için süre uzatıldı.
+1262	[Lonca] Liste şu anda güncelleniyor. Lütfen daha sonra tekrar dene.
+1263	[Lonca] Lonca bulunamadı.
+1264	[Lonca] Bu loncaya zaten başvurmuşsun.
+1265	[Lonca] Başvurun iletildi.
+1266	[Lonca] Oyuncu %s size başvurdu.
+1267	[Lonca] Liste şu anda güncelleniyor. Lütfen daha sonra tekrar dene.
+1268	[Lonca] Lonca duyurusu yok
+1269	%d Yang kazandın.
+1270	[Lonca] Başvuru yok
+1271	[Lonca] Lonca duyurusunun süresi: %s.
+1272	[Lonca] Lonca duyurunun süresi yakında sona erecek.
+1273	[Lonca] %d Yang alındı.
+1274	[Lonca] Kesilen %%%d vergiden sonra %d Yang alırsın.
+1275	[Lonca] Bir anket esnasında savaşa başlayamazsın.
+1276	[Lonca] Bir anket esnasında loncayı kapatamazsın.
+1277	[Lonca] Bir anket esnasında hiç kimseyi loncaya davet edemezsin.
+1278	[Lonca] Sadece bir lonca deposu inşa edebilirsin.
+1279	Kutudan gizemli bir ışık geliyor.
+1280	[Lonca] Lütfen 10 saniye sonra tekrar dene.
+1281	[Lonca] Başka bir lonca üyesi bunu zaten kullanıyor.
+1282	[Lonca] Lonca deposunda hala eşyalar mevcut.
+1283	[Lonca] Anketi reddettin.
+1284	[Lonca] Anketi kabul ettin.
+1285	[Lonca] Bu üye şu anda çevrim dışı.
+1286	[Lonca] Devam eden anket yok.
+1287	[Lonca] 'Lonca transferi' anketi başlıyor.
+1288	[Lonca] 'Üyeyi çıkar' anketi başlıyor.
+1289	[Lonca] 'Lonca bölgesini sat' anketi başlıyor.
+1290	%d Tecrübe Puanı kazandın.
+1291	[Lonca] 'Lonca bölgesini kapat' anketi başlıyor.
+1292	[Lonca] 'Lonca lideri transferi' anketi başlıyor.
+1293	[Lonca] 'Üyeyi çıkar anketi' devam ediyor.
+1294	[Lonca] 'Lonca bölgesini sat' anketi devam ediyor.
+1295	[Lonca] 'Lonca bölgesini kapat' anketi devam ediyor.
+1296	[Lonca] Lonca deposu şu anda kullanılıyor.
+1297	[Lonca] Lonca deposunu 10 saniye sonra açabilirsin.
+1298	[Lonca] Senin loncanın lonca deposu yok.
+1299	Bak kutudan ne çıktı!
+1300	[Lonca] Bu oyuncu için anket olumsuz sonuçlandı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.
+1301	[Lonca] Bu oyuncu eylemsizlik sebebiyle loncadan çıkarıldı.
+1302	[Lonca] Güncel ankete katıldın.
+1303	[Lonca] Kendi karakterin için anket oluşturamazsın.
+1304	[Lonca] Savaş esnasında anket başlatamazsın.
+1305	[Lonca] Lonca bölgesini kendine satamazsın.
+1306	[Lonca] Böyle bir lonca yok.
+1307	[Lonca] Savaş esnasında anket başlatamazsın.
+1308	[Lonca] Lonca seviyesi çok düşük.
+1309	[Lonca] Üyelerin son ankette buna karşıydı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.
+1310	Eğer kutudan gelen kırmızı dumanı solursan, hızın artar!
+1311	[Lonca] Savaş esnasında anket başlatamazsın.
+1312	[Lonca] Üyelerin son ankette buna karşıydı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.
+1313	[Lonca] Lonca bölgeni başlatmadan önce bir anket yapmalısın.
+1314	[Lonca] Lonca bölgesi satışı için kaydedilen anketteki lonca bu değil.
+1315	[Lonca] Üyelerin son ankette satışa karşı çıktı. Tekrar dene.
+1316	[Lonca] Lonca bölgeni kendine satamazsın.
+1317	[Lonca] Lonca lideri çevrim dışı ya da başka bir haritada.
+1318	[Lonca] Bu loncanın zaten bir lonca bölgesi var.
+1319	[Lonca] Lonca bölgesi bulunamadı.
+1320	[Lonca] Lonca bölgesi satışı tamamlandı.
+1321	Bu eşyayı sadece devam eden etkinlik esnasında kullanabilirsin.
+1322	Bir hata oluştu. Maalesef bonuslar değiştirilemedi.
+1323	Şu anda binek/petini çağıramazsın.
+1330	Bonus içeren bir kuşak, transfer esnasında alıcı olamaz.
+1331	Bonus içermeyen bir kuşak, transfer esnasında orijinal olarak kullanılamaz.
+1332	Bonusu transfer edemezsin çünkü emiş oranları uyuşmuyor.
+1333	Bonusu transfer edemezsin çünkü kuşakların derecesi uyuşmuyor.
+1334	Başarısız! Emiş oranı %1 düşürüldü.
+1335	Kısmen başarılı! Emiş oranı %1 düşürüldü.
+1336	Tamamen başarılı! Bonus, istenilen şekilde aktarıldı.
+1337	Bonus transferi esnasında eşya düşüremezsin.
+1338	Bonus transferi esnasında eşya kaydıramazsın.
+1339	Bonus transferi esnasında eşya satamazsın.
+1340	Bonus transferi esnasında bu mümkün değil.
+1341	Diğer kişi bonus transferi yaparken bu mümkün değil.
+1342	Bir pet belirlemek için pet belirleme küresine ihtiyacın var.
+1343	Önce petini etkinleştir.
+1344	Petinin değerlerini değiştirirken, ticaret yapamaz, eşya satamaz ve depoyu kullanamazsın vb.
+1345	Petinin değerlerini değiştirirken, eşya kullanamazsın.
+1346	Petinin değerlerini değiştirirken, eşya düşüremezsin.
+1347	Petinin değerlerini değiştirirken, eşya kaydıramazsın.
+1348	Ticaret ortağın petinin değerlerini değiştirirken, onunla ticaret yapamazsın.
+1349	Petinin değerlerini değiştirirken, YZK ile konuşamazsın.
+1350	Petinin değerleri değiştirildi.
+1351	Petler için değer dönüştürme penceresini kapattıktan 3 saniye sonra açabilirsin.
+1352	Tüm slotlar dolu.
+1399	Bu oyuncu şu anda davetini kabul edemiyor.
+1400	Krallıkların izini uyguladıktan sonra artık bu krallıktaki davetleri kabul edemezsin.
+1401	Pet becerisi %s etkinleştirildi - %s hafif adım kullanıyor.
+1403	Zaten bir isim kayıtlı.
+1404	Bu nesneyi kullanmadan önce lütfen donatılmış ejderha taşını kaldır.
+1409	Ne yazık ki kıyameti önleyemedin. En yakın zamanda Zodyak Tapınağı'na geri ışınlanacaksın.
+1411	Şans kutusu açıkken, hiçbir YZK ile konuşamazsın.
+1412	Şans kutusu açıkken eşya kullanamazsın.
+1413	Şans kutusu açıkken eşya düşüremezsin.
+1414	Şans kutusu açıkken eşyaları taşıyamazsın.
+1415	Şans kutusu açıkken ticaret yapamazsın.
+1416	Karşındaki kullanıcının şans kutusu açıkken birbirinizle ticaret yapamazsınız.
+1420	Ejderha taşı bonusun değiştirildi.
+1421	[Kralı yakala] Kral kartları toplamak için canavarları yen. Bir kral destesi için 25 karta ihtiyacın var.
+1422	[Kralı yakala] Çok sayıda harika ödül seni bekliyor!
+1423	[Kralı yakala] Eğer en iyiler listesine girmeyi başardıysan, oyun masasında ödülünü alırsın.
+1426	Bir adet %%%d EXP depo bonusu aldın.
+1427	Bir adet %d savunma depo bonusu aldın.
+1428	Bir adet %%%d HP depo bonusu aldın.
+1429	Bir adet %%%d canavarlara karşı güçlü depo bonusu aldın.
+1430	Balığa çıkmadan önce envanterinde yeterince yer olduğundan emin ol.
+1431	Bonus dönüşüm penceresi açıkken, eşyaları taşıyamazsın.
+1432	Şansın yaver gitmedi. Balığın karnında hazine yoktu.
+1433	Petin yumurtadan çıkmışsa, balıkçılık yapamazsın.
+1434	Petin çağrıldığı esnada balıkçılık yapamazsın.
+1435	Pet bonusu dönüşüm penceresi açıkken balıkçılık yapamazsın.
+1436	Omuz kuşağı birleştirme veya alma pencereleri açıkken bu işlemi gerçekleştiremezsin.
+1437	Omuz kuşağı için bonus transferler penceresi açıkken bu işlemi gerçekleştiremezsin.
+1438	Bonus transferler penceresi açıkken bu işlemi gerçekleştiremezsin.
+1439	Diğer pencereler açıkken balıkçılık yapamazsın.
+1440	Balık tutarken bu işlemi gerçekleştiremezsin.
+1441	Kalan zaman: %.2f | Balık zorluk derecesi: %u | Zorluk seviyesi düşüşü: %d
+1442	Savaş Bölgesinin tüm rütbe sıralamaları sıfırlandı.
+1443	Kuşanılan silah görünümünü naklet.
+1444	Envanterinde boş alan yok.
+1450	%s Geliştirme başarısız.
+1451	%s Geliştirme başarılı.
+1452	Kan Sunağı belirdi.
+1453	Bir Ruh yakaladın.
+1454	[Kan Ritüeli] Envanterde yeterli alan yok.
+1455	[Kan Ritüeli] Yeterli Ruh'un yok.
+1456	[Kan Ritüeli] Yang'ın yetersiz.
+1457	Kan Ritüeli başlıyor. Daha iyi ödüller için özel eşyalar satın al.
+1458	Kan Ritüeli sona erdi. Lütfen daha sonra tekrar dene.
+1459	Yükseltme değişikliği başarısız.
+1460	Bu eşya sadece Balathor'un Mahzeni'nde mevcut.
+1461	Pusula kullanıldı, ancak bekçi bulunamadı.
+1462	Başka bir eylemi gerçekleştirirken bunu yapamazsın.
+1463	Başka bir eylemi gerçekleştirirken bunu yapamazsın.
+1464	Petin çağrıldığı esnada silahını geliştiremezsin.
+1465	Sandığı açmak için envanterinde %d dikey alana ihtiyacın var.
+1466	Envanterde yeterli alan yok.
+1467	[Lager] Şu anda kullanılan bir eşya depolanamaz.
+1468	[Aura] Ruha bağlı eşyalarla çalışmaz.
+1469	[Aura] Üzerine zaten bir eşya aktarılmış olan bir aura giysisi ile çalışmaz.
+1470	[Aura] Aura giysin maksimum seviyeye ulaştı.
+1471	[Aura] Aura giysini ancak onu yükselttikten sonra geliştirebilirsin.
+1472	[Aura] Sadece aura giysileri eklenebilir.
+1473	[Aura] Sadece aura giysisi, kalkan, kolye, küpe ve bileklik eklenebilir.
+1474	[Aura] Yükseltilemez.
+1475	[Aura] Bir aura giysisi eklendikten sonra yapılabilir.
+1476	[Aura] Eklenen malzemelerin sayısı gerekli miktara göre ayarlandı.
+1477	[Aura] Geliştirilemez.
+1478	[Aura] Aura giysini ancak onu yükselttikten sonra geliştirebilirsin.
+1479	[Aura] Eşya eklemelisin.
+1480	[Aura] Yükseltme başarılı. Gelişim şimdi mümkün.
+1481	[Aura] Yükseltme başarılı!
+1482	[Aura] Aura giysini geliştirmek için yeterli paran yok.
+1483	[Aura] Gelişim başarılı!
+1484	[Aura] Başarılı!
+1485	[Lonca] %d EXP bağışlandı.
+1486	Arındırma Paneli açıkken petini besleyemezsin.
+1487	Beş Tapınağın Savaşı başladı! %d gün sürecek.
+1488	Beş Tapınağın Savaşı sona erdi. Bir sonraki savaş %d saat sonra başlayacak.
+1489	Sürüş esnasında UI açılamaz.
+1490	Şu anda bir etkinlik yok.
+1491	Bir binek çağırdığında ticaret yapamaz, hareket edemez ve eşya satamazsın, düşüremez veya depolayamazsın.
+1492	Beklenmedik bir sorun nedeniyle savaş sona erdi.
+1493	Beş Tapınağın Savaşı %d dakika sonra sona erecek.
+1494	Daha %s x %d fazlasına ihtiyacın var.
+1495	Seviye %d ejderha portalı açıldı. Haydi zindana!
+1496	Seviye %d ejderha portalına şimdi girilebilir.
+1497	Patronu öldürdük!
+1498	%d Lonca EXP aldın!
+1499	Ejderha portalına giriş süresi sona erdi.
+1500	Savaşı %d dakika içinde başlatmazsan portal kapanır.
+1501	Savaş başlatılmadı. Zindan kapandı.
+1502	%s, %s noktasını işgal etti!
+1503	Petin çağrıldığı esnada bağış yapamazsın.
+1504	Bu karakter bir düello için mevcut değil.
+1505	%d üyesinden: %d tane daha açabilirsin.
+1506	Bir sonraki hediyeyi %d dakika sonra aç.
+1507	%s, %s noktasına saldırıyor!
+1508	%s, %d kişisel puan durumuna erişti!
+1509	Kan Ritüeli ödülü
+1510	Envanterde yeterli alan yok. Ödül, posta kutuna gönderilecek.
+1511	Grup üyeleri eşyayı alamayacak kadar uzakta.
+1512	Maksimum lonca seviyesine ulaşıldı. Daha fazla bağış mümkün değil.
+1513	[Kahin Yarışması] Kahin Yarışması başladı!
+1514	[Kahin Yarışması] Mini oyun için bir görev alacaksın
+1515	[Kahin Yarışması] Seni değerli ganimetler bekliyor!
+1516	[Kahin Yarışması] Kahin Yarışması sona erdi.
+1517	[Kahin Yarışması] Rütbeni kontrol et ve ödülünü iste.
+1518	[Kahin Yarışması] Bunun için yeterli Kahin Jetonun yok.
+1519	[KY] Rütbe ödülün
+1520	[Kahin Yarışması] Bağış sayını 1 oranında artırdın.
+1521	Bu eşyayı ruha bağlı eşyalarda kullanamazsın.
+1522	Şu anda Battle Royale'e katılamazsın.
+1524	Önce grubunu terketmelisin.
+1525	Geri sayım başladığı için katılamazsın.
+1527	Battle Royale galibi: %s
+1528	%s öldürdü: %s.
+1529	Geri sayım başladı. Battle Royale %d saniye sonra başlayacak.
+1530	Çok az katılımcı olduğu için Battle Royale başlatılamıyor.
+1531	Battle Royale başladı. İlk bölge %d saniye sonra gösterilecek.
+1532	Savaş Bölgesi güncellendi. %d saniye sonra sınırlanacak.
+1533	Savaş Bölgesi %d saniyeliğine sınırlanacak.
+1534	Elektrik alanı durduruldu. Bir sonra Savaş Bölgesi %d saniye sonra gösterilecek.
+1535	Battle Royale %d saniye sonra sona erecek.
+1536	Bunu bir Battle Royale esnasında yapamazsın.
+1537	Bunun için bu haritaya giriş yapamazsın.
+1538	Bunun için Battle Royale sunucusuna giriş yapamazsın.
+1540	Bunu Battle Royale sunucusunda iptal edemezsin.
+1541	Battle Royale başladı!!
+1542	Battle Royale sona erdi!!
+1543	Başka Savaş Bölgesi yok. Tüm bölge %d saniye sonra sınırlanacak.
+1544	Şu anda bir Debuffın yok.
+1545	Katılım için bir Battle Royale biletine ihtiyacın var.
+1546	Bir yere özel bir tedarik paketi atıldı.
+1547	[Kalıntı bonusu] Zaten bir ruh kalıntısı kuşandın.
+1548	Bunu burada kullanamazsın.
+1549	İlkel Kuvvetler Platosu'na ışınlanma başarısız.
+1550	Bunu artık kullanamazsın.
+1551	Yetersiz Gaya.
+1552	Battle Royale katılımcı durumu: (%u/%u)
+1553	Battle Royale kayıtları kapandı.
+1554	Lütfen daha sonra tekrar dene.
+1555	Başka bir eylem gerçekleştirirken bunu yapamazsın.
+1556	PvP Turnuvası
+1557	Tur galibiyeti ödülü
+1558	Turnuva galibiyeti ödülü
+1559	Kahin Yarışması Ödülleri
+1560	Envanterin dolu. Ödülün sana posta yoluyla iletildi.
+1561	Envanterin dolu olduğu için Kahin Yarışması ödülü posta yoluyla iletildi.
+1562	Şampiyon seviyen için %u EXP aldın.
+1574	Lütfen daha sonra tekrar dene.
 1575	Battle Royale
-1576	Battle Royale Season Reward. Season rank: %d
-1577	Battle Royale General Reward.
-1578	Battle Royale Game Reward. Rank: %d
-1579	Battle Royale Combat Reward. Killed %d opponents or more
-1580	You cannot claim an achievement right now.
-1581	You cannot use any emotions right now.
+1576	Battle Royale Sezon Ödülü. Sezon sıralaması: %d
+1577	Battle Royale Genel Ödül
+1578	Battle Royale Oyun Ödülü. Sıralama: %d
+1579	Battle Royale Savaş Ödülü. Öldürülen rakipler %d veya daha fazla
+1580	Şu anda bir başarı talep edemezsin.
+1581	Şu anda bir duygu kullanamazsın.
 1582	Yongan
-1584	Your guild leader has registered for the auction of the territory in the %s area at %d,%d.
-1585	You have already submitted your bid.
-1587	There's nothing to collect.
-1590	Only the guild leader or a member with bank access can pay the lease.
-1591	No lease needs to be paid.
-1592	The guild does not have enough Yang.
-1593	[Guild Territory] Go to the guard and pay the lease of %d Yang for your guild territory.
-1594	You have paid the %u-Yang lease for the guild territory.
-1595	You cannot do that while the territory auction is ongoing.
-1596	You have not registered for any territory auctions.
-1597	You are not a member of any guild.
-1598	You have already registered for the territory auction.
-1599	Only the guild leader can register for the territory auction.
-1600	Only guilds of level %d or higher can register.
-1601	Your guild already has a guild territory.
-1602	There are no territory auctions right now.
-1605	Your guild isn't registered for the territory auction.
-1606	You can only bid if you have been a member of the guild for more than 24 hours.
-1607	The lease for the guild territory wasn't paid. The guild territory has been abandoned.
-1608	No guilds have registered for the territory auction.
-1610	This guild does not exist.
-1611	Dong Gwang Plain
-1613	Perfect! You have attached the Spirit Stone successfully and you even receive a double stat bonus.
+1584	Lonca liderin %s bölgesinde %d,%d ülkesinin müzayedesine kaydoldu.
+1585	Zaten bir teklif verdin.
+1587	Alınacak bir şey yok.
+1590	Sadece lonca lideri veya banka erişimi olan bir üye kirayı ödeyebilir.
+1591	Kira ödenmesi gerekmiyor.
+1592	Loncada yeterli Yang yok.
+1593	[Lonca bölgesi] Bekçiye git ve lonca bölgeniz için %d Yang kira öde.
+1594	Lonca bölgesi için %u Yang kira ödedin.
+1595	Bölge müzayedesi mevcut olduğu sürece bunu yapamazsın.
+1596	Bir bölge müzayedesine kayıtlı değilsin.
+1597	Bir Loncaya üye değilsin.
+1598	Zaten bir bölge müzayedesine kaydoldun.
+1599	Sadece lonca lideri bölge müzayedesine kaydolabilir.
+1600	Sadece seviye %d veya üstü loncalar kaydolabilir.
+1601	Loncanın zaten bir lonca bölgesi var.
+1602	Şu anda bir bölge müzayedesi yok.
+1605	Loncan bölge müzayedesi için kayıtlı değil.
+1606	Yalnızca loncada 24 saatten uzun bir süredir bulunuyorsan teklif verebilirsin.
+1607	Lonca bölesinin kirası ödenmedi. Lonca bölgesinden vazgeçildi.
+1608	Hiçbir lonca, bölge müzayedesine kaydolmadı.
+1610	Bu lonca yok.
+1611	Dongan ovası
+1613	Şimdi oldu! Zihin taşını başarıyla taktın ve iki katı değer bonusu alacaksın.
 1614	Joan
-1615	Pyungmoo
+1615	Pyungmo
 1616	Jungrang
 1617	Waryong
 1618	Imha
 1619	Miryang
 1620	Songpa
 1621	Daeyami
-1622	[World boss] Event started
-1623	[World boss] Event completed
-1624	[World boss] In Channel %d, %s has appeared and is terrorising the area of %s. Let's go hunting!
-1625	[World boss] The world boss in Channel %d has been attacked. Join the hunt now!
-1626	[World boss] Well done: %s has been defeated and peace has been restored... for now.
-1627	[World boss] The World boss has escaped! Good luck next time.
-1628	[World boss] You can't receive a reward now.
-1629	[World boss] Well done! Here is your reward. Join in next time as well!
-1630	[World boss] You can't receive a reward now, because you do not have enough space in your inventory.
-1631	[World boss] Reward for Loot Level I in the rankings: %d
-1632	[World boss] Rewards for Loot Level II in the rankings: %d
-1633	[World boss] Rewards for Loot Level III in the rankings: %d
-1634	[World boss] Rewards for Loot Level IV in the rankings: %d
-1635	[Flower Power] You don't have enough shoots.
-1636	[Flower Power] There isn't enough space in your inventory.
-1637	[Flower Power] You received Flower Seeds.
-1638	[Flower Power] You don't have enough Flower Seeds.
-1639	[Flower Power] You have received a Chrysanthemum Shoot.
-1640	[Flower Power] You have received a May Bell Shoot.
-1641	[Flower Power] You have received a Daffodil Shoot.
-1642	[Flower Power] You have received a Lily Shoot.
-1643	[Flower Power] You have received a Sunflower Shoot.
-1644	[World boss] Caution: the world boss will appear soon!
-1645	[Flower Power] This item can no longer be used.
-1646	You cannot transform at the moment.
-1647	Kill all the monsters within the time limit!
-1648	The portal to the next room is open.
-1649	Dodge every attack!
-1650	The portal to the next level is open.
-1651	%s has completed level %u in Sung Mahi Tower!
-1652	The loot from Sung Mahi Tower has been sent to your mailbox.
-1653	Sung Mahi Tower Level %d
-1654	Loot for completing Sung Mahi Tower
-1655	The battle starts in %d seconds.
-1656	You are facing level %d.
-1657	Kill a pair of monsters that don't belong together!
-1658	You attacked the wrong monster. Kill all the monsters!
-1659	Kill all the monsters within the time limit!
-1660	You destroyed the wrong Metin stone. Defeat all the monsters!
-1661	Destroy the right Metin stone!
-1662	Find the right key to escape!
-1663	Find a Sealstone to break the seal!
-1664	[Sung Mahi Tower] Kill all the monsters within the time limit!
-1665	[Sung Mahi Tower] The current ranking cycle has ended.
-1666	[Sung Mahi Tower] A new ranking cycle has begun.
-1667	Seasonal reward for 1st place on level %d in Sung Mahi Tower.
-1668	Seasonal Sung Mahi Tower Reward
-1669	You are not cursed.
-1670	All curses have been lifted.
-1671	Time's up. You're being taken outside.
-1672	[Sung Mahi Tower] Destroy the Demon Stone!
-1673	[Sung Mahi Tower] The key does not fit. Find another one and try again!
-1674	[Sung Mahi Tower] Break the seal with Sung Mahi's Sealstone!
-1675	[Sung Mahi Tower] You have to break another seal first!
-1676	You can now wear gloves.
-1677	You cannot wear gloves yet.
-1678	This function is unavailable as hacking software has been detected.
-1679	[Sung Mahi Tower] You completed this level in %d seconds.
-1680	You cannot participate in the territory auction on the day the guild is founded.
+1622	[Dünya patronu] etkinliği başladı
+1623	[Dünya patronu] etkinliği sona erdi
+1624	%d Kanalındaki [Dünya patronu], %s dahilinde belirdi ve %s bölgesinde dehşet saçıyor. Haydi ava!
+1625	%d Kanalında [Dünya patronu] saldırıya uğradı. Şimdi ava katıl!
+1626	Aferin [Dünya patronu]: %s mağlup edildi ve tekrar barış sağlandı... şimdilik.
+1627	[Dünya patronu] Dünya patronu kaçtı! Şansını bir dahaki sefer dene.
+1628	[Dünya patronu] Şu anda bir ödül alamazsın.
+1629	[Dünya patronu] Aferin! İşte ödülün. Bir dahaki sefer yine katıl!
+1630	[Dünya patronu] Şu anda bir ödül alamazsın, çünkü envanterinde yeterli alan yok.
+1631	[Dünya patronu] Rütbe listesi ganimet seviyesi I ödülü: %d
+1632	[Dünya patronu] Rütbe listesi ganimet seviyesi II ödülü: %d
+1633	[Dünya patronu] Rütbe listesi ganimet seviyesi III ödülü: %d
+1634	[Dünya patronu] Rütbe listesi ganimet seviyesi IV ödülü: %d
+1635	[Çiçek Çocuklar] Yetersiz filiz.
+1636	[Çiçek Çocuklar] Envanterinde yeterli alan yok.
+1637	[Çiçek Çocuklar] Çiçek tohumu kazandın.
+1638	[Çiçek Çocuklar] Yetersiz çiçek tohumu.
+1639	[Çiçek Çocuklar] Bir kasımpatı filizi kazandın.
+1640	[Çiçek Çocuklar] Bir inci çiçeği filizi kazandın.
+1641	[Çiçek Çocuklar] Bir nergiz filizi kazandın.
+1642	[Çiçek Çocuklar] Bir zambak filizi kazandın.
+1643	[Çiçek Çocuklar] bir ayçiçeği filizi kazandın.
+1644	[Dünya patronu] Dikkat: Yakında dünya patronu belirecek!
+1645	[Çiçek Çocuklar] Bu eşya artık kullanılamaz.
+1646	Şu an kendini dönüştüremezsin.
+1647	Tüm canavarları zaman sınırı esnasında öldür!
+1648	Bir sonraki odanın portalı açık.
+1649	Tüm saldırıları savuştur!
+1650	Bir sonraki katın portalı açık.
+1651	%s, Sung Mahi'nin Cehennem Kulesi'nde %u. katı geçti!
+1652	Sung Mahi'nin Cehennem Kulesi'nin ganimeti posta kutuna gönderildi.
+1653	Cehennem Kulesi: Kat %d
+1654	Sung Mahi'nin Cehennem Kulesini tamamlama ganimeti
+1655	Savaş %d saniye içinde başlayacak.
+1656	%d. Katta savaşacaksın.
+1657	Birbirine ait olmayan bir canavar çiftini öldür!
+1658	Yanlış canavara saldırdın. Tüm canavarları öldür!
+1659	Tüm canavarları zaman sınırı esnasında öldür!
+1660	Yanlış Metin Taşını yok ettin. Tüm canavarları alt et!
+1661	Doğru Metin taşını imha et!
+1662	Kaçmak için doğru anahtarı bul!
+1663	Mührü çözmek için bir Mühür Taşı bul!
+1664	[Sung Mahi'nin Cehennem Kulesi] Zaman sınırı esnasında tüm canavarları öldür!
+1665	[Sung Mahi'nin Cehennem Kulesi] Güncel rütbe listesi devresi sona erdi.
+1666	[Sung Mahi'nin Cehennem Kulesi] Yeni bir rütbe listesi devresi başladı.
+1667	Cehennem Kulesi'nin %d. katındaki 1.'lik için sezon ödülün.
+1668	Cehennem Kulesi sezon ödülü
+1669	Üzerinde lanet yok.
+1670	Tüm lanetler kaldırıldı.
+1671	Süre doldu. Dışarı götürülüyorsun.
+1672	[Sung Mahi'nin Cehennem Kulesi] Şeytan taşını imha et!
+1673	[Sung Mahi'nin Cehennem Kulesi] Anahtar uymuyor. Başka bir tane bul ve tekrar dene.
+1674	[Sung Mahi'nin Cehennem Kulesi] Sung Mahi'nin mühür taşı ile mührü çöz!
+1675	[Sung Mahi'nin Cehennem Kulesi] Önce başka bir mührü çözmelisin!
+1676	Artık eldiven takabilirsin.
+1677	Henüz eldiven takamazsın.
+1678	Bu özellik, bir hack programı bulunduğu için kullanılamıyor.
+1679	[Sung Mahi'nin Cehennem Kulesi] Bu seviyeyi %d saniyede tamamladın.
+1680	Loncanın kurulduğu gün bölge müzayedesine katılamazsınız.
 1681	
 1683	
 1684	
 1685	
-1686	Climb the steps of Sung Mahi Tower and enter the next level.
-1687	[Personal Premium Shop] You cannot use that. Go to the village's Trade Administrator.
-1688	You have entered an area which is under Sung Mahi's sway and are suffering from his curse.
-1689	%s still has %d outposts. (%d/%d)
-1690	%s has erected all the outposts and Sung Mahi's control will start in %d minutes.
-1691	Sung Mahi's outposts are being erected.
-1692	Sung Mahi's outposts have been destroyed.
-1693	All of the outposts in %s have been destroyed and the area is no longer under Sung Mahi's control.
-1694	Seo Gwang Wastelands
-1695	Nam Gwang Chasm
-1696	The improvement was successful!
-1697	The improvement has unfortunately failed.
-1698	Thanks to the immunity blessing, you are not influenced by Sung Mahi's Presence.
-1699	Your immunity has expired and you are again influenced by Sung Mahi's Presence and Curse.
-1700	You cannot do this with a user of hacking software.
-1701	You have insufficient materials for the upgrade. (Soulbound items cannot be used.)
-1702	Your guild's territory will be automatically relinquished in %d hours. Any items in the guild warehouse will be deleted.
-1703	[Guild] You cannot kick the guild leader.
-1704	[Guild] You cannot kick yourself.
-1705	[Guild] You cannot make yourself guild leader.
-1706	[Guild] Only available to the guild leader (if a guild territory is being relinquished).
-1707	[Guild] You cannot relinquish guild territory during a guild battle.
-1708	You cannot swap this.
-1709	The Tower Action has been activated.
-1710	You can learn this after reaching the Champion Level.
-1711	[Personal Premium Shop] You can't open this, because you still have money to collect.
-1712	[Personal Premium Shop] You can't open this, because you still have items to collect.
-1713	[Personal Premium Shop] You have already opened your personal shop.
-1714	[Personal Premium Shop] The shop is being prepared now.
-1715	[Personal Premium Shop] You don't have enough space in your inventory.
-1716	[Personal Premium Shop] You can collect items in your personal shop.
-1717	[Personal Premium Shop] You can collect money in your personal shop.
-1718	[Personal Premium Shop] %s has been sold. Please collect your money.
-1719	[Personal Premium Shop] You cannot reopen your shop for %d seconds after closing it.
-1720	You cannot do that while the dungeon is being created.
-1721	You cannot revive yourself any more. You will be transported out of the dungeon.
-1722	You have already received your reward. If you want to try again, come back again later. Time remaining: %d h %d m
-1723	You can revive yourself another %d times.
-1724	You can now enter the Serpent Temple. Use the Serpent Statue to do so.
-1725	The destroyed Metin isn't reacting. All the Metins have appeared again.
-1726	The destroyed Metin isn't reacting. All the Metins have appeared again.
-1727	You have destroyed Metin %d. Now destroy Metin %d.
-1728	Time's up. You will be transported out of the dungeon.
-1729	This is now available for %d minutes.
-1730	You cannot extend the dungeon timer any further.
-1731	The dungeon timer is extended by 1 minute.
-1732	You have killed all the monsters. You will be transported to level %d. %d seconds remaining until then.
-1733	You have destroyed all of the Metins. You will be transported to level %d. %d seconds remaining until then.
-1734	The piece has been added to the Serpent Head. But nothing is happening.
-1735	All the Serpent Pillars have been unlocked. %d levels in %d seconds.
-1736	The special Serpent Temple Smith appears!
-1737	The Serpent Temple Smith appears!
-1738	You have killed all the monsters and can now proceed to the boss level.
-1739	You have completed the Serpent Temple. You will be transported out of the dungeon in %d seconds.
-1740	Destroy the Metin Stones in the correct order.
-1741	Kill all the monsters.
-1742	Take the key from the monsters to unlock the Serpent Pillar.
-1743	You have added a piece to the Serpent Head.
-1744	Kill the boss.
-1745	Successfully opened!
-1746	You have to unlock the other pillar first.
-1747	The prison has been unlocked. The blacksmith smiles at you.
-1748	This key didn't open the prison and save the blacksmith.
-1749	This piece doesn't fit the Serpent Head.
+1686	Sung Mahi'nin Cehennem Kulesi'nin basamaklarını çık ve bir üst kata gir.
+1687	[Kişisel premium dükkan] Bunu kullanamazsın. Köydeki ticaret yöneticisine git.
+1688	Sung Mahi'nin etkisinin altında olan bir bölgeye girdin ve lanetlendin.
+1689	%s bölgesinde %d karakol kaldı. (%d/%d)
+1690	%s bölgesi tüm karakolları kurdu ve Sung Mahi'nin kontrolü %d dakika sonra başlayacak.
+1691	Sung Mahi'nin karakolları kuruluyor.
+1692	Sung Mahi'nin karakolları yıkıldı.
+1693	%s bölgesindeki tüm karakollar imha edildi ve bölge artık Sung Mahi'nin kontrolü altında değil.
+1694	Seogan Çorağı
+1695	Namgan Yarığı
+1696	Geliştirme başarılı!
+1697	Geliştirme maalesef başarısız!
+1698	Bağışıklık kutsaması sayesinde Sung Mahi'nin etkisinden kurtuldun.
+1699	Bağışıklık kutsamanın süresi doldu ve tekrar Sung Mahi'nin etkisi ve laneti altındasın.
+1700	Bunu bir hack programı kullanıcısıyla yapamazsın.
+1701	Yükseltme için yeterli malzemen yok. (Ruha bağlı nesneler kullanılamaz)
+1702	Loncanın bölgesi %d saat sonra otomatik olarak bırakılacak. Lonca deposundaki nesneler silinecek.
+1703	[Lonca] Lonca liderini reddedemezsin.
+1704	[Lonca] Kendini reddedemezsin.
+1705	[Lonca] Kendini lonca lideri ilan edemezsin.
+1706	[Lonca] Bu sadece lonca liderleri için mevcut. (Bir lonca bölgesi bırakıldığında.)
+1707	[Lonca] Bir lonca savaşı esnasında lonca bölgesini bırakamazsın.
+1708	Bunu takas edemezsin.
+1709	Cehennem Kulesi aksiyonu etkinleştirildi.
+1710	Bunu şampiyon seviyesine ulaştıktan sonra öğrenebilirsin.
+1711	[Kişisel premium dükkan] Hala alacak paran olduğu için bunu açamazsın.
+1712	[Kişisel premium dükkan] Hala toplayacak eşyaların olduğu için bunu açamazsın.
+1713	[Kişisel premium dükkan] Kişisel dükkanını zaten açtın.
+1714	[Kişisel premium dükkan] Dükkan şu anda hazırlanıyor.
+1715	[Kişisel premium dükkan] Envanterinde yeterince yer yok.
+1716	[Kişisel premium dükkan] Eşyaları kişisel dükkanından alabilirsin.
+1717	[Kişisel premium dükkan] Parayı kişisel dükkanından alabilirsin.
+1718	[Kişisel premium dükkan] %s satıldı. Lütfen paranı al.
+1719	[Kişisel premium dükkan] Dükkanı kapattıktan sonra %d saniye boyunca tekrar açamazsın.
+1720	Bir zindan oluşturulurken bunu yapamazsın.
+1721	Kendini daha fazla canlandıramazsın. Zindandan nakledileceksin.
+1722	Ödülünü zaten aldın. Tekrar denemek istersen yine gel. Kalan süre: %d s %d d
+1723	%d kez daha dirilebilirsin.
+1724	Şimdi Yılan Tapınağı'na girebilirsin. Bunun için yılan heykelini kullan.
+1725	İmha edilen Metin tepki vermiyor. Tüm Metin'ler tekrar belirdi.
+1726	İmha edilen Metin tepki vermiyor. Tüm Metin'ler tekrar belirdi.
+1727	%d. Metini yok ettin. Şimdi %d. Metini yok et.
+1728	Süre doldu. Zindandan nakledileceksin.
+1729	Bu, %d dakika daha mevcut.
+1730	Zindan sayacını uzatamazsın.
+1731	Zindan sayacı 1 dakikalığına uzatılacak.
+1732	Tüm canavarları devirdin. %d. kata nakledileceksin. Daha %d saniyen var.
+1733	Tüm Metinlerini imha ettin. %d. kata nakledileceksin. Daha %d saniyen var.
+1734	Parça, yılan başına eklendi. Ama hiçbir şey olmadı.
+1735	Tüm yılan sütunlarının kilidi açıldı. %d. kata %d saniye var.
+1736	Özel Yılan Tapınağı demircisi beliriyor!
+1737	Yılan Tapınağı demircisi beliriyor!
+1738	Tüm canavarları devirdin ve artık patron alanına geçebilirsin.
+1739	Yılan Tapınağı'nı başarıyla tamamladın. %d saniye sonra zindan nakledileceksin.
+1740	Metin taşlarını doğru sırada imha et.
+1741	Tüm canavarları öldür.
+1742	Canavarlardan anahtarı al ve Yılan Sütunu'nun kilidini aç.
+1743	Yılan başına bir parça ekledin.
+1744	Patronu öldür.
+1745	Başarıyla açıldı!
+1746	Önce diğer sütunun kilidini açmalısın.
+1747	Cezaevi açıldı. Demirci sana gülümsüyor.
+1748	Bu anahtar cezaevini açamadı ve demirciyi kurtaramadı.
+1749	Bu parça yılanın başına uymuyor.
 1750	
 1751	
-1752	You must fill up at least 1 EXP Marble at level 120 to reach Champion Level.
-1753	You must complete the 'Ship Defence' dungeon.
-1754	You have already reached the Champion Level.
-1755	[Personal Premium Shop] You cannot use items while opening your personal shop.
-1756	[Personal Premium Shop] You cannot do that while managing items.
-1757	[Personal Premium Shop] You cannot use the Personal Premium Shop while you have other windows open.
-1758	[Personal Premium Shop] You cannot do that while managing items.
+1752	Şampiyon seviyesine ulaşabilmek için seviye 120'de en az 1 EXP küresi doldurmalısın.
+1753	"Gemi savunması" zindanını temizlemelisin.
+1754	Zaten şampiyon seviyesine ulaştın.
+1755	[Kişisel premium dükkan] Kişisel dükkanını açarken eşya kullanamazsın.
+1756	[Kişisel premium dükkan] Eşyaları yönetirken bunu kullanamazsın.
+1757	[Kişisel premium dükkan] Diğer pencereler açıkken kişisel premium dükkanı kullanamazsın.
+1758	[Kişisel premium dükkan] Eşyaları yönetirken bunu yapamazsın.
 1759	
-1760	[Relic Bonus] This is not possible while the Soul Relic window is open.
-1761	%s groups members have left the battle.
-1762	You have %d minutes left.
-1763	[Personal Premium Shop] You cannot duel here.
-1764	[Personal Premium Shop] Collectable money will not be updated while you manage items.
-1765	The final boss of the Serpent Temple has appeared.
-1766	[Personal Premium Shop] A shop has already been opened here. Please find another location to open your shop.
-1767	You cannot improve that while an evolvable pet has been summoned.
-1768	<Northwind Deeps> You have %d minutes left.
-1769	<Northwind Deeps> If you don't start the battle within 3 minutes, the instance will end.
-1770	<Northwind Deeps> Time's up. You will be transported out of the dungeon.
+1760	[Kalıntı bonusu] Ruh kalıntısı penceresi açıkken bu mümkün değil.
+1761	%s grup üyesi savaştaı terk etti.
+1762	%d dakikan kaldı.
+1763	[Kişisel premium dükkan] Burada düello yapamazsın.
+1764	[Kişisel premium dükkan] Eşyaları yönetirken, tahsil edilebilen para güncellenmez.
+1765	Yılan Tapınağı'nın bölüm sonu canavarı belirdi!
+1766	[Kişisel premium dükkan] Burada zaten bir dükkan açıldı. Lütfen dükkanını açmak için başka bir yer bul.
+1767	Yükseltilebilir bir pet çağırırken bunu geliştiremezsin.
+1768	<Kuzey Rüzgarı Derinlikleri> %d dakikan kaldı.
+1769	<Kuzey Rüzgarı Derinlikleri> Savaşı 3 dakika içinde başlatmazsan, aşama feshedilir.
+1770	<Kuzey Rüzgarı Derinlikleri> Süre doldu. Zindandan nakledileceksin.
 1771	
-1772	<Northwind Deeps> An instance has been generated for the Northwind Shelter.
+1772	<Kuzey Rüzgarı Derinlikleri> Kuzey Rüzgarı Zulası için bir aşama oluşturuldu.
 1773	
 1774	
 1775	
@@ -1695,124 +1685,153 @@
 1793	
 1794	
 1795	
-1796	<Northwind Deeps> You defeated Alastor! You will be transported out of the dungeon in 20 seconds.
-1797	<Northwind Deeps> Alastor will soon unleash his icy wrath!
-1798	<Northwind Deeps> Alastor unleashes his icy wrath at level %d!
-1799	<Northwind Deeps> You managed to deflect Alastor's icy wrath.
-1800	<Northwind Deeps> If you don't destroy the white dragon eggs within %d seconds, Alastor's deadly frost will breach the shelter!
-1801	That's not available here.
-1802	This will be available once the battle has begun.
-1803	<Northwind Deeps> The instance was ended because you didn't start the battle within the specified time limit.
+1796	<Kuzey Rüzgarı Derinlikleri> Alastor'u yendin!  20 saniye sonra zindandan nakledileceksin.
+1797	<Kuzey Rüzgarı Derinlikleri> Alastor yakında buzlu öfkesini salacak!
+1798	<Kuzey Rüzgarı Derinlikleri> Alastor buzlu öfkesinin %d. seviyesini salıyor!
+1799	<Kuzey Rüzgarı Derinlikleri> Alastor'un buzlu öfkesini savuşturdun.
+1800	<Kuzey Rüzgarı Derinlikleri> Beyaz ejderha yumurtalarını %d saniye içinde yok etmezsen, Alastor'un ölümcül soğuğu zulaya nüfuz eder!
+1801	Bu, burada mevcut değil.
+1802	Bu, savaş başladıktan sonra mevcut olacak.
+1803	<Kuzey Rüzgarı Derinlikleri> Aşama, belirtilen süre içinde savaşı başlatmadığın için feshedildi.
 1804	
-1805	No loot will be collected as the loot filter is deactivated.
-1806	No loot will be collected as a party member's loot filter is deactivated.
+1805	Ganimet toplanmıyor çünkü ganimet filtresi kapalı.
+1806	Ganimet toplanmıyor çünkü bir grup üyesinin ganimet filtresi kapalı.
 1807	
-1808	You have gained %d Champion Level experience points.
-1809	You have gained %d experience points.
-1810	You have lost %d experience points.
-1811	You have lost %d Champion Level experience points.
-1812	You cannot do that during trading.
-1813	The Metin Fever event has started!
-1814	Complete quests on the event quest list, destroy Metin stones and claim your rewards.
-1815	Metin Fever is not currently active.
-1816	[Dragon's Temple] You have generated an instance for the Dragon's Temple.
-1817	[Dragon's Temple] If you don't start the battle within 3 minutes, your instance will end.
-1818	[Dragon's Temple] Beran-Setaou has been defeated. You will be teleported out of the dungeon in %d seconds.
-1819	[Dragon's Temple] You have %d minutes left.
-1820	[Dragon's Temple] The instance was ended because the battle wasn't started.
-1821	[Dragon's Temple] Time's up. Everyone is being teleported out of the dungeon.
-1822	[Dragon's Temple] You have generated an instance for the Dragon's Temple.
-1823	[Dragon's Temple] If you don't start the battle within 3 minutes, your instance will end.
-1824	[Dragon's Temple] The instance was started.
-1825	[Dragon's Temple] You gave up and the instance was ended.
-1829	[Dragon's Temple] The instance will be closed if no one enters it within %d seconds.
-1830	[Dragon's Temple] The instance was closed because no one entered it in the allotted time.
-1838	You cannot block yourself.
-1839	You cannot add yourself.
-1840	%s action was permitted.
-1844	You've fed your horse %d Fodder. It has gained %d experience.
-1845	Not enough Gaya or Yang
-1846	You cannot learn this horse skill.
-1847	[Enigma Temple] You cannot use that here.
-1848	[Enigma Temple] Only the group leader can use this scroll.
-1849	[Enigma Temple] %s is not in range.
-1850	[Enigma Temple] You cannot use this scroll at your level.
-1851	[Enigma Temple] %s is not the correct level to enter.
-1852	[Enigma Temple] %s has declined entry.
-1853	[Enigma Temple] The dungeon will disappear after 1 minute if you do not start the battle.
-1854	[Enigma Temple] A portal to the Enigma Temple has been created.
-1855	[Enigma Temple] Destroy the real Metin stone.
-1856	[Enigma Temple] This is a fake Metin stone. Find a real Metin stone!
-1857	[Enigma Temple] You've received a treasure chest from the Metin stone.
-1858	[Enigma Temple] You have yet to find a real Metin stone. Use the portal and try again.
-1859	[Enigma Temple] Task complete. Find the secret room.
-1860	[Enigma Temple] Find a real monster and defeat it! Don't let the illusions lead you astray.
-1861	[Enigma Temple] You haven't found a real monster. Use the portal and try again.
-1862	[Enigma Temple] Look at the treasure chest.
-1863	[Enigma Temple] Welcome to the secret room.
-1864	[Enigma Temple] Your time's up! Teleporting everyone out of the dungeon.
-1865	[Enigma Temple] You receive the Blessing of the Enigma Temple as a reward.
-1866	[Enigma Temple] You haven't received a reward. Time remaining until next reward: %d hour(s) and %d minute(s)
-1867	Enigma Temple Reward
-1868	[Enigma Temple] The Enigma Temple disappeared because the time ran out.
-1869	[Enigma Temple] You have 4 minutes to start the battle at the Enigma Portal.
-1870	[Enigma Temple] The Blessing of the Enigma Temple has granted you another treasure chest.
-1871	[Enigma Temple] You've received an Enigma Reward. Look in your mailbox to accept it.
-1872	%s has been removed.
-1873	You have acquired %s. You can also check your skills from the skills menu.
-1874	Not enough Gaya
-1876	Please try again later.
-1878	Time's up. You will be transported to the town shortly.
-1879	You cannot revive yourself any more.
-1880	You have completed the dungeon and will be teleported out in %d minutes.
-1881	You've defeated all the emissaries. Go to Guardian Hae-Tae to enter Damnation.
-1882	You cannot use more than the maximum amount of items.
-1883	The journey to the Otherworld is over and you can't find any more Death Flames.
-1884	The journey to the Otherworld has started. You can find Death Flames by defeating monsters.
-1885	The journey to the Otherworld is over.
-1886	The journey to the Otherworld has started. You can now use the Otherworld Portal at Cape Dragon Fire.
-1887	You have used %dx Water of Life. You have %dx Water of Life remaining.
-1888	You receive %d Death Flame(s).
-1895	You've defeated the Earth Emissary.
-1896	You've defeated the Night Emissary.
-1897	You've defeated the Thunder Emissary.
-1898	You've defeated the Air Emissary.
-1899	The Dungeon will close in %d minutes.
-1900	You don't have space for any more Death Flames.
-1901	You have to wait before trying again. Remaining wait time: %d hour(s) and %d minute(s)
-1902	You can no longer change the group once you have entered the Dragon's Temple.
-1903	You can't have any more Mercs.
-1904	Endurance exceeded.
-1905	[Enigma Temple] Destroy the Enigma Metin to get to the next level.
-1916	You have already acquired this skill.
-1917	You cannot learn this skill until horse level 31.
-1918	You cannot acquire any more skills.
-1919	You cannot learn this skill until horse level 21.
-1921	[Enigma Temple] You cannot enter as you do not meet the level requirement.
-1922	Cannot change the equipment page because weapon and costume do not match.
-1924	Loot filter activated.
-1925	Loot filter duration extended.
-1926	[Sung Ma Invasion Portal] A Sung Ma Invasion Portal has opened somewhere in this area. [ENTER]Open the large map to find it.
-1927	[Sung Ma Invasion Portal] The Invasion Boss has appeared somewhere!
-1930	[Sung Ma Invasion Portal] The power of the invasion portal has been weakened and it can now be destroyed.
-1931	[Sung Ma Invasion Portal] The area has been successfully defended. You will be teleported back shortly.
-1932	[Sung Ma Invasion Portal] The invasion portal has been closed.
-1933	[Sung Ma Invasion Portal] Power Flowers have appeared around the invasion portal.[ENTER]Use a flower of the same elemental type as the area to receive a damage bonus!
-1934	[Sung Ma Invasion Portal] Power Flowers have appeared near the Invasion Boss.[ENTER]Use a flower of the same elemental type as the area to receive a damage bonus!
-1936	[Sung Ma Invasion Portal] You do not have enough space in your inventory to accept the reward.
-1937	[Sung Ma Invasion Portal] You need to defeat all the monsters near the invasion portal to destroy it. 
-1938	[Guild] %d Yang has been withdrawn.
-1939	Goldberry Hunt Reward
-1940	Destroy %d Primordis Statues. You cannot attack multiple statues at once.
-1941	You've received all of the endurance from your quests. Collect the reward from the quest window.
-1942	The bonuses absorbed into your Shoulder Sash have been successfully removed.
-1943	The bonuses absorbed into your Aura Outfit have been successfully removed.
-1944	You require more space in your inventory.
-1945	[Land of Gold] You cannot transform at the moment.
-1946	You cannot disband the group while you are still active in Meley's Lair.
-1947	You cannot disband the group while a guild battle is in progress.
-1949	You have successful freed yourself.
-1951	Secret Treasure Reward
-1952	You have received a secret reward for participating in the Treasure Hunt %d times.
-1953	Rank %d Treasure Hunt Reward
-1954	You have received a reward for reaching rank %d in the Treasure Hunt.
+1808	%d Şampiyon seviyesi tecrübe puanı kazandın.
+1809	%d Tecrübe puanı kazandın.
+1810	%d tecrübe puanı kaybettin.
+1811	%d şampiyon seviyesi tecrübe puanı kaybettin.
+1812	Bunu ticaret esnasında yapamazsın.
+1813	"Metin Ateşi" etkinliği başladı!
+1814	Etkinlik görevi listesindeki görevleri tamamla, Metin taşlarını imha et ve ödülleri al.
+1815	Metin Ateşi şu anda mevcut değil.
+1816	[Ejderha Tapınağı] Ejderha tapınağı için bir aşama oluşturdun.
+1817	[Ejderha Tapınağı] Savaşı 3 dakika içinde başlatmazsan, aşama feshedilir.
+1818	[Ejderha Tapınağı] Beran-Setaou yenildi. %d saniye sonra zindandan ışınlanacaksın.
+1819	[Ejderha Tapınağı] %d dakikan kaldı.
+1820	[Ejderha Tapınağı] Savaş başlatılmadığı için aşama feshedildi.
+1821	[Ejderha Tapınağı] Süre doldu ve herkes zindandan ışınlanacak.
+1822	[Ejderha Tapınağı] Ejderha tapınağı için bir aşama oluşturdun.
+1823	[Ejderha Tapınağı] Savaşı 3 dakika içinde başlatmazsan, aşama feshedilir.
+1824	[Ejderha Tapınağı] Aşama başlatıldı
+1825	[Ejderha Tapınağı] Pes ettin ve aşama feshedildi.
+1829	[Ejderha Tapınağı] %d saniye içinde kimse girmezse aşama kapatılır.
+1830	[Ejderha Tapınağı] Belirtilen sürede kimse girmediği için aşama kapatıldı.
+1838	Kendi kendini engelleyemezsin.
+1839	Kendi kendini ekleyemezsin.
+1840	%s işlemine izin verildi.
+1844	Atını %d at yemi ile besledin. %d tecrübe puanı kazandı.
+1845	Yetersiz Gaya veya Yang
+1846	Bu at becerisini öğrenemezsin.
+1847	[Enigma Tapınağı] Bunu burada kullanamazsın.
+1848	[Enigma Tapınağı] Bu parşömeni yalnızca grup lideri kullanabilir.
+1849	[Enigma Tapınağı] %s menzil içerisinde değil.
+1850	[Enigma Tapınağı] Bu parşömeni bulunduğun seviyede kullanamazsın.
+1851	[Enigma Tapınağı] %s. seviye giriş yapmak için uygun değil.
+1852	[Enigma Tapınağı] %s girişi reddetti.
+1853	[Enigma Tapınağı] Savaşa başlamazsan zindan 1 dakika sonra yok olur.
+1854	[Enigma Tapınağı] Enigma Tapınağı'na bir portal oluşturuldu.
+1855	[Enigma Tapınağı] Gerçek Metin taşını imha et.
+1856	[Enigma Tapınağı] Bu Metin taşı sahte. Gerçek bir Metin taşı bul!
+1857	[Enigma Tapınağı] Metin taşından bir hazine sandığı kazandın.
+1858	[Enigma Tapınağı] Gerçek bir Metin taşı bulamadın. Portalı kullan ve tekrar dene.
+1859	[Enigma Tapınağı] Görev tamamlandı. Gizli odayı bul.
+1860	[Enigma Tapınağı] Gerçek bir canavar bul ve onu yen! Yanılsamaların seni aldatmasına izin verme.
+1861	[Enigma Tapınağı] Gerçek bir canavar bulamadın. Portalı kullan ve tekrar dene.
+1862	[Enigma Tapınağı] Hazine sandığına bak.
+1863	[Enigma Tapınağı] Gizli odaya hoş geldin.
+1864	[Enigma Tapınağı] Süre doldu! Herkes zindandan ışınlanacak.
+1865	[Enigma Tapınağı] Ödül olarak Enigma Tapınağı'nın kutsamasını kazandın.
+1866	[Enigma Tapınağı] Ödül kazanamadın. Bir sonraki ödüle kadar kalan süre: %d saat %d dakika
+1867	Enigma Tapınağı ödülü
+1868	[Enigma Tapınağı] Süre dolduğu için Enigma Tapınağı kayboldu.
+1869	[Enigma Tapınağı] Enigma portalındaki savaşa başlamak için 4 dakikan var.
+1870	[Enigma Tapınağı] Enigma Tapınağı'nın kutsaması sayesinde bir hazine sandığı daha kazandın.
+1871	[Enigma Tapınağı] Bir Enigma ödülü kazandın. Almak için posta kutunu kontrol et.
+1872	%s kaldırıldı.
+1873	%s aldın. Becerilerini beceriler tablosundan kontrol edebilirsin.
+1874	Yetersiz Gaya.
+1876	Lütfen daha sonra tekrar dene.
+1878	Zaman doldu. Yakında şehre ışınlanacaksın.
+1879	Artık kendini canlandıramazsın.
+1880	Zindanı tamamladın ve %d dakika içinde dışarı ışınlanacaksın.
+1881	Bütün elçileri yendin. Lanetlenmeye girmek için Hae-Tae bekçisine git.
+1882	Maksimum eşya sayısından fazlasını kullanamazsın.
+1883	Öbür Dünyaya seyahat bitti ve artık başka ölü alevi bulamazsın.
+1884	Öbür Dünyaya seyahat başladı. Canavar öldürerek ölü alevi bulabilirsin.
+1885	Öbür Dünyaya seyahat bitti.
+1886	Öbür Dünyaya seyahat başladı. Şimdi Ejderha Ateşi Burnu'ndaki Öbür Dünya portalını kullanabilirsin.
+1887	%d x hayat suyu kullandın. Elinde %d x hayat suyu kaldı.
+1888	%d ölü alevi kazandın.
+1895	Toprak elçisini yendin.
+1896	Gece elçisini yendin.
+1897	Gök gürültüsü elçisini yendin.
+1898	Göklerin elçisini yendin.
+1899	Zindan %d dakika içinde kapanacak.
+1900	Daha fazla ölü alevine yer kalmadı.
+1901	Tekrar denemeden önce beklemelisin. Kalan bekleme süresi: %d saat %d dakika
+1902	Ejderha Tapınağı'na girdikten sonra grubu değiştiremezsin.
+1903	Daha fazla paralı askere sahip olamazsın.
+1904	Dayanıklılık aşıldı.
+1905	[Enigma Tapınağı] Bir sonraki kata geçmek için bir Enigma-Metin'i yok et.
+1916	Bu beceriye zaten sahipsin.
+1917	Bu beceriyi 31. seviyeden itibaren öğrenebilirsin.
+1918	Başka beceriler alamazsın.
+1919	Bu beceriyi 21. seviyeden itibaren öğrenebilirsin.
+1921	[Enigma Tapınağı] Giriş yapamazsın. Seviye talebini doldurmuyorsun.
+1922	Ekipman sayfası değiştirilemiyor çünkü silah ve kostüm birbiriyle uyuşmuyor.
+1924	Ganimet filtresi etkinleştirildi.
+1925	Ganimet filtresinin süresi uzatıldı.
+1926	[SungMa İstila Portalı] Bu bölgenin bir yerinde bir SungMa İstila Portalı açıldı. [ENTER]Bulmak için genel görünüm haritanı aç.
+1927	[SungMa İstila Portalı] İstilacılar Komutanı bir yerde belirdi!
+1930	[SungMa İstila Portalı] İstila Portalı’nın gücü zayıfladı ve imha edilebilir hale geldi.
+1931	[SungMa İstila Portalı] Bölge başarıyla savunuldu ve yakında buradan dışarı ışınlanacaksın.
+1932	[SungMa İstila Portalı] İstila Protalı kapandı.
+1933	[SungMa İstila Portalı] İstila Portalı’nın yakınında güç çiçekleri belirdi.[ENTER]Bölgeyle aynı elemente sahip bir çiçek kullan ve hasar bonusu kazan!
+1934	[SungMa İstila Portalı] İstila Komutanı’nın yakınında güç çiçekleri belirdi.[ENTER]Bölgeyle aynı elemente sahip bir çiçek kullan ve hasar bonusu kazan!
+1936	[SungMa İstila Portalı] Envanterinde bu ödülü almak için yeterli alan yok.
+1937	[SungMa İstila Portalı] İstila portalını imha etmek için öncelikle yakınındaki tüm canavarları yenmelisin. 
+1938	[Lonca] %d Yang çekildi.
+1939	Altın dut avı ödülü
+1940	%d Primordis heykeli imha et. Aynı anda birden fazla heykele saldıramazsın.
+1941	Görevlerden tüm dayanıklılığı aldın. Ödülü görev penceresi üzerinden al.
+1942	Toplanan değerler omuz kuşağından başarıyla kaldırıldı.
+1943	Toplanan değerler aura giysisinden başarıyla kaldırıldı.
+1944	Envanterinde daha fazla alana ihtiyacın var.
+1945	[Altın Topraklar] Şu anda kendini dönüştüremezsin.
+1946	Meley'in İni'nde aktif olduğun sürece grubu dağıtamazsın.
+1947	Bir lonca savaşı devam ederken grubu dağıtamazsın.
+1948	Bu oyuncu AFK modunda.
+1949	Kendini başarıyla serbest bıraktın.
+1950	[Karakter Bulucu] Bu karakter bu haritada yok.
+1951	Gizli hazine ödülü
+1952	Hazine avına %d kez katıldığın için gizli bir ödül kazandın.
+1953	Hazine avı %d. sıra ödülü
+1954	Hazine avında %d. sırada olduğun için bir ödül kazandın.
+1955	Zaten maksimum sayıya sahip olduğun için daha fazla Ölüm Alevi alamazsın.
+1956	Daha fazla Yang alamazsın.
+1957	SungMa hazine sandığı - kalan ödül değişikliği: %d
+1958	SungMa sandığı - Değerli bir eşya almak için aç.
+1959	Mümkün olan maksimum sayıda ruh topladın. Kan sunağına git ve ritüeli düzenle!
+1961	Yang cinsinden satış bedelinin %.1Lf %% oranı ücret olarak alınır.
+1962	Ejderhalara karşı güçlü +%d %%
+1963	Miktar mevcut maksimum tutarı aştığı için işlem iptal edildi.
+1964	Bu beceri kitabı yalnızca lonca liderleri veya savaşçılar için mevcuttur.
+1965	Daha fazla lonca becerisi öğrenemezsin.
+1966	Lonca beceri eğitimi başarısız oldu.
+1967	Düello yaparken birisiyle grup oluşturamazsın.
+1968	Önce oyuncuyu engelleme listenden çıkar.
+1969	%s adresine bir grup daveti gönderildi.
+1970	%s, grup oluşturamayacağınız bir konumda bulunuyor.
+1971	Önce oyuncuyu engelleme listenden çıkar.
+1972	Daha fazla arkadaşın olamaz (maks. %d).
+1973	Önce oyuncuyu arkadaşlık isteklerinden çıkar.
+1974	Daha fazla oyuncu engelleyemezsin (maks. %d).
+1975	Bu haritaya zaten sahipsin.
+1976	Balathor'un Saldırısı'nı başarıyla öğrendin.
+1977	Balathor'un İradesi'ni başarıyla öğrendin.
+1978	Balathor'un Eğilmezliği'ni başarıyla öğrendin.
+1992	Bir eşya seçerken görevlere erişemezsin.
+1993	Bir eşya seçerken lonca deposuna erişemez veya ticaret yapamazsın.
+1994	Karşındaki kişinin başka bir penceresi açıkken bu mümkün değil.
+1995	Bir eşya seçerken bunu kullanamazsın.

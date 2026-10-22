@@ -1,2 +1,1 @@
 Turkish 65001 tr
-English 1252 en

@@ -1,4 +1,4 @@
-Group mystery_box_drop
+﻿Group mystery_box_drop
 {
 	1	90014	1
 }
@@ -132,7 +132,7 @@ Group metinstone_rain_event
 {
 	1	72360	1
 }
-# Netherworld Eve Festival
+# Öteki Dünya Arife Şenliği
 Group e_otherworld_drop_1
 {
 	1	70447	1
@@ -153,7 +153,7 @@ Group e_otherworld_drop_1
 	16	70449	1
 	17	30665	1
 }
-# Netherworld Main Event
+# Öteki Dünya Ana Etkinliği
 Group e_otherworld_drop_2
 {
 	1	70447	1
@@ -174,12 +174,12 @@ Group e_otherworld_drop_2
 	16	70449	1
 	17	30665	1
 }
-# Golden Land
+# Altın Topraklar
 Group golden_land
 {
 }
 
-# New World Cup event
+# Yeni Dünya Kupası etkinliği
 Group sports_match
 {
 	1	70606	1
@@ -187,7 +187,7 @@ Group sports_match
 	3	70611	1
 	4	53342	1
 }
-# Snowflake rod event
+# Kar tanesi bastonu etkinliği
 Group snowflake_stick_event
 {
 	1	70612	1
@@ -195,7 +195,7 @@ Group snowflake_stick_event
 	3	70614	1
 	4	70615	1
 }
-# Treasure hunt event
+# Hazine avı etkinliği
 Group treasure_hunt
 {
 	1	27209	1

@@ -1,6 +1,6 @@
-# Group metinstone_range description
-# range				: range number of metin stone to change. Same range must not exist in metinstone_range group. If range exceeds 256, ask a programmer (code change needed)
-# Group range_vnum	: add the metin stone vnums for the range.
+﻿# Group metinstone_range açıklama
+# range				: değiştirilecek metin taşı aralık numarası. metinstone_range grubunda aynı range olmamalı. range 256'yı aşarsa programcıya söyleyin (kod değişikliği gerekli)
+# Group range_vnum	: aralığa ait metin taşı vnum'larını ekleyin.
 Group metinstone_range
 {
 	range	1
@@ -88,12 +88,12 @@ Group metinstone_range
 	}
 }
 
-# Group metinstone_swap description
-# event_flag_value		: metin stone appearance change event flag value
-# range_number			: metin stone vnum range number to change (the range number of the metinstone_swap_range group above)
-# swap_vnum				: appearance change mob vnum
-# can_use_mob_color		: whether to allow mob_proto mob color on appearance change (false: deny, true: allow)
-# : while the metin stone appearance event flag is set, a vnum in range gets swap_vnum appearance.
+# Group metinstone_swap açıklama
+# event_flag_value		: metin taşı görünüm değişim etkinliği bayrak değeri
+# aralık_no			: değiştirilecek metin taşı vnum aralık numarası (yukarıdaki metinstone_swap_range grubunun range no'su)
+# swap_vnum				: görünüm değişim mob vnum değeri
+# can_use_mob_color		: başka görünüme değişirken mob_proto renk kullanımı (false: izin verme, true: izin ver)
+# : metin taşı görünüm değişim etkinliği bayrağı aktifken, vnum aralıktaysa görünüm swap_vnum olur.
 
 # Yut Nori, Jack O'Lantern
 Group metinstone_swap
@@ -101,55 +101,55 @@ Group metinstone_swap
 	event_flag_value	1
 	Group swap_data
 	{
-		#range_number	swap_vnum	can_use_mob_color
+		#aralık_no	swap_vnum	can_use_mob_color
 		1	8060	true
 		2	8060	true
 	}
 }
 
-# Ramadan event
+# Ramazan etkinliği
 Group metinstone_swap
 {
 	event_flag_value	2
 	Group swap_data
 	{
-		#range_number	swap_vnum	can_use_mob_color
+		#aralık_no	swap_vnum	can_use_mob_color
 		1	8203	true
 		2	8203	true
 	}
 }
 
-# Summer event
+# Yaz etkinliği
 Group metinstone_swap
 {
 	event_flag_value	3
 	Group swap_data
 	{
-		#range_number	swap_vnum	can_use_mob_color
+		#aralık_no	swap_vnum	can_use_mob_color
 		1	8202	true
 		2	8202	true
 	}
 }
 
-# Valentine event
+# Sevgililer Günü etkinliği
 Group metinstone_swap
 {
 	event_flag_value	4
 	Group swap_data
 	{
-		#range_number	swap_vnum	can_use_mob_color
+		#aralık_no	swap_vnum	can_use_mob_color
 		1	8200	false
 		2	8201	false
 	}
 }
 
-# New World Cup football
+# Yeni Dünya Kupası futbol topu
 Group metinstone_swap
 {
 	event_flag_value	5
 	Group swap_data
 	{
-		#range_number	swap_vnum	can_use_mob_color
+		#aralık_no	swap_vnum	can_use_mob_color
 		1	8207	true
 		2	8207	true
 	}

@@ -1,4 +1,4 @@
-Group info
+﻿Group info
 {
 	on_off	0
 	get_address	https://webzen:3ewpp3uFzhLbDTjR@ext-dev-uso-backend.metin2.gfsrv.net/api/getcampaigns/

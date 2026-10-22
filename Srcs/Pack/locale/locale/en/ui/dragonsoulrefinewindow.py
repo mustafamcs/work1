@@ -3,7 +3,7 @@ import uiScriptLocale
 window = {
 	"name" : "DragonSoulRefineWindow",
 
-	## immediately left of the dragon soul stone window
+	## ejder ruh taşı penceresinin hemen solu
 	#"x" : SCREEN_WIDTH - 176 - 287 - 10 - 287,
 	#"y" : SCREEN_HEIGHT - 37 - 505,
 

@@ -1,4 +1,4 @@
-Group info
+﻿Group info
 {
 	# map_index
 	# limit_level

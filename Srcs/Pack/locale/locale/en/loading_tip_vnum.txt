@@ -1,167 +1,173 @@
-1	By using a Blessing Scroll, you can protect an item from being destroyed in case an improvement fails.
-2	Are you ready to get married? Then talk to the Old Lady.
-3	The Teleporter can quickly transport you to other areas from level 10.
-4	Talk to the village Guardians to learn about the guild system.
-5	Click on the 'B' next to your minimap to learn about the Combat Zone and how to enter.
-6	Don't forget to change your storage password regularly. Better safe than sorry!
-7	Baek-Go helps you to brew powerful potions.
-8	Giddy up! From level 25 you can start the horse quest for a beginner's horse from the Stable Boy.
-9	Change your shortcuts by selecting 'Keyboard' from the game options.
-10	Get ready for exciting PvP duels from level 15!
-11	Talk to the Fisherman to learn about fishing and get some gear to start you off. Good fishing!
-12	You can carry a maximum of 1,999,999,999 Yang.
-14	Pay attention to what you feed your pet. Once eaten, you'll never get the item back.
-15	You cannot use any skills while you are transformed.
-16	Bonuses you receive as a reward for the biologist Chaegirab's quests are permanent.
-17	Characters up to and including level 30 can have their skills reset by the Old Lady.
-18	Characters getting married cannot be more than 15 levels apart.
-19	Items get sparklier effects the more refined they are.
-20	When you destroy a Metin stone, get ready for a tough battle!
-21	Protect your items from theft with the Scroll of Binding.
-22	Inflict more damage on the monkeys in the Monkey Dungeon with the 'strong against animals' bonus.
-23	Keep on your toes! The monsters in the Monkey Dungeon respawn very quickly.
-24	Seem familiar? The Monkey Dungeon will guarantee you a few déjà-vu moments.
-25	You'll need to navigate the Monkey Dungeon without your minimap.
-26	Do you suffer from arachnophobia? Then watch out for Metin2's freakishly big spiders!
-27	You can reach the Spider Dungeon quickly and easily with the Teleportation Ring.
-28	Keep your eyes peeled for the Queen Spider. Her poison is extremely dangerous!
-29	You need a Passage Ticket to enter Spider Dungeon 2.
-30	Open the Spider Baroness' Breeding Lair with the Arachnids Key.
-31	Few are the adventurers who return from the Demon Tower to tell the tale!
-32	You can earn lots of EXP and items in reward for venturing into the Demon Tower.
-33	Have the legendary blacksmith on the 6th floor of the Demon Tower sharpen your blade!
-34	Steel yourself against the monsters in the Demon Tower with darkness resistance.
-35	Steel yourself against the monsters in the Devil's Catacomb with darkness resistance.
-36	The gates of the Devil's Catacomb are only open if you have previously conquered the Demon Tower.
-37	You'll need to navigate the Devil's Catacomb without your minimap.
-38	Look out for your allies in the Devil's Catacomb.
-39	Watch out for demon lord Azrael's pet Hell Hounds.
-40	All party members require a Shrunken Head to reach the second level of the Devil's Catacomb.
-41	The Grotto of Exile is teeming with terrifying creatures.
-42	You need a Blood Stone to enter the Grotto of Exile.
-43	The Grotto of Exile is brimming with terrifying creatures and unspeakable horrors. And epic loot!
-44	The cruel god Beran-Setaou awaits you in the Dragon's Temple, the third level of the Grotto of Exile.
-45	Beran-Setaou draws his power from the Metin stones; destroy them to defeat this fallen god.
-46	Steel yourself against the creatures in the Grotto of Exile with ice and lightning resistance.
-47	You can only enter the Dragon's Temple in the Grotto of Exile in a group.
-48	You have 1 hour to defeat Beran-Setaou.
-49	Glowing lava flows through the Red Dragon Fortress!
-50	Once you master 6 zones in the Red Dragon Fortress, you'll confront Razador!
-51	Teleportation scrolls do not work in the Red Dragon Fortress.
-52	Steel yourself against the monsters in the Red Dragon Fortress with fire resistance.
-53	Your group has 1 hour to conquer the Red Dragon Fortress.
-54	You need a ninja and a shaman in the group in order to conquer Nemere's Watchtower.
-55	Steel yourself against the monsters in Nemere's Watchtower with ice resistance.
-56	Nemere's Watchtower has 9 levels and a boss room.
-57	You cannot summon mounts in Nemere's Watchtower.
-58	Do you have what it takes to conquer Nemere's Watchtower in 1 hour?
-59	Can you rescue the missing warriors from Nemere's Watchtower?
-60	The En-Tai Guardian spawns at random locations in the Temple of the Ochao. Attack him before he disappears.
-61	You have 3 minutes to defeat an En-Tai Guardian and open the portal to the Enchanted Forest.
-62	Steel yourself against the monsters in the Enchanted Forest with wind resistance.
-63	Jotun Thrym has a strong army at his side.
-64	You can only enter Erebus with the Stone of the Dryads.
-65	Jotun Thrym will appear as soon as you've defeated Bagjanamu.
-66	You can repeat the 'Kill the En-Tai Sovereign' quest for the Stone of the Dryads.
-67	Dragon Queen Meley cannot be attacked directly. Instead, she takes damage from the dragon statues.
-68	Steel yourself against the creatures in Meley's Lair with fire resistance.
-69	Grab the Dragonfire Ring in Meley's Lair to destroy the dragon statues.
-70	Your guild needs sufficient guild rank points to enter Meley's Lair.
-71	Your ranking in the lair is determined by the speed of your victory and the number of participants.
-72	In Queen Meley's Chest you can find the Red Dragon Egg and the Mini Meley pet!
-73	Your guild should have at least 4 members to successfully conquer Meley's Lair (guild).
-74	You can find materials for PvP helmets in Meley's Lair (group) and PvE helmets in Meley's Lair (guild).
-75	The Zodiac Temple has 12 different dungeons with 12 guardians.
-76	The various Zodiac Temples are available on different days.
-77	Each Zodiac Temple possesses a certain element which strengthens its guardian.
-78	Steel yourself for combat in the Temple of Zi with darkness resistance.
-79	Steel yourself for combat in the Temple of Chou with earth resistance.
-80	Steel yourself for combat in the Temple of Yin with fire resistance.
-81	Steel yourself for combat in the Temple of Mao with wind resistance.
-82	Steel yourself for combat in the Temple of Chen with lightning resistance.
-83	Steel yourself for combat in the Temple of Si with ice resistance.
-84	Steel yourself for combat in the Temple of Wu with ice resistance.
-85	Steel yourself for combat in the Temple of Wei with lightning resistance.
-86	Steel yourself for combat in the Temple of Shen with earth resistance.
-87	Steel yourself for combat in the Temple of You with wind resistance.
-88	Steel yourself for combat in the Temple of Xu with darkness resistance.
-89	Steel yourself for combat in the Temple of Hai with fire resistance.
-90	The matching elemental talisman will make your conquest of the relevant Zodiac Temple easier.
-91	Charge up 12 Animaspheres to gain entry to the Zodiac Temple.
-92	The Prism of Revival resurrects you in the Zodiac Temple.
-93	Elemental talismans can be refined up to +200.
-94	You can purchase Guardian Insignias from the Zodiac Merchant on the 40th level of the Zodiac Temple.
-95	You can also resurrect teammates with the Prism of Revival.
-96	You can enter the Zodiac Temple alone, but you'll earn more rewards in a group.
-97	Each level of the Zodiac Temple has a 10-minute time limit.
-98	Are you ready to undertake an adventurous journey?
-99	You have 25 minutes to defend the ship against the Hydra's attacks.
-100	Steel yourself against the Ship Defence monsters with ice resistance.
-101	Start the Ship Defence with the Ship's Wheel.
-102	Protect the mast with the mainsail at all costs to avoid being shipwrecked.
-103	Hydra's Spawn drops all manner of useful items in combat.
-104	The Gaya Merchant at the Harbour on the new continent offers a better chance to craft Gaya than anywhere else in the old world.
-105	Stop the Hydra's Spawn water attacks quickly to avoid a catastrophe at sea.
-106	After an epic sea voyage, a new continent awaits!
-107	Hey, you there! Yes, you! The Metin2 Team <3 you! x)
-108	If you complete the World of Illusions daily quest, you're guaranteed to receive a Redux Tome.
-109	If you successfully complete the Time Rift quest, you have a certain chance of receiving a Redux Tome.
-110	If you successfully complete the Time Rift quest 10 times, you're guaranteed to receive a Redux Tome.
-111	The monsters in the Redux dungeon are stronger than those in the Time Rift dungeon.
-112	The boss in the Redux dungeon is guarding a Redux boss chest.
-113	Dragon Stone Shards+ can be looted in the Time Rift and Redux dungeons.
-114	Monsters in Time Rift dungeons don't drop loot.
-115	Many different nature spirits inhabit the Elemental Realm.
-116	Using the right materials, you can apply set effects to your equipment to unlock set bonuses.
-117	You can reach the secret Plateau of Primal Forces using the Primal Force Ring.
-118	There are many powerful nature spirits in the world of Metin2.
-119	The untamed natural forces on the Plateau of Primal Forces will steal your HP.
-120	You can use a Medal of Primal Force to protect yourself from the Elemental Curse.
-121	Who will be the last one standing?
-122	Welcome to the Battle Royale mode!
-123	Debuffs in combat can be removed with Grilled Perch.
-124	If you defeat more than 10 players, you will receive a special reward.
-125	In the 2nd and 4th safe zones, you can find a Special Supply Chest.
-126	If you destroy a Supply Chest or Equipment Chest, your hit points will be restored.
-127	In Battle Royale mode you can use emotions for free.
-128	You can enter the new continent Yohara from level 120.
-129	Hunt stronger enemies for more valuable loot!
-130	Sung Mahi's dark will drains your strength on the continent of Yohara. Strengthen your own will to resist it!
-131	You can loot new items on the Dong Gwang Plain.
-132	To be able to wear gloves, you must complete the corresponding quest.
-133	Gloves grant a variety of useful bonuses.
-134	Master Chi can make lots of handy items for you.
-135	Want to earn some permanent bonuses? Then help the biologist Chaegirab with his research!
-136	You can give your character passive bonuses with a Soul Relic.
-137	When you reach the next Champion Level, you can increase your new stats.
-138	"The curse is trusting in one's allies" - ancient wisdom
-139	You face superior numbers in Sung Mahi Tower on your own.
-140	You receive a reward for every level of Sung Mahi Tower you complete.
-141	Only the strongest make it to the top of Sung Mahi Tower.
-142	The stronger your Sung Ma's will is, the fewer Mali you will have to deal with on Yohara.
-143	If you die in the gnoll caves, you will be taken outside. Be careful!
-144	There are numerous secret passages in the gnoll caves.
-145	There is a monk who rules this place.
-146	Welcome to the Mysterious Dungeon.
-147	You can earn a powerful talisman here.
-148	Speak to the Serpent Guardian to enter the Serpent Temple.
-149	You can use the Serpent Statue to explore the Serpent Temple...
-150	There is a monster here that can transform into a boss.
-151	You can enter the Serpent Temple via the Serpent Statue.
-152	There is a special blacksmith on the 6th level who can improve your gloves.
-153	You'll find the final boss of the Serpent Temple, Serpent Queen Nethis, on the 7th level of the dungeon.
-154	The Serpent Temple's dungeon timer can be extended with Serpent Dust.
-155	You can destroy the Sung Ma Invasion Portal by first defeating all nearby monsters.
-156	Use a Power Flower to improve your fighting ability.
-157	Storm Flowers increase your movement speed for a certain time.
-158	You can receive trophies for defeating bosses.
-159	Welcome to the Land of Gold!
-160	The Bomb Towers, which may be hidden in Primordis Statues, are deadly.
-161	You can enter the levels by using the Golden Monolith.
-162	You can open the Goldberry Hunt game board at the Golden Palm.
-163	The Caravan Trader can be found at oases.
-164	Welcome to Treasure Island!
-165	Protect the Treasure Goblin from the lurking monsters!
-166	When you leave Treasure Island, you'll return to where you came from.
-167	Monsters carry small amounts of Doubloons on them.
-168	You can bless the Treasure Goblin before accompanying him.
+﻿1	Geliştirmesi başarısız olan bir eşyanın imhasını kutsama kağıdı ile engelleyebilirsin.
+2	Evliliğe hazır mısın? O halde yaşlı kadına başvur.
+3	Işınlayıcı seni seviye 10'dan itibaren anında diğer bölgelere götürür.
+4	Köy meydanındaki bekçilerden lonca sistemi hakkında bilgi edinebilirsin.
+5	Mini haritanda "B" seçeneğini tıklayarak Savaş Bölgesi ve girişleri hakkında bilgi edinebilirsin.
+6	Lütfen depo şifreni düzenli aralıklarla değiştirmeyi unutma. Dikkati elden bırakma!
+7	Baek-go sana güçlü iksirler hazırlamana yardım eder.
+8	Hüa! Seviye 25'ten itibaren seyisin acemi at için at görevini başlatabilirsin.
+9	Oyun seçeneklerindeki "Klavye" alanını kullanarak kısayolları değiştir.
+10	Seviye 15'den itibaren heyecan verici PvP düellolarına katıl!
+11	Rast gele! Balıkçı sana balık tutmayı açıklar ve ayrıca sana uygun başlangıç ekipmanına sahiptir.
+12	Yanında maksimum 1.999.999.999 Yang taşıyabilirsin.
+14	Petine ne yedirdiğine dikkat et. Bir kez yenildiğinde, eşya geri alınamaz.
+15	Dönüştürüldüğün sürece herhangi bir beceri kullanamazsın.
+16	Chaegirab'ın biyolog görevinden bir ödül olarak aldığın bonuslar kalıcı.
+17	Seviye 30 ve altındaki karakterlerin becerileri yaşlı kadın tarafından sıfırlanabilir.
+18	Bir düğünde, partnerler arasındaki seviye farkı 15'i geçemez.
+19	Bir eşyanın arındırması ne kadar yüksek olursa, görsel efekt o kadar fazla parlar.
+20	Bir Metin taşı kırarsan, zorlu bir savaşa hazır ol!
+21	Eşyalarını bağlama parşömeni ile hırsızlığa karşı koru.
+22	"Hayvanlara Karşı Güçlü" bonusu ile Maymun Zindanı'daki maymunlara daha fazla hasar verirsin.
+23	Dikkat et, çünkü Maymun Zindanı'ndaki canavarlar çok hızlı yumurtlar.
+24	Burada daha önce bulundum galiba? Maymun Zindanı'nda sürekli dejavu hissine kapılacaksın.
+25	Maymun Zindanı'nda mini haritan olmayacak.
+26	Araknofobi mi? Metin2 böcekleri arasında dev örümcekler de bulunur!
+27	Işınlanma halkasını kullanılarak Örümcek Zindanı'na hızlı ve kolay bir şekilde ulaşabilirsin.
+28	Kraliçe Örümcek'e dikkat et. Zehiri çok tehlikelidir!
+29	Örümcek Zindanı 2'ye girmek için geçit biletine ihtiyacın olacak.
+30	Örümcek Barones'in üreme mağarasını Arachnida Anahtarı ile aç.
+31	Çok az maceracı Şeytan kulesinden canlı olarak geri döndü!
+32	Şeytan kulesinde ödül olarak çok sayıda EXP ve eşya toplayabilirsin.
+33	6. katta bulunan efsanevi Şeytan Kulesi demircisine bıçağını bilet!
+34	Şeytan kulesindeki yaratıklara karşı karanlık direnci ile silahlan.
+35	Şeytan Katakombu'ndaki yaratıklara karşı karanlık direnci ile silahlan.
+36	Şeytan Katakombu'nun kapıları ancak öncesinde Şeytan Kulesi'ni fethedersen açılır.
+37	Şeytan Katakombu'nda mini haritan olmayacak.
+38	Şeytan Katakombu'nda birbirinize grup olarak kollayın.
+39	İblis Lordu Azrail, evcil hayvan olarak ısırgan zebaniler besler.
+40	Şeytan Katakombu'nun 2. seviyesine ulaşmak için, tüm grup üyelerinin bir Küçülen kafaya sahip olmaları gerekir.
+41	Sürgün mağarası korkunç yaratıklarla doludur.
+42	Sürgün mağarasına girmek için bir kan taşına ihtiyacın var.
+43	Sürgün mağarasında seni korku ve dehşetin yanı sıra değerli hazineler de bekliyor.
+44	Zalim tanrı Beran-Setaou, seni mağaranın 3. katındaki ejderha tapınağında bekliyor.
+45	Beran-Setaou gücünü Metin taşından alır. Düşmüş tanrıyı yenmek için onu imha et.
+46	Sürgün mağarasındaki yaratıklara karşı buz ve şimşek direncini kuşan.
+47	Sürgün mağarasındaki ejderha tapınağına sadece bir grupla girebilirsin.
+48	Beran-Setaou'yu yenmek için 1 saatiniz var.
+49	Kırmızı ejderha kalesinde parlayan lavlar akar.
+50	6 kırmızı ejderha kalesi bölgesini başarıyla tamamladıktan sonra Razador'u vur!
+51	Kırmızı ejderha kalesinde ışınlanma parşömenleri çalışmaz.
+52	Kırmızı ejderha kalesindeki yaratıklara karşı ateşe karşı dirençle silahlan.
+53	Kırmızı ejderha kalesini grubunla birlikte 1 saat içinde fethetmelisin.
+54	Nemere Gözlemevi'ni ele geçirmek için yanında en az bir Ninja ve bir Şaman olmalı.
+55	Nemere Gözlemevi'ndeki yaratıklara karşı buz direnci ile silahlan.
+56	Nemere Gözlemevi 9 kat ve bir de patron odasından oluşur.
+57	Nemere Gözlemevi'nde binek çağıramazsın.
+58	Nemere Gözlemevi'ni 1 saatte fethedebilir misiniz?
+59	Kayıp savaşçıları Nemere Gözlemevi'nden kurtarabilir misin?
+60	En-Tai Bekçisi, Ochao Tapınağı'nda rastgele bir yerde ortaya çıkar. Tekrar kaybolmadan ona saldır.
+61	En-Tai Bekçisi'ni yenmek ve Efsunlu Orman portalını açmak için 3 dakika süren var.
+62	Efsunlu Orman yaratıklarına karşı rüzgar direnci ile silahlan.
+63	Jotun Thrym'in yanında güçlü bir ordusu var.
+64	Erebos sadece Orman Perisi Taşı ile fethedilebilir.
+65	Bagjanamu'yu yendiğin anda Jotun Thrym belirir.
+66	Orman Perisi için "Hükümdarı yen" görevini tekrarlayabilirsin.
+67	Ejderha Kraliçesi Meley'e doğrudan saldıramazsın. Sadece ejderha heykellerinden hasar alır.
+68	Meley'in ini yaratıklarına karşı ateşe karşı dirençle silahlan.
+69	Ejderha heykellerini imhaetmek için Meley'in ininde ejderha ateş yüzüğünü kap.
+70	Meley'in inine girebilmek için loncan yeterli lonca puanına sahip olmalı.
+71	Zindanı fethetme hızınız ve katılımcı sayısı mağaradaki sıralamayı belirler.
+72	Kraliçe Meley'in sandığında kırmızı ejderha yumurtasi ile küçük Meley petini bulabilirsin!
+73	Meley'in inini (Lonca) başarıyala tamamlamak için loncanın en az 4 üyesi olmalı.
+74	Meley'in ini (Grup) PvP kaskı malzemesi, Meley'in ini (Lonca) PvE kaskı malzemesi içerir.
+75	Zodyak Tapınağı, içinde 12 bekçi bulunan 12 farklı zindandan oluşur.
+76	Her bir Zodyak Tapınağı'na farklı bir günde ulaşabilirsin.
+77	Her Zodyak Tapınağı bekçisini güçlendiren, kendine has bir elemente sahiptir.
+78	Zi Tapınağı'nda karanlık direnci ile savaşa hazırlan.
+79	Chou Tapınağı'nda toprak direnci ile savaşa hazırlan.
+80	Yin Tapınağı'nda ateşe karşı direnç ile savaşa hazırlan.
+81	Mao Tapınağı'nda rüzgar direnci ile savaşa hazırlan.
+82	Chen Tapınağı'nda şimşek direnci ile savaşa hazırlan.
+83	Si Tapınağı'nda buz direnci ile savaşa hazırlan.
+84	Wu Tapınağı'nda buz direnci ile savaşa hazırlan.
+85	Wei Tapınağı'nda şimşek direnci ile savaşa hazırlan.
+86	Shen Tapınağı'nda toprağa karşı direnç ile savaşa hazırlan.
+87	Yu Tapınağı'nda rüzgar direnci ile savaşa hazırlan.
+88	Zu Tapınağı'nda karanlık direnci ile savaşa hazırlan.
+89	Hai Tapınağı'nda ateşe karşı direnç ile savaşa hazırlan.
+90	Uygun element tılsımı, ilgili Zodyak Tapınağı'nı fethetmeni kolaylaştırır.
+91	Zodyak Tapınağı'na girmek için 12 Animasfer doldur.
+92	Uyanış Prizması seni Zodyak Tapınağı'nda diriltir.
+93	Element tılsımları +200'e kadar arındırılabilir.
+94	Zodyak Tapınağı'nın 40. katında Zodyak tüccarından bütün bekçi nişanlarını satın alabilirsin.
+95	Uyanış Prizması ile bir takım arkadaşını da diriltebilirsin.
+96	Zodyak Tapınağı'na tek başına da girebilirsin, ancak grup halinde daha çok ödül alırsın.
+97	Zodyak Tapınağı'nın her bir seviyesinde 10 dakikalık bir zaman sınırı vardır.
+98	Macera dolu bir yolculuğa çıkmaya hazır mısın?
+99	Gemini Hidra'nın saldırısına karşı savunmak için 25 dakikan var.
+100	Buz direnci ile gemi savunması yaratıklarına hazır ol.
+101	Dümen ile gemi savunmasını başlat.
+102	Bir deniz kazasını önlemek için her koşulda gemi direği ile ana yelkeni koru.
+103	Hidra'nın yavrusu savaşta her türlü faydalı eşya düşürür.
+104	Yeni kıtanın limanındaki Gaya tüccarıyla Gaya üretme şansın eski dünyadan daha yüksek.
+105	Batma tehlikesi yaşamamak için Hidra'nın yavrusunun su saldırılarını mümkün olduğu kadar erken durdur.
+106	Heyecan verici bir gemi yolculuğundan sonra seni yeni bir kıta bekliyor!
+107	Hey, sen! Evet, sen! Metin2 Ekibi seni çok <3.
+108	Günlük Görev "Yanılsama Dünyası"nı tamamlarsan, %100 bir Uyanış Kitabı alırsın.
+109	Zaman Çatlağı görevini başarıyla tamamlarsan, sabiti bir olasılıkla bir Uyanış Kitabı alırsın.
+110	Zaman Çatlağı görevini 10 kez başarıyla tamamlarsan, %100 bir Uyanış Kitabı alırsın.
+111	Uyanış zindanı canavarları, Zaman Çatlağı zindanı canavarlarından daha güçlüdür.
+112	Uyanış zindanının patron canavarında bir Uyanış patron sandığı bulunur.
+113	Zaman Çatlağı ve Uyanış zindanlarında ejderha taşı parçası+ yağmalanabilir.
+114	Zaman Çatlağı zindanlarının canavarlarından küçük ganimetler düşer.
+115	Elementer dünyasında birçok farklı doğa ruhu yaşar.
+116	Set bonusları elde etmek için ekipmanına uygun malzemelerle set etkileri ekleyebilirsin.
+117	İlkel Kuvvet Yüzüğü ile gizli İlkel Kuvvetler Platosu'na ulaşabilirsin.
+118	Metin2 dünyasında çok sayıda güçlü doğa ruhu vardır.
+119	İlkel Kuvvetler Platosu'nda evcilleşmemiş doğa güçleri HP'ni çalar.
+120	Elementer lanetinden korunmak için bir İlkel Kuvvet Klanı kullanabilirsin.
+121	En son kim hayatta kalacak?
+122	Battle Royale moduna hoş geldin?
+123	Savaştaki debufflar ızgara levrek ile kaldırılabilir.
+124	10'dan fazla oyuncuyu yenersen özel bir ödül alırsın.
+125	2. ve 4. güvenli bölgede özel bir tedarik kutusu bulabilirsin.
+126	Bir tedarik kutusunu veya ekipman kutusunu yok edersen, hayat puanın geri yüklenir.
+127	Battle Royale modunda duyguları ücretsiz kullanabilirsin.
+128	120. seviyeden itibaren yeni kıta Yohara'ya girebilirsin.
+129	Daha değerli ganimetler için daha güçlü rakipleri devir!
+130	Sung Mahi'nin karanlık iradesi, Yohara kıtasında senin gücünü sömürüyor. Bunu engellemek için kendi iradeni güçlendir!
+131	Dongan ovasından yeni eşyalar ele geçirebilirsin.
+132	Eldiven takabilmek için ilgili görevleri tamamla.
+133	Eldivenler sana çok sayıda kullanışlı bonuslar sağlar.
+134	Chi Usta senin için çok sayıda kullanışlı eşyalar üretebilir.
+135	Aralıksız bonuslar mı kazanmak istiyorsun? Öyleyse biyolog Chaegirab'a araştırmasında yardımcı ol!
+136	Bir ruh kalıntısı ile karakterine pasif bonuslar ekleyebilirsin.
+137	Bir sonraki şampiyon seviyesine ulaştığında değerlerini yükseltebilirsin.
+138	"Lanet, müttefiklere güvenmektir" - Eski bir öğreti
+139	Sung Mahi'nin Cehennem Kulesi'nde tek başına savaşırsın.
+140	Sung Mahi'nin Cehennem Kulesi'nde tamamlanan her kat için bir ödül alırsın.
+141	Sadece en güçlüler Sung Mahi'nin Cehennem Kulesi'ne yükselebilir.
+142	SungMa iraden ne kadar güçlüyse, Yohara'da o kadar az tehlikeyle karşılaşırsın.
+143	Gnoll mağaralarında ölürsen, dışarı götürülürsün. Dikkatli ol!
+144	Gnoll mağaralarında birçok gizli geçit bulunur.
+145	Burayı yöneten bir rahip var.
+146	Gizemli zindana hoş geldin.
+147	Burada güçlü bir tılsım kazanabilirsin.
+148	Yılan Tapınağı'na girmek için yılan bekçisi ile konuş.
+149	Yılan heykelinin yardımıyla Yılan Tapınağı'nı deneyimleyebilirsin...
+150	Burada rakip patrona dönüşebilecek bir canavar var.
+151	Yılan Tapınağı'na yılan heykelinden girebilirsin.
+152	6. katta eldivenlerini geliştirebilecek özel bir demirci var.
+153	Yılan Tapınağı'nın son patronu Yılan Kraliçesi Nethis'i zindanın 7. katında bulabilirsin.
+154	Yılan Tapınağı'nın zindan sayacı yılan tozu ile uzatılabilir.
+155	Yakındaki tüm canavarları alt ederek SungMa İstila Portalı’nı yok edebilirsin.
+156	Daha iyi savaşabilmek için bir güç çiçeği kullan.
+157	Fırtına çiçeği bir süre için hareket hızını arttırır.
+158	Patron canavarlar yenerek kupalar kazanabilirsin.
+159	Altın Topraklar’a hoş geldin!
+160	Primoridis heykellerine saklanmış patlayıcı kuleler ölümcüldür.
+161	Altın monoliti kullanarak katlara giriş yapabilirsin.
+162	Altın Palmiye’de altın dut avının oyun tahtasını açabilirsin.
+163	Kervan Tüccarı vahalarda bulunur.
+164	Hazine adasına hoş geldin!
+165	Hazine Goblin'ini onu pusuda bekleyen canavarlardan koru!
+166	Hazine adasından ayrıldığında oraya girdiğin yere geri dönersin.
+167	Canavarlar az miktarda Doblon taşır.
+168	Ona eşlik etmeden önce Hazine Goblinini kutsayabilirsin.
+169	Aktif bir Fırtına/Güç Çiçeği efektin varsa, kendini anında diriltebilirsin.
+170	Balathor yumurtalarından biri imha edildiğinde hasar alır.
+171	Hayalet yankısını dikkatle dinle.
+172	Alevli ok Hwacha ile atılabilir.
+173	Antik buz kristallerinin içinde alevli oklar bulabilirsin.
+174	Ateşli ejderha yumurtaları ile çok dikkatli ol.

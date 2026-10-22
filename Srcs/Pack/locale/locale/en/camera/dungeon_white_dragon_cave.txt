@@ -1,4 +1,4 @@
-[SET_KEYBOARD_MOUSE_LOCK value;1]
+﻿[SET_KEYBOARD_MOUSE_LOCK value;1]
 [SET_CAMERA x;13165|y;-13493|z;16700|distance;1248|pitch;-1|rot;4|up;0|view;0|cross;0]
 [FADE_IN speed;0.035]
 [SLEEP value;4000]

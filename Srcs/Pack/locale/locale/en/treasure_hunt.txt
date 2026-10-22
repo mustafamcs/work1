@@ -1,5 +1,5 @@
-# event reward list (read 0-24 in index order)
-# update the client file as well when editing
+﻿# etkinlik ödül listesi (index sırasıyla 0-24 okunur)
+# değiştirirken istemci dosyasını da güncelleyin
 Group event_reward
 {
 	#index	item_vnum	count
@@ -30,17 +30,17 @@ Group event_reward
 	24	55031	1
 }
 
-# event accumulated reward list
-# same Group exists client-side, difference is added probability
-# when vnum/count changes, update the client file too
-# probability : probability (value/total)
-# up to 15 rewards can be set per reward_info group.
+# etkinlik birikim ödül listesi
+# istemcide aynı Grup var, farkı olasılık değeri ekli
+# vnum/count değişince istemci dosyası da güncellenmeli
+# probability : olasılık (olasılık/toplam)
+# reward_info grubu başına toplam 15 ödül ayarlanabilir.
 Group event_accumulated_reward_list
 {
-	# 1times accumulated
+	# 1kez birikim
 	Group 1
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -49,10 +49,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 2times accumulated
+	# 2kez birikim
 	Group 2
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -61,10 +61,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 3times accumulated
+	# 3kez birikim
 	Group 3
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -73,10 +73,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 4times accumulated
+	# 4kez birikim
 	Group 4
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -85,10 +85,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 5times accumulated
+	# 5kez birikim
 	Group 5
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -103,17 +103,17 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 6times accumulated
+	# 6kez birikim
 	Group 6
 	{
-		# buff
+		# güçlendirme
 		Group affect_reward
 		{
-			#index	first_come	affect_type	point_type	apply_point	flag	duration
+			#index	first_come	affect_tip	point_tip	apply_point	flag	duration
 			0	100	668	0	10	93	259200
 		}
 
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -121,10 +121,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 7times accumulated
+	# 7kez birikim
 	Group 7
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -133,10 +133,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 8times accumulated
+	# 8kez birikim
 	Group 8
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -151,20 +151,20 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 9times accumulated
-	# one-time buff allowing upgrade without materials
-	# from 51 times accumulated, only the 9th turn reward is granted
-	# buff granted to first 50 per server; below 10 a server notice is shown.
+	# 9kez birikim
+	# malzemesiz geliştirme sağlayan tek kullanımlık buff
+	# 51 kez birikimden itibaren, sadece 9. tur ödülü verilir
+	# buff her sunucuda ilk 50 kişiye verilir; 10'dan az kalınca sunucu duyurusu gösterilir.
 	Group 9
 	{
-		# buff
+		# güçlendirme
 		Group affect_reward
 		{
-			#index	first_come	affect_type	point_type	apply_point	flag	duration
+			#index	first_come	affect_tip	point_tip	apply_point	flag	duration
 			0	50	669	0	0	94	259200
 		}
 
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -172,11 +172,11 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 10times accumulated
-	# 11once accumulated, keeps granting the 10th reward
+	# 10kez birikim
+	# 11birikim hedefi aşıldığında 10. ödül alınmaya devam eder
 	Group 10
 	{
-		# random item reward
+		# rastgele eşya ödülü
 		Group random_reward
 		{
 			#index	vnum	count	probability

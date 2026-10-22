@@ -1,6 +1,6 @@
-//num	type	x	y	Display text
-//type : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
+﻿//num	tip	x	y	Gösterim metni
+//tip : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
 //---------------------------------------------------------------------------------------------------
 0	WARP	74600	143800	"Bokjeong"
-1	WARP	141200	14200	"Seohan Mountain"
-2	WARP	134700	138300	"Flame Lands"
+1	WARP	141200	14200	"Seohan Dağı"
+2	WARP	134700	138300	"Alev Toprakları"

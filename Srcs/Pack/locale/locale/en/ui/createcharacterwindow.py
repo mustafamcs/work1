@@ -2,7 +2,7 @@ import uiScriptLocale
 import app
 
 ROOT_PATH = "d:/ymir work/ui/public/"
-LOCALE_PATH = "locale/en/ui/select/"
+LOCALE_PATH = "locale/tr/ui/select/"
 BOARD_X = SCREEN_WIDTH * (65) / 800
 BOARD_Y = SCREEN_HEIGHT * (215) / 600
 
@@ -24,7 +24,7 @@ window = {
 		{
 			"name" : "BackGround", "type" : "expanded_image", "x" : 0, "y" : 0,
 			"x_scale" : float(SCREEN_WIDTH) / 1024.0, "y_scale" : float(SCREEN_HEIGHT) / 768.0,
-			"image" : "locale/en/ui/select.sub",
+			"image" : "locale/tr/ui/select.sub",
 		},
 		## Name
 		{

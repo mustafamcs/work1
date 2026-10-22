@@ -1,4 +1,4 @@
-gm_guild_build	83200	0	1	1
+﻿gm_guild_build	83200	0	1	1
 map_a2	256000	665600	6	6
 map_b2	102400	51200	6	6
 map_c2	665600	281600	6	6

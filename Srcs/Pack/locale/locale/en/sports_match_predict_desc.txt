@@ -1,7 +1,6 @@
-[DELAY value;0]
-If your chosen team wins, you'll earn more rewards,[ENTER]
-the more often you've cheered them on.[ENTER]
-Country Ticket: Can be obtained in exchange for the[ENTER]
-World Cup Trophy.[ENTER]
-Cheering Ticket: Can be obtained from the World Cup[ENTER]
-Chest.
+﻿[DELAY value;0]
+Seçtiğin takım kazanırsa ve onları daha sık[ENTER]
+alkışladıysan daha fazla ödül alırsın.[ENTER]
+Ülke Bileti: Şampiyonluk Kupası karşılığında[ENTER]
+alınabilir.[ENTER]
+Alkış Bileti: Şampiyonluk Sandığından alınabilir.

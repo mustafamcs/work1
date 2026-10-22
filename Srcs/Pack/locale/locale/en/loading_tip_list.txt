@@ -1,8 +1,8 @@
-#Group Normal must be placed first.
-#the Group name can be anything.
-#nothing is shown for unknown tip_vnum.
-#for unknown map_index the tip_vnum of the first Group (currently Group Normal) is used.
-# If map_index is left empty, Group Normal tip_vnum is used.
+﻿#Group Normal en başta olmalıdır.
+#Grup adı herhangi bir şey olabilir.
+#olmayan tip_vnum'da hiçbir şey gösterilmez.
+#olmayan map_index'te ilk Grup'taki (şu an - Group Normal) tip_vnum kullanılır.
+# map_index değeri boş bırakılırsa Group Normal tip_vnum kullanılır.
 Group Normal
 {
 	list tip_vnum

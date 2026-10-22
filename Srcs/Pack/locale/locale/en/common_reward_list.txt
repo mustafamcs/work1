@@ -1,4 +1,4 @@
-# Sungmahi gate reward 1
+﻿# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 1
 Group Sungma_gate_1
 {
 	vnum	1
@@ -11,7 +11,7 @@ Group Sungma_gate_1
 	}
 }
 
-# Sungmahi gate reward 2
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 2
 Group Sungma_gate_2
 {
 	vnum	2
@@ -28,7 +28,7 @@ Group Sungma_gate_2
 	}
 }
 
-# Sungmahi gate reward 3
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 3
 Group Sungma_gate_3
 {
 	vnum	3
@@ -57,7 +57,7 @@ Group Sungma_gate_3
 	}
 }
 
-# Sungmahi gate reward 4
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 4
 Group Sungma_gate_4
 {
 	vnum	4
@@ -81,7 +81,7 @@ Group Sungma_gate_4
 	}
 }
 
-# Sungmahi gate reward 5
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 5
 Group Sungma_gate_5
 {
 	vnum	5
@@ -93,7 +93,7 @@ Group Sungma_gate_5
 	}
 }
 
-# Sungmahi gate reward 6
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 6
 Group Sungma_gate_6
 {
 	vnum	6
@@ -110,7 +110,7 @@ Group Sungma_gate_6
 	}
 }
 
-# Sungmahi gate reward 7
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 7
 Group Sungma_gate_7
 {
 	vnum	7
@@ -122,7 +122,7 @@ Group Sungma_gate_7
 	}
 }
 
-# Sungmahi gate reward 8
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 8
 Group Sungma_gate_8
 {
 	vnum	8
@@ -139,7 +139,7 @@ Group Sungma_gate_8
 	}
 }
 
-# Sungmahi gate reward 9
+# ì?±ë§?í¬ ê²?ì´í?¸ ë³´ì? 9
 Group Sungma_gate_9
 {
 	vnum	9

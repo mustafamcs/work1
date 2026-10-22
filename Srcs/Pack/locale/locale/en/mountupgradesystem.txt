@@ -1,4 +1,4 @@
-#level	max exp	feed per level attempt	money	retry
+﻿#seviye	maks tecrübe	seviye denemesi yem adedi	para	tekrar deneme
 21	12500	50	500000	50
 22	12810	50	1000000	50
 23	13130	50	1500000	50
