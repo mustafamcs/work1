@@ -75,3 +75,9 @@ client/mouse.cfg
 
 # CMake onbellek dizini
 Srcs/Server/build/
+
+# Paket derleme çıktıları (repack ile üretilir)
+*.eix
+*.epk
+server/**/packet_info.txt
+server/**/p2p_packet_info.txt
