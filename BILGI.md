@@ -10,8 +10,8 @@ Bu dosya `C:\Works\work1` ürün ağacının güncel durumunu özetler. Plan kay
 - **sql:** `schema.sql`, `import-windows.bat`, `IMPORT-NOT.md`, `dumps` (eski `srv1_*` dökümleri; plan-dışı kolonlar taşınmaz — `IMPORT-NOT.md`).
 - **Srcs:** `Client`, `Server` (`common`, `db`, `game`, `libgame`, `liblua`, `libpoly`, `libsql`, `libthecore`, `platform`, CMake ağacı, `server.sln`), `Tools`, `Pack`, `Extern`, `Metin2.sln`. `Srcs\Server\game\game_41078` 87MB FreeBSD i386 ELF referans binary olarak duruyor.
 - **panel/launcher/control:** kullanıcı kararıyla **tamamen kaldırıldı** (CI4 PHP paneli, `sql\panel.sql`, `Srcs\Server\control`, `Srcs\Server\launcher`, `server\control.exe`, `launcher\`, `out\control`, `out\launcher`). `server.sln` artık yalnız lib'ler + `db`/`game`/`qc` derliyor.
-- **tools:** `packmakerlite`, `wiki-uret` (tam üretici, ~1600 satır), `convert_to_utf8.py`, **`script\` — işletim betikleri**: her iş ayrı `.bat` (`tools\script\README.md`). Süreç açma/kapama/durum (`10_`–`33_`), derleme+dağıtım (`40_`–`44_`), quest derleme (`50_`), profil geçişi (`60_`–`62_`), istemci/pack/wiki/sql (`70_`–`73_`). Ortak yollar `_ayar.bat`'ta. `_gizli_baslat.vbs` süreçleri penceresiz başlatır; `_gizli.vbs <betik>` betiğin kendisini tamamen penceresiz çalıştırıp `log\` altına yazar. Derleme betikleri önce açık çıktıyı kapatır (port/taskkill), sonra `out\`'dan kullanıldığı dizinlere kopyalar.
-- **wiki:** `profiller` (3 yaml, `profile.conf` ile eşit), `uretilen\{99,105,120}` (profil başına ~10.390 md: 10.328 eşya, 2.854 yaratık, 34/44/49 harita), `rapor` (`kirik-bag.md`, `istemci-farki.md`).
+- **tools:** `packmakerlite`, `convert_to_utf8.py`, **`script\` — işletim betikleri**: her iş ayrı `.bat` (`tools\script\README.md`). Süreç açma/kapama/durum (`10_`–`33_`), derleme+dağıtım (`40_`–`44_`), quest derleme (`50_`), profil geçişi (`60_`–`62_`), istemci/pack/sql (`70_`–`73_`). Ortak yollar `_ayar.bat`'ta. `_gizli_baslat.vbs` süreçleri penceresiz başlatır; `_gizli.vbs <betik>` betiğin kendisini tamamen penceresiz çalıştırıp `log\` altına yazar. Derleme betikleri önce açık çıktıyı kapatır (port/taskkill), sonra `out\`'dan kullanıldığı dizinlere kopyalar.
+- **wiki:** kullanıcı kararıyla **tamamen kaldırıldı** (`wiki\` ve `tools\wiki-uret`).
 - **out:** derleme çıktıları (`game`, `db`, `qc`, `client`).
 - **active_profile:** kökte, değer `99`.
 
@@ -81,7 +81,7 @@ MSBuild v143. `Srcs\Server\server.sln` + `Srcs\Metin2.sln`; ayrıca `Srcs\Server
 - Güncel şema canlı MariaDB'ye bu ortamda içe aktarılmadı (mysql istemcisi yok); `sql\import-windows.bat` + `IMPORT-NOT.md` sırayı yazar.
 - `srv1_*` eski dökümler içe aktarılmadı; `cheque`/`glove`/wolfman kolonları taşınmamalı (`IMPORT-NOT.md`).
 - Kaynakta autohunt/aura/gaya/transmutation/buffi implementasyonu yok — feature bayrakları durur, içerik doğmaz; Büyülü Orman haritası pack'te yok.
-- `wiki\rapor\kirik-bag.md`: ~7.800 regen vnum'u pack'in kırpılmış mob_proto'sunda yok (gerçek veri açığı); `istemci-farki.md` proto/item_list vnum farklarını listeler.
+- ~7.800 regen vnum'u pack'in kırpılmış mob_proto'sunda yok (gerçek veri açığı).
 - FreeBSD hedefi: kaynak/CMake hazır, FreeBSD'de derleme bu Windows ortamında denenmedi.
 - Sunucu süreçleri `tools\script` ile yönetiliyor: `30_hepsini_baslat.bat` sırayla mariadb → db → auth → core1.1 → ch99 açar, `31_hepsini_durdur.bat` tersini yapar, `33_durum.bat` portlara göre durumu gösterir. Gizli çalıştırma: `wscript _gizli.vbs <betik.bat>`.
 

@@ -63,7 +63,6 @@ yeniler ve süreçleri geri başlatır.
 |---|---|
 | `70_istemci_baslat.bat` | `client\metin2client.exe` (yoksa `Launcher.exe`) — görünür pencere |
 | `71_paket_repack.bat <paket>` | istemciyi kapatır, `Srcs\Pack\<paket>` → PackMakerLite → `client\pack\`, artık dosya bırakmaz |
-| `72_wiki_uret.bat` | `tools\wiki-uret\uret.py` (python gerekir) |
 | `73_sql_import.bat` | `sql\schema.sql` içe aktarımı (mariadb açık olmalı) |
 
 ## Tipik akışlar
