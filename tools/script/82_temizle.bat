@@ -1,6 +1,12 @@
 @echo off
 title work1 - derin temizlik
 call "%~dp0_ayar.bat"
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem Calisma-ani artiklarini temizler: syserr/syslog/log, editor
 rem yedekleri, _yedek, .pre_qc, __pycache__, Thumbs.db vb.
 

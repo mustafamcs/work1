@@ -2,6 +2,12 @@
 title work1 - auth baslat
 call "%~dp0_ayar.bat"
 
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
+
 netstat -ano | findstr ":30001 " | findstr LISTENING >nul
 if %errorlevel%==0 ( echo [OK] auth zaten calisiyor & exit /b 0 )
 

@@ -16,6 +16,14 @@ Tüm yollar `_ayar.bat` içindedir — taşıma durumunda sadece orayı düzenle
 `.bat` dosyasına çift tıklanırsa kendi konsolu kısa süre görünür; hiç
 pencere istemiyorsan `_gizli.vbs` üzerinden çağır (veya ona kısayol koy).
 
+## Yönetici yetkisi (UAC)
+
+Tüm betikler **yönetici yetkisi gerektirir**. Admin değilse betik kendini
+`_admin.vbs` üzerinden `runas` ile yeniden başlatır — sadece UAC onayı
+görünür, betik penceresiz ve yükseltilmiş çalışır. Argümanlar korunur
+(`71_paket_repack root` gibi). `_ayar.bat` bir kütüphane olduğu için
+kontrol içermez.
+
 ## Artık süreç temizliği
 
 - **`_artik_kapat.bat`** — derleme/araç artıklarını kapatır (`MSBuild`,

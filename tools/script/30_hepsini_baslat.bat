@@ -2,6 +2,12 @@
 title work1 - hepsini baslat
 call "%~dp0_ayar.bat"
 
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
+
 echo == mariadb ==
 call "%~dp010_mariadb_baslat.bat"  || ( echo [HATA] mariadb acilmadi & exit /b 1 )
 echo == db ==

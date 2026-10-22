@@ -2,6 +2,12 @@
 title work1 - profil 105 (midschool)
 call "%~dp0_ayar.bat"
 
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
+
 echo oyun surecleri durduruluyor (mariadb acik kalir)...
 call "%~dp027_ch99_durdur.bat"  >nul 2>&1
 call "%~dp025_core_durdur.bat"  >nul 2>&1

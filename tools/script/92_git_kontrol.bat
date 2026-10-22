@@ -1,6 +1,12 @@
 @echo off
 title work1 - git icerik kontrolu
 call "%~dp0_ayar.bat"
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem Izlenen dosyalar arasinda derleme/uretim ciktisi kaldi mi kontrol eder.
 cd /d "%KOK%"
 set /a ERR=0

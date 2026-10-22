@@ -1,6 +1,12 @@
 @echo off
 title work1 - dil temizle (sadece tr + en)
 call "%~dp0_ayar.bat"
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem Srcs\Pack altindaki locale dizinlerinde tr/en/common disindaki
 rem dil klasorlerini siler, sonra degisen paketleri repack eder.
 

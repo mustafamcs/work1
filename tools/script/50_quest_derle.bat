@@ -1,6 +1,12 @@
 @echo off
 title work1 - quest derle
 call "%~dp0_ayar.bat"
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 cd /d "%QUESTDIR%"
 
 if not exist qc.exe ( echo [HATA] qc.exe yok - once 42_build_qc.bat & exit /b 1 )

@@ -2,6 +2,12 @@
 title work1 - build client
 call "%~dp0_ayar.bat"
 
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
+
 rem istemci aciksa kapat
 taskkill /IM metin2client.exe /F >nul 2>&1
 

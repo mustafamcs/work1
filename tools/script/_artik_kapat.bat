@@ -1,4 +1,10 @@
 @echo off
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem _artik_kapat.bat - islem sonunda arka planda kalan gereksiz
 rem surecleri kapatir. Oyun sureclerine (db/game/mariadbd/istemci)
 rem DOKUNMAZ - sadece derleme ve arac artiklari.

@@ -1,6 +1,12 @@
 @echo off
 title work1 - tum paketleri repack
 call "%~dp0_ayar.bat"
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem Srcs\Pack altindaki tum paket dizinlerini sirayla repack eder.
 rem Uzun surebilir - buyuk paketler (yw_pc, yw_zone, sound) yavas paketlenir.
 

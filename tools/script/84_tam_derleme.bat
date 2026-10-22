@@ -1,6 +1,12 @@
 @echo off
 title work1 - sifirdan tam derleme
 call "%~dp0_ayar.bat"
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem out\ dizinini komple siler, Metin2.sln'in TUM projelerini
 rem (client lib'leri + UserInterface + server + tools) derler,
 rem sonra ciktilari kullanildiklari dizinlere dagitir.

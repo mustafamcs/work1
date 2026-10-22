@@ -1,6 +1,12 @@
 @echo off
 title work1 - git commit + push
 call "%~dp0_ayar.bat"
+
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem Kullanim: 91_git_kaydet.bat "commit mesaji"
 rem Tum degisiklikleri ekler, verilen mesajla commit'ler, main'e pushlar.
 
