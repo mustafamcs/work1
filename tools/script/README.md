@@ -30,6 +30,7 @@ pencere istemiyorsan `_gizli.vbs` üzerinden çağır (veya ona kısayol koy).
 | `31_hepsini_durdur.bat` | ters sırada hepsini kapatır |
 | `32_hepsini_yeniden.bat` | durdur + başlat |
 | `33_durum.bat` | portlara göre süreç durum tablosu + aktif profil |
+| `34_sunucu_istemci_baslat.bat` | hepsini başlat + istemciyi aç |
 
 Her başlatma betiği port zaten dinleniyorsa "zaten açık" der ve çıkar;
 bağımlı katman kapalıysa önce onu zincirler (`24_core` → db → mariadb).
@@ -43,6 +44,7 @@ bağımlı katman kapalıysa önce onu zincirler (`24_core` → db → mariadb).
 | `42_build_qc.bat` | qc.exe | `quest\`, `share\bin` |
 | `43_build_hepsi.bat` | hepsi | yukarıdakilerin tümü |
 | `44_build_client.bat` | metin2client.exe | `client\metin2client.exe` |
+| `84_tam_derleme.bat` | tümü | `out\` silinir, `Metin2.sln` 27 proje sıfırdan derlenir, tüm çıktılar dağıtılır |
 
 ## Quest
 
@@ -64,6 +66,12 @@ yeniler ve süreçleri geri başlatır.
 | `70_istemci_baslat.bat` | `client\metin2client.exe` — görünür pencere |
 | `71_paket_repack.bat <paket>` | istemciyi kapatır, `Srcs\Pack\<paket>` → PackMakerLite → `client\pack\`, artık dosya bırakmaz |
 | `73_sql_import.bat` | `sql\schema.sql` içe aktarımı (mariadb açık olmalı) |
+| `80_hepsi_repack.bat` | `Srcs\Pack` altındaki **tüm** paketleri sırayla repack eder |
+| `81_dil_temizle.bat` | locale dizinlerinde en/tr/common dışını siler, değişen paketleri repack eder |
+| `82_temizle.bat` | syserr/syslog/log, `_yedek`, `.pre_qc`, `__pycache__`, `*.bak/*~` artıklarını temizler |
+| `83_kapat_ve_temizle.bat` | hepsini durdur + istemciyi kapat + `82_temizle` |
+| `85_zorla_kapat.bat` | tüm süreçleri imaj adından zorla kapatır (acil durum) |
+| `86_dogrula.bat` | binary varlığı + aktif profil ↔ MAP_ALLOW uyumu + dil dizini + port kontrolü |
 
 ## Tipik akışlar
 
