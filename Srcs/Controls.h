@@ -17,6 +17,7 @@
 #define ENABLE_TRANSLATE_LUA	// questlib.lua/locale.lua gameforge'u kosulsuz okur; kapaliysa kanal core'lari LoadQuestLocale'de duser
 #define ENABLE_PROTO_FROM_DB	// kapaliysa server/db/ altinda uretilmis mob_proto.txt + item_proto.txt + *_names.txt gerekir (DumpProto -u -i -m)
 #define ENABLE_NUMERIC_FIELD	// txt proto'daki numeric kolonlar strict name-parse'da patlar
+#define ENABLE_AUTODETECT_VNUMRANGE	// player.item_proto'da vnum_range kolonu yok; kapaliysa db SELECT patlar
 
 //////////////////////////////////////////////////////////////////////////
 // ### Dil ve Bolge ###
@@ -51,9 +52,6 @@
 
 //////////////////////////////////////////////////////////////////////////
 // ### Veritabani / Proto ###
-#ifdef ENABLE_PROTO_FROM_DB
-#define ENABLE_AUTODETECT_VNUMRANGE
-#endif
 #define ENABLE_PROTOSTRUCT_AUTODETECT
 #define ENABLE_EXPTABLE_FROMDB
 #define ENABLE_ITEMAWARD_REFRESH

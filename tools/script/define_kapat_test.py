@@ -17,6 +17,21 @@ HDR = os.path.join(ROOT, 'Srcs', 'Controls.h')
 BAK = HDR + '.on'
 
 RE_DEF = re.compile(r'^(\s*)#\s*define\s+(\S+)')
+RE_SECTION = re.compile(r'^\s*//\s*###\s*(.+?)\s*###')
+
+def required_names(lines):
+    """ZORUNLU bolumundeki aktif define isimlerini dondurur."""
+    keep, in_req = set(), False
+    for ln in lines:
+        sm = RE_SECTION.match(ln)
+        if sm:
+            in_req = 'ZORUNLU' in sm.group(1)
+            continue
+        if in_req:
+            m = RE_DEF.match(ln)
+            if m:
+                keep.add(m.group(2))
+    return keep
 
 def main():
     if '--restore' in sys.argv:
@@ -34,12 +49,14 @@ def main():
         print('Yedek zaten var, once --restore:', BAK); sys.exit(1)
 
     lines = io.open(HDR, encoding='utf-8').read().splitlines(True)
+    keep = required_names(lines)
+    if keep:
+        print('ZORUNLU (acik kalacak): %s' % ', '.join(sorted(keep)))
     out, n = [], 0
     for ln in lines:
         m = RE_DEF.match(ln)
-        if m and not m.group(2).startswith('__INC_'):
-            indent, name = m.group(1), m.group(2)
-            # ic ice yapida girintili define'lar da kapatilir
+        if m and not m.group(2).startswith('__INC_') and m.group(2) not in keep:
+            indent = m.group(1)
             out.append('%s// %s' % (indent, ln.lstrip()))
             n += 1
         else:
