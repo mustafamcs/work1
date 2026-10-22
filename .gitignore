@@ -94,3 +94,8 @@ server/**/p2p_packet_info.txt
 
 # Kodlama onarim raporlari (uretilmis)
 tools/fffd_rapor*.txt
+
+# Locale junction/symlink hedefleri (tek kopya share/locale altinda)
+server/auth/locale/
+server/channel1/core1/locale/
+server/channel99/locale/
