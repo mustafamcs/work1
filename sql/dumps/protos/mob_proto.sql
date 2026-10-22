@@ -9,8 +9,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `mob_proto`;
 CREATE TABLE `mob_proto`  (
   `vnum` int(11) UNSIGNED NOT NULL DEFAULT 0,
-  `name` varchar(24) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'Noname',
-  `locale_name` varbinary(24) NOT NULL DEFAULT 'Noname',
+  `name` varchar(48) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'Noname',
+  `locale_name` varbinary(48) NOT NULL DEFAULT 'Noname',
   `rank` tinyint(2) UNSIGNED NOT NULL DEFAULT 0,
   `type` tinyint(2) UNSIGNED NOT NULL DEFAULT 0,
   `battle_type` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,

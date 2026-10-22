@@ -338,10 +338,10 @@ VNUM	LOCALE_NAME
 348	Kara ejderha jileti+8
 349	Kara ejderha jileti+9
 350	Kara ejderha jileti+10
-351	Kara ejderha jileti+11
+351	Korkak Beyaz Yeminli Asker
 352	Kara ejderha jileti+12
-353	Kara ejderha jileti+13
-354	Kara ejderha jileti+14
+353	Korkak Beyaz Yeminli General
+354	Korkak Beyaz Yeminli Komutanı
 355	Kara ejderha jileti+15
 360	Yılan kılıcı+0
 361	Yılan kılıcı+1
@@ -5487,9 +5487,9 @@ VNUM	LOCALE_NAME
 28030	Kavrama Taşı+0
 28031	Öldürücü Darbe Taşı+0
 28032	Soğutma Taşı+0
-28033	Savaşcıdan Koruyan Taş+0
+28033	Savaşçıdan Koruyan Taş+0
 28034	Ninjadan Koruyan Taş+0
-28035	Suradan KoruyanTaş+0
+28035	Suradan Koruyan Taş+0
 28036	Şamandan Koruyan Taş+0
 28037	Canavardan Koruyan Taş+0
 28038	Korunma Taşı+0
@@ -5508,9 +5508,9 @@ VNUM	LOCALE_NAME
 28130	Kavrama Taşı+1
 28131	Öldürücü Darbe Taşı+1
 28132	Soğutma Taşı+1
-28133	Savaşcıdan Koruyan Taş+1
+28133	Savaşçıdan Koruyan Taş+1
 28134	Ninjadan Koruyan Taş+1
-28135	Suradan KoruyanTaş+1
+28135	Suradan Koruyan Taş+1
 28136	Şamandan Koruyan Taş+1
 28137	Canavardan Koruyan Taş+1
 28138	Korunma Taşı+1
@@ -5529,9 +5529,9 @@ VNUM	LOCALE_NAME
 28230	Kavrama Taşı+2
 28231	Öldürücü Darbe Taşı+2
 28232	Soğutma Taşı+2
-28233	Savaşcıdan Koruyan Taş+2
+28233	Savaşçıdan Koruyan Taş+2
 28234	Ninjadan Koruyan Taş+2
-28235	Suradan KoruyanTaş+2
+28235	Suradan Koruyan Taş+2
 28236	Şamandan Koruyan Taş+2
 28237	Canavardan Koruyan Taş+2
 28238	Korunma Taşı+2
@@ -5550,9 +5550,9 @@ VNUM	LOCALE_NAME
 28330	Kavrama Taşı+3
 28331	Öldürücü Darbe Taşı+3
 28332	Soğutma Taşı+3
-28333	Savaşcıdan Koruyan Taş+3
+28333	Savaşçıdan Koruyan Taş+3
 28334	Ninjadan Koruyan Taş+3
-28335	Suradan KoruyanTaş+3
+28335	Suradan Koruyan Taş+3
 28336	Şamandan Koruyan Taş+3
 28337	Canavardan Koruyan Taş+3
 28338	Korunma Taşı+3
@@ -5571,9 +5571,9 @@ VNUM	LOCALE_NAME
 28430	Kavrama Taşı+4
 28431	Öldürücü Darbe Taşı+4
 28432	Soğutma Taşı+4
-28433	Savaşcıdan Koruyan Taş+4
+28433	Savaşçıdan Koruyan Taş+4
 28434	Ninjadan Koruyan Taş+4
-28435	Suradan KoruyanTaş+4
+28435	Suradan Koruyan Taş+4
 28436	Şamandan Koruyan Taş+4
 28437	Canavardan Koruyan Taş+4
 28438	Korunma Taşı+4
@@ -5593,9 +5593,9 @@ VNUM	LOCALE_NAME
 28530	Kavrama Taşı+5
 28531	Öldürücü Darbe Taşı+5
 28532	Soğutma Taşı+5
-28533	Savaşcıdan Koruyan Taş+5
+28533	Savaşçıdan Koruyan Taş+5
 28534	Ninjadan Koruyan Taş+5
-28535	Suradan KoruyanTaş+5
+28535	Suradan Koruyan Taş+5
 28536	Şamandan Koruyan Taş+5
 28537	Canavardan Koruyan Taş+5
 28538	Korunma Taşı+5
@@ -5607,9 +5607,9 @@ VNUM	LOCALE_NAME
 28600	Kavrama Taşı+6
 28601	Öldürücü Darbe Taşı+6
 28602	Soğutma Taşı+6
-28603	Savaşcıdan Koruyan Taş+6
+28603	Savaşçıdan Koruyan Taş+6
 28604	Ninjadan Koruyan Taş+6
-28605	Suradan KoruyanTaş+6
+28605	Suradan Koruyan Taş+6
 28606	Şamandan Koruyan Taş+6
 28607	Canavardan Koruyan Taş+6
 28608	Korunma Taşı+6
@@ -5635,9 +5635,9 @@ VNUM	LOCALE_NAME
 28700	Kavrama Taşı+7
 28701	Öldürücü Darbe Taşı+7
 28702	Soğutma Taşı+7
-28703	Savaşcıdan Koruyan Taş+7
+28703	Savaşçıdan Koruyan Taş+7
 28704	Ninjadan Koruyan Taş+7
-28705	Suradan KoruyanTaş+7
+28705	Suradan Koruyan Taş+7
 28706	Şamandan Koruyan Taş+7
 28707	Canavardan Koruyan Taş+7
 28708	Korunma Taşı+7
@@ -5663,9 +5663,9 @@ VNUM	LOCALE_NAME
 28800	Kavrama Taşı+8
 28801	Öldürücü Darbe Taşı+8
 28802	Soğutma Taşı+8
-28803	Savaşcıdan Koruyan Taş+8
+28803	Savaşçıdan Koruyan Taş+8
 28804	Ninjadan Koruyan Taş+8
-28805	Suradan KoruyanTaş+8
+28805	Suradan Koruyan Taş+8
 28806	Şamandan Koruyan Taş+8
 28807	Canavardan Koruyan Taş+8
 28808	Korunma Taşı+8
@@ -5691,9 +5691,9 @@ VNUM	LOCALE_NAME
 28900	Kavrama Taşı+9
 28901	Öldürücü Darbe Taşı+9
 28902	Soğutma Taşı+9
-28903	Savaşcıdan Koruyan Taş+9
+28903	Savaşçıdan Koruyan Taş+9
 28904	Ninjadan Koruyan Taş+9
-28905	Suradan KoruyanTaş+9
+28905	Suradan Koruyan Taş+9
 28906	Şamandan Koruyan Taş+9
 28907	Canavardan Koruyan Taş+9
 28908	Korunma Taşı+9

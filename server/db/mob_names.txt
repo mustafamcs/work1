@@ -60,10 +60,10 @@ VNUM	LOCALE_NAME
 332	Beyaz Yeminli Okçu
 333	Beyaz Yeminli General
 334	Beyaz Yeminli Komutan
-351	Korkak Beyaz Yeminli Aske
+351	Korkak Beyaz Yeminli Asker
 352	Korkak Beyaz Yeminli Okçu
-353	Korkak Beyaz Yeminli Gene
-354	Korkak Beyaz Yeminli Komu
+353	Korkak Beyaz Yeminli General
+354	Korkak Beyaz Yeminli Komutanı
 391	Mi-Jung
 392	Eun-Jung
 393	Se-Rang
@@ -84,12 +84,12 @@ VNUM	LOCALE_NAME
 434	Siyah Fırtına Joh-Hwan
 435	Siyah Fırtına Kyuk-Jan
 436	Siyah Fırtına Pho-Hwan
-451	Kötü Siy. Fırtına Askeri
-452	Kötü Siy. Fırtına Delisi
-453	Kötü Siy.Fırtına Okçusu
-454	KötüSiy.Fırtına Joh-Hwan
-455	KötüSiy.Fırtına Kyuk-Jan
-456	KötüSiy.Fırtına Pha-Hwan
+451	Kötü Siyah Fırtına Askeri
+452	Kötü Siyah Fırtına Delisi
+453	Kötü Siyah Fırtına Okçusu
+454	Kötü Siyah Fırtına Joh-Hwan
+455	Kötü Siyah Fırtına Kyuk-Jan
+456	Kötü Siyah Fırtına Pha-Hwan
 491	Mahon
 492	Bo
 493	Goo-Pae
@@ -121,7 +121,7 @@ VNUM	LOCALE_NAME
 637	Siyah Ork Devi
 651	Cesur Büyük Ork
 652	Cesur Büyük Ork Gözcüsü
-653	Cesur Büyük OrkSavaşçısı
+653	Cesur Büyük Ork Savaşçısı
 654	Cesur Büyük Ork Büyücüsü
 655	Cesur Büyük Ork Generali
 656	Cesur Siyah Ork
@@ -442,7 +442,7 @@ VNUM	LOCALE_NAME
 2632	Vahşi Zodyak Generali
 2633	Zalim Zodyak Yüzbaşı
 2634	Büyülü Zodyak Buzu
-2635	Zod. Katil Buz Balinası
+2635	Zodyak Katil Buz Balinası
 2636	Zodyak Buz Böceği
 2637	Zodyak Buz Aslanı
 2638	Buzlu Zodyak Yüzbaşısı
@@ -463,7 +463,7 @@ VNUM	LOCALE_NAME
 2653	Zalim Zodyak Akrep Adam
 2654	Zodyak Akrep Okçu
 2655	Zodyak Dervişi
-2656	Zod. Ağaç Kurb. Askeri
+2656	Zodyak Ağaç Kurbağa Askeri
 2657	Zod. Ağaç Kurb. Acemisi
 2658	Zodyak Gulyabanisi
 2659	Zodyak Yokedicisi
@@ -472,15 +472,15 @@ VNUM	LOCALE_NAME
 2662	Karanlık Zodyak Fanatiği
 2663	Zodyak Arahan
 2664	Karanlık Zod. Dövüşçüsü
-2665	O. Karanlık Zod. Arahan
+2665	Ölümcül Karanlık Zodyak Arahanı
 2666	Karanlık Zodyak Celladı
 2667	Karanlık Zo. İşkencecisi
 2668	Zodyak Çağırıcısı
 2669	Gururlu Zodyak Ork
 2670	Gururlu Zod. Ork Gözcüsü
-2671	Gururlu Zodyak Ork Döv.
+2671	Gururlu Zodyak Ork Dövüşçüsü
 2672	Gururlu Zo. Ork Büyücüsü
-2673	Gururlu Zod. Ork General
+2673	Gururlu Zodyak Ork Generali
 2674	Kara Zodyak Ork
 2675	Kara Zodyak Ork Devi
 2676	Zod. Kızılhırsız Amazonu
@@ -1454,42 +1454,42 @@ VNUM	LOCALE_NAME
 7216	İstilacı Karanlık Komut.
 7550	Cehennem Kulesi Kurdu
 7551	Cehennem Kulesi Zorbası
-7552	Cehennem Kulesi Berserk.
+7552	Cehennem Kulesi Berserkeri
 7553	Cehennem Kulesi Büyücüsü
 7554	Cehennem Kulesi Kasabı
 7555	Cehennem Kulesi Nigrom.
 7556	Cehennem K. Büyük Üstat
 7557	Cehennem Kulesi Kurdu
 7558	Cehennem Kulesi Zorbası
-7559	Cehennem Kulesi Berserk.
+7559	Cehennem Kulesi Berserkeri
 7560	Cehennem Kulesi Büyücüsü
 7561	Cehennem Kulesi Kasabı
 7562	Cehennem Kulesi Nigrom.
 7563	Cehennem K. Büyük Üstat
 7564	Cehennem Kulesi Kurdu
 7565	Cehennem Kulesi Zorbası
-7566	Cehennem Kulesi Berserk.
+7566	Cehennem Kulesi Berserkeri
 7567	Cehennem Kulesi Büyücüsü
 7568	Cehennem Kulesi Kasabı
 7569	Cehennem Kulesi Nigrom.
 7570	Cehennem K. Büyük Üstat
 7571	Cehennem Kulesi Kurdu
 7572	Cehennem Kulesi Zorbası
-7573	Cehennem Kulesi Berserk.
+7573	Cehennem Kulesi Berserkeri
 7574	Cehennem Kulesi Büyücüsü
 7575	Cehennem Kulesi Kasabı
 7576	Cehennem Kulesi Nigrom.
 7577	Cehennem K. Büyük Üstat
 7578	Cehennem Kulesi Kurdu
 7579	Cehennem Kulesi Zorbası
-7580	Cehennem Kulesi Berserk.
+7580	Cehennem Kulesi Berserkeri
 7581	Cehennem Kulesi Büyücüsü
 7582	Cehennem Kulesi Kasabı
 7583	Cehennem Kulesi Nigrom.
 7584	Cehennem K. Büyük Üstat
 7585	Cehennem Kulesi Kurdu
 7586	Cehennem Kulesi Zorbası
-7587	Cehennem Kulesi Berserk.
+7587	Cehennem Kulesi Berserkeri
 7588	Cehennem Kulesi Büyücüsü
 7589	Cehennem Kulesi Kasabı
 7590	Cehennem Kulesi Nigrom.
@@ -1509,7 +1509,7 @@ VNUM	LOCALE_NAME
 7616	Cehennem Kulesi Zorbası
 7617	Cehennem Kulesi Kasabı
 7618	Cehennem Kulesi Kasabı
-7619	Cehennem Kulesi Berserk.
+7619	Cehennem Kulesi Berserkeri
 7620	Cehennem Kulesi Büyücüsü
 8001	Üzüntü Metini
 8002	Dövüş Metini

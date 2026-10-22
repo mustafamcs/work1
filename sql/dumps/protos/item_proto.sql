@@ -10,8 +10,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `item_proto`;
 CREATE TABLE `item_proto`  (
   `vnum` int(11) UNSIGNED NOT NULL DEFAULT 0,
-  `name` varbinary(24) NOT NULL DEFAULT 'Noname',
-  `locale_name` varbinary(24) NOT NULL DEFAULT 'Noname',
+  `name` varbinary(48) NOT NULL DEFAULT 'Noname',
+  `locale_name` varbinary(48) NOT NULL DEFAULT 'Noname',
   `type` tinyint(2) NOT NULL DEFAULT 0,
   `subtype` tinyint(2) NOT NULL DEFAULT 0,
   `weight` tinyint(3) NULL DEFAULT 0,

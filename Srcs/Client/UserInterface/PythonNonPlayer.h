@@ -119,8 +119,8 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 			};
 
 			DWORD       dwVnum;
-			char        szName[CHARACTER_NAME_MAX_LEN + 1];
-			char        szLocaleName[CHARACTER_NAME_MAX_LEN + 1];
+			char        szName[MOB_NAME_MAX_LEN + 1];
+			char        szLocaleName[MOB_NAME_MAX_LEN + 1];
 
 			BYTE        bType;                  // Monster, NPC
 			BYTE        bRank;                  // PAWN, KNIGHT, KING
@@ -178,8 +178,8 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 		typedef struct SMobTable_r255
 		{
 			DWORD       dwVnum;
-			char        szName[CHARACTER_NAME_MAX_LEN + 1];
-			char        szLocaleName[CHARACTER_NAME_MAX_LEN + 1];
+			char        szName[MOB_NAME_MAX_LEN + 1];
+			char        szLocaleName[MOB_NAME_MAX_LEN + 1];
 
 			BYTE        bType;                  // Monster, NPC
 			BYTE        bRank;                  // PAWN, KNIGHT, KING
@@ -254,8 +254,8 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 			};
 
 			DWORD       dwVnum;
-			char        szName[CHARACTER_NAME_MAX_LEN + 1];
-			char        szLocaleName[CHARACTER_NAME_MAX_LEN + 1];
+			char        szName[MOB_NAME_MAX_LEN + 1];
+			char        szLocaleName[MOB_NAME_MAX_LEN + 1];
 
 			BYTE        bType;                  // Monster, NPC
 			BYTE        bRank;                  // PAWN, KNIGHT, KING
@@ -331,8 +331,8 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 			};
 
 			DWORD       dwVnum;
-			char        szName[CHARACTER_NAME_MAX_LEN + 1];
-			char        szLocaleName[CHARACTER_NAME_MAX_LEN + 1];
+			char        szName[MOB_NAME_MAX_LEN + 1];
+			char        szLocaleName[MOB_NAME_MAX_LEN + 1];
 
 			BYTE        bType;                  // Monster, NPC
 			BYTE        bRank;                  // PAWN, KNIGHT, KING
@@ -411,8 +411,8 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 			};
 
 			DWORD       dwVnum;
-			char        szName[CHARACTER_NAME_MAX_LEN + 1];
-			char        szLocaleName[CHARACTER_NAME_MAX_LEN + 1];
+			char        szName[MOB_NAME_MAX_LEN + 1];
+			char        szLocaleName[MOB_NAME_MAX_LEN + 1];
 
 			BYTE        bType;                  // Monster, NPC
 			BYTE        bRank;                  // PAWN, KNIGHT, KING
