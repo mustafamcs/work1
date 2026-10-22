@@ -12,6 +12,8 @@
 #include "item_manager.h"
 #include "item.h"
 
+#ifdef __PET_SYSTEM__
+
 EVENTINFO(petsystem_event_info)
 {
 	CPetSystem* pPetSystem;
@@ -623,3 +625,5 @@ void CPetSystem::RefreshBuff()
 	}
 }
 
+
+#endif // __PET_SYSTEM__

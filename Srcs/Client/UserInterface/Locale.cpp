@@ -224,6 +224,11 @@ const char* LocaleService_GetName()				{ return _LSS_SERVICE_NAME;}
 unsigned int LocaleService_GetCodePage()		{ return _LSS_SERVICE_CODEPAGE; }
 const char*	LocaleService_GetLocaleName()		{ return _LSS_SERVICE_LOCALE_NAME; }
 const char*	LocaleService_GetLocalePath()		{ return _LSS_SERVICE_LOCALE_PATH; }
+#elif !defined(LOCALE_SERVICE_GLOBAL)
+const char* LocaleService_GetName()				{ return MULTI_LOCALE_SERVICE; }
+unsigned int LocaleService_GetCodePage()		{ return MULTI_LOCALE_CODE; }
+const char*	LocaleService_GetLocaleName()		{ return MULTI_LOCALE_NAME; }
+const char*	LocaleService_GetLocalePath()		{ return MULTI_LOCALE_PATH; }
 #endif
 
 void LocaleService_ForceSetLocale(const char* name, const char* localePath)

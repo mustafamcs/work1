@@ -2125,6 +2125,8 @@ void initapp()
 	#endif
 	#ifdef ENVIRONMENT_NIGHT
 		PyModule_AddObject(poModule, "ENVIRONMENT_NIGHT", PyString_FromString(ENVIRONMENT_NIGHT));
+	#else
+		PyModule_AddObject(poModule, "ENVIRONMENT_NIGHT", PyString_FromString(""));
 	#endif
 	#ifdef LOGIN_DELAY_SEC
 		PyModule_AddObject(poModule, "LOGIN_DELAY_SEC", PyFloat_FromDouble(LOGIN_DELAY_SEC));

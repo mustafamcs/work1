@@ -2445,9 +2445,11 @@ void CHARACTER::ComputePoints()
 
 	if (IsPC())
 	{
+#ifdef __PET_SYSTEM__
 		CPetSystem * pPetSystem = GetPetSystem();
 		if (pPetSystem)
 			pPetSystem->RefreshBuff();
+#endif
 
 		// @fixme118 part2 (after petsystem stuff)
 		if (this->GetHP() != iCurHP)

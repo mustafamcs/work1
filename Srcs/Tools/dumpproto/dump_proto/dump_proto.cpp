@@ -347,7 +347,7 @@ void LoadMobProto()
 #ifdef ENABLE_PROTOSTRUCT_AUTODETECT
 			if (structDiff!=0 && !CPythonNonPlayer::TMobTableAll::IsValidStruct(structSize))
 #else
-			if ((zObj.GetSize() % sizeof(TMobTable)) != 0)
+			if ((zObj.GetSize() % sizeof(CPythonNonPlayer::TMobTable)) != 0)
 #endif
 			{
 				printf("LoadMobProto: geçersiz boyut %u veri formatını kontrol edin. structSize %u, structDiff %u\n", zObj.GetSize(), structSize, structDiff);
@@ -363,7 +363,7 @@ void LoadMobProto()
 					CPythonNonPlayer::TMobTable rTable = {0};
 					CPythonNonPlayer::TMobTableAll::Process(zObj.GetBuffer(), structSize, i, rTable);
 #else
-					CPythonNonPlayer::TMobTable & rTable = *((CItemData::TItemTable *) zObj.GetBuffer() + i);
+					CPythonNonPlayer::TMobTable & rTable = *((CPythonNonPlayer::TMobTable *) zObj.GetBuffer() + i);
 #endif
 					printf("%u %s\n", rTable.dwVnum, rTable.szLocaleName);
 				}
@@ -390,7 +390,7 @@ void LoadMobProto()
 					CPythonNonPlayer::TMobTable rTable = {0};
 					CPythonNonPlayer::TMobTableAll::Process(zObj.GetBuffer(), structSize, i, rTable);
 #else
-					CPythonNonPlayer::TMobTable & rTable = *((CItemData::TItemTable *) zObj.GetBuffer() + i);
+					CPythonNonPlayer::TMobTable & rTable = *((CPythonNonPlayer::TMobTable *) zObj.GetBuffer() + i);
 #endif
 					fprintf(mf1, "%u	%s\n", rTable.dwVnum, rTable.szLocaleName);
 					fprintf(mf2,

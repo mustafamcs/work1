@@ -1676,6 +1676,9 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 
 	protected:
 		CPetSystem*			m_petSystem;
+#else
+	public:
+		CPetSystem*			GetPetSystem()				{ return NULL; }
 #endif
 #ifdef USE_PET_SEAL_ON_LOGIN
 	public:
@@ -2057,6 +2060,10 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 	public:
 		void SetPet() { m_bIsPet = true; }
 		bool IsPet() { return m_bIsPet; }
+#else
+	public:
+		void SetPet() { }
+		bool IsPet() { return false; }
 #endif
 #ifdef NEW_ICEDAMAGE_SYSTEM
 	private:

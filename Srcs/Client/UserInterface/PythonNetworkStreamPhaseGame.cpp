@@ -2379,7 +2379,9 @@ bool CPythonNetworkStream::RecvScriptPacket()
 
 	if (-1 != iIndex)
 	{
+#ifdef ENABLE_NEW_EVENT_STRUCT
 		CPythonEventManager::Instance().SetVisibleLineCount(iIndex, 30);
+#endif
 		CPythonNetworkStream::Instance().OnScriptEventStart(ScriptPacket.skin,iIndex);
 	}
 

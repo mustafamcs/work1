@@ -125,6 +125,7 @@ int ReadToken(const char* token)
 	return nRet;
 }
 
+#ifdef ENABLE_EMOJI_SYSTEM
 bool CGraphicTextInstance::EmojiPathProcess(const std::wstring& emojiBuffer, SEmoji & kEmoji, int & x, CGraphicFontTexture::TCharacterInfomation*&pSpaceInfo, CGraphicFontTexture* &pFontTexture, const UINT & dataCodePage, const DWORD & dwColor)
 {
 	char retBuf[1024];
@@ -180,6 +181,7 @@ bool CGraphicTextInstance::EmojiPathProcess(const std::wstring& emojiBuffer, SEm
 	}
 	return true;
 }
+#endif
 
 void CGraphicTextInstance::Update()
 {

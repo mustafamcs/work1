@@ -99,3 +99,8 @@ tools/fffd_rapor*.txt
 server/auth/locale/
 server/channel1/core1/locale/
 server/channel99/locale/
+# db exe PROTO_FROM_DB kapaliyken okudugu uretilmis proto txt'leri (DumpProto -u -i -m)
+server/db/item_proto.txt
+server/db/item_names.txt
+server/db/mob_proto.txt
+server/db/mob_names.txt

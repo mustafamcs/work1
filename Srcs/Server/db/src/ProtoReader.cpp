@@ -158,6 +158,11 @@ int get_Item_SubType_Value(int type_value, std::string inputString)
 	auto itType = mapItemSubType.find(type_value);
 	if (itType == mapItemSubType.end())
 	{
+		bool isNumeric = !inputString.empty()
+			&& std::all_of(inputString.begin(), inputString.end(),
+				[](char c){ return std::isdigit(c) || c == '-' || c == '+'; });
+		if (isNumeric)
+			return std::stoi(inputString);
 		sys_err("Tip aralık dışı! (type_value: %d)", type_value);
 		return -1;
 	}
@@ -166,6 +171,11 @@ int get_Item_SubType_Value(int type_value, std::string inputString)
 	auto itSubtype = std::find(vecSubtype.begin(), vecSubtype.end(), inputString);
 	if (itSubtype == vecSubtype.end())
 	{
+		bool isNumeric = !inputString.empty()
+			&& std::all_of(inputString.begin(), inputString.end(),
+				[](char c){ return std::isdigit(c) || c == '-' || c == '+'; });
+		if (isNumeric)
+			return std::stoi(inputString);
 		sys_err("Alttip aralık dışı! (type_value: %d)", type_value);
 		return -1;
 	}

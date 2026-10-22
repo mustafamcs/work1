@@ -1910,7 +1910,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 				UnequipItem(item);
 			break;
 
-		#ifdef ENABLE_PET_SYSTEM_EX
+		#ifdef USE_PET_SEAL_ON_LOGIN
 		case ITEM_PET:
 			switch (item->GetSubType())
 			{
@@ -1920,7 +1920,6 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 					SummonPetFromItem(item);
 				}
 				break;
-		#endif
 
 				case PET_EGG: //0
 				case PET_BAG: //2
@@ -1937,6 +1936,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 					break;
 			}
 			break;
+		#endif
 
 		case ITEM_DS:
 			{
