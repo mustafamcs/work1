@@ -12,7 +12,7 @@
 #pragma warning(disable:4244)	// type conversion possible lose of data
 #pragma warning(disable:5033)	// cpp17 deprecated warnings
 
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 #include <windows.h>
 #include <assert.h>
 #include <stdio.h>

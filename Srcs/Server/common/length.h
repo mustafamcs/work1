@@ -1,7 +1,7 @@
 #ifndef __INC_METIN_II_LENGTH_H__
 #define __INC_METIN_II_LENGTH_H__
 
-#include "CommonDefines.h"
+#include "../../Controls.h"
 
 #define WORD_MAX 0xffff
 

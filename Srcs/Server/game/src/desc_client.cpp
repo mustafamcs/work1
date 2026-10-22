@@ -11,7 +11,7 @@
 #include "db.h"
 
 #include "party.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 extern LPFDWATCH	main_fdw;
 

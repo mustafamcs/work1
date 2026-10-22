@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Locale_inc.h"
+#include "../../Controls.h"
 
 bool		LocaleService_IsYMIR();
 bool		LocaleService_IsJAPAN();

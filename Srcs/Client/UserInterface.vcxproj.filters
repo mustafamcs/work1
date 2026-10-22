@@ -134,7 +134,7 @@
     <ClInclude Include="UserInterface\AbstractPlayer.h" />
     <ClInclude Include="UserInterface\AbstractSingleton.h" />
     <ClInclude Include="UserInterface\Locale.h" />
-    <ClInclude Include="UserInterface\Locale_inc.h" />
+    <ClInclude Include="..\Controls.h" />
     <ClInclude Include="UserInterface\AccountConnector.h" />
     <ClInclude Include="UserInterface\InsultChecker.h" />
     <ClInclude Include="UserInterface\NetworkActorManager.h" />

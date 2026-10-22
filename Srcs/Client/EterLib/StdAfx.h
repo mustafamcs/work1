@@ -4,7 +4,7 @@
 #ifndef _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
 #endif
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 
 #define _WIN32_DCOM
 

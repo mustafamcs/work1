@@ -21,7 +21,7 @@
 #include "../EterGrnLib/StdAfx.h"
 #include "../scriptLib/StdAfx.h"
 
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 /* Fast Float<->Integer conversion */
 extern float		PR_FCNV;
 extern long			PR_ICNV;

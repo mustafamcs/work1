@@ -1904,7 +1904,7 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "ENABLE_IKASHOP_RENEWAL", 0);
 #endif
 
-	// ### Pack/Python Ayarlari - Locale_inc.h ile senkron (elle tutulan blok)
+	// ### Pack/Python Ayarlari - Controls.h ile senkron (elle tutulan blok)
 	#ifdef ENABLE_NEW_LEVELSKILL_SYSTEM
 		PyModule_AddIntConstant(poModule, "ENABLE_NEW_LEVELSKILL_SYSTEM", 1);
 	#else

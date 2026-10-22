@@ -21,7 +21,7 @@
 #include "sectree.h"
 #include "ani.h"
 #include "locale_service.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 int battle_hit(LPCHARACTER ch, LPCHARACTER victim, int & iRetDam);
 

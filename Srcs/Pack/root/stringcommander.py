@@ -1,5 +1,5 @@
 import app
-
+import _weakref
 from app import ENABLE_CMDCHAT_VARIADIC_ARGS
 
 class CallBackFunction:

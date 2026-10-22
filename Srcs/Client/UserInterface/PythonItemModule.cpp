@@ -663,11 +663,7 @@ int GetApplyPoint(int iApply)
 		{ POINT_RESIST_HUMAN,			},	// APPLY_RESIST_HUMAN,115
 		{ POINT_RESIST_MOUNT_FALL,		},	// APPLY_RESIST_MOUNT_FALL,116
 		{ POINT_NONE,					},	// APPLY_UNK117 (unimplemented)
-	#ifdef ENABLE_MOUNT_COSTUME_EX_SYSTEM
-		{ POINT_MOUNT,					},	// APPLY_MOUNT,118
-	#else
-		{ POINT_NONE,					},	// APPLY_MOUNT,118
-	#endif
+		{ POINT_NONE,					},	// APPLY_MOUNT,118 (server POINT_MOUNT; client enum'unda yok)
 	};
 
 	if (iApply >= aApplyInfo.size())

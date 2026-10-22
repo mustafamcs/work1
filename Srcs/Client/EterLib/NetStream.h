@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 
 #ifdef _IMPROVED_PACKET_ENCRYPTION_
 #include "../eterBase/cipher.h"

@@ -40,7 +40,7 @@
 #include "locale_service.h"
 #include "DragonSoul.h"
 #include "belt_inventory_helper.h" // @fixme119
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 #include "input.h"
 

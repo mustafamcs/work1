@@ -14,5 +14,5 @@
 #include <math.h>
 
 #include "../eterBase/StdAfx.h"
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 

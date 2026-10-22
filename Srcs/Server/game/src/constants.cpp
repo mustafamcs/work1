@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "char.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 #include "../../common/length.h"
 
 TJobInitialPoints JobInitialPoints[JOB_MAX_NUM] =

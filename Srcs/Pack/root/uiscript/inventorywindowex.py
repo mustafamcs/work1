@@ -88,8 +88,7 @@ if app.ENABLE_EXTEND_INVEN_SYSTEM:
 											{"index":item.EQUIPMENT_SHIELD, "x":75, "y":35, "width":32, "height":32},
 											{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 											{"index":item.EQUIPMENT_PENDANT, "x":2, "y":106, "width":32, "height":32},
-											{"index":item.EQUIPMENT_GLOVE, "x":75, "y":106, "width":32, "height":32},
-										),
+										) + (({"index":item.EQUIPMENT_GLOVE, "x":75, "y":106, "width":32, "height":32},) if app.ENABLE_GLOVE_SYSTEM else ()),
 							},
 							## Dragon Soul Button
 							{
@@ -447,8 +446,7 @@ else:
 											{"index":item.EQUIPMENT_SHIELD, "x":75, "y":35, "width":32, "height":32},
 											{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 											{"index":item.EQUIPMENT_PENDANT, "x":2, "y":106, "width":32, "height":32},
-											{"index":item.EQUIPMENT_GLOVE, "x":75, "y":106, "width":32, "height":32},
-										),
+										) + (({"index":item.EQUIPMENT_GLOVE, "x":75, "y":106, "width":32, "height":32},) if app.ENABLE_GLOVE_SYSTEM else ()),
 							},
 							## Dragon Soul Button
 							{

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <map>
-#include "..\UserInterface\Locale_inc.h" //ENABLE_IKASHOP_RENEWAL
+#include "../../Controls.h" //ENABLE_IKASHOP_RENEWAL
 
 class CNetworkPacketHeaderMap
 {

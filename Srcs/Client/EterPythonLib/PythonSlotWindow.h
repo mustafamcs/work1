@@ -1,7 +1,7 @@
 #pragma once
 
 #include "PythonWindow.h"
-#include "../UserInterface/Locale_inc.h" // ENABLE_HIGHLIGHT_NEW_ITEM
+#include "../../Controls.h" // ENABLE_HIGHLIGHT_NEW_ITEM
 
 namespace UI
 {

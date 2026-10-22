@@ -48,7 +48,7 @@
 #include "DragonSoul.h"
 #include "buff_on_attributes.h"
 #include "belt_inventory_helper.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 #include "PetSystem.h"
 
 #ifdef ENABLE_IKASHOP_RENEWAL

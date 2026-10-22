@@ -1,7 +1,7 @@
 #ifndef __INC_ITEM_MANAGER__
 #define __INC_ITEM_MANAGER__
 
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 #ifdef M2_USE_POOL
 #include "pool.h"

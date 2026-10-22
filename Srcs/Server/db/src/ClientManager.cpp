@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 #include "../../common/billing.h"
 #include "../../common/building.h"

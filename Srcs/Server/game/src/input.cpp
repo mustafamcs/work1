@@ -18,7 +18,7 @@
 #ifndef __WIN32__
 	#include "limit_time.h"
 #endif
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 #include "utils.h"
 

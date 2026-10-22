@@ -2,7 +2,7 @@
 #define _INCLUDE_HEADER_COMMON_UTILS_
 
 #include <msl/utils.h>
-#include "CommonDefines.h"
+#include "../../Controls.h"
 
 /*----- atoi function -----*/
 inline bool str_to_number (bool& out, const char *in)

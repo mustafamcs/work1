@@ -20,7 +20,7 @@
 #include "buff_on_attributes.h"
 #include "belt_inventory_helper.h"
 #include "../../common/VnumHelper.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 #include <fmt/fmt.h>
 
 CItem::CItem(DWORD dwVnum)

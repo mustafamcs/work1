@@ -70,7 +70,7 @@ using namespace std;
 #include "ikarus_shop_manager.h"
 #endif
 #include "DragonSoul.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 extern const BYTE g_aBuffOnAttrPoints;
 extern bool RaceToJob(unsigned race, unsigned *ret_job);

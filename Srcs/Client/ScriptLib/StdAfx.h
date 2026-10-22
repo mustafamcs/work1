@@ -3,7 +3,7 @@
 #include "../eterLib/StdAfx.h"
 #include "../eterGrnLib/StdAfx.h"
 
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 #ifdef AT
 #undef AT // @warme667
 #endif

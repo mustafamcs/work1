@@ -7,7 +7,7 @@
 #include "empire_text_convert.h"
 #include "config.h"
 #include "skill_power.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 using namespace std;
 

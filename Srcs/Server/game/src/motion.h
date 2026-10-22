@@ -2,7 +2,7 @@
 #define __INC_GAME_MOTION_H__
 
 #include "../../common/d3dtype.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 enum EMotionMode
 {

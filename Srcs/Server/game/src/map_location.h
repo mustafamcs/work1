@@ -1,5 +1,5 @@
 #include "../../common/stl.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 class CMapLocation : public singleton<CMapLocation>
 {

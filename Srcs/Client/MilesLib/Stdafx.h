@@ -20,7 +20,7 @@
 #include "../eterBase/Utils.h"
 #include "../eterBase/Debug.h"
 
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 

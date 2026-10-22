@@ -6,7 +6,7 @@
 #include "text_file_loader.h"
 #include "mob_manager.h"
 #include "char.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 // POLYMORPH_BUG_FIX
 static float MSA_GetNormalAttackDuration(const char* msaPath)

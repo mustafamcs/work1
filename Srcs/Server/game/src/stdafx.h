@@ -14,7 +14,7 @@
 #include "../../common/singleton.h"
 #include "../../common/utils.h"
 #include "../../common/service.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 #include "../../common/profile.h"
 
 #include <algorithm>

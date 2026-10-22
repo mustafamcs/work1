@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "PeerBase.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 CPeerBase::CPeerBase() : m_fd(INVALID_SOCKET), m_BytesRemain(0), m_outBuffer(NULL), m_inBuffer(NULL)
 {

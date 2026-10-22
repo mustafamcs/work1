@@ -22,7 +22,7 @@
 #pragma warning(disable:4201 4512 4238 4239)
 #endif
 
-#include "../UserInterface/Locale_inc.h"
+#include "../../Controls.h"
 
 #include "../eterLib/StdAfx.h"
 #include "../milesLib/StdAfx.h"

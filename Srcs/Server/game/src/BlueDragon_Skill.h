@@ -1,6 +1,6 @@
 #ifndef _INC_BLUE_DRAGON_SKILL_H__INC_
 #define _INC_BLUE_DRAGON_SKILL_H__INC_
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 struct FSkillBreath
 {
 	EJobs Set1;

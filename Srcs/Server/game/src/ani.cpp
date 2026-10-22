@@ -4,7 +4,7 @@
 #include "char.h"
 #include "item.h"
 #include "ani.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 const char* FN_race_name(int race)
 {

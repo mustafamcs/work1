@@ -38,7 +38,7 @@
 #include "threeway_war.h"
 #include "unique_item.h"
 #include "DragonSoul.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 extern bool DropEvent_RefineBox_SetValue(const std::string& name, int value);
 

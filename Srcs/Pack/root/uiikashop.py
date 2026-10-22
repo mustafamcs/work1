@@ -1,7 +1,5 @@
 # cpython modules
 import app
-
-
 import player
 import item
 import net

@@ -1,6 +1,4 @@
 import app
-
-
 import ui
 import localeInfo
 import uiScriptLocale

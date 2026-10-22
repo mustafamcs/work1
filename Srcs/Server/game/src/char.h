@@ -12,7 +12,7 @@
 #include "affect_flag.h"
 #include "cube.h"
 #include "mining.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 #include <array>
 #include <utility>
 #ifdef ENABLE_ACCE_COSTUME_SYSTEM

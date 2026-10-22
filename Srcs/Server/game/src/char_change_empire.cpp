@@ -5,7 +5,7 @@
 #include "db.h"
 #include "guild_manager.h"
 #include "marriage.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 int CHARACTER::ChangeEmpire(BYTE empire)
 {

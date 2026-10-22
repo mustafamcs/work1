@@ -21,7 +21,7 @@
 #include "log.h"
 #include "unique_item.h"
 #include "questmanager.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 
 static const DWORD s_adwSubSkillVnums[] =

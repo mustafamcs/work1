@@ -1,6 +1,6 @@
 #ifndef	__HEADER_PET_SYSTEM__
 #define	__HEADER_PET_SYSTEM__
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 class CHARACTER;
 

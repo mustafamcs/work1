@@ -2,7 +2,7 @@
 #define __INC_METIN_II_GAME_CSkillManager_H__
 
 #include "../../libpoly/Poly.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 enum ESkillFlags
 {

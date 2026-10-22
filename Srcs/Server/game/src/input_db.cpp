@@ -47,7 +47,7 @@
 #include "DragonSoul.h"
 
 #include "shutdown_manager.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 #define MAPNAME_DEFAULT	"none"
 

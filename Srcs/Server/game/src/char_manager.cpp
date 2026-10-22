@@ -16,7 +16,7 @@
 #include "questlua.h"
 #include "locale_service.h"
 #include "shutdown_manager.h"
-#include "../../common/CommonDefines.h"
+#include "../../../Controls.h"
 
 #if (!defined(__GNUC__) || defined(__clang__)) && !defined(CXX11_ENABLED)
 #	include <boost/bind.hpp>
