@@ -1,2296 +1,2296 @@
 "The name has been successfully changed. You're going to get disconnected.";
 "[LS;1955]";
 
-"%s 블럭! (%d%%)";
+"Daha fazla Yang alamazsın.";
 "[LS;1956;%s;%d]";
 
-"더 이상 이 아이템으로 속성을 추가할 수 없습니다";
+"SungMa hazine sandığı - kalan ödül değişikliği: %d";
 "[LS;1957]";
 
-"성공적으로 속성이 추가 되었습니다";
+"SungMa sandığı - Değerli bir eşya almak için aç.";
 "[LS;1958]";
 
-"%s이 필요합니다.";
+"Bu hareket için gereken: %s";
 "[LS;1027;%s]";
 
-"문제 입니다.";
+"Soru.";
 "[LS;958]";
 
-"잠시후 해당 마을은  마을로 이동됩니다.";
+"Kısa süre sonra köye ışınlanacaksınız.";
 "[LS;1]";
 
-"존재하지 않는 아이템 입니다";
+"Bu eşya mevcut değil.";
 "[LS;2]";
 
-"상자가 갑자기 폭발하였습니다! 생명력이 감소했습니다.";
+"Kutu patladı! HP seviyen düştü.";
 "[LS;3]";
 
-"상자에서 나온 녹색 연기를 들이마시자 독이 온몸으로 퍼집니다!";
+"Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!";
 "[LS;13]";
 
-"%s 아이템 을 획득하셨습니다";
+"%s : %d adet kazandın.";
 "[LS;24;%s;%d]";
 
-"상자에서 %s 가 나왔습니다.";
+"Kutuda %s var.";
 "[LS;35;%s]";
 
-"열쇠가 맞지 않는 것 같다.";
+"Bu anahtar kilide uygun görünmüyor.";
 "[LS;46]";
 
-"아무것도 얻을 수 없었습니다.";
+"Hiç bir şey kazanamadın.";
 "[LS;56]";
 
-"개량을 하기 위한 돈이 부족합니다.";
+"Bu eşyayı kullanmak için yeterli Yang a sahip değilsin.";
 "[LS;67]";
 
-"소지금이 부족하여 이 아이템을 사용할 수 없습니다.";
+"Bu eşyayı kullanmak için yeterli Yang a sahip değilsin.";
 "[LS;67]";
 
-"스킬 레벨을 내리는데 성공하였습니다.";
+"Beceri seviyeni düşürdün.";
 "[LS;78]";
 
-"스킬 레벨을 내릴 수 없습니다.";
+"Beceri seviyeni düşüremezsin.";
 "[LS;88]";
 
-"이미 효과가 걸려 있습니다.";
+"Bu etki zaten çalışıyor.";
 "[LS;99]";
 
-"이 아이템은 PC방에서만 사용할 수 있습니다.";
+"Bu nesne sadece internet cafede kullanılabilir.";
 "[LS;111]";
 
-"사용 제한량을 초과하였습니다.";
+"Bu limitin üzerinde.";
 "[LS;122]";
 
-"상품을 받을 인벤토리가 부족합니다. 인벤토리를 비워주세요!";
+"Ne yazıkki envanterinde yeterince yer yok.";
 "[LS;128]";
 
-"월병 또는 종자 를 사용하였습니다";
+"Tohum ya da ay pastası kullanıldı.";
 "[LS;132]";
 
-"결혼 상태가 아니면 결혼반지를 사용할 수 없습니다.";
+"Evli değilsen nikah yüzüğü takamazsın.";
 "[LS;143]";
 
-"이 곳에선 이벤트용 감지기가 동작하지 않는것 같습니다.";
+"Etkinlik Dedektörünü bu pozisyondayken kullanamazsın.";
 "[LS;154]";
 
-"이 개량서로 개량할 수 없습니다.";
+"Nesne alınamıyor.";
 "[LS;162]";
 
-"이벤트용 감지기가 신비로운 빛을 내며 사라집니다.";
+"Etkinlik Dedektörü gizemli bir ışıkla birlikte yok oldu.";
 "[LS;165]";
 
-"이벤트용 감지기가 흔적도 없이 사라집니다.";
+"Etkinlik Dedektörü kayboldu.";
 "[LS;176]";
 
-"이 곳에서 영석 감지기가 동작하지 않는것 같습니다.";
+"Metin Taşı Dedektörü zindanda çalışmıyor.";
 "[LS;187]";
 
-"영석 감지기가 신비로운 빛을 내며 사라집니다.";
+"Metin Taşı Dedektörü gizemli ışıkla birlikte kayboldu.";
 "[LS;198]";
 
-"상자에서 %s 가 %d 개 나왔습니다.";
+"Al: %s - %d";
 "[LS;204;%s;%d]";
 
-"영석 감지기가 흔적도 없이 사라집니다.";
+"Metin Taşı Dedektörü kayboldu.";
 "[LS;209]";
 
-"조개에서 돌조각이 나왔습니다.";
+"İstiridyenin içinde sadece sıradan bir taş parçası var.";
 "[LS;221]";
 
-"조개가 흔적도 없이 사라집니다.";
+"İstiridye kayboldu.";
 "[LS;232]";
 
-"조개에서 백진주가 나왔습니다.";
+"İstiridyenin içinde Beyaz bir inci var.";
 "[LS;243]";
 
-"조개에서 청진주가 나왔습니다.";
+"İstiridyenin içinde Mavi bir inci var.";
 "[LS;253]";
 
-"조개에서 피진주가 나왔습니다.";
+"İstiridyenin içinde kan kırmızı bir inci var.";
 "[LS;264]";
 
-"이 책은 너무 어려워 이해하기가 힘듭니다.";
+"Bu kitabı anlamak kolay değil.";
 "[LS;274]";
 
-"이 책은 아무리 봐도 도움이 될 것 같지 않습니다.";
+"Bu kitap sana yardım etmeyecek.";
 "[LS;284]";
 
-"레벨 30이 되기 전에는 습득할 수 있을 것 같지 않습니다.";
+"Bu kitabı anlaman için 30.Seviyede olman gerekiyor.";
 "[LS;295]";
 
-"레벨 50이 되기 전에는 습득할 수 있을 것 같지 않습니다.";
+"Bu kitabı anlaman için 50.Seviyede olman gerekiyor.";
 "[LS;305]";
 
-"연계기는 더이상 수련할 수 없습니다.";
+"Daha fazla kombo geliştiremezsin.";
 "[LS;316]";
 
-"%s 길드의 깃발을 %s 님이 획득하였습니다.";
+"%s Loncası %s Loncasının bayrağını ele geçirdi!";
 "[LS;327;%s;%s]";
 
-"이미 완벽하게 알아들을 수 있는 언어이다.";
+"Bu dili zaten anlıyorsun.";
 "[LS;328]";
 
-"이 책을 읽으려면 레벨을 더 올려야 합니다.";
+"Bu kitabı anlayabilmek için seviyeni yükseltmelisin.";
 "[LS;350]";
 
-"이 책은 너무 어려워서 수련할 수 없습니다.";
+"Kitabın öğrenilmesi zor.";
 "[LS;360]";
 
-"이 책으로는 더 이상 수련할 수 없습니다.";
+"Bu kitapla daha fazla eğitim yapamazsın.";
 "[LS;371]";
 
-"세금이 %d %로 설정되었습니다";
+"Vergi %%%d olarak ayarlandı.";
 "[LS;375;%d]";
 
-"아직 승마 스킬을 수련할 수 있는 레벨이 아닙니다.";
+"Binicilik Eğitimi almak için 50'inci seviyeye ulaşmış olman gerekiyor.";
 "[LS;376]";
 
-"주안술서를 통해 주화입마에서 빠져나왔습니다.";
+"Kötü ruhların lanetinden Kötü Ruh Kovma Kağıdının yardımıyla kurtuldun.";
 "[LS;377]";
 
-"더 이상 승마 수련서를 읽을 수 없습니다.";
+"Daha fazla Binicilik Rehberi okuyamazsın.";
 "[LS;378]";
 
-"승마 수련서를 읽어 승마 스킬 포인트를 얻었습니다.";
+"Binicilik Kılavuzu'nu okudun ve bir tane Binicilik Puanı kazandın.";
 "[LS;379]";
 
-"얻은 포인트로는 승마 스킬의 레벨을 올릴 수 있습니다.";
+"Bu puanı Biniciliğini geliştirmek için kullanabilirsin!";
 "[LS;380]";
 
-"%s 길드가 %s 길드의 깃발을 빼앗았습니다!";
+"%s loncasının bayrağı, %s tarafından çalındı.";
 "[LS;381;%s;%s]";
 
-"승마 수련서 이해에 실패하였습니다.";
+"Binicilik Rehberini anlamadın.";
 "[LS;382]";
 
-"마음이 맑아지는군. 가슴을 짓누르던 무언가가 좀 가벼워진 느낌이야.";
+"Zihnin açık. Şimdi iyi konsantre olabilirsin.";
 "[LS;383]";
 
-"선악치가 %d 증가하였습니다.";
+"Sıralama %d puan yükseldi.";
 "[LS;384;%d]";
 
-"현재 헤어스타일에서는 염색과 탈색이 불가능합니다.";
+"Şu anki saç stilini beyazlatamaz veya boyayamazsın.";
 "[LS;385]";
 
-"%d 레벨이 되어야 다시 염색하실 수 있습니다.";
+"Saçını tekrar boyayabilmek için %d. seviyeye ulaşman gerekli.";
 "[LS;386;%d]";
 
-"성별이 맞지않아 이 아이템을 열 수 없습니다.";
+"Bu eşya sadece karşı cins tarafından açılabilir.";
 "[LS;387]";
 
-"현재 위치에서 사용할 수 없습니다.";
+"Şu anki pozisyonunda bunu kullanamazsın.";
 "[LS;388]";
 
-"이동할 준비가 되어있음으로 귀환부를 사용할수 없습니다";
+"Işınlanmaya hazırsın, bu nedenle geri dönüş kağıdını kullanamazsın.";
 "[LS;389]";
 
-"원래 위치로 복귀";
+"Başlangıç yerine geri gönderiliyorsun.";
 "[LS;390]";
 
-"던전 안에서는 %s%s 사용할 수 없습니다.";
+"%s%s zindanda kullanılamaz.";
 "[LS;391;%s;%s]";
 
-"<퀘스트> 이전에 같은 보상을 받은 적이 있어 다시 받지 않습니다.";
+"[Quest] Ödülünü aldın zaten.";
 "[LS;392]";
 
-"을";
+"the";
 "[LS;393]";
 
-"를";
+"the";
 "[LS;393]";
 
-"청소할 석이 박혀있지 않습니다.";
+"Silinecek taş parçası kırıkları yok.";
 "[LS;395]";
 
-"속성을 변경할 수 없는 아이템입니다.";
+"Bu eşyanın geliştirilmesini değiştiremezsin.";
 "[LS;396]";
 
-"변경할 속성이 없습니다.";
+"Değiştirebileceğin hiçbir geliştirme yok.";
 "[LS;397]";
 
-"속성을 바꾼지 %d분 이내에는 다시 변경할 수 없습니다.(%d 분 남음)";
+"Bunu bir geliştirmeden en az %d dakika sonra yapabilirsin. (%d dakika kaldı)";
 "[LS;398;%d;%d]";
 
-"속성을 변경하였습니다.";
+"Geliştirmeyi değiştirdin.";
 "[LS;399]";
 
-"속성 추가에 성공하였습니다.";
+"Geliştirme başarıyla eklendi.";
 "[LS;400]";
 
-"속성 추가에 실패하였습니다.";
+"Geliştirme eklenmedi.";
 "[LS;401]";
 
-"더이상 이 아이템을 이용하여 속성을 추가할 수 없습니다.";
+"Kutsama Küresini bu eşyaya başka bir bonus eklemek için kullanmalısın.";
 "[LS;402]";
 
-"대련장에서 사용하실 수 없습니다.";
+"Bunu arenada kullanamazsın.";
 "[LS;403]";
 
-"더 이상 이 아이템을 이용하여 속성을 추가할 수 없습니다.";
+"Bu eşya geliştirilemez. Maksimum bonus sayısına ulaşıldı.";
 "[LS;404]";
 
-"먼저 재가비서를 이용하여 속성을 추가시켜 주세요.";
+"Kutsama Küresini üzerinde zaten 4 bonus olan eşyalar için kullanabilirsiniz.";
 "[LS;405]";
 
-"소켓이 성공적으로 추가되었습니다.";
+"Slot başarıyla eklendi.";
 "[LS;406]";
 
-"소켓 추가에 실패하였습니다.";
+"Slot eklenmedi.";
 "[LS;407]";
 
-"이 액세서리에는 더이상 소켓을 추가할 공간이 없습니다.";
+"Bu nesneye daha fazla slot eklenmiyor.";
 "[LS;408]";
 
-"이 아이템으로 소켓을 추가할 수 없는 아이템입니다.";
+"Bu nesneye slot eklenmiyor.";
 "[LS;409]";
 
-"장착에 성공하였습니다.";
+"Silahlanma başarılı.";
 "[LS;410]";
 
-"장착에 실패하였습니다.";
+"Silahlanma başarısız.";
 "[LS;411]";
 
-"먼저 다이아몬드로 악세서리에 소켓을 추가해야합니다.";
+"İlk önce bir slot eklemen gerekiyor. Bunu yapmak için bir elmas kullan.";
 "[LS;412]";
 
-"이 액세서리에는 더이상 장착할 소켓이 없습니다.";
+"Bu nesnede mücevher slotu yok.";
 "[LS;413]";
 
-"열정의 가면을 착용시에만 할 수 있습니다.";
+"Bunu Duygu Maskesi taktığında yapabilirsin.";
 "[LS;414]";
 
-"다이아몬드로 소켓을 추가해야합니다.";
+"Elmas kullanmak istiyorsan bir slot eklemen gerekiyor.";
 "[LS;415]";
 
-"이 액세서리에는 더이상 보석을 장착할 수 없습니다.";
+"Bu nesneye daha fazla mücevher eklenemiyor.";
 "[LS;416]";
 
-"이 아이템을 장착할 수 없습니다.";
+"Bu nesneler birleştirilerek kullanılmıyor.";
 "[LS;417]";
 
-"낚시 중에 미끼를 갈아끼울 수 없습니다.";
+"Balık tutarken yemi değiştiremezsin.";
 "[LS;418]";
 
-"이미 꽂혀있던 미끼를 빼고 %s를 끼웁니다.";
+"Şu anki yemi %s ile değiştirdin.";
 "[LS;419;%s]";
 
-"낚시대에 %s를 미끼로 끼웁니다.";
+"Çengele yem olarak %s taktın.";
 "[LS;420;%s]";
 
-"물약 조합을 위한 재료가 부족합니다.";
+"İksir hazırlamak için tüm malzemelere sahip değilsin.";
 "[LS;421]";
 
-"재료(%s)가 부족합니다.";
+"Yeterli malzemen yok (%s).";
 "[LS;422;%s]";
 
-"빈 병이 모자릅니다.";
+"Yeterince boş şişen yok.";
 "[LS;423]";
 
-"물약 제조에 실패했습니다.";
+"İksir hazırlama işlemi başarısız.";
 "[LS;424]";
 
-"여자만 할 수 있습니다.";
+"Bunu sadece bayanlar yapabilir.";
 "[LS;425]";
 
-"같은 종류의 메틴석은 여러개 부착할 수 없습니다.";
+"Aynı türden çok sayıda zihin taşı ekleyemezsin.";
 "[LS;426]";
 
-"이 메틴석은 장비에 부착할 수 없습니다.";
+"Bu zihin taşı böyle bir nesneye eklenemez.";
 "[LS;427]";
 
-"이 메틴석은 무기에 부착할 수 없습니다.";
+"Bu zihin taşını silaha takamazsın.";
 "[LS;428]";
 
-"메틴석 부착에 성공하였습니다.";
+"Zihin taşını başarıyla taktın.";
 "[LS;429]";
 
-"메틴석 부착에 실패하였습니다.";
+"Zihin taşı yerleştirirken kırıldı.";
 "[LS;430]";
 
-"부착할 수 있는 슬롯이 없습니다.";
+"Boş yer yok.";
 "[LS;431]";
 
-"사용할수 없습니다.";
+"Şu anda eşinize teleport olamazsınız.";
 "[LS;432]";
 
-"삼거리 전투 참가중에는 귀환부,귀환기억부를 사용할수 없습니다.";
+"Katılmış olduğun bir krallık savaşı devam ederken geri dönüş kağıdı kullanamazsın.";
 "[LS;433]";
 
-"창고를 연후 %d초 이내에는 귀환부,귀환기억부를 사용할 수 없습니다.";
+"Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.";
 "[LS;434;%d]";
 
-"거래창,창고 등을 연 상태에서는 귀환부,귀환기억부 를 사용할수 없습니다.";
+"Başka pencere açık olduğu sürece geri dönüş kağıdı kullanamazsın.";
 "[LS;435]";
 
-"그런 사람이 없습니다.";
+"Kişi bulunamadı.";
 "[LS;436]";
 
-"아이템 개량후 %d초 이내에는 귀환부,귀환기억부를 사용할 수 없습니다.";
+"Ticaretten sonra %d saniye Parşömen kullanamazsın.";
 "[LS;437;%d]";
 
-"개인상점 사용후 %d초 이내에는 귀환부,귀환기억부를 사용할 수 없습니다.";
+"Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.";
 "[LS;438;%d]";
 
-"이동 되어질 위치와 너무 가까워 귀환부를 사용할수 없습니다.";
+"Mesafe çok yakın olduğu için geri dönüş kağıdı kullanamazsın.";
 "[LS;439]";
 
-"거래 후 %d초 이내에는 귀환부,귀환기억부등을 사용할 수 없습니다.";
+"Ticaretten sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.";
 "[LS;440;%d]";
 
-"거래창,창고 등을 연 상태에서는 보따리,비단보따리를 사용할수 없습니다.";
+"Başka bir pencere açıkken depo açamazsın.";
 "[LS;441]";
 
-"버릴 수 없는 아이템입니다.";
+"Bu eşyayı düşüremezsin.";
 "[LS;442]";
 
-"떨어진 아이템은 3분 후 사라집니다.";
+"Düşürülen eşya 5 dakika içinde yok olacak.";
 "[LS;443]";
 
-"아이템 획득: %s";
+"%s eşyasını kazandın.";
 "[LS;444;%s]";
 
-"소지하고 있는 아이템이 너무 많습니다.";
+"Çok fazla eşya taşıyorsun.";
 "[LS;445]";
 
-"아이템 획득: %s 님으로부터 %s";
+"%s şunu kazandı: %s.";
 "[LS;446;%s;%s]";
 
-"잠시후 모두 마을로 이동됩니다.";
+"Kısa süre sonra herkes köye ışınlanacak.";
 "[LS;1]";
 
-"너무 가까이 있습니다.";
+"Çok yakınsın.";
 "[LS;448]";
 
-"아이템 전달: %s 님에게 %s";
+"Eşya Ticareti:  %s, %s";
 "[LS;449;%s;%s]";
 
-"둔갑 중에는 착용중인 장비를 변경할 수 없습니다.";
+"Dönüşüm esnasında ekipmanını değiştiremezsin.";
 "[LS;450]";
 
-"가만히 있을 때만 착용할 수 있습니다.";
+"Eşya giyebilmek için hareketsiz olman gerekli.";
 "[LS;451]";
 
-"죽지 않은 말에게 선초를 먹일 수 없습니다.";
+"Maymun Bitkisi yem olarak kullanılamaz. Ölmüş atları canlandırmak için kullanılır.";
 "[LS;452]";
 
-"죽은 말에게 사료를 먹일 수 없습니다.";
+"Ölü Atı besleyemezsin.";
 "[LS;453]";
 
-"말에게 선초를 주었습니다.";
+"Atı otlarla beslediniz.";
 "[LS;454]";
 
-"말에게 사료를 주었습니다.";
+"Atı besledin.";
 "[LS;455]";
 
-"아직 이 머리를 사용할 수 없는 레벨입니다.";
+"Bu saç şekli için seviyen çok düşük.";
 "[LS;456]";
 
-"동일한 머리 스타일로는 교체할 수 없습니다.";
+"Zaten bu saç şekline sahipsin.";
 "[LS;457]";
 
-"이미 둔갑중인 상태입니다.";
+"Dönüşmüş haldesin zaten.";
 "[LS;458]";
 
-"너무 멀리 있습니다";
+"Çok uzaksın.";
 "[LS;459]";
 
-"잘못된 둔갑 아이템입니다.";
+"Bu yanlış ticaret eşyası.";
 "[LS;460]";
 
-"나보다 너무 높은 레벨의 몬스터로는 변신 할 수 없습니다.";
+"Kendinden daha yüksek seviyeli bir canavara dönüşemezsin.";
 "[LS;461]";
 
-"레벨이 낮아 착용할 수 없습니다.";
+"Seviyen çok düşük olduğu için bu nesneyi kullanamıyorsun.";
 "[LS;462]";
 
-"근력이 낮아 착용할 수 없습니다.";
+"Bu nesneyi kullanmak için yeterli güce sahip değilsin.";
 "[LS;463]";
 
-"지능이 낮아 착용할 수 없습니다.";
+"Zekân çok düşük olduğu için bu nesneyi kullanamıyorsun.";
 "[LS;464]";
 
-"민첩이 낮아 착용할 수 없습니다.";
+"Bu nesneyi kullanabilmek için yeterli çevikliğe sahip değilsin.";
 "[LS;465]";
 
-"체력이 낮아 착용할 수 없습니다.";
+"Bu nesneyi kullanmak için yeterli canlılığa sahip değilsin.";
 "[LS;466]";
 
-"결혼하지 않은 상태에서 예물을 착용할 수 없습니다.";
+"Evli olmadığın için bu eşyayı kullanamazsın.";
 "[LS;467]";
 
-"같은 종류의 유니크 아이템 두 개를 동시에 장착할 수 없습니다.";
+"2.kez bu eşyayı giyemezsin.";
 "[LS;468]";
 
-"%s 에서 소켓 빠질때까지 남은 시간 %d";
+"%sgirişinin silinmesine kalan süre : %d";
 "[LS;469;%s;%d]";
 
-"이성간에만 할 수 있습니다.";
+"Bu sadece diğer cinsiyetle birlikte yapılabilen bir aksiyon.";
 "[LS;470]";
 
-"%s에 박혀있던 보석이 사라집니다.";
+"%s Mücevherinden bir değerli taş kayboldu.";
 "[LS;471;%s]";
 
-"<길드> 길드 이름이 적합하지 않습니다.";
+"[Guild] Lonca adı hatalı.";
 "[LS;472]";
 
-"<길드> 이미 같은 이름의 길드가 있습니다.";
+"[Guild] Bu Lonca adı zaten kullanılıyor.";
 "[LS;473]";
 
-"<길드> 길드를 생성할 수 없습니다.";
+"[Guild] Lonca kuramazsın.";
 "[LS;474]";
 
-"%s 길드가 %s 길드에 선전포고를 하였습니다!";
+"%s, %s loncasına karşı savaş ilan etti!";
 "[LS;475;%s;%s]";
 
-"<길드> %s 길드가 길드전을 거부하였습니다.";
+"[Guild] %s Lonca savaşını reddetti.";
 "[LS;476;%s]";
 
-"%s 길드와 %s 길드가 잠시 후 전쟁을 시작합니다!";
+"%s ile %s arasındaki lonca savaşı birkaç dakika içinde başlayacak!";
 "[LS;477;%s;%s]";
 
-"%s 길드와 %s 길드가 전쟁을 시작하였습니다!";
+"%s ile %s arasında lonca savaşı başladı!";
 "[LS;478;%s;%s]";
 
-"%s 길드와 %s 길드 사이의 전쟁이 무승부로 끝났습니다.";
+"%s ile %s arasındaki lonca savaşı berabere sonuçlandı!";
 "[LS;479;%s;%s]";
 
-"%s 길드가 %s 길드와의 전쟁에서 승리 했습니다.";
+"Lonca savaşında %s, %s loncasına karşı kazandı.";
 "[LS;480;%s;%s]";
 
-"이 행동은 상호동의 하에 가능 합니다.";
+"Bunun için eşinin onayı gerekli.";
 "[LS;481]";
 
-"<길드> 길드전이 취소 되었습니다.";
+"[Guild] Lonca savaşı iptal oldu.";
 "[LS;482]";
 
-"%s 길드와 %s 길드 사이의 전쟁이 취소되었습니다.";
+"%s ile %s arasındaki lonca savaşı iptal oldu!";
 "[LS;483;%s;%s]";
 
-"닫기";
+"Kapat";
 "[LS;484]";
 
-"전투가 시작 되어 취소 되었습니다.";
+"Hareket iptal edildi. Bir savaşa girdin.";
 "[LS;485]";
 
-"다른 컴퓨터에서 로그인 하여 접속을 종료 합니다.";
+"Biri hesabınıza giriş yaptı. Bağlantınız kesilecek.";
 "[LS;486]";
 
-"나무에서 부터 신비한 빛이 나옵니다.";
+"Ağaçtan gizemli bir ışık yayılıyor.";
 "[LS;487]";
 
-"%d분의 결제시간이 추가 되었습니다. (결제번호 %d)";
+"%d oyun süresi hesabınıza eklendi. (Ödeme Numarası %d)";
 "[LS;488;%d;%d]";
 
-"관전 모드로 길드전에 참가하셨습니다.";
+"Lonca savaşına izleyici olarak katılabilirsin.";
 "[LS;489]";
 
-"자신을 선택하시면 밖으로 나갈 수 있는 <관람 종료> 버튼이 나옵니다.";
+"Bir karakter seçerken <izlemeyi bitir> butonu görünür.";
 "[LS;490]";
 
-"길드전에 참가한 상대방 길드원이 아무도 없습니다.";
+"Burada düşman yok.";
 "[LS;491]";
 
-"%s님과의 대결 시작!";
+"%s ile olan savaş başladı!";
 "[LS;492;%s]";
 
-"1분 이내에 아무도 접속하지 않으면 길드전이 자동 종료됩니다.";
+"Eğer düşman bulunamazsa Lonca Savaşı otomatik olarak biter.";
 "[LS;493]";
 
-"길드전이 일찍 종료되어 무승부로 판정 되었습니다. (5분이 지나지 않음)";
+"Lonca Savaşı vaktinden önce bittiği için sonuç berabere sayılıyor.";
 "[LS;494]";
 
-"군주가 내린 축복으로 모든 에너지가 가득 채워집니다";
+"İmparatorların Kutsaması nedeniyle enerji yansıtıldı.";
 "[LS;495]";
 
-"%d 초 후에 군주의 축복을 사용할 수 있습니다";
+"%d saniye sonra İmparator Kutsamasını kullanabilirsin.";
 "[LS;496;%d]";
 
-"쿨타임 적용중  %d 후 사용가능";
+"%d saniye sonra İmparator Kutsamasını kullanabilirsin.";
 "[LS;496;%d]";
 
-"국고에 자금이 모자랍니다 국고 : %d ";
+"Yetersiz vergi geliri : %d";
 "[LS;497;%d]";
 
-"[TEST_ONLY]현재 국고 : %d ";
+"[TEST_ONLY]Vergi : %d";
 "[LS;498;%d]";
 
-"둔갑에 실패 하였습니다";
+"Dönüşüm sırasında hata oluştu.";
 "[LS;499]";
 
-"둔갑서 수련을 마첬습니다. 신선에게 찾아가세요.";
+"Dönüşümü tamamen öğrendin.";
 "[LS;500]";
 
-"말을 먼저 소환해주세요.";
+"Lütfen önce atını çağır.";
 "[LS;501]";
 
-"말을 돌려보냈습니다.";
+"Atını gönderdin.";
 "[LS;502]";
 
-"%s님이 대결신청을 했습니다. 승낙하려면 대결동의를 하세요.";
+"%s seni savaşa davet ediyor!";
 "[LS;503;%s]";
 
-"말에서 먼저 내려야 합니다.";
+"Atından inmelisin.";
 "[LS;504]";
 
-"말을 탄 상태에서는 먹이를 줄 수 없습니다.";
+"Atının üzerinde otururken onu besleyemezsin.";
 "[LS;505]";
 
-"말에게 %s%s 주었습니다.";
+"Ata %s%s yedirdin.";
 "[LS;506;%s;%s]";
 
-"%s 아이템이 필요합니다";
+"%s gerekli.";
 "[LS;507;%s]";
 
-"셧다운이 %d초 남았습니다.";
+"%d saniye sonra oyun kapanacak.";
 "[LS;508;%d]";
 
-"%d초 후 게임이 셧다운 됩니다.";
+"Oyun %d saniye sonra kapanacak.";
 "[LS;509;%d]";
 
-"%d초 남았습니다.";
+"%d saniye sonra oyun kapanacak.";
 "[LS;510;%d]";
 
-"취소 되었습니다.";
+"Çıkışınız iptal edildi.";
 "[LS;511]";
 
-"로그인 화면으로 돌아 갑니다. 잠시만 기다리세요.";
+"Giriş ekranına dön. Lütfen bekleyin.";
 "[LS;512]";
 
-"게임을 종료 합니다. 잠시만 기다리세요.";
+"Serverla olan bağlantınız kesiliyor. Lütfen bekleyin.";
 "[LS;513]";
 
-"%s에게 대결신청을 했습니다.";
+"%s savaşa davet ettiniz.";
 "[LS;514;%s]";
 
-"캐릭터를 전환 합니다. 잠시만 기다리세요.";
+"Karakteri değiştirdiniz. Lütfen bekleyin.";
 "[LS;515]";
 
-"아직 재시작 할 수 없습니다. (%d초 남음)";
+"Yeniden dirilme henüz mümkün değil. %d saniye bekle.";
 "[LS;516;%d]";
 
-"아직 재시작 할 수 없습니다.(%d초 남음)";
+"Yeniden dirilme henüz mümkün değil. %d saniye bekle.";
 "[LS;517;%d]";
 
-"아직 재시작 할 수 없습니다.(%d초 남음 )";
+"Yeniden dirilme henüz mümkün değil. %d saniye bekle.";
 "[LS;518;%d]";
 
-"아직 마을에서 재시작 할 수 없습니다. (%d 초 남음)";
+"Şehirde yeniden dirilme henüz mümkün değil. %d saniye bekle.";
 "[LS;519;%d]";
 
-"성지에서 부활 기회를 모두 잃었습니다! 마을로 이동합니다!";
+"Bekleme süresi doldu. Şehirde yeniden diriltileceksin.";
 "[LS;520]";
 
-"둔갑 중에는 능력을 올릴 수 없습니다.";
+"Dönüşmüş durumda olduğunuz sürece statünüzü değiştiremezsiniz.";
 "[LS;521]";
 
-"상대방이 대련중입니다.";
+"Oyuncu zaten dövüşüyor.";
 "[LS;522]";
 
-"<길드> 길드에 속해있지 않습니다.";
+"[Guild] Bu Loncaya ait değil.";
 "[LS;523]";
 
-"<길드> 길드 스킬 레벨을 변경할 권한이 없습니다.";
+"[Guild] Lonca Becerilerinin Seviyesini değiştiremezsin.";
 "[LS;524]";
 
-"잘못된 선택을 했습니다";
+"Seçiminiz yanlış.";
 "[LS;525]";
 
-"<창고> 잘못된 암호를 입력하셨습니다.";
+"[Storages] Yanlış şifre girdin.";
 "[LS;526]";
 
-"<창고> 창고가 이미 열려있습니다.";
+"[Storages] Depo zaten açık.";
 "[LS;527]";
 
-"<창고> 창고를 닫은지 10초 안에는 열 수 없습니다.";
+"[Storages] Yeniden depo açmak için 10 saniye beklemelisin.";
 "[LS;528]";
 
-"<창고> 거리가 멀어서 창고를 열 수 없습니다.";
+"[Storeroom] Depoya uzak olduğun için açamıyorsun.";
 "[LS;529]";
 
-"<파티> 서버 문제로 파티 관련 처리를 할 수 없습니다.";
+"[Group] Sunucu grup isteğini gerçekleştiremedi.";
 "[LS;530]";
 
-"<파티> 던전 안에서는 파티에서 나갈 수 없습니다.";
+"[Group] Zindandayken gruptan ayrılamazsın.";
 "[LS;531]";
 
-"<파티> 파티에서 나가셨습니다.";
+"[Group] Gruptan ayrıldın.";
 "[LS;532]";
 
-"<길드> 이미 다른 전쟁에 참전 중 입니다.";
+"[Guild] Loncanız zaten başka bir savaşa katılıyor.";
 "[LS;533]";
 
-"<길드> 길드전에 대한 권한이 없습니다.";
+"[Guild] Lonca savaşı için kimse yetkilendirilmedi.";
 "[LS;534]";
 
-"<길드> 그런 길드가 없습니다.";
+"[Guild] Bu isimde bir Lonca bulunamadı.";
 "[LS;535]";
 
-"이미 입후보되어있습니다";
+"Zaten bir aday var.";
 "[LS;536]";
 
-"이미 선전포고 중인 길드입니다.";
+"[Guild] Bu Lonca zaten bir savaşa katılıyor.";
 "[LS;537]";
 
-"<길드> 전비가 부족하여 길드전을 할 수 없습니다.";
+"[Guild] Lonca savaşına katılmak için yeterli Yang yok.";
 "[LS;538]";
 
-"<길드> 상대방 길드의 전비가 부족하여 길드전을 할 수 없습니다.";
+"[Guild] Bu Lonca, Lonca savaşı yapmak için yeterli Yang'a sahip değil.";
 "[LS;539]";
 
-"<길드> 이미 전쟁이 예약된 길드 입니다.";
+"[Guild] Bu Lonca zaten başka bir Lonca savaşı için kayıt edilmiş.";
 "[LS;540]";
 
-"<길드> 상대방 길드가 이미 전쟁 중 입니다.";
+"[Guild] Loncanız zaten başka bir savaşa katılıyor.";
 "[LS;541]";
 
-"<길드> 길드전을 하기 위해선 최소한 %d명이 있어야 합니다.";
+"[Guild] Lonca savaşına en az %d oyuncu katılması gerekiyor.";
 "[LS;543;%d]";
 
-"<길드> 상대방 길드의 레더 점수가 모자라서 길드전을 할 수 없습니다.";
+"[Guild] Lonca bir savaşta yer almak için yeterli Sıralama Puanına sahip değil.";
 "[LS;544]";
 
-"<길드> 상대방 길드의 길드원 수가 부족하여 길드전을 할 수 없습니다.";
+"[Guild] Lonca, Lonca Savaşına katılabilmek için yeterli üyeye sahip değil.";
 "[LS;545]";
 
-"레벨 20 이하는 핸드폰 번호를 등록할 수 없습니다.";
+"Cep telefonu numarası kaydedebilmek için 20.Seviyeden yüksek olmalısın.";
 "[LS;546]";
 
-"군주의 자격을 가지고 있지 않습니다";
+"İmparator olmak için gerekli özelliklere sahip değilsin.";
 "[LS;547]";
 
-"%s 님으로 부터 친구 등록을 거부 당했습니다.";
+"%s arkadaşlık isteğinizi reddetti.";
 "[LS;548;%s]";
 
-"이미 파티에 속해 있으므로 가입신청을 할 수 없습니다.";
+"Daveti kabul edemezsin, zaten bir grubun var.";
 "[LS;549]";
 
-"군주만이 사용가능 한 기능입니다";
+"Bunu sadece İmparator kullanabilir.";
 "[LS;550]";
 
-"%d 초간 쿨타임이 적용중입니다.";
+"Dinlenme Süresi yaklaşık %d saniye";
 "[LS;551;%d]";
 
-"국고에 돈이 부족합니다. 현재 : %lu 필요금액 : %lu";
+"Vergi eksikliği. Mevcut Sermaye : %u Eksik Sermaye : %u";
 "[LS;552;%u;%u]";
 
-"사용법: warpto <character name>";
+"Sıra: warpto <character name>";
 "[LS;553]";
 
-"타제국 유저에게는 이동할수 없습니다";
+"Bilinmeyen bir oyuncuya nakledemezsiniz.";
 "[LS;554]";
 
-"해당 유저는 %d 채널에 있습니다. (현재 채널 %d)";
+"Oyuncu %d kanala ekleniyor. (Bulunulan kanal: %d)";
 "[LS;555;%d;%d]";
 
-"%s 에게로 이동합니다";
+"%s yanına naklet.";
 "[LS;556;%s]";
 
-"타제국 유저는 소환 할수 없습니다";
+"Bilinmeyen bir oyuncuyu arayamazsın.";
 "[LS;557]";
 
-"<길드> 길드전중에는 사냥에 따른 이익이 없습니다.";
+"[Guild] Lonca savaşı sırasında avlanma, Tecrübe Puanı kazandırmıyor.";
 "[LS;558]";
 
-"군주의 축복으로 이지역 %s 유저는 HP,SP가 모두 채워집니다.";
+"İmparator kutsaması kullanıldığı zaman %s HP ve SP yeniden yüklenir.";
 "[LS;559;%s]";
 
-"나의 군주 정보";
+"Benim İmparatorluk Bilgim";
 "[LS;560]";
 
-"[%s군주] : %s  보유금액 %lld ";
+"[%sHükümdar] : %s Yang Sahip olunan %lld";
 "[LS;561;%s;%s;%lld]";
 
-"[%s군주] : %s  ";
+"[%sHükümdar] : %s";
 "[LS;562;%s;%s]";
 
-"군주 정보";
+"İmparator Bilgisi";
 "[LS;563]";
 
-"군주만이 사용할수 있는 기능입니다";
+"Bunu sadece bir İmparator kullanabilir.";
 "[LS;564]";
 
-"1-50 사이의 수치를 선택해주세요";
+"1 - 50 arasında bir rakam seç.";
 "[LS;565]";
 
-"소환할수 없는 몬스터 입니다. 소환가능한 몬스터는 홈페이지를 참조하세요";
+"Canavar çağrılamaz. Mob numarasını kontrol ediniz.";
 "[LS;567]";
 
-"최대 생명력 +%d";
+"Hayat Puanları +%d";
 "[LS;568;%d]";
 
-"최대 정신력 +%d";
+"Mana Puanı +%d";
 "[LS;569;%d]";
 
-"군주의 축복을 사용하였습니다.";
+"İmparator Kutsaması aktif.";
 "[LS;570]";
 
-"체력 +%d";
+"Dayanıklılık +%d";
 "[LS;571;%d]";
 
-"지능 +%d";
+"Zeka +%d";
 "[LS;572;%d]";
 
-"근력 +%d";
+"Güç +%d";
 "[LS;573;%d]";
 
-"민첩 +%d";
+"Çeviklik +%d";
 "[LS;574;%d]";
 
-"공격속도 +%d";
+"Saldırı Hızı +%d";
 "[LS;575;%d]";
 
-"이동속도 %d";
+"Hareket Hızı %d";
 "[LS;576;%d]";
 
-"쿨타임 -%d";
+"Dinlenme Süresi -%d";
 "[LS;577;%d]";
 
-"생명력 회복 +%d";
+"Geri Kazanılan Enerji +%d";
 "[LS;578;%d]";
 
-"정신력 회복 +%d";
+"Geri Kazanılan SP +%d";
 "[LS;579;%d]";
 
-"독공격 %d";
+"Zehirli Saldırı %d";
 "[LS;580;%d]";
 
-"스턴 +%d";
+"Star +%d";
 "[LS;582;%d]";
 
-"슬로우 +%d";
+"Hız azalması +%d";
 "[LS;583;%d]";
 
-"%d%% 확률로 치명타 공격";
+"Kritik saldırı şansı %%%d";
 "[LS;584;%d]";
 
-"%d%% 확률로 관통 공격";
+"Delici saldırı şansı %%%d";
 "[LS;585;%d]";
 
-"인간류 몬스터 타격치 +%d%%";
+"Yaratıklara karşı oyuncunun saldırı gücü +%%%d";
 "[LS;586;%d]";
 
-"동물류 몬스터 타격치 +%d%%";
+"Yaratıklara karşı Atın saldırı gücü +%%%d";
 "[LS;587;%d]";
 
-"웅귀족 타격치 +%d%%";
+"Wonggui karşısında saldırı artışı  +%%%d";
 "[LS;588;%d]";
 
-"밀교류 타격치 +%d%%";
+"Milgyo karşısında saldırı artışı +%%%d";
 "[LS;589;%d]";
 
-"시체류 타격치 +%d%%";
+"Ölümsüzlere karşı saldırı artışı: +%%%d";
 "[LS;590;%d]";
 
-"악마류 타격치 +%d%%";
+"Şeytanlara karşı saldırı artışı: +%%%d";
 "[LS;591;%d]";
 
-"군주의 사자후 영향으로 이지역 %s 유저는 3분간 10 %% 의 공격력이  증가됩니다";
+"İmparator Sa-Za-Hu sayesinde, oyuncu bu alanda %s 3 dakika için %%10 daha fazla saldırı gücü aldı.";
 "[LS;592;%s]";
 
-"타격치 %d%% 를 생명력으로 흡수";
+"Saldırı sırasında %%%d enerji emildi.";
 "[LS;593;%d]";
 
-"타력치 %d%% 를 정신력으로 흡수";
+"Saldırı sırasında %%%d SP emildi.";
 "[LS;594;%d]";
 
-"%d%% 확률로 타격시 상대 전신력 소모";
+"%%%d oranında SP düşmandan çalma şansı.";
 "[LS;595;%d]";
 
-"%d%% 확률로 피해시 정신력 회복";
+"Oranında SP emiliyor %%%d.";
 "[LS;596;%d]";
 
-"물리타격시 블럭 확률 %d%%";
+"Yakın dövüş saldırısını engelleme şansı %%%d";
 "[LS;597;%d]";
 
-"활 공격 회피 확률 %d%%";
+"Uzak dövüş saldırısını engelleme şansı %%%d";
 "[LS;598;%d]";
 
-"한손검 방어 %d%%";
+"Kılıç Savunması %%%d";
 "[LS;599;%d]";
 
-"양손검 방어 %d%%";
+"Çift-El Savunması %%%d";
 "[LS;600;%d]";
 
-"두손검 방어 %d%%";
+"Çift-El Savunması %%%d";
 "[LS;601;%d]";
 
-"방울 방어 %d%%";
+"Çan Savunması %%%d";
 "[LS;602;%d]";
 
-"군주의 금강권 영향으로 이지역 %s 유저는 3분간 10 %% 의 방어력이  증가됩니다";
+"İmparator Geum-Gang-Gwon sayesinde, oyuncu %s 3 dakika süreyle %%10 daha fazla savunma aldı.";
 "[LS;603;%s]";
 
-"부채 방어 %d%%";
+"Yelpaze Savunması %%%d";
 "[LS;604;%d]";
 
-"활공격 저항 %d%%";
+"Uzak Dövüş Direnci %%%d";
 "[LS;605;%d]";
 
-"화염 저항 %d%%";
+"Ateşe dayanıklılık %%%d";
 "[LS;606;%d]";
 
-"전기 저항 %d%%";
+"Şimşek direnci %%%d";
 "[LS;607;%d]";
 
-"마법 저항 %d%%";
+"Büyü Savunması %%%d";
 "[LS;608;%d]";
 
-"바람 저항 %d%%";
+"Rüzgara Dayanıklılık %%%d";
 "[LS;609;%d]";
 
-"직접 타격치 반사 확률 : %d%%";
+"Doğrudan Vuruş Yansıtma: %%%d";
 "[LS;610;%d]";
 
-"저주 되돌리기 확률 %d%%";
+"Lanet Yansıtma: %%%d";
 "[LS;611;%d]";
 
-"독 저항 %d%%";
+"Zehire karşı koyma %%%d";
 "[LS;612;%d]";
 
-"%d%% 확률로 적퇴치시 정신력 회복";
+"Eğer kazanırsan SP %%%d artacak.";
 "[LS;613;%d]";
 
-"OX 이벤트가 이미 진행중입니다(flag: %d)";
+"Etkinlik başladı bile. (Flag: %d)";
 "[LS;614;%d]";
 
-"%d%% 확률로 적퇴치시 경험치 추가 상승";
+"Eğer kazanırsan tecrübe %%%d artacak.";
 "[LS;615;%d]";
 
-"%d%% 확률로 적퇴치시 돈 2배 드롭";
+"Eğer kazanırsan Yang %%%d artacak.";
 "[LS;616;%d]";
 
-"%d%% 확률로 적퇴치시 아이템 2배 드롭";
+"Eğer kazanırsan ele geçirilen nesne %%%d artacak.";
 "[LS;617;%d]";
 
-"물약 사용시 %d%% 성능 증가";
+"İksir kullandığın zaman güç %%%d artacak.";
 "[LS;618;%d]";
 
-"%d%% 확률로 적퇴치시 생명력 회복";
+"Kazandıktan sonra hayat puanın %%%d oranında artacak.";
 "[LS;619;%d]";
 
-"기절하지 않음 %d%%";
+"Baş dönmesi yok %%%d";
 "[LS;620;%d]";
 
-"느려지지 않음 %d%%";
+"Yavaşlama yok %%%d";
 "[LS;621;%d]";
 
-"넘어지지 않음 %d%%";
+"Düşmek yok %%%d";
 "[LS;622;%d]";
 
-"공격력 +%d";
+"Saldırı gücü + %d";
 "[LS;623;%d]";
 
-"방어력 +%d";
+"Zırh + %d";
 "[LS;624;%d]";
 
-"OX 문제 스크립트 로딩 실패";
+"OX Quiz metni yüklenemedi.";
 "[LS;625]";
 
-"마법 공격력 +%d";
+"Büyülü Saldırı + %d";
 "[LS;626;%d]";
 
-"마법 방어력 +%d";
+"Büyü Savunması + %d";
 "[LS;627;%d]";
 
-"최대 지구력 +%d";
+"Max. Dayanıklılık + %d";
 "[LS;628;%d]";
 
-"무사에게 강함 +%d%%";
+"Savaşçılara karşı güçlü +%%%d";
 "[LS;629;%d]";
 
-"자객에게 강함 +%d%%";
+"Ninjalara karşı güçlü +%%%d";
 "[LS;630;%d]";
 
-"수라에게 강함 +%d%%";
+"Suralara karşı güçlü +%%%d";
 "[LS;631;%d]";
 
-"무당에게 강함 +%d%%";
+"Şamanlara karşı güçlü +%%%d";
 "[LS;632;%d]";
 
-"몬스터에게 강함 +%d%%";
+"Canavarlara karşı güçlü +%%%d";
 "[LS;633;%d]";
 
-"공격력 +%d%%";
+"Saldırı +%%%d";
 "[LS;634;%d]";
 
-"방어력 +%d%%";
+"Savunma +%%%d";
 "[LS;635;%d]";
 
-"OX 문제 스크립트 로딩 성공";
+"OX Quiz metni yüklendi.";
 "[LS;636]";
 
-"경험치 %d%%";
+"Tecrübe %%%d";
 "[LS;637;%d]";
 
-"아이템 드롭율 %.1f배";
+"Eşya düşürme oranı %.1f kat";
 "Chance to find an Item %. 1f";
 
-"돈 드롭율 %.1f배";
+"Yang düşürme oranı %.1f kat";
 "Chance to find Yang %. 1f";
 
-"최대 생명력 +%d%%";
+"Enerji üst sınırı +%%%d";
 "[LS;640;%d]";
 
-"최대 정신력 +%d%%";
+"Enerji üst sınırı +%%%d";
 "[LS;641;%d]";
 
-"스킬 데미지 %d%%";
+"Beceri Hasarı %%%d";
 "[LS;642;%d]";
 
-"평타 데미지 %d%%";
+"Vuruş Hasarı %%%d";
 "[LS;643;%d]";
 
-"스킬 데미지 저항 %d%%";
+"Beceri hasarına dayanıklılık %%%d";
 "[LS;644;%d]";
 
-"평타 데미지 저항 %d%%";
+"Vuruş direnci %%%d";
 "[LS;645;%d]";
 
-"무사공격에 %d%% 저항";
+"Savaşçı ataklarında %%%d dayanıklılık";
 "[LS;646;%d]";
 
-"안녕하세요. 메틴2 입니다.";
+"Metin2'ye Hoşgeldin.";
 "[LS;647]";
 
-"자객공격에 %d%% 저항";
+"Ninja ataklarında %%%d dayanıklılık";
 "[LS;648;%d]";
 
-"수라공격에 %d%% 저항";
+"Sura ataklarında %%%d dayanıklılık";
 "[LS;649;%d]";
 
-"무당공격에 %d%% 저항";
+"Şaman ataklarında %%%d dayanıklılık";
 "[LS;650;%d]";
 
-" (만료일 : %d년 %d월 %d일)";
+"(Prosedür: %d y- %d m - %d d)";
 "[LS;651;%d;%d;%d]";
 
-"채팅 금지 상태입니다.";
+"Sohbetiniz engellendi.";
 "[LS;652]";
 
-"외치기는 유료회원만 사용할수 있습니다";
+"Çağırmak için daha yüksek seviyede olman gerekiyor.";
 "[LS;653]";
 
-"외치기는 레벨 %d 이상만 사용 가능 합니다.";
+"Çağırmak için en az %d. seviyede olman gerekiyor.";
 "[LS;654;%d]";
 
-"파티 중이 아닙니다.";
+"Bu Grupta değilsin.";
 "[LS;655]";
 
-"길드에 가입하지 않았습니다.";
+"Loncaya katılamadın.";
 "[LS;656]";
 
-"상대방이 메신져 추가 거부 상태입니다.";
+"Oyuncu, arkadaş listene eklenmeyi reddetti.";
 "[LS;657]";
 
-"OX 이벤트가 시작되었습니다.";
+"OX Etkinlik başladı.";
 "[LS;658]";
 
-"<메신져> 운영자는 메신져에 추가할 수 없습니다.";
+"[Friends] Listene bir GM ekleyemezsin.";
 "[LS;659]";
 
-"%s 님은 접속되 있지 않습니다.";
+"%s çevrimiçi değil.";
 "[LS;660;%s]";
 
-"거래 후 %d초 이내에 창고를 열수 없습니다.";
+"Ticaret yaptıktan %d saniye sonra dükkân açabilirsin.";
 "[LS;661;%d]";
 
-"창고를 연후 %d초 이내에는 거래를 할수 없습니다.";
+"%d saniye içinde tekrar ticaret yapabilirsin.";
 "[LS;662;%d]";
 
-"액수가 20억 냥을 초과하여 거래를 할수가 없습니다..";
+"2 milyardan fazla Yang'ın var.Ticaret yapamazsın.";
 "[LS;663]";
 
-"다른 거래중일경우 개인상점을 열수가 없습니다.";
+"Başka bir pencere açıkken özel dükkan açamazsın.";
 "[LS;664]";
 
-"상대방의 총금액이 20억 냥을 초과하여 거래를 할수가 없습니다..";
+"Bu, 2 milyar Yang üst sınırını aşacağı için ticaret yapamazsın.";
 "[LS;665]";
 
-"<창고> 옮길 수 없는 위치입니다.";
+"[Storages] Hareket mümkün değil.";
 "[LS;666]";
 
-"<창고> 이 아이템은 넣을 수 없습니다.";
+"[Storages] Eşya depolanamaz.";
 "[LS;667]";
 
-"<파티> 파티요청을 한 캐릭터를 찾을수 없습니다.";
+"[Group] Davet edilen oyuncu çevrimiçi değil.";
 "[LS;668]";
 
-"을두지를 통하여 입장 가능합니다.";
+"Uriel girmene izin verdi.";
 "[LS;670]";
 
-"<파티> 리더만 변경할 수 있습니다.";
+"[Group] Bunu sadece Grup Lideri değiştirebilir.";
 "[LS;671]";
 
-"<파티> 상태를 변경하려는 사람이 파티원이 아닙니다.";
+"[Group] Hedef grubunuzun üyesi değil.";
 "[LS;672]";
 
-"<파티> 던전 안에서는 파티에서 추방할 수 없습니다.";
+"[Group] Zindandayken oyuncu atamazsın.";
 "[LS;673]";
 
-"<파티> 던젼내에서는 파티원을 추방할 수 없습니다.";
+"[Group] Zindandayken oyuncu atamazsın.";
 "[LS;673]";
 
-"<파티> 파티에서 추방당하셨습니다.";
+"[Group] Gruptan atıldın.";
 "[LS;675]";
 
-"<파티> 던젼내에서는 파티를 나갈 수 없습니다.";
+"[Group] Zindandayken gruptan ayrılamazsın.";
 "[LS;531]";
 
-"<파티> 다른 파티원을 탈퇴시킬 수 없습니다.";
+"[Group] Grup üyelerini atamazsın.";
 "[LS;677]";
 
-"<길드> 해산한 후 %d일 이내에는 길드를 만들 수 없습니다.";
+"[Guild] Lonca silindikten sonra, %d gün yeni Lonca kuramazsın.";
 "[LS;678;%d]";
 
-"<길드> 탈퇴한 후 %d일 이내에는 길드를 만들 수 없습니다.";
+"[Guild] Bir Loncadan ayrıldıktan sonra  %d gün yeni Lonca kuramazsın.";
 "[LS;679;%d]";
 
-"적합하지 않은 길드 이름 입니다.";
+"Lonca ismi geçersiz.";
 "[LS;680]";
 
-"많은 참여 부탁드립니다.";
+"Katılım için birçok oyuncu arıyoruz.";
 "[LS;681]";
 
-"<길드> [%s] 길드가 생성되었습니다.";
+"[Guild] [%s] Lonca kuruldu.";
 "[LS;682;%s]";
 
-"<길드> 길드 생성에 실패하였습니다.";
+"[Guild] Lonca kurulamadı.";
 "[LS;683]";
 
-"<파티> 파티 기술은 파티장만 사용할 수 있습니다.";
+"[Group] Grup Becerilerini sadece grup lideri kullanabilir.";
 "[LS;684]";
 
-"<파티> 소환하려는 대상을 찾을 수 없습니다.";
+"[Group] Hedef bulunamadı.";
 "[LS;685]";
 
-"<길드> 잘못된 금액입니다.";
+"[Guild] Yanlış Yang toplamı.";
 "[LS;686]";
 
-"<길드> 가지고 있는 돈이 부족합니다.";
+"[Guild] Yeterli Yang yok.";
 "[LS;687]";
 
-"<길드> 그러한 사람을 찾을 수 없습니다.";
+"[Guild] İstenen oyuncu bulunamadı.";
 "[LS;688]";
 
-"<길드> 상대방이 같은 길드가 아닙니다.";
+"[Guild] Oyuncu aynı Loncada değil.";
 "[LS;689]";
 
-"<길드> 길드원을 강제 탈퇴 시킬 권한이 없습니다.";
+"[Guild] Lonca Üyelerini atamazsın.";
 "[LS;690]";
 
-"<길드> 길드원 %s 님을 강제 탈퇴 시켰습니다.";
+"[Guild] Lonca Üyesi %s Loncadan atıldı.";
 "[LS;691;%s]";
 
-"OX이벤트가 닫히지 않았거나, 퀴즈 출제중입니다.(flag: %d)";
+"OX Etkinlik henüz bitmedi. Hatalar oluştu. (Flag: %d)";
 "[LS;692;%d]";
 
-"<길드> 길드원을 강제 탈퇴 시켰습니다.";
+"[Guild] Lonca üyesini attın.";
 "[LS;693]";
 
-"<길드> 직위 이름을 변경할 권한이 없습니다.";
+"[Guild] Rütbe ismini değiştiremezsin.";
 "[LS;694]";
 
-"<길드> 길드장의 직위 이름은 변경할 수 없습니다.";
+"[Guild] Lonca Liderinin gücü değiştirilemez.";
 "[LS;695]";
 
-"<길드> 적합하지 않은 직위 이름 입니다.";
+"[Guild] Bu rütbe ismi geçersiz.";
 "[LS;696]";
 
-"<길드> 직위 권한을 변경할 권한이 없습니다.";
+"[Guild] Pozisyonunu değiştiremezsin.";
 "[LS;697]";
 
-"<길드> 길드장의 권한은 변경할 수 없습니다.";
+"[Guild] Lonca Liderinin yetkileri değiştirilemez.";
 "[LS;698]";
 
-"<길드> %u의 경험치를 투자하였습니다.";
+"[Guild] %u Tecrübe kullanıldı.";
 "[LS;699;%u]";
 
-"<길드> 경험치 투자에 실패하였습니다.";
+"[Guild] Tecrübe kullanımı başarısız oldu.";
 "[LS;700]";
 
-"<길드> 돈이 부족합니다.";
+"[Lonca] Lonca kasasında yeterli Yang yok.";
 "[LS;701]";
 
-"<길드> 용신력 회복에 실패하였습니다.";
+"[Guild] Ejderha hayaleti yüklenemedi.";
 "[LS;702]";
 
-"잠시 후 OX 이벤트를 다시 시작하겠습니다.";
+"Kısa süre içinde OX Etkinlik tekrar başlayacak.";
 "[LS;703]";
 
-"<길드> 공지글을 작성할 권한이 없습니다.";
+"[Guild] Duyuru yapamazsın.";
 "[LS;704]";
 
-"<길드> 직위를 변경할 권한이 없습니다.";
+"[Guild] Pozisyonunu değiştiremezsin.";
 "[LS;705]";
 
-"<길드> 길드장의 직위는 변경할 수 없습니다.";
+"[Guild] Lonca liderinin rütbesi değiştirilemez.";
 "[LS;706]";
 
-"<길드> 길드장으로 직위를 변경할 수 없습니다.";
+"[Guild] Kendini Lonca lideri yapamazsın.";
 "[LS;707]";
 
-"<길드> 장군을 지정할 권한이 없습니다.";
+"[Guild] Lideri seçemezsin.";
 "[LS;708]";
 
-"<길드> 더이상 장수를 지정할 수 없습니다.";
+"[Guild] Daha fazla Lider seçemezsin.";
 "[LS;709]";
 
-"아이템을 건네줄 수 없습니다.";
+"Bu nesneyle ticaret yapamazsın.";
 "[LS;710]";
 
-"불법 프로그램이 감지 되어 게임이 종료 됩니다.";
+"Yasadışı yazılım tespit edildi. Oyun kapatılacak.";
 "[LS;711]";
 
-"소유 돈이 20억냥을 넘어 거래를 핼수가 없습니다.";
+"2 milyardan fazla Yang sahibisiniz. Ticaret yapamazsınız.";
 "[LS;712]";
 
-"금액이 부족합니다.";
+"Geçersiz Yang.";
 "[LS;713]";
 
-"현재 이벤트 참가자 분들은 마을로 이동 되겠습니다.";
+"Geçerli etkinlik bir alanla kısıtlı.";
 "[LS;714]";
 
-"아이템 룰렛 시작.";
+"Nesne Ruleti Başlat.";
 "[LS;715]";
 
-"머니  룰렛 시작.";
+"Yang Ruleti Başlat.";
 "[LS;716]";
 
-"현재 온라인 상태 입니다. 귓말을 이용하세요.";
+"Oyuncu online. Lütfen fısıltı kullanın.";
 "[LS;717]";
 
-"핸드폰 번호가 등록되어 있지 않습니다.";
+"Cep telefonu numarası kayıtlı değil.";
 "[LS;718]";
 
-"문자 메세지 전송은 레벨 20부터 할 수 있습니다.";
+"Yazılı mesaj yollayabilmek için en az 20.Seviye olman gerekli.";
 "[LS;719]";
 
-"문자 메세지 전송에는 2000원이 필요 합니다.";
+"Yazılı mesaj yollamak için 2000 Yang gerekli.";
 "[LS;720]";
 
-"문자 메세지를 전송 했습니다.";
+"Yazılı mesajınız yollandı.";
 "[LS;721]";
 
-"%s 길드의 %s이 %d%% 증가했습니다!";
+"Loncanın %s %s %%%d derecesine yükseldi!";
 "[LS;722;%s;%s;%d]";
 
-"%s 길드의 %s이 정상으로 돌아왔습니다.";
+"Loncanın %s %s tekrar normal.";
 "[LS;723;%s;%s]";
 
-"%s의 %s이 %d%% 증가했습니다!";
+"%s: %s, %%%d oranında yükseldi!";
 "[LS;724;%s;%s;%d]";
 
-"%s의 %s이 정상으로 돌아왔습니다.";
+"%s 's %s tekrar normal.";
 "[LS;726;%s;%s]";
 
-"곡괭이 수련도가 최대(%d)가 되었습니다.";
+"Madencilik Puanın maksimuma ulaştı. (%d)";
 "[LS;727;%d]";
 
-"곡괭이가 최대 수련도에 도달하였습니다.";
+"Madencilik Puanlarınız en üst Seviyeye ulaştı.";
 "[LS;728]";
 
-"나무꾼를 통해 다음 레벨의 곡괭이로 업그레이드 할 수 있습니다.";
+"Kazmanı, oduncu Deokbae'nin yardımıyla geliştirebilirsin.";
 "[LS;729]";
 
-"곡괭이의 수련도가 증가하였습니다! (%d/%d)";
+"Madencilik Puanların arttı! (%d/%d)";
 "[LS;730;%d;%d]";
 
-"곡괭이를 들고 있지 않아서 캘 수 없습니다.";
+"Kazma olmadan madencilik yapamazsın.";
 "[LS;731]";
 
-"더이상 캐낼 수 없습니다.";
+"Burada maden yok.";
 "[LS;732]";
 
-"채광에 성공하였습니다.";
+"Madencilik başarılı.";
 "[LS;733]";
 
-"채광에 실패하였습니다.";
+"Madencilik başarısız.";
 "[LS;734]";
 
-"<메신져> %s 님을 친구로 추가하였습니다.";
+"[Friends] %s arkadaş olarak eklendi.";
 "[LS;735;%s]";
 
-"잠시 후 마을로 이동되겠습니다.";
+"Kısa süre içinde oyuncu şehre ışınlanacak.";
 "[LS;736]";
 
-"<메신져> %s 님을 메신저에서 삭제하였습니다.";
+"[Friends] %s listenden silindi.";
 "[LS;737;%s]";
 
-"서버에 치명적인 오류가 발생하여 자동으로 재부팅됩니다.";
+"Kritik sunucu hatası. Sunucu otomatik olarak yeniden başlatılacak.";
 "[LS;738]";
 
-"10초후 자동으로 접속이 종료되며,";
+"10 saniye içinde bağlantınız kesilecek.";
 "[LS;739]";
 
-"5분 후에 정상적으로 접속하실수 있습니다.";
+"5 dakika sonra tekrar bağlanabilirsiniz.";
 "[LS;740]";
 
-"(%s) 길드가 생성되었습니다. [임시]";
+"(%s) Lonca kuruldu. [Temporary]";
 "[LS;741;%s]";
 
-"현재 전쟁중인 길드 입니다";
+"Bu lonca savaşta.";
 "[LS;742]";
 
-"%s: 존재하지 않는 길드 입니다.";
+"%s: Lonca bulunamadı.";
 "[LS;743;%s]";
 
-"그런 이름 또는 번호의 길드가 없습니다.";
+"Belirtilen isim veya numarada lonca mevcut değil.";
 "[LS;744]";
 
-"존재하지 않는 건물입니다.";
+"Bina mevcut değil.";
 "[LS;745]";
 
-"같이 지을 수 없는 종류의 건물이 지어져 있습니다.";
+"Bu tip binalar sadece bir kez inşa edilebilir.";
 "[LS;746]";
 
-"OX이벤트 맵을 먼저 닫아 주세요.(Flag: %d)";
+"Önce OX Etkinlik haritasını kapat. (Flag: %d)";
 "[LS;747;%d]";
 
-"건설에 필요한 건물이 지어져 있지 않습니다.";
+"İlk olarak temel binaları inşa etmelisin.";
 "[LS;748]";
 
-"건물 비용 정보 이상으로 건설 작업에 실패했습니다.";
+"Yanlış fiyat nedeniyle bina inşa edilemedi.";
 "[LS;749]";
 
-"건설 비용이 부족합니다.";
+"Binayi inşa edebilmek için loncan yeterli Yang'a sahip değil.";
 "[LS;750]";
 
-"자재가 부족하여 건설할 수 없습니다.";
+"Bu binayı inşa edebilmek için yeterli kaynağın yok.";
 "[LS;751]";
 
-"건물을 지을 수 없는 위치입니다.";
+"Bu alana bir bina inşa edemezsin.";
 "[LS;752]";
 
-"존재하지 않는 캐릭터 입니다.";
+"Karakter bulunamadı.";
 "[LS;753]";
 
-"대련 강제 종료 실패";
+"Düello iptal edilmedi.";
 "[LS;754]";
 
-"대련 강제 종료 성공";
+"Düello iptali başarılı.";
 "[LS;755]";
 
-"대련이 성공적으로 시작 되었습니다.";
+"Düello başarıyla başladı.";
 "[LS;756]";
 
-"대련 시작에 문제가 있습니다.";
+"Düellonun başlamasıyla ilgili bir problem var.";
 "[LS;757]";
 
-"문제를 출제하지 못했습니다.";
+"Hata oluşmadı.";
 "[LS;758]";
 
-"대련자가 없습니다.";
+"Burada savaşçı yok.";
 "[LS;759]";
 
-"남은 스탯 포인트가 없습니다.";
+"Statü Puanı kalmadı.";
 "[LS;760]";
 
-"남은 스탯 포인트가 적습니다.";
+"Kalan Statü puanları çok düşük.";
 "[LS;761]";
 
-"값을 잘못 입력하였습니다.";
+"Yanlış değer girdin.";
 "[LS;762]";
 
-"명령어의 서브 커맨드가 잘못 되었습니다.";
+"Sıralama veya alt sıralama yanlış.";
 "[LS;763]";
 
-"플레이어 %d 와 플레이어  %d를 파혼시킵니다..";
+"%d ve %d oyuncuları arasındaki anlaşma bozuldu.";
 "[LS;764;%d;%d]";
 
-"룻렛을 돌립니다. 금액 %d";
+"%d Yang için rulet çevir.";
 "[LS;765;%d]";
 
-"아이템로그가 syslog 에 남았습니다";
+"Nesne logları, sistem loglarının içine yerleştirildi.";
 "[LS;766]";
 
-"각제국 진행 정보";
+"Krallık Bilgileri";
 "[LS;767]";
 
-"선택 맵 정보 성지 %d 통로 %d %d %d";
+"Haritadan kutsal alan bilgisini seç %d Giriş Yap %d %d %d";
 "[LS;768;%d;%d;%d;%d]";
 
-"문제를 출제하였습니다.";
+"Bir hata oluştu.";
 "[LS;769]";
 
-"%s killcount %d mobkillcount %d bosskillcount %d 성지 진입수 %d";
+"%s öldürülen %d öldürülen mob %d öldürülen lider %d Kutsal alan numarası %d";
 "[LS;770;%s;%d;%d;%d;%d]";
 
-"나의 삼거리 진행정보";
+"İmparatorluk savaşı hakkında bilgi";
 "[LS;771]";
 
-"퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오.";
+"İsteğin yükleniyor. Anlayışın için teşekkür ederiz.";
 "[LS;772]";
 
-"다른거래창이 열린상태에서는 창고를 열수가 없습니다.";
+"Başka bir pencere açıkken depo açamazsın.";
 "[LS;773]";
 
-"<창고> 창고 비밀번호가 변경되었습니다.";
+"[Storeroom] Depo şifresi değişti.";
 "[LS;774]";
 
-"<창고> 기존 비밀번호가 틀렸습니다.";
+"[Storages] Yanlış şifre girdin.";
 "[LS;775]";
 
-"결재기간이 %d분 후 만료 됩니다.";
+"Oyun süreniz %d dakika içinde doluyor.";
 "[LS;776;%d]";
 
-"정상적으로 투표를하였습니다.";
+"Düzenli olarak oylanır.";
 "[LS;777]";
 
-"이미투표를 했음";
+"Zaten oy vermiştin.";
 "[LS;778]";
 
-"%s 님은 정상적으로 출마를 하였습니다.";
+"%s oyuncu zaten oylamada.";
 "[LS;779;%s]";
 
-"OX이벤트가 열려 있지 않거나 문제 출제중입니다.(Flag: %d)";
+"OX Etkinlik bitti. Herhangi bir hata oluşmadı. (Flag: %d)";
 "[LS;781;%d]";
 
-"출마를 할수가 없습니다";
+"Oylanamaz.";
 "[LS;782]";
 
-"현재 %s 국고에는 %lu 의 돈이 있습니다";
+"%s hala %u Yang sahibi.";
 "[LS;783;%s;%u]";
 
-"현재 %s 국고에는 %d 의 돈이 있습니다";
+"%s hala %d Yang sahibi";
 "[LS;784;%s;%d]";
 
-"국고에 돈이 부족하거나 돈을 가져올수 없는 상황입니다";
+"Yeterli Yang'a sahip değilsin.";
 "[LS;785]";
 
-" %s 군주 후보에서 삭제하였습니다";
+"İmparator adayı olarak %s silindi.";
 "[LS;786;%s]";
 
-" %s 는 군주 후보가 아닙니다.";
+"%s İmparator olmak için bir aday değil.";
 "[LS;787;%s]";
 
-" %s 군주로 입명 했습니다.";
+"%s İmparator adayı olarak gösterildi.";
 "[LS;788;%s]";
 
-" %s 는 군주로 입명할수 없습니다 .";
+"%s İmparatorluğa aday olamaz.";
 "[LS;789;%s]";
 
-" %s 군주르 제거 하였습니다..";
+"%s İmparatorluk görevini bıraktı.";
 "[LS;790;%s]";
 
-" %s 군주를 제거 할수 없습니다.";
+"%s İmparatoru görevi bırakamaz.";
 "[LS;791;%s]";
 
-"더 이상 OX이벤트 참가자를 받지 않습니다.";
+"OX Etkinliğine daha fazla oyuncu katılamaz.";
 "[LS;792]";
 
-"신수국";
+"Shinsoo Krallığı";
 "[LS;793]";
 
-"천조국";
+"Chunjo Krallığı";
 "[LS;794]";
 
-"진노국";
+"Jinno Krallığı";
 "[LS;795]";
 
-"낚시대의 수련도가 증가하였습니다! (%d/%d)";
+"Balıkçılık puanınız arttı! (%d/%d)";
 "[LS;796;%d;%d]";
 
-"낚시대가 최대 수련도에 도달하였습니다.";
+"Maksimum Balıkçılık Puanı'na ulaştın.";
 "[LS;797]";
 
-"어부를 통해 다음 레벨의 낚시대로 업그레이드 할 수 있습니다.";
+"Balıkçının yanına git ve onun yardımıyla oltanı geliştir!";
 "[LS;798]";
 
-"고기가 미끼만 빼먹고 잽싸게 도망칩니다.";
+"Balık yemini kaybettin.";
 "[LS;799]";
 
-"고기가 잡혔습니다! (%s)";
+"Bir balık yakaladın! (%s)";
 "[LS;800;%s]";
 
-"이번에 잡은 물고기의 길이는 %.2fcm";
+"Yakaladığınız balığın boyu %.2fcm";
 "The length of the captured fish is %.2fcm.";
 
-"낚시이벤트월척붕어";
+"Balıkçılık olayı 'Büyük Sudak Balığı'";
 "[LS;802]";
 
-"OX이벤트의 나머지 인원을 기록하였습니다.";
+"OX Etkinlikteki diğer katılımcılar listelendi.";
 "[LS;803]";
 
-"낚시이벤트잉어";
+"Balıkçılık olayı 'Sazan Balığı'";
 "[LS;804]";
 
-"%s : %d 마리";
+"%s: %d";
 "[LS;805;%s;%d]";
 
-"%d 종류 %d 마리 낚음";
+"%d nın %d Yakaladın.";
 "[LS;806;%d;%d]";
 
-"고기가 흔적도 없이 사라집니다.";
+"Balık derin suda kayboldu.";
 "[LS;807]";
 
-"배 속에서 조개가 나왔습니다.";
+"Balığın içinde bir istiridye var.";
 "[LS;808]";
 
-"배 속에서 지렁이가 나왔습니다.";
+"Balığın içinde bir solucan var.";
 "[LS;809]";
 
-"%s를 구웠습니다.";
+"Ateşte %s kızartıyorsun.";
 "[LS;810;%s]";
 
-"20억 냥을 초과하여 상점을 열수가 없습니다";
+"Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.";
 "[LS;811]";
 
-"비속어나 은어가 포함된 상점 이름으로 상점을 열 수 없습니다.";
+"Depona hatalı bir isim veremezsin.";
 "[LS;812]";
 
-"유료화 아이템은 개인상점에서 판매할 수 없습니다.";
+"Nesne Market eşyalarını özel markette satamazsın.";
 "[LS;813]";
 
-"OX이벤트의 나머지 인원 기록을 실패했습니다.";
+"OX Etkinlikteki diğer katılımcılar listelenemedi.";
 "[LS;814]";
 
-"채광을 중단하였습니다.";
+"Madencilik bitti.";
 "[LS;815]";
 
-"곡괭이를 장착하세요.";
+"Maden çıkarmak için bir kazmaya ihtiyacın var!";
 "[LS;816]";
 
-"낚시대를 장착 하세요.";
+"Lütfen bir olta seç.";
 "[LS;817]";
 
-"미끼를 끼고 던져 주세요.";
+"Önce yemi çengele geçir.";
 "[LS;818]";
 
-"낚시대가 아닌 물건으로 낚시를 할 수 없습니다!";
+"Oltasız balığa gidemezsin.";
 "[LS;819]";
 
-"파티장이 접속 상태가 아니라서 요청을 할 수 없습니다.";
+"[Group] İstekte bulunamazsın çünkü grup lideri çevrim içi değil.";
 "[LS;820]";
 
-"<파티> 다른 제국과 파티를 이룰 수 없습니다.";
+"[Group] Diğer Krallıktan olan oyuncularla grup oluşturamazsın.";
 "[LS;821]";
 
-"<파티> 던전 안에서는 파티 초대를 할 수 없습니다.";
+"[Group] Zindandayken oyuncu davet edemezsin.";
 "[LS;822]";
 
-"<파티> 관전 모드에선 파티 초대를 할 수 없습니다.";
+"[Group] İzleyici modundayken oyuncu davet edemezsin.";
 "[LS;823]";
 
-"<파티> -30 ~ +30 레벨 이내의 상대방만 초대할 수 있습니다.";
+"[Group] -30 ile +30 Seviye aralığında olan oyuncuları davet edebilirsin.";
 "[LS;824]";
 
-"현재 남은 참가자수 : %d";
+"Diğer Katılımcıların sayısı : %d";
 "[LS;825;%d]";
 
-"<파티> 파티내 최고 레벨 보다 30레벨이 낮아 초대할 수 없습니다.";
+"[Group] Bu oyuncuyu seviyesi çok düşük olduğu için davet edemezsin.";
 "[LS;826]";
 
-"<파티> 파티내 최저 레벨 보다 30레벨이 높아 초대할 수 없습니다.";
+"[Group] Bu oyuncuyu seviyesi çok yüksek olduğu için davet edemezsin.";
 "[LS;827]";
 
-"<파티> 더 이상 파티원을 초대할 수 없습니다.";
+"[Group] Gruba daha fazla oyuncu davet edemezsin.";
 "[LS;828]";
 
-"%s 님에게 파티가입 신청을 했습니다.";
+"%s Grubuna katılmak istiyor musun?";
 "[LS;829;%s]";
 
-"상대방이 파티에 속해있지 않습니다.";
+"Oyuncu bu grupta değil.";
 "[LS;830]";
 
-"<파티> 파티의 인원제한이 초과하여 파티에 참가할 수 없습니다.";
+"[Group] Bu grup dolu olduğu için katılamazsın.";
 "[LS;831]";
 
-"<파티> 파티원을 초대할 수 있는 권한이 없습니다.";
+"[Grup] Birini davet etmek için yetkin yok.";
 "[LS;832]";
 
-"<파티> %s 님이 파티 거부 상태입니다.";
+"[Group] %s Grup davetini reddetti.";
 "[LS;833;%s]";
 
-"<파티> 이미 %s님은 파티에 속해 있습니다.";
+"[Group] %s zaten grupta.";
 "[LS;834;%s]";
 
-"<파티> 던전 안에서는 파티 초대에 응할 수 없습니다.";
+"[Group] Zindandayken davet kabul edemezsin.";
 "[LS;835]";
 
-"OX 이벤트를 마치겟습니다.";
+"OX Etkinlik bitti.";
 "[LS;836]";
 
-"OX이벤트를 강제 종료 시킵니다.";
+"OX Etkinlik bitti.";
 "[LS;836]";
 
-"<파티> 파티 초대에 응할 수 없습니다.";
+"[Group] Daveti kabul edemezsin.";
 "[LS;837]";
 
-"<파티> %s님이 파티 초대를 거절하셨습니다.";
+"[Group] %s davetini reddetti.";
 "[LS;838;%s]";
 
-"<파티> %s님이 파티에 참가하셨습니다.";
+"[Group] %s Grubunuza katıldı.";
 "[LS;839;%s]";
 
-"<파티> %s님의 파티에 참가하셨습니다.";
+"[Group] %s Grubunuza katıldı.";
 "[LS;840;%s]";
 
-"다른 거래중(창고,교환,상점)에는 개인상점을 사용할 수 없습니다.";
+"Şu anda özel depoyu kullanamazsın.";
 "[LS;841]";
 
-"상대방이 다른 거래를 하고 있는 중입니다.";
+"Bu oyuncu zaten başkasıyla ticaret yapıyor.";
 "[LS;842]";
 
-"메틴2인증번호: %s";
+"Metin2 Onay Numarası: %s";
 "[LS;843;%s]";
 
-"인증번호가 틀렸습니다. 다시 시도하세요.";
+"Onay Numaranız doğru değil. Lütfen tekrar deneyin.";
 "[LS;844]";
 
-"핸드폰 번호가 등록 되었습니다.";
+"Cep telefonu numarası kayıtlı.";
 "[LS;845]";
 
-"상대방이 있는 곳으로 워프할 수 없습니다.";
+"Bu oyuncuya ışınlanamazsın.";
 "[LS;846]";
 
-"OX 상품을 지급하였습니다. ID: %d 수량: %d";
+"OX Ödül verildi. İsim: %d Değer: %d";
 "[LS;847;%d;%d]";
 
-"상대방이 온라인 상태가 아닙니다.";
+"Oyuncu çevrimdışı.";
 "[LS;848]";
 
-"상대방이 %d 채널에 있습니다. (현재 채널 %d)";
+"Oyuncu %d numaralı kanalda. (Sen %d numaralı kanaldasın.)";
 "[LS;849;%d;%d]";
 
-"창고를 연후 %d초 이내에는 다른곳으로 이동할수 없습니다.";
+"Depo açtıktan sonra %d saniye başka bir yere gidemezsin.";
 "[LS;850;%d]";
 
-"거래창,창고 등을 연 상태에서는 다른곳으로 이동,종료 할수 없습니다";
+"Ticaretten sonra bir süre bir yere gidemezsin.";
 "[LS;851]";
 
-"거래 후 %d초 이내에는 다른지역으로 이동 할 수 없습니다.";
+"Ticaretten sonra %d saniye bir yere gidemezsin.";
 "[LS;852;%d]";
 
-"대련 상대가 사라져 대련을 종료합니다.";
+"Düello bitti çünkü savaşçınız gözden kayboldu.";
 "[LS;853]";
 
-"물약 제한이 없습니다.";
+"Burada iksirler için herhangi bir sınırlama yok.";
 "[LS;854]";
 
-"물약을 %d 개 까지 사용 가능합니다.";
+"%d iksir kullanabilirsiniz.";
 "[LS;855;%d]";
 
-"10초뒤 대련이 시작됩니다.";
+"Savaş 10 saniye içerisinde başlayacak.";
 "[LS;856]";
 
-"대련이 시작되었습니다.";
+"Düello başladı.";
 "[LS;857]";
 
-"참";
+"DOĞRU";
 "[LS;858]";
 
-"대련장 문제로 인하여 대련을 종료합니다.";
+"Arenadaki bir problemden dolayı düello bitti.";
 "[LS;859]";
 
-"대련 시간 초과로 대련을 중단합니다.";
+"Süre bittiği için düello sona erdi.";
 "[LS;860]";
 
-"10초뒤 마을로 이동합니다.";
+"10 Saniye içerisinde şehre ışınlanmış olacaksınız.";
 "[LS;861]";
 
-"대련자 문제로 인하여 대련을 중단합니다.";
+"Arena ile ilgili bir problem olduğu için düello sona erdi.";
 "[LS;862]";
 
-"상대방 캐릭터의 문제로 인하여 대련을 종료합니다.";
+"Savaşçınızla ilgili bir problem olduğu için düello sona erdi.";
 "[LS;863]";
 
-"대련자 문제로 인하여 대련을 종료합니다.";
+"Savaşçınızla ilgili bir problem olduğu için düello sona erdi.";
 "[LS;864]";
 
-"%s 님이 대련에서 승리하였습니다.";
+"Düelloyu %s kazandı.";
 "[LS;865;%s]";
 
-"%s 님이 승리하였습니다.";
+"%s kazandı.";
 "[LS;866;%s]";
 
-"10초뒤 마을로 되돌아갑니다.";
+"10 saniye içerisinde şehre ışınlanmış olacaksınız.";
 "[LS;867]";
 
-"10초뒤 다음 판을 시작합니다.";
+"Bir sonraki raund 10 saniye içerisinde başlayacak.";
 "[LS;868]";
 
-"거짓";
+"YANLIŞ";
 "[LS;869]";
 
-"상대방 캐릭터가 접속을 종료하여 대련을 중지합니다.";
+"Savaşçılar ayrıldı. Düello sona erdi.";
 "[LS;870]";
 
-"아이템 드롭률  %d%% 추가 이벤트 중입니다.";
+"Düşen nesne yüzdesi şu anda +%%%d";
 "[LS;871;%d]";
 
-"골드 드롭률 %d%% 추가 이벤트 중입니다.";
+"Düşen Yang yüzdesi şu anda +%%%d";
 "[LS;872;%d]";
 
-"대박골드 드롭률 %d%% 추가 이벤트 중입니다.";
+"Yang yağmurunun düşme oranı şu anda artı %%%d.";
 "[LS;873;%d]";
 
-"경험치 %d%% 추가 획득 이벤트 중입니다.";
+"Tecrübe puanı bonusu şu anda %%%d oranında arttırıldı.";
 "[LS;874;%d]";
 
-"클라이언트 버전이 틀려 로그아웃 됩니다. 정상적으로 패치 후 접속하세요.";
+"İstemci versiyonunuz hatalı. Lütfen normal sürümü yükleyin.";
 "[LS;875]";
 
-"다른 거래창이 열린상태에서는 상점거래를 할수 가 없습니다.";
+"Başka bir pencere açıkken dükkanda ticaret yapamazsın.";
 "[LS;876]";
 
-"상점과의 거리가 너무 멀어 물건을 살 수 없습니다.";
+"Almak için depodan çok uzaksın.";
 "[LS;877]";
 
-"상점과의 거리가 너무 멀어 물건을 팔 수 없습니다.";
+"Satmak için depodan çok uzaksın.";
 "[LS;878]";
 
-"20억냥이 초과하여 물품을 팔수 없습니다.";
+"Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.";
 "[LS;811]";
 
-"총 퀴즈 수: %d";
+"Toplam Quiz sayısı: %d";
 "[LS;880;%d]";
 
-"판매금액의 %d %% 가 세금으로 나가게됩니다";
+"Satış için %%%d vergi alınacak.";
 "[LS;881;%d]";
 
-"변신 상태에서는 말에 탈 수 없습니다.";
+"Dönüşmüş durumdayken ata binemezsin.";
 "[LS;882]";
 
-"예복을 입은 상태에서 말을 탈 수 없습니다.";
+"Gelinlik veya Smokin giyerken ata binemezsin.";
 "[LS;883]";
 
-"말을 소유하고 있지 않습니다.";
+"Atın yok.";
 "[LS;884]";
 
-"말이 죽어있는 상태 입니다.";
+"Atın öldü.";
 "[LS;885]";
 
-"말의 스테미너가 부족하여 말을 탈 수 없습니다.";
+"Atının dayanıklılığı çok az.";
 "[LS;886]";
 
-"말 소환에 실패하였습니다.";
+"At çağırma işlemi başarısız.";
 "[LS;887]";
 
-"님의 말";
+"At";
 "[LS;888]";
 
-"결혼식이 종료됩니다.";
+"Düğün kısa süre sonra bitecek.";
 "[LS;889]";
 
-"자동으로 나가게됩니다.";
+"Otomatik olarak geçecek.";
 "[LS;890]";
 
-"이미 전쟁이 끝났습니다.";
+"Savaş çoktan sona erdi.";
 "[LS;891]";
 
-"10초뒤 판정하겠습니다.";
+"Sonucu 10 saniye içinde alacaksın.";
 "[LS;892]";
 
-"관전 상태에서는 교환을 할 수 없습니다.";
+"İzleme sırasında ticaret yapamazsın.";
 "[LS;893]";
 
-"다른 거래창이 열려있을경우 거래를 할수 없습니다.";
+"Pencereler açıkken başkaları ile ticaret yapamazsın.";
 "[LS;894]";
 
-"상대방이 다른 거래중이라 거래를 할수 없습니다.";
+"Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.";
 "[LS;895]";
 
-"상대방이 교환 거부 상태입니다.";
+"Diğer oyuncu ticareti iptal etti.";
 "[LS;896]";
 
-"돈이 부족하거나 아이템이 제자리에 없습니다.";
+"Yeterli Yang veya envanter boş yer yok.";
 "[LS;897]";
 
-"상대방의 돈이 부족하거나 아이템이 제자리에 없습니다.";
+"Diğer kişide yeterli Yang veya envanterinde boş yer yok.";
 "[LS;898]";
 
-"상대방의 소지품에 빈 공간이 없습니다.";
+"Diğer kişinin envanterinde hiç boş yer yok.";
 "[LS;899]";
 
-"%s 님과의 교환이 성사 되었습니다.";
+"%s ile olan ticaret başarıyla gerçekleşti.";
 "[LS;900;%s]";
 
-"용신의 가호로 경험치가 떨어지지 않았습니다.";
+"Ejderha Tanrının korumasında olduğun için tecrübe kaybetmedin.";
 "[LS;901]";
 
-"현재 스코어 신수국:%d 천조국:%d 진노국:%d";
+"Mevcut Puan Durumu: Shinsoo %d, Chunjo %d, Jinno %d";
 "[LS;902;%d;%d;%d]";
 
-"정답은";
+"Doğru cevap:";
 "[LS;903]";
 
-"죽은 정보 %s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+"%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
 "[LS;904;%s;%d;%d;%d;%d;%d;%d]";
 
-"성지의 마왕: 너희 ";
+"Kutsal Yerin Şeytanı: [ENTER][ENTER]";
 "[LS;905]";
 
-"녀석들은 이곳 성지에 있을 자격을 잃었다. 모두 성지에서 물러나거라~~[ENTER][ENTER] 10초 후에 모두 마을로 이동하게 됩니다. ";
+", burada olmaya hakkın yok. 10 saniye içinde krallığına bağlı olanlar bu kutsal toprakları terk edecek.";
 "[LS;906]";
 
-"삼거리 전투에서 %s 국가가 가장먼저 탈락을 하였습니다";
+"%s Krallığı yenildi ve krallık savaşından çıktı.";
 "[LS;907;%s]";
 
-"삼거리 몹 리젠";
+"Krallık savaşındaki yaratıkların sayısı:";
 "[LS;908]";
 
-". 너희가 성지의 수호자를 잡게 된다면 너희는 성지의 주인이 된다.[ENTER][ENTER] ";
+"Eğer Kutsal Alanın Bekçisini öldürürsen, onun sahibi olacaksın.";
 "[LS;909]";
 
-"용신의 보호로 아이템이 떨어지지 않았습니다.";
+"Ejderha tanrısının korumasında olduğun için sıralama puanı kaybetmedin.";
 "[LS;910]";
 
-"관통 추가 데미지 %d";
+"Ek olarak verilen zarar %d";
 "[LS;911;%d]";
 
-"%s 블럭! (%ld%%)";
+"%s engelle! (%%%d)";
 "[LS;912;%s;%d]";
 
-"%s 회피! (%ld%%)";
+"%s kaç! (%%%d)";
 "[LS;913;%s;%d]";
 
-"O 입니다";
+"Evet (O)";
 "[LS;914]";
 
-"%s[%ld]가 공격 위치: %d %d";
+"%s[%d] Saldırı pozisyonu: %d %d";
 "[LS;915;%s;%d;%d;%d]";
 
-"명령어를 모두 입력하세요.";
+"Lütfen düzenlemenin tam ismini giriniz.";
 "[LS;916]";
 
-"탄 상태에서는 할 수 없습니다.";
+"Bunu at üzerinde yapamazsınız.";
 "[LS;917]";
 
-"쓰러진 상태에서는 할 수 없습니다.";
+"Bunu düşmüş haldeyken yapamazsın.";
 "[LS;918]";
 
-"꿈속에서 어떻게요?";
+"Rüyamda? Ne?";
 "[LS;919]";
 
-"먼저 일어 나세요.";
+"Önce kalk.";
 "[LS;920]";
 
-"그런 명령어는 없습니다";
+"Bu düzenleme mevcut değil.";
 "[LS;921]";
 
-"<파티> 파티가 해산 되었습니다.";
+"[Grup] Grup silindi.";
 "[LS;922]";
 
-"<파티> 대상을 소환할 수 없습니다.";
+"[Grup] Hedefi çağıramazsın.";
 "[LS;923]";
 
-"<파티> 파티원을 현재 위치로 소환할 수 없습니다.";
+"[Grup] Bulunduğun pozisyonda grup üyelerini çağıramazsın.";
 "[LS;924]";
 
-"X 입니다";
+"Hayır (X)";
 "[LS;925]";
 
-"파티의 협동력이 높아져 지금부터 추가 경험치 보너스를 받습니다.";
+"Grubun iyi bir ortak çalışma ortaya koyuyor, liderin yakınında bulunan grup üyeleri bir tecrübe bonusu kazanıyor.";
 "[LS;926]";
 
-"길드장";
+"Lider";
 "[LS;927]";
 
-"길드원";
+"Üye";
 "[LS;928]";
 
-"<길드> 제공하고자 하는 경험치가 남은 경험치보다 많습니다.";
+"[Guild] Sağlanan tecrübe kaybedilenden tecrübeden daha fazla.";
 "[LS;929]";
 
-"<길드> 삭제할 수 없는 글입니다.";
+"[Guild] Mesaj silinemez.";
 "[LS;930]";
 
-"<길드> 용신력이 부족합니다. (%d, %d)";
+"[Guild] Yeterli Ejderha hayaleti yok. (%d, %d)";
 "[LS;931;%d;%d]";
 
-"<길드> 쿨타임이 끝나지 않아 길드 스킬을 사용할 수 없습니다.";
+"[Guild] Henüz Lonca Becerilerini kullanamazsın.";
 "[LS;932]";
 
-"<길드> %d 스킬을 사용함 (%d, %d) to %lu";
+"[Guild] %d becerisi (%d, %d) %u üzerine uygulandı.";
 "[LS;933;%d;%d;%d;%u]";
 
-"<길드> 상대가 %d 채널에 있습니다. (현재 채널 %d)";
+"[Guild]  Oyuncu şu an %d kanalında. (Bulunulan kanal: %d)";
 "[LS;934;%d;%d]";
 
-"<길드> 상대가 온라인 상태가 아닙니다.";
+"[Guild] Oyuncu çevrim dışı.";
 "[LS;935]";
 
-"5초 뒤 틀리신 분들을 바깥으로 이동 시키겠습니다.";
+"Yanlış cevap veren katılımcılar 5 saniye sonra silinecekler.";
 "[LS;936]";
 
-"<길드> 길드 스킬은 길드전 중에만 사용할 수 있습니다.";
+"[Guild] Bu Lonca Becerisi sadece savaşlarda kullanılabilir.";
 "[LS;937]";
 
-"<길드> %lu의 용신력을 회복하였습니다.";
+"[Guild] %u oranında Ejderha Hayaleti Puanı yüklendi.";
 "[LS;938;%u]";
 
-"<길드> 길드 금고에선 길드장만 출금할 수 있습니다.";
+"[Guild] Sadece Lonca lideri Yang çekebilir.";
 "[LS;939]";
 
-"<길드> 상대방이 길드 초대 거부 상태입니다.";
+"[Guild] Oyuncu Lonca davetini reddetti.";
 "[LS;940]";
 
-"<길드> 길드원을 초대할 권한이 없습니다.";
+"[Guild] Loncaya birini davet edemezsin.";
 "[LS;941]";
 
-"<길드> 다른 제국 사람을 길드에 초대할 수 없습니다.";
+"[Guild] Diğer Krallıklardan olan oyuncuları Loncaya davet edemezsin.";
 "[LS;942]";
 
-"<길드> 탈퇴한 후 %d일이 지나지 않은 사람은 길드에 초대할 수 없습니다.";
+"[Lonca] Bu oyuncuyu %d gün sonra tekrar davet edebilirsin.";
 "[LS;943;%d]";
 
-"<길드> 길드를 해산한 지 %d일이 지나지 않은 사람은 길드에 초대할 수 없습니다.";
+"[Guild] Düzenlemeden sonraki  %d gün içinde üyeleri davet edebilirsin.";
 "[LS;944;%d]";
 
-"<길드> 상대방이 이미 다른 길드에 속해있습니다.";
+"[Guild] Bu oyuncu zaten başka bir Loncaya üye.";
 "[LS;945]";
 
-"<길드> 최대 길드원 수를 초과했습니다.";
+"[Guild] Lonca kapasitesi maximum seviyeye ulaştı.";
 "[LS;946]";
 
-"다음 문제 준비해주세요.";
+"Sonraki soru için hazır mısın?";
 "[LS;947]";
 
-"수련할 수 없는 스킬입니다.";
+"Bu beceriyi geliştiremezsiniz.";
 "[LS;948]";
 
-"더 이상 수련할 수 없습니다.";
+"Bu beceriyi geliştiremezsiniz.";
 "[LS;948]";
 
-"그랜드 마스터 수련을 할 수 없는 스킬입니다.";
+"Bu beceriyi Grand Master seviyesine geliştiremezsiniz.";
 "[LS;949]";
 
-"퍼펙트 마스터된 스킬입니다. 더 이상 수련 할 수 없습니다.";
+"Zaten bu beceride master konumundasın. Onu geliştiremezsin.";
 "[LS;950]";
 
-"이 스킬은 아직 그랜드 마스터 수련을 할 경지에 이르지 않았습니다.";
+"Becerin Grand Master seviyesi için yeterince yüksek değil.";
 "[LS;951]";
 
-"크윽, 기가 역류하고 있어! 이거 설마 주화입마인가!? 젠장!";
+"Çalışmadı. Lanet olsun!";
 "[LS;952]";
 
-"수련이 실패로 끝났습니다. 다시 도전해주시기 바랍니다.";
+"Eğitim başarısız. Lütfen sonra tekrar deneyin.";
 "[LS;953]";
 
-"몸에서 뭔가 힘이 터져 나오는 기분이야!";
+"Bedenim güçle dolu!";
 "[LS;954]";
 
-"뜨거운 무엇이 계속 용솟음치고 있어! 이건, 이것은!";
+"Eğitim yavaş yavaş fayda ediyor...";
 "[LS;955]";
 
-"더 높은 경지의 수련을 성공적으로 끝내셨습니다.";
+"Kitapla olan eğitimini başarıyla tamamladın.";
 "[LS;956]";
 
-"경험치가 부족하여 책을 읽을 수 없습니다.";
+"Bu kadar tecrübesizken bunu okuyamazsın.";
 "[LS;957]";
 
 "Pregunta.";
 "[LS;958]";
 
-"이 스킬은 책으로 더이상 수련할 수 없습니다.";
+"Bu beceriyi kitap okuyarak geliştiremezsin.";
 "[LS;959]";
 
-"이 스킬은 아직 책으로 수련할 경지에 이르지 않았습니다.";
+"Bu becerin kitap okuyarak geliştirebilmek için yeterli seviyede değil.";
 "[LS;960]";
 
-"어느정도 이 기술에 대해 이해가 되었지만 조금 부족한듯 한데..";
+"İlerleyebiliyorum ama henüz hepsini anlamış değilim.";
 "[LS;961]";
 
-"드디어 끝이 보이는 건가...  이 기술은 이해하기가 너무 힘들어..";
+"Bu talimatları anlamak kolay değil. Biraz daha çalışmam gerekiyor.";
 "[LS;962]";
 
-"열심히 하는 배움을 가지는 것만이 기술을 배울수 있는 유일한 길이다..";
+"Bu bölümü anladım. Yine de çok çalışmam gerekiyor.";
 "[LS;963]";
 
-"책으로 더 높은 경지의 수련을 성공적으로 끝내셨습니다.";
+"Kitapla olan eğitimini başarıyla tamamladın.";
 "[LS;964]";
 
-"귀환에 실패하였습니다.";
+"Işınlama başarısız.";
 "[LS;965]";
 
-"말이 없습니다. 마굿간 경비병을 찾아가세요.";
+"Burada at yok. Seyise sor.";
 "[LS;966]";
 
-"말 소환 아이템을 사용하세요.";
+"Lütfen at çağırma nesnesini kullan.";
 "[LS;967]";
 
-"%s SP소모: %d";
+"%s FP Kullanımı: %d";
 "[LS;968;%s;%d]";
 
-"맞으면 O, 틀리면 X로 이동해주세요";
+"Doğruysa O'ya git, yanlışsa X'e git.";
 "[LS;969]";
 
-"몸 속이 뜨겁군. 하지만 아주 편안해. 이대로 기를 안정시키자.";
+"İçim yanıyor fakat vücudumu sakinleştiriyor.";
 "[LS;970]";
 
-"그래, 천천히. 좀더 천천히, 그러나 막힘 없이 빠르게!";
+"Yavaşça, fakat sürekli... Ara vermeksizin.";
 "[LS;971]";
 
-"그래, 이 느낌이야. 체내에 기가 아주 충만해.";
+"Evet, bu his mükemmel. Bedenim Chi ile dolu.";
 "[LS;972]";
 
-"다 읽었다! 이제 비급에 적혀있는 대로 전신에 기를 돌리기만 하면,";
+"Okudum! Şimdi Chi tüm vücudumu kaplıyor.";
 "[LS;973]";
 
-"그것으로 수련은 끝난 거야!";
+"Eğitim tamamlandı.";
 "[LS;974]";
 
-"이제 책의 마지막 장이야! 수련의 끝이 눈에 보이고 있어!";
+"Kitabın son sayfasındayım. Eğitim neredeyse bitmek üzere!";
 "[LS;975]";
 
-"얼마 안 남았어! 조금만 더!";
+"Nerdeyse bitti! Sadece azıcık kaldı!";
 "[LS;976]";
 
-"좋았어! 조금만 더 읽으면 끝이다!";
+"Aydınlandım! Neredeyse hepsini okudum!";
 "[LS;977]";
 
-"책장도 이제 얼마 남지 않았군.";
+"Sadece birkaç sayfa kaldı, onları da okuduktan sonra hepsini okumuş oluyorum.";
 "[LS;978]";
 
-"뭔가 몸 안에 힘이 생기는 기분인 걸.";
+"Yenilenmiş hissediyorum.";
 "[LS;979]";
 
-"정답입니다!";
+"Doğru!";
 "[LS;980]";
 
-"이제 좀 슬슬 가닥이 잡히는 것 같은데.";
+"Şimdi anladım!";
 "[LS;981]";
 
-"좋아, 이 기세로 계속 나간다!";
+"Tamam, konsantre kalmalıyım!";
 "[LS;982]";
 
-"아니 어떻게 된 게 종일 읽어도 머리에 안 들어오냐.";
+"Aynı satırı tekrar okuyup duruyorum.";
 "[LS;983]";
 
-"공부하기 싫어지네.";
+"Daha fazla bir şey öğrenmek istemiyorum.";
 "[LS;984]";
 
-"생각만큼 읽기가 쉽지가 않군. 이해도 어렵고 내용도 난해해.";
+"Bu yöntem düşündüğümden çok daha karışık.";
 "[LS;985]";
 
-"이래서야 공부가 안된다구.";
+"Konsantre olamıyorum. Mola vermem gerekiyor.";
 "[LS;986]";
 
-"운영자 제제로 채팅이 금지 되었습니다.";
+"Sohbetin, spam nedeniyle geçici olarak engellendi.";
 "[LS;987]";
 
-"채팅 금지가 풀렸습니다.";
+"Sohbet blokunuz kaldırıldı.";
 "[LS;988]";
 
-"이미 제조창이 열려있습니다.";
+"İnşa penceresi zaten açık.";
 "[LS;989]";
 
-"다른 거래중(창고,교환,상점)에는 사용할 수 없습니다.";
+"Başka bir Ticaret/Depo penceresi açıkken herhangi birşey inşa edemezsiniz.";
 "[LS;990]";
 
-"더 이상 개량할 수 없습니다.";
+"Daha fazla geliştirme imkansız.";
 "[LS;991]";
 
-"제조창이 열려있지 않습니다";
+"İnşa penceresi açık değil.";
 "[LS;992]";
 
-"제조 재료가 부족합니다";
+"Doğru maddeye sahip değilsiniz.";
 "[LS;993]";
 
-"<길드> 잠시후에 이용해주십시오";
+"[Guild] Lütfen daha sonra tekrar deneyin.";
 "[LS;994]";
 
-"%d 권을 더 읽어야 수련을 완료 할 수 있습니다.";
+"Bu yeteneği geliştirmek için %d Yetenek Kitabı daha okumalısınız.";
 "[LS;995;%d]";
 
-"<길드> 잠시후에 이용해주십시오.";
+"[Guild] Lütfen daha sonra tekrar deneyin.";
 "[LS;994]";
 
-"성에서만 사용할 수 있는 기능입니다.";
+"Bu özelliği sadece kaledeyken kullanabilirsin.";
 "[LS;997]";
 
-"TEST : 황금두꺼비가 국고로 환원되었습니다.";
+"TEST: Altın külçe krallığınızın kasasına geri ödendi.";
 "[LS;998]";
 
-"TEST : 현재 국고 : %d";
+"TEST: Krallığınızın kasasında bulunan: %d";
 "[LS;999;%d]";
 
-"TEST : 황금두꺼비를 국고로 환원할 수 없습니다.";
+"TEST: Altın külçeyi krallığınızın kasasına gönderme yetkiniz yok.";
 "[LS;1000]";
 
-"<길드> 래더 점수가 %d 점이 되었습니다";
+"[Guild] Lonca %d puana ulaştı.";
 "[LS;1001;%d]";
 
-"이 아이템은 개량할 수 없습니다.";
+"Bu eşya daha iyi hale gelemez.";
 "[LS;1002]";
 
-"무료 개량 기회는 20 이하의 무기만 가능합니다";
+"Ücretsiz silah geliştirmeleri ancak seviye 20'ye kadar olan silahlarda kullanılabilir.";
 "[LS;1003]";
 
-"군직이 맞지않아 이 아이템을 사용할 수 없습니다.";
+"Gerekli özelliklere sahip olmadığın için bu eşyayı kullanamazsın.";
 "[LS;1004]";
 
-"성별이 맞지않아 이 아이템을 사용할 수 없습니다.";
+"Doğru cinsiyette olmadığınız için bu eşyayı kullanamazsınız.";
 "[LS;1005]";
 
-"사용법: transfer <name>";
+"Kullan: transfer <name>";
 "[LS;1006]";
 
-"군주만이 사용 가능한 기능입니다";
+"Bu özellik sadece İmparator tarafından kullanılabilir.";
 "[LS;1007]";
 
-"다른 제국 유저는 소환할 수 없습니다.";
+"Başka krallıktan olan oyuncuları birliğine dahil edemezsin.";
 "[LS;1008]";
 
-"%s 님은 %d 채널에 접속 중 입니다. (현재 채널: %d)";
+"%s şuanda %d kanalında. (Kanalınız: %d)";
 "[LS;1009;%s;%d;%d]";
 
-"%s 님을 소환하였습니다.";
+"%s oyuncuları iyileştirdin.";
 "[LS;1010;%s]";
 
-"입력하신 이름을 가진 사용자가 없습니다.";
+"Bu isimde bir kullanıcı yok.";
 "[LS;1011]";
 
-"자신을 소환할 수 없습니다.";
+"Kendini birliğine ekleyemezsin.";
 "[LS;1012]";
 
-"아이템의 레벨 제한보다 레벨이 낮습니다.";
+"Seviyeniz eşyanın yükseltmeden sonraki seviyesinden düşük.";
 "[LS;1013]";
 
-"창고,거래창등이 열린 상태에서는 개량을 할수가 없습니다";
+"Başka bir pencere açıkken yükseltme yapamazsın.";
 "[LS;1014]";
 
-"%s의 군주가 %s 님으로 교체되었습니다.";
+"%s İmparatoru %s oldu.";
 "[LS;1015;%s;%s]";
 
-"%s에서 봉화를 둘러싸고 전투가 진행중입니다.";
+"Ateşleri yakmak için %s savaşları var.";
 "[LS;1016;%s]";
 
-"%s이 수성에 성공했습니다.";
+"%s başarıyla savundu.";
 "[LS;1017;%s]";
 
-"지금부터 %s은 30분간 봉화를 파괴하여 보상을 획득 할 수 있습니다.";
+"%s ateşi yok ettiği için şu andan itibaren 30 dakika boyunca bir ödül alabilir.";
 "[LS;1018;%s]";
 
-"30분이 경과했습니다.. 봉화가 사라집니다.";
+"30 dakika geçti. İşaret ateşi söndü.";
 "30 minutes are over. The bonfires have disappeared.";
 
-"%s에 전쟁의 시작을 알리는 봉화가 나타났습니다.";
+"%s de savaş yüzünden bir uyarı ateşi yakıldı.";
 "[LS;1020;%s]";
 
-"%s이 봉화를 파괴했습니다.";
+"%s ateşi yok etti.";
 "[LS;1021;%s]";
 
-"%s이 수성에 실패하여 전쟁에 패배하였습니다..";
+"%s kaleyi koruyamadığı için savaşı kaybetti.";
 "[LS;1022;%s]";
 
-"%s이 모든 봉화를 파괴하였습니다.";
+"%s ateşi yok etti.";
 "[LS;1023;%s]";
 
-"갑옷을 벗어야 개인 상점을 열 수 있습니다.";
+"Sadece zırhınızı çıkardığınızda bir dükkan açabilirsiniz.";
 "[LS;1025]";
 
-"%d 시간 %d 분 %d 초 동안 채팅금지 상태입니다";
+"Sohbet bloklamanızın kalkmasına %d saat %d dakika %d saniye kaldı";
 "[LS;1028;%d;%d;%d]";
 
-"%d 시간 %d 초 동안 채팅금지 상태입니다";
+"Sohbet bloklamanızın kalkmasına %d saat %d saniye kaldı";
 "[LS;1029;%d;%d]";
 
-"%d 분 %d 초 동안 채팅금지 상태입니다";
+"Sohbet bloklamanızın kalkmasına %d dakika %d saniye kaldı";
 "[LS;1030;%d;%d]";
 
-"돈 대박이 나올 확률";
+"Yang yağmuru düşme oranı";
 "[LS;1031]";
 
-"개량을 하기 위한 재료가 부족합니다.";
+"Yükseltme için yeterli malzeme yok.";
 "[LS;1035]";
 
-"전제국";
+"Tüm Krallıklar";
 "[LS;1037]";
 
-"아이템이 나올 확률";
+"Eşya düşürme oran yüzdesi";
 "[LS;1038]";
 
-"돈이 나올 확률";
+"Yang düşürme oranı yüzdesi";
 "[LS;1039]";
 
-"경험치 배율";
+"Deneyim yüzdesi";
 "[LS;1040]";
 
-"%d 초 동안 채팅금지 상태입니다";
+"Sohbet engelinizin kalkmasına %d saniye kaldı";
 "[LS;1042;%d]";
 
-"말을 탄 상태에서 감정표현을 할 수 없습니다.";
+"At sürerken duygularınızı ifade edemezsiniz.";
 "[LS;1043]";
 
-"말을 탄 상대와 감정표현을 할 수 없습니다.";
+"At süren bir kişiye duygularınızı ifade edemezsiniz.";
 "[LS;1044]";
 
-"<길드> 상대방 길드의 길드장이 접속중이 아닙니다.";
+"[Lonca] Düşman lonca lideri çevrimdışı.";
 "[LS;1048]";
 
-"전쟁 서버가 열려있지 않아 길드전을 시작할 수 없습니다.";
+"[Lonca] Düşman lonca lideri çevrimdışı.";
 "[LS;1048]";
 
-"<길드> 이미 전쟁 중인 길드입니다.";
+"[Lonca] Bu lonca şu anda savaşta.";
 "[LS;1050]";
 
-"이미 탈것을 이용중입니다.";
+"Zaten bir binektesin. Önce in.";
 "[LS;1054]";
 
-"이 개량서로 더 이상 개량할 수 없습니다.";
+"Bu role ile yükseltemezsiniz.";
 "[LS;1056]";
 
-"사귀 타워 완료 보상은 한번까지 사용가능합니다.";
+"Şeytan Kulesi görevi için sadece bir kez ödüllendirilebilirsiniz.";
 "[LS;1067]";
 
-"용혼석 추출에 성공하였습니다.";
+"Ejderha taşı başarıyla çıkarıldı.";
 "[LS;1068]";
 
-"강화창을 연 상태에서는 아이템을 옮길 수 없습니다.";
+"Bu nesne, arındırma paneli içerisinde sürüklenemez.";
 "[LS;1069]";
 
-"용심 추출에 성공하였습니다.";
+"Ejderha taşında kalan süreyi çıkarma işlemi başarılıydı.";
 "[LS;1072]";
 
-"용심 추출에 실패하였습니다.";
+"Kalan süreyi çıkarma işlemi başarısızdı.";
 "[LS;1073]";
 
-"용혼석 추출에 실패하여 %s를 얻었습니다.";
+"Ejderha taşı çıkarılamadı, ama şunu elde ettin: %s";
 "[LS;1074;%s]";
 
-"용혼석 추출에 실패하였습니다.";
+"Ejderha taşı çıkarılamadı.";
 "[LS;1075]";
 
-"등급 개량에 필요한 재료가 아닙니다.";
+"Bu nesneye saflık derecesini geliştirmek için ihtiyaç duyulmaz.";
 "[LS;1076]";
 
-"강화에 필요한 재료가 아닙니다.";
+"Bu nesneye saflık derecesini geliştirmek için ihtiyaç duyulmaz.";
 "[LS;1076]";
 
-"등급 개량할 수 없는 용혼석입니다.";
+"Bu eşya bu şekilde yükseltilemez.";
 "[LS;1077]";
 
-"이 아이템은 이 방식으로는 개량할 수 없습니다.";
+"Bu eşya bu şekilde yükseltilemez.";
 "[LS;1077]";
 
-"단계 개량에 성공했습니다.";
+"Saflık derecesini geliştirme işlemi başarılıydı.";
 "[LS;1078]";
 
-"등급 개량에 실패했습니다.";
+"Arındırmayı bir sınıf daha yükseltme işlemi başarısızdı.";
 "[LS;1079]";
 
-"단계 개량할 수 없는 용혼석입니다.";
+"Bu nesneye arındırmada ihtiyaç duyulmaz.";
 "[LS;1080]";
 
-"등급 개량에 성공했습니다.";
+"Arındırmayı bir sınıf daha yükseltme işlemi başarılıydı.";
 "[LS;1082]";
 
-"단계 개량에 실패했습니다.";
+"Saflık derecesini geliştirme işlemi başarısızdı.";
 "[LS;1083]";
 
-"단계 개량에 필요한 재료가 아닙니다.";
+"Ejderha taşını güçlendirmek için gerekli malzemeye sahip değilisn.";
 "[LS;1084]";
 
-"강화할 수 없는 용혼석입니다.";
+"Bu ejderha taşı güçlendirmek için kullanılamaz.";
 "[LS;1085]";
 
-"강화에 성공했습니다.";
+"Güçlendirme başarılıydı.";
 "[LS;1087]";
 
-"강화에 실패했습니다.";
+"Güçlendirme başarısız";
 "[LS;1088]";
 
-"이미 같은 종류의 용혼석을 착용하고 있습니다.";
+"Üzerinde zaten bu türden bir ejderha taşı bulunuyor.";
 "[LS;1090]";
 
-"착용 중인 용혼석은 추출할 수 없습니다.";
+"Ejderha taşı çıkarılamaz.";
 "[LS;1091]";
 
-"이미 장비를 착용하고 있습니다.";
+"Böyle bir ejderha taşı kuşandın bile.";
 "[LS;1092]";
 
-"인벤이 활성화 되지 않음.";
+"Cor Draconis'i açmadan önce Ejderha Taşı görevi tamamlanmış olmalı ve Ejderha Taşı Simyası etkinleştirilmiş olmalı.";
 "[LS;1094]";
 
-"먼저 용혼석 퀘스트를 완료하셔야 합니다.";
+"Cor Draconis'i açmadan önce Ejderha Taşı görevi tamamlanmış olmalı ve Ejderha Taşı Simyası etkinleştirilmiş olmalı.";
 "[LS;1094]";
 
-"벨트 인벤토리에 아이템이 존재하면 해제할 수 없습니다.";
+"Eşyaya ait envanter tamamen boş olmadığı sürece kemeri çıkaramazsın.";
 "[LS;1095]";
 
-"축복의 서와 현철을 합칠 수 있습니다.";
+"Kutsama Kağıdı ve Büyülü Demir Madeni birleştirebilirsin.";
 "[LS;1096]";
 
-"이 아이템은 벨트 인벤토리로 옮길 수 없습니다.";
+"Bu eşyayı kemer envanterinde donanamazsın.";
 "[LS;1097]";
 
-"같은 개량서를 합칠 수는 없습니다.";
-"[1106-es]No puedes unir esto.";
+"Aynı geliştirme parşömenleri birleştirilemez.";
+"[1106-tr]Aynı geliştirme parşömenleri birleştirilemez.";
 
-"%d 냥을 투자하셨습니다.";
+"%d Yang yatırdın.";
 "[LS;1107;%d]";
 
-"빼낼 수 있는 메틴석이 없습니다.";
+"Çıkartılacak metin taşı yok.";
 "[LS;1108]";
 
-"기억해 둘 수 없는 위치 입니다.";
+"Bu yeri kaydedemezsin.";
 "[LS;1119]";
 
-"소지품에 빈 공간이 없습니다.";
+"Envanterde yeterli boşluk yok.";
 "[LS;1130]";
 
-"기억된 위치가 타제국에 속해 있어서 귀환할 수 없습니다.";
+"Yabancı Krallıkta güvenli bir yere ışınlanamazsın.";
 "[LS;1141]";
 
-"남은 생명력 양이 모자라 사용할 수 없습니다.";
+"Yeterli HP yok.";
 "[LS;1152]";
 
-"남은 정신력 양이 모자라 사용할 수 없습니다.";
+"Bunu kullanmak için yeterli manaya sahip değilsin.";
 "[LS;1162]";
 
-"%d 초후 목적지로 이동됩니다.";
+"%d saniye içinde hedefte olacaksın.";
 "[LS;1172;%d]";
 
-"개량된 후 아이템의 레벨 제한보다 레벨이 낮습니다.";
+"Seviyeniz eşyanın yükseltmeden sonraki seviyesinden düşük.";
 "[LS;1013]";
 
-"월병,종자 사용후 5초동안 사용할수 없습니다. ";
+"Her 5 saniyede bir Ay Pastası kullanabilirsin.";
 "[LS;1194]";
 
-"대련 중에는 이용할 수 없는 물품입니다.";
+"Bu eşyayı düelloda kullanamazsın.";
 "[LS;1205]";
 
-"%d 냥을 획득하셨습니다.";
+"%d Yang kazandın.";
 "[LS;1216;%d]";
 
-"모닥불을 피울 수 없는 지점입니다.";
+"Buraya kamp ateşi yakamazsın.";
 "[LS;1217]";
 
-"물 속에 모닥불을 피울 수 없습니다.";
+"Suyun altında kamp ateşi yakamazsın.";
 "[LS;1228]";
 
-"열쇠로 잠겨 있어서 열리지 않는것 같다. 열쇠를 구해보자.";
+"Kapalı. Anahtarı aramalısın.";
 "[LS;1237]";
 
-"열쇠로 여는 물건이 아닌것 같다.";
+"Bu eşya bir anahtarla açılamaz.";
 "[LS;1248]";
 
-"열쇠는 맞으나 아이템 주는 부분 구현이 안되었습니다.";
+"Doğru anahtar.";
 "[LS;1258]";
 
-"돈 %d 냥을 획득했습니다.";
+"%d Yang kazandın.";
 "[LS;1269;%d]";
 
-"상자에서 부터 신비한 빛이 나옵니다.";
+"Kutudan gizemli bir ışık geliyor.";
 "[LS;1279]";
 
-"%d의 경험치를 획득했습니다.";
+"%d Tecrübe Puanı kazandın.";
 "[LS;1290;%d]";
 
-"상자에서 몬스터가 나타났습니다!";
+"Bak kutudan ne çıktı!";
 "[LS;1299]";
 
-"<길드> 레더 점수가 모자라서 길드전을 할 수 없습니다.";
+"[Lonca] Lonca seviyesi çok düşük.";
 "[LS;1308]";
 
-"상자에서 나온 빨간 연기를 들이마시자 움직이는 속도가 느려졌습니다!";
+"Eğer kutudan gelen kırmızı dumanı solursan, hızın artar!";
 "[LS;1310]";
 
-"떨어진 아이템은 %d분 후 사라집니다.";
+"Düşürülen eşya %d dakika sonra kaybolacak.";
 "[LS;1057;%d]";
 
-"%s 회피! (%d%%)";
+"Mümkün olan maksimum sayıda ruh topladın. Kan sunağına git ve ritüeli düzenle!";
 "[LS;1959;%s;%d]";
 
 "You cannot exchange the won right now. Close some windows.";
@@ -2367,17 +2367,17 @@
 
 "SHOP_ITEM_SOLD_FOR_YANG";
 "[LS;2007;%d]";
-"아이템 획득: %s";
+"%s eşyasını kazandın.";
 "[LS;220;%s]";
-"게임을 종료 합니다. 잠시만 기다리세요.";
+"Serverla olan bağlantınız kesiliyor. Lütfen bekleyin.";
 "[LS;513]";
-"%d초 남았습니다.";
+"%d saniye sonra oyun kapanacak.";
 "[LS;508;%d]";
-"캐릭터를 전환 합니다. 잠시만 기다리세요.";
+"Karakteri değiştirdiniz. Lütfen bekleyin.";
 "[LS;515]";
-"취소 되었습니다.";
+"Çıkışınız iptal edildi.";
 "[LS;511]";
-"말을 먼저 소환해주세요.";
+"Lütfen önce atını çağır.";
 "[LS;501]";
-"그런 명령어는 없습니다";
+"Bu düzenleme mevcut değil.";
 "Böyle bir komut yok.";

@@ -1,4 +1,4 @@
-//적룡성비
+//Kızıl Ejder Kalesi Steli
 m	352	362	0	0	0	1	10s	100	1	20992
 //quest_NPC
 m	362	541	1	1	0	0	10s	100	1	20393

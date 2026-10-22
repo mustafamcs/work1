@@ -1,4 +1,4 @@
-#복숭아꽃진액
+#Şeftali Çiçeği Esansı
 section
 npc	20018
 item	50721	1
@@ -6,7 +6,7 @@ reward	50801	1
 percent	100
 end
 
-#도라지진액
+#Balloon Çiçeği Esansı
 section
 npc	20018
 item	50722	1
@@ -14,7 +14,7 @@ reward	50802	1
 percent	100
 end
 
-#감꽃진액
+#Hurma Çiçeği Esansı
 section
 npc	20018
 item	50723	1
@@ -22,7 +22,7 @@ reward	50803	100
 percent	100
 end
 
-#가시오가피진액
+#Dikenli Ogapi Esansı
 section
 npc	20018
 item	50724	1
@@ -30,7 +30,7 @@ reward	50804	100
 percent	100
 end
 
-#복숭아꽃진액
+#Şeftali Çiçeği Esansı
 section
 npc	20017
 item	50721	1
@@ -38,7 +38,7 @@ reward	50801	1
 percent	100
 end
 
-#도라지진액
+#Balloon Çiçeği Esansı
 section
 npc	20017
 item	50722	1
@@ -46,7 +46,7 @@ reward	50802	1
 percent	100
 end
 
-#감꽃진액
+#Hurma Çiçeği Esansı
 section
 npc	20017
 item	50723	1
@@ -54,7 +54,7 @@ reward	50803	100
 percent	100
 end
 
-#가시오가피진액
+#Dikenli Ogapi Esansı
 section
 npc	20017
 item	50724	1
@@ -62,7 +62,7 @@ reward	50804	100
 percent	100
 end
 
-#활심액진액
+#Canlı Kalp Esansı
 section
 npc	20017
 item	50801	1
@@ -71,7 +71,7 @@ reward	50813	1
 percent	100
 end
 
-#피독수
+#Zehir Ağacı
 section
 npc	20017
 item	50802	1
@@ -80,7 +80,7 @@ reward	50814	1
 percent	100
 end
 
-#보환수
+#Koruma Ağacı
 section
 npc	20017
 item	50803	100
@@ -89,7 +89,7 @@ reward	50815	100
 percent	100
 end
 
-#영보수
+#Ruh Hazinesi Ağacı
 section
 npc	20017
 item	50804	100
@@ -99,7 +99,7 @@ percent	100
 end
 
 
-#복숭아꽃진액
+#Şeftali Çiçeği Esansı
 section
 npc	20022
 item	50721	1
@@ -107,7 +107,7 @@ reward	50801	1
 percent	100
 end
 
-#도라지진액
+#Balloon Çiçeği Esansı
 section
 npc	20022
 item	50722	1
@@ -115,7 +115,7 @@ reward	50802	1
 percent	100
 end
 
-#감꽃진액
+#Hurma Çiçeği Esansı
 section
 npc	20022
 item	50723	1
@@ -123,7 +123,7 @@ reward	50803	100
 percent	100
 end
 
-#가시오가피진액
+#Dikenli Ogapi Esansı
 section
 npc	20022
 item	50724	1
@@ -131,7 +131,7 @@ reward	50804	100
 percent	100
 end
 
-#활심액진액
+#Canlı Kalp Esansı
 section
 npc	20022
 item	50801	1
@@ -140,7 +140,7 @@ reward	50813	1
 percent	100
 end
 
-#피독수
+#Zehir Ağacı
 section
 npc	20022
 item	50802	1
@@ -149,7 +149,7 @@ reward	50814	1
 percent	100
 end
 
-#보환수
+#Koruma Ağacı
 section
 npc	20022
 item	50803	100
@@ -158,7 +158,7 @@ reward	50815	100
 percent	100
 end
 
-#영보수
+#Ruh Hazinesi Ağacı
 section
 npc	20022
 item	50804	100
@@ -168,7 +168,7 @@ percent	100
 end
 
 
-#진활심액진액
+#Gerçek Canlı Kalp Esansı
 section
 npc	20022
 item	50813	1
@@ -177,7 +177,7 @@ reward	50817	1
 percent	100
 end
 
-#진피독수
+#Gerçek Zehir Ağacı
 section
 npc	20022
 item	50814	1
@@ -186,7 +186,7 @@ reward	50818	1
 percent	100
 end
 
-#진보환수
+#Gerçek Koruma Ağacı
 section
 npc	20022
 item	50815	100
@@ -195,7 +195,7 @@ reward	50819	1
 percent	100
 end
 
-#진영보수
+#Gerçek Ruh Hazinesi Ağacı
 section
 npc	20022
 item	50816	100
@@ -204,7 +204,7 @@ reward	50820	1
 percent	100
 end
 
-#적상액
+#Kırmızı Sıvı
 section
 npc	20022
 item	50901	10
@@ -213,7 +213,7 @@ reward	50821	10
 percent	100
 end
 
-#홍상액
+#Al Sıvı
 section
 npc	20022
 item	50901	10
@@ -222,7 +222,7 @@ reward	50822	10
 percent	100
 end
 
-#황상액
+#Sarı Sıvı
 section
 npc	20022
 item	50901	10
@@ -231,7 +231,7 @@ reward	50823	10
 percent	100
 end
 
-#녹상액
+#Yeşil Sıvı
 section
 npc	20022
 item	50901	10
@@ -240,7 +240,7 @@ reward	50824	10
 percent	100
 end
 
-#청상액
+#Mavi Sıvı
 section
 npc	20022
 item	50901	10
@@ -249,7 +249,7 @@ reward	50825	10
 percent	100
 end
 
-#백상액
+#Beyaz Sıvı
 section
 npc	20022
 item	50901	10
@@ -258,7 +258,7 @@ reward	50826	10
 percent	100
 end
 
-#경험의물약테스트
+#Tecrübe İksiri Testi
 #section
 #npc	20018
 #item	51001	100
@@ -267,7 +267,7 @@ end
 #percent	10
 #end
 
-#용신지검
+#Ejderha Tanrısı Kılıcı
 section
 npc	20383
 item	145	1
@@ -318,7 +318,7 @@ gold	100000
 percent	50
 end
 
-#파멸지검
+#Yıkım Kılıcı
 section
 npc	20383
 item	155	1
@@ -369,7 +369,7 @@ gold	100000
 percent	50
 end
 
-#오행도
+#Beş Element Yolu
 section
 npc	20383
 item	1105	1
@@ -421,7 +421,7 @@ percent	50
 end
 
 
-#천룡지궁
+#Gök Ejderi Yayı
 section
 npc	20383
 item	2145	1
@@ -473,7 +473,7 @@ percent	50
 end
 
 
-#태양검
+#Güneş Kılıcı
 section
 npc	20383
 item	3145	1
@@ -525,7 +525,7 @@ percent	50
 end
 
 
-#용신령
+#Ejderha Tanrısı Ruhu
 section
 npc	20383
 item	5105	1
@@ -577,7 +577,7 @@ percent	50
 end
 
 
-#무아지선
+#Benliksizlik Ülkesi
 section
 npc	20383
 item	7145	1
@@ -629,7 +629,7 @@ percent	50
 end
 
 
-#태을갑
+#Taeul Zırhı
 section
 npc	20383
 item	11295	1
@@ -686,7 +686,7 @@ percent	50
 end
 
 
-#영보
+#Ruh Hazinesi
 section
 npc	20383
 item	11495	1
@@ -743,7 +743,7 @@ percent	50
 end
 
 
-#현천갑
+#Hyeoncheon Zırhı
 section
 npc	20383
 item	11695	1
@@ -800,7 +800,7 @@ percent	50
 end
 
 
-#삼관의
+#Üç Geçidin
 section
 npc	20383
 item	11895	1
@@ -856,7 +856,7 @@ gold	100000
 percent	50
 end
 
-#홍옥계열
+#Kırmızı Yeşim Serisi
 section
 npc	20383
 item	50635	3
@@ -888,7 +888,7 @@ percent	80
 end
 
 
-#석류계열
+#Nar Taşı Serisi
 section
 npc	20383
 item	50636	3
@@ -920,7 +920,7 @@ percent	80
 end
 
 
-#녹주계열
+#Zümrüt Serisi
 section
 npc	20383
 item	50637	3
@@ -951,7 +951,7 @@ gold	100000
 percent	80
 end
 
-#청옥계열
+#Mavi Yeşim Serisi
 section
 npc	20383
 item	50638	3
@@ -982,7 +982,7 @@ gold	100000
 percent	80
 end
 
-#밸트
+#Kemer
 section
 npc	20017
 item	50624	10

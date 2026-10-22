@@ -211,7 +211,7 @@ VNUM	LOCALE_NAME
 1093	Lusifer
 1094	Elit Çirkin Şeytan Kralı
 1095	Mavi Ölüm
-1096	진사귀왕
+1096	Gerçek Kötü Ruh Kralı
 1101	Büyülü Buz
 1102	Buz Katil Balinası
 1103	Buz Böceği
@@ -365,14 +365,14 @@ VNUM	LOCALE_NAME
 2413	Setaou Yargıcı
 2414	Setaou Komutanı
 2415	Setaou Komutanı
-2431	천의병사
-2432	천의궁병
-2433	천의법사
-2434	천의장수
-2451	진천의병사
-2452	진천의궁병
-2453	진천의법사
-2454	진천의장수
+2431	Gök Kıyafet Askeri
+2432	Gök Kıyafet Okçusu
+2433	Gök Kıyafet Büyücüsü
+2434	Gök Kıyafet Başı
+2451	Gerçek Gök Kıyafet Askeri
+2452	Gerçek Gök Kıyafet Okçusu
+2453	Gerçek Gök Kıyafet Büyücüsü
+2454	Gerçek Gök Kıyafet Başı
 2491	Komutan
 2492	General
 2493	Beran-Setaou
@@ -1644,22 +1644,22 @@ VNUM	LOCALE_NAME
 8509	Mistik Haberci
 8510	Alev Savaşçı
 8511	Buz Golemi
-8600	웅귀대족장
-8601	웅귀대족장
-8602	밀교대주교
-8603	밀교대주교
-8604	명사귀왕
-8605	명사귀왕
-8606	사신
-8607	사신
-8608	구미호
-8609	구미호
-8610	누렁투범귀
-8611	누렁투범귀
-8612	여왕거미
-8613	여왕거미
-8614	거대사막거북
-8615	거대사막거북
+8600	Ayı Hayaleti Büyük Reisi
+8601	Ayı Hayaleti Büyük Reisi
+8602	Milgyo Başrahibi
+8603	Milgyo Başrahibi
+8604	Kötü Ruh Kralı Myeong
+8605	Kötü Ruh Kralı Myeong
+8606	Azrail
+8607	Azrail
+8608	Dokuz Kuyruklu Tilki
+8609	Dokuz Kuyruklu Tilki
+8610	Sarı Kaplan Hayaleti
+8611	Sarı Kaplan Hayaleti
+8612	Kraliçe Örümcek
+8613	Kraliçe Örümcek
+8614	Dev Çöl Kaplumbağası
+8615	Dev Çöl Kaplumbağası
 8616	Billy Loomis
 8617	Jack Torrance
 8618	Chucky
@@ -1710,29 +1710,29 @@ VNUM	LOCALE_NAME
 9105	Rüzgar güç çiçeği
 9106	Toprak güç çiçeği
 9107	Karanlık güç çiçeği
-10001	Jayang_Bölgesi 4002 8995
-10002	YounganBölgesi 4503 9050
-10003	BokjungBölgesi 1118 2161
-10004	Joan_Bölgesi 876 2131
-10005	Bakra_Bölgesi 9064 2214
-10006	Pyungmo_Bölges 9372 2188
-10007	YounganBölgesi 4188 9560
-10008	Jayang_Bölgesi 3179 8332
-10009	Joan_Bölgesi 897 1127
-10010	Bokjun_Bölgesi 1759 2210
-10011	Pyungmo_Bölges 9343 3143
-10012	Bakra_Bölgesi 8348 2926
-10013	Hwang_Tapınağı 5536 1441
+10001	Jayang 4002 8995
+10002	Youngan 4503 9050
+10003	Bokjung 1118 2161
+10004	Joan 876 2131
+10005	Bakra 9064 2214
+10006	Pyungmo 9372 2188
+10007	Youngan 4188 9560
+10008	Jayang 3179 8332
+10009	Joan 897 1127
+10010	Bokjung 1759 2210
+10011	Pyungmo 9343 3143
+10012	Bakra 8348 2926
+10013	HwangTap 5536 1441
 10014	Seungryong 3326 7468
 10015	Yongbi_Çölü 3467 6329
 10016	Kuahklo_Dong 600 4960
-10017	Hwang_Tapınağı 5906 1102
+10017	HwangTap 5906 1102
 10018	Gunsam_Kulesi 2165 7270
-10019	Jayang_Bölgesi 3211 9009
+10019	Jayang 3211 9009
 10020	Jungrang 1356 43
-10021	Bokjun_Bölgesi 1168 2920
+10021	Bokjung 1168 2920
 10022	Waryong 2219 93
-10023	Bakra_Bölgesi 9098 2948
+10023	Bakra 9098 2948
 10024	Imha 2718 130
 10025	Sohan_Dağı 4993 2984
 10026	Lungsam 2887 57
@@ -1746,66 +1746,66 @@ VNUM	LOCALE_NAME
 10034	2_Zin-Grotto 10594 7525
 10035	Deon-Zeon 917 5253
 10036	2_Deon-Zeon 7041 4642
-10037	자양현 3809 8233
-10038	신수성 9752 1330
-10039	복정현 1917 2900
-10040	진노성 9239 1836
-10041	박라현 8316 2154
-10042	천조성 9772 1850
-10043	서한산 3819 2969
-10044	신수성 10189 1484
-10045	서한산 3819 2969
-10046	신수성 9774 1501
-10047	승룡곡 2699 6752
-10048	진노성 9679 1994
-10049	승룡곡 2699 6752
-10050	진노성 9256 2012
-10051	영비사막 3478 6189
-10052	천조성 9780 1995
-10053	영비사막 3478 6189
-10054	천조성 10190 2002
-10055	도염화지 6011 6874
-10056	서한산 4368 2158
-10057	승룡곡 3355 7558
-10058	밀교사원 5943 1337
-10059	서한산 0 10496
-10060	밀교사원 1536 10496
+10037	Jayang 3809 8233
+10038	ShinsuKale 9752 1330
+10039	Bokjeong 1917 2900
+10040	JinnoKale 9239 1836
+10041	BakraKasaba 8316 2154
+10042	CheonjoKale 9772 1850
+10043	SeohanDagi 3819 2969
+10044	ShinsuKale 10189 1484
+10045	SeohanDagi 3819 2969
+10046	ShinsuKale 9774 1501
+10047	SeungryongV 2699 6752
+10048	JinnoKale 9679 1994
+10049	SeungryongV 2699 6752
+10050	JinnoKale 9256 2012
+10051	YongbiColu 3478 6189
+10052	CheonjoKale 9780 1995
+10053	YongbiColu 3478 6189
+10054	CheonjoKale 10190 2002
+10055	AlevToprak 6011 6874
+10056	SeohanDagi 4368 2158
+10057	SeungryongV 3355 7558
+10058	MilgyoTap 5943 1337
+10059	SeohanDagi 0 10496
+10060	MilgyoTap 1536 10496
 10061	Ateş_Diyarı 4608 10496
-10062	승룡곡 6144 10496
-10063	귀목림 3031 266
-10064	적귀목림 11133 534
-10065	신귀목림 7754 10553
-10066	신적귀목림 9915 11195
+10062	SeungryongV 6144 10496
+10063	HayaletOrman 3031 266
+10064	KizilOrman 11133 534
+10065	YeniOrman 7754 10553
+10066	YeniKzOrman 9915 11195
 10067	MaymunZindanı 7752 4477
-10068	Jayang_Bölgesi 4062 8756
+10068	Jayang 4062 8756
 10069	MaymunZindanı 8520 4477
-10070	BokjungBölgesi 1611 2130
+10070	Bokjung 1611 2130
 10071	MaymunZindanı 9288 4477
-10072	Bakra_Bölgesi 8727 2100
+10072	Bakra 8727 2100
 10073	Yongbi_Çölü 3061 6202
 10074	MaymunZindanı 1352 6532
 10075	Yongbi_Çölü 2879 5407
 10076	MaymunZindanı 1352 7300
-10077	Sürgün_Mağarası 9 12078
-10078	승룡곡 2842 8106
+10077	SurgunMagara 9 12078
+10078	SeungryongV 2842 8106
 10079	Grotte1 1459 13236
 10080	Grotte2 2413 12755
-10081	천의동굴1층 99 13618
-10082	영안읍성 5028 9998
-10083	천의동굴1층 1360 14972
-10084	천의동굴2층 2414 14289
-10085	천의동굴1층 99 15154
-10086	조안읍성 616 1148
-10087	천의동굴1층 1360 16508
-10088	천의동굴2층 2414 15825
-10089	천의동굴1층 99 16690
-10090	평무읍성 9609 3188
-10091	천의동굴1층 1360 18044
-10092	천의동굴2층 2414 17361
-10093	Ejder_Kapısı 1731 12205
-10094	Ejder_Kapısı 1733 13743
-10095	Ejder_Kapısı 1728 15277
-10096	Ejder_Kapısı 1724 16824
+10081	GokMagara1 99 13618
+10082	YeonganKale 5028 9998
+10083	GokMagara1 1360 14972
+10084	GokMagara2 2414 14289
+10085	GokMagara1 99 15154
+10086	JoanKale 616 1148
+10087	GokMagara1 1360 16508
+10088	GokMagara2 2414 15825
+10089	GokMagara1 99 16690
+10090	PyeongmuKale 9609 3188
+10091	GokMagara1 1360 18044
+10092	GokMagara2 2414 17361
+10093	EjderKapi 1731 12205
+10094	EjderKapi 1733 13743
+10095	EjderKapi 1728 15277
+10096	EjderKapi 1724 16824
 10097	ÖZ2 7040 5235
 10098	ÖZ3 984 5711
 10099	Burnu 11043 17885
@@ -1815,36 +1815,36 @@ VNUM	LOCALE_NAME
 10103	Yıldırım 11345 16546
 10104	Yıldırım 11921 16550
 10105	Gautama 12263 16811
-10106	녹림지 8168 15050
+10106	YesilOrman 8168 15050
 10107	DonganOvası 10629 4767
 10109	ŞimşekSırtı 451 9492
-10110	ŞimşekZirvesi 830 9454
+10110	SimsekZirve 830 9454
 10111	AteşSırtı 1430 9616
 10112	BuzDağı 690 10169
-10113	ŞimşekZirvesi 1023 9623
+10113	SimsekZirve 1023 9623
 10114	BuzDağı 303 10113
 10115	AteşZirvesi 2117 9447
 10116	AteşSırtı 1720 9499
 10117	RüzgarAdası 1973 10159
 10118	AteşZirvesi 2337 9633
-10119	KaranlıkSırtı 2710 9616
+10119	KaranlikSirt 2710 9616
 10120	RüzgarAdası 1582 10111
 10121	KaranlıkZirve 3393 9454
-10122	KaranlıkSırtı 3012 9500
+10122	KaranlikSirt 3012 9500
 10123	ToprakÇölü 3069 10174
 10124	KaranlıkZirve 3685 9551
 10126	Çıkış 11622 5809
 10127	DonganObası 10551 4881
-10128	Seogançorağı 12218 4895
-10129	NamganYarığı 12780 4411
-10130	Seogançorağı 12144 5555
+10128	SeoganCorak 12218 4895
+10129	NamganYarik 12780 4411
+10130	SeoganCorak 12144 5555
 10131	Seviye2 9916 6630
 10132	Seviye3 9896 6302
 10133	Seviye1 9534 6281
 10134	Seviye2 9564 6610
 10135	Geri 9338 6287
 10136	Yilad-Geçidi 303 14147
-10137	Namgan-Yarığı 13184 4735
+10137	NamganYarik 13184 4735
 10138	Çıkış
 10139	Kuzey-R.U. 1106 15997
 10140	Yilad-Geçidi 83 14763
@@ -2267,12 +2267,12 @@ VNUM	LOCALE_NAME
 20117	Vahşi Kaplan
 20118	Yırtıcı Aslan
 20119	Asil Kara Yağız Atı
-20120	청의전갑호
-20121	진적의전갑호
-20122	황의전갑호
-20123	녹의전갑호
-20124	흑의전갑호
-20125	백의전갑호
+20120	Mavi Zırhlı Kaplan
+20121	Kızıl Zırhlı Kaplan
+20122	Sarı Zırhlı Kaplan
+20123	Yeşil Zırhlı Kaplan
+20124	Siyah Zırhlı Kaplan
+20125	Beyaz Zırhlı Kaplan
 20126	Noel Baba
 20127	Yıl dönümü flaması 1
 20128	Yıl dönümü flaması 2
@@ -2295,38 +2295,38 @@ VNUM	LOCALE_NAME
 20149	Güçlü savaş atı
 20150	G. sav. atı (Lonca üye.)
 20151	G. sav. atı (Lonca lid.)
-20201	전갑원
-20202	전갑랑
-20203	전갑호
-20204	전갑사자
-20205	난폭한 전갑원
-20206	난폭한 전갑랑
-20207	난폭한 전갑호
-20208	난폭한 전갑사자
-20209	용맹한 전갑원
-20210	용맹한 전갑랑
-20211	용맹한 전갑호
-20212	용맹한 전갑사자
-20213	전갑숫순록
-20214	난폭한 전갑숫순록
-20215	용맹한 전갑숫순록
-20216	전갑암순록
-20217	난폭한 전갑암순록
-20218	용맹한 전갑암순록
+20201	Zırhlı Maymun
+20202	Zırhlı Kurt
+20203	Zırhlı Kaplan
+20204	Zırhlı Aslan
+20205	Vahşi Zırhlı Maymun
+20206	Vahşi Zırhlı Kurt
+20207	Vahşi Zırhlı Kaplan
+20208	Vahşi Zırhlı Aslan
+20209	Cesur Zırhlı Maymun
+20210	Cesur Zırhlı Kurt
+20211	Cesur Zırhlı Kaplan
+20212	Cesur Zırhlı Aslan
+20213	Zırhlı Erkek Ren Geyiği
+20214	Vahşi Zırhlı Erkek Ren Geyiği
+20215	Cesur Zırhlı Erkek Ren Geyiği
+20216	Zırhlı Dişi Ren Geyiği
+20217	Vahşi Zırhlı Dişi Ren Geyiği
+20218	Cesur Zırhlı Dişi Ren Geyiği
 20219	blackpony
-20220	크리스마스 순록
-20221	전갑백웅
-20222	전갑팬더
-20223	전갑석룡자
-20224	난폭한 전갑석룡자
-20225	용맹한 전갑석룡자
-20226	흑유니콘
-20227	백유니콘
-20228	전갑맹조
-20229	난폭한 전갑맹조
-20230	용맹한 전갑맹조
-20231	전갑흑범
-20232	전갑표범
+20220	Noel Ren Geyiği
+20221	Zırhlı Beyaz Ayı
+20222	Zırhlı Panda
+20223	Zırhlı Taş Ejderi
+20224	Vahşi Zırhlı Taş Ejderi
+20225	Cesur Zırhlı Taş Ejderi
+20226	Siyah Unicorn
+20227	Beyaz Unicorn
+20228	Zırhlı Yırtıcı Kuş
+20229	Vahşi Zırhlı Yırtıcı Kuş
+20230	Cesur Zırhlı Yırtıcı Kuş
+20231	Zırhlı Kara Kaplan
+20232	Zırhlı Leopar
 20233	Muffin (kahve aksesuar)
 20234	Nugget (kahve aksesuar)
 20235	Muffin (mavi aksesuar)
@@ -2456,7 +2456,7 @@ VNUM	LOCALE_NAME
 20393	Yaralı Asker
 20394	Ateş Diyarı Bekçisi
 20395	Buz Dağı Muhafızı
-20396	적수상단 판매원
+20396	Jeoksu Tüccar Birliği Satıcısı
 20397	Buz Aslanı
 20398	Arktos Küpü
 20399	Kuzeyli Ejderha Sütunu
@@ -2583,7 +2583,7 @@ VNUM	LOCALE_NAME
 20704	Güç Tapınağı
 20705	Hazine Tapınağı
 20706	Aydınlanma Tapınağı
-20707	포탈(격전지) 385 385
+20707	PortalSavas 385 385
 20710	Tedarik kutusu(BR)
 20711	Ekipman kutusu(BR)
 20712	Elektrik alanı
@@ -2633,8 +2633,8 @@ VNUM	LOCALE_NAME
 20850	Gizemli sunak
 20851	Kelle avcısı. (Se. Ço.)
 20852	Kelle avcısı. (Namg. Y.)
-30000	개인상점
-30001	개인상점
+30000	Kişisel Dükkan
+30001	Kişisel Dükkan
 30002	Binbir Gece
 30003	Mangal Ustası
 30004	Hazine Avcısı
@@ -2681,7 +2681,7 @@ VNUM	LOCALE_NAME
 30311	Gece Jeditlisi
 30312	Duman Jeditlisi
 30313	Sis Jeditlisi
-33001	모험가의 해골
+33001	Maceracının Kafatası
 33002	Tarihçi
 33003	Niyetli Vatandaş
 33004	Niyetli Vatandaş
