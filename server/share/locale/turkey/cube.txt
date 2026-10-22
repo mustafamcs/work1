@@ -1,4 +1,4 @@
-#º¹¼ş¾Æ²ÉÁø¾×
+#복숭아꽃진액
 section
 npc	20018
 item	50721	1
@@ -6,7 +6,7 @@ reward	50801	1
 percent	100
 end
 
-#µµ¶óÁöÁø¾×
+#도라지진액
 section
 npc	20018
 item	50722	1
@@ -14,7 +14,7 @@ reward	50802	1
 percent	100
 end
 
-#°¨²ÉÁø¾×
+#감꽃진액
 section
 npc	20018
 item	50723	1
@@ -22,7 +22,7 @@ reward	50803	100
 percent	100
 end
 
-#°¡½Ã¿À°¡ÇÇÁø¾×
+#가시오가피진액
 section
 npc	20018
 item	50724	1
@@ -30,7 +30,7 @@ reward	50804	100
 percent	100
 end
 
-#º¹¼ş¾Æ²ÉÁø¾×
+#복숭아꽃진액
 section
 npc	20017
 item	50721	1
@@ -38,7 +38,7 @@ reward	50801	1
 percent	100
 end
 
-#µµ¶óÁöÁø¾×
+#도라지진액
 section
 npc	20017
 item	50722	1
@@ -46,7 +46,7 @@ reward	50802	1
 percent	100
 end
 
-#°¨²ÉÁø¾×
+#감꽃진액
 section
 npc	20017
 item	50723	1
@@ -54,7 +54,7 @@ reward	50803	100
 percent	100
 end
 
-#°¡½Ã¿À°¡ÇÇÁø¾×
+#가시오가피진액
 section
 npc	20017
 item	50724	1
@@ -62,7 +62,7 @@ reward	50804	100
 percent	100
 end
 
-#È°½É¾×Áø¾×
+#활심액진액
 section
 npc	20017
 item	50801	1
@@ -71,7 +71,7 @@ reward	50813	1
 percent	100
 end
 
-#ÇÇµ¶¼ö
+#피독수
 section
 npc	20017
 item	50802	1
@@ -80,7 +80,7 @@ reward	50814	1
 percent	100
 end
 
-#º¸È¯¼ö
+#보환수
 section
 npc	20017
 item	50803	100
@@ -89,7 +89,7 @@ reward	50815	100
 percent	100
 end
 
-#¿µº¸¼ö
+#영보수
 section
 npc	20017
 item	50804	100
@@ -99,7 +99,7 @@ percent	100
 end
 
 
-#º¹¼ş¾Æ²ÉÁø¾×
+#복숭아꽃진액
 section
 npc	20022
 item	50721	1
@@ -107,7 +107,7 @@ reward	50801	1
 percent	100
 end
 
-#µµ¶óÁöÁø¾×
+#도라지진액
 section
 npc	20022
 item	50722	1
@@ -115,7 +115,7 @@ reward	50802	1
 percent	100
 end
 
-#°¨²ÉÁø¾×
+#감꽃진액
 section
 npc	20022
 item	50723	1
@@ -123,7 +123,7 @@ reward	50803	100
 percent	100
 end
 
-#°¡½Ã¿À°¡ÇÇÁø¾×
+#가시오가피진액
 section
 npc	20022
 item	50724	1
@@ -131,7 +131,7 @@ reward	50804	100
 percent	100
 end
 
-#È°½É¾×Áø¾×
+#활심액진액
 section
 npc	20022
 item	50801	1
@@ -140,7 +140,7 @@ reward	50813	1
 percent	100
 end
 
-#ÇÇµ¶¼ö
+#피독수
 section
 npc	20022
 item	50802	1
@@ -149,7 +149,7 @@ reward	50814	1
 percent	100
 end
 
-#º¸È¯¼ö
+#보환수
 section
 npc	20022
 item	50803	100
@@ -158,7 +158,7 @@ reward	50815	100
 percent	100
 end
 
-#¿µº¸¼ö
+#영보수
 section
 npc	20022
 item	50804	100
@@ -168,7 +168,7 @@ percent	100
 end
 
 
-#ÁøÈ°½É¾×Áø¾×
+#진활심액진액
 section
 npc	20022
 item	50813	1
@@ -177,7 +177,7 @@ reward	50817	1
 percent	100
 end
 
-#ÁøÇÇµ¶¼ö
+#진피독수
 section
 npc	20022
 item	50814	1
@@ -186,7 +186,7 @@ reward	50818	1
 percent	100
 end
 
-#Áøº¸È¯¼ö
+#진보환수
 section
 npc	20022
 item	50815	100
@@ -195,7 +195,7 @@ reward	50819	1
 percent	100
 end
 
-#Áø¿µº¸¼ö
+#진영보수
 section
 npc	20022
 item	50816	100
@@ -204,7 +204,7 @@ reward	50820	1
 percent	100
 end
 
-#Àû»ó¾×
+#적상액
 section
 npc	20022
 item	50901	10
@@ -213,7 +213,7 @@ reward	50821	10
 percent	100
 end
 
-#È«»ó¾×
+#홍상액
 section
 npc	20022
 item	50901	10
@@ -222,7 +222,7 @@ reward	50822	10
 percent	100
 end
 
-#È²»ó¾×
+#황상액
 section
 npc	20022
 item	50901	10
@@ -231,7 +231,7 @@ reward	50823	10
 percent	100
 end
 
-#³ì»ó¾×
+#녹상액
 section
 npc	20022
 item	50901	10
@@ -240,7 +240,7 @@ reward	50824	10
 percent	100
 end
 
-#Ã»»ó¾×
+#청상액
 section
 npc	20022
 item	50901	10
@@ -249,7 +249,7 @@ reward	50825	10
 percent	100
 end
 
-#¹é»ó¾×
+#백상액
 section
 npc	20022
 item	50901	10
@@ -258,7 +258,7 @@ reward	50826	10
 percent	100
 end
 
-#°æÇèÀÇ¹°¾àÅ×½ºÆ®
+#경험의물약테스트
 #section
 #npc	20018
 #item	51001	100
@@ -267,7 +267,7 @@ end
 #percent	10
 #end
 
-#¿ë½ÅÁö°Ë
+#용신지검
 section
 npc	20383
 item	145	1
@@ -318,7 +318,7 @@ gold	100000
 percent	50
 end
 
-#ÆÄ¸êÁö°Ë
+#파멸지검
 section
 npc	20383
 item	155	1
@@ -369,7 +369,7 @@ gold	100000
 percent	50
 end
 
-#¿ÀÇàµµ
+#오행도
 section
 npc	20383
 item	1105	1
@@ -421,7 +421,7 @@ percent	50
 end
 
 
-#Ãµ·æÁö±Ã
+#천룡지궁
 section
 npc	20383
 item	2145	1
@@ -473,7 +473,7 @@ percent	50
 end
 
 
-#ÅÂ¾ç°Ë
+#태양검
 section
 npc	20383
 item	3145	1
@@ -525,7 +525,7 @@ percent	50
 end
 
 
-#¿ë½Å·É
+#용신령
 section
 npc	20383
 item	5105	1
@@ -577,7 +577,7 @@ percent	50
 end
 
 
-#¹«¾ÆÁö¼±
+#무아지선
 section
 npc	20383
 item	7145	1
@@ -629,7 +629,7 @@ percent	50
 end
 
 
-#ÅÂÀ»°©
+#태을갑
 section
 npc	20383
 item	11295	1
@@ -686,7 +686,7 @@ percent	50
 end
 
 
-#¿µº¸
+#영보
 section
 npc	20383
 item	11495	1
@@ -743,7 +743,7 @@ percent	50
 end
 
 
-#ÇöÃµ°©
+#현천갑
 section
 npc	20383
 item	11695	1
@@ -800,7 +800,7 @@ percent	50
 end
 
 
-#»ï°üÀÇ
+#삼관의
 section
 npc	20383
 item	11895	1
@@ -856,7 +856,7 @@ gold	100000
 percent	50
 end
 
-#È«¿Á°è¿­
+#홍옥계열
 section
 npc	20383
 item	50635	3
@@ -888,7 +888,7 @@ percent	80
 end
 
 
-#¼®·ù°è¿­
+#석류계열
 section
 npc	20383
 item	50636	3
@@ -920,7 +920,7 @@ percent	80
 end
 
 
-#³ìÁÖ°è¿­
+#녹주계열
 section
 npc	20383
 item	50637	3
@@ -951,7 +951,7 @@ gold	100000
 percent	80
 end
 
-#Ã»¿Á°è¿­
+#청옥계열
 section
 npc	20383
 item	50638	3
@@ -982,7 +982,7 @@ gold	100000
 percent	80
 end
 
-#¹ëÆ®
+#밸트
 section
 npc	20017
 item	50624	10

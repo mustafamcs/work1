@@ -69,10 +69,10 @@ quest main_quest_lv84 begin
 			pc.give_exp2(63000000)
 			pc.change_money(250000)
 
-			pc.give_item2(71026) -- ÇöÃ¶
-			pc.give_item2(71026) -- ÇöÃ¶
-			pc.give_item2(70051) -- ¼±¿ÕÀÇ Àå°©
-			pc.give_item2(70050) -- ¼±¿ÕÀÇ ÁõÇ¥ 
+			pc.give_item2(71026) -- í˜„ì² 
+			pc.give_item2(71026) -- í˜„ì² 
+			pc.give_item2(70051) -- ì„ ì™•ì˜ ì¥ê°‘
+			pc.give_item2(70050) -- ì„ ì™•ì˜ ì¦í‘œ 
 
 			set_state (state_2)
 		end
@@ -142,10 +142,10 @@ quest main_quest_lv84 begin
 			pc.give_exp2(84000000)
 			pc.change_money(250000)
 
-			pc.give_item2(71025) -- ¾ß°ø¼®
-			pc.give_item2(71025) -- ¾ß°ø¼® 
-			pc.give_item2(70038) -- ¿ë±âÀÇ ¸ÁÅä
-			pc.give_item2(71107) -- Ãµµµº¹¼ş¾Æ
+			pc.give_item2(71025) -- ì•¼ê³µì„
+			pc.give_item2(71025) -- ì•¼ê³µì„ 
+			pc.give_item2(70038) -- ìš©ê¸°ì˜ ë§í† 
+			pc.give_item2(71107) -- ì²œë„ë³µìˆ­ì•„
 			set_state (__COMPLETE__)
 		end
 	end

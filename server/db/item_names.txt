@@ -6010,7 +6010,7 @@ VNUM	LOCALE_NAME
 30325	Arachnida Anahtarı
 30326	Kraliçe Örümcek Zehri
 30327	Arachnida Flütü
-30328	¿ë½Å??Ç »ó??Ú
+30328	용신의 상자
 30329	Altın Dişli Çark
 30330	Maat Taşı
 30331	Buz Anahtarı
@@ -6463,7 +6463,7 @@ VNUM	LOCALE_NAME
 38016	EP kuponu (20)
 38017	EP kuponu (50)
 38018	EP kuponu (100)
-38020	¼º¸¶ÇÁ¸®¹Ì¾ö¹öÇÁ
+38020	성마프리미엄버프
 38050	Güç Sandığı
 38051	Kral Kaplanı Kristali
 38052	Krallar Sandığı
@@ -6983,7 +6983,7 @@ VNUM	LOCALE_NAME
 41316	Azrail'in Zırhı (k)
 41317	Azrail'in Zırhı+ (e)
 41318	Azrail'in Zırhı+ (k)
-41319	Èæ»ç°©
+41319	흑사갑
 41320	Jack Pumpkin takımı (e)
 41321	Jack Pumpkin elbis. (k)
 41322	Jack Pumpkin takımı+ (e)
@@ -7651,7 +7651,7 @@ VNUM	LOCALE_NAME
 45152	Azrail'in Miğferi (k)
 45153	Azrail'in Miğferi+ (e)
 45154	Azrail'in Miğferi+ (k)
-45155	Èæ»çÅõ±¸
+45155	흑사투구
 45156	Jack Pumpkin kafası (e)
 45157	Jack Pumpkin kafası (k)
 45158	Jack Pumpkin kafası+ (e)
@@ -10428,8 +10428,8 @@ VNUM	LOCALE_NAME
 85023	Yıl dönümü kuşağı (asil)
 85024	Yıldön. kuşağı (kiş. ö.)
 85025	Hakim Kuşağı+ (kiş. öz.)
-85026	¸í??å??Ç ¾×¼¼¼­¸®(¹Ì»ç¿ë)
-85027	¸í??å??Ç ¾×¼¼¼­¸®(¹Ì»ç¿ë)
+85026	명장의 액세서리(미사용)
+85027	명장의 액세서리(미사용)
 85028	Hakim Kuşağı+ (kiş. öz.)
 86001	Zi Bandı (basit)
 86002	Zi Bandı (zarif)

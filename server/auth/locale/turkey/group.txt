@@ -1,209 +1,209 @@
-Group	L01_µé°³(PAWN)-µé°³(PAWN)
+Group	L01_들개(PAWN)-들개(PAWN)
 {
 	Leader	Wildhund	101
 	Vnum	101
-	1	µé°³	101
-	2	µé°³	101
-	3	µé°³	2101
-	4	µé°³	2101
-	5	µé°³	2101
-	6	µé°³	2101
+	1	들개	101
+	2	들개	101
+	3	들개	2101
+	4	들개	2101
+	5	들개	2101
+	6	들개	2101
 }
-Group	L03_´Á´ë(PAWN)-µé°³(PAWN)
+Group	L03_늑대(PAWN)-들개(PAWN)
 {
 	Leader	Wolf	102
 	Vnum	102
-	1	µé°³	101
-	2	µé°³	101
-	3	µé°³	2101
-	4	µé°³	2101
-	5	µé°³	2101
-	6	µé°³	2101
+	1	들개	101
+	2	들개	101
+	3	들개	2101
+	4	들개	2101
+	5	들개	2101
+	6	들개	2101
 }
-Group	L03_´Á´ë(PAWN)-´Á´ë(PAWN)
+Group	L03_늑대(PAWN)-늑대(PAWN)
 {
 	Leader	Wolf	102
 	Vnum	103
-	1	´Á´ë	102
-	2	´Á´ë	102
-	3	µé°³	2101
-	4	µé°³	2101
-	5	µé°³	2101
-	6	µé°³	2101
+	1	늑대	102
+	2	늑대	102
+	3	들개	2101
+	4	들개	2101
+	5	들개	2101
+	6	들개	2101
 }
-Group	L04_µÎ¸ñ´Á´ë(S_PAWN)-´Á´ë(PAWN)
+Group	L04_두목늑대(S_PAWN)-늑대(PAWN)
 {
 	Leader	Alpha-Wolf	103
 	Vnum	104
-	1	´Á´ë	102
-	2	´Á´ë	102
-	3	µé°³	2101
-	4	µé°³	2101
-	5	µé°³	2101
-	6	µé°³	2101
+	1	늑대	102
+	2	늑대	102
+	3	들개	2101
+	4	들개	2101
+	5	들개	2101
+	6	들개	2101
 }
-Group	L06_Çª¸¥´Á´ë(PAWN)-Çª¸¥´Á´ë(PAWN)
+Group	L06_푸른늑대(PAWN)-푸른늑대(PAWN)
 {
 	Leader	Blauwolf	104
 	Vnum	105
 	1	Blauwolf	104
 	2	Blauwolf	104
 }
-Group	L09_¸äµÅÁö(PAWN)-Çª¸¥´Á´ë(PAWN)
+Group	L09_멧돼지(PAWN)-푸른늑대(PAWN)
 {
 	Leader	Keiler	108
 	Vnum	106
 	1	Blauwolf	104
 	2	Blauwolf	104
 }
-Group	L13_Çª¸¥_µÎ¸ñ´Á´ë(S_PAWN)-¸äµÅÁö(PAWN)
+Group	L13_푸른_두목늑대(S_PAWN)-멧돼지(PAWN)
 {
 	Leader	Alpha-Blauwolf	105
 	Vnum	107
 	1	Keiler	108
 	2	Keiler	108
 }
-Group	L16_Çª¸¥_µÎ¸ñ´Á´ë(S_PAWN)-Çª¸¥_µÎ¸ñ´Á´ë(S_PAWN)
+Group	L16_푸른_두목늑대(S_PAWN)-푸른_두목늑대(S_PAWN)
 {
 	Leader	Alpha-Blauwolf	105
 	Vnum	108
 	1	Alpha-Blauwolf	105
 	2	Alpha-Blauwolf	105
 }
-Group	L16_ºÓÀº_¸äµÅÁö(S_PAWN)-Çª¸¥_µÎ¸ñ´Á´ë(S_PAWN)
+Group	L16_붉은_멧돼지(S_PAWN)-푸른_두목늑대(S_PAWN)
 {
 	Leader	"Roter Keiler"	109
 	Vnum	109
 	1	Alpha-Blauwolf	105
 	2	Alpha-Blauwolf	105
 }
-Group	L16_ºÓÀº_¸äµÅÁö(S_PAWN)-ºÓÀº_¸äµÅÁö(S_PAWN)
+Group	L16_붉은_멧돼지(S_PAWN)-붉은_멧돼지(S_PAWN)
 {
 	Leader	"Roter Keiler"	109
 	Vnum	110
 	1	"Roter Keiler"	109
 	2	"Roter Keiler"	109
 }
-Group	L16_°õ(PAWN)-ºÓÀº_¸äµÅÁö(S_PAWN)
+Group	L16_°õ(PAWN)-붉은_멧돼지(S_PAWN)
 {
 	Leader	B?r	110
 	Vnum	111
 	1	"Roter Keiler"	109
 	2	"Roter Keiler"	109
 }
-Group	L16_°õ(PAWN)-°õ(PAWN)
+Group	L16_°õ(PAWN)-곰(PAWN)
 {
 	Leader	B?r	110
 	Vnum	112
 	1	B?r	110
 	2	B?r	110
 }
-Group	L16_È¸»ö´Á´ë(PAWN)-°õ(PAWN)
+Group	L16_회색늑대(PAWN)-곰(PAWN)
 {
 	Leader	Grauwolf	106
 	Vnum	113
 	1	B?r	110
 	2	B?r	110
 }
-Group	L16_È¸»ö´Á´ë(PAWN)-È¸»ö´Á´ë(PAWN)
+Group	L16_회색늑대(PAWN)-회색늑대(PAWN)
 {
 	Leader	Grauwolf	106
 	Vnum	114
 	1	Grauwolf	106
 	2	Grauwolf	106
 }
-Group	L19_È¸»ö°õ(S_PAWN)-È¸»ö´Á´ë(PAWN)
+Group	L19_회색곰(S_PAWN)-회색늑대(PAWN)
 {
 	Leader	Grizzlyb?r	111
 	Vnum	115
 	1	Grauwolf	106
 	2	Grauwolf	106
 }
-Group	L21_È¸»ö°õ(S_PAWN)-È¸»ö°õ(PAWN)
+Group	L21_회색곰(S_PAWN)-회색곰(PAWN)
 {
 	Leader	Grizzlyb?r	111
 	Vnum	116
 	1	Grizzlyb?r	111
 	2	Grizzlyb?r	111
 }
-Group	L21_È¸»ö_µÎ¸ñ´Á´ë(S_PAWN)-È¸»ö°õ(S_PAWN)
+Group	L21_회색_두목늑대(S_PAWN)-회색곰(S_PAWN)
 {
 	Leader	Alpha-Grauwolf	107
 	Vnum	117
 	1	Grizzlyb?r	111
 	2	Grizzlyb?r	111
 }
-Group	L21_È¸»ö_µÎ¸ñ´Á´ë(S_PAWN)-È¸»ö_µÎ¸ñ´Á´ë(S_PAWN)
+Group	L21_회색_두목늑대(S_PAWN)-회색_두목늑대(S_PAWN)
 {
 	Leader	Alpha-Grauwolf	107
 	Vnum	118
 	1	Alpha-Grauwolf	107
 	2	Alpha-Grauwolf	107
 }
-Group	L24_È£¶ûÀÌ(PAWN)-È¸»ö_µÎ¸ñ´Á´ë(S_PAWN)
+Group	L24_호랑이(PAWN)-회색_두목늑대(S_PAWN)
 {
 	Leader	Tiger	114
 	Vnum	119
 	1	Alpha-Grauwolf	107
 	2	Alpha-Grauwolf	107
 }
-Group	L24_È£¶ûÀÌ(PAWN)-È£¶ûÀÌ(PAWN)
+Group	L24_호랑이(PAWN)-호랑이(PAWN)
 {
 	Leader	Tiger	114
 	Vnum	120
 	1	Tiger	114
 	2	Tiger	114
 }
-Group	L08_°ËÀº°õ(S_PWAN)-È£¶ûÀÌ(PWAN)
+Group	L08_검은곰(S_PWAN)-호랑이(PWAN)
 {
 	Leader	Schwarzb?r	112
 	Vnum	121
 	1	Tiger	114
 	2	Tiger	114
 }
-Group	L09_°ËÀº°õ(S_PWAN)-°ËÀº°õ(S_PWAN)
+Group	L09_검은곰(S_PWAN)-검은곰(S_PWAN)
 {
 	Leader	Schwarzb?r	112
 	Vnum	122
 	1	Schwarzb?r	112
 	2	Schwarzb?r	112
 }
-Group	L11_ºÒ°õ(S_PWAN)-°ËÀº°õ(S-PWAN)
+Group	L11_불곰(S_PWAN)-검은곰(S-PWAN)
 {
 	Leader	Braunb?r	113
 	Vnum	123
 	1	Schwarzb?r	112
 	2	Braunb?r	113
 }
-Group	L14_ºÒ°õ(S_PWAN)-ºÒ°õ(S-PWAN)
+Group	L14_불곰(S_PWAN)-불곰(S-PWAN)
 {
 	Leader	Braunb?r	113
 	Vnum	124
 	1	Braunb?r	113
 	2	Braunb?r	113
 }
-Group	L18_´ëÈ£(S_PWAN)-ºÒ°õ(S_PWAN)
+Group	L18_대호(S_PWAN)-불곰(S_PWAN)
 {
 	Leader	"Wei©¬er Tiger"	115
 	Vnum	125
 	1	Braunb?r	113
 	2	Braunb?r	113
 }
-Group	L21_´ëÈ£(S_PWAN)-´ëÈ£(S_PWAN)
+Group	L21_대호(S_PWAN)-대호(S_PWAN)
 {
 	Leader	"Wei©¬er Tiger"	115
 	Vnum	126
 	1	"Wei©¬er Tiger"	115
 	2	"Wei©¬er Tiger"	115
 }
-Group	L30_ÀúÁÖ¹ŞÀº´Á´ë
+Group	L30_저주받은늑대
 {
 	Leader	"Verfl. Wolf"	131
 	Vnum	127
 	1	"Verfl. Wolf"	131
 	2	"Verfl. Wolf"	131
 }
-Group	L31_ÀúÁÖ¹ŞÀºµÎ¸ñ´Á´ë
+Group	L31_저주받은두목늑대
 {
 	Leader	"Verfl. Alpha-Wolf"	132
 	Vnum	128
@@ -211,14 +211,14 @@ Group	L31_ÀúÁÖ¹ŞÀºµÎ¸ñ´Á´ë
 	2	"Verfl. Wolf"	131
 	3	"Verfl. Wolf"	131
 }
-Group	L32_ÀúÁÖ¹ŞÀºÇª¸¥´Á´ë
+Group	L32_저주받은푸른늑대
 {
 	Leader	"Verfl. Blauwolf"	133
 	Vnum	129
 	1	"Verfl. Blauwolf"	133
 	2	"Verfl. Blauwolf"	133
 }
-Group	L34_ÀúÁÖ¹ŞÀºÇª¸¥µÎ¸ñ´Á´ë
+Group	L34_저주받은푸른두목늑대
 {
 	Leader	"Verfl. Alpha-Blauwolf"	134
 	Vnum	130
@@ -226,28 +226,28 @@ Group	L34_ÀúÁÖ¹ŞÀºÇª¸¥µÎ¸ñ´Á´ë
 	2	"Verfl. Blauwolf"	133
 	3	"Verfl. Blauwolf"	133
 }
-Group	L36_ÀúÁÖ¹ŞÀºÈ¸»ö´Á´ë
+Group	L36_저주받은회색늑대
 {
 	Leader	"Verfl. Grauwolf"	135
 	Vnum	131
 	1	"Verfl. Grauwolf"	135
 	2	"Verfl. Grauwolf"	135
 }
-Group	L37_ÀúÁÖ¹ŞÀººÓÀº¸äµÅÁö
+Group	L37_저주받은붉은멧돼지
 {
 	Leader	"Verfl. roter Keiler"	138
 	Vnum	132
 	1	"Verfl. roter Keiler"	138
 	2	"Verfl. roter Keiler"	138
 }
-Group	L21_ÀúÁÖ¹ŞÀº°õ
+Group	L21_저주받은곰
 {
 	Leader	"Verfl. B?r"	139
 	Vnum	133
 	1	"Verfl. B?r"	139
 	2	"Verfl. B?r"	139
 }
-Group	L21_ÀúÁÖ¹ŞÀºÈ¸»ö°õ
+Group	L21_저주받은회색곰
 {
 	Leader	"Verfl. Grizzlyb?r"	140
 	Vnum	134
@@ -256,14 +256,14 @@ Group	L21_ÀúÁÖ¹ŞÀºÈ¸»ö°õ
 	3	"Verfl. B?r"	139
 	4	"Verfl. B?r"	139
 }
-Group	L21_ÀúÁÖ¹ŞÀº°ËÀº°õ
+Group	L21_저주받은검은곰
 {
 	Leader	"Verfl. Schwarzb?r"	141
 	Vnum	135
 	1	"Verfl. Schwarzb?r"	141
 	2	"Verfl. Schwarzb?r"	141
 }
-Group	L21_ÀúÁÖ¹ŞÀºÈ£¶ûÀÌ
+Group	L21_저주받은호랑이
 {
 	Leader	"Verfl. Tiger"	143
 	Vnum	136
@@ -272,147 +272,147 @@ Group	L21_ÀúÁÖ¹ŞÀºÈ£¶ûÀÌ
 	3	"Verfl. Schwarzb?r"	141
 	4	"Verfl. Schwarzb?r"	141
 }
-Group	L29_ÀúÁÖ¹ŞÀº_´ëÈ£(S_KNIGHT)-ÀúÁÖ¹ŞÀº_È£¶ûÀÌ(KNIGHT)
+Group	L29_저주받은_대호(S_KNIGHT)-저주받은_호랑이(KNIGHT)
 {
 	Leader	"Verfl. wei©¬er Tiger"	144
 	Vnum	137
 	1	"Verfl. Tiger"	143
 	2	"Verfl. Tiger"	143
 }
-Group	L29_»ê°ß½Å(BOSS)-ÀúÁÖ¹ŞÀº_È¸»ö_µÎ¸ñ´Á´ë(S_KNIGHT)
+Group	L29_산견신(BOSS)-저주받은_회색_두목늑대(S_KNIGHT)
 {
 	Leader	Lykos	191
 	Vnum	139
 	1	"Verfl. Alpha-Grauwolf"	136
 	2	"Verfl. Alpha-Grauwolf"	136
 }
-Group	L30_Àú½Å(BOSS)-ÀúÁÖ¹ŞÀº_ºÓÀº_¸äµÅÁö(S_KNIGHT)
+Group	L30_저신(BOSS)-저주받은_붉은_멧돼지(S_KNIGHT)
 {
 	Leader	Scrofa	192
 	Vnum	140
 	1	"Verfl. roter Keiler"	138
 	2	"Verfl. roter Keiler"	138
 }
-Group	L32_¿õ½Å(BOSS)-ÀúÁÖ¹ŞÀº_ºÒ°õ(S_KNIGHT)
+Group	L32_웅신(BOSS)-저주받은_불곰(S_KNIGHT)
 {
 	Leader	Bera	193
 	Vnum	141
 	1	"Verfl. Braunb?r"	142
 	2	"Verfl. Braunb?r"	142
 }
-Group	L34_È£½Å(BOSS)-ÀúÁÖ¹ŞÀº_´ëÈ£(S_KNIGHT)
+Group	L34_호신(BOSS)-저주받은_대호(S_KNIGHT)
 {
 	Leader	Tigris	194
 	Vnum	142
 	1	"Verfl. wei©¬er Tiger"	144
 	2	"Verfl. wei©¬er Tiger"	144
 }
-Group	Äù½ºÆ®¿ë_µé°³
+Group	퀘스트용_들개
 {
 	Leader	"Hungriger Wildhund"	171
 	Vnum	171
 	1	"Hungriger Wildhund"	171
 	2	"Hungriger Wildhund"	171
 }
-Group	Äù½ºÆ®¿ë_´Á°³
+Group	퀘스트용_늑개
 {
 	Leader	"Hungriger Wolf"	172
 	Vnum	172
 	1	"Hungriger Wolf"	172
 	2	"Hungriger Wolf"	172
 }
-Group	Äù½ºÆ®¿ë_µÎ¸ñ´Á´ë
+Group	퀘스트용_두목늑대
 {
 	Leader	"Hungriger Alpha-Wolf"	173
 	Vnum	173
 	1	"Hungriger Alpha-Wolf"	173
 	2	"Hungriger Alpha-Wolf"	173
 }
-Group	Äù½ºÆ®¿ë_Çª¸¥´Á´ë
+Group	퀘스트용_푸른늑대
 {
 	Leader	"Hungriger Blauwolf"	174
 	Vnum	174
 	1	"Hungriger Blauwolf"	174
 	2	"Hungriger Blauwolf"	174
 }
-Group	Äù½ºÆ®¿ë_Çª¸¥µÎ¸ñ´Á´ë
+Group	퀘스트용_푸른두목늑대
 {
 	Leader	"Hungriger Alpha-Blauwolf"	175
 	Vnum	175
 	1	"Hungriger Alpha-Blauwolf"	175
 	2	"Hungriger Alpha-Blauwolf"	175
 }
-Group	Äù½ºÆ®¿ë_È¸»ö´Á´ë
+Group	퀘스트용_회색늑대
 {
 	Leader	"Hungriger Grauwolf"	176
 	Vnum	176
 	1	"Hungriger Grauwolf"	176
 	2	"Hungriger Grauwolf"	176
 }
-Group	Äù½ºÆ®¿ë_È¸»öµÎ¸ñ´Á´ë
+Group	퀘스트용_회색두목늑대
 {
 	Leader	"Hungriger Alpha-Grauwolf"	177
 	Vnum	177
 	1	"Hungriger Alpha-Grauwolf"	177
 	2	"Hungriger Alpha-Grauwolf"	177
 }
-Group	Äù½ºÆ®¿ë_¸äµÅÁö
+Group	퀘스트용_멧돼지
 {
 	Leader	"Hungriger Keiler"	178
 	Vnum	178
 	1	"Hungriger Keiler"	178
 	2	"Hungriger Keiler"	178
 }
-Group	Äù½ºÆ®¿ë_ºÓÀº¸äµÅÁö
+Group	퀘스트용_붉은멧돼지
 {
 	Leader	"Hungriger Roter Keiler"	179
 	Vnum	179
 	1	"Hungriger Roter Keiler"	179
 	2	"Hungriger Roter Keiler"	179
 }
-Group	Äù½ºÆ®¿ë_°õ
+Group	퀘스트용_°õ
 {
 	Leader	"Hungriger B?r"	180
 	Vnum	180
 	1	"Hungriger B?r"	180
 	2	"Hungriger B?r"	180
 }
-Group	Äù½ºÆ®¿ë_È¸»ö°õ
+Group	퀘스트용_회색곰
 {
 	Leader	"Hungriger Grizzlyb?r"	181
 	Vnum	181
 	1	"Hungriger Grizzlyb?r"	181
 	2	"Hungriger Grizzlyb?r"	181
 }
-Group	Äù½ºÆ®¿ë_°ËÀº°õ
+Group	퀘스트용_검은곰
 {
 	Leader	"Hungriger Schwarzb?r"	182
 	Vnum	182
 	1	"Hungriger Schwarzb?r"	182
 	2	"Hungriger Schwarzb?r"	182
 }
-Group	Äù½ºÆ®¿ë_ºÒ°õ
+Group	퀘스트용_불곰
 {
 	Leader	"Hungriger Braunb?r"	183
 	Vnum	183
 	1	"Hungriger Braunb?r"	183
 	2	"Hungriger Braunb?r"	183
 }
-Group	Äù½ºÆ®¿ë_È£¶ûÀÌ
+Group	퀘스트용_호랑이
 {
 	Leader	"Hungriger Tiger"	184
 	Vnum	184
 	1	"Hungriger Tiger"	184
 	2	"Hungriger Tiger"	184
 }
-Group	Äù½ºÆ®¿ë_´ëÈ£
+Group	퀘스트용_대호
 {
 	Leader	"Hungriger Wei©¬er Tiger"	185
 	Vnum	185
 	1	"Hungriger Wei©¬er Tiger"	185
 	2	"Hungriger Wei©¬er Tiger"	185
 }
-Group	L46_¹é°áÀå¼ö(S_PAWN)-¹é°á´Ü¿ø(S_PAWN)
+Group	L46_백결장수(S_PAWN)-백결단원(S_PAWN)
 {
 	Leader	"Wei©¬er-Eid Soldatin"	301
 	Vnum	305
@@ -420,7 +420,7 @@ Group	L46_¹é°áÀå¼ö(S_PAWN)-¹é°á´Ü¿ø(S_PAWN)
 	2	"Wei©¬er-Eid Soldatin"	301
 	3	"Wei©¬er-Eid Soldatin"	301
 }
-Group	L00_¹é°áÀå¼ö(S_PAWN)-¹é°á±Ãº´(S_PAWN)
+Group	L00_백결장수(S_PAWN)-백결궁병(S_PAWN)
 {
 	Leader	"Wei©¬er-Eid Bogensch?tzin"	302
 	Vnum	306
@@ -428,7 +428,7 @@ Group	L00_¹é°áÀå¼ö(S_PAWN)-¹é°á±Ãº´(S_PAWN)
 	2	"Wei©¬er-Eid Soldatin"	301
 	3	"Wei©¬er-Eid Soldatin"	301
 }
-Group	L00_¹é°á±Ãº´(S_PAWN)-¹é°á±Ãº´(S_PAWN)
+Group	L00_백결궁병(S_PAWN)-백결궁병(S_PAWN)
 {
 	Leader	"Wei©¬er-Eid Bogensch?tzin"	302
 	Vnum	307
@@ -436,14 +436,14 @@ Group	L00_¹é°á±Ãº´(S_PAWN)-¹é°á±Ãº´(S_PAWN)
 	2	"Wei©¬er-Eid Soldatin"	301
 	3	"Wei©¬er-Eid Soldatin"	301
 }
-Group	L00_¹é°á±Ãº´(S_PAWN)-¹é°á±Ãº´(S_PAWN)
+Group	L00_백결궁병(S_PAWN)-백결궁병(S_PAWN)
 {
 	Leader	"Wei©¬er-Eid Bogensch?tzin"	302
 	Vnum	308
 	1	"Wei©¬er-Eid Bogensch?tzin"	302
 	2	"Wei©¬er-Eid Bogensch?tzin"	302
 }
-Group	L50_¹é°áÀå¼ö(KNIGHT)-¹é°á´Ü¿ø(PAWN)
+Group	L50_백결장수(KNIGHT)-백결단원(PAWN)
 {
 	Leader	"Wei©¬er-Eid Kommandantin"	304
 	Vnum	309
@@ -451,7 +451,7 @@ Group	L50_¹é°áÀå¼ö(KNIGHT)-¹é°á´Ü¿ø(PAWN)
 	2	"Wei©¬er-Eid Soldatin"	301
 	3	"Wei©¬er-Eid Soldatin"	301
 }
-Group	L50_¹é°áÀå¼ö(KNIGHT)-¹é°á´Ü¿ø(PAWN)
+Group	L50_백결장수(KNIGHT)-백결단원(PAWN)
 {
 	Leader	"Wei©¬er-Eid Kommandantin"	304
 	Vnum	310
@@ -459,7 +459,7 @@ Group	L50_¹é°áÀå¼ö(KNIGHT)-¹é°á´Ü¿ø(PAWN)
 	2	"Wei©¬er-Eid Bogensch?tzin"	302
 	3	"Wei©¬er-Eid Soldatin"	301
 }
-Group	L50_¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)-¹é°á´Ü¿ø(S_KNIGHT)
+Group	L50_수석_백결장수(S_KNIGHT)-백결단원(S_KNIGHT)
 {
 	Leader	"Wei©¬er-Eid Kommandantin"	304
 	Vnum	313
@@ -467,7 +467,7 @@ Group	L50_¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)-¹é°á´Ü¿ø(S_KNIGHT)
 	2	"Wei©¬er-Eid Bogensch?tzin"	302
 	3	"Wei©¬er-Eid Soldatin"	301
 }
-Group	L52_¹ÌÁ¤(S_KNIGHT)-¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)
+Group	L52_미정(S_KNIGHT)-수석_백결장수(S_KNIGHT)
 {
 	Leader	Mi-Jung	391
 	Vnum	315
@@ -475,7 +475,7 @@ Group	L52_¹ÌÁ¤(S_KNIGHT)-¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)
 	2	"Wei©¬er-Eid Generalin"	303
 	3	"Wei©¬er-Eid Bogensch?tzin"	302
 }
-Group	L54_ÀºÁ¤(S_KNIGHT)-¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)
+Group	L54_은정(S_KNIGHT)-수석_백결장수(S_KNIGHT)
 {
 	Leader	Eun-Jung	392
 	Vnum	316
@@ -483,7 +483,7 @@ Group	L54_ÀºÁ¤(S_KNIGHT)-¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)
 	2	"Wei©¬er-Eid Generalin"	303
 	3	"Wei©¬er-Eid Bogensch?tzin"	302
 }
-Group	L29_¼¼¶û(S_KNIGHT)-¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)
+Group	L29_세랑(S_KNIGHT)-수석_백결장수(S_KNIGHT)
 {
 	Leader	Se-Rang	393
 	Vnum	317
@@ -491,7 +491,7 @@ Group	L29_¼¼¶û(S_KNIGHT)-¼ö¼®_¹é°áÀå¼ö(S_KNIGHT)
 	2	"Wei©¬er-Eid Generalin"	303
 	3	"Wei©¬er-Eid Bogensch?tzin"	302
 }
-Group	L31_ÁøÈñ(BOSS)-¼ö¼®_Àû¹ÌÀå¼ö(S_KNIGHT)
+Group	L31_진희(BOSS)-수석_적미장수(S_KNIGHT)
 {
 	Leader	Jin-Hee	394
 	Vnum	318
@@ -500,41 +500,41 @@ Group	L31_ÁøÈñ(BOSS)-¼ö¼®_Àû¹ÌÀå¼ö(S_KNIGHT)
 	3	"Wei©¬er-Eid Bogensch?tzin"	302
 	4	"Wei©¬er-Eid Bogensch?tzin"	302
 }
-Group	Äù½ºÆ®¿ë_¹é°á´Ü¿ø
+Group	퀘스트용_백결단원
 {
 	Leader	"Feiger Wei©¬er-Eid-Soldat"	351
 	Vnum	351
 	1	"Feiger Wei©¬er-Eid-Soldat"	351
 	2	"Feiger Wei©¬er-Eid-Soldat"	351
 }
-Group	Äù½ºÆ®¿ë_¹é°á±Ãº´
+Group	퀘스트용_백결궁병
 {
 	Leader	"Feiger W.-Eid Sch?tze"	352
 	Vnum	352
 	1	"Feiger W.-Eid Sch?tze"	352
 	2	"Feiger W.-Eid Sch?tze"	352
 }
-Group	Äù½ºÆ®¿ë_¼Ò½ÉÇÑ¹ÌÁ¤
+Group	퀘스트용_소심한미정
 {
 	Leader	"Mutlose Mi-Jung"	395
 	Vnum	395
 }
-Group	Äù½ºÆ®¿ë_¼Ò½ÉÇÑÀºÁ¤
+Group	퀘스트용_소심한은정
 {
 	Leader	"Mutlose Eun-Jung"	396
 	Vnum	396
 }
-Group	Äù½ºÆ®¿ë_¼Ò½ÉÇÑ¼¼¶û
+Group	퀘스트용_소심한세랑
 {
 	Leader	"Mutlose Se-Rang"	397
 	Vnum	397
 }
-Group	Äù½ºÆ®¿ë_¼Ò½ÉÇÑÁøÈñ
+Group	퀘스트용_소심한진희
 {
 	Leader	"Mutlose Jin-Hee"	398
 	Vnum	398
 }
-Group	L20_ÈæÇ³´Ü¿ø(PAWN)-¿À¶ûÄÉº¸º´(PAWN)
+Group	L20_흑풍단원(PAWN)-오랑케보병(PAWN)
 {
 	Leader	Schwarzwindsoldat	401
 	Vnum	401
@@ -542,7 +542,7 @@ Group	L20_ÈæÇ³´Ü¿ø(PAWN)-¿À¶ûÄÉº¸º´(PAWN)
 	2	"Wilder Infanterist"	501
 	3	"Wilder Infanterist"	501
 }
-Group	L20_ÈæÇ³µ¹°İ´ë(PAWN)-ÈæÇ³µ¹°İ´ë(PAWN)
+Group	L20_흑풍돌격대(PAWN)-흑풍돌격대(PAWN)
 {
 	Leader	Schwarzwindbesessener	402
 	Vnum	402
@@ -550,7 +550,7 @@ Group	L20_ÈæÇ³µ¹°İ´ë(PAWN)-ÈæÇ³µ¹°İ´ë(PAWN)
 	2	Schwarzwindsoldat	401
 	3	"Wilder Infanterist"	501
 }
-Group	L20_ÈæÇ³µ¹°İ´ë(PAWN)-ÈæÇ³µ¹°İ´ë(PAWN)
+Group	L20_흑풍돌격대(PAWN)-흑풍돌격대(PAWN)
 {
 	Leader	Schwarzwindbesessener	402
 	Vnum	403
@@ -558,7 +558,7 @@ Group	L20_ÈæÇ³µ¹°İ´ë(PAWN)-ÈæÇ³µ¹°İ´ë(PAWN)
 	2	Schwarzwindsoldat	401
 	3	"B?ser Schw. Sturmsoldat"	451
 }
-Group	L25_ÈæÇ³±Ã¼ö(PAWN)-ÈæÇ³µ¹°İ´ë(PAWN)
+Group	L25_흑풍궁수(PAWN)-흑풍돌격대(PAWN)
 {
 	Leader	Schwarzwindbogensch?tze	403
 	Vnum	404
@@ -566,7 +566,7 @@ Group	L25_ÈæÇ³±Ã¼ö(PAWN)-ÈæÇ³µ¹°İ´ë(PAWN)
 	2	Schwarzwindbesessener	402
 	3	"Wilder Ergebener"	502
 }
-Group	L25_ÈæÇ³±Ã¼ö(PAWN)-ÈæÇ³±Ã¼ö(PAWN)
+Group	L25_흑풍궁수(PAWN)-흑풍궁수(PAWN)
 {
 	Leader	Schwarzwindbogensch?tze	403
 	Vnum	405
@@ -574,7 +574,7 @@ Group	L25_ÈæÇ³±Ã¼ö(PAWN)-ÈæÇ³±Ã¼ö(PAWN)
 	2	"Wilder Ergebener"	502
 	3	Schwarzwindbesessener	402
 }
-Group	L25_ÈæÇ³Àå¼ö_»ï·É(S_PAWN)-ÈæÇ³±Ã¼ö(PAWN)
+Group	L25_흑풍장수_삼령(S_PAWN)-흑풍궁수(PAWN)
 {
 	Leader	Schwarzwind-Jak-To	404
 	Vnum	406
@@ -582,7 +582,7 @@ Group	L25_ÈæÇ³Àå¼ö_»ï·É(S_PAWN)-ÈæÇ³±Ã¼ö(PAWN)
 	2	Schwarzwindbesessener	402
 	3	Schwarzwindbesessener	402
 }
-Group	L25_ÈæÇ³Àå¼ö_»ï·É(S_PAWN)-ÈæÇ³±Ã¼ö(PAWN)
+Group	L25_흑풍장수_삼령(S_PAWN)-흑풍궁수(PAWN)
 {
 	Leader	Schwarzwind-Jak-To	404
 	Vnum	407
@@ -590,7 +590,7 @@ Group	L25_ÈæÇ³Àå¼ö_»ï·É(S_PAWN)-ÈæÇ³±Ã¼ö(PAWN)
 	2	Schwarzwindbogensch?tze	403
 	3	Schwarzwindbesessener	402
 }
-Group	L23_ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)-ÈæÇ³Àå¼ö_»ï·É(S_PAWN)
+Group	L23_흑풍장수_이령(S_PAWN)-흑풍장수_삼령(S_PAWN)
 {
 	Leader	Schwarzwind-To-Su	405
 	Vnum	408
@@ -598,7 +598,7 @@ Group	L23_ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)-ÈæÇ³Àå¼ö_»ï·É(S_PAWN)
 	2	Schwarzwindbogensch?tze	403
 	3	Schwarzwindbesessener	402
 }
-Group	L23_ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)-ÈæÇ³Àå¼ö_»ï·É(S_PAWN)
+Group	L23_흑풍장수_이령(S_PAWN)-흑풍장수_삼령(S_PAWN)
 {
 	Leader	Schwarzwind-To-Su	405
 	Vnum	409
@@ -606,7 +606,7 @@ Group	L23_ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)-ÈæÇ³Àå¼ö_»ï·É(S_PAWN)
 	2	Schwarzwindbogensch?tze	403
 	3	Schwarzwindbogensch?tze	403
 }
-Group	L25_ÈæÇ³Àå¼ö_ÀÏ·É(S_PAWN)-ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)
+Group	L25_흑풍장수_일령(S_PAWN)-흑풍장수_이령(S_PAWN)
 {
 	Leader	Schwarzwind-Gu-Ryung	406
 	Vnum	410
@@ -614,7 +614,7 @@ Group	L25_ÈæÇ³Àå¼ö_ÀÏ·É(S_PAWN)-ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)
 	2	Schwarzwindbogensch?tze	403
 	3	Schwarzwindbesessener	402
 }
-Group	L25_ÈæÇ³Àå¼ö_ÀÏ·É(S_PAWN)-ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)
+Group	L25_흑풍장수_일령(S_PAWN)-흑풍장수_이령(S_PAWN)
 {
 	Leader	Schwarzwind-Gu-Ryung	406
 	Vnum	411
@@ -622,7 +622,7 @@ Group	L25_ÈæÇ³Àå¼ö_ÀÏ·É(S_PAWN)-ÈæÇ³Àå¼ö_ÀÌ·É(S_PAWN)
 	2	Schwarzwind-Jak-To	404
 	3	Schwarzwindbogensch?tze	403
 }
-Group	L30_»ìÇ³µ¹°İ´ë(KNIGHT)-»ìÇ³´Ü¿ø(KNIGHT)
+Group	L30_살풍돌격대(KNIGHT)-살풍단원(KNIGHT)
 {
 	Leader	"Schwarzer Sturmbesessene"	432
 	Vnum	412
@@ -630,7 +630,7 @@ Group	L30_»ìÇ³µ¹°İ´ë(KNIGHT)-»ìÇ³´Ü¿ø(KNIGHT)
 	2	"Schwarzer Sturmsoldat"	431
 	3	"Schwarzer Sturmsoldat"	431
 }
-Group	L30_»ìÇ³µ¹°İ´ë(KNIGHT)-»ìÇ³µ¹°İ´ë(KNIGHT)
+Group	L30_살풍돌격대(KNIGHT)-살풍돌격대(KNIGHT)
 {
 	Leader	"Schwarzer Sturmbesessene"	432
 	Vnum	413
@@ -638,7 +638,7 @@ Group	L30_»ìÇ³µ¹°İ´ë(KNIGHT)-»ìÇ³µ¹°İ´ë(KNIGHT)
 	2	"Schwarzer Sturmsoldat"	431
 	3	"Schwarzer Sturmsoldat"	431
 }
-Group	L30_»ìÇ³µ¹°İ´ë(KNIGHT)-»ìÇ³µ¹°İ´ë(KNIGHT)
+Group	L30_살풍돌격대(KNIGHT)-살풍돌격대(KNIGHT)
 {
 	Leader	"Schwarzer Sturmbesessene"	432
 	Vnum	414
@@ -646,7 +646,7 @@ Group	L30_»ìÇ³µ¹°İ´ë(KNIGHT)-»ìÇ³µ¹°İ´ë(KNIGHT)
 	2	"Schwarzer Sturmbesessene"	432
 	3	"Schwarzer Sturmsoldat"	431
 }
-Group	L23_»ìÇ³±Ã¼ö(KNIGHT)-»ìÇ³µ¹°İ´ë(KNIGHT)
+Group	L23_살풍궁수(KNIGHT)-살풍돌격대(KNIGHT)
 {
 	Leader	"Schwarzer Bogensch?tze"	433
 	Vnum	415
@@ -654,7 +654,7 @@ Group	L23_»ìÇ³±Ã¼ö(KNIGHT)-»ìÇ³µ¹°İ´ë(KNIGHT)
 	2	"Schwarzer Sturmbesessene"	432
 	3	"Schwarzer Sturmbesessene"	432
 }
-Group	L23_»ìÇ³±Ã¼ö(KNIGHT)-»ìÇ³±Ã¼ö(KNIGHT)
+Group	L23_살풍궁수(KNIGHT)-살풍궁수(KNIGHT)
 {
 	Leader	"Schwarzer Bogensch?tze"	433
 	Vnum	416
@@ -662,7 +662,7 @@ Group	L23_»ìÇ³±Ã¼ö(KNIGHT)-»ìÇ³±Ã¼ö(KNIGHT)
 	2	"Schwarzer Sturmbesessene"	432
 	3	"Schwarzer Sturmbesessene"	432
 }
-Group	L26_»ìÇ³Àå¼ö_»ï·É(S_KNIGHT)-»ìÇ³±Ã¼ö(KNIGHT)
+Group	L26_살풍장수_삼령(S_KNIGHT)-살풍궁수(KNIGHT)
 {
 	Leader	"Schwarzer Sturm-Joh-Hwan"	434
 	Vnum	417
@@ -670,7 +670,7 @@ Group	L26_»ìÇ³Àå¼ö_»ï·É(S_KNIGHT)-»ìÇ³±Ã¼ö(KNIGHT)
 	2	"Schwarzer Sturmbesessene"	432
 	3	"Schwarzer Sturmbesessene"	432
 }
-Group	L26_»ìÇ³Àå¼ö_»ï·É(S_KNIGHT)-»ìÇ³±Ã¼ö(KNIGHT)
+Group	L26_살풍장수_삼령(S_KNIGHT)-살풍궁수(KNIGHT)
 {
 	Leader	"Schwarzer Sturm-Joh-Hwan"	434
 	Vnum	418
@@ -678,7 +678,7 @@ Group	L26_»ìÇ³Àå¼ö_»ï·É(S_KNIGHT)-»ìÇ³±Ã¼ö(KNIGHT)
 	2	"Schwarzer Bogensch?tze"	433
 	3	"Schwarzer Sturmbesessene"	432
 }
-Group	L28_»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT)-»ìÇ³Àå¼ö_»ï·É(S_KNIGHT)
+Group	L28_살풍장수_이령(S_KNIGHT)-살풍장수_삼령(S_KNIGHT)
 {
 	Leader	"Schwarzer Sturm-Kyuk-Jan"	435
 	Vnum	419
@@ -686,7 +686,7 @@ Group	L28_»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT)-»ìÇ³Àå¼ö_»ï·É(S_KNIGHT
 	2	"Schwarzer Bogensch?tze"	433
 	3	"Schwarzer Sturmbesessene"	432
 }
-Group	L28_»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT)-»ìÇ³Àå¼ö_»ï·É(S_KNIGHT)
+Group	L28_살풍장수_이령(S_KNIGHT)-살풍장수_삼령(S_KNIGHT)
 {
 	Leader	"Schwarzer Sturm-Kyuk-Jan"	435
 	Vnum	420
@@ -694,7 +694,7 @@ Group	L28_»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT)-»ìÇ³Àå¼ö_»ï·É(S_KNIGHT
 	2	"Schwarzer Bogensch?tze"	433
 	3	"Schwarzer Bogensch?tze"	433
 }
-Group	L31_»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)-»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT)
+Group	L31_살풍장수_일령(S_KNIGHT)-살풍장수_이령(S_KNIGHT)
 {
 	Leader	"Schwarzer Sturm-Pho-Hwan"	436
 	Vnum	421
@@ -702,7 +702,7 @@ Group	L31_»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)-»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT
 	2	"Schwarzer Bogensch?tze"	433
 	3	"Schwarzer Bogensch?tze"	433
 }
-Group	L31_»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)-»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT)
+Group	L31_살풍장수_일령(S_KNIGHT)-살풍장수_이령(S_KNIGHT)
 {
 	Leader	"Schwarzer Sturm-Pho-Hwan"	436
 	Vnum	422
@@ -710,7 +710,7 @@ Group	L31_»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)-»ìÇ³Àå¼ö_ÀÌ·É(S_KNIGHT
 	2	"Schwarzer Sturm-Joh-Hwan"	434
 	3	"Schwarzer Bogensch?tze"	433
 }
-Group	L26_¸ÍÈ¯(BOSS)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
+Group	L26_맹환(BOSS)-살풍장수_일령(S_KNIGHT)
 {
 	Leader	Mahon	491
 	Vnum	423
@@ -719,7 +719,7 @@ Group	L26_¸ÍÈ¯(BOSS)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
 	3	Schwarzwindbogensch?tze	403
 	4	Schwarzwindbogensch?tze	403
 }
-Group	L27_º¸¿ì(BOSS)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
+Group	L27_보우(BOSS)-살풍장수_일령(S_KNIGHT)
 {
 	Leader	Bo	492
 	Vnum	424
@@ -728,7 +728,7 @@ Group	L27_º¸¿ì(BOSS)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
 	3	Schwarzwindbogensch?tze	403
 	4	Schwarzwindbogensch?tze	403
 }
-Group	L29_±¸ÆĞ(BOSS)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
+Group	L29_구패(BOSS)-살풍장수_일령(S_KNIGHT)
 {
 	Leader	Goo-Pae	493
 	Vnum	425
@@ -737,7 +737,7 @@ Group	L29_±¸ÆĞ(BOSS)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
 	3	Schwarzwindbogensch?tze	403
 	4	Schwarzwindbogensch?tze	403
 }
-Group	L30_ÃßÈç(KING)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
+Group	L30_추흔(KING)-살풍장수_일령(S_KNIGHT)
 {
 	Leader	Chuong	494
 	Vnum	426
@@ -746,35 +746,35 @@ Group	L30_ÃßÈç(KING)-»ìÇ³Àå¼ö_ÀÏ·É(S_KNIGHT)
 	3	Schwarzwind-Jak-To	404
 	4	Schwarzwindbogensch?tze	403
 }
-Group	Äù½ºÆ®¿ë_ÈæÇ³±Ã¼ö
+Group	퀘스트용_흑풍궁수
 {
 	Leader	"B?ser Sturmbogensch?tze"	453
 	Vnum	453
 	1	"B?ser Sturmbogensch?tze"	453
 	2	"B?ser Sturmbogensch?tze"	453
 }
-Group	Äù½ºÆ®¿ë_ÈæÇ³Àå¼ö
+Group	퀘스트용_흑풍장수
 {
 	Leader	"B?ser Sturm-Joh-Hwan"	454
 	Vnum	454
 	1	"B?ser Sturm-Joh-Hwan"	454
 	2	"B?ser Sturm-Joh-Hwan"	454
 }
-Group	Äù½ºÆ®¿ë_ÈæÇ³Àå¼ö
+Group	퀘스트용_흑풍장수
 {
 	Leader	"B?ser Sturm-Kyuk-Jang"	455
 	Vnum	455
 	1	"B?ser Sturm-Kyuk-Jang"	455
 	2	"B?ser Sturm-Kyuk-Jang"	455
 }
-Group	Äù½ºÆ®¿ë_ÈæÇ³Àå¼ö
+Group	퀘스트용_흑풍장수
 {
 	Leader	"B?ser Sturm-Pho-Hwan"	456
 	Vnum	456
 	1	"B?ser Sturm-Pho-Hwan"	456
 	2	"B?ser Sturm-Pho-Hwan"	456
 }
-Group	L34_¿À¶ûÄ³Á¹°³(PAWN)-¿À¶ûÄ³º¸º´(PAWN)
+Group	L34_오랑캐졸개(PAWN)-오랑캐보병(PAWN)
 {
 	Leader	"Wilder Infanterist"	501
 	Vnum	501
@@ -782,7 +782,7 @@ Group	L34_¿À¶ûÄ³Á¹°³(PAWN)-¿À¶ûÄ³º¸º´(PAWN)
 	2	Schwarzwindsoldat	401
 	3	Schwarzwindsoldat	401
 }
-Group	L34_¿À¶ûÄ³Á¹°³(PAWN)-¿À¶ûÄ³Á¹°³(PAWN)
+Group	L34_오랑캐졸개(PAWN)-오랑캐졸개(PAWN)
 {
 	Leader	"Wilder Ergebener"	502
 	Vnum	502
@@ -790,7 +790,7 @@ Group	L34_¿À¶ûÄ³Á¹°³(PAWN)-¿À¶ûÄ³Á¹°³(PAWN)
 	2	"Wilder Infanterist"	501
 	3	Schwarzwindsoldat	401
 }
-Group	L34_¿À¶ûÄ³Á¹°³(PAWN)-¿À¶ûÄ³Á¹°³(PAWN)
+Group	L34_오랑캐졸개(PAWN)-오랑캐졸개(PAWN)
 {
 	Leader	"Wilder Ergebener"	502
 	Vnum	503
@@ -798,7 +798,7 @@ Group	L34_¿À¶ûÄ³Á¹°³(PAWN)-¿À¶ûÄ³Á¹°³(PAWN)
 	2	"Wilder Infanterist"	501
 	3	"Wilder Infanterist"	501
 }
-Group	L31_¿À¶ûÄ³±Ã¼ö(S_PAWN)-¿À¶ûÄ³Á¹°³(PAWN)
+Group	L31_오랑캐궁수(S_PAWN)-오랑캐졸개(PAWN)
 {
 	Leader	"Wilder Ergebener"	502
 	Vnum	504
@@ -806,7 +806,7 @@ Group	L31_¿À¶ûÄ³±Ã¼ö(S_PAWN)-¿À¶ûÄ³Á¹°³(PAWN)
 	2	"Wilder Ergebener"	502
 	3	"Wilder Infanterist"	501
 }
-Group	L31_¿À¶ûÄ³±Ã¼ö(S_PAWN)-¿À¶ûÄ³±Ã¼ö(S_PAWN)
+Group	L31_오랑캐궁수(S_PAWN)-오랑캐궁수(S_PAWN)
 {
 	Leader	"Wilder Bogensch?tze"	503
 	Vnum	505
@@ -814,7 +814,7 @@ Group	L31_¿À¶ûÄ³±Ã¼ö(S_PAWN)-¿À¶ûÄ³±Ã¼ö(S_PAWN)
 	2	"Wilder Ergebener"	502
 	3	"Wilder Ergebener"	502
 }
-Group	L32_¿À¶ûÄ³Àå¼ö(S_PAWN)-¿À¶ûÄ³±Ã¼ö(S_PAWN)
+Group	L32_오랑캐장수(S_PAWN)-오랑캐궁수(S_PAWN)
 {
 	Leader	"Wilder General"	504
 	Vnum	506
@@ -822,7 +822,7 @@ Group	L32_¿À¶ûÄ³Àå¼ö(S_PAWN)-¿À¶ûÄ³±Ã¼ö(S_PAWN)
 	2	"Wilder Ergebener"	502
 	3	"Wilder Ergebener"	502
 }
-Group	L32_¿À¶ûÄ³Àå¼ö(S_PAWN)-¿À¶ûÄ³±Ã¼ö(S_PAWN)
+Group	L32_오랑캐장수(S_PAWN)-오랑캐궁수(S_PAWN)
 {
 	Leader	"Wilder General"	504
 	Vnum	507
@@ -830,7 +830,7 @@ Group	L32_¿À¶ûÄ³Àå¼ö(S_PAWN)-¿À¶ûÄ³±Ã¼ö(S_PAWN)
 	2	"Wilder Ergebener"	502
 	3	"Wilder Ergebener"	502
 }
-Group	L35_ºñ·ù´Üµ¹°İ´ë(KNIGHT)-ºñ·ù´Ü¿ø(KNIGHT)
+Group	L35_비류단돌격대(KNIGHT)-비류단원(KNIGHT)
 {
 	Leader	"Brutaler Besessener"	532
 	Vnum	508
@@ -838,7 +838,7 @@ Group	L35_ºñ·ù´Üµ¹°İ´ë(KNIGHT)-ºñ·ù´Ü¿ø(KNIGHT)
 	2	"Brutaler Soldat"	531
 	3	"Brutaler Soldat"	531
 }
-Group	L35_ºñ·ù´Üµ¹°İ´ë(KNIGHT)-ºñ·ù´Üµ¹°İ´ë(KNIGHT)
+Group	L35_비류단돌격대(KNIGHT)-비류단돌격대(KNIGHT)
 {
 	Leader	"Brutaler Besessener"	532
 	Vnum	509
@@ -846,7 +846,7 @@ Group	L35_ºñ·ù´Üµ¹°İ´ë(KNIGHT)-ºñ·ù´Üµ¹°İ´ë(KNIGHT)
 	2	"Brutaler Soldat"	531
 	3	"Brutaler Soldat"	531
 }
-Group	L35_ºñ·ù´Üµ¹°İ´ë(KNIGHT)-ºñ·ù´Üµ¹°İ´ë(KNIGHT)
+Group	L35_비류단돌격대(KNIGHT)-비류단돌격대(KNIGHT)
 {
 	Leader	"Brutaler Besessener"	532
 	Vnum	510
@@ -854,7 +854,7 @@ Group	L35_ºñ·ù´Üµ¹°İ´ë(KNIGHT)-ºñ·ù´Üµ¹°İ´ë(KNIGHT)
 	2	"Brutaler Besessener"	532
 	3	"Brutaler Soldat"	531
 }
-Group	L37_ºñ·ù´Ü±Ã¼ö(S_KNIGHT)-ºñ·ù´Üµ¹°İ´ë(KNIGHT)
+Group	L37_비류단궁수(S_KNIGHT)-비류단돌격대(KNIGHT)
 {
 	Leader	"Brutaler Bogensch?tze"	533
 	Vnum	511
@@ -862,7 +862,7 @@ Group	L37_ºñ·ù´Ü±Ã¼ö(S_KNIGHT)-ºñ·ù´Üµ¹°İ´ë(KNIGHT)
 	2	"Brutaler Soldat"	531
 	3	"Brutaler Soldat"	531
 }
-Group	L37_ºñ·ù´Ü±Ã¼ö(S_KNIGHT)-ºñ·ù´Ü±Ã¼ö(S_KNIGHT)
+Group	L37_비류단궁수(S_KNIGHT)-비류단궁수(S_KNIGHT)
 {
 	Leader	"Brutaler Bogensch?tze"	533
 	Vnum	512
@@ -870,7 +870,7 @@ Group	L37_ºñ·ù´Ü±Ã¼ö(S_KNIGHT)-ºñ·ù´Ü±Ã¼ö(S_KNIGHT)
 	2	"Brutaler Besessener"	532
 	3	"Brutaler Besessener"	532
 }
-Group	L39_ºñ·ù´ÜÀå(S_KNIGHT)-ºñ·ù´Ü±Ã¼ö(S_KNIGHT)
+Group	L39_비류단장(S_KNIGHT)-비류단궁수(S_KNIGHT)
 {
 	Leader	"Brutaler Spezialist"	534
 	Vnum	513
@@ -878,7 +878,7 @@ Group	L39_ºñ·ù´ÜÀå(S_KNIGHT)-ºñ·ù´Ü±Ã¼ö(S_KNIGHT)
 	2	"Brutaler Besessener"	532
 	3	"Brutaler Besessener"	532
 }
-Group	L39_ºñ·ù´ÜÀå(S_KNIGHT)-ºñ·ù´Ü±Ã¼ö(S_KNIGHT)
+Group	L39_비류단장(S_KNIGHT)-비류단궁수(S_KNIGHT)
 {
 	Leader	"Brutaler Spezialist"	534
 	Vnum	514
@@ -886,7 +886,7 @@ Group	L39_ºñ·ù´ÜÀå(S_KNIGHT)-ºñ·ù´Ü±Ã¼ö(S_KNIGHT)
 	2	"Brutaler Bogensch?tze"	533
 	3	"Brutaler Besessener"	532
 }
-Group	L31_ºñ·ù´Ü´ëÀå(BOSS)-ºñ·ù´ÜÀå(S_KNIGHT)
+Group	L31_비류단대장(BOSS)-비류단장(S_KNIGHT)
 {
 	Leader	"Brutaler Hauptmann"	591
 	Vnum	515
@@ -895,35 +895,35 @@ Group	L31_ºñ·ù´Ü´ëÀå(BOSS)-ºñ·ù´ÜÀå(S_KNIGHT)
 	3	"Wilder Bogensch?tze"	503
 	4	"Wilder Bogensch?tze"	503
 }
-Group	Äù½ºÆ®¿ë_¿À¶ûÄÉº¸º´
+Group	퀘스트용_오랑케보병
 {
 	Leader	"St. Wilder Infanterist"	551
 	Vnum	551
 	1	"St. Wilder Infanterist"	551
 	2	"St. Wilder Infanterist"	551
 }
-Group	Äù½ºÆ®¿ë_¿À¶ûÄÉÁ¹°³
+Group	퀘스트용_오랑케졸개
 {
 	Leader	"St. Wilder Ergebener"	552
 	Vnum	552
 	1	"St. Wilder Ergebener"	552
 	2	"St. Wilder Ergebener"	552
 }
-Group	Äù½ºÆ®¿ë_¿À¶ûÄÉ±Ã¼ö
+Group	퀘스트용_오랑케궁수
 {
 	Leader	"St. Wilder Bogensch?tze"	553
 	Vnum	553
 	1	"St. Wilder Bogensch?tze"	553
 	2	"St. Wilder Bogensch?tze"	553
 }
-Group	Äù½ºÆ®¿ë_¿À¶ûÄÉÀå¼ö
+Group	퀘스트용_오랑케장수
 {
 	Leader	"St. Wilder General"	554
 	Vnum	554
 	1	"St. Wilder General"	554
 	2	"St. Wilder General"	554
 }
-Group	L38_Áø¿õ±Í_Ã´ÈÄº´(PAWN)-Áø¿õ±Íº´(PAWN)
+Group	L38_진웅귀_척후병(PAWN)-진웅귀병(PAWN)
 {
 	Leader	"Stolzer Ork"	631
 	Vnum	601
@@ -931,7 +931,7 @@ Group	L38_Áø¿õ±Í_Ã´ÈÄº´(PAWN)-Áø¿õ±Íº´(PAWN)
 	2	K?nigsskorpion	2103
 	3	K?nigsskorpion	2103
 }
-Group	L38_Áø¿õ±Íº´(PAWN)-Áø¿õ±Íº´(PAWN)
+Group	L38_진웅귀병(PAWN)-진웅귀병(PAWN)
 {
 	Leader	"Stolzer Ork"	631
 	Vnum	602
@@ -939,7 +939,7 @@ Group	L38_Áø¿õ±Íº´(PAWN)-Áø¿õ±Íº´(PAWN)
 	2	"Stolzer Ork"	631
 	3	K?nigsskorpion	2103
 }
-Group	L44_Áø¿õ±Í_Åõº´(S_PAWN)-Áø¿õ±Í_Ã´ÈÄº´(PAWN)
+Group	L44_진웅귀_투병(S_PAWN)-진웅귀_척후병(PAWN)
 {
 	Leader	"Stolzer Ork-K?mpfer"	633
 	Vnum	603
@@ -947,7 +947,7 @@ Group	L44_Áø¿õ±Í_Åõº´(S_PAWN)-Áø¿õ±Í_Ã´ÈÄº´(PAWN)
 	2	"Stolzer Ork-Sp?her"	632
 	3	"Stolzer Ork-Sp?her"	632
 }
-Group	L44_Áø¿õ±Í_Åõº´(S_PAWN)-Áø¿õ±Í_Åõº´(S_PAWN)
+Group	L44_진웅귀_투병(S_PAWN)-진웅귀_투병(S_PAWN)
 {
 	Leader	"Stolzer Ork-K?mpfer"	633
 	Vnum	604
@@ -955,7 +955,7 @@ Group	L44_Áø¿õ±Í_Åõº´(S_PAWN)-Áø¿õ±Í_Åõº´(S_PAWN)
 	2	"Stolzer Ork-Sp?her"	632
 	3	"Stolzer Ork-Sp?her"	632
 }
-Group	L34_Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)-Áø¿õ±Íº´(KNIGHT)
+Group	L34_진웅귀_척후병(KNIGHT)-진웅귀병(KNIGHT)
 {
 	Leader	"Stolzer Ork-Sp?her"	632
 	Vnum	605
@@ -963,7 +963,7 @@ Group	L34_Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)-Áø¿õ±Íº´(KNIGHT)
 	2	"Stolzer Ork"	631
 	3	"Stolzer Ork"	631
 }
-Group	L34_Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)-Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)
+Group	L34_진웅귀_척후병(KNIGHT)-진웅귀_척후병(KNIGHT)
 {
 	Leader	"Stolzer Ork-Sp?her"	632
 	Vnum	606
@@ -971,7 +971,7 @@ Group	L34_Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)-Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)
 	2	"Stolzer Ork"	631
 	3	"Stolzer Ork"	631
 }
-Group	L35_Áø¿õ±Í_Åõº´(KNIGHT)-Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)
+Group	L35_진웅귀_투병(KNIGHT)-진웅귀_척후병(KNIGHT)
 {
 	Leader	"Stolzer Ork-K?mpfer"	633
 	Vnum	607
@@ -979,7 +979,7 @@ Group	L35_Áø¿õ±Í_Åõº´(KNIGHT)-Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)
 	2	"Stolzer Ork"	631
 	3	"Stolzer Ork"	631
 }
-Group	L35_Áø¿õ±Í_Åõº´(KNIGHT)-Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)
+Group	L35_진웅귀_투병(KNIGHT)-진웅귀_척후병(KNIGHT)
 {
 	Leader	"Stolzer Ork-K?mpfer"	633
 	Vnum	608
@@ -987,7 +987,7 @@ Group	L35_Áø¿õ±Í_Åõº´(KNIGHT)-Áø¿õ±Í_Ã´ÈÄº´(KNIGHT)
 	2	"Stolzer Ork-Sp?her"	632
 	3	"Stolzer Ork"	631
 }
-Group	L34_Áø¿õ±Í_¸¶º´(KNIGHT)-Áø¿õ±Í_Åõº´(KNIGHT)
+Group	L34_진웅귀_마병(KNIGHT)-진웅귀_투병(KNIGHT)
 {
 	Leader	"Stolzer Ork-Zauberer"	634
 	Vnum	609
@@ -995,7 +995,7 @@ Group	L34_Áø¿õ±Í_¸¶º´(KNIGHT)-Áø¿õ±Í_Åõº´(KNIGHT)
 	2	"Stolzer Ork-K?mpfer"	633
 	3	"Stolzer Ork-Sp?her"	632
 }
-Group	L29_Áø¿õ±Í_¸¶º´(S_PAWN)-Áø¿õ±Í_Åõº´(S_PAWN)
+Group	L29_진웅귀_마병(S_PAWN)-진웅귀_투병(S_PAWN)
 {
 	Leader	"Stolzer Ork-Zauberer"	634
 	Vnum	610
@@ -1003,7 +1003,7 @@ Group	L29_Áø¿õ±Í_¸¶º´(S_PAWN)-Áø¿õ±Í_Åõº´(S_PAWN)
 	2	"Stolzer Ork-K?mpfer"	633
 	3	"Stolzer Ork-K?mpfer"	633
 }
-Group	L29_Áø¿õ±Í_¸¶º´(S_PAWN)-Áø¿õ±Í_¸¶º´(S_PAWN)
+Group	L29_진웅귀_마병(S_PAWN)-진웅귀_마병(S_PAWN)
 {
 	Leader	"Stolzer Ork-Zauberer"	634
 	Vnum	611
@@ -1011,7 +1011,7 @@ Group	L29_Áø¿õ±Í_¸¶º´(S_PAWN)-Áø¿õ±Í_¸¶º´(S_PAWN)
 	2	"Stolzer Ork-K?mpfer"	633
 	3	"Stolzer Ork-K?mpfer"	633
 }
-Group	L36_Áø¿õ±Í_Àå±º(S_KNIGHT)-Áø¿õ±Í_¸¶º´(KNIGHT)
+Group	L36_진웅귀_장군(S_KNIGHT)-진웅귀_마병(KNIGHT)
 {
 	Leader	"Stolzer Ork-General"	635
 	Vnum	612
@@ -1019,7 +1019,7 @@ Group	L36_Áø¿õ±Í_Àå±º(S_KNIGHT)-Áø¿õ±Í_¸¶º´(KNIGHT)
 	2	"Stolzer Ork-Sp?her"	632
 	3	"Stolzer Ork-Sp?her"	632
 }
-Group	L36_Áø¿õ±Í_Àå±º(S_KNIGHT)-Áø¿õ±Í_¸¶º´(KNIGHT)
+Group	L36_진웅귀_장군(S_KNIGHT)-진웅귀_마병(KNIGHT)
 {
 	Leader	"Stolzer Ork-General"	635
 	Vnum	613
@@ -1027,7 +1027,7 @@ Group	L36_Áø¿õ±Í_Àå±º(S_KNIGHT)-Áø¿õ±Í_¸¶º´(KNIGHT)
 	2	"Stolzer Ork-Zauberer"	634
 	3	"Stolzer Ork-K?mpfer"	633
 }
-Group	L39_Èæ¿õ±Í(S_KNIGHT)-ÁøÁø¿õ±Í_Àå±º(S_KNIGHT)
+Group	L39_흑웅귀(S_KNIGHT)-진진웅귀_장군(S_KNIGHT)
 {
 	Leader	"Schwarzer Ork"	636
 	Vnum	614
@@ -1035,7 +1035,7 @@ Group	L39_Èæ¿õ±Í(S_KNIGHT)-ÁøÁø¿õ±Í_Àå±º(S_KNIGHT)
 	2	"Stolzer Ork-Sp?her"	632
 	3	"Stolzer Ork-Sp?her"	632
 }
-Group	L39_Èæ¿õ±Í(S_KNIGHT)-ÁøÁø¿õ±Í_Àå±º(S_KNIGHT)
+Group	L39_흑웅귀(S_KNIGHT)-진진웅귀_장군(S_KNIGHT)
 {
 	Leader	"Schwarzer Ork"	636
 	Vnum	615
@@ -1043,21 +1043,21 @@ Group	L39_Èæ¿õ±Í(S_KNIGHT)-ÁøÁø¿õ±Í_Àå±º(S_KNIGHT)
 	2	"Stolzer Ork-Zauberer"	634
 	3	"Stolzer Ork-K?mpfer"	633
 }
-Group	L41_°Å´ë_Èæ¿õ±Í(S_KNIGHT)-Èæ¿õ±Í(S_KNIGHT)
+Group	L41_거대_흑웅귀(S_KNIGHT)-흑웅귀(S_KNIGHT)
 {
 	Leader	"Schwarzer Ork-Riese"	637
 	Vnum	616
 	1	"Schwarzer Ork"	636
 	2	"Stolzer Ork-Zauberer"	634
 }
-Group	L41_°Å´ë_Èæ¿õ±Í(S_KNIGHT)-°Å´ë_Èæ¿õ±Í(S_KNIGHT)
+Group	L41_거대_흑웅귀(S_KNIGHT)-거대_흑웅귀(S_KNIGHT)
 {
 	Leader	"Schwarzer Ork-Riese"	637
 	Vnum	617
 	1	"Schwarzer Ork"	636
 	2	"Schwarzer Ork"	636
 }
-Group	L41_¿õ±Í_Á·Àå(BOSS)-°Å´ë_Èæ¿õ±Í(S_KNIGHT)
+Group	L41_웅귀_족장(BOSS)-거대_흑웅귀(S_KNIGHT)
 {
 	Leader	Oberork	691
 	Vnum	621
@@ -1066,70 +1066,70 @@ Group	L41_¿õ±Í_Á·Àå(BOSS)-°Å´ë_Èæ¿õ±Í(S_KNIGHT)
 	3	"Schwarzer Ork"	636
 	4	"Stolzer Ork-Zauberer"	634
 }
-Group	¸ÛÃ»ÇÑÁø¿õ±Íº´
+Group	멍청한진웅귀병
 {
 	Leader	"Mutiger gr. Ork"	651
 	Vnum	651
 	1	"Mutiger gr. Ork"	651
 	2	"Mutiger gr. Ork"	651
 }
-Group	Äù½ºÆ®¿ë_Áø¿õ±Í
+Group	퀘스트용_진웅귀
 {
 	Leader	"Mutiger gr. Orksp?her"	652
 	Vnum	652
 	1	"Mutiger gr. Orksp?her"	652
 	2	"Mutiger gr. Orksp?her"	652
 }
-Group	Äù½ºÆ®¿ë_Áø¿õ±Í
+Group	퀘스트용_진웅귀
 {
 	Leader	"Mutiger gr. Orkk?mpfer"	653
 	Vnum	653
 	1	"Mutiger gr. Orkk?mpfer"	653
 	2	"Mutiger gr. Orkk?mpfer"	653
 }
-Group	Äù½ºÆ®¿ë_Áø¿õ±Í
+Group	퀘스트용_진웅귀
 {
 	Leader	"Mutiger gr. Orkzauberer"	654
 	Vnum	654
 	1	"Mutiger gr. Orkzauberer"	654
 	2	"Mutiger gr. Orkzauberer"	654
 }
-Group	Äù½ºÆ®¿ë_Áø¿õ±Í
+Group	퀘스트용_진웅귀
 {
 	Leader	"Mutiger gr. Orkgeneral"	655
 	Vnum	655
 	1	"Mutiger gr. Orkgeneral"	655
 	2	"Mutiger gr. Orkgeneral"	655
 }
-Group	Äù½ºÆ®¿ë_Áø¿õ±Í
+Group	퀘스트용_진웅귀
 {
 	Leader	"Mutiger Schw. Ork"	656
 	Vnum	656
 	1	"Mutiger Schw. Ork"	656
 	2	"Mutiger Schw. Ork"	656
 }
-Group	Äù½ºÆ®¿ë_Áø¿õ±Í
+Group	퀘스트용_진웅귀
 {
 	Leader	"Mutiger Schw. Orkriese"	657
 	Vnum	657
 	1	"Mutiger Schw. Orkriese"	657
 	2	"Mutiger Schw. Orkriese"	657
 }
-Group	Äù½ºÆ®¿ë_Áø¿õ±Í
+Group	퀘스트용_진웅귀
 {
 	Leader	Ork-Zauberer	604
 	Vnum	658
 	1	Ork-K?mpfer	603
 	2	Ork-Sp?her	602
 }
-Group	L44_¹Ğ±³³ªÇÑº´(PAWN)-¹Ğ±³ÃßÁ¾ÀÚ(PAWN)
+Group	L44_¹Ğ교나한병(PAWN)-밀교추종자(PAWN)
 {
 	Leader	"Dunkler Arahan"	702
 	Vnum	701
 	1	"Dunkler Fanatiker"	701
 	2	"Dunkler Fanatiker"	701
 }
-Group	L44_¹Ğ±³³ªÇÑº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
+Group	L44_¹Ğ교나한병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler Arahan"	702
 	Vnum	702
@@ -1137,7 +1137,7 @@ Group	L44_¹Ğ±³³ªÇÑº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
 	2	"Dunkler Fanatiker"	701
 	3	"Dunkler Fanatiker"	701
 }
-Group	L44_¹Ğ±³³ªÇÑº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
+Group	L44_¹Ğ교나한병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler Arahan"	702
 	Vnum	703
@@ -1145,7 +1145,7 @@ Group	L44_¹Ğ±³³ªÇÑº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
 	2	"Hoher Arahan"	752
 	3	"Dunkler Fanatiker"	701
 }
-Group	L45_¹Ğ±³³ªÇÑÅõº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
+Group	L45_¹Ğ교나한투병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler K?mpfer"	703
 	Vnum	704
@@ -1153,7 +1153,7 @@ Group	L45_¹Ğ±³³ªÇÑÅõº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
 	2	"Dunkler Fanatiker"	701
 	3	"Dunkler Fanatiker"	701
 }
-Group	L45_¹Ğ±³³ªÇÑÅõº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
+Group	L45_¹Ğ교나한투병(PAWN)-밀교나한병(PAWN)
 {
 	Leader	"Dunkler K?mpfer"	703
 	Vnum	705
@@ -1161,7 +1161,7 @@ Group	L45_¹Ğ±³³ªÇÑÅõº´(PAWN)-¹Ğ±³³ªÇÑº´(PAWN)
 	2	"Dunkler Arahan"	702
 	3	"Dunkler Arahan"	702
 }
-Group	L46_¹Ğ±³³ªÇÑÀå(S_PAWN)-¹Ğ±³³ªÇÑÅõº´(PAWN)
+Group	L46_¹Ğ교나한장(S_PAWN)-밀교나한투병(PAWN)
 {
 	Leader	"Oberer dunkler Arahan"	704
 	Vnum	706
@@ -1169,7 +1169,7 @@ Group	L46_¹Ğ±³³ªÇÑÀå(S_PAWN)-¹Ğ±³³ªÇÑÅõº´(PAWN)
 	2	"Dunkler Arahan"	702
 	3	"Dunkler Arahan"	702
 }
-Group	L46_¹Ğ±³³ªÇÑÀå(S_PAWN)-¹Ğ±³³ªÇÑÅõº´(PAWN)
+Group	L46_¹Ğ교나한장(S_PAWN)-밀교나한투병(PAWN)
 {
 	Leader	"Oberer dunkler Arahan"	704
 	Vnum	707
@@ -1177,7 +1177,7 @@ Group	L46_¹Ğ±³³ªÇÑÀå(S_PAWN)-¹Ğ±³³ªÇÑÅõº´(PAWN)
 	2	"Hoher Arahan-K?mpfer"	753
 	3	"Hoher  Beschw?rer"	757
 }
-Group	L31_¹Ğ±³ÁıÇàº´(S_PAWN)-¹Ğ±³ÁıÇàº´(S_PAWN)
+Group	L31_밀교집행병(S_PAWN)-밀교집행병(S_PAWN)
 {
 	Leader	"Dunkler Scharfrichter"	705
 	Vnum	708
@@ -1185,7 +1185,7 @@ Group	L31_¹Ğ±³ÁıÇàº´(S_PAWN)-¹Ğ±³ÁıÇàº´(S_PAWN)
 	2	"Hoher Ober-Arahan"	754
 	3	"Oberer dunkler Arahan"	704
 }
-Group	L31_¹Ğ±³ÁıÇàº´(S_PAWN)-¹Ğ±³ÁıÇàº´(S_PAWN)
+Group	L31_밀교집행병(S_PAWN)-밀교집행병(S_PAWN)
 {
 	Leader	"Dunkler Scharfrichter"	705
 	Vnum	709
@@ -1193,7 +1193,7 @@ Group	L31_¹Ğ±³ÁıÇàº´(S_PAWN)-¹Ğ±³ÁıÇàº´(S_PAWN)
 	2	"Oberer dunkler Arahan"	704
 	3	"Oberer dunkler Arahan"	704
 }
-Group	L33_¹Ğ±³°­¹Ú·É(S_PAWN)-¹Ğ±³ÁıÇàº´(S_PAWN)
+Group	L33_¹Ğ교강박령(S_PAWN)-밀교집행병(S_PAWN)
 {
 	Leader	"Dunkler Peiniger"	706
 	Vnum	710
@@ -1201,7 +1201,7 @@ Group	L33_¹Ğ±³°­¹Ú·É(S_PAWN)-¹Ğ±³ÁıÇàº´(S_PAWN)
 	2	"Hoher Scharfrichter"	755
 	3	"Oberer dunkler Arahan"	704
 }
-Group	L33_¹Ğ±³°­¹Ú·É(S_PAWN)-¹Ğ±³°­¹Ú·É(S_PAWN)
+Group	L33_¹Ğ교강박령(S_PAWN)-밀교강박령(S_PAWN)
 {
 	Leader	"Dunkler Peiniger"	706
 	Vnum	711
@@ -1209,7 +1209,7 @@ Group	L33_¹Ğ±³°­¹Ú·É(S_PAWN)-¹Ğ±³°­¹Ú·É(S_PAWN)
 	2	"Dunkler Scharfrichter"	705
 	3	"Oberer dunkler Arahan"	704
 }
-Group	L36_¹Ğ±³¼ÒÈ¯·É(S_PAWN)-¹Ğ±³°­¹Ú·É(S_PAWN)
+Group	L36_¹Ğ교소환령(S_PAWN)-밀교강박령(S_PAWN)
 {
 	Leader	"Dunkler Beschw?rer"	707
 	Vnum	712
@@ -1217,7 +1217,7 @@ Group	L36_¹Ğ±³¼ÒÈ¯·É(S_PAWN)-¹Ğ±³°­¹Ú·É(S_PAWN)
 	2	"Dunkler Scharfrichter"	705
 	3	"Dunkler Scharfrichter"	705
 }
-Group	L36_¹Ğ±³¼ÒÈ¯·É(S_PAWN)-¹Ğ±³¼ÒÈ¯·É(S_PAWN)
+Group	L36_¹Ğ교소환령(S_PAWN)-밀교소환령(S_PAWN)
 {
 	Leader	"Dunkler Beschw?rer"	707
 	Vnum	713
@@ -1225,14 +1225,14 @@ Group	L36_¹Ğ±³¼ÒÈ¯·É(S_PAWN)-¹Ğ±³¼ÒÈ¯·É(S_PAWN)
 	2	"Dunkler Peiniger"	706
 	3	"Dunkler Scharfrichter"	705
 }
-Group	L40_¹Ğ±³³ªÇÑº´(KNIGHT)-¹Ğ±³ÃßÁ¾ÀÚ(KNIGHT)
+Group	L40_¹Ğ교나한병(KNIGHT)-밀교추종자(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Arahan"	732
 	Vnum	714
 	1	"Stolzer dunkl. Fanatiker"	731
 	2	"Brutaler Fanatiker"	771
 }
-Group	L40_¹Ğ±³³ªÇÑº´(KNIGHT)-¹Ğ±³³ªÇÑº´(KNIGHT)
+Group	L40_¹Ğ교나한병(KNIGHT)-밀교나한병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Arahan"	732
 	Vnum	715
@@ -1240,7 +1240,7 @@ Group	L40_¹Ğ±³³ªÇÑº´(KNIGHT)-¹Ğ±³³ªÇÑº´(KNIGHT)
 	2	"Stolzer dunkl. Fanatiker"	731
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L40_¹Ğ±³³ªÇÑº´(KNIGHT)-¹Ğ±³³ªÇÑº´(KNIGHT)
+Group	L40_¹Ğ교나한병(KNIGHT)-밀교나한병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Arahan"	732
 	Vnum	716
@@ -1248,7 +1248,7 @@ Group	L40_¹Ğ±³³ªÇÑº´(KNIGHT)-¹Ğ±³³ªÇÑº´(KNIGHT)
 	2	"Stolzer dunkl. Arahan"	732
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L43_¹Ğ±³³ªÇÑÅõº´(KNIGHT)-¹Ğ±³³ªÇÑº´(KNIGHT)
+Group	L43_¹Ğ교나한투병(KNIGHT)-밀교나한병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. K?mpfer"	733
 	Vnum	717
@@ -1256,7 +1256,7 @@ Group	L43_¹Ğ±³³ªÇÑÅõº´(KNIGHT)-¹Ğ±³³ªÇÑº´(KNIGHT)
 	2	"Brutaler Arahan"	772
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L43_¹Ğ±³³ªÇÑÅõº´(KNIGHT)-¹Ğ±³³ªÇÑÅõº´(KNIGHT)
+Group	L43_¹Ğ교나한투병(KNIGHT)-밀교나한투병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. K?mpfer"	733
 	Vnum	718
@@ -1264,7 +1264,7 @@ Group	L43_¹Ğ±³³ªÇÑÅõº´(KNIGHT)-¹Ğ±³³ªÇÑÅõº´(KNIGHT)
 	2	"Stolzer dunkl. Arahan"	732
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L46_¹Ğ±³³ªÇÑÀå(S_KNIGHT)-¹Ğ±³³ªÇÑÅõº´(KNIGHT)
+Group	L46_¹Ğ교나한장(S_KNIGHT)-밀교나한투병(KNIGHT)
 {
 	Leader	"Stolzer dunkl. Oberst"	734
 	Vnum	719
@@ -1272,7 +1272,7 @@ Group	L46_¹Ğ±³³ªÇÑÀå(S_KNIGHT)-¹Ğ±³³ªÇÑÅõº´(KNIGHT)
 	2	"Stolzer dunkl. Arahan"	732
 	3	"Stolzer dunkl. Fanatiker"	731
 }
-Group	L46_¹Ğ±³³ªÇÑÀå(S_KNIGHT)-¹Ğ±³³ªÇÑÀå(S_KNIGHT)
+Group	L46_¹Ğ교나한장(S_KNIGHT)-밀교나한장(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Oberst"	734
 	Vnum	720
@@ -1280,7 +1280,7 @@ Group	L46_¹Ğ±³³ªÇÑÀå(S_KNIGHT)-¹Ğ±³³ªÇÑÀå(S_KNIGHT)
 	2	"Stolzer dunkl. K?mpfer"	733
 	3	"Stolzer dunkl. Arahan"	732
 }
-Group	L49_¹Ğ±³ÁıÇàº´(S_KNIGHT)-¹Ğ±³³ªÇÑÀå(S_KNIGHT)
+Group	L49_밀교집행병(S_KNIGHT)-밀교나한장(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Sch?tze"	735
 	Vnum	721
@@ -1288,7 +1288,7 @@ Group	L49_¹Ğ±³ÁıÇàº´(S_KNIGHT)-¹Ğ±³³ªÇÑÀå(S_KNIGHT)
 	2	"Stolzer dunkl. K?mpfer"	733
 	3	"Brutaler  Arahan-K?mpfer"	773
 }
-Group	L49_¹Ğ±³ÁıÇàº´(S_KNIGHT)-¹Ğ±³ÁıÇàº´(S_KNIGHT)
+Group	L49_밀교집행병(S_KNIGHT)-밀교집행병(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Sch?tze"	735
 	Vnum	722
@@ -1296,7 +1296,7 @@ Group	L49_¹Ğ±³ÁıÇàº´(S_KNIGHT)-¹Ğ±³ÁıÇàº´(S_KNIGHT)
 	2	"Stolzer dunkl. Oberst"	734
 	3	"Stolzer dunkl. K?mpfer"	733
 }
-Group	L34_¹Ğ±³°­¹Ú·É(S_KNIGHT)-¹Ğ±³ÁıÇàº´(S_KNIGHT)
+Group	L34_¹Ğ교강박령(S_KNIGHT)-밀교집행병(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Peiniger"	736
 	Vnum	723
@@ -1304,7 +1304,7 @@ Group	L34_¹Ğ±³°­¹Ú·É(S_KNIGHT)-¹Ğ±³ÁıÇàº´(S_KNIGHT)
 	2	"Stolzer dunkl. Oberst"	734
 	3	"Stolzer dunkl. Oberst"	734
 }
-Group	L34_¹Ğ±³°­¹Ú·É(S_KNIGHT)-¹Ğ±³°­¹Ú·É(S_KNIGHT)
+Group	L34_¹Ğ교강박령(S_KNIGHT)-밀교강박령(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Peiniger"	736
 	Vnum	724
@@ -1312,7 +1312,7 @@ Group	L34_¹Ğ±³°­¹Ú·É(S_KNIGHT)-¹Ğ±³°­¹Ú·É(S_KNIGHT)
 	2	"Stolzer dunkl. Sch?tze"	735
 	3	"Stolzer dunkl. Sch?tze"	735
 }
-Group	L37_¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)-¹Ğ±³°­¹Ú·É(S_KNIGHT)
+Group	L37_¹Ğ교소환령(S_KNIGHT)-밀교강박령(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Zauberer"	737
 	Vnum	725
@@ -1320,7 +1320,7 @@ Group	L37_¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)-¹Ğ±³°­¹Ú·É(S_KNIGHT)
 	2	"Stolzer dunkl. Peiniger"	736
 	3	"Stolzer dunkl. Sch?tze"	735
 }
-Group	L37_¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)-¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)
+Group	L37_¹Ğ교소환령(S_KNIGHT)-밀교소환령(S_KNIGHT)
 {
 	Leader	"Stolzer dunkl. Zauberer"	737
 	Vnum	726
@@ -1328,7 +1328,7 @@ Group	L37_¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)-¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)
 	2	"Stolzer dunkl. Peiniger"	736
 	3	"Stolzer dunkl. Sch?tze"	735
 }
-Group	L40_¹Ğ±³±³ÁÖ(BOSS)-¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)
+Group	L40_¹Ğ교교주(BOSS)-밀교소환령(S_KNIGHT)
 {
 	Leader	"Dunkler Anf?hrer"	791
 	Vnum	727
@@ -1337,42 +1337,42 @@ Group	L40_¹Ğ±³±³ÁÖ(BOSS)-¹Ğ±³¼ÒÈ¯·É(S_KNIGHT)
 	3	"Stolzer dunkl. Sch?tze"	735
 	4	"Stolzer dunkl. Sch?tze"	735
 }
-Group	Äù½ºÆ®¿ë_¹Ğ±³ÃßÁ¾ÀÚ
+Group	퀘스트용_¹Ğ교추종자
 {
 	Leader	"Hoher Fanatiker"	751
 	Vnum	751
 	1	"Hoher Fanatiker"	751
 	2	"Hoher Fanatiker"	751
 }
-Group	Äù½ºÆ®¿ë_Áø¹Ğ±³³ªÇÑÀå
+Group	퀘스트용_진밀교나한장
 {
 	Leader	"Brutaler Ober-Arahan"	774
 	Vnum	774
 	1	"Brutaler Ober-Arahan"	774
 	2	"Brutaler Ober-Arahan"	774
 }
-Group	Äù½ºÆ®¿ë_Áø¹Ğ±³ÁıÇàº´
+Group	퀘스트용_진밀교집행병
 {
 	Leader	"Brutaler Scharfrichter"	775
 	Vnum	775
 	1	"Brutaler Scharfrichter"	775
 	2	"Brutaler Scharfrichter"	775
 }
-Group	Äù½ºÆ®¿ë_Áø¹Ğ±³°­¹Ú·É
+Group	퀘스트용_진밀교강박령
 {
 	Leader	"Brutaler Peiniger"	776
 	Vnum	776
 	1	"Brutaler Peiniger"	776
 	2	"Brutaler Peiniger"	776
 }
-Group	Äù½ºÆ®¿ë_Áø¹Ğ±³¼ÒÈ¯·É
+Group	퀘스트용_진밀교소환령
 {
 	Leader	"Brutaler Beschw?rer"	777
 	Vnum	777
 	1	"Brutaler Beschw?rer"	777
 	2	"Brutaler Beschw?rer"	777
 }
-Group	L48_±«Áú°¨¿°°ß(S_PAWN)-½Ã±Í(S_PAWN)
+Group	L48_괴질감염견(S_PAWN)-시귀(S_PAWN)
 {
 	Leader	Plagenhund	902
 	Vnum	901
@@ -1380,7 +1380,7 @@ Group	L48_±«Áú°¨¿°°ß(S_PAWN)-½Ã±Í(S_PAWN)
 	2	Leichengeist	901
 	3	Leichengeist	901
 }
-Group	L48_±«Áú°¨¿°°ß(S_PAWN)-±«Áú°¨¿°°ß(S_PAWN)
+Group	L48_괴질감염견(S_PAWN)-괴질감염견(S_PAWN)
 {
 	Leader	Plagenhund	902
 	Vnum	902
@@ -1388,7 +1388,7 @@ Group	L48_±«Áú°¨¿°°ß(S_PAWN)-±«Áú°¨¿°°ß(S_PAWN)
 	2	Leichengeist	901
 	3	Leichengeist	901
 }
-Group	L48_±«Áú°¨¿°°ß(S_PAWN)-±«Áú°¨¿°°ß(S_PAWN)
+Group	L48_괴질감염견(S_PAWN)-괴질감염견(S_PAWN)
 {
 	Leader	Plagenhund	902
 	Vnum	903
@@ -1396,7 +1396,7 @@ Group	L48_±«Áú°¨¿°°ß(S_PAWN)-±«Áú°¨¿°°ß(S_PAWN)
 	2	Leichengeist	901
 	3	"W. Leichengeist"	931
 }
-Group	L50_±«Áú°¨¿°ÀÚ(S_PAWN)-±«Áú°¨¿°°ß(S_PAWN)
+Group	L50_괴질감염자(S_PAWN)-괴질감염견(S_PAWN)
 {
 	Leader	Plagenmann	903
 	Vnum	904
@@ -1404,7 +1404,7 @@ Group	L50_±«Áú°¨¿°ÀÚ(S_PAWN)-±«Áú°¨¿°°ß(S_PAWN)
 	2	Plagenhund	902
 	3	Plagenhund	902
 }
-Group	L50_±«Áú°¨¿°ÀÚ(S_PAWN)-±«Áú°¨¿°ÀÚ(S_PAWN)
+Group	L50_괴질감염자(S_PAWN)-괴질감염자(S_PAWN)
 {
 	Leader	Plagenmann	903
 	Vnum	905
@@ -1412,7 +1412,7 @@ Group	L50_±«Áú°¨¿°ÀÚ(S_PAWN)-±«Áú°¨¿°ÀÚ(S_PAWN)
 	2	Plagenhund	902
 	3	Plagenhund	902
 }
-Group	L52_±«Áú°¨¿°º´(KNIGHT)-±«Áú°¨¿°ÀÚ(S_PAWN)
+Group	L52_괴질감염병(KNIGHT)-괴질감염자(S_PAWN)
 {
 	Leader	Plagenschwertk?mpfer	904
 	Vnum	906
@@ -1421,7 +1421,7 @@ Group	L52_±«Áú°¨¿°º´(KNIGHT)-±«Áú°¨¿°ÀÚ(S_PAWN)
 	3	Plagenhund	902
 	4	Plagenhund	902
 }
-Group	L52_±«Áú°¨¿°º´(KNIGHT)-±«Áú°¨¿°º´(KNIGHT)
+Group	L52_괴질감염병(KNIGHT)-괴질감염병(KNIGHT)
 {
 	Leader	Plagenschwertk?mpfer	904
 	Vnum	907
@@ -1429,7 +1429,7 @@ Group	L52_±«Áú°¨¿°º´(KNIGHT)-±«Áú°¨¿°º´(KNIGHT)
 	2	Plagenmann	903
 	3	"W. Plagenmann"	933
 }
-Group	L53_±«Áú°¨¿°Ã¢º´(KNIGHT)-±«Áú°¨¿°º´(KNIGHT)
+Group	L53_괴질감염창병(KNIGHT)-괴질감염병(KNIGHT)
 {
 	Leader	Plagenspeerk?mpfer	905
 	Vnum	908
@@ -1437,7 +1437,7 @@ Group	L53_±«Áú°¨¿°Ã¢º´(KNIGHT)-±«Áú°¨¿°º´(KNIGHT)
 	2	Plagenschwertk?mpfer	904
 	3	Plagenmann	903
 }
-Group	L53_±«Áú°¨¿°Ã¢º´(KNIGHT)-±«Áú°¨¿°Ã¢º´(KNIGHT)
+Group	L53_괴질감염창병(KNIGHT)-괴질감염창병(KNIGHT)
 {
 	Leader	Plagenspeerk?mpfer	905
 	Vnum	909
@@ -1445,21 +1445,21 @@ Group	L53_±«Áú°¨¿°Ã¢º´(KNIGHT)-±«Áú°¨¿°Ã¢º´(KNIGHT)
 	2	"W. Plagenk?mpfer"	934
 	3	Plagenschwertk?mpfer	904
 }
-Group	L54_±«Áú°¨¿°±Ã¼ö(KNIGHT)-±«Áú°¨¿°Ã¢º´(KNIGHT)
+Group	L54_괴질감염궁수(KNIGHT)-괴질감염창병(KNIGHT)
 {
 	Leader	Plagenbogensch?tze	906
 	Vnum	910
 	1	Plagenspeerk?mpfer	905
 	2	Plagenschwertk?mpfer	904
 }
-Group	L54_±«Áú°¨¿°±Ã¼ö(KNIGHT)-±«Áú°¨¿°±Ã¼ö(KNIGHT)
+Group	L54_괴질감염궁수(KNIGHT)-괴질감염궁수(KNIGHT)
 {
 	Leader	Plagenbogensch?tze	906
 	Vnum	911
 	1	Plagenspeerk?mpfer	905
 	2	"W. Plagenspeerk?mpfer"	935
 }
-Group	L54_±«Áú°¨¿°´ëÀå(S_KNIGHT)-±«Áú°¨¿°±Ã¼ö(KNIGHT)
+Group	L54_괴질감염대장(S_KNIGHT)-괴질감염궁수(KNIGHT)
 {
 	Leader	Plagenanf?hrer	907
 	Vnum	912
@@ -1467,7 +1467,7 @@ Group	L54_±«Áú°¨¿°´ëÀå(S_KNIGHT)-±«Áú°¨¿°±Ã¼ö(KNIGHT)
 	2	Plagenspeerk?mpfer	905
 	3	Plagenspeerk?mpfer	905
 }
-Group	L54_±«Áú°¨¿°´ëÀå(S_KNIGHT)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
+Group	L54_괴질감염대장(S_KNIGHT)-괴질감염대장(S_KNIGHT)
 {
 	Leader	Plagenanf?hrer	907
 	Vnum	913
@@ -1475,7 +1475,7 @@ Group	L54_±«Áú°¨¿°´ëÀå(S_KNIGHT)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
 	2	Plagenbogensch?tze	906
 	3	Plagenbogensch?tze	906
 }
-Group	L55_±«Áú°¨¿°¾Ë(BOSS)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
+Group	L55_괴질감염알(BOSS)-괴질감염대장(S_KNIGHT)
 {
 	Leader	Plagenei	991
 	Vnum	914
@@ -1484,7 +1484,7 @@ Group	L55_±«Áú°¨¿°¾Ë(BOSS)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
 	3	Plagenbogensch?tze	906
 	4	Plagenspeerk?mpfer	905
 }
-Group	L56_±«Áú°¨¿°¸Å°³Ã¼(BOSS)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
+Group	L56_괴질감염매개체(BOSS)-괴질감염대장(S_KNIGHT)
 {
 	Leader	Plagentr?ger	992
 	Vnum	915
@@ -1493,7 +1493,7 @@ Group	L56_±«Áú°¨¿°¸Å°³Ã¼(BOSS)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
 	3	Plagenbogensch?tze	906
 	4	Plagenspeerk?mpfer	905
 }
-Group	L57_´ëÇü°¨¿°¸Å°³Ã¼(KING)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
+Group	L57_대형감염매개체(KING)-괴질감염대장(S_KNIGHT)
 {
 	Leader	"Riesiger Plagentr?ger"	993
 	Vnum	916
@@ -1502,7 +1502,7 @@ Group	L57_´ëÇü°¨¿°¸Å°³Ã¼(KING)-±«Áú°¨¿°´ëÀå(S_KNIGHT)
 	3	Plagenbogensch?tze	906
 	4	Plagenspeerk?mpfer	905
 }
-Group	L48_½Ã±Í(S_PAWN)-»ç±Íº´(PWAN)
+Group	L48_시귀(S_PAWN)-사귀병(PWAN)
 {
 	Leader	Leichengeist	901
 	Vnum	917
@@ -1511,7 +1511,7 @@ Group	L48_½Ã±Í(S_PAWN)-»ç±Íº´(PWAN)
 	3	D?monensoldat	1001
 	4	D?monensoldat	1001
 }
-Group	L48_½Ã±Í(S_PAWN)-»ç±Íº´(PWAN)
+Group	L48_시귀(S_PAWN)-사귀병(PWAN)
 {
 	Leader	Leichengeist	901
 	Vnum	918
@@ -1520,7 +1520,7 @@ Group	L48_½Ã±Í(S_PAWN)-»ç±Íº´(PWAN)
 	3	D?monensoldat	1001
 	4	D?monensoldat	1001
 }
-Group	L48_½Ã±Í(S_PAWN)-»ç±Íº´(PWAN)
+Group	L48_시귀(S_PAWN)-사귀병(PWAN)
 {
 	Leader	Leichengeist	901
 	Vnum	919
@@ -1529,21 +1529,21 @@ Group	L48_½Ã±Í(S_PAWN)-»ç±Íº´(PWAN)
 	3	D?monenbogensch?tze	1002
 	4	D?monensoldat	1001
 }
-Group	Äù½ºÆ®¿ë_±«Áú°¨¿°ÀÚ
+Group	퀘스트용_괴질감염자
 {
 	Leader	"W. Plagenmann"	933
 	Vnum	933
 	1	"W. Plagenmann"	933
 	2	"W. Plagenmann"	933
 }
-Group	Äù½ºÆ®¿ë_±«Áú°¨¿°±Ã¼ö
+Group	퀘스트용_괴질감염궁수
 {
 	Leader	"W. Plagenbogensch?tze"	936
 	Vnum	936
 	1	"W. Plagenbogensch?tze"	936
 	2	"W. Plagenbogensch?tze"	936
 }
-Group	L60_»ç±Í±Ãº´(S_PAWN)-»ç±Íº´(S_PAWN)
+Group	L60_사귀궁병(S_PAWN)-사귀병(S_PAWN)
 {
 	Leader	D?monenbogensch?tze	1002
 	Vnum	1001
@@ -1552,7 +1552,7 @@ Group	L60_»ç±Í±Ãº´(S_PAWN)-»ç±Íº´(S_PAWN)
 	3	D?monensoldat	1001
 	4	D?monensoldat	1001
 }
-Group	L60_»ç±Í±Ãº´(S_PAWN)-»ç±Í±Ãº´(S_PAWN)
+Group	L60_사귀궁병(S_PAWN)-사귀궁병(S_PAWN)
 {
 	Leader	D?monenbogensch?tze	1002
 	Vnum	1002
@@ -1561,7 +1561,7 @@ Group	L60_»ç±Í±Ãº´(S_PAWN)-»ç±Í±Ãº´(S_PAWN)
 	3	D?monensoldat	1001
 	4	D?monensoldat	1001
 }
-Group	L60_»ç±Í±Ãº´(S_PAWN)-»ç±Í±Ãº´(S_PAWN)
+Group	L60_사귀궁병(S_PAWN)-사귀궁병(S_PAWN)
 {
 	Leader	D?monenbogensch?tze	1002
 	Vnum	1003
@@ -1570,7 +1570,7 @@ Group	L60_»ç±Í±Ãº´(S_PAWN)-»ç±Í±Ãº´(S_PAWN)
 	3	D?monensoldat	1001
 	4	D?monensoldat	1001
 }
-Group	L16_»ç±ÍÃ¢º´(S_PAWN)-»ç±Í±Ãº´(S_PAWN)
+Group	L16_사귀창병(S_PAWN)-사귀궁병(S_PAWN)
 {
 	Leader	D?monenspeerk?mpfer	1003
 	Vnum	1004
@@ -1579,7 +1579,7 @@ Group	L16_»ç±ÍÃ¢º´(S_PAWN)-»ç±Í±Ãº´(S_PAWN)
 	3	D?monensoldat	1001
 	4	D?monensoldat	1001
 }
-Group	L16_»ç±ÍÃ¢º´(S_PAWN)-»ç±ÍÃ¢º´(S_PAWN)
+Group	L16_사귀창병(S_PAWN)-사귀창병(S_PAWN)
 {
 	Leader	D?monenspeerk?mpfer	1003
 	Vnum	1005
@@ -1588,7 +1588,7 @@ Group	L16_»ç±ÍÃ¢º´(S_PAWN)-»ç±ÍÃ¢º´(S_PAWN)
 	3	D?monenbogensch?tze	1002
 	4	D?monenbogensch?tze	1002
 }
-Group	L36_»ç±ÍÁÖ¼ú»ç(KNIGHT)-»ç±ÍÃ¢º´(S_PAWN)
+Group	L36_사귀주술사(KNIGHT)-사귀창병(S_PAWN)
 {
 	Leader	D?monenschamane	1004
 	Vnum	1006
@@ -1597,7 +1597,7 @@ Group	L36_»ç±ÍÁÖ¼ú»ç(KNIGHT)-»ç±ÍÃ¢º´(S_PAWN)
 	3	D?monenbogensch?tze	1002
 	4	D?monenbogensch?tze	1002
 }
-Group	L36_»ç±ÍÁÖ¼ú»ç(KNIGHT)-»ç±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L36_사귀주술사(KNIGHT)-사귀주술사(KNIGHT)
 {
 	Leader	D?monenschamane	1004
 	Vnum	1007
@@ -1606,7 +1606,7 @@ Group	L36_»ç±ÍÁÖ¼ú»ç(KNIGHT)-»ç±ÍÁÖ¼ú»ç(KNIGHT)
 	3	D?monenspeerk?mpfer	1003
 	4	D?monenspeerk?mpfer	1003
 }
-Group	L43_Àü±Í±Ãº´(KNIGHT)-Àü±Íº´(KNIGHT)
+Group	L43_전귀궁병(KNIGHT)-전귀병(KNIGHT)
 {
 	Leader	"Gemeiner Bogensch?tze"	1032
 	Vnum	1008
@@ -1615,7 +1615,7 @@ Group	L43_Àü±Í±Ãº´(KNIGHT)-Àü±Íº´(KNIGHT)
 	3	"Gemeiner Soldat"	1031
 	4	"Gemeiner Soldat"	1031
 }
-Group	L43_Àü±Í±Ãº´(KNIGHT)-Àü±Í±Ãº´(KNIGHT)
+Group	L43_전귀궁병(KNIGHT)-전귀궁병(KNIGHT)
 {
 	Leader	"Gemeiner Bogensch?tze"	1032
 	Vnum	1009
@@ -1624,7 +1624,7 @@ Group	L43_Àü±Í±Ãº´(KNIGHT)-Àü±Í±Ãº´(KNIGHT)
 	3	"Gemeiner Soldat"	1031
 	4	"Gemeiner Soldat"	1031
 }
-Group	L43_Àü±Í±Ãº´(KNIGHT)-Àü±Í±Ãº´(KNIGHT)
+Group	L43_전귀궁병(KNIGHT)-전귀궁병(KNIGHT)
 {
 	Leader	"Gemeiner Bogensch?tze"	1032
 	Vnum	1010
@@ -1633,7 +1633,7 @@ Group	L43_Àü±Í±Ãº´(KNIGHT)-Àü±Í±Ãº´(KNIGHT)
 	3	"Gemeiner Soldat"	1031
 	4	"Gemeiner Soldat"	1031
 }
-Group	L45_Àü±ÍÃ¢º´(KNIGHT)-Àü±ÍÃ¢º´(KNIGHT)
+Group	L45_전귀창병(KNIGHT)-전귀창병(KNIGHT)
 {
 	Leader	"Gemeiner Speerk?mpfer"	1033
 	Vnum	1011
@@ -1642,7 +1642,7 @@ Group	L45_Àü±ÍÃ¢º´(KNIGHT)-Àü±ÍÃ¢º´(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Soldat"	1031
 }
-Group	L45_Àü±ÍÃ¢º´(KNIGHT)-Àü±ÍÃ¢º´(KNIGHT)
+Group	L45_전귀창병(KNIGHT)-전귀창병(KNIGHT)
 {
 	Leader	"Gemeiner Speerk?mpfer"	1033
 	Vnum	1012
@@ -1651,7 +1651,7 @@ Group	L45_Àü±ÍÃ¢º´(KNIGHT)-Àü±ÍÃ¢º´(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L47_Àü±ÍÁÖ¼ú»ç(KNIGHT)-Àü±ÍÃ¢º´(KNIGHT)
+Group	L47_전귀주술사(KNIGHT)-전귀창병(KNIGHT)
 {
 	Leader	"Gemeiner Schamane"	1034
 	Vnum	1013
@@ -1660,7 +1660,7 @@ Group	L47_Àü±ÍÁÖ¼ú»ç(KNIGHT)-Àü±ÍÃ¢º´(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L47_Àü±ÍÁÖ¼ú»ç(KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L47_전귀주술사(KNIGHT)-전귀주술사(KNIGHT)
 {
 	Leader	"Gemeiner Schamane"	1034
 	Vnum	1014
@@ -1669,7 +1669,7 @@ Group	L47_Àü±ÍÁÖ¼ú»ç(KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L49_¿ø¸ÁÀÇ_¸Á·É(KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L49_원망의_망령(KNIGHT)-전귀주술사(KNIGHT)
 {
 	Leader	"Geist des Grolls"	1035
 	Vnum	1015
@@ -1678,7 +1678,7 @@ Group	L49_¿ø¸ÁÀÇ_¸Á·É(KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L49_¿ø¸ÁÀÇ_¸Á·É(KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
+Group	L49_원망의_망령(KNIGHT)-원망의_망령(KNIGHT)
 {
 	Leader	"Geist des Grolls"	1035
 	Vnum	1016
@@ -1687,7 +1687,7 @@ Group	L49_¿ø¸ÁÀÇ_¸Á·É(KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L52_È¥µ·ÀÇ_¸Á·É(KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
+Group	L52_혼돈의_망령(KNIGHT)-원망의_망령(KNIGHT)
 {
 	Leader	"Geist des Chaos"	1036
 	Vnum	1017
@@ -1696,7 +1696,7 @@ Group	L52_È¥µ·ÀÇ_¸Á·É(KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
 	3	"Gemeiner Schamane"	1034
 	4	"Gemeiner Schamane"	1034
 }
-Group	L52_È¥µ·ÀÇ_¸Á·É(KNIGHT)-È¥µ·ÀÇ_¸Á·É(KNIGHT)
+Group	L52_혼돈의_망령(KNIGHT)-혼돈의_망령(KNIGHT)
 {
 	Leader	"Geist des Chaos"	1036
 	Vnum	1018
@@ -1705,7 +1705,7 @@ Group	L52_È¥µ·ÀÇ_¸Á·É(KNIGHT)-È¥µ·ÀÇ_¸Á·É(KNIGHT)
 	3	"Gemeiner Schamane"	1034
 	4	"Gemeiner Schamane"	1034
 }
-Group	L67_Àü±ÍÀå(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L67_전귀장(S_KNIGHT)-전귀주술사(KNIGHT)
 {
 	Leader	"Gemeiner D?monenanf?hrer"	1037
 	Vnum	1019
@@ -1714,7 +1714,7 @@ Group	L67_Àü±ÍÀå(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L42_Áö¸¶Àå(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L42_지마장(S_KNIGHT)-전귀주술사(KNIGHT)
 {
 	Leader	Totenkopfschwertmeister	1038
 	Vnum	1020
@@ -1723,7 +1723,7 @@ Group	L42_Áö¸¶Àå(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L44_Àü·É»ç(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L44_전령사(S_KNIGHT)-전귀주술사(KNIGHT)
 {
 	Leader	"Fliegender Totenkopf"	1039
 	Vnum	1021
@@ -1732,7 +1732,7 @@ Group	L44_Àü·É»ç(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
 	3	"Gemeiner Speerk?mpfer"	1033
 	4	"Gemeiner Speerk?mpfer"	1033
 }
-Group	L45_ºÒ»ç±Í(S_KNIGHT)-ºÒ»ç±Í(S_KNIGHT)
+Group	L45_불사귀(S_KNIGHT)-불사귀(S_KNIGHT)
 {
 	Leader	"Unsterblicher Geist"	1040
 	Vnum	1022
@@ -1741,7 +1741,7 @@ Group	L45_ºÒ»ç±Í(S_KNIGHT)-ºÒ»ç±Í(S_KNIGHT)
 	3	"Unsterblicher Geist"	1040
 	4	"Unsterblicher Geist"	1040
 }
-Group	L47_ÀçÈ°±«¹°(S_KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
+Group	L47_재활괴물(S_KNIGHT)-원망의_망령(KNIGHT)
 {
 	Leader	"D?monisches Tier"	1041
 	Vnum	1023
@@ -1750,7 +1750,7 @@ Group	L47_ÀçÈ°±«¹°(S_KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
 	3	"Geist des Grolls"	1035
 	4	"Geist des Chaos"	1036
 }
-Group	L69_»ç±Í¿Õ(BOSS)-Àü±ÍÀå(S_KNIGHT)
+Group	L69_사귀왕(BOSS)-전귀장(S_KNIGHT)
 {
 	Leader	D?monenk?nig	1091
 	Vnum	1024
@@ -1759,7 +1759,7 @@ Group	L69_»ç±Í¿Õ(BOSS)-Àü±ÍÀå(S_KNIGHT)
 	3	"Gemeiner Speerk?mpfer"	1033
 	4	"Gemeiner Speerk?mpfer"	1033
 }
-Group	L69_»ç±Í¿Õ(BOSS)-Àü±ÍÀå(S_KNIGHT)
+Group	L69_사귀왕(BOSS)-전귀장(S_KNIGHT)
 {
 	Leader	D?monenk?nig	1091
 	Vnum	1025
@@ -1768,7 +1768,7 @@ Group	L69_»ç±Í¿Õ(BOSS)-Àü±ÍÀå(S_KNIGHT)
 	3	"Fliegender Totenkopf"	1039
 	4	"Gemeiner Schamane"	1034
 }
-Group	L70_»ç±Í¿Õ(BOSS)-Àü±ÍÀå(S_KNIGHT)
+Group	L70_사귀왕(BOSS)-전귀장(S_KNIGHT)
 {
 	Leader	"Stolzer D?monenk?nig"	1092
 	Vnum	1026
@@ -1777,7 +1777,7 @@ Group	L70_»ç±Í¿Õ(BOSS)-Àü±ÍÀå(S_KNIGHT)
 	3	"Fliegender Totenkopf"	1039
 	4	"Gemeiner Schamane"	1034
 }
-Group	L42_Áö¸¶Àå(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L42_지마장(S_KNIGHT)-전귀주술사(KNIGHT)
 {
 	Leader	Totenkopfschwertmeister	1038
 	Vnum	1027
@@ -1786,7 +1786,7 @@ Group	L42_Áö¸¶Àå(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
 	3	"Gemeiner Bogensch?tze"	1032
 	4	"Gemeiner Bogensch?tze"	1032
 }
-Group	L44_Àü·É»ç(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
+Group	L44_전령사(S_KNIGHT)-전귀주술사(KNIGHT)
 {
 	Leader	"Unsterblicher Geist"	1040
 	Vnum	1028
@@ -1795,7 +1795,7 @@ Group	L44_Àü·É»ç(S_KNIGHT)-Àü±ÍÁÖ¼ú»ç(KNIGHT)
 	3	"Fliegender Totenkopf"	1039
 	4	Totenkopfschwertmeister	1038
 }
-Group	L45_ºÒ»ç±Í(S_KNIGHT)-ºÒ»ç±Í(S_KNIGHT)
+Group	L45_불사귀(S_KNIGHT)-불사귀(S_KNIGHT)
 {
 	Leader	"Unsterblicher Geist"	1040
 	Vnum	1029
@@ -1804,7 +1804,7 @@ Group	L45_ºÒ»ç±Í(S_KNIGHT)-ºÒ»ç±Í(S_KNIGHT)
 	3	"Unsterblicher Geist"	1040
 	4	"Unsterblicher Geist"	1040
 }
-Group	L47_ÀçÈ°±«¹°(S_KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
+Group	L47_재활괴물(S_KNIGHT)-원망의_망령(KNIGHT)
 {
 	Leader	"D?monisches Tier"	1041
 	Vnum	1030
@@ -1813,7 +1813,7 @@ Group	L47_ÀçÈ°±«¹°(S_KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
 	3	"Unsterblicher Geist"	1040
 	4	"Unsterblicher Geist"	1040
 }
-Group	L47_ÀçÈ°±«¹°(S_KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
+Group	L47_재활괴물(S_KNIGHT)-원망의_망령(KNIGHT)
 {
 	Leader	Sensenmann	1093
 	Vnum	1031
@@ -1822,14 +1822,14 @@ Group	L47_ÀçÈ°±«¹°(S_KNIGHT)-¿ø¸ÁÀÇ_¸Á·É(KNIGHT)
 	3	"Unsterblicher Geist"	1040
 	4	"Unsterblicher Geist"	1040
 }
-Group	L73_¾óÀ½»Ô¹ü°í·¡(S_PAWN)-ºù¸¶(S_PAWN)
+Group	L73_얼음뿔범고래(S_PAWN)-빙마(S_PAWN)
 {
 	Leader	Eiskillerwal	1102
 	Vnum	1101
 	1	"Verzaubertes Eis"	1101
 	2	"Verzaubertes Eis"	1101
 }
-Group	L73_¾óÀ½»Ô¹ü°í·¡(S_PAWN)-¾óÀ½»Ô¹ü°í·¡(S_PAWN)
+Group	L73_얼음뿔범고래(S_PAWN)-얼음뿔범고래(S_PAWN)
 {
 	Leader	Eiskillerwal	1102
 	Vnum	1102
@@ -1837,7 +1837,7 @@ Group	L73_¾óÀ½»Ô¹ü°í·¡(S_PAWN)-¾óÀ½»Ô¹ü°í·¡(S_PAWN)
 	2	"Verzaubertes Eis"	1101
 	3	"Verzaubertes Eis"	1101
 }
-Group	L73_¾óÀ½»Ô¹ü°í·¡(S_PAWN)-¾óÀ½»Ô¹ü°í·¡(S_PAWN)
+Group	L73_얼음뿔범고래(S_PAWN)-얼음뿔범고래(S_PAWN)
 {
 	Leader	Eiskillerwal	1102
 	Vnum	1103
@@ -1845,7 +1845,7 @@ Group	L73_¾óÀ½»Ô¹ü°í·¡(S_PAWN)-¾óÀ½»Ô¹ü°í·¡(S_PAWN)
 	2	Eiskillerwal	1102
 	3	"Verzaubertes Eis"	1101
 }
-Group	L71_ºùÃæ(S_PAWN)-¾óÀ½»Ô¹ü°í·¡(S_PAWN)
+Group	L71_빙충(S_PAWN)-얼음뿔범고래(S_PAWN)
 {
 	Leader	Eisinsekt	1103
 	Vnum	1104
@@ -1853,7 +1853,7 @@ Group	L71_ºùÃæ(S_PAWN)-¾óÀ½»Ô¹ü°í·¡(S_PAWN)
 	2	"Verzaubertes Eis"	1101
 	3	"Verzaubertes Eis"	1101
 }
-Group	L71_ºùÃæ(S_PAWN)-ºùÃæ(S_PAWN)
+Group	L71_빙충(S_PAWN)-빙충(S_PAWN)
 {
 	Leader	Eisinsekt	1103
 	Vnum	1105
@@ -1861,7 +1861,7 @@ Group	L71_ºùÃæ(S_PAWN)-ºùÃæ(S_PAWN)
 	2	Eiskillerwal	1102
 	3	"Verzaubertes Eis"	1101
 }
-Group	L72_¼³±¸(KNIGHT)-ºùÃæ(S_PAWN)
+Group	L72_설구(KNIGHT)-빙충(S_PAWN)
 {
 	Leader	Eisl?we	1104
 	Vnum	1106
@@ -1869,14 +1869,14 @@ Group	L72_¼³±¸(KNIGHT)-ºùÃæ(S_PAWN)
 	2	Eiskillerwal	1102
 	3	"Verzaubertes Eis"	1101
 }
-Group	L72_¼³±¸(KNIGHT)-¼³±¸(KNIGHT)
+Group	L72_설구(KNIGHT)-설구(KNIGHT)
 {
 	Leader	Eisl?we	1104
 	Vnum	1107
 	1	Eisl?we	1104
 	2	Eisinsekt	1103
 }
-Group	L73_ºùÀÎ(KNIGHT)-¼³±¸(KNIGHT)
+Group	L73_빙인(KNIGHT)-설구(KNIGHT)
 {
 	Leader	"Frostiger Eismann"	1105
 	Vnum	1108
@@ -1885,7 +1885,7 @@ Group	L73_ºùÀÎ(KNIGHT)-¼³±¸(KNIGHT)
 	3	Eisinsekt	1103
 	4	"Verzaubertes Eis"	1101
 }
-Group	L73_ºùÀÎ(KNIGHT)-ºùÀÎ(KNIGHT)
+Group	L73_빙인(KNIGHT)-빙인(KNIGHT)
 {
 	Leader	"Frostiger Eismann"	1105
 	Vnum	1109
@@ -1893,7 +1893,7 @@ Group	L73_ºùÀÎ(KNIGHT)-ºùÀÎ(KNIGHT)
 	2	Eisl?we	1104
 	3	Eisl?we	1104
 }
-Group	L74_¼³°ÅÀÎ(KNIGHT)-ºùÀÎ(KNIGHT)
+Group	L74_설거인(KNIGHT)-빙인(KNIGHT)
 {
 	Leader	Yeti	1106
 	Vnum	1110
@@ -1902,7 +1902,7 @@ Group	L74_¼³°ÅÀÎ(KNIGHT)-ºùÀÎ(KNIGHT)
 	3	Eisinsekt	1103
 	4	Eisinsekt	1103
 }
-Group	L74_¼³°ÅÀÎ(KNIGHT)-¼³°ÅÀÎ(KNIGHT)
+Group	L74_설거인(KNIGHT)-설거인(KNIGHT)
 {
 	Leader	Yeti	1106
 	Vnum	1111
@@ -1911,7 +1911,7 @@ Group	L74_¼³°ÅÀÎ(KNIGHT)-¼³°ÅÀÎ(KNIGHT)
 	3	"Frostiger Eismann"	1105
 	4	Eisl?we	1104
 }
-Group	L75_¾óÀ½°í·½(S_KNIGHT)-¼³°ÅÀÎ(KNIGHT)
+Group	L75_얼음고렘(S_KNIGHT)-설거인(KNIGHT)
 {
 	Leader	Eisgolem	1107
 	Vnum	1112
@@ -1920,7 +1920,7 @@ Group	L75_¾óÀ½°í·½(S_KNIGHT)-¼³°ÅÀÎ(KNIGHT)
 	3	Yeti	1106
 	4	Yeti	1106
 }
-Group	L75_¾óÀ½°í·½(S_KNIGHT)-¾óÀ½°í·½(S_KNIGHT)
+Group	L75_얼음고렘(S_KNIGHT)-얼음고렘(S_KNIGHT)
 {
 	Leader	Eisgolem	1107
 	Vnum	1113
@@ -1929,7 +1929,7 @@ Group	L75_¾óÀ½°í·½(S_KNIGHT)-¾óÀ½°í·½(S_KNIGHT)
 	3	Yeti	1106
 	4	Yeti	1106
 }
-Group	L67_±¸¹ÌÈ£(BOSS)-¾óÀ½°í·½(S_KNIGHT)
+Group	L67_구미호(BOSS)-얼음고렘(S_KNIGHT)
 {
 	Leader	Neunschwanz	1901
 	Vnum	1114
@@ -1938,7 +1938,7 @@ Group	L67_±¸¹ÌÈ£(BOSS)-¾óÀ½°í·½(S_KNIGHT)
 	3	Yeti	1106
 	4	"Verzaubertes Eis"	1101
 }
-Group	¼­ÇÑ»ê»ï°Å¸®1
+Group	서한산삼거리1
 {
 	Leader	Eisinsekt	1153
 	Vnum	1151
@@ -1946,7 +1946,7 @@ Group	¼­ÇÑ»ê»ï°Å¸®1
 	2	"Eishorn Killerwal"	1152
 	3	"Eishorn Killerwal"	1152
 }
-Group	¼­ÇÑ»ê»ï°Å¸®2
+Group	서한산삼거리2
 {
 	Leader	Eismann	1155
 	Vnum	1152
@@ -1954,7 +1954,7 @@ Group	¼­ÇÑ»ê»ï°Å¸®2
 	2	Seol-Gu	1154
 	3	Seol-Gu	1154
 }
-Group	¼­ÇÑ»ê»ï°Å¸®3
+Group	서한산삼거리3
 {
 	Leader	Eisgolem	1157
 	Vnum	1153
@@ -1962,14 +1962,14 @@ Group	¼­ÇÑ»ê»ï°Å¸®3
 	2	Eisgigant	1156
 	3	Eisgigant	1156
 }
-Group	Äù½ºÆ®¿ë_ºù¸¶
+Group	퀘스트용_빙마
 {
 	Leader	"B?ses verzaubertes Eis"	1171
 	Vnum	1171
 	1	"B?ses verzaubertes Eis"	1171
 	2	"B?ses verzaubertes Eis"	1171
 }
-Group	L68_´ë¿ÕÀü°¥(S_PAWN)-ºñ¸¶±Í¾È(S_PAWN)
+Group	L68_대왕전갈(S_PAWN)-비마귀안(S_PAWN)
 {
 	Leader	K?nigsskorpion	2103
 	Vnum	1301
@@ -1977,7 +1977,7 @@ Group	L68_´ë¿ÕÀü°¥(S_PAWN)-ºñ¸¶±Í¾È(S_PAWN)
 	2	W?stenflugauge	2102
 	3	W?stenflugauge	2102
 }
-Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
+Group	L68_대왕전갈(S_PAWN)-대왕전갈(S_PAWN)
 {
 	Leader	K?nigsskorpion	2103
 	Vnum	1302
@@ -1985,7 +1985,7 @@ Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
 	2	W?stenflugauge	2102
 	3	W?stenflugauge	2102
 }
-Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
+Group	L68_대왕전갈(S_PAWN)-대왕전갈(S_PAWN)
 {
 	Leader	K?nigsskorpion	2103
 	Vnum	1303
@@ -1993,7 +1993,7 @@ Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
 	2	K?nigsskorpion	2103
 	3	W?stenflugauge	2102
 }
-Group	L66_Àü°¥ÀÎ°£(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
+Group	L66_전갈인간(KNIGHT)-전갈인간(KNIGHT)
 {
 	Leader	"Junger Skorpionmann"	2104
 	Vnum	1304
@@ -2001,7 +2001,7 @@ Group	L66_Àü°¥ÀÎ°£(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
 	2	K?nigsskorpion	2103
 	3	K?nigsskorpion	2103
 }
-Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
+Group	L67_전갈궁수(KNIGHT)-전갈인간(KNIGHT)
 {
 	Leader	Skorpionbogensch?tze	2105
 	Vnum	1305
@@ -2009,7 +2009,7 @@ Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
 	2	K?nigsskorpion	2103
 	3	K?nigsskorpion	2103
 }
-Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥±Ã¼ö(KNIGHT)
+Group	L67_전갈궁수(KNIGHT)-전갈궁수(KNIGHT)
 {
 	Leader	Skorpionbogensch?tze	2105
 	Vnum	1306
@@ -2017,7 +2017,7 @@ Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥±Ã¼ö(KNIGHT)
 	2	"Junger Skorpionmann"	2104
 	3	K?nigsskorpion	2103
 }
-Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç°Ëº´(KNIGHT)
+Group	L69_반인반사궁병(KNIGHT)-반인반사검병(KNIGHT)
 {
 	Leader	Schlangenbogensch?tze	2107
 	Vnum	1307
@@ -2025,7 +2025,7 @@ Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç°Ëº´(KNIGHT)
 	2	Schlangenschwertk?mpfer	2106
 	3	Schlangenschwertk?mpfer	2106
 }
-Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
+Group	L69_반인반사궁병(KNIGHT)-반인반사궁병(KNIGHT)
 {
 	Leader	Schlangenbogensch?tze	2107
 	Vnum	1308
@@ -2033,14 +2033,14 @@ Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
 	2	Schlangenschwertk?mpfer	2106
 	3	Schlangenschwertk?mpfer	2106
 }
-Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
+Group	L69_반인반사궁병(KNIGHT)-반인반사궁병(KNIGHT)
 {
 	Leader	Schlangenbogensch?tze	2107
 	Vnum	1309
 	1	Schlangenschwertk?mpfer	2106
 	2	Schlangenschwertk?mpfer	2106
 }
-Group	L70_»ç¸·ÀÇ¹«¹ıÀÚ(S_KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
+Group	L70_사막의무법자(S_KNIGHT)-반인반사궁병(KNIGHT)
 {
 	Leader	W?stenbandit	2108
 	Vnum	1310
@@ -2049,7 +2049,7 @@ Group	L70_»ç¸·ÀÇ¹«¹ıÀÚ(S_KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
 	3	Skorpionbogensch?tze	2105
 	4	"Junger Skorpionmann"	2104
 }
-Group	L72_°Å´ë»ç¸·°ÅºÏ(BOSS)-»ç¸·ÀÇ¹«¹ıÀÚ(S_KNIGHT)
+Group	L72_거대사막거북(BOSS)-사막의무법자(S_KNIGHT)
 {
 	Leader	"Gro©¬e W?stenschildkr?te"	2191
 	Vnum	1311
@@ -2058,269 +2058,269 @@ Group	L72_°Å´ë»ç¸·°ÅºÏ(BOSS)-»ç¸·ÀÇ¹«¹ıÀÚ(S_KNIGHT)
 	3	Schlangenbogensch?tze	2107
 	4	Skorpionbogensch?tze	2105
 }
-Group	Äù½ºÆ®¿ë_Ã»¿ÍÀå
+Group	퀘스트용_청와장
 {
 	Leader	"Gr. Baumfrosch-Anf?hrer"	1332
 	Vnum	1332
 	1	"Gr. Baumfrosch-Anf?hrer"	1332
 	2	"Gr. Baumfrosch-Anf?hrer"	1332
 }
-Group	Åõ±Íº´
+Group	투귀병
 {
 	Leader	Zerst?rer	1401
 	Vnum	1401
 }
-Group	Åõ±âÃ´ÈÄº´
+Group	투기척후병
 {
 	Leader	Axtk?mpfer	1402
 	Vnum	1402
 }
-Group	Åõ±ÍÃµÀå¼ö
+Group	투귀천장수
 {
 	Leader	Tausendk?mpfer	1403
 	Vnum	1403
 }
-Group	¼®ÀÎ
+Group	석인
 {
 	Leader	Steingolem	1501
 	Vnum	1501
 }
-Group	Åõ¼®ÀÎ
+Group	투석인
 {
 	Leader	Steinbei©¬er	1502
 	Vnum	1502
 }
-Group	°Å´ëÅõ¼®ÀÎ
+Group	거대투석인
 {
 	Leader	"Riesiger Felsengolem"	1503
 	Vnum	1503
 }
-Group	Åõ±ÍÀÏ²Û
+Group	투귀일꾼
 {
 	Leader	"Oger Krieger"	1601
 	Vnum	1601
 }
-Group	Åõ±Í°¨Âûº´
+Group	투귀감찰병
 {
 	Leader	"Oger Schl?chter"	1602
 	Vnum	1602
 }
-Group	Åõ±Í¹éÀå¼ö
+Group	투귀백장수
 {
 	Leader	"Oger Berserker"	1603
 	Vnum	1603
 }
-Group	L72_»õ³¢°Å¹Ì(PAWN)-»õ³¢°Å¹Ì(PAWN)
+Group	L72_새끼거미(PAWN)-새끼거미(PAWN)
 {
 	Leader	Babyspinne	2001
 	Vnum	2001
 	1	Babyspinne	2001
 	2	Babyspinne	2001
 }
-Group	L73_µ¶°Å¹Ì(PAWN)-»õ³¢°Å¹Ì(PAWN)
+Group	L73_독거미(PAWN)-새끼거미(PAWN)
 {
 	Leader	Giftspinne	2002
 	Vnum	2002
 	1	Babyspinne	2001
 	2	Babyspinne	2001
 }
-Group	L73_µ¶°Å¹Ì(PAWN)-µ¶°Å¹Ì(PAWN)
+Group	L73_독거미(PAWN)-독거미(PAWN)
 {
 	Leader	Giftspinne	2002
 	Vnum	2003
 	1	Giftspinne	2002
 	2	Babyspinne	2001
 }
-Group	L74_ºÓÀºµ¶°Å¹Ì(S_PAWN)-µ¶°Å¹Ì(PAWN)
+Group	L74_붉은독거미(S_PAWN)-독거미(PAWN)
 {
 	Leader	"Rote Giftspinne"	2003
 	Vnum	2004
 	1	Giftspinne	2002
 	2	Giftspinne	2002
 }
-Group	L74_ºÓÀºµ¶°Å¹Ì(S_PAWN)-ºÓÀºµ¶°Å¹Ì(S_PAWN)
+Group	L74_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Leader	"Rote Giftspinne"	2003
 	Vnum	2005
 	1	"Rote Giftspinne"	2003
 	2	Giftspinne	2002
 }
-Group	L75_Áı°Ô°Å¹Ì(S_PAWN)-ºÓÀºµ¶°Å¹Ì(S_PAWN)
+Group	L75_Áı게거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Leader	Klauenspinne	2004
 	Vnum	2006
 	1	"Rote Giftspinne"	2003
 	2	"Rote Giftspinne"	2003
 }
-Group	L75_Áı°Ô°Å¹Ì(S_PAWN)-Áı°Ô°Å¹Ì(S_PAWN)
+Group	L75_Áı게거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Leader	Klauenspinne	2004
 	Vnum	2007
 	1	Klauenspinne	2004
 	2	"Rote Giftspinne"	2003
 }
-Group	L74_º´Á¤°Å¹Ì(S_PAWN)-Áı°Ô°Å¹Ì(S_PAWN)
+Group	L74_병정거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Leader	Soldatenspinne	2005
 	Vnum	2008
 	1	Klauenspinne	2004
 	2	Klauenspinne	2004
 }
-Group	L74_º´Á¤°Å¹Ì(S_PAWN)-º´Á¤°Å¹Ì(S_PAWN)
+Group	L74_병정거미(S_PAWN)-병정거미(S_PAWN)
 {
 	Leader	Soldatenspinne	2005
 	Vnum	2009
 	1	Soldatenspinne	2005
 	2	Klauenspinne	2004
 }
-Group	L74_»õ³¢µ¶°Å¹Ì(KNIGHT)-»õ³¢µ¶°Å¹Ì(KNIGHT)
+Group	L74_새끼독거미(KNIGHT)-새끼독거미(KNIGHT)
 {
 	Leader	Babygiftspinne	2031
 	Vnum	2010
 	1	Babygiftspinne	2031
 	2	Babygiftspinne	2031
 }
-Group	L77_¸Íµ¶°Å¹Ì(KNIGHT)-»õ³¢µ¶°Å¹Ì(KNIGHT)
+Group	L77_맹독거미(KNIGHT)-새끼독거미(KNIGHT)
 {
 	Leader	"T?dliche Giftspinne"	2032
 	Vnum	2011
 	1	Babygiftspinne	2031
 	2	Babygiftspinne	2031
 }
-Group	L77_¸Íµ¶°Å¹Ì(KNIGHT)-¸Íµ¶°Å¹Ì(KNIGHT)
+Group	L77_맹독거미(KNIGHT)-맹독거미(KNIGHT)
 {
 	Leader	"T?dliche Giftspinne"	2032
 	Vnum	2012
 	1	"T?dliche Giftspinne"	2032
 	2	Babygiftspinne	2031
 }
-Group	L62_ºÓÀº¸Íµ¶°Å¹Ì(S_KNIGHT)-¸Íµ¶°Å¹Ì(KNIGHT)
+Group	L62_붉은맹독거미(S_KNIGHT)-맹독거미(KNIGHT)
 {
 	Leader	"Rote w?tende Giftspinne"	2033
 	Vnum	2013
 	1	"T?dliche Giftspinne"	2032
 	2	"T?dliche Giftspinne"	2032
 }
-Group	L62_ºÓÀº¸Íµ¶°Å¹Ì(S_KNIGHT)-ºÓÀº¸Íµ¶°Å¹Ì(S_KNIGHT)
+Group	L62_붉은맹독거미(S_KNIGHT)-붉은맹독거미(S_KNIGHT)
 {
 	Leader	"Rote w?tende Giftspinne"	2033
 	Vnum	2014
 	1	"Rote w?tende Giftspinne"	2033
 	2	"T?dliche Giftspinne"	2032
 }
-Group	L63_Áı°Ôµ¶°Å¹Ì(S_KNIGHT)-ºÓÀº¸Íµ¶°Å¹Ì(S_KNIGHT)
+Group	L63_Áı게독거미(S_KNIGHT)-붉은맹독거미(S_KNIGHT)
 {
 	Leader	Klauengiftspinne	2034
 	Vnum	2015
 	1	"Rote w?tende Giftspinne"	2033
 	2	"Rote w?tende Giftspinne"	2033
 }
-Group	L63_Áı°Ôµ¶°Å¹Ì(S_KNIGHT)-Áı°Ôµ¶°Å¹Ì(S_KNIGHT)
+Group	L63_Áı게독거미(S_KNIGHT)-집게독거미(S_KNIGHT)
 {
 	Leader	Klauengiftspinne	2034
 	Vnum	2016
 	1	Klauengiftspinne	2034
 	2	"Rote w?tende Giftspinne"	2033
 }
-Group	L64_º´Á¤µ¶°Å¹Ì(S_KNIGHT)-Áı°Ôµ¶°Å¹Ì(S_KNIGHT)
+Group	L64_병정독거미(S_KNIGHT)-집게독거미(S_KNIGHT)
 {
 	Leader	Soldatengiftspinne	2035
 	Vnum	2017
 	1	Klauengiftspinne	2034
 	2	Klauengiftspinne	2034
 }
-Group	L64_º´Á¤µ¶°Å¹Ì(S_KNIGHT)-º´Á¤µ¶°Å¹Ì(S_KNIGHT)
+Group	L64_병정독거미(S_KNIGHT)-병정독거미(S_KNIGHT)
 {
 	Leader	Soldatengiftspinne	2035
 	Vnum	2018
 	1	Soldatengiftspinne	2035
 	2	Klauengiftspinne	2034
 }
-Group	L64_¿©¿Õ°Å¹Ì(BOSS)-Áı°Ôµ¶°Å¹Ì(S_KNIGHT)
+Group	L64_여왕거미(BOSS)-집게독거미(S_KNIGHT)
 {
 	Leader	K?niginnenspinne	2091
 	Vnum	2019
 	1	Klauengiftspinne	2034
 	2	Klauengiftspinne	2034
 }
-Group	L65_´ë¿Õ°Å¹Ì(KING)-º´Á¤µ¶°Å¹Ì(S_KNIGHT)
+Group	L65_대왕거미(KING)-병정독거미(S_KNIGHT)
 {
 	Leader	K?nigsspinne	2092
 	Vnum	2020
 	1	Soldatengiftspinne	2035
 	2	Soldatengiftspinne	2035
 }
-Group	L64_º´Á¤µ¶°Å¹Ì(S_KNIGHT)-º´Á¤µ¶°Å¹Ì(S_KNIGHT)
+Group	L64_병정독거미(S_KNIGHT)-병정독거미(S_KNIGHT)
 {
 	Leader	"Stolze Soldat-Giftspinne"	2036
 	Vnum	2021
 	1	"Stolze Soldat-Giftspinne"	2036
 	2	Klauengiftspinne	2034
 }
-Group	L72_»õ³¢°Å¹Ì(PAWN)-»õ³¢°Å¹Ì(PAWN)
+Group	L72_새끼거미(PAWN)-새끼거미(PAWN)
 {
 	Leader	"Kleine Giftspinne"	2061
 	Vnum	2051
 	1	"Kleine Giftspinne"	2061
 	2	"Kleine Giftspinne"	2061
 }
-Group	L73_µ¶°Å¹Ì(PAWN)-»õ³¢°Å¹Ì(PAWN)
+Group	L73_독거미(PAWN)-새끼거미(PAWN)
 {
 	Leader	"T?dliche Giftspinne"	2062
 	Vnum	2052
 	1	"Kleine Giftspinne"	2061
 	2	"Kleine Giftspinne"	2061
 }
-Group	L73_µ¶°Å¹Ì(PAWN)-µ¶°Å¹Ì(PAWN)
+Group	L73_독거미(PAWN)-독거미(PAWN)
 {
 	Leader	"T?dliche Giftspinne"	2062
 	Vnum	2053
 	1	"T?dliche Giftspinne"	2062
 	2	"Kleine Giftspinne"	2061
 }
-Group	L74_ºÓÀºµ¶°Å¹Ì(S_PAWN)-µ¶°Å¹Ì(PAWN)
+Group	L74_붉은독거미(S_PAWN)-독거미(PAWN)
 {
 	Leader	"Rote t?dliche Giftspinne"	2063
 	Vnum	2054
 	1	"T?dliche Giftspinne"	2062
 	2	"T?dliche Giftspinne"	2062
 }
-Group	L74_ºÓÀºµ¶°Å¹Ì(S_PAWN)-ºÓÀºµ¶°Å¹Ì(S_PAWN)
+Group	L74_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Leader	"Rote t?dliche Giftspinne"	2063
 	Vnum	2055
 	1	"Rote t?dliche Giftspinne"	2063
 	2	"T?dliche Giftspinne"	2062
 }
-Group	L75_Áı°Ô°Å¹Ì(S_PAWN)-ºÓÀºµ¶°Å¹Ì(S_PAWN)
+Group	L75_Áı게거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Leader	Klauengiftspinne	2064
 	Vnum	2056
 	1	"Rote t?dliche Giftspinne"	2063
 	2	"Rote t?dliche Giftspinne"	2063
 }
-Group	L75_Áı°Ô°Å¹Ì(S_PAWN)-Áı°Ô°Å¹Ì(S_PAWN)
+Group	L75_Áı게거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Leader	Klauengiftspinne	2064
 	Vnum	2057
 	1	Klauengiftspinne	2064
 	2	"Rote t?dliche Giftspinne"	2063
 }
-Group	L74_º´Á¤°Å¹Ì(S_PAWN)-Áı°Ô°Å¹Ì(S_PAWN)
+Group	L74_병정거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Leader	Soldatengiftspinne	2065
 	Vnum	2058
 	1	Klauengiftspinne	2064
 	2	Klauengiftspinne	2064
 }
-Group	L74_º´Á¤°Å¹Ì(S_PAWN)-º´Á¤°Å¹Ì(S_PAWN)
+Group	L74_병정거미(S_PAWN)-병정거미(S_PAWN)
 {
 	Leader	Soldatengiftspinne	2065
 	Vnum	2059
 	1	Soldatengiftspinne	2065
 	2	Klauengiftspinne	2064
 }
-Group	L68_´ë¿ÕÀü°¥(S_PAWN)-ºñ¸¶±Í¾È(S_PAWN)
+Group	L68_대왕전갈(S_PAWN)-비마귀안(S_PAWN)
 {
 	Leader	Schlangenschwertk?mpfer	2133
 	Vnum	2060
@@ -2328,7 +2328,7 @@ Group	L68_´ë¿ÕÀü°¥(S_PAWN)-ºñ¸¶±Í¾È(S_PAWN)
 	2	Skorpionbogensch?tze	2132
 	3	Skorpionbogensch?tze	2132
 }
-Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
+Group	L68_대왕전갈(S_PAWN)-대왕전갈(S_PAWN)
 {
 	Leader	Schlangenschwertk?mpfer	2133
 	Vnum	2061
@@ -2336,7 +2336,7 @@ Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
 	2	Skorpionbogensch?tze	2132
 	3	Skorpionbogensch?tze	2132
 }
-Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
+Group	L68_대왕전갈(S_PAWN)-대왕전갈(S_PAWN)
 {
 	Leader	Schlangenschwertk?mpfer	2133
 	Vnum	2062
@@ -2344,7 +2344,7 @@ Group	L68_´ë¿ÕÀü°¥(S_PAWN)-´ë¿ÕÀü°¥(S_PAWN)
 	2	Schlangenschwertk?mpfer	2133
 	3	Skorpionbogensch?tze	2132
 }
-Group	L66_Àü°¥ÀÎ°£(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
+Group	L66_전갈인간(KNIGHT)-전갈인간(KNIGHT)
 {
 	Leader	Schlangenbogensch?tze	2134
 	Vnum	2063
@@ -2352,7 +2352,7 @@ Group	L66_Àü°¥ÀÎ°£(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
 	2	Schlangenschwertk?mpfer	2133
 	3	Schlangenschwertk?mpfer	2133
 }
-Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
+Group	L67_전갈궁수(KNIGHT)-전갈인간(KNIGHT)
 {
 	Leader	W?stenbandit	2135
 	Vnum	2064
@@ -2360,7 +2360,7 @@ Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥ÀÎ°£(KNIGHT)
 	2	Schlangenschwertk?mpfer	2133
 	3	Schlangenschwertk?mpfer	2133
 }
-Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥±Ã¼ö(KNIGHT)
+Group	L67_전갈궁수(KNIGHT)-전갈궁수(KNIGHT)
 {
 	Leader	W?stenbandit	2135
 	Vnum	2065
@@ -2368,35 +2368,35 @@ Group	L67_Àü°¥±Ã¼ö(KNIGHT)-Àü°¥±Ã¼ö(KNIGHT)
 	2	Schlangenbogensch?tze	2134
 	3	Schlangenschwertk?mpfer	2133
 }
-Group	Äù½ºÆ®¿ë_»õ³¢°Å¹Ì
+Group	퀘스트용_새끼거미
 {
 	Leader	"B?se Babygiftspinne"	2051
 	Vnum	4071
 	1	"B?se Babygiftspinne"	2051
 	2	"B?se Babygiftspinne"	2051
 }
-Group	Äù½ºÆ®¿ë_µ¶°Å¹Ì
+Group	퀘스트용_독거미
 {
 	Leader	"B?se t?dl. Giftspinne"	2052
 	Vnum	4072
 	1	"B?se t?dl. Giftspinne"	2052
 	2	"B?se t?dl. Giftspinne"	2052
 }
-Group	Äù½ºÆ®¿ë_Áı°Ô°Å¹Ì
+Group	퀘스트용_Áı게거미
 {
 	Leader	"B?se rote Giftspinne"	2053
 	Vnum	4074
 	1	"B?se rote Giftspinne"	2053
 	2	"B?se rote Giftspinne"	2053
 }
-Group	Äù½ºÆ®¿ë_º´Á¤°Å¹Ì
+Group	퀘스트용_병정거미
 {
 	Leader	"B?se Klauengiftspinne"	2054
 	Vnum	4075
 	1	"B?se Klauengiftspinne"	2054
 	2	"B?se Klauengiftspinne"	2054
 }
-Group	L56_Ã»¿Íº´(S_PAWN)-Ç®ÀÙ¸Ó¸®µµ±úºñ(S_PAWN)
+Group	L56_청와병(S_PAWN)-풀잎머리도깨비(S_PAWN)
 {
 	Leader	Baumfrosch-Soldat	1301
 	Vnum	2101
@@ -2404,7 +2404,7 @@ Group	L56_Ã»¿Íº´(S_PAWN)-Ç®ÀÙ¸Ó¸®µµ±úºñ(S_PAWN)
 	2	Buhmann	1303
 	3	Buhmann	1303
 }
-Group	L56_Ã»¿Íº´(S_PAWN)-Ã»¿Íº´(S_PAWN)
+Group	L56_청와병(S_PAWN)-청와병(S_PAWN)
 {
 	Leader	Baumfrosch-Soldat	1301
 	Vnum	2102
@@ -2412,7 +2412,7 @@ Group	L56_Ã»¿Íº´(S_PAWN)-Ã»¿Íº´(S_PAWN)
 	2	Buhmann	1303
 	3	Buhmann	1303
 }
-Group	L56_Ã»¿Íº´(S_PAWN)-Ã»¿Íº´(S_PAWN)
+Group	L56_청와병(S_PAWN)-청와병(S_PAWN)
 {
 	Leader	Baumfrosch-Soldat	1301
 	Vnum	2103
@@ -2420,14 +2420,14 @@ Group	L56_Ã»¿Íº´(S_PAWN)-Ã»¿Íº´(S_PAWN)
 	2	Baumfrosch-Soldat	1301
 	3	Buhmann	1303
 }
-Group	L58_Ã»¿ÍÀå(S_PAWN)-Ã»¿Íº´(S_PAWN)
+Group	L58_청와장(S_PAWN)-청와병(S_PAWN)
 {
 	Leader	Baumfrosch-Anf?hrer	1302
 	Vnum	2104
 	1	Baumfrosch-Soldat	1301
 	2	Baumfrosch-Soldat	1301
 }
-Group	L58_Ã»¿ÍÀå(KNIGHT)-Ã»¿Íº´(S_PAWN)
+Group	L58_청와장(KNIGHT)-청와병(S_PAWN)
 {
 	Leader	Baumfrosch-Anf?hrer	1302
 	Vnum	2105
@@ -2435,7 +2435,7 @@ Group	L58_Ã»¿ÍÀå(KNIGHT)-Ã»¿Íº´(S_PAWN)
 	2	Baumfrosch-Soldat	1301
 	3	Baumfrosch-Anf?hrer	1302
 }
-Group	L58_Ã»¿ÍÀå(KNIGHT)-Ã»¿ÍÀå(KNIGHT)
+Group	L58_청와장(KNIGHT)-청와장(KNIGHT)
 {
 	Leader	Baumfrosch-Anf?hrer	1302
 	Vnum	2106
@@ -2443,7 +2443,7 @@ Group	L58_Ã»¿ÍÀå(KNIGHT)-Ã»¿ÍÀå(KNIGHT)
 	2	Baumfrosch-Anf?hrer	1302
 	3	Baumfrosch-Anf?hrer	1302
 }
-Group	L60_¼ö±¸´ëÀå±º(KNIGHT)-Ã»¿ÍÀå(KNIGHT)
+Group	L60_수구대장군(KNIGHT)-청와장(KNIGHT)
 {
 	Leader	Ochsenfrosch-General	1305
 	Vnum	2107
@@ -2451,7 +2451,7 @@ Group	L60_¼ö±¸´ëÀå±º(KNIGHT)-Ã»¿ÍÀå(KNIGHT)
 	2	Baumfrosch-Anf?hrer	1302
 	3	Baumfrosch-Anf?hrer	1302
 }
-Group	L60_¼ö±¸´ëÀå±º(KNIGHT)-¼ö±¸´ëÀå±º(KNIGHT)
+Group	L60_수구대장군(KNIGHT)-수구대장군(KNIGHT)
 {
 	Leader	Ochsenfrosch-General	1305
 	Vnum	2108
@@ -2459,7 +2459,7 @@ Group	L60_¼ö±¸´ëÀå±º(KNIGHT)-¼ö±¸´ëÀå±º(KNIGHT)
 	2	Baumfrosch-Anf?hrer	1302
 	3	Baumfrosch-Anf?hrer	1302
 }
-Group	L74_´©··¹ü±Í(Boss)-¼ö±¸´ëÀå±º(KNIGHT)
+Group	L74_누렁범귀(Boss)-수구대장군(KNIGHT)
 {
 	Leader	Ochsenfrosch-General	1305
 	Vnum	2109
@@ -2468,7 +2468,7 @@ Group	L74_´©··¹ü±Í(Boss)-¼ö±¸´ëÀå±º(KNIGHT)
 	3	Baumfrosch-Anf?hrer	1302
 	4	Baumfrosch-Anf?hrer	1302
 }
-Group	L74_´©··¹ü±Í(Boss)-¼ö±¸´ëÀå±º(KNIGHT)
+Group	L74_누렁범귀(Boss)-수구대장군(KNIGHT)
 {
 	Leader	"Gelber Tigergeist"	1304
 	Vnum	2110
@@ -2484,21 +2484,21 @@ Group	Skopionmann
 	1	Skorpionbogensch?tze	2105
 	2	Skorpionbogensch?tze	2105
 }
-Group	Äù½ºÆ®¿ë_»ç¸·ÀÇ¹«¹ıÀÚ
+Group	퀘스트용_사막의무법자
 {
 	Leader	"Starker W?stenbandit"	2158
 	Vnum	2158
 	1	"Starker W?stenbandit"	2158
 	2	"Starker W?stenbandit"	2158
 }
-Group	L57_È­·É(S_PAWN)-ÅõÁö¹üÁ¹°³(S_PAWN)
+Group	L57_화령(S_PAWN)-투지범졸개(S_PAWN)
 {
 	Leader	Kampftigersklave	2201
 	Vnum	2201
 	1	Kampftigersklave	2201
 	2	Kampftigersklave	2201
 }
-Group	L59_ÅõÁö¹ü(KNIGHT)-ÅõÁö¹üÁ¹°³(S_PAWN)
+Group	L59_투지범(KNIGHT)-투지범졸개(S_PAWN)
 {
 	Leader	Flammengeist	2202
 	Vnum	2202
@@ -2506,7 +2506,7 @@ Group	L59_ÅõÁö¹ü(KNIGHT)-ÅõÁö¹üÁ¹°³(S_PAWN)
 	2	Kampftigersklave	2201
 	3	Kampftigersklave	2201
 }
-Group	L59_ÅõÁö¹ü(KNIGHT)-ÅõÁö¹ü(KNIGHT)
+Group	L59_투지범(KNIGHT)-투지범(KNIGHT)
 {
 	Leader	Flammengeist	2202
 	Vnum	2203
@@ -2514,7 +2514,7 @@ Group	L59_ÅõÁö¹ü(KNIGHT)-ÅõÁö¹ü(KNIGHT)
 	2	Kampftigersklave	2201
 	3	Kampftigersklave	2201
 }
-Group	L58_Âü¸¶ÀÎ(KNIGHT)-ÅõÁö¹ü(KNIGHT)
+Group	L58_참마인(KNIGHT)-투지범(KNIGHT)
 {
 	Leader	Kampftiger	2203
 	Vnum	2204
@@ -2522,7 +2522,7 @@ Group	L58_Âü¸¶ÀÎ(KNIGHT)-ÅõÁö¹ü(KNIGHT)
 	2	Flammengeist	2202
 	3	Flammengeist	2202
 }
-Group	L58_Âü¸¶ÀÎ(KNIGHT)-ÅõÁö¹ü(KNIGHT)
+Group	L58_참마인(KNIGHT)-투지범(KNIGHT)
 {
 	Leader	Flamme	2204
 	Vnum	2205
@@ -2530,7 +2530,7 @@ Group	L58_Âü¸¶ÀÎ(KNIGHT)-ÅõÁö¹ü(KNIGHT)
 	2	Kampftiger	2203
 	3	Kampftiger	2203
 }
-Group	L58_Âü¸¶ÀÎ(KNIGHT)-ÅõÁö¹ü(KNIGHT)
+Group	L58_참마인(KNIGHT)-투지범(KNIGHT)
 {
 	Leader	Flammenkrieger	2205
 	Vnum	2206
@@ -2540,7 +2540,7 @@ Group	L58_Âü¸¶ÀÎ(KNIGHT)-ÅõÁö¹ü(KNIGHT)
 	4	Kampftiger	2203
 	5	Kampftiger	2203
 }
-Group	L58_Âü¸¶ÀÎ(KNIGHT)-Âü¸¶ÀÎ(KNIGHT)
+Group	L58_참마인(KNIGHT)-참마인(KNIGHT)
 {
 	Leader	Flammenkrieger	2205
 	Vnum	2207
@@ -2550,7 +2550,7 @@ Group	L58_Âü¸¶ÀÎ(KNIGHT)-Âü¸¶ÀÎ(KNIGHT)
 	4	Kampftigersklave	2201
 	5	Kampftigersklave	2201
 }
-Group	L75_ÅÂÈ­¹«ÀÎ(S_KNIGHT)-Âü¸¶ÀÎ(KNIGHT)
+Group	L75_태화무인(S_KNIGHT)-참마인(KNIGHT)
 {
 	Leader	Flammenkrieger	2205
 	Vnum	2208
@@ -2559,7 +2559,7 @@ Group	L75_ÅÂÈ­¹«ÀÎ(S_KNIGHT)-Âü¸¶ÀÎ(KNIGHT)
 	3	Kampftiger	2203
 	4	Kampftiger	2203
 }
-Group	L75_ÅÂÈ­¹«ÀÎ(S_KNIGHT)-ÅÂÈ­¹«ÀÎ(S_KNIGHT)
+Group	L75_태화무인(S_KNIGHT)-태화무인(S_KNIGHT)
 {
 	Leader	Flammenkrieger	2205
 	Vnum	2209
@@ -2568,7 +2568,7 @@ Group	L75_ÅÂÈ­¹«ÀÎ(S_KNIGHT)-ÅÂÈ­¹«ÀÎ(S_KNIGHT)
 	3	Flamme	2204
 	4	Flamme	2204
 }
-Group	L61_È­¿°¿Õ(BOSS)-ÅÂÈ­¹«ÀÎ(S_KNIGHT)
+Group	L61_화염왕(BOSS)-태화무인(S_KNIGHT)
 {
 	Leader	Flammenk?nig	2206
 	Vnum	2210
@@ -2577,7 +2577,7 @@ Group	L61_È­¿°¿Õ(BOSS)-ÅÂÈ­¹«ÀÎ(S_KNIGHT)
 	3	Flamme	2204
 	4	Flammengeist	2202
 }
-Group	L61_È­¿°¿Õ(BOSS)-ÅÂÈ­¹«ÀÎ(S_KNIGHT)
+Group	L61_화염왕(BOSS)-태화무인(S_KNIGHT)
 {
 	Leader	Flammenk?nig	2206
 	Vnum	2211
@@ -2588,7 +2588,7 @@ Group	L61_È­¿°¿Õ(BOSS)-ÅÂÈ­¹«ÀÎ(S_KNIGHT)
 	5	Flammengeist	2202
 	6	Flammengeist	2202
 }
-Group	L72_È­·æ(KING)-È­¿°¿Õ(BOSS)
+Group	L72_화룡(KING)-화염왕(BOSS)
 {
 	Leader	"Roter Drache"	2291
 	Vnum	2212
@@ -2597,7 +2597,7 @@ Group	L72_È­·æ(KING)-È­¿°¿Õ(BOSS)
 	3	Flammengeist	2202
 	4	Flammengeist	2202
 }
-Group	¹ØµÕ±Í¸ñ
+Group	밑둥귀목
 {
 	Leader	Geisterbaumstumpf	2302
 	Vnum	2301
@@ -2605,7 +2605,7 @@ Group	¹ØµÕ±Í¸ñ
 	2	Geisterbaumstumpf	2302
 	3	Geisterbaumstumpf	2302
 }
-Group	¸ñ·É_¹ØµÕ±Í¸ñ
+Group	목령_밑둥귀목
 {
 	Leader	Dryade	2303
 	Vnum	2302
@@ -2613,7 +2613,7 @@ Group	¸ñ·É_¹ØµÕ±Í¸ñ
 	2	Geisterbaumstumpf	2302
 	3	Geisterbaumstumpf	2302
 }
-Group	¸ñ·É_¹ØµÕ±Í¸ñ
+Group	목령_밑둥귀목
 {
 	Leader	Dryade	2303
 	Vnum	2303
@@ -2621,14 +2621,14 @@ Group	¸ñ·É_¹ØµÕ±Í¸ñ
 	2	Geisterbaumstumpf	2302
 	3	Geisterbaumstumpf	2302
 }
-Group	¸ñ·É
+Group	목령
 {
 	Leader	Dryade	2303
 	Vnum	2304
 	1	Dryade	2303
 	2	Dryade	2303
 }
-Group	È­·ù±Í¸ñ_¸ñ·É
+Group	화류귀목_목령
 {
 	Leader	Geisterweide	2304
 	Vnum	2305
@@ -2638,7 +2638,7 @@ Group	È­·ù±Í¸ñ_¸ñ·É
 	4	Geisterbaumstumpf	2302
 	5	Geisterbaumstumpf	2302
 }
-Group	È­·ù±Í¸ñ_¹ØµÕ±Í¸ñ
+Group	화류귀목_밑둥귀목
 {
 	Leader	Geisterweide	2304
 	Vnum	2306
@@ -2647,7 +2647,7 @@ Group	È­·ù±Í¸ñ_¹ØµÕ±Í¸ñ
 	3	Geisterbaumstumpf	2302
 	4	Geisterbaumstumpf	2302
 }
-Group	È­·ù±Í¸ñ_¸ñ·É
+Group	화류귀목_목령
 {
 	Leader	Geisterweide	2304
 	Vnum	2307
@@ -2656,7 +2656,7 @@ Group	È­·ù±Í¸ñ_¸ñ·É
 	3	Dryade	2303
 	4	Dryade	2303
 }
-Group	È­·ù±Í¸ñ_¸ñ·É
+Group	화류귀목_목령
 {
 	Leader	Geisterweide	2304
 	Vnum	2308
@@ -2664,7 +2664,7 @@ Group	È­·ù±Í¸ñ_¸ñ·É
 	2	Geisterweide	2304
 	3	Geisterweide	2304
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"B?ser Baum"	2305
 	Vnum	2309
@@ -2674,7 +2674,7 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	4	Geisterbaumstumpf	2302
 	5	Geisterbaumstumpf	2302
 }
-Group	Èæ±Í¸ñ_¹ØµÕ±Í¸ñ
+Group	흑귀목_밑둥귀목
 {
 	Leader	"B?ser Baum"	2305
 	Vnum	2310
@@ -2683,7 +2683,7 @@ Group	Èæ±Í¸ñ_¹ØµÕ±Í¸ñ
 	3	Geisterbaumstumpf	2302
 	4	Geisterbaumstumpf	2302
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"B?ser Baum"	2305
 	Vnum	2311
@@ -2692,7 +2692,7 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	3	Dryade	2303
 	4	Dryade	2303
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"B?ser Baum"	2305
 	Vnum	2312
@@ -2701,7 +2701,7 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	3	"B?ser Baum"	2305
 	4	"B?ser Baum"	2305
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"B?ser Baum"	2305
 	Vnum	2313
@@ -2709,7 +2709,7 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	2	"B?ser Baum"	2305
 	3	"B?ser Baum"	2305
 }
-Group	°Å´ë±Í¸ñ
+Group	거대귀목
 {
 	Leader	"Riesiger Geisterbaum"	2306
 	Vnum	2314
@@ -2723,7 +2723,7 @@ Group	°Å´ë±Í¸ñ
 	8	Dryade	2303
 	9	Dryade	2303
 }
-Group	¹ØµÕ±Í¸ñ
+Group	밑둥귀목
 {
 	Leader	"Roter Geisterbaumstumpf"	2312
 	Vnum	2320
@@ -2731,7 +2731,7 @@ Group	¹ØµÕ±Í¸ñ
 	2	"Roter Geisterbaumstumpf"	2312
 	3	"Roter Geisterbaumstumpf"	2312
 }
-Group	¹ØµÕ±Í¸ñ
+Group	밑둥귀목
 {
 	Leader	"Roter Geisterbaumstumpf"	2312
 	Vnum	2321
@@ -2739,7 +2739,7 @@ Group	¹ØµÕ±Í¸ñ
 	2	"Roter Geisterbaumstumpf"	2312
 	3	"Roter Geisterbaumstumpf"	2312
 }
-Group	¸ñ·É_¹ØµÕ±Í¸ñ
+Group	목령_밑둥귀목
 {
 	Leader	"Rote Dryade"	2313
 	Vnum	2322
@@ -2747,7 +2747,7 @@ Group	¸ñ·É_¹ØµÕ±Í¸ñ
 	2	"Roter Geisterbaumstumpf"	2312
 	3	"Roter Geisterbaumstumpf"	2312
 }
-Group	¸ñ·É_¹ØµÕ±Í¸ñ
+Group	목령_밑둥귀목
 {
 	Leader	"Rote Dryade"	2313
 	Vnum	2323
@@ -2755,14 +2755,14 @@ Group	¸ñ·É_¹ØµÕ±Í¸ñ
 	2	"Roter Geisterbaumstumpf"	2312
 	3	"Roter Geisterbaumstumpf"	2312
 }
-Group	¸ñ·É
+Group	목령
 {
 	Leader	"Rote Dryade"	2313
 	Vnum	2324
 	1	"Rote Dryade"	2313
 	2	"Rote Dryade"	2313
 }
-Group	È­·ù±Í¸ñ_¸ñ·É
+Group	화류귀목_목령
 {
 	Leader	"Rote Geisterweide"	2314
 	Vnum	2325
@@ -2772,7 +2772,7 @@ Group	È­·ù±Í¸ñ_¸ñ·É
 	4	"Roter Geisterbaumstumpf"	2312
 	5	"Roter Geisterbaumstumpf"	2312
 }
-Group	È­·ù±Í¸ñ_¹ØµÕ±Í¸ñ
+Group	화류귀목_밑둥귀목
 {
 	Leader	"Rote Geisterweide"	2314
 	Vnum	2326
@@ -2781,7 +2781,7 @@ Group	È­·ù±Í¸ñ_¹ØµÕ±Í¸ñ
 	3	"Roter Geisterbaumstumpf"	2312
 	4	"Roter Geisterbaumstumpf"	2312
 }
-Group	È­·ù±Í¸ñ_¸ñ·É
+Group	화류귀목_목령
 {
 	Leader	"Rote Geisterweide"	2314
 	Vnum	2327
@@ -2790,7 +2790,7 @@ Group	È­·ù±Í¸ñ_¸ñ·É
 	3	"Rote Dryade"	2313
 	4	"Rote Dryade"	2313
 }
-Group	È­·ù±Í¸ñ_¸ñ·É
+Group	화류귀목_목령
 {
 	Leader	"Rote Geisterweide"	2314
 	Vnum	2328
@@ -2798,7 +2798,7 @@ Group	È­·ù±Í¸ñ_¸ñ·É
 	2	"Rote Geisterweide"	2314
 	3	"Rote Geisterweide"	2314
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"Roter b?ser Baum"	2315
 	Vnum	2329
@@ -2808,7 +2808,7 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	4	"Roter Geisterbaumstumpf"	2312
 	5	"Roter Geisterbaumstumpf"	2312
 }
-Group	Èæ±Í¸ñ_¹ØµÕ±Í¸ñ
+Group	흑귀목_밑둥귀목
 {
 	Leader	"Roter b?ser Baum"	2315
 	Vnum	2330
@@ -2817,7 +2817,7 @@ Group	Èæ±Í¸ñ_¹ØµÕ±Í¸ñ
 	3	"Roter Geisterbaumstumpf"	2312
 	4	"Roter Geisterbaumstumpf"	2312
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"Roter b?ser Baum"	2315
 	Vnum	2331
@@ -2826,7 +2826,7 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	3	"Rote Dryade"	2313
 	4	"Rote Dryade"	2313
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"Roter b?ser Baum"	2315
 	Vnum	2332
@@ -2835,7 +2835,7 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	3	"Roter b?ser Baum"	2315
 	4	"Roter b?ser Baum"	2315
 }
-Group	Èæ±Í¸ñ_¸ñ·É
+Group	흑귀목_목령
 {
 	Leader	"Roter b?ser Baum"	2315
 	Vnum	2333
@@ -2843,14 +2843,14 @@ Group	Èæ±Í¸ñ_¸ñ·É
 	2	"Roter b?ser Baum"	2315
 	3	"Roter b?ser Baum"	2315
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡_ÃµÀÇºù¸¶
+Group	천의동굴1F_천의얼음뿔범고래_천의빙마
 {
 	Leader	Unterwelt-Eiskillerwal	1132
 	Vnum	2401
 	1	Unterwelt-Eissplitter	1131
 	2	Unterwelt-Eissplitter	1131
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡
+Group	천의동굴1F_천의얼음뿔범고래_천의얼음뿔범고래
 {
 	Leader	Unterwelt-Eiskillerwal	1132
 	Vnum	2402
@@ -2858,7 +2858,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡_ÃµÀÇ¾óÀ½»Ô¹
 	2	Unterwelt-Eissplitter	1131
 	3	Unterwelt-Eissplitter	1131
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡
+Group	천의동굴1F_천의얼음뿔범고래_천의얼음뿔범고래
 {
 	Leader	Unterwelt-Eiskillerwal	1132
 	Vnum	2403
@@ -2866,7 +2866,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡_ÃµÀÇ¾óÀ½»Ô¹
 	2	Unterwelt-Eiskillerwal	1132
 	3	Unterwelt-Eissplitter	1131
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÃæ_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡
+Group	천의동굴1F_천의빙충_천의얼음뿔범고래
 {
 	Leader	Unterwelt-Eisinsekt	1133
 	Vnum	2404
@@ -2874,7 +2874,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÃæ_ÃµÀÇ¾óÀ½»Ô¹ü°í·¡
 	2	Unterwelt-Eissplitter	1131
 	3	Unterwelt-Eissplitter	1131
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÃæ_ÃµÀÇºùÃæ
+Group	천의동굴1F_천의빙충_천의빙충
 {
 	Leader	Unterwelt-Eisinsekt	1133
 	Vnum	2405
@@ -2882,7 +2882,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÃæ_ÃµÀÇºùÃæ
 	2	Unterwelt-Eiskillerwal	1132
 	3	Unterwelt-Eissplitter	1131
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¼³±¸_ÃµÀÇºùÃæ
+Group	천의동굴1F_천의설구_천의빙충
 {
 	Leader	Unterwelt-Eisl?we	1134
 	Vnum	2406
@@ -2890,14 +2890,14 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¼³±¸_ÃµÀÇºùÃæ
 	2	Unterwelt-Eiskillerwal	1132
 	3	Unterwelt-Eissplitter	1131
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¼³±¸_ÃµÀÇ¼³±¸
+Group	천의동굴1F_천의설구_천의설구
 {
 	Leader	Unterwelt-Eisl?we	1134
 	Vnum	2407
 	1	Unterwelt-Eisl?we	1134
 	2	Unterwelt-Eisinsekt	1133
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÀÎ_ÃµÀÇ¼³±¸
+Group	천의동굴1F_천의빙인_천의설구
 {
 	Leader	Unterwelt-Eismann	1135
 	Vnum	2408
@@ -2906,7 +2906,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÀÎ_ÃµÀÇ¼³±¸
 	3	Unterwelt-Eisinsekt	1133
 	4	Unterwelt-Eissplitter	1131
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÀÎ_ÃµÀÇºùÀÎ
+Group	천의동굴1F_천의빙인_천의빙인
 {
 	Leader	Unterwelt-Eismann	1135
 	Vnum	2409
@@ -2914,7 +2914,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÀÎ_ÃµÀÇºùÀÎ
 	2	Unterwelt-Eisl?we	1134
 	3	Unterwelt-Eisl?we	1134
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÀÎ_ÃµÀÇºùÀÎ
+Group	천의동굴1F_천의빙인_천의빙인
 {
 	Leader	Unterwelt-Eismann	1135
 	Vnum	2409
@@ -2922,7 +2922,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇºùÀÎ_ÃµÀÇºùÀÎ
 	2	Unterwelt-Eisl?we	1134
 	3	Unterwelt-Eisl?we	1134
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¼³°ÅÀÎ_ÃµÀÇºùÀÎ
+Group	천의동굴1F_천의설거인_천의빙인
 {
 	Leader	Unterwelt-Yeti	1136
 	Vnum	2410
@@ -2931,7 +2931,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¼³°ÅÀÎ_ÃµÀÇºùÀÎ
 	3	Unterwelt-Eisinsekt	1133
 	4	Unterwelt-Eisinsekt	1133
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¼³°ÅÀÎ_ÃµÀÇ¼³°ÅÀÎ
+Group	천의동굴1F_천의설거인_천의설거인
 {
 	Leader	Unterwelt-Yeti	1136
 	Vnum	2411
@@ -2941,7 +2941,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¼³°ÅÀÎ_ÃµÀÇ¼³°ÅÀÎ
 	4	Unterwelt-Eismann	1135
 	5	Unterwelt-Eisl?we	1134
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½°í·½_ÃµÀÇºùÀÎ
+Group	천의동굴1F_천의얼음고렘_천의빙인
 {
 	Leader	Unterwelt-Eisgolem	1137
 	Vnum	2412
@@ -2951,7 +2951,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½°í·½_ÃµÀÇºùÀÎ
 	4	Unterwelt-Yeti	1136
 	5	Unterwelt-Yeti	1136
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½°í·½_ÃµÀÇ¾óÀ½°í·½
+Group	천의동굴1F_천의얼음고렘_천의얼음고렘
 {
 	Leader	Unterwelt-Eisgolem	1137
 	Vnum	2413
@@ -2961,7 +2961,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¾óÀ½°í·½_ÃµÀÇ¾óÀ½°í·½
 	4	Unterwelt-Yeti	1136
 	5	Unterwelt-Yeti	1136
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇº´»ç_ÃµÀÇº´»ç
+Group	천의동굴1F_천의병사_천의병사
 {
 	Leader	Setaou-K?mpfer	2401
 	Vnum	2414
@@ -2969,7 +2969,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇº´»ç_ÃµÀÇº´»ç
 	2	Setaou-K?mpfer	2401
 	3	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇº´»ç
+Group	천의동굴1F_천의궁병_천의병사
 {
 	Leader	Setaou-J?ger	2402
 	Vnum	2415
@@ -2978,7 +2978,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇº´»ç
 	3	Setaou-K?mpfer	2401
 	4	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇ±Ãº´
+Group	천의동굴1F_천의궁병_천의궁병
 {
 	Leader	Setaou-J?ger	2402
 	Vnum	2416
@@ -2987,7 +2987,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇ±Ãº´
 	3	Setaou-K?mpfer	2401
 	4	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
+Group	천의동굴1F_천의법사_천의궁병
 {
 	Leader	Setaou-Seherin	2403
 	Vnum	2417
@@ -2998,7 +2998,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
 	5	Setaou-K?mpfer	2401
 	6	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
+Group	천의동굴1F_천의법사_천의궁병
 {
 	Leader	Setaou-Seherin	2403
 	Vnum	2418
@@ -3009,7 +3009,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
 	5	Setaou-K?mpfer	2401
 	6	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
+Group	천의동굴1F_천의장수_천의법사
 {
 	Leader	Setaou-Anf?hrer	2404
 	Vnum	2419
@@ -3019,7 +3019,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
 	4	Setaou-K?mpfer	2401
 	5	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
+Group	천의동굴1F_천의장수_천의법사
 {
 	Leader	Setaou-Anf?hrer	2404
 	Vnum	2420
@@ -3031,7 +3031,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
 	6	Setaou-K?mpfer	2401
 	7	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇº´»ç_ÁøÃµÀÇº´»ç
+Group	천의동굴2F_진천의병사_진천의병사
 {
 	Leader	Setaou-Soldat	2411
 	Vnum	2421
@@ -3039,7 +3039,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇº´»ç_ÁøÃµÀÇº´»ç
 	2	Setaou-Soldat	2411
 	3	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇº´»ç
+Group	천의동굴2F_진천의궁병_진천의병사
 {
 	Leader	Setaou-Bogensch?tze	2412
 	Vnum	2422
@@ -3047,7 +3047,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇº´»ç
 	2	Setaou-Soldat	2411
 	3	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇ±Ãº´
+Group	천의동굴2F_진천의궁병_진천의궁병
 {
 	Leader	Setaou-Bogensch?tze	2412
 	Vnum	2423
@@ -3055,7 +3055,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇ±Ãº´
 	2	Setaou-Soldat	2411
 	3	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
+Group	천의동굴2F_진천의법사_진천의궁병
 {
 	Leader	Setaou-Magistra	2413
 	Vnum	2424
@@ -3063,7 +3063,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
 	2	Setaou-Soldat	2411
 	3	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
+Group	천의동굴2F_진천의법사_진천의궁병
 {
 	Leader	Setaou-Magistra	2413
 	Vnum	2425
@@ -3072,7 +3072,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
 	3	Setaou-Soldat	2411
 	4	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
+Group	천의동굴2F_진천의장수_진천의법사
 {
 	Leader	Setaou-Kommandant	2414
 	Vnum	2426
@@ -3082,7 +3082,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
 	4	Setaou-Soldat	2411
 	5	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
+Group	천의동굴2F_진천의장수_진천의법사
 {
 	Leader	Setaou-Kommandant	2414
 	Vnum	2427
@@ -3094,7 +3094,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
 	6	Setaou-Soldat	2411
 	7	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼2F_ÃµÀÇÀå±º_ÃµÀÇÀå¼ö
+Group	천의동굴2F_천의장군_천의장수
 {
 	Leader	Setaou-Hauptmann	2491
 	Vnum	2428
@@ -3106,7 +3106,7 @@ Group	ÃµÀÇµ¿±¼2F_ÃµÀÇÀå±º_ÃµÀÇÀå¼ö
 	6	Setaou-K?mpfer	2401
 	7	Setaou-K?mpfer	2401
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå±º_ÁøÃµÀÇÀå¼ö
+Group	천의동굴2F_진천의장군_진천의장수
 {
 	Leader	Setaou-General	2492
 	Vnum	2429
@@ -3126,21 +3126,21 @@ Group	skipia_map1_boss
 	2	Unterwelt-Eisgolem	1137
 	3	Unterwelt-Eisgolem	1137
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Schwacher Affensoldat"	5101
 	Vnum	5001
 	1	"Schwacher Affensoldat"	5101
 	2	"Schwacher Affensoldat"	5101
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Schwacher Affenwerfer"	5102
 	Vnum	5002
 	1	"Schwacher Affensoldat"	5101
 	2	"Schwacher Affensoldat"	5101
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Schwacher Affenwerfer"	5102
 	Vnum	5003
@@ -3148,7 +3148,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Schwacher Affensoldat"	5101
 	3	"Schwacher Affensoldat"	5101
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Schwacher Affenk?mpfer"	5103
 	Vnum	5004
@@ -3156,14 +3156,14 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Schwacher Affensoldat"	5101
 	3	"Schwacher Affensoldat"	5101
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Schwacher Affenk?mpfer"	5103
 	Vnum	5005
 	1	"Schwacher Affenk?mpfer"	5103
 	2	"Schwacher Affenk?mpfer"	5103
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Schwacher Affengeneral"	5104
 	Vnum	5006
@@ -3171,7 +3171,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Schwacher Affensoldat"	5101
 	3	"Schwacher Affensoldat"	5101
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Schwacher Affengeneral"	5104
 	Vnum	5007
@@ -3179,7 +3179,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Schwacher Affenk?mpfer"	5103
 	3	"Schwacher Affensoldat"	5101
 }
-Group	L25_ÀÌ»ê´ë¼º(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_이산대성(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Felsenaffe	5161
 	Vnum	5008
@@ -3190,21 +3190,21 @@ Group	L25_ÀÌ»ê´ë¼º(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	5	"Schwacher Affensoldat"	5101
 	6	"Schwacher Affensoldat"	5101
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affensoldat	5111
 	Vnum	5009
 	1	Affensoldat	5111
 	2	Affensoldat	5111
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affenwerfer	5112
 	Vnum	5010
 	1	Affensoldat	5111
 	2	Affensoldat	5111
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affenwerfer	5112
 	Vnum	5011
@@ -3212,7 +3212,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	Affensoldat	5111
 	3	Affensoldat	5111
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affenk?mpfer	5113
 	Vnum	5012
@@ -3220,14 +3220,14 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	Affensoldat	5111
 	3	Affensoldat	5111
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affenk?mpfer	5113
 	Vnum	5013
 	1	Affenk?mpfer	5113
 	2	Affenk?mpfer	5113
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affengeneral	5114
 	Vnum	5014
@@ -3235,7 +3235,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	Affensoldat	5111
 	3	Affensoldat	5111
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affengeneral	5114
 	Vnum	5015
@@ -3243,14 +3243,14 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	Affenk?mpfer	5113
 	3	Affensoldat	5111
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Steinaffe	5115
 	Vnum	5016
 	1	Affengeneral	5114
 	2	Affengeneral	5114
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affenanf?hrer	5116
 	Vnum	5017
@@ -3259,7 +3259,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	3	Affensoldat	5111
 	4	Affensoldat	5111
 }
-Group	L25_ÀÌ»ê´ë¼º(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_이산대성(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Gehender Affe"	5162
 	Vnum	5018
@@ -3269,21 +3269,21 @@ Group	L25_ÀÌ»ê´ë¼º(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	4	Affengeneral	5114
 	5	Affengeneral	5114
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affensoldat"	5121
 	Vnum	5019
 	1	"Starker Affensoldat"	5121
 	2	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affenwerfer"	5122
 	Vnum	5020
 	1	"Starker Affensoldat"	5121
 	2	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affenwerfer"	5122
 	Vnum	5021
@@ -3291,7 +3291,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Starker Affensoldat"	5121
 	3	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affenk?mpfer"	5123
 	Vnum	5022
@@ -3299,14 +3299,14 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Starker Affensoldat"	5121
 	3	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affenk?mpfer"	5123
 	Vnum	5023
 	1	"Starker Affenk?mpfer"	5123
 	2	"Starker Affenk?mpfer"	5123
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affengeneral"	5124
 	Vnum	5024
@@ -3314,7 +3314,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Starker Affensoldat"	5121
 	3	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affengeneral"	5124
 	Vnum	5025
@@ -3322,7 +3322,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	2	"Starker Affenk?mpfer"	5123
 	3	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Steinaffe"	5125
 	Vnum	5026
@@ -3331,7 +3331,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	3	"Starker Affensoldat"	5121
 	4	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Goldaffe"	5126
 	Vnum	5027
@@ -3340,7 +3340,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	3	"Starker Affensoldat"	5121
 	4	"Starker Affensoldat"	5121
 }
-Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_졸개원숭이(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	"Starker Affenanf?hrer"	5127
 	Vnum	5028
@@ -3350,7 +3350,7 @@ Group	L25_Á¹°³¿ø¼şÀÌ(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	4	"Starker Affensoldat"	5121
 	5	"Starker Affensoldat"	5121
 }
-Group	L25_Á¦Ãµ´ë¼º(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
+Group	L25_제천대성(pawn)_졸개원숭이(S_pawn)
 {
 	Leader	Affen-Lord	5163
 	Vnum	5029
@@ -3361,49 +3361,49 @@ Group	L25_Á¦Ãµ´ë¼º(pawn)_Á¹°³¿ø¼şÀÌ(S_pawn)
 	5	"Starker Affengeneral"	5124
 	6	"Starker Affengeneral"	5124
 }
-Group	Äù½ºÆ®¿ë_»ó¼±µ¿¿øº´
+Group	퀘스트용_상선동원병
 {
 	Leader	"B?ser Affensoldat"	5151
 	Vnum	5151
 	1	"B?ser Affensoldat"	5151
 	2	"B?ser Affensoldat"	5151
 }
-Group	Äù½ºÆ®¿ë_»ó¼±µ¿Åõ¸¶¿øº´
+Group	퀘스트용_상선동투마원병
 {
 	Leader	"B?ser Affenwerfer"	5152
 	Vnum	5152
 	1	"B?ser Affenwerfer"	5152
 	2	"B?ser Affenwerfer"	5152
 }
-Group	Äù½ºÆ®¿ë_»ó¼±µ¿±â¹«¿øº´
+Group	퀘스트용_상선동기무원병
 {
 	Leader	"B?ser Affenk?mpfer"	5153
 	Vnum	5153
 	1	"B?ser Affenk?mpfer"	5153
 	2	"B?ser Affenk?mpfer"	5153
 }
-Group	Äù½ºÆ®¿ë_»ó¼ºµ¿¿øÀå¼ö
+Group	퀘스트용_상성동원장수
 {
 	Leader	"B?ser Affengeneral"	5154
 	Vnum	5154
 	1	"B?ser Affengeneral"	5154
 	2	"B?ser Affengeneral"	5154
 }
-Group	Äù½ºÆ®¿ë_»ó¼±µ¿µ¹¿ø¼şÀÌ
+Group	퀘스트용_상선동돌원숭이
 {
 	Leader	"B?ser Steinaffe"	5155
 	Vnum	5155
 	1	"B?ser Steinaffe"	5155
 	2	"B?ser Steinaffe"	5155
 }
-Group	Äù½ºÆ®¿ë_»ó¼±µ¿±İ¿ø¼şÀÌ
+Group	퀘스트용_상선동금원숭이
 {
 	Leader	"B?ser Goldaffe"	5156
 	Vnum	5156
 	1	"B?ser Goldaffe"	5156
 	2	"B?ser Goldaffe"	5156
 }
-Group	¿µºñ»ç¸·»ï°Å¸®1
+Group	영비사막삼거리1
 {
 	Leader	"K?nig Skorpion"	7013
 	Vnum	7011
@@ -3411,7 +3411,7 @@ Group	¿µºñ»ç¸·»ï°Å¸®1
 	2	Bi-Ma-Gui-An	7012
 	3	Bi-Ma-Gui-An	7012
 }
-Group	¿µºñ»ç¸·»ï°Å¸®2
+Group	영비사막삼거리2
 {
 	Leader	Schlangenschwertk?mpfer	7016
 	Vnum	7012
@@ -3419,7 +3419,7 @@ Group	¿µºñ»ç¸·»ï°Å¸®2
 	2	"Listiger Skorpionmann"	7014
 	3	"Listiger Skorpionmann"	7014
 }
-Group	¿µºñ»ç¸·»ï°Å¸®3
+Group	영비사막삼거리3
 {
 	Leader	W?stenbandit	7018
 	Vnum	7013
@@ -3427,7 +3427,7 @@ Group	¿µºñ»ç¸·»ï°Å¸®3
 	2	Schlangenschwertk?mpfer	7016
 	3	Schlangenschwertk?mpfer	7016
 }
-Group	¿µºñ»ç¸·»ï°Å¸®4
+Group	영비사막삼거리4
 {
 	Leader	W?stenbandit	7018
 	Vnum	7014
@@ -3435,7 +3435,7 @@ Group	¿µºñ»ç¸·»ï°Å¸®4
 	2	Schlangenbogensch?tze	7017
 	3	Schlangenbogensch?tze	7017
 }
-Group	µµ¿°È­Áö»ï°Å¸®1
+Group	도염화지삼거리1
 {
 	Leader	"Tu-Ji Rumtreiber"	7021
 	Vnum	7019
@@ -3443,7 +3443,7 @@ Group	µµ¿°È­Áö»ï°Å¸®1
 	2	"Tu-ji Soldat"	7019
 	3	"Tu-ji Soldat"	7019
 }
-Group	µµ¿°È­Áö»ï°Å¸®2
+Group	도염화지삼거리2
 {
 	Leader	Hwa-ryung	7020
 	Vnum	7020
@@ -3451,14 +3451,14 @@ Group	µµ¿°È­Áö»ï°Å¸®2
 	2	"Tu-ji Soldat"	7019
 	3	"Tu-ji Soldat"	7019
 }
-Group	µµ¿°È­Áö»ï°Å¸®3
+Group	도염화지삼거리3
 {
 	Leader	Cham-Ma	7022
 	Vnum	7021
 	1	"Tu-Ji Rumtreiber"	7021
 	2	Hwa-ryung	7020
 }
-Group	µµ¿°È­Áö»ï°Å¸®4
+Group	도염화지삼거리4
 {
 	Leader	Teawha-Mu	7023
 	Vnum	7022
@@ -3466,7 +3466,7 @@ Group	µµ¿°È­Áö»ï°Å¸®4
 	2	"Tu-Ji Rumtreiber"	7021
 	3	Hwa-ryung	7020
 }
-Group	L25_¸¸¿ìÀı_µé°³
+Group	L25_만우절_들개
 {
 	Leader	Wildhund	8501
 	Vnum	8501
@@ -3474,7 +3474,7 @@ Group	L25_¸¸¿ìÀı_µé°³
 	2	Wildhund	8501
 	3	Wildhund	8501
 }
-Group	L25_¸¸¿ìÀı_¸ËµÅÁö
+Group	L25_만우절_맷돼지
 {
 	Leader	Keiler	8502
 	Vnum	8502
@@ -3482,7 +3482,7 @@ Group	L25_¸¸¿ìÀı_¸ËµÅÁö
 	2	Keiler	8502
 	3	Keiler	8502
 }
-Group	L25_¸¸¿ìÀı_°õ
+Group	L25_만우절_°õ
 {
 	Leader	B?r	8503
 	Vnum	8503
@@ -3490,7 +3490,7 @@ Group	L25_¸¸¿ìÀı_°õ
 	2	B?r	8503
 	3	B?r	8503
 }
-Group	L25_¸¸¿ìÀı_´ëÈ£
+Group	L25_만우절_대호
 {
 	Leader	"Wei©¬er Tiger"	8504
 	Vnum	8504
@@ -3498,7 +3498,7 @@ Group	L25_¸¸¿ìÀı_´ëÈ£
 	2	"Wei©¬er Tiger"	8504
 	3	"Wei©¬er Tiger"	8504
 }
-Group	L25_¸¸¿ìÀı_°Å´ë_Èæ¿õ±Í
+Group	L25_만우절_거대_흑웅귀
 {
 	Leader	"Schwarzer Ork-Riese"	8505
 	Vnum	8505
@@ -3506,7 +3506,7 @@ Group	L25_¸¸¿ìÀı_°Å´ë_Èæ¿õ±Í
 	2	"Schwarzer Ork-Riese"	8505
 	3	"Schwarzer Ork-Riese"	8505
 }
-Group	L25_¸¸¿ìÀı_Ã»¿ÍÀå
+Group	L25_만우절_청와장
 {
 	Leader	Baumfrosch-Anf?hrer	8506
 	Vnum	8506
@@ -3514,7 +3514,7 @@ Group	L25_¸¸¿ìÀı_Ã»¿ÍÀå
 	2	Baumfrosch-Anf?hrer	8506
 	3	Baumfrosch-Anf?hrer	8506
 }
-Group	L25_¸¸¿ìÀı_»ç¸·ÀÇ¹«¹ıÀÚ
+Group	L25_만우절_사막의무법자
 {
 	Leader	W?stenbandit	8507
 	Vnum	8507
@@ -3522,7 +3522,7 @@ Group	L25_¸¸¿ìÀı_»ç¸·ÀÇ¹«¹ıÀÚ
 	2	W?stenbandit	8507
 	3	W?stenbandit	8507
 }
-Group	L25_¸¸¿ìÀı_¹Ğ±³°­¹Ú·É
+Group	L25_만우절_¹Ğ교강박령
 {
 	Leader	"Esoterischer Peiniger"	8508
 	Vnum	8508
@@ -3530,7 +3530,7 @@ Group	L25_¸¸¿ìÀı_¹Ğ±³°­¹Ú·É
 	2	"Esoterischer Peiniger"	8508
 	3	"Esoterischer Peiniger"	8508
 }
-Group	L25_¸¸¿ìÀı_¹Ğ±³¼ÒÈ¯·É
+Group	L25_만우절_¹Ğ교소환령
 {
 	Leader	"Esoterischer Beschw?rer"	8509
 	Vnum	8509
@@ -3538,7 +3538,7 @@ Group	L25_¸¸¿ìÀı_¹Ğ±³¼ÒÈ¯·É
 	2	"Esoterischer Beschw?rer"	8509
 	3	"Esoterischer Beschw?rer"	8509
 }
-Group	L25_¸¸¿ìÀı_ÅÂÈ­¹«ÀÎ
+Group	L25_만우절_태화무인
 {
 	Leader	Flammenkrieger	8510
 	Vnum	8510
@@ -3546,7 +3546,7 @@ Group	L25_¸¸¿ìÀı_ÅÂÈ­¹«ÀÎ
 	2	Flammenkrieger	8510
 	3	Flammenkrieger	8510
 }
-Group	L25_¸¸¿ìÀı_¾óÀ½°í·½
+Group	L25_만우절_얼음고렘
 {
 	Leader	Eisgolem	8511
 	Vnum	8511
@@ -3554,127 +3554,127 @@ Group	L25_¸¸¿ìÀı_¾óÀ½°í·½
 	2	Eisgolem	8511
 	3	Eisgolem	8511
 }
-Group	°ø¼º¿ë°æºñº´Ã¢ÇÏ
+Group	공성용경비병창하
 {
 	Leader	"W?chter des Dorfplatzes"	11100
 	Vnum	9501
 	1	"W?chter des Dorfplatzes"	11100
 	2	"W?chter des Dorfplatzes"	11100
 }
-Group	°ø¼º¿ë°æºñº´È°ÇÏ
+Group	공성용경비병활하
 {
 	Leader	Schlachtenverwalter	11101
 	Vnum	9502
 	1	Schlachtenverwalter	11101
 	2	Schlachtenverwalter	11101
 }
-Group	°ø¼º¿ë°æºñº´Ã¢ÇÏ
+Group	공성용경비병창하
 {
 	Leader	"W?chter des Dorfplatzes"	11102
 	Vnum	9511
 	1	"W?chter des Dorfplatzes"	11102
 	2	"W?chter des Dorfplatzes"	11102
 }
-Group	°ø¼º¿ë°æºñº´È°ÇÏ
+Group	공성용경비병활하
 {
 	Leader	Schlachtenverwalter	11103
 	Vnum	9512
 	1	Schlachtenverwalter	11103
 	2	Schlachtenverwalter	11103
 }
-Group	°ø¼º¿ë°æºñº´Ã¢ÇÏ
+Group	공성용경비병창하
 {
 	Leader	"W?chter des Dorfplatzes"	11104
 	Vnum	9521
 	1	"W?chter des Dorfplatzes"	11104
 	2	"W?chter des Dorfplatzes"	11104
 }
-Group	°ø¼º¿ë°æºñº´È°ÇÏ
+Group	공성용경비병활하
 {
 	Leader	Schlachtenverwalter	11105
 	Vnum	9522
 	1	Schlachtenverwalter	11105
 	2	Schlachtenverwalter	11105
 }
-Group	L70_±âÁØNPC(Boss)-¾Æ¶ó³à(Boss)
+Group	L70_기준NPC(Boss)-아라녀(Boss)
 {
 	Leader	.	20025
 	Vnum	11001
 	1	Aranyo	20002
 }
-Group	L70_±âÁØNPC(Boss)-¾ÆÀ¯(Boss)
+Group	L70_기준NPC(Boss)-아유(Boss)
 {
 	Leader	.	20025
 	Vnum	11002
 	1	Ah-Yu	20003
 }
-Group	L70_±âÁØNPC(Boss)-¾Æ¶ó³à(Boss)
+Group	L70_기준NPC(Boss)-아라녀(Boss)
 {
 	Leader	.	20025
 	Vnum	11003
 	1	Bettler	20004
 }
-Group	L70_±âÁØNPC(Boss)-¿¬³ªÈ¯(Boss)
+Group	L70_기준NPC(Boss)-연나환(Boss)
 {
 	Leader	.	20025
 	Vnum	11004
 	1	Yonah	20005
 }
-Group	L70_±âÁØNPC(Boss)-¹Ì¸®³»(Boss)
+Group	L70_기준NPC(Boss)-미리내(Boss)
 {
 	Leader	.	20025
 	Vnum	11005
 	1	Mirine	20006
 }
-Group	L70_±âÁØNPC(Boss)-À»µÎÁö(Boss)
+Group	L70_기준NPC(Boss)-을두지(Boss)
 {
 	Leader	.	20025
 	Vnum	11006
 	1	Uriel	20011
 }
-Group	L70_±âÁØNPC(Boss)-Ã¥¹ú·¡(Boss)
+Group	L70_기준NPC(Boss)-책벌래(Boss)
 {
 	Leader	.	20025
 	Vnum	11007
 	1	Baek-Go	20018
 }
-Group	L70_±âÁØNPC(Boss)-¹î»ç°ø(Boss)
+Group	L70_기준NPC(Boss)-뱃사공(Boss)
 {
 	Leader	.	20025
 	Vnum	12001
 	1	Yu-Rang	20012
 }
-Group	L70_±âÁØNPC(Boss)-¹î»ç°ø(Boss)
+Group	L70_기준NPC(Boss)-뱃사공(Boss)
 {
 	Leader	.	20025
 	Vnum	12002
 	1	Taurean	20014
 }
-Group	L70_±âÁØNPC(Boss)-¹î»ç°ø(Boss)
+Group	L70_기준NPC(Boss)-뱃사공(Boss)
 {
 	Leader	.	20025
 	Vnum	12003
 	1	Yu-Hwan	20017
 }
-Group	L70_±âÁØNPC(Boss)-¹î»ç°ø(Boss)
+Group	L70_기준NPC(Boss)-뱃사공(Boss)
 {
 	Leader	.	20025
 	Vnum	12004
 	1	Yang-Shin	20019
 }
-Group	L70_´ÄÀºÇØÀû(Boss)-¹î»ç°ø(Boss)
+Group	L70_늙은해적(Boss)-뱃사공(Boss)
 {
 	Leader	.	20025
 	Vnum	12005
 	1	Ariyoung	20021
 }
-Group	L70_´ÄÀºÇØÀû(Boss)-¹î»ç°ø(Boss)
+Group	L70_늙은해적(Boss)-뱃사공(Boss)
 {
 	Leader	.	20025
 	Vnum	12006
 	1	Harang	20024
 }
-Group	L70_¸»(Boss)-Á¶¶û¸»(Boss)
+Group	L70_¸»(Boss)-조랑말(Boss)
 {
 	Leader	.	20025
 	Vnum	12007
@@ -3683,107 +3683,107 @@ Group	L70_¸»(Boss)-Á¶¶û¸»(Boss)
 	3	Pferd	20030
 	4	Pferd	20030
 }
-Group	´ÙÀÌ¾Æ¸óµå±¤¸Æ
+Group	다이아몬드광맥
 {
 	Leader	Diamantader	20047
 	Vnum	20047
 }
-Group	È£¹Ú±¤¸Æ
+Group	호박광맥
 {
 	Leader	Bernsteinader	20048
 	Vnum	20048
 }
-Group	È­¼®¸ñ±¤¸Æ
+Group	화석목광맥
 {
 	Leader	Fossilholzader	20049
 	Vnum	20049
 }
-Group	±¸¸®±¤¸Æ
+Group	구리광맥
 {
 	Leader	Kupferader	20050
 	Vnum	20050
 }
-Group	Àº¸Æ
+Group	은맥
 {
 	Leader	Silberader	20051
 	Vnum	20051
 }
-Group	±İ¸Æ
+Group	금맥
 {
 	Leader	Goldader	20052
 	Vnum	20052
 }
-Group	¿Á¼®¸Æ
+Group	옥석맥
 {
 	Leader	Jadeader	20053
 	Vnum	20053
 }
-Group	Èæ´Ü¼®¸Æ
+Group	흑단석맥
 {
 	Leader	Ebenholzader	20054
 	Vnum	20054
 }
-Group	Á¶°³¹«´õ±â
+Group	조개무더기
 {
 	Leader	Muschelstapel	20055
 	Vnum	20055
 }
-Group	¹é±İ¸Æ
+Group	백금맥
 {
 	Leader	Wei©¬goldader	20056
 	Vnum	20056
 }
-Group	¼öÁ¤¼®¸Æ
+Group	수정석맥
 {
 	Leader	Kristallader	20057
 	Vnum	20057
 }
-Group	ÀÚ¼öÁ¤¼®¸Æ
+Group	자수정석맥
 {
 	Leader	Quarzader	20058
 	Vnum	20058
 }
-Group	Ãµ·ç±¤¸Æ
+Group	천루광맥
 {
 	Leader	Himmelstr?nenader	20059
 	Vnum	20059
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"Geister Orkf?hrer"	693
 	Vnum	30001
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"Elite K?mpfer"	795
 	Vnum	30002
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"Gemeiner D?monenk?nig"	1094
 	Vnum	30003
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"Blauer Tod"	1095
 	Vnum	30004
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"Elit?rer Neunschwanz"	1903
 	Vnum	30005
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"B?ser gelber Tigergeist"	1307
 	Vnum	30006
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"Dunkl. K?niginnenspinne"	2093
 	Vnum	30007
 }
-Group	°ø¼º¿ëº¸½º¸ó½ºÅÍ
+Group	공성용보스몬스터
 {
 	Leader	"Dunkle W?stenschildkr?te"	2192
 	Vnum	30008
@@ -3804,7 +3804,7 @@ Group	haunted_white_tiger_2
 	3	"Verfl. wei©¬er Tiger"	144
 	4	"Verfl. wei©¬er Tiger"	144
 }
-Group	°Å´ë±Í¸ñ
+Group	거대귀목
 {
 	Leader	Noname	2316
 	Vnum	2334
@@ -3818,7 +3818,7 @@ Group	°Å´ë±Í¸ñ
 	8	"Rote Dryade"	2313
 	9	"Rote Dryade"	2313
 }
-Group	ÃµÀÇµ¿±¼2F_¼ö·æ_ÁøÃµÀÇÀå±º
+Group	천의동굴2F_수룡_진천의장군
 {
 	Leader	Noname	2493
 	Vnum	2430
@@ -3828,7 +3828,7 @@ Group	ÃµÀÇµ¿±¼2F_¼ö·æ_ÁøÃµÀÇÀå±º
 	4	Setaou-Soldat	2411
 	5	Setaou-Soldat	2411
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇº´»ç_ÃµÀÇº´»ç
+Group	천의동굴1F_천의병사_천의병사
 {
 	Leader	Noname	2431
 	Vnum	2431
@@ -3836,7 +3836,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇº´»ç_ÃµÀÇº´»ç
 	2	Noname	2431
 	3	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇº´»ç
+Group	천의동굴1F_천의궁병_천의병사
 {
 	Leader	Noname	2432
 	Vnum	2432
@@ -3844,7 +3844,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇº´»ç
 	2	Noname	2431
 	3	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇ±Ãº´
+Group	천의동굴1F_천의궁병_천의궁병
 {
 	Leader	Noname	2432
 	Vnum	2433
@@ -3852,7 +3852,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ±Ãº´_ÃµÀÇ±Ãº´
 	2	Noname	2431
 	3	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
+Group	천의동굴1F_천의법사_천의궁병
 {
 	Leader	Noname	2433
 	Vnum	2434
@@ -3860,7 +3860,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
 	2	Noname	2431
 	3	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
+Group	천의동굴1F_천의법사_천의궁병
 {
 	Leader	Noname	2433
 	Vnum	2435
@@ -3869,7 +3869,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇ¹ı»ç_ÃµÀÇ±Ãº´
 	3	Noname	2431
 	4	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
+Group	천의동굴1F_천의장수_천의법사
 {
 	Leader	Noname	2434
 	Vnum	2436
@@ -3879,7 +3879,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
 	4	Noname	2431
 	5	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
+Group	천의동굴1F_천의장수_천의법사
 {
 	Leader	Noname	2434
 	Vnum	2437
@@ -3891,7 +3891,7 @@ Group	ÃµÀÇµ¿±¼1F_ÃµÀÇÀå¼ö_ÃµÀÇ¹ı»ç
 	6	Noname	2431
 	7	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇº´»ç_ÁøÃµÀÇº´»ç
+Group	천의동굴2F_진천의병사_진천의병사
 {
 	Leader	Noname	2451
 	Vnum	2438
@@ -3899,7 +3899,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇº´»ç_ÁøÃµÀÇº´»ç
 	2	Noname	2451
 	3	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇº´»ç
+Group	천의동굴2F_진천의궁병_진천의병사
 {
 	Leader	Noname	2452
 	Vnum	2439
@@ -3907,7 +3907,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇº´»ç
 	2	Noname	2451
 	3	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇ±Ãº´
+Group	천의동굴2F_진천의궁병_진천의궁병
 {
 	Leader	Noname	2452
 	Vnum	2440
@@ -3915,7 +3915,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ±Ãº´_ÁøÃµÀÇ±Ãº´
 	2	Noname	2451
 	3	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
+Group	천의동굴2F_진천의법사_진천의궁병
 {
 	Leader	Noname	2453
 	Vnum	2441
@@ -3923,7 +3923,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
 	2	Noname	2451
 	3	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
+Group	천의동굴2F_진천의법사_진천의궁병
 {
 	Leader	Noname	2453
 	Vnum	2442
@@ -3932,7 +3932,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇ¹ı»ç_ÁøÃµÀÇ±Ãº´
 	3	Noname	2451
 	4	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
+Group	천의동굴2F_진천의장수_진천의법사
 {
 	Leader	Noname	2454
 	Vnum	2443
@@ -3942,7 +3942,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
 	4	Noname	2451
 	5	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
+Group	천의동굴2F_진천의장수_진천의법사
 {
 	Leader	Noname	2454
 	Vnum	2444
@@ -3954,7 +3954,7 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå¼ö_ÁøÃµÀÇ¹ı»ç
 	6	Noname	2451
 	7	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_ÃµÀÇÀå±º_ÃµÀÇÀå¼ö
+Group	천의동굴2F_천의장군_천의장수
 {
 	Leader	Noname	2494
 	Vnum	2445
@@ -3966,7 +3966,7 @@ Group	ÃµÀÇµ¿±¼2F_ÃµÀÇÀå±º_ÃµÀÇÀå¼ö
 	6	Noname	2431
 	7	Noname	2431
 }
-Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå±º_ÁøÃµÀÇÀå¼ö
+Group	천의동굴2F_진천의장군_진천의장수
 {
 	Leader	Noname	2495
 	Vnum	2446
@@ -3978,13 +3978,13 @@ Group	ÃµÀÇµ¿±¼2F_ÁøÃµÀÇÀå±º_ÁøÃµÀÇÀå¼ö
 	6	Noname	2451
 	7	Noname	2451
 }
-Group	ÃµÀÇµ¿±¼2F_¼ö·æ_ÁøÃµÀÇÀå±º
+Group	천의동굴2F_수룡_진천의장군
 {
 	Leader	Noname	2493
 	Vnum	2447
 	1	Noname	2493
 }
-Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç°Ëº´(KNIGHT)
+Group	L69_반인반사궁병(KNIGHT)-반인반사검병(KNIGHT)
 {
 	Leader	Noname	2137
 	Vnum	2066
@@ -3992,7 +3992,7 @@ Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç°Ëº´(KNIGHT)
 	2	Noname	2136
 	3	Noname	2136
 }
-Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
+Group	L69_반인반사궁병(KNIGHT)-반인반사궁병(KNIGHT)
 {
 	Leader	Noname	2137
 	Vnum	2067
@@ -4000,14 +4000,14 @@ Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
 	2	Noname	2136
 	3	Noname	2136
 }
-Group	L69_¹İÀÎ¹İ»ç±Ãº´(KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
+Group	L69_반인반사궁병(KNIGHT)-반인반사궁병(KNIGHT)
 {
 	Leader	Noname	2137
 	Vnum	2068
 	1	Noname	2136
 	2	Noname	2136
 }
-Group	L70_»ç¸·ÀÇ¹«¹ıÀÚ(S_KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
+Group	L70_사막의무법자(S_KNIGHT)-반인반사궁병(KNIGHT)
 {
 	Leader	Noname	2138
 	Vnum	2069
@@ -4016,104 +4016,104 @@ Group	L70_»ç¸·ÀÇ¹«¹ıÀÚ(S_KNIGHT)-¹İÀÎ¹İ»ç±Ãº´(KNIGHT)
 	3	W?stenbandit	2135
 	4	Schlangenbogensch?tze	2134
 }
-Group	¼ö·æ¼®A
+Group	수룡석A
 {
 	Leader	Noname	8031
 	Vnum	8031
 }
-Group	¼ö·æ¼®B
+Group	수룡석B
 {
 	Leader	Noname	8032
 	Vnum	8032
 }
-Group	¼ö·æ¼®C
+Group	수룡석C
 {
 	Leader	Noname	8033
 	Vnum	8033
 }
-Group	¼ö·æ¼®D
+Group	수룡석D
 {
 	Leader	Noname	8034
 	Vnum	8034
 }
-Group	°ø¼º¿ë°æºñº´Ã¢Áß
+Group	공성용경비병창중
 {
 	Leader	Noname	11106
 	Vnum	9503
 	1	Noname	11106
 	2	Noname	11106
 }
-Group	°ø¼º¿ë°æºñº´È°Áß
+Group	공성용경비병활중
 {
 	Leader	Noname	11107
 	Vnum	9504
 	1	Noname	11107
 	2	Noname	11107
 }
-Group	°ø¼º¿ë°æºñº´Ã¢»ó
+Group	공성용경비병창상
 {
 	Leader	Noname	11112
 	Vnum	9505
 	1	Noname	11112
 	2	Noname	11112
 }
-Group	°ø¼º¿ë°æºñº´È°»ó
+Group	공성용경비병활상
 {
 	Leader	Noname	11113
 	Vnum	9506
 	1	Noname	11113
 	2	Noname	11113
 }
-Group	°ø¼º¿ë°æºñº´Ã¢Áß
+Group	공성용경비병창중
 {
 	Leader	Noname	11108
 	Vnum	9513
 	1	Noname	11108
 	2	Noname	11108
 }
-Group	°ø¼º¿ë°æºñº´È°Áß
+Group	공성용경비병활중
 {
 	Leader	Noname	11109
 	Vnum	9514
 	1	Noname	11109
 	2	Noname	11109
 }
-Group	°ø¼º¿ë°æºñº´Ã¢»ó
+Group	공성용경비병창상
 {
 	Leader	Noname	11114
 	Vnum	9515
 	1	Noname	11114
 	2	Noname	11114
 }
-Group	°ø¼º¿ë°æºñº´È°»ó
+Group	공성용경비병활상
 {
 	Leader	Noname	11115
 	Vnum	9516
 	1	Noname	11115
 	2	Noname	11115
 }
-Group	°ø¼º¿ë°æºñº´Ã¢Áß
+Group	공성용경비병창중
 {
 	Leader	Noname	11110
 	Vnum	9523
 	1	Noname	11110
 	2	Noname	11110
 }
-Group	°ø¼º¿ë°æºñº´È°Áß
+Group	공성용경비병활중
 {
 	Leader	Noname	11111
 	Vnum	9524
 	1	Noname	11111
 	2	Noname	11111
 }
-Group	°ø¼º¿ë°æºñº´Ã¢»ó
+Group	공성용경비병창상
 {
 	Leader	Noname	11116
 	Vnum	9525
 	1	Noname	11116
 	2	Noname	11116
 }
-Group	°ø¼º¿ë°æºñº´È°»ó
+Group	공성용경비병활상
 {
 	Leader	Noname	11117
 	Vnum	9526
@@ -4458,2172 +4458,2172 @@ Group	Easter-Metin95_2
 	1	Setaou-Magistra	2413
 	2	Setaou-Magistra	2413
 }
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2501
-	Leader	¾Æ±Í	2501
-	1	¾Æ±Í	2501
-	2	¾Æ±Í	2501
-	3	¾Æ±Í	2501
+	Leader	아귀	2501
+	1	아귀	2501
+	2	아귀	2501
+	3	아귀	2501
 }
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2502
-	Leader	¾Æ±Í°ß	2502
-	1	¾Æ±Í	2501
-	2	¾Æ±Í	2501
+	Leader	아귀견	2502
+	1	아귀	2501
+	2	아귀	2501
 }
 
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2503
-	Leader	¾Æ±Í°ß	2502
-	1	¾Æ±Í°ß	2502
-	2	¾Æ±Í°ß	2502
-	3	¾Æ±Í°ß	2502
+	Leader	아귀견	2502
+	1	아귀견	2502
+	2	아귀견	2502
+	3	아귀견	2502
 }
 
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2504
-	Leader	¾Æ±Í°¨¿°ÀÚ	2503
-	1	¾Æ±Í°ß	2502
-	2	¾Æ±Í°ß	2502
+	Leader	아귀감염자	2503
+	1	아귀견	2502
+	2	아귀견	2502
 }
 
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2505
-	Leader	¾Æ±Í°¨¿°ÀÚ	2503
-	1	¾Æ±Í°¨¿°ÀÚ	2503
-	2	¾Æ±Í°¨¿°ÀÚ	2503
-	3	¾Æ±Í°¨¿°ÀÚ	2503
+	Leader	아귀감염자	2503
+	1	아귀감염자	2503
+	2	아귀감염자	2503
+	3	아귀감염자	2503
 }
 
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2506
-	Leader	¾Æ±Íµ¹°İº´	2504
-	1	¾Æ±Íµ¹°İº´	2504
-	2	¾Æ±Í°¨¿°ÀÚ	2503
-	3	¾Æ±Í°¨¿°ÀÚ	2503
+	Leader	아귀돌격병	2504
+	1	아귀돌격병	2504
+	2	아귀감염자	2503
+	3	아귀감염자	2503
 }
 
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2506
-	Leader	¾Æ±Íµ¹°İº´	2504
-	1	¾Æ±Íµ¹°İº´	2504
-	2	¾Æ±Íµ¹°İº´	2504
-	3	¾Æ±Íµ¹°İº´	2504
+	Leader	아귀돌격병	2504
+	1	아귀돌격병	2504
+	2	아귀돌격병	2504
+	3	아귀돌격병	2504
 }
 
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2507
-	Leader	¾Æ±Í°¨¿°Ã¢º´	2505
-	1	¾Æ±Íµ¹°İº´	2504
-	2	¾Æ±Íµ¹°İº´	2504
-	3	¾Æ±Íµ¹°İº´	2504
+	Leader	아귀감염창병	2505
+	1	아귀돌격병	2504
+	2	아귀돌격병	2504
+	3	아귀돌격병	2504
 }
 
-Group	¾Æ±Íµ¿±¼1-2Ãş¿ë
+Group	아귀동굴1-2Ãş용
 {
 	Vnum	2508
-	Leader	¾Æ±Í°¨¿°Ã¢º´	2505
-	1	¾Æ±Í°¨¿°Ã¢º´	2505
-	2	¾Æ±Íµ¹°İº´	2504
-	3	¾Æ±Íµ¹°İº´	2504
+	Leader	아귀감염창병	2505
+	1	아귀감염창병	2505
+	2	아귀돌격병	2504
+	3	아귀돌격병	2504
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş¿ë
+Group	아귀동굴2Ãş용
 {
 	Vnum	2509
-	Leader	¾Æ±Í°¨¿°Ã¢º´	2505
-	1	¾Æ±Í°¨¿°Ã¢º´	2505
-	2	¾Æ±Í°¨¿°Ã¢º´	2505
-	3	¾Æ±Í°¨¿°Ã¢º´	2505
+	Leader	아귀감염창병	2505
+	1	아귀감염창병	2505
+	2	아귀감염창병	2505
+	3	아귀감염창병	2505
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş¿ë
+Group	아귀동굴2Ãş용
 {
 	Vnum	2510
-	Leader	¾Æ±Í±Ã¼ö	2506
-	1	¾Æ±Í±Ã¼ö	2506
-	2	¾Æ±Í°¨¿°Ã¢º´	2505
-	3	¾Æ±Í°¨¿°Ã¢º´	2505
+	Leader	아귀궁수	2506
+	1	아귀궁수	2506
+	2	아귀감염창병	2505
+	3	아귀감염창병	2505
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş¿ë
+Group	아귀동굴2Ãş용
 {
 	Vnum	2511
-	Leader	¾Æ±Í±Ã¼ö	2506
-	1	¾Æ±Í±Ã¼ö	2506
-	2	¾Æ±Í±Ã¼ö	2506
-	3	¾Æ±Í±Ã¼ö	2506
+	Leader	아귀궁수	2506
+	1	아귀궁수	2506
+	2	아귀궁수	2506
+	3	아귀궁수	2506
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş¿ë
+Group	아귀동굴2Ãş용
 {
 	Vnum	2512
-	Leader	¾Æ±Í°¨¿°´ëÀå	2507
-	1	¾Æ±Í±Ã¼ö	2506
-	2	¾Æ±Í±Ã¼ö	2506
-	3	¾Æ±Í°¨¿°Ã¢º´	2505
-	4	¾Æ±Í°¨¿°Ã¢º´	2505
-	5	¾Æ±Í°¨¿°Ã¢º´	2505
+	Leader	아귀감염대장	2507
+	1	아귀궁수	2506
+	2	아귀궁수	2506
+	3	아귀감염창병	2505
+	4	아귀감염창병	2505
+	5	아귀감염창병	2505
 }
 
-Group	¾Æ±Íµ¿±¼3Ãş¿ë
+Group	아귀동굴3Ãş용
 {
 	Vnum	2513
-	Leader	¾Æ±Íº´	2508
-	1	¾Æ±Íº´	2508
-	2	¾Æ±Íº´	2508
-	3	¾Æ±Íº´	2508
-	4	¾Æ±Íº´	2508
+	Leader	아귀병	2508
+	1	아귀병	2508
+	2	아귀병	2508
+	3	아귀병	2508
+	4	아귀병	2508
 }
 
-Group	¾Æ±Íµ¿±¼3Ãş¿ë
+Group	아귀동굴3Ãş용
 {
 	Vnum	2514
-	Leader	¾Æ±Íº´	2508
-	1	¾Æ±Íº´	2508
-	2	¾Æ±Í±Ãº´	2509
-	3	¾Æ±Í±Ãº´	2509
-	4	¾Æ±Í±Ãº´	2509
+	Leader	아귀병	2508
+	1	아귀병	2508
+	2	아귀궁병	2509
+	3	아귀궁병	2509
+	4	아귀궁병	2509
 }
 
-Group	¾Æ±Íµ¿±¼3Ãş¿ë
+Group	아귀동굴3Ãş용
 {
 	Vnum	2515
-	Leader	¾Æ±Í±Ãº´	2509
-	1	¾Æ±Íº´	2508
-	2	¾Æ±Íº´	2508
-	3	¾Æ±Íº´	2508
-	4	¾Æ±Íº´	2508
+	Leader	아귀궁병	2509
+	1	아귀병	2508
+	2	아귀병	2508
+	3	아귀병	2508
+	4	아귀병	2508
 }
 
-Group	¾Æ±Íµ¿±¼3Ãş¿ë
+Group	아귀동굴3Ãş용
 {
 	Vnum	2516
-	Leader	¾Æ±Í±Ãº´	2509
-	1	¾Æ±Í±Ãº´	2509
-	2	¾Æ±Íº´	2508
-	3	¾Æ±Íº´	2508
-	4	¾Æ±Íº´	2508
+	Leader	아귀궁병	2509
+	1	아귀궁병	2509
+	2	아귀병	2508
+	3	아귀병	2508
+	4	아귀병	2508
 }
 
-Group	¾Æ±Íµ¿±¼3Ãş¿ë
+Group	아귀동굴3Ãş용
 {
 	Vnum	2517
-	Leader	¾Æ±Í±Ãº´	2509
-	1	¾Æ±Í±Ãº´	2509
-	2	¾Æ±Í±Ãº´	2509
-	3	¾Æ±Íº´	2508
-	4	¾Æ±Íº´	2508
+	Leader	아귀궁병	2509
+	1	아귀궁병	2509
+	2	아귀궁병	2509
+	3	아귀병	2508
+	4	아귀병	2508
 }
 
-Group	¾Æ±Íµ¿±¼3Ãş¿ë
+Group	아귀동굴3Ãş용
 {
 	Vnum	2518
-	Leader	¾Æ±ÍÃ¢º´	2510
-	1	¾Æ±Í±Ãº´	2509
-	2	¾Æ±Í±Ãº´	2509
-	3	¾Æ±Íº´	2508
-	4	¾Æ±Íº´	2508
+	Leader	아귀창병	2510
+	1	아귀궁병	2509
+	2	아귀궁병	2509
+	3	아귀병	2508
+	4	아귀병	2508
 }
 
-Group	¾Æ±Íµ¿±¼3Ãş¿ë
+Group	아귀동굴3Ãş용
 {
 	Vnum	2519
-	Leader	¾Æ±ÍÃ¢º´	2510
-	1	¾Æ±ÍÃ¢º´	2510
-	2	¾Æ±Í±Ãº´	2509
-	3	¾Æ±Í±Ãº´	2509
-	4	¾Æ±Í±Ãº´	2509
+	Leader	아귀창병	2510
+	1	아귀창병	2510
+	2	아귀궁병	2509
+	3	아귀궁병	2509
+	4	아귀궁병	2509
 }
 
-Group	¾Æ±Íµ¿±¼4Ãş¿ë
+Group	아귀동굴4Ãş용
 {
 	Vnum	2520
-	Leader	¾Æ±ÍÁÖ¼ú»ç	2511
-	1	¾Æ±ÍÃ¢º´	2510
-	2	¾Æ±ÍÃ¢º´	2510
-	3	¾Æ±Í±Ãº´	2509
-	4	¾Æ±Í±Ãº´	2509
+	Leader	아귀주술사	2511
+	1	아귀창병	2510
+	2	아귀창병	2510
+	3	아귀궁병	2509
+	4	아귀궁병	2509
 }
 
-Group	¾Æ±Íµ¿±¼4-7Ãş¿ë
+Group	아귀동굴4-7Ãş용
 {
 	Vnum	2521
-	Leader	¾Æ±ÍÁÖ¼ú»ç	2511
-	1	¾Æ±ÍÁÖ¼ú»ç	2511
-	2	¾Æ±ÍÃ¢º´	2510
-	3	¾Æ±ÍÃ¢º´	2510
-	4	¾Æ±ÍÃ¢º´	2510
+	Leader	아귀주술사	2511
+	1	아귀주술사	2511
+	2	아귀창병	2510
+	3	아귀창병	2510
+	4	아귀창병	2510
 }
 
-Group	¾Æ±Íµ¿±¼4-7Ãş¿ë
+Group	아귀동굴4-7Ãş용
 {
 	Vnum	2522
-	Leader	¾Æ±Í°Ëº´	2512
-	1	¾Æ±Í°Ëº´	2512
-	2	¾Æ±ÍÁÖ¼ú»ç	2511
-	3	¾Æ±ÍÃ¢º´	2510
-	4	¾Æ±ÍÃ¢º´	2510
+	Leader	아귀검병	2512
+	1	아귀검병	2512
+	2	아귀주술사	2511
+	3	아귀창병	2510
+	4	아귀창병	2510
 }
 
-Group	¾Æ±Íµ¿±¼4-7Ãş¿ë
+Group	아귀동굴4-7Ãş용
 {
 	Vnum	2523
-	Leader	¾Æ±Í¸¶°Ë»ç	2513
-	1	¾Æ±Í°Ëº´	2512
-	2	¾Æ±Í°Ëº´	2512
-	3	¾Æ±ÍÁÖ¼ú»ç	2511
-	4	¾Æ±ÍÃ¢º´	2510
+	Leader	아귀마검사	2513
+	1	아귀검병	2512
+	2	아귀검병	2512
+	3	아귀주술사	2511
+	4	아귀창병	2510
 }
 
-Group	¾Æ±Íµ¿±¼4-7Ãş¿ë
+Group	아귀동굴4-7Ãş용
 {
 	Vnum	2524
-	Leader	¾Æ±Í¸¶°Ë»ç	2513
-	1	¾Æ±Í°Ëº´	2512
-	2	¾Æ±Í°Ëº´	2512
-	3	¾Æ±ÍÃ¢º´	2510
-	4	¾Æ±ÍÃ¢º´	2510
+	Leader	아귀마검사	2513
+	1	아귀검병	2512
+	2	아귀검병	2512
+	3	아귀창병	2510
+	4	아귀창병	2510
 }
 
-Group	¾Æ±Íµ¿±¼4-7Ãş¿ë
+Group	아귀동굴4-7Ãş용
 {
 	Vnum	2525
-	Leader	¾Æ±Í¸¶°Ë»ç	2513
-	1	¾Æ±Í¸¶°Ë»ç	2513
-	2	¾Æ±Í°Ëº´	2512
-	3	¾Æ±Í°Ëº´	2512
-	4	¾Æ±ÍÃ¢º´	2510
-	5	¾Æ±ÍÃ¢º´	2510
+	Leader	아귀마검사	2513
+	1	아귀마검사	2513
+	2	아귀검병	2512
+	3	아귀검병	2512
+	4	아귀창병	2510
+	5	아귀창병	2510
 }
 
-Group	¾Æ±Íµ¿±¼4-7Ãş¿ë
+Group	아귀동굴4-7Ãş용
 {
 	Vnum	2526
-	Leader	¾Æ±ÍÀå¼ö	2514
-	1	¾Æ±Í¸¶°Ë»ç	2513
-	2	¾Æ±Í¸¶°Ë»ç	2513
-	3	¾Æ±Í°Ëº´	2512
-	4	¾Æ±Í°Ëº´	2512
-	5	¾Æ±ÍÃ¢º´	2510
+	Leader	아귀장수	2514
+	1	아귀마검사	2513
+	2	아귀마검사	2513
+	3	아귀검병	2512
+	4	아귀검병	2512
+	5	아귀창병	2510
 }
 
-Group	¾Æ±Íµ¿±¼4-7Ãş¿ë
+Group	아귀동굴4-7Ãş용
 {
 	Vnum	2527
-	Leader	¾Æ±ÍÀå¼ö	2514
-	1	¾Æ±Í¸¶°Ë»ç	2513
-	2	¾Æ±Í¸¶°Ë»ç	2513
-	3	¾Æ±ÍÁÖ¼ú»ç	2511
-	4	¾Æ±ÍÁÖ¼ú»ç	2511
-	5	¾Æ±Í°Ëº´	2512
-	6	¾Æ±ÍÃ¢º´	2510
+	Leader	아귀장수	2514
+	1	아귀마검사	2513
+	2	아귀마검사	2513
+	3	아귀주술사	2511
+	4	아귀주술사	2511
+	5	아귀검병	2512
+	6	아귀창병	2510
 }
 
-Group	¾Æ±Íµ¿±¼5Ãş¿ë
+Group	아귀동굴5Ãş용
 {
 	Vnum	2528
-	Leader	¾Æ±Í¿Õ	2591
-	1	¾Æ±Í¸¶°Ë»ç	2513
-	2	¾Æ±Í¸¶°Ë»ç	2513
-	3	¾Æ±ÍÁÖ¼ú»ç	2511
-	4	¾Æ±Í°Ëº´	2512
-	5	¾Æ±Í°Ëº´	2512
-	6	¾Æ±ÍÃ¢º´	2510
-	7	¾Æ±Í±Ãº´	2509
-	8	¾Æ±Í±Ãº´	2509
+	Leader	아귀왕	2591
+	1	아귀마검사	2513
+	2	아귀마검사	2513
+	3	아귀주술사	2511
+	4	아귀검병	2512
+	5	아귀검병	2512
+	6	아귀창병	2510
+	7	아귀궁병	2509
+	8	아귀궁병	2509
 }
 
-Group	¾Æ±Íµ¿±¼6Ãş¿ë
+Group	아귀동굴6Ãş용
 {
 	Vnum	2529
-	Leader	¾Æ°É	2597
-	1	¾Æ±Í¸¶°Ë»ç	2513
-	2	¾Æ±Í¸¶°Ë»ç	2513
-	3	¾Æ±ÍÁÖ¼ú»ç	2511
-	4	¾Æ±Í°Ëº´	2512
-	5	¾Æ±Í°Ëº´	2512
-	6	¾Æ±ÍÃ¢º´	2510
-	7	¾Æ±Í±Ãº´	2509
-	8	¾Æ±Í±Ãº´	2509
+	Leader	아걸	2597
+	1	아귀마검사	2513
+	2	아귀마검사	2513
+	3	아귀주술사	2511
+	4	아귀검병	2512
+	5	아귀검병	2512
+	6	아귀창병	2510
+	7	아귀궁병	2509
+	8	아귀궁병	2509
 }
 
-Group	¾Æ±Íµ¿±¼7Ãş¿ë
+Group	아귀동굴7Ãş용
 {
 	Vnum	2530
-	Leader	¾Æ±Í´ëÁ¦»ç¸¶ÈÖ	2598
-	1	¾Æ±Í¸¶°Ë»ç	2513
-	2	¾Æ±Í¸¶°Ë»ç	2513
-	3	¾Æ±ÍÁÖ¼ú»ç	2511
-	4	¾Æ±Í°Ëº´	2512
-	5	¾Æ±Í°Ëº´	2512
-	6	¾Æ±ÍÃ¢º´	2510
-	7	¾Æ±Í±Ãº´	2509
-	8	¾Æ±Í±Ãº´	2509
+	Leader	아귀대제사마휘	2598
+	1	아귀마검사	2513
+	2	아귀마검사	2513
+	3	아귀주술사	2511
+	4	아귀검병	2512
+	5	아귀검병	2512
+	6	아귀창병	2510
+	7	아귀궁병	2509
+	8	아귀궁병	2509
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2551
-	Leader	½Ã±¸¹®	30111
+	Leader	시구문	30111
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2552
-	Leader	½Ã±¸¹®	30112
+	Leader	시구문	30112
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2553
-	Leader	½Ã±¸¹®	30113
+	Leader	시구문	30113
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2554
-	Leader	½Ã±¸¹®	30114
+	Leader	시구문	30114
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2555
-	Leader	½Ã±¸¹®	30115
+	Leader	시구문	30115
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2556
-	Leader	½Ã±¸¹®	30116
+	Leader	시구문	30116
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2557
-	Leader	½Ã±¸¹®	30117
+	Leader	시구문	30117
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2558
-	Leader	½Ã±¸¹®	30118
+	Leader	시구문	30118
 }
 
-Group	¾Æ±Íµ¿±¼2Ãş½Ã±¸¹®
+Group	아귀동굴2Ãş시구문
 {
 	Vnum	2559
-	Leader	½Ã±¸¹®	30119
+	Leader	시구문	30119
 }
-Group	µµ¿°È­Áö»ï°Å¸®1_1
+Group	도염화지삼거리1_1
 {
 	Vnum	7023
-	Leader	ÅõÁö¹ü	7073
-	1	ÅõÁö¹üÁ¹°³	7071
-	2	ÅõÁö¹üÁ¹°³	7071
-	3	ÅõÁö¹üÁ¹°³	7071
+	Leader	투지범	7073
+	1	투지범졸개	7071
+	2	투지범졸개	7071
+	3	투지범졸개	7071
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®1_2
+Group	도염화지삼거리1_2
 {
 	Vnum	7024
-	Leader	È­·É	7072
-	1	ÅõÁö¹üÁ¹°³	7071
-	2	ÅõÁö¹üÁ¹°³	7071
-	3	ÅõÁö¹üÁ¹°³	7071
+	Leader	화령	7072
+	1	투지범졸개	7071
+	2	투지범졸개	7071
+	3	투지범졸개	7071
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®1_3
+Group	도염화지삼거리1_3
 {
 	Vnum	7025
-	Leader	Âü¸¶ÀÎ	7074
-	1	ÅõÁö¹ü	7073
-	2	È­·É	7072
+	Leader	참마인	7074
+	1	투지범	7073
+	2	화령	7072
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®1_4
+Group	도염화지삼거리1_4
 {
 	Vnum	7026
-	Leader	ÅÂÈ­¹«ÀÎ	7075
-	1	ÅõÁö¹ü	7073
-	2	ÅõÁö¹ü	7073
-	3	È­·É	7072
+	Leader	태화무인	7075
+	1	투지범	7073
+	2	투지범	7073
+	3	화령	7072
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®2_1
+Group	도염화지삼거리2_1
 {
 	Vnum	7027
-	Leader	ÅõÁö¹ü	7076
-	1	ÅõÁö¹üÁ¹°³	7074
-	2	ÅõÁö¹üÁ¹°³	7074
-	3	ÅõÁö¹üÁ¹°³	7074
+	Leader	투지범	7076
+	1	투지범졸개	7074
+	2	투지범졸개	7074
+	3	투지범졸개	7074
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®2_2
+Group	도염화지삼거리2_2
 {
 	Vnum	7028
-	Leader	È­·É	7077
-	1	ÅõÁö¹üÁ¹°³	7076
-	2	ÅõÁö¹üÁ¹°³	7076
-	3	ÅõÁö¹üÁ¹°³	7076
+	Leader	화령	7077
+	1	투지범졸개	7076
+	2	투지범졸개	7076
+	3	투지범졸개	7076
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®2_3
+Group	도염화지삼거리2_3
 {
 	Vnum	7029
-	Leader	Âü¸¶ÀÎ	7079
-	1	ÅõÁö¹ü	7078
-	2	È­·É	7077
+	Leader	참마인	7079
+	1	투지범	7078
+	2	화령	7077
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®2_4
+Group	도염화지삼거리2_4
 {
 	Vnum	7030
-	Leader	ÅÂÈ­¹«ÀÎ	7080
-	1	ÅõÁö¹ü	7078
-	2	ÅõÁö¹ü	7078
-	3	È­·É	7077
+	Leader	태화무인	7080
+	1	투지범	7078
+	2	투지범	7078
+	3	화령	7077
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®3_1
+Group	도염화지삼거리3_1
 {
 	Vnum	7031
-	Leader	ÅõÁö¹ü	7083
-	1	ÅõÁö¹üÁ¹°³	7081
-	2	ÅõÁö¹üÁ¹°³	7081
-	3	ÅõÁö¹üÁ¹°³	7081
+	Leader	투지범	7083
+	1	투지범졸개	7081
+	2	투지범졸개	7081
+	3	투지범졸개	7081
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®3_2
+Group	도염화지삼거리3_2
 {
 	Vnum	7032
-	Leader	È­·É	7082
-	1	ÅõÁö¹üÁ¹°³	7081
-	2	ÅõÁö¹üÁ¹°³	7081
-	3	ÅõÁö¹üÁ¹°³	7081
+	Leader	화령	7082
+	1	투지범졸개	7081
+	2	투지범졸개	7081
+	3	투지범졸개	7081
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®3_3
+Group	도염화지삼거리3_3
 {
 	Vnum	7033
-	Leader	Âü¸¶ÀÎ	7084
-	1	ÅõÁö¹ü	7083
-	2	È­·É	7082
+	Leader	참마인	7084
+	1	투지범	7083
+	2	화령	7082
 }
 
-Group	µµ¿°È­Áö»ï°Å¸®3_4
+Group	도염화지삼거리3_4
 {
 	Vnum	7034
-	Leader	ÅÂÈ­¹«ÀÎ	7085
-	1	ÅõÁö¹ü	7083
-	2	ÅõÁö¹ü	7083
-	3	È­·É	7082
+	Leader	태화무인	7085
+	1	투지범	7083
+	2	투지범	7083
+	3	화령	7082
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®1_1
+Group	영비사막삼거리1_1
 {
 	Vnum	7035
-	Leader	´ë¿ÕÀü°¥	7051
-	1	´ë¿ÕÀü°¥	7051
-	2	ºñ¸¶±Í¾È	7050
-	3	ºñ¸¶±Í¾È	7050
+	Leader	대왕전갈	7051
+	1	대왕전갈	7051
+	2	비마귀안	7050
+	3	비마귀안	7050
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®1_2
+Group	영비사막삼거리1_2
 {
 	Vnum	7036
-	Leader	¹İÀÎ¹İ»ç°Ëº´	7054
-	1	¹İÀÎ¹İ»ç°Ëº´	7054
-	2	Àü°¥ÀÎ°£	7052
-	3	Àü°¥ÀÎ°£	7052
+	Leader	반인반사검병	7054
+	1	반인반사검병	7054
+	2	전갈인간	7052
+	3	전갈인간	7052
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®1_3
+Group	영비사막삼거리1_3
 {
 	Vnum	7037
-	Leader	»ç¸·ÀÇ¹«¹ıÀÚ	7056
-	1	»ç¸·ÀÇ¹«¹ıÀÚ	7056
-	2	¹İÀÎ¹İ»ç°Ëº´	7054
-	3	¹İÀÎ¹İ»ç°Ëº´	7054
+	Leader	사막의무법자	7056
+	1	사막의무법자	7056
+	2	반인반사검병	7054
+	3	반인반사검병	7054
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®1_4
+Group	영비사막삼거리1_4
 {
 	Vnum	7038
-	Leader	»ç¸·ÀÇ¹«¹ıÀÚ	7056
-	1	»ç¸·ÀÇ¹«¹ıÀÚ	7056
-	2	¹İÀÎ¹İ»ç±Ãº´	7055
-	3	¹İÀÎ¹İ»ç±Ãº´	7055
+	Leader	사막의무법자	7056
+	1	사막의무법자	7056
+	2	반인반사궁병	7055
+	3	반인반사궁병	7055
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®2_1
+Group	영비사막삼거리2_1
 {
 	Vnum	7039
-	Leader	´ë¿ÕÀü°¥	7058
-	1	´ë¿ÕÀü°¥	7058
-	2	ºñ¸¶±Í¾È	7057
-	3	ºñ¸¶±Í¾È	7057
+	Leader	대왕전갈	7058
+	1	대왕전갈	7058
+	2	비마귀안	7057
+	3	비마귀안	7057
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®2_2
+Group	영비사막삼거리2_2
 {
 	Vnum	7040
-	Leader	¹İÀÎ¹İ»ç°Ëº´	7061
-	1	¹İÀÎ¹İ»ç°Ëº´	7061
-	2	Àü°¥ÀÎ°£	7059
-	3	Àü°¥ÀÎ°£	7059
+	Leader	반인반사검병	7061
+	1	반인반사검병	7061
+	2	전갈인간	7059
+	3	전갈인간	7059
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®2_3
+Group	영비사막삼거리2_3
 {
 	Vnum	7041
-	Leader	»ç¸·ÀÇ¹«¹ıÀÚ	7063
-	1	»ç¸·ÀÇ¹«¹ıÀÚ	7063
-	2	¹İÀÎ¹İ»ç°Ëº´	7061
-	3	¹İÀÎ¹İ»ç°Ëº´	7061
+	Leader	사막의무법자	7063
+	1	사막의무법자	7063
+	2	반인반사검병	7061
+	3	반인반사검병	7061
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®2_4
+Group	영비사막삼거리2_4
 {
 	Vnum	7042
-	Leader	»ç¸·ÀÇ¹«¹ıÀÚ	7063
-	1	»ç¸·ÀÇ¹«¹ıÀÚ	7063
-	2	¹İÀÎ¹İ»ç±Ãº´	7062
-	3	¹İÀÎ¹İ»ç±Ãº´	7062
+	Leader	사막의무법자	7063
+	1	사막의무법자	7063
+	2	반인반사궁병	7062
+	3	반인반사궁병	7062
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®3_1
+Group	영비사막삼거리3_1
 {
 	Vnum	7043
-	Leader	´ë¿ÕÀü°¥	7065
-	1	´ë¿ÕÀü°¥	7065
-	2	ºñ¸¶±Í¾È	7064
-	3	ºñ¸¶±Í¾È	7064
+	Leader	대왕전갈	7065
+	1	대왕전갈	7065
+	2	비마귀안	7064
+	3	비마귀안	7064
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®3_2
+Group	영비사막삼거리3_2
 {
 	Vnum	7044
-	Leader	¹İÀÎ¹İ»ç°Ëº´	7068
-	1	¹İÀÎ¹İ»ç°Ëº´	7068
-	2	Àü°¥ÀÎ°£	7066
-	3	Àü°¥ÀÎ°£	7066
+	Leader	반인반사검병	7068
+	1	반인반사검병	7068
+	2	전갈인간	7066
+	3	전갈인간	7066
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®3_3
+Group	영비사막삼거리3_3
 {
 	Vnum	7045
-	Leader	»ç¸·ÀÇ¹«¹ıÀÚ	7070
-	1	»ç¸·ÀÇ¹«¹ıÀÚ	7070
-	2	¹İÀÎ¹İ»ç°Ëº´	7068
-	3	¹İÀÎ¹İ»ç°Ëº´	7068
+	Leader	사막의무법자	7070
+	1	사막의무법자	7070
+	2	반인반사검병	7068
+	3	반인반사검병	7068
 }
 
-Group	¿µºñ»ç¸·»ï°Å¸®3_4
+Group	영비사막삼거리3_4
 {
 	Vnum	7046
-	Leader	»ç¸·ÀÇ¹«¹ıÀÚ	7070
-	1	»ç¸·ÀÇ¹«¹ıÀÚ	7070
-	2	¹İÀÎ¹İ»ç±Ãº´	7069
-	3	¹İÀÎ¹İ»ç±Ãº´	7069
+	Leader	사막의무법자	7070
+	1	사막의무법자	7070
+	2	반인반사궁병	7069
+	3	반인반사궁병	7069
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®1_1
+Group	서한산삼거리1_1
 {
 	Vnum	1154
-	Leader	ºùÃæ	7031
-	1	ºùÃæ	7031
-	2	¾óÀ½»Ô¹ü°í·¡	7030
-	3	¾óÀ½»Ô¹ü°í·¡	7030
+	Leader	빙충	7031
+	1	빙충	7031
+	2	얼음뿔범고래	7030
+	3	얼음뿔범고래	7030
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®1_2
+Group	서한산삼거리1_2
 {
 	Vnum	1155
-	Leader	ºùÀÎ	7033
-	1	ºùÀÎ	7033
-	2	¼³±¸	7032
-	3	¼³±¸	7032
+	Leader	빙인	7033
+	1	빙인	7033
+	2	설구	7032
+	3	설구	7032
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®1_3
+Group	서한산삼거리1_3
 {
 	Vnum	1156
-	Leader	¾óÀ½°í·½	7035
-	1	¾óÀ½°í·½	7035
-	2	¼³°ÅÀÎ	7034
-	3	¼³°ÅÀÎ	7034
+	Leader	얼음고렘	7035
+	1	얼음고렘	7035
+	2	설거인	7034
+	3	설거인	7034
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®2_1
+Group	서한산삼거리2_1
 {
 	Vnum	1157
-	Leader	ºùÃæ	7038
-	1	ºùÃæ	7038
-	2	¾óÀ½»Ô¹ü°í·¡	7037
-	3	¾óÀ½»Ô¹ü°í·¡	7037
+	Leader	빙충	7038
+	1	빙충	7038
+	2	얼음뿔범고래	7037
+	3	얼음뿔범고래	7037
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®2_2
+Group	서한산삼거리2_2
 {
 	Vnum	1158
-	Leader	ºùÀÎ	7040
-	1	ºùÀÎ	7040
-	2	¼³±¸	7039
-	3	¼³±¸	7039
+	Leader	빙인	7040
+	1	빙인	7040
+	2	설구	7039
+	3	설구	7039
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®2_3
+Group	서한산삼거리2_3
 {
 	Vnum	1159
-	Leader	¾óÀ½°í·½	7042
-	1	¾óÀ½°í·½	7042
-	2	¼³°ÅÀÎ	7041
-	3	¼³°ÅÀÎ	7041
+	Leader	얼음고렘	7042
+	1	얼음고렘	7042
+	2	설거인	7041
+	3	설거인	7041
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®3_1
+Group	서한산삼거리3_1
 {
 	Vnum	1160
-	Leader	ºùÃæ	7045
-	1	ºùÃæ	7045
-	2	¾óÀ½»Ô¹ü°í·¡	7044
-	3	¾óÀ½»Ô¹ü°í·¡	7044
+	Leader	빙충	7045
+	1	빙충	7045
+	2	얼음뿔범고래	7044
+	3	얼음뿔범고래	7044
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®3_2
+Group	서한산삼거리3_2
 {
 	Vnum	1161
-	Leader	ºùÀÎ	7047
-	1	ºùÀÎ	7047
-	2	¼³±¸	7046
-	3	¼³±¸	7046
+	Leader	빙인	7047
+	1	빙인	7047
+	2	설구	7046
+	3	설구	7046
 }
 
-Group	¼­ÇÑ»ê»ï°Å¸®3_3
+Group	서한산삼거리3_3
 {
 	Vnum	1162
-	Leader	¾óÀ½°í·½	7049
-	1	¾óÀ½°í·½	7049
-	2	¼³°ÅÀÎ	7048
-	3	¼³°ÅÀÎ	7048
+	Leader	얼음고렘	7049
+	1	얼음고렘	7049
+	2	설거인	7048
+	3	설거인	7048
 }
 
-Group	±Í¸ñ»ï°Å¸®1_1
+Group	귀목삼거리1_1
 {
 	Vnum	2361
-	Leader	¹ØµÕ±Í¸ñ	7086
-	1	¹ØµÕ±Í¸ñ	7086
-	2	¹ØµÕ±Í¸ñ	7086
-	3	¹ØµÕ±Í¸ñ	7086
+	Leader	밑둥귀목	7086
+	1	밑둥귀목	7086
+	2	밑둥귀목	7086
+	3	밑둥귀목	7086
 }
 
-Group	±Í¸ñ»ï°Å¸®1_2
+Group	귀목삼거리1_2
 {
 	Vnum	2362
-	Leader	¸ñ·É	7087
-	1	¹ØµÕ±Í¸ñ	7086
-	2	¹ØµÕ±Í¸ñ	7086
-	3	¹ØµÕ±Í¸ñ	7086
+	Leader	목령	7087
+	1	밑둥귀목	7086
+	2	밑둥귀목	7086
+	3	밑둥귀목	7086
 }
 
-Group	±Í¸ñ»ï°Å¸®1_3
+Group	귀목삼거리1_3
 {
 	Vnum	2363
-	Leader	¸ñ·É	7087
-	1	¸ñ·É	7087
-	2	¹ØµÕ±Í¸ñ	7086
-	3	¹ØµÕ±Í¸ñ	7086
+	Leader	목령	7087
+	1	목령	7087
+	2	밑둥귀목	7086
+	3	밑둥귀목	7086
 }
 
-Group	±Í¸ñ»ï°Å¸®1_4
+Group	귀목삼거리1_4
 {
 	Vnum	2364
-	Leader	¸ñ·É	7087
-	1	¸ñ·É	7087
-	2	¸ñ·É	7087
+	Leader	목령	7087
+	1	목령	7087
+	2	목령	7087
 }
 
-Group	±Í¸ñ»ï°Å¸®1_5
+Group	귀목삼거리1_5
 {
 	Vnum	2365
-	Leader	È­·ù±Í¸ñ	7088
-	1	¸ñ·É	7087
-	2	¸ñ·É	7087
-	3	¹ØµÕ±Í¸ñ	7086
-	4	¹ØµÕ±Í¸ñ	7086
-	5	¹ØµÕ±Í¸ñ	7086
+	Leader	화류귀목	7088
+	1	목령	7087
+	2	목령	7087
+	3	밑둥귀목	7086
+	4	밑둥귀목	7086
+	5	밑둥귀목	7086
 }
 
-Group	±Í¸ñ»ï°Å¸®1_6
+Group	귀목삼거리1_6
 {
 	Vnum	2366
-	Leader	È­·ù±Í¸ñ	7088
-	1	È­·ù±Í¸ñ	7088
-	2	¹ØµÕ±Í¸ñ	7086
-	3	¹ØµÕ±Í¸ñ	7086
-	4	¹ØµÕ±Í¸ñ	7086
+	Leader	화류귀목	7088
+	1	화류귀목	7088
+	2	밑둥귀목	7086
+	3	밑둥귀목	7086
+	4	밑둥귀목	7086
 }
 
-Group	±Í¸ñ»ï°Å¸®1_7
+Group	귀목삼거리1_7
 {
 	Vnum	2367
-	Leader	È­·ù±Í¸ñ	7088
-	1	È­·ù±Í¸ñ	7088
-	2	¸ñ·É	7087
-	3	¸ñ·É	7087
-	4	¸ñ·É	7087
+	Leader	화류귀목	7088
+	1	화류귀목	7088
+	2	목령	7087
+	3	목령	7087
+	4	목령	7087
 }
 
-Group	±Í¸ñ»ï°Å¸®2_1
+Group	귀목삼거리2_1
 {
 	Vnum	2368
-	Leader	¹ØµÕ±Í¸ñ	7090
-	1	¹ØµÕ±Í¸ñ	7090
-	2	¹ØµÕ±Í¸ñ	7090
-	3	¹ØµÕ±Í¸ñ	7090
+	Leader	밑둥귀목	7090
+	1	밑둥귀목	7090
+	2	밑둥귀목	7090
+	3	밑둥귀목	7090
 }
 
-Group	±Í¸ñ»ï°Å¸®2_2
+Group	귀목삼거리2_2
 {
 	Vnum	2369
-	Leader	¸ñ·É	7091
-	1	¹ØµÕ±Í¸ñ	7090
-	2	¹ØµÕ±Í¸ñ	7090
-	3	¹ØµÕ±Í¸ñ	7090
+	Leader	목령	7091
+	1	밑둥귀목	7090
+	2	밑둥귀목	7090
+	3	밑둥귀목	7090
 }
 
-Group	±Í¸ñ»ï°Å¸®2_3
+Group	귀목삼거리2_3
 {
 	Vnum	2370
-	Leader	¸ñ·É	7091
-	1	¸ñ·É	7091
-	2	¹ØµÕ±Í¸ñ	7090
-	3	¹ØµÕ±Í¸ñ	7090
+	Leader	목령	7091
+	1	목령	7091
+	2	밑둥귀목	7090
+	3	밑둥귀목	7090
 }
 
-Group	±Í¸ñ»ï°Å¸®2_4
+Group	귀목삼거리2_4
 {
 	Vnum	2371
-	Leader	¸ñ·É	7091
-	1	¸ñ·É	7091
-	2	¸ñ·É	7091
+	Leader	목령	7091
+	1	목령	7091
+	2	목령	7091
 }
 
-Group	±Í¸ñ»ï°Å¸®2_5
+Group	귀목삼거리2_5
 {
 	Vnum	2372
-	Leader	È­·ù±Í¸ñ	7092
-	1	¸ñ·É	7091
-	2	¸ñ·É	7091
-	3	¹ØµÕ±Í¸ñ	7090
-	4	¹ØµÕ±Í¸ñ	7090
-	5	¹ØµÕ±Í¸ñ	7090
+	Leader	화류귀목	7092
+	1	목령	7091
+	2	목령	7091
+	3	밑둥귀목	7090
+	4	밑둥귀목	7090
+	5	밑둥귀목	7090
 }
 
-Group	±Í¸ñ»ï°Å¸®2_6
+Group	귀목삼거리2_6
 {
 	Vnum	2373
-	Leader	È­·ù±Í¸ñ	7092
-	1	È­·ù±Í¸ñ	7092
-	2	¹ØµÕ±Í¸ñ	7090
-	3	¹ØµÕ±Í¸ñ	7090
-	4	¹ØµÕ±Í¸ñ	7090
+	Leader	화류귀목	7092
+	1	화류귀목	7092
+	2	밑둥귀목	7090
+	3	밑둥귀목	7090
+	4	밑둥귀목	7090
 }
 
-Group	±Í¸ñ»ï°Å¸®2_7
+Group	귀목삼거리2_7
 {
 	Vnum	2374
-	Leader	È­·ù±Í¸ñ	7092
-	1	È­·ù±Í¸ñ	7092
-	2	¸ñ·É	7091
-	3	¸ñ·É	7091
-	4	¸ñ·É	7091
+	Leader	화류귀목	7092
+	1	화류귀목	7092
+	2	목령	7091
+	3	목령	7091
+	4	목령	7091
 }
 
-Group	±Í¸ñ»ï°Å¸®3_1
+Group	귀목삼거리3_1
 {
 	Vnum	2375
-	Leader	¹ØµÕ±Í¸ñ	7094
-	1	¹ØµÕ±Í¸ñ	7094
-	2	¹ØµÕ±Í¸ñ	7094
-	3	¹ØµÕ±Í¸ñ	7094
+	Leader	밑둥귀목	7094
+	1	밑둥귀목	7094
+	2	밑둥귀목	7094
+	3	밑둥귀목	7094
 }
 
-Group	±Í¸ñ»ï°Å¸®3_2
+Group	귀목삼거리3_2
 {
 	Vnum	2376
-	Leader	¸ñ·É	7095
-	1	¹ØµÕ±Í¸ñ	7094
-	2	¹ØµÕ±Í¸ñ	7094
-	3	¹ØµÕ±Í¸ñ	7094
+	Leader	목령	7095
+	1	밑둥귀목	7094
+	2	밑둥귀목	7094
+	3	밑둥귀목	7094
 }
 
-Group	±Í¸ñ»ï°Å¸®3_3
+Group	귀목삼거리3_3
 {
 	Vnum	2377
-	Leader	¸ñ·É	7095
-	1	¸ñ·É	7095
-	2	¹ØµÕ±Í¸ñ	7094
-	3	¹ØµÕ±Í¸ñ	7094
+	Leader	목령	7095
+	1	목령	7095
+	2	밑둥귀목	7094
+	3	밑둥귀목	7094
 }
 
-Group	±Í¸ñ»ï°Å¸®3_4
+Group	귀목삼거리3_4
 {
 	Vnum	2378
-	Leader	¸ñ·É	7095
-	1	¸ñ·É	7095
-	2	¸ñ·É	7095
+	Leader	목령	7095
+	1	목령	7095
+	2	목령	7095
 }
 
-Group	±Í¸ñ»ï°Å¸®3_5
+Group	귀목삼거리3_5
 {
 	Vnum	2379
-	Leader	È­·ù±Í¸ñ	7096
-	1	¸ñ·É	7095
-	2	¸ñ·É	7095
-	3	¹ØµÕ±Í¸ñ	7094
-	4	¹ØµÕ±Í¸ñ	7094
-	5	¹ØµÕ±Í¸ñ	7094
+	Leader	화류귀목	7096
+	1	목령	7095
+	2	목령	7095
+	3	밑둥귀목	7094
+	4	밑둥귀목	7094
+	5	밑둥귀목	7094
 }
 
-Group	±Í¸ñ»ï°Å¸®3_6
+Group	귀목삼거리3_6
 {
 	Vnum	2380
-	Leader	È­·ù±Í¸ñ	7096
-	1	È­·ù±Í¸ñ	7096
-	2	¹ØµÕ±Í¸ñ	7094
-	3	¹ØµÕ±Í¸ñ	7094
-	4	¹ØµÕ±Í¸ñ	7094
+	Leader	화류귀목	7096
+	1	화류귀목	7096
+	2	밑둥귀목	7094
+	3	밑둥귀목	7094
+	4	밑둥귀목	7094
 }
 
-Group	±Í¸ñ»ï°Å¸®3_7
+Group	귀목삼거리3_7
 {
 	Vnum	2381
-	Leader	È­·ù±Í¸ñ	7096
-	1	È­·ù±Í¸ñ	7096
-	2	¸ñ·É	7095
-	3	¸ñ·É	7095
-	4	¸ñ·É	7095
+	Leader	화류귀목	7096
+	1	화류귀목	7096
+	2	목령	7095
+	3	목령	7095
+	4	목령	7095
 }
-Group	°Å¹Ìµ¿±¼3Ãş_»õ³¢°Å¹Ì(PAWN)-»õ³¢°Å¹Ì(PAWN)
+Group	거미동굴3Ãş_새끼거미(PAWN)-새끼거미(PAWN)
 {
 	Vnum	2071
-	Leader	»õ³¢°Å¹Ì	2071
-	1	»õ³¢°Å¹Ì	2071
-	2	»õ³¢°Å¹Ì	2071
+	Leader	새끼거미	2071
+	1	새끼거미	2071
+	2	새끼거미	2071
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_µ¶°Å¹Ì(PAWN)-»õ³¢°Å¹Ì(PAWN)
+Group	거미동굴3Ãş_독거미(PAWN)-새끼거미(PAWN)
 {
 	Vnum	2072
-	Leader	µ¶°Å¹Ì	2072
-	1	»õ³¢°Å¹Ì	2071
-	2	»õ³¢°Å¹Ì	2071
+	Leader	독거미	2072
+	1	새끼거미	2071
+	2	새끼거미	2071
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_µ¶°Å¹Ì(PAWN)-µ¶°Å¹Ì(PAWN)
+Group	거미동굴3Ãş_독거미(PAWN)-독거미(PAWN)
 {
 	Vnum	2073
-	Leader	µ¶°Å¹Ì	2072
-	1	µ¶°Å¹Ì	2072
-	2	»õ³¢°Å¹Ì	2071
+	Leader	독거미	2072
+	1	독거미	2072
+	2	새끼거미	2071
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_ºÓÀºµ¶°Å¹Ì(S_PAWN)-µ¶°Å¹Ì(PAWN)
+Group	거미동굴3Ãş_붉은독거미(S_PAWN)-독거미(PAWN)
 {
 	Vnum	2074
-	Leader	ºÓÀºµ¶°Å¹Ì	2073
-	1	µ¶°Å¹Ì	2072
-	2	µ¶°Å¹Ì	2072
+	Leader	붉은독거미	2073
+	1	독거미	2072
+	2	독거미	2072
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_ºÓÀºµ¶°Å¹Ì(S_PAWN)-ºÓÀºµ¶°Å¹Ì(S_PAWN)
+Group	거미동굴3Ãş_붉은독거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Vnum	2075
-	Leader	ºÓÀºµ¶°Å¹Ì	2073
-	1	ºÓÀºµ¶°Å¹Ì	2073
-	2	µ¶°Å¹Ì	2072
+	Leader	붉은독거미	2073
+	1	붉은독거미	2073
+	2	독거미	2072
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_Áı°Ô°Å¹Ì(S_PAWN)-ºÓÀºµ¶°Å¹Ì(S_PAWN)
+Group	거미동굴3Ãş_Áı게거미(S_PAWN)-붉은독거미(S_PAWN)
 {
 	Vnum	2076
-	Leader	Áı°Ô°Å¹Ì	2074
-	1	ºÓÀºµ¶°Å¹Ì	2073
-	2	ºÓÀºµ¶°Å¹Ì	2073
+	Leader	집게거미	2074
+	1	붉은독거미	2073
+	2	붉은독거미	2073
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_Áı°Ô°Å¹Ì(S_PAWN)-Áı°Ô°Å¹Ì(S_PAWN)
+Group	거미동굴3Ãş_Áı게거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Vnum	2077
-	Leader	Áı°Ô°Å¹Ì	2074
-	1	Áı°Ô°Å¹Ì	2074
-	2	ºÓÀºµ¶°Å¹Ì	2073
+	Leader	집게거미	2074
+	1	집게거미	2074
+	2	붉은독거미	2073
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_º´Á¤°Å¹Ì(S_PAWN)-Áı°Ô°Å¹Ì(S_PAWN)
+Group	거미동굴3Ãş_병정거미(S_PAWN)-집게거미(S_PAWN)
 {
 	Vnum	2078
-	Leader	º´Á¤°Å¹Ì	2075
-	1	Áı°Ô°Å¹Ì	2074
-	2	Áı°Ô°Å¹Ì	2074
+	Leader	병정거미	2075
+	1	집게거미	2074
+	2	집게거미	2074
 }
 
-Group	°Å¹Ìµ¿±¼3Ãş_º´Á¤°Å¹Ì(S_PAWN)-º´Á¤°Å¹Ì(S_PAWN)
+Group	거미동굴3Ãş_병정거미(S_PAWN)-병정거미(S_PAWN)
 {
 	Vnum	2079
-	Leader	º´Á¤°Å¹Ì	2075
-	1	º´Á¤°Å¹Ì	2075
-	2	Áı°Ô°Å¹Ì	2074
+	Leader	병정거미	2075
+	1	병정거미	2075
+	2	집게거미	2074
 }
 
-Group	¾Ç·æ±ºµµ_3001_³¶ÀÎÁ·Á¹°³
+Group	악룡군도_3001_낭인족졸개
 {
 	Vnum	3001
-	Leader	³¶ÀÎÁ·Á¹°³	3001
-	1	³¶ÀÎÁ·Á¹°³	3001
-	2	³¶ÀÎÁ·Á¹°³	3001
+	Leader	낭인족졸개	3001
+	1	낭인족졸개	3001
+	2	낭인족졸개	3001
 }
 
-Group	¾Ç·æ±ºµµ_3002_³¶ÀÎÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3002_낭인족상급졸개
 {
 	Vnum	3002
-	Leader	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	1	³¶ÀÎÁ·Á¹°³	3001
-	2	³¶ÀÎÁ·Á¹°³	3001
+	Leader	낭인족상급졸개	3002
+	1	낭인족졸개	3001
+	2	낭인족졸개	3001
 }
 
-Group	¾Ç·æ±ºµµ_3003_³¶ÀÎÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3003_낭인족상급졸개
 {
 	Vnum	3003
-	Leader	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	1	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	2	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
+	Leader	낭인족상급졸개	3002
+	1	낭인족상급졸개	3002
+	2	낭인족상급졸개	3002
 }
 
-Group	¾Ç·æ±ºµµ_3004_³¶ÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3004_낭인족원거리
 {
 	Vnum	3004
-	Leader	³¶ÀÎÁ·¿ø°Å¸®	3003
-	1	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	2	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
+	Leader	낭인족원거리	3003
+	1	낭인족상급졸개	3002
+	2	낭인족상급졸개	3002
 }
 
-Group	¾Ç·æ±ºµµ_3005_³¶ÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3005_낭인족원거리
 {
 	Vnum	3005
-	Leader	³¶ÀÎÁ·¿ø°Å¸®	3003
-	1	³¶ÀÎÁ·¿ø°Å¸®	3003
-	2	³¶ÀÎÁ·¿ø°Å¸®	3003
+	Leader	낭인족원거리	3003
+	1	낭인족원거리	3003
+	2	낭인족원거리	3003
 }
 
-Group	¾Ç·æ±ºµµ_3006_³¶ÀÎÁ·Àå±º
+Group	악룡군도_3006_낭인족장군
 {
 	Vnum	3006
-	Leader	³¶ÀÎÁ·Àå±º	3004
-	1	³¶ÀÎÁ·¿ø°Å¸®	3003
-	2	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	3	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
+	Leader	낭인족장군	3004
+	1	낭인족원거리	3003
+	2	낭인족상급졸개	3002
+	3	낭인족상급졸개	3002
 }
 
-Group	¾Ç·æ±ºµµ_3007_³¶ÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3007_낭인족상급장수
 {
 	Vnum	3007
-	Leader	³¶ÀÎÁ·»ó±ŞÀå¼ö	3005
-	1	³¶ÀÎÁ·Àå±º	3004
-	2	³¶ÀÎÁ·Àå±º	3004
-	3	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	4	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
+	Leader	낭인족상급장수	3005
+	1	낭인족장군	3004
+	2	낭인족장군	3004
+	3	낭인족상급졸개	3002
+	4	낭인족상급졸개	3002
 }
 
-Group	¾Ç·æ±ºµµ_3008_³¶ÀÎÁ·º¸½º
+Group	악룡군도_3008_낭인족보스
 {
 	Vnum	3008
-	Leader	³¶ÀÎÁ·º¸½º	3090
-	1	³¶ÀÎÁ·»ó±ŞÀå¼ö	3005
-	2	³¶ÀÎÁ·»ó±ŞÀå¼ö	3005
-	3	³¶ÀÎÁ·Àå±º	3004
-	4	³¶ÀÎÁ·Àå±º	3004
-	5	³¶ÀÎÁ·Àå±º	3004
-	6	³¶ÀÎÁ·¿ø°Å¸®	3003
-	7	³¶ÀÎÁ·¿ø°Å¸®	3003
-	8	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	9	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	10	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	11	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
+	Leader	낭인족보스	3090
+	1	낭인족상급장수	3005
+	2	낭인족상급장수	3005
+	3	낭인족장군	3004
+	4	낭인족장군	3004
+	5	낭인족장군	3004
+	6	낭인족원거리	3003
+	7	낭인족원거리	3003
+	8	낭인족상급졸개	3002
+	9	낭인족상급졸개	3002
+	10	낭인족상급졸개	3002
+	11	낭인족상급졸개	3002
 }
 
-Group	¾Ç·æ±ºµµ_3009_³¶ÀÎÁ·ÃÖÁ¾º¸½º
+Group	악룡군도_3009_낭인족최종보스
 {
 	Vnum	3009
-	Leader	³¶ÀÎÁ·ÃÖÁ¾º¸½º	3091
-	1	³¶ÀÎÁ·»ó±ŞÀå¼ö	3005
-	2	³¶ÀÎÁ·»ó±ŞÀå¼ö	3005
-	3	³¶ÀÎÁ·Àå±º	3004
-	4	³¶ÀÎÁ·Àå±º	3004
-	5	³¶ÀÎÁ·Àå±º	3004
-	6	³¶ÀÎÁ·¿ø°Å¸®	3003
-	7	³¶ÀÎÁ·¿ø°Å¸®	3003
-	8	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	9	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	10	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
-	11	³¶ÀÎÁ·»ó±ŞÁ¹°³	3002
+	Leader	낭인족최종보스	3091
+	1	낭인족상급장수	3005
+	2	낭인족상급장수	3005
+	3	낭인족장군	3004
+	4	낭인족장군	3004
+	5	낭인족장군	3004
+	6	낭인족원거리	3003
+	7	낭인족원거리	3003
+	8	낭인족상급졸개	3002
+	9	낭인족상급졸개	3002
+	10	낭인족상급졸개	3002
+	11	낭인족상급졸개	3002
 }
 
-Group	¾Ç·æ±ºµµ_3011_¿Ü¾ÈÅõ±ÍÁ·Á¹°³
+Group	악룡군도_3011_외안투귀족졸개
 {
 	Vnum	3011
-	Leader	¿Ü¾ÈÅõ±ÍÁ·Á¹°³	3101
-	1	¿Ü¾ÈÅõ±ÍÁ·Á¹°³	3101
-	2	¿Ü¾ÈÅõ±ÍÁ·Á¹°³	3101
+	Leader	외안투귀족졸개	3101
+	1	외안투귀족졸개	3101
+	2	외안투귀족졸개	3101
 }
 
-Group	¾Ç·æ±ºµµ_3012_¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3012_외안투귀족상급졸개
 {
 	Vnum	3012
-	Leader	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	1	¿Ü¾ÈÅõ±ÍÁ·Á¹°³	3101
-	2	¿Ü¾ÈÅõ±ÍÁ·Á¹°³	3101
+	Leader	외안투귀족상급졸개	3102
+	1	외안투귀족졸개	3101
+	2	외안투귀족졸개	3101
 }
 
-Group	¾Ç·æ±ºµµ_3013_¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3013_외안투귀족상급졸개
 {
 	Vnum	3013
-	Leader	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	1	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	2	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
+	Leader	외안투귀족상급졸개	3102
+	1	외안투귀족상급졸개	3102
+	2	외안투귀족상급졸개	3102
 }
 
-Group	¾Ç·æ±ºµµ_3014_¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®
+Group	악룡군도_3014_외안투귀족원거리
 {
 	Vnum	3014
-	Leader	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	1	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	2	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
+	Leader	외안투귀족원거리	3103
+	1	외안투귀족상급졸개	3102
+	2	외안투귀족상급졸개	3102
 }
 
-Group	¾Ç·æ±ºµµ_3015_¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®
+Group	악룡군도_3015_외안투귀족원거리
 {
 	Vnum	3015
-	Leader	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	1	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	2	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
+	Leader	외안투귀족원거리	3103
+	1	외안투귀족원거리	3103
+	2	외안투귀족원거리	3103
 }
 
-Group	¾Ç·æ±ºµµ_3016_¿Ü¾ÈÅõ±ÍÁ·Àå±º
+Group	악룡군도_3016_외안투귀족장군
 {
 	Vnum	3016
-	Leader	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	1	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	2	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	3	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
+	Leader	외안투귀족장군	3104
+	1	외안투귀족원거리	3103
+	2	외안투귀족상급졸개	3102
+	3	외안투귀족상급졸개	3102
 }
 
-Group	¾Ç·æ±ºµµ_3017_¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3017_외안투귀족상급장수
 {
 	Vnum	3017
-	Leader	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÀå¼ö	3105
-	1	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	2	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	3	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	4	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
+	Leader	외안투귀족상급장수	3105
+	1	외안투귀족장군	3104
+	2	외안투귀족장군	3104
+	3	외안투귀족상급졸개	3102
+	4	외안투귀족상급졸개	3102
 }
 
-Group	¾Ç·æ±ºµµ_3018_¿Ü¾ÈÅõ±ÍÁ·º¸½º
+Group	악룡군도_3018_외안투귀족보스
 {
 	Vnum	3018
-	Leader	¿Ü¾ÈÅõ±ÍÁ·º¸½º	3190
-	1	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÀå¼ö	3105
-	2	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÀå¼ö	3105
-	3	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	4	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	5	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	6	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	7	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	8	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	9	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	10	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	11	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
+	Leader	외안투귀족보스	3190
+	1	외안투귀족상급장수	3105
+	2	외안투귀족상급장수	3105
+	3	외안투귀족장군	3104
+	4	외안투귀족장군	3104
+	5	외안투귀족장군	3104
+	6	외안투귀족원거리	3103
+	7	외안투귀족원거리	3103
+	8	외안투귀족상급졸개	3102
+	9	외안투귀족상급졸개	3102
+	10	외안투귀족상급졸개	3102
+	11	외안투귀족상급졸개	3102
 }
 
-Group	¾Ç·æ±ºµµ_3019_¿Ü¾ÈÅõ±ÍÁ·ÃÖÁ¾º¸½º
+Group	악룡군도_3019_외안투귀족최종보스
 {
 	Vnum	3019
-	Leader	¿Ü¾ÈÅõ±ÍÁ·ÃÖÁ¾º¸½º	3191
-	1	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÀå¼ö	3105
-	2	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÀå¼ö	3105
-	3	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	4	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	5	¿Ü¾ÈÅõ±ÍÁ·Àå±º	3104
-	6	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	7	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	8	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	9	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	10	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	11	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
+	Leader	외안투귀족최종보스	3191
+	1	외안투귀족상급장수	3105
+	2	외안투귀족상급장수	3105
+	3	외안투귀족장군	3104
+	4	외안투귀족장군	3104
+	5	외안투귀족장군	3104
+	6	외안투귀족원거리	3103
+	7	외안투귀족원거리	3103
+	8	외안투귀족상급졸개	3102
+	9	외안투귀족상급졸개	3102
+	10	외안투귀족상급졸개	3102
+	11	외안투귀족상급졸개	3102
 }
 
-Group	¾Ç·æ±ºµµ_3021_¹üÀÍÁ·Á¹°³
+Group	악룡군도_3021_범익족졸개
 {
 	Vnum	3021
-	Leader	¹üÀÍÁ·Á¹°³	3201
-	1	¹üÀÍÁ·Á¹°³	3201
-	2	¹üÀÍÁ·Á¹°³	3201
+	Leader	범익족졸개	3201
+	1	범익족졸개	3201
+	2	범익족졸개	3201
 }
 
-Group	¾Ç·æ±ºµµ_3022_¹üÀÍÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3022_범익족상급졸개
 {
 	Vnum	3022
-	Leader	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	1	¹üÀÍÁ·Á¹°³	3201
-	2	¹üÀÍÁ·Á¹°³	3201
+	Leader	범익족상급졸개	3202
+	1	범익족졸개	3201
+	2	범익족졸개	3201
 }
 
-Group	¾Ç·æ±ºµµ_3023_¹üÀÍÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3023_범익족상급졸개
 {
 	Vnum	3023
-	Leader	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	1	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	2	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
+	Leader	범익족상급졸개	3202
+	1	범익족상급졸개	3202
+	2	범익족상급졸개	3202
 }
 
-Group	¾Ç·æ±ºµµ_3024_¹üÀÍÁ·¿ø°Å¸®
+Group	악룡군도_3024_범익족원거리
 {
 	Vnum	3024
-	Leader	¹üÀÍÁ·¿ø°Å¸®	3203
-	1	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	2	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
+	Leader	범익족원거리	3203
+	1	범익족상급졸개	3202
+	2	범익족상급졸개	3202
 }
 
-Group	¾Ç·æ±ºµµ_3025_¹üÀÍÁ·¿ø°Å¸®
+Group	악룡군도_3025_범익족원거리
 {
 	Vnum	3025
-	Leader	¹üÀÍÁ·¿ø°Å¸®	3203
-	1	¹üÀÍÁ·¿ø°Å¸®	3203
-	2	¹üÀÍÁ·¿ø°Å¸®	3203
+	Leader	범익족원거리	3203
+	1	범익족원거리	3203
+	2	범익족원거리	3203
 }
 
-Group	¾Ç·æ±ºµµ_3026_¹üÀÍÁ·Àå±º
+Group	악룡군도_3026_범익족장군
 {
 	Vnum	3026
-	Leader	¹üÀÍÁ·Àå±º	3204
-	1	¹üÀÍÁ·¿ø°Å¸®	3203
-	2	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	3	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
+	Leader	범익족장군	3204
+	1	범익족원거리	3203
+	2	범익족상급졸개	3202
+	3	범익족상급졸개	3202
 }
 
-Group	¾Ç·æ±ºµµ_3027_¹üÀÍÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3027_범익족상급장수
 {
 	Vnum	3027
-	Leader	¹üÀÍÁ·»ó±ŞÀå¼ö	3205
-	1	¹üÀÍÁ·Àå±º	3204
-	2	¹üÀÍÁ·Àå±º	3204
-	3	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	4	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
+	Leader	범익족상급장수	3205
+	1	범익족장군	3204
+	2	범익족장군	3204
+	3	범익족상급졸개	3202
+	4	범익족상급졸개	3202
 }
 
-Group	¾Ç·æ±ºµµ_3028_¹üÀÍÁ·º¸½º
+Group	악룡군도_3028_범익족보스
 {
 	Vnum	3028
-	Leader	¹üÀÍÁ·º¸½º	3290
-	1	¹üÀÍÁ·»ó±ŞÀå¼ö	3205
-	2	¹üÀÍÁ·»ó±ŞÀå¼ö	3205
-	3	¹üÀÍÁ·Àå±º	3204
-	4	¹üÀÍÁ·Àå±º	3204
-	5	¹üÀÍÁ·Àå±º	3204
-	6	¹üÀÍÁ·¿ø°Å¸®	3203
-	7	¹üÀÍÁ·¿ø°Å¸®	3203
-	8	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	9	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	10	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	11	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
+	Leader	범익족보스	3290
+	1	범익족상급장수	3205
+	2	범익족상급장수	3205
+	3	범익족장군	3204
+	4	범익족장군	3204
+	5	범익족장군	3204
+	6	범익족원거리	3203
+	7	범익족원거리	3203
+	8	범익족상급졸개	3202
+	9	범익족상급졸개	3202
+	10	범익족상급졸개	3202
+	11	범익족상급졸개	3202
 }
 
-Group	¾Ç·æ±ºµµ_3029_¹üÀÍÁ·ÃÖÁ¾º¸½º
+Group	악룡군도_3029_범익족최종보스
 {
 	Vnum	3029
-	Leader	¹üÀÍÁ·ÃÖÁ¾º¸½º	3291
-	1	¹üÀÍÁ·»ó±ŞÀå¼ö	3205
-	2	¹üÀÍÁ·»ó±ŞÀå¼ö	3205
-	3	¹üÀÍÁ·Àå±º	3204
-	4	¹üÀÍÁ·Àå±º	3204
-	5	¹üÀÍÁ·Àå±º	3204
-	6	¹üÀÍÁ·¿ø°Å¸®	3203
-	7	¹üÀÍÁ·¿ø°Å¸®	3203
-	8	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	9	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	10	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
-	11	¹üÀÍÁ·»ó±ŞÁ¹°³	3202
+	Leader	범익족최종보스	3291
+	1	범익족상급장수	3205
+	2	범익족상급장수	3205
+	3	범익족장군	3204
+	4	범익족장군	3204
+	5	범익족장군	3204
+	6	범익족원거리	3203
+	7	범익족원거리	3203
+	8	범익족상급졸개	3202
+	9	범익족상급졸개	3202
+	10	범익족상급졸개	3202
+	11	범익족상급졸개	3202
 }
 
-Group	¾Ç·æ±ºµµ_3031_¸Á·®Á·Á¹°³
+Group	악룡군도_3031_망량족졸개
 {
 	Vnum	3031
-	Leader	¸Á·®Á·Á¹°³	3301
-	1	¸Á·®Á·Á¹°³	3301
-	2	¸Á·®Á·Á¹°³	3301
+	Leader	망량족졸개	3301
+	1	망량족졸개	3301
+	2	망량족졸개	3301
 }
 
-Group	¾Ç·æ±ºµµ_3032_¸Á·®Á·»ó±ŞÁ¹°³
+Group	악룡군도_3032_망량족상급졸개
 {
 	Vnum	3032
-	Leader	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	1	¸Á·®Á·Á¹°³	3301
-	2	¸Á·®Á·Á¹°³	3301
+	Leader	망량족상급졸개	3302
+	1	망량족졸개	3301
+	2	망량족졸개	3301
 }
 
-Group	¾Ç·æ±ºµµ_3033_¸Á·®Á·»ó±ŞÁ¹°³
+Group	악룡군도_3033_망량족상급졸개
 {
 	Vnum	3033
-	Leader	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	1	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	2	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	망량족상급졸개	3302
+	1	망량족상급졸개	3302
+	2	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµ_3034_¸Á·®Á·¿ø°Å¸®
+Group	악룡군도_3034_망량족원거리
 {
 	Vnum	3034
-	Leader	¸Á·®Á·¿ø°Å¸®	3303
-	1	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	2	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	망량족원거리	3303
+	1	망량족상급졸개	3302
+	2	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµ_3035_¸Á·®Á·¿ø°Å¸®
+Group	악룡군도_3035_망량족원거리
 {
 	Vnum	3035
-	Leader	¸Á·®Á·¿ø°Å¸®	3303
-	1	¸Á·®Á·¿ø°Å¸®	3303
-	2	¸Á·®Á·¿ø°Å¸®	3303
+	Leader	망량족원거리	3303
+	1	망량족원거리	3303
+	2	망량족원거리	3303
 }
 
-Group	¾Ç·æ±ºµµ_3036_¸Á·®Á·Àå±º
+Group	악룡군도_3036_망량족장군
 {
 	Vnum	3036
-	Leader	¸Á·®Á·Àå±º	3304
-	1	¸Á·®Á·¿ø°Å¸®	3303
-	2	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	3	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	망량족장군	3304
+	1	망량족원거리	3303
+	2	망량족상급졸개	3302
+	3	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµ_3037_¸Á·®Á·»ó±ŞÀå¼ö
+Group	악룡군도_3037_망량족상급장수
 {
 	Vnum	3037
-	Leader	¸Á·®Á·»ó±ŞÀå¼ö	3305
-	1	¸Á·®Á·Àå±º	3304
-	2	¸Á·®Á·Àå±º	3304
-	3	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	4	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	망량족상급장수	3305
+	1	망량족장군	3304
+	2	망량족장군	3304
+	3	망량족상급졸개	3302
+	4	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµ_3038_¸Á·®Á·º¸½º
+Group	악룡군도_3038_망량족보스
 {
 	Vnum	3038
-	Leader	¸Á·®Á·º¸½º	3390
-	1	¸Á·®Á·»ó±ŞÀå¼ö	3305
-	2	¸Á·®Á·»ó±ŞÀå¼ö	3305
-	3	¸Á·®Á·Àå±º	3304
-	4	¸Á·®Á·Àå±º	3304
-	5	¸Á·®Á·Àå±º	3304
-	6	¸Á·®Á·¿ø°Å¸®	3303
-	7	¸Á·®Á·¿ø°Å¸®	3303
-	8	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	9	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	10	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	11	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	망량족보스	3390
+	1	망량족상급장수	3305
+	2	망량족상급장수	3305
+	3	망량족장군	3304
+	4	망량족장군	3304
+	5	망량족장군	3304
+	6	망량족원거리	3303
+	7	망량족원거리	3303
+	8	망량족상급졸개	3302
+	9	망량족상급졸개	3302
+	10	망량족상급졸개	3302
+	11	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµ_3039_¸Á·®Á·ÃÖÁ¾º¸½º
+Group	악룡군도_3039_망량족최종보스
 {
 	Vnum	3039
-	Leader	¸Á·®Á·ÃÖÁ¾º¸½º	3391
-	1	¸Á·®Á·»ó±ŞÀå¼ö	3305
-	2	¸Á·®Á·»ó±ŞÀå¼ö	3305
-	3	¸Á·®Á·Àå±º	3304
-	4	¸Á·®Á·Àå±º	3304
-	5	¸Á·®Á·Àå±º	3304
-	6	¸Á·®Á·¿ø°Å¸®	3303
-	7	¸Á·®Á·¿ø°Å¸®	3303
-	8	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	9	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	10	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	11	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	망량족최종보스	3391
+	1	망량족상급장수	3305
+	2	망량족상급장수	3305
+	3	망량족장군	3304
+	4	망량족장군	3304
+	5	망량족장군	3304
+	6	망량족원거리	3303
+	7	망량족원거리	3303
+	8	망량족상급졸개	3302
+	9	망량족상급졸개	3302
+	10	망량족상급졸개	3302
+	11	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµ_3041_¾îÀÎÁ·Á¹°³
+Group	악룡군도_3041_어인족졸개
 {
 	Vnum	3041
-	Leader	¾îÀÎÁ·Á¹°³	3401
-	1	¾îÀÎÁ·Á¹°³	3401
-	2	¾îÀÎÁ·Á¹°³	3401
+	Leader	어인족졸개	3401
+	1	어인족졸개	3401
+	2	어인족졸개	3401
 }
 
-Group	¾Ç·æ±ºµµ_3042_¾îÀÎÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3042_어인족상급졸개
 {
 	Vnum	3042
-	Leader	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	1	¾îÀÎÁ·Á¹°³	3401
-	2	¾îÀÎÁ·Á¹°³	3401
+	Leader	어인족상급졸개	3402
+	1	어인족졸개	3401
+	2	어인족졸개	3401
 }
 
-Group	¾Ç·æ±ºµµ_3043_¾îÀÎÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3043_어인족상급졸개
 {
 	Vnum	3043
-	Leader	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	1	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	2	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
+	Leader	어인족상급졸개	3402
+	1	어인족상급졸개	3402
+	2	어인족상급졸개	3402
 }
 
-Group	¾Ç·æ±ºµµ_3044_¾îÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3044_어인족원거리
 {
 	Vnum	3044
-	Leader	¾îÀÎÁ·¿ø°Å¸®	3403
-	1	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	2	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
+	Leader	어인족원거리	3403
+	1	어인족상급졸개	3402
+	2	어인족상급졸개	3402
 }
 
-Group	¾Ç·æ±ºµµ_3045_¾îÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3045_어인족원거리
 {
 	Vnum	3045
-	Leader	¾îÀÎÁ·¿ø°Å¸®	3403
-	1	¾îÀÎÁ·¿ø°Å¸®	3403
-	2	¾îÀÎÁ·¿ø°Å¸®	3403
+	Leader	어인족원거리	3403
+	1	어인족원거리	3403
+	2	어인족원거리	3403
 }
 
-Group	¾Ç·æ±ºµµ_3046_¾îÀÎÁ·Àå±º
+Group	악룡군도_3046_어인족장군
 {
 	Vnum	3046
-	Leader	¾îÀÎÁ·Àå±º	3404
-	1	¾îÀÎÁ·¿ø°Å¸®	3403
-	2	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	3	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
+	Leader	어인족장군	3404
+	1	어인족원거리	3403
+	2	어인족상급졸개	3402
+	3	어인족상급졸개	3402
 }
 
-Group	¾Ç·æ±ºµµ_3047_¾îÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3047_어인족상급장수
 {
 	Vnum	3047
-	Leader	¾îÀÎÁ·»ó±ŞÀå¼ö	3405
-	1	¾îÀÎÁ·Àå±º	3404
-	2	¾îÀÎÁ·Àå±º	3404
-	3	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	4	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
+	Leader	어인족상급장수	3405
+	1	어인족장군	3404
+	2	어인족장군	3404
+	3	어인족상급졸개	3402
+	4	어인족상급졸개	3402
 }
 
-Group	¾Ç·æ±ºµµ_3048_¾îÀÎÁ·º¸½º
+Group	악룡군도_3048_어인족보스
 {
 	Vnum	3048
-	Leader	¾îÀÎÁ·º¸½º	3490
-	1	¾îÀÎÁ·»ó±ŞÀå¼ö	3405
-	2	¾îÀÎÁ·»ó±ŞÀå¼ö	3405
-	3	¾îÀÎÁ·Àå±º	3404
-	4	¾îÀÎÁ·Àå±º	3404
-	5	¾îÀÎÁ·Àå±º	3404
-	6	¾îÀÎÁ·¿ø°Å¸®	3403
-	7	¾îÀÎÁ·¿ø°Å¸®	3403
-	8	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	9	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	10	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	11	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
+	Leader	어인족보스	3490
+	1	어인족상급장수	3405
+	2	어인족상급장수	3405
+	3	어인족장군	3404
+	4	어인족장군	3404
+	5	어인족장군	3404
+	6	어인족원거리	3403
+	7	어인족원거리	3403
+	8	어인족상급졸개	3402
+	9	어인족상급졸개	3402
+	10	어인족상급졸개	3402
+	11	어인족상급졸개	3402
 }
 
-Group	¾Ç·æ±ºµµ_3049_¾îÀÎÁ·ÃÖÁ¾º¸½º
+Group	악룡군도_3049_어인족최종보스
 {
 	Vnum	3049
-	Leader	¾îÀÎÁ·ÃÖÁ¾º¸½º	3491
-	1	¾îÀÎÁ·»ó±ŞÀå¼ö	3405
-	2	¾îÀÎÁ·»ó±ŞÀå¼ö	3405
-	3	¾îÀÎÁ·Àå±º	3404
-	4	¾îÀÎÁ·Àå±º	3404
-	5	¾îÀÎÁ·Àå±º	3404
-	6	¾îÀÎÁ·¿ø°Å¸®	3403
-	7	¾îÀÎÁ·¿ø°Å¸®	3403
-	8	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	9	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	10	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
-	11	¾îÀÎÁ·»ó±ŞÁ¹°³	3402
+	Leader	어인족최종보스	3491
+	1	어인족상급장수	3405
+	2	어인족상급장수	3405
+	3	어인족장군	3404
+	4	어인족장군	3404
+	5	어인족장군	3404
+	6	어인족원거리	3403
+	7	어인족원거리	3403
+	8	어인족상급졸개	3402
+	9	어인족상급졸개	3402
+	10	어인족상급졸개	3402
+	11	어인족상급졸개	3402
 }
 
-Group	¾Ç·æ±ºµµ_3051_ºÓÀºµµÀû´ÜÁ¹°³
+Group	악룡군도_3051_붉은도적단졸개
 {
 	Vnum	3051
-	Leader	ºÓÀºµµÀû´ÜÁ¹°³	3501
-	1	ºÓÀºµµÀû´ÜÁ¹°³	3501
-	2	ºÓÀºµµÀû´ÜÁ¹°³	3501
+	Leader	붉은도적단졸개	3501
+	1	붉은도적단졸개	3501
+	2	붉은도적단졸개	3501
 }
 
-Group	¾Ç·æ±ºµµ_3052_ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³
+Group	악룡군도_3052_붉은도적단상급졸개
 {
 	Vnum	3052
-	Leader	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	1	ºÓÀºµµÀû´ÜÁ¹°³	3501
-	2	ºÓÀºµµÀû´ÜÁ¹°³	3501
+	Leader	붉은도적단상급졸개	3502
+	1	붉은도적단졸개	3501
+	2	붉은도적단졸개	3501
 }
 
-Group	¾Ç·æ±ºµµ_3053_ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³
+Group	악룡군도_3053_붉은도적단상급졸개
 {
 	Vnum	3053
-	Leader	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	1	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	2	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
+	Leader	붉은도적단상급졸개	3502
+	1	붉은도적단상급졸개	3502
+	2	붉은도적단상급졸개	3502
 }
 
-Group	¾Ç·æ±ºµµ_3054_ºÓÀºµµÀû´Ü¿ø°Å¸®
+Group	악룡군도_3054_붉은도적단원거리
 {
 	Vnum	3054
-	Leader	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	1	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	2	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
+	Leader	붉은도적단원거리	3503
+	1	붉은도적단상급졸개	3502
+	2	붉은도적단상급졸개	3502
 }
 
-Group	¾Ç·æ±ºµµ_3055_ºÓÀºµµÀû´Ü¿ø°Å¸®
+Group	악룡군도_3055_붉은도적단원거리
 {
 	Vnum	3055
-	Leader	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	1	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	2	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
+	Leader	붉은도적단원거리	3503
+	1	붉은도적단원거리	3503
+	2	붉은도적단원거리	3503
 }
 
-Group	¾Ç·æ±ºµµ_3056_ºÓÀºµµÀû´ÜÀå±º
+Group	악룡군도_3056_붉은도적단장군
 {
 	Vnum	3056
-	Leader	ºÓÀºµµÀû´ÜÀå±º	3504
-	1	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	2	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	3	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
+	Leader	붉은도적단장군	3504
+	1	붉은도적단원거리	3503
+	2	붉은도적단상급졸개	3502
+	3	붉은도적단상급졸개	3502
 }
 
-Group	¾Ç·æ±ºµµ_3057_ºÓÀºµµÀû´Ü»ó±ŞÀå¼ö
+Group	악룡군도_3057_붉은도적단상급장수
 {
 	Vnum	3057
-	Leader	ºÓÀºµµÀû´Ü»ó±ŞÀå¼ö	3505
-	1	ºÓÀºµµÀû´ÜÀå±º	3504
-	2	ºÓÀºµµÀû´ÜÀå±º	3504
-	3	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	4	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
+	Leader	붉은도적단상급장수	3505
+	1	붉은도적단장군	3504
+	2	붉은도적단장군	3504
+	3	붉은도적단상급졸개	3502
+	4	붉은도적단상급졸개	3502
 }
 
-Group	¾Ç·æ±ºµµ_3058_ºÓÀºµµÀû´Üº¸½º
+Group	악룡군도_3058_붉은도적단보스
 {
 	Vnum	3058
-	Leader	ºÓÀºµµÀû´Üº¸½º	3590
-	1	ºÓÀºµµÀû´Ü»ó±ŞÀå¼ö	3505
-	2	ºÓÀºµµÀû´Ü»ó±ŞÀå¼ö	3505
-	3	ºÓÀºµµÀû´ÜÀå±º	3504
-	4	ºÓÀºµµÀû´ÜÀå±º	3504
-	5	ºÓÀºµµÀû´ÜÀå±º	3504
-	6	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	7	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	8	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	9	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	10	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	11	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
+	Leader	붉은도적단보스	3590
+	1	붉은도적단상급장수	3505
+	2	붉은도적단상급장수	3505
+	3	붉은도적단장군	3504
+	4	붉은도적단장군	3504
+	5	붉은도적단장군	3504
+	6	붉은도적단원거리	3503
+	7	붉은도적단원거리	3503
+	8	붉은도적단상급졸개	3502
+	9	붉은도적단상급졸개	3502
+	10	붉은도적단상급졸개	3502
+	11	붉은도적단상급졸개	3502
 }
 
-Group	¾Ç·æ±ºµµ_3059_ºÓÀºµµÀû´ÜÃÖÁ¾º¸½º
+Group	악룡군도_3059_붉은도적단최종보스
 {
 	Vnum	3059
-	Leader	ºÓÀºµµÀû´ÜÃÖÁ¾º¸½º	3591
-	1	ºÓÀºµµÀû´Ü»ó±ŞÀå¼ö	3505
-	2	ºÓÀºµµÀû´Ü»ó±ŞÀå¼ö	3505
-	3	ºÓÀºµµÀû´ÜÀå±º	3504
-	4	ºÓÀºµµÀû´ÜÀå±º	3504
-	5	ºÓÀºµµÀû´ÜÀå±º	3504
-	6	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	7	ºÓÀºµµÀû´Ü¿ø°Å¸®	3503
-	8	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	9	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	10	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
-	11	ºÓÀºµµÀû´Ü»ó±ŞÁ¹°³	3502
+	Leader	붉은도적단최종보스	3591
+	1	붉은도적단상급장수	3505
+	2	붉은도적단상급장수	3505
+	3	붉은도적단장군	3504
+	4	붉은도적단장군	3504
+	5	붉은도적단장군	3504
+	6	붉은도적단원거리	3503
+	7	붉은도적단원거리	3503
+	8	붉은도적단상급졸개	3502
+	9	붉은도적단상급졸개	3502
+	10	붉은도적단상급졸개	3502
+	11	붉은도적단상급졸개	3502
 }
 
-Group	¾Ç·æ±ºµµ_3061_ºÓÀºµµÀû´Ü2Á¹°³
+Group	악룡군도_3061_붉은도적단2졸개
 {
 	Vnum	3061
-	Leader	ºÓÀºµµÀû´Ü2Á¹°³	3551
-	1	ºÓÀºµµÀû´Ü2Á¹°³	3551
-	2	ºÓÀºµµÀû´Ü2Á¹°³	3551
+	Leader	붉은도적단2졸개	3551
+	1	붉은도적단2졸개	3551
+	2	붉은도적단2졸개	3551
 }
 
-Group	¾Ç·æ±ºµµ_3062_ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³
+Group	악룡군도_3062_붉은도적단2상급졸개
 {
 	Vnum	3062
-	Leader	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	1	ºÓÀºµµÀû´Ü2Á¹°³	3551
-	2	ºÓÀºµµÀû´Ü2Á¹°³	3551
+	Leader	붉은도적단2상급졸개	3552
+	1	붉은도적단2졸개	3551
+	2	붉은도적단2졸개	3551
 }
 
-Group	¾Ç·æ±ºµµ_3063_ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³
+Group	악룡군도_3063_붉은도적단2상급졸개
 {
 	Vnum	3063
-	Leader	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	1	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	2	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
+	Leader	붉은도적단2상급졸개	3552
+	1	붉은도적단2상급졸개	3552
+	2	붉은도적단2상급졸개	3552
 }
 
-Group	¾Ç·æ±ºµµ_3064_ºÓÀºµµÀû´Ü2¿ø°Å¸®
+Group	악룡군도_3064_붉은도적단2원거리
 {
 	Vnum	3064
-	Leader	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	1	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	2	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
+	Leader	붉은도적단2원거리	3553
+	1	붉은도적단2상급졸개	3552
+	2	붉은도적단2상급졸개	3552
 }
 
-Group	¾Ç·æ±ºµµ_3065_ºÓÀºµµÀû´Ü2¿ø°Å¸®
+Group	악룡군도_3065_붉은도적단2원거리
 {
 	Vnum	3065
-	Leader	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	1	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	2	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
+	Leader	붉은도적단2원거리	3553
+	1	붉은도적단2원거리	3553
+	2	붉은도적단2원거리	3553
 }
 
-Group	¾Ç·æ±ºµµ_3066_ºÓÀºµµÀû´Ü2Àå±º
+Group	악룡군도_3066_붉은도적단2장군
 {
 	Vnum	3066
-	Leader	ºÓÀºµµÀû´Ü2Àå±º	3554
-	1	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	2	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	3	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
+	Leader	붉은도적단2장군	3554
+	1	붉은도적단2원거리	3553
+	2	붉은도적단2상급졸개	3552
+	3	붉은도적단2상급졸개	3552
 }
 
-Group	¾Ç·æ±ºµµ_3067_ºÓÀºµµÀû´Ü2»ó±ŞÀå¼ö
+Group	악룡군도_3067_붉은도적단2상급장수
 {
 	Vnum	3067
-	Leader	ºÓÀºµµÀû´Ü2»ó±ŞÀå¼ö	3555
-	1	ºÓÀºµµÀû´Ü2Àå±º	3554
-	2	ºÓÀºµµÀû´Ü2Àå±º	3554
-	3	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	4	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
+	Leader	붉은도적단2상급장수	3555
+	1	붉은도적단2장군	3554
+	2	붉은도적단2장군	3554
+	3	붉은도적단2상급졸개	3552
+	4	붉은도적단2상급졸개	3552
 }
 
-Group	¾Ç·æ±ºµµ_3068_ºÓÀºµµÀû´Ü2º¸½º
+Group	악룡군도_3068_붉은도적단2보스
 {
 	Vnum	3068
-	Leader	ºÓÀºµµÀû´Ü2º¸½º	3595
-	1	ºÓÀºµµÀû´Ü2»ó±ŞÀå¼ö	3555
-	2	ºÓÀºµµÀû´Ü2»ó±ŞÀå¼ö	3555
-	3	ºÓÀºµµÀû´Ü2Àå±º	3554
-	4	ºÓÀºµµÀû´Ü2Àå±º	3554
-	5	ºÓÀºµµÀû´Ü2Àå±º	3554
-	6	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	7	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	8	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	9	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	10	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	11	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
+	Leader	붉은도적단2보스	3595
+	1	붉은도적단2상급장수	3555
+	2	붉은도적단2상급장수	3555
+	3	붉은도적단2장군	3554
+	4	붉은도적단2장군	3554
+	5	붉은도적단2장군	3554
+	6	붉은도적단2원거리	3553
+	7	붉은도적단2원거리	3553
+	8	붉은도적단2상급졸개	3552
+	9	붉은도적단2상급졸개	3552
+	10	붉은도적단2상급졸개	3552
+	11	붉은도적단2상급졸개	3552
 }
 
-Group	¾Ç·æ±ºµµ_3069_ºÓÀºµµÀû´Ü2ÃÖÁ¾º¸½º
+Group	악룡군도_3069_붉은도적단2최종보스
 {
 	Vnum	3069
-	Leader	ºÓÀºµµÀû´Ü2ÃÖÁ¾º¸½º	3596
-	1	ºÓÀºµµÀû´Ü2»ó±ŞÀå¼ö	3555
-	2	ºÓÀºµµÀû´Ü2»ó±ŞÀå¼ö	3555
-	3	ºÓÀºµµÀû´Ü2Àå±º	3554
-	4	ºÓÀºµµÀû´Ü2Àå±º	3554
-	5	ºÓÀºµµÀû´Ü2Àå±º	3554
-	6	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	7	ºÓÀºµµÀû´Ü2¿ø°Å¸®	3553
-	8	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	9	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	10	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
-	11	ºÓÀºµµÀû´Ü2»ó±ŞÁ¹°³	3552
+	Leader	붉은도적단2최종보스	3596
+	1	붉은도적단2상급장수	3555
+	2	붉은도적단2상급장수	3555
+	3	붉은도적단2장군	3554
+	4	붉은도적단2장군	3554
+	5	붉은도적단2장군	3554
+	6	붉은도적단2원거리	3553
+	7	붉은도적단2원거리	3553
+	8	붉은도적단2상급졸개	3552
+	9	붉은도적단2상급졸개	3552
+	10	붉은도적단2상급졸개	3552
+	11	붉은도적단2상급졸개	3552
 }
 
-Group	¾Ç·æ±ºµµ_3071_°©°¢·ùÁ¹°³
+Group	악룡군도_3071_갑각류졸개
 {
 	Vnum	3071
-	Leader	°©°¢·ùÁ¹°³	3601
-	1	°©°¢·ùÁ¹°³	3601
-	2	°©°¢·ùÁ¹°³	3601
+	Leader	갑각류졸개	3601
+	1	갑각류졸개	3601
+	2	갑각류졸개	3601
 }
 
-Group	¾Ç·æ±ºµµ_3072_°©°¢·ù»ó±ŞÁ¹°³
+Group	악룡군도_3072_갑각류상급졸개
 {
 	Vnum	3072
-	Leader	°©°¢·ù»ó±ŞÁ¹°³	3602
-	1	°©°¢·ùÁ¹°³	3601
-	2	°©°¢·ùÁ¹°³	3601
+	Leader	갑각류상급졸개	3602
+	1	갑각류졸개	3601
+	2	갑각류졸개	3601
 }
 
-Group	¾Ç·æ±ºµµ_3073_°©°¢·ù»ó±ŞÁ¹°³
+Group	악룡군도_3073_갑각류상급졸개
 {
 	Vnum	3073
-	Leader	°©°¢·ù»ó±ŞÁ¹°³	3602
-	1	°©°¢·ù»ó±ŞÁ¹°³	3602
-	2	°©°¢·ù»ó±ŞÁ¹°³	3602
+	Leader	갑각류상급졸개	3602
+	1	갑각류상급졸개	3602
+	2	갑각류상급졸개	3602
 }
 
-Group	¾Ç·æ±ºµµ_3074_°©°¢·ù¿ø°Å¸®
+Group	악룡군도_3074_갑각류원거리
 {
 	Vnum	3074
-	Leader	°©°¢·ù¿ø°Å¸®	3603
-	1	°©°¢·ù»ó±ŞÁ¹°³	3602
-	2	°©°¢·ù»ó±ŞÁ¹°³	3602
+	Leader	갑각류원거리	3603
+	1	갑각류상급졸개	3602
+	2	갑각류상급졸개	3602
 }
 
-Group	¾Ç·æ±ºµµ_3075_°©°¢·ù¿ø°Å¸®
+Group	악룡군도_3075_갑각류원거리
 {
 	Vnum	3075
-	Leader	°©°¢·ù¿ø°Å¸®	3603
-	1	°©°¢·ù¿ø°Å¸®	3603
-	2	°©°¢·ù¿ø°Å¸®	3603
+	Leader	갑각류원거리	3603
+	1	갑각류원거리	3603
+	2	갑각류원거리	3603
 }
 
-Group	¾Ç·æ±ºµµ_3076_°©°¢·ùÀå±º
+Group	악룡군도_3076_갑각류장군
 {
 	Vnum	3076
-	Leader	°©°¢·ùÀå±º	3604
-	1	°©°¢·ù¿ø°Å¸®	3603
-	2	°©°¢·ù»ó±ŞÁ¹°³	3602
-	3	°©°¢·ù»ó±ŞÁ¹°³	3602
+	Leader	갑각류장군	3604
+	1	갑각류원거리	3603
+	2	갑각류상급졸개	3602
+	3	갑각류상급졸개	3602
 }
 
-Group	¾Ç·æ±ºµµ_3077_°©°¢·ù»ó±ŞÀå¼ö
+Group	악룡군도_3077_갑각류상급장수
 {
 	Vnum	3077
-	Leader	°©°¢·ù»ó±ŞÀå¼ö	3605
-	1	°©°¢·ùÀå±º	3604
-	2	°©°¢·ùÀå±º	3604
-	3	°©°¢·ù»ó±ŞÁ¹°³	3602
-	4	°©°¢·ù»ó±ŞÁ¹°³	3602
+	Leader	갑각류상급장수	3605
+	1	갑각류장군	3604
+	2	갑각류장군	3604
+	3	갑각류상급졸개	3602
+	4	갑각류상급졸개	3602
 }
 
-Group	¾Ç·æ±ºµµ_3078_°©°¢·ù»ó±ŞÀå¼ö
+Group	악룡군도_3078_갑각류상급장수
 {
 	Vnum	3078
-	Leader	°©°¢·ù»ó±ŞÀå¼ö	3690
-	1	°©°¢·ù»ó±ŞÀå¼ö	3605
-	2	°©°¢·ù»ó±ŞÀå¼ö	3605
-	3	°©°¢·ùÀå±º	3604
-	4	°©°¢·ùÀå±º	3604
-	5	°©°¢·ùÀå±º	3604
-	6	°©°¢·ù¿ø°Å¸®	3603
-	7	°©°¢·ù¿ø°Å¸®	3603
-	8	°©°¢·ù»ó±ŞÁ¹°³	3602
-	9	°©°¢·ù»ó±ŞÁ¹°³	3602
-	10	°©°¢·ù»ó±ŞÁ¹°³	3602
-	11	°©°¢·ù»ó±ŞÁ¹°³	3602
+	Leader	갑각류상급장수	3690
+	1	갑각류상급장수	3605
+	2	갑각류상급장수	3605
+	3	갑각류장군	3604
+	4	갑각류장군	3604
+	5	갑각류장군	3604
+	6	갑각류원거리	3603
+	7	갑각류원거리	3603
+	8	갑각류상급졸개	3602
+	9	갑각류상급졸개	3602
+	10	갑각류상급졸개	3602
+	11	갑각류상급졸개	3602
 }
 
-Group	¾Ç·æ±ºµµ_3079_°©°¢·ù»ó±ŞÀå¼ö
+Group	악룡군도_3079_갑각류상급장수
 {
 	Vnum	3079
-	Leader	°©°¢·ù»ó±ŞÀå¼ö	3691
-	1	°©°¢·ù»ó±ŞÀå¼ö	3605
-	2	°©°¢·ù»ó±ŞÀå¼ö	3605
-	3	°©°¢·ùÀå±º	3604
-	4	°©°¢·ùÀå±º	3604
-	5	°©°¢·ùÀå±º	3604
-	6	°©°¢·ù¿ø°Å¸®	3603
-	7	°©°¢·ù¿ø°Å¸®	3603
-	8	°©°¢·ù»ó±ŞÁ¹°³	3602
-	9	°©°¢·ù»ó±ŞÁ¹°³	3602
-	10	°©°¢·ù»ó±ŞÁ¹°³	3602
-	11	°©°¢·ù»ó±ŞÁ¹°³	3602
+	Leader	갑각류상급장수	3691
+	1	갑각류상급장수	3605
+	2	갑각류상급장수	3605
+	3	갑각류장군	3604
+	4	갑각류장군	3604
+	5	갑각류장군	3604
+	6	갑각류원거리	3603
+	7	갑각류원거리	3603
+	8	갑각류상급졸개	3602
+	9	갑각류상급졸개	3602
+	10	갑각류상급졸개	3602
+	11	갑각류상급졸개	3602
 }
 
-Group	¾Ç·æ±ºµµ_3081_°ÅÀÎÁ·Á¹°³
+Group	악룡군도_3081_거인족졸개
 {
 	Vnum	3081
-	Leader	°ÅÀÎÁ·Á¹°³	3701
-	1	°ÅÀÎÁ·Á¹°³	3701
-	2	°ÅÀÎÁ·Á¹°³	3701
+	Leader	거인족졸개	3701
+	1	거인족졸개	3701
+	2	거인족졸개	3701
 }
 
-Group	¾Ç·æ±ºµµ_3082_°ÅÀÎÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3082_거인족상급졸개
 {
 	Vnum	3082
-	Leader	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	1	°ÅÀÎÁ·Á¹°³	3701
-	2	°ÅÀÎÁ·Á¹°³	3701
+	Leader	거인족상급졸개	3702
+	1	거인족졸개	3701
+	2	거인족졸개	3701
 }
 
-Group	¾Ç·æ±ºµµ_3083_°ÅÀÎÁ·»ó±ŞÁ¹°³
+Group	악룡군도_3083_거인족상급졸개
 {
 	Vnum	3083
-	Leader	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	1	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	2	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
+	Leader	거인족상급졸개	3702
+	1	거인족상급졸개	3702
+	2	거인족상급졸개	3702
 }
 
-Group	¾Ç·æ±ºµµ_3084_°ÅÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3084_거인족원거리
 {
 	Vnum	3084
-	Leader	°ÅÀÎÁ·¿ø°Å¸®	3703
-	1	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	2	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
+	Leader	거인족원거리	3703
+	1	거인족상급졸개	3702
+	2	거인족상급졸개	3702
 }
 
-Group	¾Ç·æ±ºµµ_3085_°ÅÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3085_거인족원거리
 {
 	Vnum	3085
-	Leader	°ÅÀÎÁ·¿ø°Å¸®	3703
-	1	°ÅÀÎÁ·¿ø°Å¸®	3703
-	2	°ÅÀÎÁ·¿ø°Å¸®	3703
+	Leader	거인족원거리	3703
+	1	거인족원거리	3703
+	2	거인족원거리	3703
 }
 
-Group	¾Ç·æ±ºµµ_3086_°ÅÀÎÁ·Àå±º
+Group	악룡군도_3086_거인족장군
 {
 	Vnum	3086
-	Leader	°ÅÀÎÁ·Àå±º	3704
-	1	°ÅÀÎÁ·¿ø°Å¸®	3703
-	2	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	3	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
+	Leader	거인족장군	3704
+	1	거인족원거리	3703
+	2	거인족상급졸개	3702
+	3	거인족상급졸개	3702
 }
 
-Group	¾Ç·æ±ºµµ_3087_°ÅÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3087_거인족상급장수
 {
 	Vnum	3087
-	Leader	°ÅÀÎÁ·»ó±ŞÀå¼ö	3705
-	1	°ÅÀÎÁ·Àå±º	3704
-	2	°ÅÀÎÁ·Àå±º	3704
-	3	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	4	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
+	Leader	거인족상급장수	3705
+	1	거인족장군	3704
+	2	거인족장군	3704
+	3	거인족상급졸개	3702
+	4	거인족상급졸개	3702
 }
 
-Group	¾Ç·æ±ºµµ_3088_°ÅÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3088_거인족상급장수
 {
 	Vnum	3088
-	Leader	°ÅÀÎÁ·»ó±ŞÀå¼ö	3790
-	1	°ÅÀÎÁ·»ó±ŞÀå¼ö	3705
-	2	°ÅÀÎÁ·»ó±ŞÀå¼ö	3705
-	3	°ÅÀÎÁ·Àå±º	3704
-	4	°ÅÀÎÁ·Àå±º	3704
-	5	°ÅÀÎÁ·Àå±º	3704
-	6	°ÅÀÎÁ·¿ø°Å¸®	3703
-	7	°ÅÀÎÁ·¿ø°Å¸®	3703
-	8	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	9	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	10	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	11	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
+	Leader	거인족상급장수	3790
+	1	거인족상급장수	3705
+	2	거인족상급장수	3705
+	3	거인족장군	3704
+	4	거인족장군	3704
+	5	거인족장군	3704
+	6	거인족원거리	3703
+	7	거인족원거리	3703
+	8	거인족상급졸개	3702
+	9	거인족상급졸개	3702
+	10	거인족상급졸개	3702
+	11	거인족상급졸개	3702
 }
 
-Group	¾Ç·æ±ºµµ_3089_°ÅÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3089_거인족상급장수
 {
 	Vnum	3089
-	Leader	°ÅÀÎÁ·»ó±ŞÀå¼ö	3791
-	1	°ÅÀÎÁ·»ó±ŞÀå¼ö	3705
-	2	°ÅÀÎÁ·»ó±ŞÀå¼ö	3705
-	3	°ÅÀÎÁ·Àå±º	3704
-	4	°ÅÀÎÁ·Àå±º	3704
-	5	°ÅÀÎÁ·Àå±º	3704
-	6	°ÅÀÎÁ·¿ø°Å¸®	3703
-	7	°ÅÀÎÁ·¿ø°Å¸®	3703
-	8	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	9	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	10	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
-	11	°ÅÀÎÁ·»ó±ŞÁ¹°³	3702
+	Leader	거인족상급장수	3791
+	1	거인족상급장수	3705
+	2	거인족상급장수	3705
+	3	거인족장군	3704
+	4	거인족장군	3704
+	5	거인족장군	3704
+	6	거인족원거리	3703
+	7	거인족원거리	3703
+	8	거인족상급졸개	3702
+	9	거인족상급졸개	3702
+	10	거인족상급졸개	3702
+	11	거인족상급졸개	3702
 }
 
-Group	¾Ç·æ±ºµµ_3091_ÀúÀÎÁ·Á¹°³
+Group	악룡군도_3091_저인족졸개
 {
 	Vnum	3091
-	Leader	ÀúÀÎÁ·Á¹°³	3801
-	1	ÀúÀÎÁ·Á¹°³	3801
-	2	ÀúÀÎÁ·Á¹°³	3801
+	Leader	저인족졸개	3801
+	1	저인족졸개	3801
+	2	저인족졸개	3801
 }
 
-Group	¾Ç·æ±ºµµ_3092_ÀúÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3092_저인족원거리
 {
 	Vnum	3092
-	Leader	ÀúÀÎÁ·¿ø°Å¸®	3802
-	1	ÀúÀÎÁ·Á¹°³	3801
-	2	ÀúÀÎÁ·Á¹°³	3801
+	Leader	저인족원거리	3802
+	1	저인족졸개	3801
+	2	저인족졸개	3801
 }
 
-Group	¾Ç·æ±ºµµ_3093_ÀúÀÎÁ·¿ø°Å¸®
+Group	악룡군도_3093_저인족원거리
 {
 	Vnum	3093
-	Leader	ÀúÀÎÁ·¿ø°Å¸®	3802
-	1	ÀúÀÎÁ·¿ø°Å¸®	3802
-	2	ÀúÀÎÁ·¿ø°Å¸®	3802
+	Leader	저인족원거리	3802
+	1	저인족원거리	3802
+	2	저인족원거리	3802
 }
 
-Group	¾Ç·æ±ºµµ_3094_ÀúÀÎÁ·¸¶¹ı»ç
+Group	악룡군도_3094_저인족마법사
 {
 	Vnum	3094
-	Leader	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	1	ÀúÀÎÁ·¿ø°Å¸®	3802
-	2	ÀúÀÎÁ·¿ø°Å¸®	3802
+	Leader	저인족마법사	3803
+	1	저인족원거리	3802
+	2	저인족원거리	3802
 }
 
-Group	¾Ç·æ±ºµµ_3095_ÀúÀÎÁ·¸¶¹ı»ç
+Group	악룡군도_3095_저인족마법사
 {
 	Vnum	3095
-	Leader	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	1	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	2	ÀúÀÎÁ·¸¶¹ı»ç	3803
+	Leader	저인족마법사	3803
+	1	저인족마법사	3803
+	2	저인족마법사	3803
 }
 
-Group	¾Ç·æ±ºµµ_3096_ÀúÀÎÁ·Àå¼ö
+Group	악룡군도_3096_저인족장수
 {
 	Vnum	3096
-	Leader	ÀúÀÎÁ·Àå¼ö	3804
-	1	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	2	ÀúÀÎÁ·¿ø°Å¸®	3802
-	3	ÀúÀÎÁ·¿ø°Å¸®	3802
+	Leader	저인족장수	3804
+	1	저인족마법사	3803
+	2	저인족원거리	3802
+	3	저인족원거리	3802
 }
 
-Group	¾Ç·æ±ºµµ_3097_ÀúÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3097_저인족상급장수
 {
 	Vnum	3097
-	Leader	ÀúÀÎÁ·»ó±ŞÀå¼ö	3805
-	1	ÀúÀÎÁ·Àå¼ö	3804
-	2	ÀúÀÎÁ·Àå¼ö	3804
-	3	ÀúÀÎÁ·¿ø°Å¸®	3802
-	4	ÀúÀÎÁ·¿ø°Å¸®	3802
+	Leader	저인족상급장수	3805
+	1	저인족장수	3804
+	2	저인족장수	3804
+	3	저인족원거리	3802
+	4	저인족원거리	3802
 }
 
-Group	¾Ç·æ±ºµµ_3098_ÀúÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3098_저인족상급장수
 {
 	Vnum	3098
-	Leader	ÀúÀÎÁ·»ó±ŞÀå¼ö	3890
-	1	ÀúÀÎÁ·»ó±ŞÀå¼ö	3805
-	2	ÀúÀÎÁ·»ó±ŞÀå¼ö	3805
-	3	ÀúÀÎÁ·Àå¼ö	3804
-	4	ÀúÀÎÁ·Àå¼ö	3804
-	5	ÀúÀÎÁ·Àå¼ö	3804
-	6	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	7	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	8	ÀúÀÎÁ·¿ø°Å¸®	3802
-	9	ÀúÀÎÁ·¿ø°Å¸®	3802
-	10	ÀúÀÎÁ·¿ø°Å¸®	3802
-	11	ÀúÀÎÁ·¿ø°Å¸®	3802
+	Leader	저인족상급장수	3890
+	1	저인족상급장수	3805
+	2	저인족상급장수	3805
+	3	저인족장수	3804
+	4	저인족장수	3804
+	5	저인족장수	3804
+	6	저인족마법사	3803
+	7	저인족마법사	3803
+	8	저인족원거리	3802
+	9	저인족원거리	3802
+	10	저인족원거리	3802
+	11	저인족원거리	3802
 }
 
-Group	¾Ç·æ±ºµµ_3099_ÀúÀÎÁ·»ó±ŞÀå¼ö
+Group	악룡군도_3099_저인족상급장수
 {
 	Vnum	3099
-	Leader	ÀúÀÎÁ·»ó±ŞÀå¼ö	3891
-	1	ÀúÀÎÁ·»ó±ŞÀå¼ö	3805
-	2	ÀúÀÎÁ·»ó±ŞÀå¼ö	3805
-	3	ÀúÀÎÁ·Àå¼ö	3804
-	4	ÀúÀÎÁ·Àå¼ö	3804
-	5	ÀúÀÎÁ·Àå¼ö	3804
-	6	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	7	ÀúÀÎÁ·¸¶¹ı»ç	3803
-	8	ÀúÀÎÁ·¿ø°Å¸®	3802
-	9	ÀúÀÎÁ·¿ø°Å¸®	3802
-	10	ÀúÀÎÁ·¿ø°Å¸®	3802
-	11	ÀúÀÎÁ·¿ø°Å¸®	3802
+	Leader	저인족상급장수	3891
+	1	저인족상급장수	3805
+	2	저인족상급장수	3805
+	3	저인족장수	3804
+	4	저인족장수	3804
+	5	저인족장수	3804
+	6	저인족마법사	3803
+	7	저인족마법사	3803
+	8	저인족원거리	3802
+	9	저인족원거리	3802
+	10	저인족원거리	3802
+	11	저인족원거리	3802
 }
 
-Group	¾Ç·æ±ºµµ°æºñº´
+Group	악룡군도경비병
 {
 	Vnum	12008
 	Leader	.	20025
-	1	¿ëµÎ°÷°æºñº´	20373
+	1	용두곳경비병	20373
 }
 
-Group	¾Ç·æ±ºµµQuestMobGroup001
+Group	악룡군도QuestMobGroup001
 {
 	Vnum	20001
-	Leader	Áö¹«½Å¿Õ	3904
-	1	¿Ü¾ÈÅõ±ÍÁ·¿ø°Å¸®	3103
-	2	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
-	3	¿Ü¾ÈÅõ±ÍÁ·»ó±ŞÁ¹°³	3102
+	Leader	지무신왕	3904
+	1	외안투귀족원거리	3103
+	2	외안투귀족상급졸개	3102
+	3	외안투귀족상급졸개	3102
 }
 
-Group	¾Ç·æ±ºµµQuestMobGroup002
+Group	악룡군도QuestMobGroup002
 {
 	Vnum	20002
-	Leader	Ãµ¹«½Å³à	3905
-	1	¸Á·®Á·»ó±ŞÀå¼ö	3305
-	2	¸Á·®Á·Àå±º	3304
-	3	¸Á·®Á·Àå±º	3304
-	4	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	5	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	천무신녀	3905
+	1	망량족상급장수	3305
+	2	망량족장군	3304
+	3	망량족장군	3304
+	4	망량족상급졸개	3302
+	5	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµQuestMobGroup003
+Group	악룡군도QuestMobGroup003
 {
 	Vnum	20003
-	Leader	ÁøÃµ¹«½Å³à	3906
-	1	¸Á·®Á·»ó±ŞÀå¼ö	3305
-	2	¸Á·®Á·Àå±º	3304
-	3	¸Á·®Á·Àå±º	3304
-	4	¸Á·®Á·»ó±ŞÁ¹°³	3302
-	5	¸Á·®Á·»ó±ŞÁ¹°³	3302
+	Leader	진천무신녀	3906
+	1	망량족상급장수	3305
+	2	망량족장군	3304
+	3	망량족장군	3304
+	4	망량족상급졸개	3302
+	5	망량족상급졸개	3302
 }
 
-Group	¾Ç·æ±ºµµQuestMobGroup004
+Group	악룡군도QuestMobGroup004
 {
 	Vnum	20004
-	Leader	Èæ»ç´ÜÀå	3910
-	1	Èæ»ç´ë»ó±ŞÀå±º	3909
-	2	Èæ»ç´ëÀå¼ö	3908
-	3	Èæ»ç´ëÀå¼ö	3908
-	4	Èæ»ç´ë±Ã¼ö	3907
-	5	Èæ»ç´ë±Ã¼ö	3907
+	Leader	흑사단장	3910
+	1	흑사대상급장군	3909
+	2	흑사대장수	3908
+	3	흑사대장수	3908
+	4	흑사대궁수	3907
+	5	흑사대궁수	3907
 }
 
-Group	Ã·Á¤¼®±¤¸Æ
+Group	첨정석광맥
 {
 	Vnum	30301
-	Leader	Ã·Á¤¼®±¤¸Æ	30301
+	Leader	첨정석광맥	30301
 }
 
 
-Group	È«¿Á±¤¸Æ
+Group	홍옥광맥
 {
 	Vnum	30302
-	Leader	È«¿Á±¤¸Æ	30302
+	Leader	홍옥광맥	30302
 }
 
 
-Group	¼®·ù¼®±¤¸Æ
+Group	석류석광맥
 {
 	Vnum	30303
-	Leader	¼®·ù¼®±¤¸Æ	30303
+	Leader	석류석광맥	30303
 }
 
 
-Group	³ìÁÖ¼®±¤¸Æ
+Group	녹주석광맥
 {
 	Vnum	30304
-	Leader	³ìÁÖ¼®±¤¸Æ	30304
+	Leader	녹주석광맥	30304
 }
 
 
-Group	Ã»¿Á±¤¸Æ
+Group	청옥광맥
 {
 	Vnum	30305
-	Leader	Ã»¿Á±¤¸Æ	30305
+	Leader	청옥광맥	30305
 }
 
-Group	Àû·æ¼º_6001_È­Á¤
+Group	적룡성_6001_화정
 {
 	Vnum	6001
-	Leader	È­Á¤	6001
-	1	È­Á¤	6001
-	2	È­Á¤	6001
+	Leader	화정	6001
+	1	화정	6001
+	2	화정	6001
 }
 
-Group	Àû·æ¼º_6002_¿°Á¤
+Group	적룡성_6002_염정
 {
 	Vnum	6002
-	Leader	¿°Á¤	6002
-	1	È­Á¤	6001
-	2	È­Á¤	6001
+	Leader	염정	6002
+	1	화정	6001
+	2	화정	6001
 }
 
-Group	Àû·æ¼º_6003_¿°Á¤
+Group	적룡성_6003_염정
 {
 	Vnum	6003
-	Leader	¿°Á¤	6002
-	1	¿°Á¤	6002
-	2	¿°Á¤	6002
+	Leader	염정	6002
+	1	염정	6002
+	2	염정	6002
 }
 
-Group	Àû·æ¼º_6004_±Ø¿­Á¤
+Group	적룡성_6004_극열정
 {
 	Vnum	6004
-	Leader	±Ø¿­Á¤	6003
-	1	¿°Á¤	6002
-	2	¿°Á¤	6002
+	Leader	극열정	6003
+	1	염정	6002
+	2	염정	6002
 }
 
-Group	Àû·æ¼º_6005_±Ø¿­Á¤
+Group	적룡성_6005_극열정
 {
 	Vnum	6005
-	Leader	±Ø¿­Á¤	6003
-	1	±Ø¿­Á¤	6003
-	2	±Ø¿­Á¤	6003
+	Leader	극열정	6003
+	1	극열정	6003
+	2	극열정	6003
 }
 
-Group	Àû·æ¼º_6006_Ç÷È­Á¤
+Group	적룡성_6006_혈화정
 {
 	Vnum	6006
-	Leader	Ç÷È­Á¤	6004
-	1	±Ø¿­Á¤	6003
-	2	¿°Á¤	6002
-	3	¿°Á¤	6002
+	Leader	혈화정	6004
+	1	극열정	6003
+	2	염정	6002
+	3	염정	6002
 }
 
-Group	Àû·æ¼º_6007_È­¸¶
+Group	적룡성_6007_화마
 {
 	Vnum	6007
-	Leader	È­¸¶	6005
-	1	Ç÷È­Á¤	6004
-	2	Ç÷È­Á¤	6004
-	3	¿°Á¤	6002
-	4	¿°Á¤	6002
+	Leader	화마	6005
+	1	혈화정	6004
+	2	혈화정	6004
+	3	염정	6002
+	4	염정	6002
 }
 
-Group	Àû·æ¼º_6008_¿°¸¶
+Group	적룡성_6008_염마
 {
 	Vnum	6008
-	Leader	¿°¸¶	6006
-	1	È­¸¶	6005
-	2	Ç÷È­Á¤	6004
-	3	Ç÷È­Á¤	6004
+	Leader	염마	6006
+	1	화마	6005
+	2	혈화정	6004
+	3	혈화정	6004
 }
 
-Group	Àû·æ¼º_6009_È­±«
+Group	적룡성_6009_화괴
 {
 	Vnum	6009
-	Leader	È­±«	6007
-	1	¿°¸¶	6006
-	2	¿°¸¶	6006
-	3	È­¸¶	6005
-	4	È­¸¶	6005
+	Leader	화괴	6007
+	1	염마	6006
+	2	염마	6006
+	3	화마	6005
+	4	화마	6005
 }
 
-Group	Àû·æ¼º_6010_¿°±«
+Group	적룡성_6010_염괴
 {
 	Vnum	6010
-	Leader	¿°±«	6008
-	1	È­±«	6007
-	2	¿°¸¶	6006
-	3	¿°¸¶	6006
+	Leader	염괴	6008
+	1	화괴	6007
+	2	염마	6006
+	3	염마	6006
 }
 
-Group	Àû·æ¼º_6011_ÃÊ¿­±«
+Group	적룡성_6011_초열괴
 {
 	Vnum	6011
-	Leader	ÃÊ¿­±«	6009
-	1	¿°±«	6008
-	2	¿°±«	6008
-	3	È­±«	6007
-	4	È­±«	6007
+	Leader	초열괴	6009
+	1	염괴	6008
+	2	염괴	6008
+	3	화괴	6007
+	4	화괴	6007
 }
 
-Group	Àû·æ¼º_6012_¾ß¸¶Ãµ
+Group	적룡성_6012_야마천
 {
 	Vnum	6012
-	Leader	¾ß¸¶Ãµ	6091
-	1	ÃÊ¿­±«	6009
-	2	ÃÊ¿­±«	6009
-	3	¿°±«	6008
-	4	¿°±«	6008
-	5	¿°±«	6008
-	6	È­±«	6007
-	7	È­±«	6007
-	8	È­±«	6007
-	9	¿°¸¶	6006
-	10	¿°¸¶	6006
-	11	¿°¸¶	6006
+	Leader	야마천	6091
+	1	초열괴	6009
+	2	초열괴	6009
+	3	염괴	6008
+	4	염괴	6008
+	5	염괴	6008
+	6	화괴	6007
+	7	화괴	6007
+	8	화괴	6007
+	9	염마	6006
+	10	염마	6006
+	11	염마	6006
 }
 
-Group	¹é·æÁö¼º_6051_ºùÁ¤
+Group	백룡지성_6051_빙정
 {
 	Vnum	6051
-	Leader	ºùÁ¤	6101
-	1	ºùÁ¤	6101
-	2	ºùÁ¤	6101
+	Leader	빙정	6101
+	1	빙정	6101
+	2	빙정	6101
 }
 
-Group	¹é·æÁö¼º_6052_³ÃÁ¤
+Group	백룡지성_6052_냉정
 {
 	Vnum	6052
-	Leader	³ÃÁ¤	6102
-	1	ºùÁ¤	6101
-	2	ºùÁ¤	6101
+	Leader	냉정	6102
+	1	빙정	6101
+	2	빙정	6101
 }
 
-Group	¹é·æÁö¼º_6053_³ÃÁ¤
+Group	백룡지성_6053_냉정
 {
 	Vnum	6053
-	Leader	³ÃÁ¤	6102
-	1	³ÃÁ¤	6102
-	2	³ÃÁ¤	6102
+	Leader	냉정	6102
+	1	냉정	6102
+	2	냉정	6102
 }
 
-Group	¹é·æÁö¼º_6054_±ØºùÁ¤
+Group	백룡지성_6054_극빙정
 {
 	Vnum	6054
-	Leader	±ØºùÁ¤	6103
-	1	³ÃÁ¤	6102
-	2	³ÃÁ¤	6102
+	Leader	극빙정	6103
+	1	냉정	6102
+	2	냉정	6102
 }
 
-Group	¹é·æÁö¼º_6055_±ØºùÁ¤
+Group	백룡지성_6055_극빙정
 {
 	Vnum	6055
-	Leader	±ØºùÁ¤	6103
-	1	±ØºùÁ¤	6103
-	2	±ØºùÁ¤	6103
+	Leader	극빙정	6103
+	1	극빙정	6103
+	2	극빙정	6103
 }
 
-Group	¹é·æÁö¼º_6056_ÇÑºùÁ¤
+Group	백룡지성_6056_한빙정
 {
 	Vnum	6056
-	Leader	ÇÑºùÁ¤	6104
-	1	±ØºùÁ¤	6103
-	2	³ÃÁ¤	6102
-	3	³ÃÁ¤	6102
+	Leader	한빙정	6104
+	1	극빙정	6103
+	2	냉정	6102
+	3	냉정	6102
 }
 
-Group	¹é·æÁö¼º_6057_ºù¸¶
+Group	백룡지성_6057_빙마
 {
 	Vnum	6057
-	Leader	ºù¸¶	6105
-	1	ÇÑºùÁ¤	6104
-	2	ÇÑºùÁ¤	6104
-	3	³ÃÁ¤	6102
-	4	³ÃÁ¤	6102
+	Leader	빙마	6105
+	1	한빙정	6104
+	2	한빙정	6104
+	3	냉정	6102
+	4	냉정	6102
 }
 
-Group	¹é·æÁö¼º_6058_³Ã¸¶
+Group	백룡지성_6058_냉마
 {
 	Vnum	6058
-	Leader	³Ã¸¶	6106
-	1	ºù¸¶	6105
-	2	ÇÑºùÁ¤	6104
-	3	ÇÑºùÁ¤	6104
+	Leader	냉마	6106
+	1	빙마	6105
+	2	한빙정	6104
+	3	한빙정	6104
 }
 
-Group	¹é·æÁö¼º_6059_ºù±«
+Group	백룡지성_6059_빙괴
 {
 	Vnum	6059
-	Leader	ºù±«	6107
-	1	³Ã¸¶	6106
-	2	³Ã¸¶	6106
-	3	ÇÑºùÁ¤	6104
-	4	ÇÑºùÁ¤	6104
+	Leader	빙괴	6107
+	1	냉마	6106
+	2	냉마	6106
+	3	한빙정	6104
+	4	한빙정	6104
 }
 
-Group	¹é·æÁö¼º_6060_ºù¸¶
+Group	백룡지성_6060_빙마
 {
 	Vnum	6060
-	Leader	ºù¸¶	6105
-	1	ÇÑºùÁ¤	6104
-	2	±ØºùÁ¤	6103
-	3	±ØºùÁ¤	6103
+	Leader	빙마	6105
+	1	한빙정	6104
+	2	극빙정	6103
+	3	극빙정	6103
 }
 
-Group	¹é·æÁö¼º_6061_³Ã¸¶
+Group	백룡지성_6061_냉마
 {
 	Vnum	6061
-	Leader	³Ã¸¶	6106
-	1	ºù¸¶	6105
-	2	ºù¸¶	6105
-	3	±ØºùÁ¤	6103
-	4	±ØºùÁ¤	6103
+	Leader	냉마	6106
+	1	빙마	6105
+	2	빙마	6105
+	3	극빙정	6103
+	4	극빙정	6103
 }
 
-Group	¹é·æÁö¼º_6062_ÇÑ¸¶ÀÇ
+Group	백룡지성_6062_한마의
 {
 	Vnum	6062
-	Leader	ÇÑ¸¶ÀÇ	6191
-	1	ÃÊ³Ã±«	6109
-	2	ÃÊ³Ã±«	6109
-	3	³Ã±«	6108
-	4	³Ã±«	6108
-	5	³Ã±«	6108
-	6	ºù±«	6107
-	7	ºù±«	6107
-	8	³Ã¸¶	6106
-	9	³Ã¸¶	6106
-	10	³Ã¸¶	6106
-	11	³Ã¸¶	6106
+	Leader	한마의	6191
+	1	초냉괴	6109
+	2	초냉괴	6109
+	3	냉괴	6108
+	4	냉괴	6108
+	5	냉괴	6108
+	6	빙괴	6107
+	7	빙괴	6107
+	8	냉마	6106
+	9	냉마	6106
+	10	냉마	6106
+	11	냉마	6106
 }
 
