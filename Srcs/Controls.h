@@ -10,11 +10,19 @@
 // =========================================================================
 
 //////////////////////////////////////////////////////////////////////////
+// ### ZORUNLU — kapatilamaz ###
+// Bu flag'ler kapali iken sistem calismaz veya ek veri dosyasi gerekir.
+// Tumunu kapali derleme testiyle dogrulandi (tools/script/89_define_test.bat).
+
+#define ENABLE_TRANSLATE_LUA	// questlib.lua/locale.lua gameforge'u kosulsuz okur; kapaliysa kanal core'lari LoadQuestLocale'de duser
+#define ENABLE_PROTO_FROM_DB	// kapaliysa server/db/ altinda uretilmis mob_proto.txt + item_proto.txt + *_names.txt gerekir (DumpProto -u -i -m)
+#define ENABLE_NUMERIC_FIELD	// txt proto'daki numeric kolonlar strict name-parse'da patlar
+
+//////////////////////////////////////////////////////////////////////////
 // ### Dil ve Bolge ###
 #define LOCALE_SERVICE_EUROPE
 #define ENABLE_LOCALE_EX
 #define ENABLE_LOCALE_COMMON
-#define ENABLE_TRANSLATE_LUA
 #define __BL_CLIENT_LOCALE_STRING__
 #define __BL_MULTI_LANGUAGE__
 #define __BL_MULTI_LANGUAGE_PREMIUM__
@@ -43,12 +51,10 @@
 
 //////////////////////////////////////////////////////////////////////////
 // ### Veritabani / Proto ###
-#define ENABLE_PROTO_FROM_DB
 #ifdef ENABLE_PROTO_FROM_DB
 #define ENABLE_AUTODETECT_VNUMRANGE
 #endif
 #define ENABLE_PROTOSTRUCT_AUTODETECT
-#define ENABLE_NUMERIC_FIELD
 #define ENABLE_EXPTABLE_FROMDB
 #define ENABLE_ITEMAWARD_REFRESH
 #define ENABLE_DEFAULT_PRIV
