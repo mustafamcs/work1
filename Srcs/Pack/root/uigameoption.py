@@ -29,7 +29,7 @@ class OptionDialog(ui.ScriptWindow):
 
 	def __del__(self):
 		ui.ScriptWindow.__del__(self)
-		print " -------------------------------------- DELETE GAME OPTION DIALOG"
+		print " -------------------------------------- OYUN SECENEKLERI PENCERESI SIL"
 
 	def __Initialize(self):
 		self.titleBar = 0
@@ -49,7 +49,7 @@ class OptionDialog(ui.ScriptWindow):
 		self.ClearDictionary()
 
 		self.__Initialize()
-		print " -------------------------------------- DESTROY GAME OPTION DIALOG"
+		print " -------------------------------------- OYUN SECENEKLERI PENCERESI YOK EDILDI"
 
 	def __Load_LoadScript(self, fileName):
 		try:

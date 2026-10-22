@@ -1509,11 +1509,11 @@ class ItemToolTip(ToolTip):
 
 			if item.LIMIT_REAL_TIME_START_FIRST_USE == limitType:
 				self.AppendRealTimeStartFirstUseLastTime(item, metinSlot, i)
-				#dbg.TraceError("2) REAL_TIME_START_FIRST_USE flag On ")
+				#dbg.TraceError("2) REAL_TIME_START_FIRST_USE bayrağı açık")
 
 			elif item.LIMIT_TIMER_BASED_ON_WEAR == limitType:
 				self.AppendTimerBasedOnWearLastTime(metinSlot)
-				#dbg.TraceError("1) REAL_TIME flag On ")
+				#dbg.TraceError("1) REAL_TIME bayrağı açık")
 
 		self.__AppendSealInformation(window_type, slotIndex) ## cyh itemseal 2013 11 11
 
@@ -1533,7 +1533,7 @@ class ItemToolTip(ToolTip):
 			self.AppendSpace(5)
 			self.AppendTextLine("VNUM: {}".format(itemVnum), 0xFFf863ff)
 			self.AppendSpace(3)
-			self.AppendTextLine("TYPE: {} SUBTYPE {}".format(itemType, itemSubType), 0xFF00cfb6)
+			self.AppendTextLine("TIP: {} ALTTIP {}".format(itemType, itemSubType), 0xFF00cfb6)
 			if metinSlot:
 				self.AppendSpace(3)
 				self.AppendTextLine("SOCKET: {}".format(','.join([str(i) for i in metinSlot])), 0xFF00b6d6)
@@ -2036,7 +2036,7 @@ class ItemToolTip(ToolTip):
 			try:
 				metinImage.LoadImage(item.GetIconImageFileName())
 			except:
-				dbg.TraceError("ItemToolTip.__AppendMetinSocketData() - Failed to find image file %d:%s" %
+				dbg.TraceError("ItemToolTip.__AppendMetinSocketData() - Resim dosyası bulunamadı %d:%s" %
 					(itemIndex, item.GetIconImageFileName())
 				)
 

@@ -66,13 +66,13 @@ class GiftBox(ui.ScriptWindow):
 			self.textLine.SetPosition(mouseX, mouseY - 15)
 
 	def __init__(self):
-		#print "NEW TASKBAR  ----------------------------------------------------------------------------"
+		#print "YENI GOREV CUBUGU  ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 		self.tooltipGift = self.TextToolTip()
 		self.tooltipGift.Show()
 
 	def __del__(self):
-		#print "---------------------------------------------------------------------------- DELETE TASKBAR"
+		#print "---------------------------------------------------------------------------- GOREV CUBUGU SIL"
 		ui.ScriptWindow.__del__(self)
 
 	def LoadWindow(self):
@@ -116,13 +116,13 @@ class EnergyBar(ui.ScriptWindow):
 			self.textLine.SetPosition(mouseX, mouseY - 15)
 
 	def __init__(self):
-		#print "NEW TASKBAR  ----------------------------------------------------------------------------"
+		#print "YENI GOREV CUBUGU  ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 		self.tooltipEnergy = self.TextToolTip()
 		self.tooltipEnergy.Show()
 
 	def __del__(self):
-		#print "---------------------------------------------------------------------------- DELETE TASKBAR"
+		#print "---------------------------------------------------------------------------- GOREV CUBUGU SIL"
 		ui.ScriptWindow.__del__(self)
 
 	def LoadWindow(self):
@@ -372,7 +372,7 @@ class TaskBar(ui.ScriptWindow):
 					self.event()
 
 	def __init__(self):
-		#print "NEW TASKBAR  ----------------------------------------------------------------------------"
+		#print "YENI GOREV CUBUGU  ----------------------------------------------------------------------------"
 
 		ui.ScriptWindow.__init__(self, "TOP_MOST")
 
@@ -403,7 +403,7 @@ class TaskBar(ui.ScriptWindow):
 		self.SetWindowName("TaskBar")
 
 	def __del__(self):
-		#print "---------------------------------------------------------------------------- DELETE TASKBAR"
+		#print "---------------------------------------------------------------------------- GOREV CUBUGU SIL"
 		ui.ScriptWindow.__del__(self)
 
 	def LoadWindow(self):

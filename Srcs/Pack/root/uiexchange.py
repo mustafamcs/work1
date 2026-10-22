@@ -69,7 +69,7 @@ class ExchangeDialog(ui.ScriptWindow):
 
 	@ui.WindowDestroy
 	def Destroy(self):
-		print "---------------------------------------------------------------------------- DESTROY EXCHANGE"
+		print "---------------------------------------------------------------------------- TAKAS YOK EDILDI"
 		self.ClearDictionary()
 		if self.dlgPickMoney:
 			self.dlgPickMoney.Destroy()

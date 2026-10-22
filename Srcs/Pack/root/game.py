@@ -302,7 +302,7 @@ class GameWindow(ui.ScriptWindow):
 
 		constInfo.SET_ITEM_QUESTION_DIALOG_STATUS(0)
 
-		print("---------------------------------------------------------------------------- CLOSE GAME WINDOW")
+		print("---------------------------------------------------------------------------- OYUN PENCERESI KAPAT")
 
 	def __BuildKeyDict(self):
 		onPressKeyDict = {}
@@ -614,14 +614,14 @@ class GameWindow(ui.ScriptWindow):
 		try:
 			self.__NotifyError(localeInfo.OPTION_PVPMODE_MESSAGE_DICT[player.GetPKMode()])
 		except KeyError:
-			print "UNKNOWN PVPMode[%d]" % (player.GetPKMode())
+			print "BİLİNMEYEN PVPMode[%d]" % (player.GetPKMode())
 
 		if constInfo.PVPMODE_TEST_ENABLE:
 			curPKMode = player.GetPKMode()
 			alignment, grade = chr.testGetPKData()
 			self.pkModeNameDict = { 0 : "PEACE", 1 : "REVENGE", 2 : "FREE", 3 : "PROTECT", }
-			self.testPKMode.SetText("Current PK Mode : " + self.pkModeNameDict.get(curPKMode, "UNKNOWN"))
-			self.testAlignment.SetText("Current Alignment : " + str(alignment) + " (" + localeInfo.TITLE_NAME_LIST[grade] + ")")
+			self.testPKMode.SetText("Şu anki PK Modu :" + self.pkModeNameDict.get(curPKMode, "UNKNOWN"))
+			self.testAlignment.SetText("Şu anki Düzen :" + str(alignment) + " (" + localeInfo.TITLE_NAME_LIST[grade] + ")")
 
 	###############################################################################################
 	###############################################################################################
@@ -880,7 +880,7 @@ class GameWindow(ui.ScriptWindow):
 		if localeInfo.WHISPER_ERROR.has_key(mode):
 			chat.AppendWhisper(chat.WHISPER_TYPE_SYSTEM, name, localeInfo.WHISPER_ERROR[mode](name))
 		else:
-			chat.AppendWhisper(chat.WHISPER_TYPE_SYSTEM, name, "Whisper Unknown Error(mode=%d, name=%s)" % (mode, name))
+			chat.AppendWhisper(chat.WHISPER_TYPE_SYSTEM, name, "Fısıltı Bilinmeyen Hata(mode=%d, isim=%s)" % (mode, name))
 		self.interface.RecvWhisper(name)
 
 	def RecvWhisper(self, name):
@@ -1111,7 +1111,7 @@ class GameWindow(ui.ScriptWindow):
 			self.SetFocus()
 
 	def SaveScreen(self):
-		print "save screen"
+		print "ekranı kaydet"
 
 		# SCREENSHOT_CWDSAVE
 		if SCREENSHOT_CWDSAVE:
@@ -1506,9 +1506,9 @@ class GameWindow(ui.ScriptWindow):
 
 		#(dwRenderedThing, dwRenderedCRC) = background.GetRenderedGraphicThingInstanceNum()
 
-		self.PrintCoord.SetText("Coordinate: %.2f %.2f %.2f ATM: %d" % (x, y, z, app.GetAvailableTextureMemory()/(1024*1024)))
+		self.PrintCoord.SetText("Koordinat: %.2f %.2f %.2f ATM: %d" % (x, y, z, app.GetAvailableTextureMemory()/(1024*1024)))
 		xMouse, yMouse = wndMgr.GetMousePosition()
-		self.PrintMousePos.SetText("MousePosition: %d %d" % (xMouse, yMouse))
+		self.PrintMousePos.SetText("FareKonumu: %d %d" % (xMouse, yMouse))
 
 		self.FrameRate.SetText("UFPS: %3d UT: %3d FS %.2f" % (nUpdateFPS, nUpdateTime, fFaceSpeed))
 
@@ -1705,7 +1705,7 @@ class GameWindow(ui.ScriptWindow):
 			#print listText
 
 			if 3 > len(listText):
-				dbg.TraceError("Wrong Cube Material Infomation")
+				dbg.TraceError("Hatalı Küp Malzeme Bilgisi")
 				return 0
 
 
@@ -2006,11 +2006,11 @@ class GameWindow(ui.ScriptWindow):
 			if not self.__IsXMasMap():
 				return
 
-			print "XMAS_SNOW ON"
+			print "XMAS_SNOW AÇIK"
 			background.EnableSnow(1)
 
 		else:
-			print "XMAS_SNOW OFF"
+			print "XMAS_SNOW KAPALI"
 			background.EnableSnow(0)
 
 	def __XMasBoom_Enable(self, mode):
@@ -2019,12 +2019,12 @@ class GameWindow(ui.ScriptWindow):
 			if not self.__IsXMasMap():
 				return
 
-			print "XMAS_BOOM ON"
+			print "XMAS_BOOM AÇIK"
 			self.__DayMode_Update("dark")
 			self.enableXMasBoom = True
 			self.startTimeXMasBoom = app.GetTime()
 		else:
-			print "XMAS_BOOM OFF"
+			print "XMAS_BOOM KAPALI"
 			self.__DayMode_Update("light")
 			self.enableXMasBoom = False
 
@@ -2035,7 +2035,7 @@ class GameWindow(ui.ScriptWindow):
 
 	def __XMasSong_Enable(self, mode):
 		if "1"==mode:
-			print "XMAS_SONG ON"
+			print "XMAS_SONG AÇIK"
 
 			XMAS_BGM = "xmas.mp3"
 
@@ -2047,7 +2047,7 @@ class GameWindow(ui.ScriptWindow):
 				snd.FadeInMusic("BGM/" + musicInfo.fieldMusic)
 
 		else:
-			print "XMAS_SONG OFF"
+			print "XMAS_SONG KAPALI"
 
 			if musicInfo.fieldMusic != "":
 				snd.FadeOutMusic("BGM/" + musicInfo.fieldMusic)

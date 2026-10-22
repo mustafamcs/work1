@@ -230,7 +230,7 @@ class AcceptGuildWarDialog(ui.ScriptWindow):
 		self.__CreateDialog()
 
 	def __del__(self):
-		print "---------------------------------------------------------------------------- DELETE AcceptGuildWarDialog"
+		print "---------------------------------------------------------------------------- AcceptGuildWarDialog SILINDI"
 		ui.ScriptWindow.__del__(self)
 
 	def Open(self, guildName, warType):
@@ -736,7 +736,7 @@ class GuildWindow(ui.ScriptWindow):
 
 	def __del__(self):
 		ui.ScriptWindow.__del__(self)
-		print " ==================================== DESTROYED GUILD WINDOW"
+		print " ==================================== LONCA PENCERESI YOK EDILDI"
 
 	def __Initialize(self):
 
@@ -2016,7 +2016,7 @@ class BuildGuildBuildingWindow(ui.ScriptWindow):
 				)
 		except:
 			GUILD_CATEGORY_LIST = (
-					("HEADQUARTER", "Main Building"),
+					("HEADQUARTER", "Ana Bina"),
 					("FACILITY", "Facility"),
 					("OBJECT", "Object"),
 				)

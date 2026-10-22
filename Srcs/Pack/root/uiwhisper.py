@@ -58,14 +58,14 @@ class WhisperDialog(ui.ScriptWindow):
 			app.SetCursor(app.NORMAL)
 
 	def __init__(self, eventMinimize, eventClose):
-		print "NEW WHISPER DIALOG  ----------------------------------------------------------------------------"
+		print "YENI FISILDI PENCERESI  ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 		self.targetName = ""
 		self.eventMinimize = eventMinimize
 		self.eventClose = eventClose
 		self.eventAcceptTarget = None
 	def __del__(self):
-		print "---------------------------------------------------------------------------- DELETE WHISPER DIALOG"
+		print "---------------------------------------------------------------------------- FISILDI PENCERESI SIL"
 		ui.ScriptWindow.__del__(self)
 
 	def LoadDialog(self):

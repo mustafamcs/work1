@@ -29,7 +29,7 @@ if ENABLE_RECURSIVE_UI_DESTROY:
 
 	def WindowDestroy(func):
 		def _decorator(self, *args, **kwargs):
-			if WOC_ENABLE_PRINT_DEL_DEBUG: dbg.TraceError("WindowDestroy decorator called for {}".format(self.__class__.__name__))
+			if WOC_ENABLE_PRINT_DEL_DEBUG: dbg.TraceError("WindowDestroy decorator {} için çağrıldı".format(self.__class__.__name__))
 			if WOC_ENABLE_FORCE_HIDE: self.Hide()
 			WindowObjectCleaner(self)
 			func(self, *args, **kwargs)
@@ -61,7 +61,7 @@ if ENABLE_RECURSIVE_UI_DESTROY:
 		######################################
 		if WOC_ENABLE_RECURSIVE_CLEANER:
 			if getattr(obj, "WocIsCleaned", False):
-				if WOC_ENABLE_PRINT_DEBUG: dbg.TraceError("WocIsCleaned already True")
+				if WOC_ENABLE_PRINT_DEBUG: dbg.TraceError("WocIsCleaned zaten True")
 				return
 			setattr(obj, "WocIsCleaned", True)
 
@@ -79,7 +79,7 @@ if ENABLE_RECURSIVE_UI_DESTROY:
 				WindowDestroyer(elemObj)
 
 			elif IsIterable(elemObj):
-				if WOC_ENABLE_PRINT_DEBUG: dbg.TraceError("{} is iterable: {}".format(elemName, repr(elemObj)))
+				if WOC_ENABLE_PRINT_DEBUG: dbg.TraceError("{} iterlenebilir: {}".format(elemName, repr(elemObj)))
 				ObjectItering(elemObj)
 				elemObj = elemType()
 				continue
@@ -846,7 +846,7 @@ if app.ENABLE_TARGET_INFORMATION_SYSTEM:
 		def AppendItem(self, newItem):
 			if newItem.GetHeight() % self.stepSize != 0:
 				import dbg
-				dbg.TraceError("Invalid AppendItem height %d stepSize %d" % (newItem.GetHeight(), self.stepSize))
+				dbg.TraceError("Geçersiz AppendItem yüksekliği %d stepSize %d" % (newItem.GetHeight(), self.stepSize))
 				return
 
 			self.maxSteps += newItem.GetHeight() / self.stepSize
@@ -1362,7 +1362,7 @@ class ImageBox(Window):
 		wndMgr.LoadImage(self.hWnd, imageName)
 
 		if len(self.eventDict)!=0:
-			print("LOAD IMAGE", self, self.eventDict)
+			print("RESİM YÜKLE", self, self.eventDict)
 
 	def SetAlpha(self, alpha):
 		wndMgr.SetDiffuseColor(self.hWnd, 1.0, 1.0, 1.0, alpha)
@@ -1403,7 +1403,7 @@ class ImageBox(Window):
 			self.eventFunc[args[0]] = func
 			self.eventArgs[args[0]] = args
 		else :
-			print("[ERROR] ui.py SetEvent, Can`t Find has_key : %s" % args[0])
+			print("[HATA] ui.py SetEvent, has_key Bulunamıyor : %s" % args[0])
 
 	def OnMouseLeftButtonUp(self) :
 		if app.ENABLE_IKASHOP_RENEWAL:
@@ -3747,7 +3747,7 @@ class PythonScriptLoader(object):
 		import errno
 		self.Clear()
 
-		print("===== Load Script File : %s" % (FileName))
+		print("===== Script Dosyasi Yukleniyor : %s" % (FileName))
 
 		import sys
 		from utils import Sandbox
@@ -3795,19 +3795,19 @@ class PythonScriptLoader(object):
 		except IOError as err:
 			import sys
 			import dbg
-			dbg.TraceError("Failed to load script file : %s" % (FileName))
+			dbg.TraceError("Script dosyası yüklenemedi : %s" % (FileName))
 			dbg.TraceError("error: %s" % (err))
 			exception.Abort("LoadScriptFile1")
 		except RuntimeError as err:
 			import sys
 			import dbg
-			dbg.TraceError("Failed to load script file : %s" % (FileName))
+			dbg.TraceError("Script dosyası yüklenemedi : %s" % (FileName))
 			dbg.TraceError("error: %s" % (err))
 			exception.Abort("LoadScriptFile2")
 		except:
 			import sys
 			import dbg
-			dbg.TraceError("Failed to load script file : %s" % (FileName))
+			dbg.TraceError("Script dosyası yüklenemedi : %s" % (FileName))
 			exception.Abort("LoadScriptFile!!!!!!!!!!!!!!")
 
 		#####
@@ -4046,7 +4046,7 @@ class PythonScriptLoader(object):
 	def CheckKeyList(self, name, value, key_list):
 		for DataKey in key_list:
 			if False == value.has_key(DataKey):
-				print("Failed to find data key", "[" + name + "/" + DataKey + "]")
+				print("Veri anahtarı bulunamadı", "[" + name + "/" + DataKey + "]")
 				return False
 
 		return True

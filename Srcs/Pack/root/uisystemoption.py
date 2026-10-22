@@ -35,7 +35,7 @@ class OptionDialog(ui.ScriptWindow):
 
 	def __del__(self):
 		ui.ScriptWindow.__del__(self)
-		print " -------------------------------------- DELETE SYSTEM OPTION DIALOG"
+		print " -------------------------------------- SISTEM SECENEKLERI PENCERESI SIL"
 
 	def __Initialize(self):
 		self.tilingMode = 0
@@ -73,7 +73,7 @@ class OptionDialog(ui.ScriptWindow):
 		self.ClearDictionary()
 
 		self.__Initialize()
-		print " -------------------------------------- DESTROY SYSTEM OPTION DIALOG"
+		print " -------------------------------------- SISTEM SECENEKLERI PENCERESI YOK EDILDI"
 
 	def __Load_LoadScript(self, fileName):
 		try:
@@ -396,7 +396,7 @@ class OptionDialog(ui.ScriptWindow):
 					lines = file.readlines()
 			except:
 				import dbg
-				dbg.LogBox("__LoadLocaleListFile error locale_list.txt")
+				dbg.LogBox("__LoadLocaleListFile hatası locale_list.txt")
 				app.Abort()
 
 			lineIndex = 1
@@ -413,7 +413,7 @@ class OptionDialog(ui.ScriptWindow):
 
 						self.language_list.append({"name" : name, "code_page" : code_page, "locale" : locale})
 					else:
-						raise RuntimeError, "Unknown TokenSize"
+						raise RuntimeError, "Bilinmeyen TokenSize"
 
 					lineIndex += 1
 				except:
@@ -461,7 +461,7 @@ class OptionDialog(ui.ScriptWindow):
 					file.write("{} {}".format(code_page, locale))
 			except:
 				import dbg
-				dbg.LogBox("__SaveLoca error")
+				dbg.LogBox("__SaveLoca hatası")
 				app.Abort()
 
 		def __GetStringCurLanguage(self):

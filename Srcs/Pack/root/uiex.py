@@ -39,7 +39,7 @@ class Window(ui.Window):
 #wndMgr.SetOutlineFlag(True)
 
 class App:
-	def __init__(self, title = "METIN2 UI TEST"):
+	def __init__(self, title = "METIN2 UI TESTİ"):
 		app.SetMouseHandler(mouseModule.mouseController)
 		app.SetHairColorEnable(True)
 		wndMgr.SetMouseHandler(mouseModule.mouseController)

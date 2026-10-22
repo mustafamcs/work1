@@ -20,7 +20,7 @@ class OptionDialog(ui.ScriptWindow):
 
 	def __del__(self):
 		ui.ScriptWindow.__del__(self)
-		print " -------------------------------------- DELETE OPTION DIALOG"
+		print " -------------------------------------- SECENEK PENCERESI SIL"
 
 	def __Initialize(self):
 		self.titleBar = 0
@@ -38,7 +38,7 @@ class OptionDialog(ui.ScriptWindow):
 		self.ClearDictionary()
 
 		self.__Initialize()
-		print " -------------------------------------- DESTROY OPTION DIALOG"
+		print " -------------------------------------- SECENEK PENCERESI YOK EDILDI"
 
 	def __LoadDialog(self):
 		try:

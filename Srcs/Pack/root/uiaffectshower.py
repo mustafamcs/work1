@@ -56,7 +56,7 @@ class LovePointImage(ui.ExpandedImageBox):
 			self.LoadImage(fileName)
 		except:
 			import dbg
-			dbg.TraceError("LovePointImage.SetLoverInfo(lovePoint=%d) - LoadError %s" % (self.lovePoint, fileName))
+			dbg.TraceError("LovePointImage.SetLoverInfo(lovePoint=%d) - YüklemeHatası %s" % (self.lovePoint, fileName))
 
 		self.SetScale(0.7, 0.7)
 
@@ -119,7 +119,7 @@ class HorseImage(ui.ExpandedImageBox):
 				grade = self.__GetHorseGrade(level)
 				self.__AppendText(localeInfo.LEVEL_LIST[grade])
 			except IndexError:
-				print "HorseImage.SetState(level=%d, health=%d, battery=%d) - Unknown Index" % (level, health, battery)
+				print "HorseImage.SetState(level=%d, health=%d, battery=%d) - Bilinmeyen İndeks" % (level, health, battery)
 				return
 
 			try:
@@ -127,7 +127,7 @@ class HorseImage(ui.ExpandedImageBox):
 				if len(healthName)>0:
 					self.__AppendText(healthName)
 			except IndexError:
-				print "HorseImage.SetState(level=%d, health=%d, battery=%d) - Unknown Index" % (level, health, battery)
+				print "HorseImage.SetState(level=%d, health=%d, battery=%d) - Bilinmeyen İndeks" % (level, health, battery)
 				return
 
 			if health>0:
@@ -142,7 +142,7 @@ class HorseImage(ui.ExpandedImageBox):
 			try:
 				self.LoadImage(fileName)
 			except:
-				print "HorseImage.SetState(level=%d, health=%d, battery=%d) - LoadError %s" % (level, health, battery, fileName)
+				print "HorseImage.SetState(level=%d, health=%d, battery=%d) - YüklemeHatası %s" % (level, health, battery, fileName)
 
 		self.SetScale(0.7, 0.7)
 
@@ -231,7 +231,7 @@ class AutoPotionImage(ui.ExpandedImageBox):
 			self.LoadImage(fileName)
 		except:
 			import dbg
-			dbg.TraceError("AutoPotionImage.__Refresh(potionType=%d) - LoadError %s" % (self.potionType, fileName))
+			dbg.TraceError("AutoPotionImage.__Refresh(potionType=%d) - YüklemeHatası %s" % (self.potionType, fileName))
 
 		self.SetScale(0.7, 0.7)
 
@@ -583,7 +583,7 @@ class AffectShower(ui.Window):
 
 
 		try:
-			print "Add affect %s" % affect
+			print "Etki ekle %s" % affect
 			image = AffectImage()
 			image.SetParent(self)
 			image.LoadImage(filename)
@@ -609,7 +609,7 @@ class AffectShower(ui.Window):
 			self.affectImageDict[affect] = image
 			self.__ArrangeImageList()
 		except Exception, e:
-			print "except Aff affect ", e
+			print "Aff etkisi hariç", e
 			pass
 
 	def BINARY_NEW_RemoveAffect(self, type, pointIdx):
@@ -623,7 +623,7 @@ class AffectShower(ui.Window):
 				if type == chr.NEW_AFFECT_SEARCH_SHOP_PREMIUM:
 					self.searchShopBoard.DeactiveSortByPriceFeature()
 
-		print "Remove Affect %s %s" % ( type , pointIdx )
+		print "Etki Kaldır %s %s" % ( type , pointIdx )
 		self.__RemoveAffect(affect)
 		self.__ArrangeImageList()
 
@@ -726,10 +726,10 @@ class AffectShower(ui.Window):
 		"""
 
 		if not self.affectImageDict.has_key(affect):
-			print "__RemoveAffect %s ( No Affect )" % affect
+			print "__RemoveAffect %s ( Etki Yok )" % affect
 			return
 
-		print "__RemoveAffect %s ( Affect )" % affect
+		print "__RemoveAffect %s ( Etki )" % affect
 		del self.affectImageDict[affect]
 
 		self.__ArrangeImageList()
@@ -773,4 +773,4 @@ class AffectShower(ui.Window):
 					if not image.IsSkillAffect():
 						image.UpdateDescription()
 		except Exception, e:
-			print "AffectShower::OnUpdate error : ", e
+			print "AffectShower::OnUpdate hatası :", e

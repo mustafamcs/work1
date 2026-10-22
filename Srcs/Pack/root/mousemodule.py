@@ -260,7 +260,7 @@ class CMouseController(ui.NoWindow):
 			wndMgr.AttachIcon(self.AttachedType, self.AttachedItemIndex, self.AttachedSlotNumber, width, height)
 
 		except Exception as e:
-			dbg.TraceError("mouseModule.py: AttachObject : " + str(e))
+			dbg.TraceError("mouseModule.py: AttachObject :" + str(e))
 			self.AttachedIconHandle = 0
 
 	def IsAttachedMoney(self):

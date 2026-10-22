@@ -5,7 +5,7 @@ import player
 class EquipmentDialog(ui.ScriptWindow):
 
 	def __init__(self):
-		print "NEW EQUIPMENT DIALOG ----------------------------------------------------------------------------"
+		print "YENI EKIPMAN PENCERESI ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 		self.__LoadDialog()
 
@@ -15,7 +15,7 @@ class EquipmentDialog(ui.ScriptWindow):
 		self.tooltipItem = None
 
 	def __del__(self):
-		print "---------------------------------------------------------------------------- DELETE EQUIPMENT DIALOG "
+		print "---------------------------------------------------------------------------- EKIPMAN PENCERESI SIL "
 		ui.ScriptWindow.__del__(self)
 
 	def __LoadDialog(self):

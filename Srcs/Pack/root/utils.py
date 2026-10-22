@@ -2,7 +2,7 @@ class Sandbox(object):
 	# DO NOT REMOVE ANY ENTRY OF WHITE LIST
 	# THIS ENTIES ARE USED FOR Sandbox.
 	# 	(If sys.modules['__main__'] is changed, you can see the hell.)
-	WHITE_LIST = ['__builtin__', 'tips', __name__, '__main__', 'sys']
+	WHITE_LIST = ['__builtin__', 'types', __name__, '__main__', 'sys']
 	def __init__(self, prevent_imported_modules = False, allowed_modules = [], prevented_modules = [], allowed_paths = []):
 		self.prevent_imported_modules = prevent_imported_modules
 		self.allowed_modules = allowed_modules
@@ -25,7 +25,7 @@ class Sandbox(object):
 			except:
 				# Just now, pass the exception.
 				# (filename could not use this module)
-				sys.modules['dbg'].TraceError("UISCRIPT_LOAD_ERROR: Could not import %s [filename %s]" % (allowed_module_name, filename)) # @fixme004 (sys.stderr.write to dbg.TraceError)
+				sys.modules['dbg'].TraceError("UISCRIPT_LOAD_ERROR: %s import edilemedi [dosya %s]" % (allowed_module_name, filename)) # @fixme004 (sys.stderr.write to dbg.TraceError)
 				pass
 		# shallow copy of sys.modules
 		old_modules = copy.copy(sys.modules)
@@ -35,9 +35,9 @@ class Sandbox(object):
 
 		# set current imported modules None
 		if self.prevent_imported_modules:
-			import tips
+			import types
 			for k, v in old_modules.items():
-				if type(v) == tips.ModuleType:
+				if type(v) == types.ModuleType:
 					if not (k in self.WHITE_LIST or k in self.allowed_modules):
 						sys.modules[k] = None
 
@@ -51,7 +51,7 @@ class Sandbox(object):
 			code = compile(data, filename, 'exec')
 			exec code in dic
 		except Exception as e:
-			old_modules['dbg'].TraceError("UISCRIPT_LOAD_ERROR: %s [filename %s]" % (str(e), filename)) # @fixme004 (sys.stderr.write to dbg.TraceError)
+			old_modules['dbg'].TraceError("UISCRIPT_LOAD_ERROR: %s [dosya %s]" % (str(e), filename)) # @fixme004 (sys.stderr.write to dbg.TraceError)
 		finally:
 			# Restore original settings.
 			#sys.modules = old_modules# <- This is not effective. I don't know why, but I guess some where got old sys.modules reference and access old one.

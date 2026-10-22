@@ -85,7 +85,7 @@ class AttachMetinDialog(ui.ScriptWindow):
 		try:
 			self.metinImage.LoadImage(item.GetIconImageFileName())
 		except:
-			dbg.TraceError("AttachMetinDialog.Open.LoadImage - Failed to find item data")
+			dbg.TraceError("AttachMetinDialog.Open.LoadImage - Eşya verisi bulunamadı")
 
 		## Old Item ToolTip
 		metinSlot = []

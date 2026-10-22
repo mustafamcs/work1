@@ -124,7 +124,7 @@ def intWithCommas(x, commasign='.'):
 	# alternative of
 	# return '{0:,}'.format(x).replace(',', commasign)
 	if type(x) not in [type(0), type(0L)]:
-		raise TypeError("Parameter must be an integer.")
+		raise TypeError("Parametre tam sayı olmalı.")
 	if x < 0:
 		return '-' + intWithCommas(-x, commasign)
 	result = ''

@@ -39,12 +39,12 @@ if app.__BL_MULTI_LANGUAGE__:
 class PopupDialog(ui.ScriptWindow):
 
 	def __init__(self):
-		print "NEW POPUP DIALOG ----------------------------------------------------------------------------"
+		print "YENI POPUP PENCERESI ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 		self.CloseEvent = 0
 
 	def __del__(self):
-		print "---------------------------------------------------------------------------- DELETE POPUP DIALOG "
+		print "---------------------------------------------------------------------------- POPUP PENCERESI SIL "
 		ui.ScriptWindow.__del__(self)
 
 	def LoadDialog(self):
@@ -99,7 +99,7 @@ class MainStream(ui.NoWindow):
 	isChrData=0
 
 	def __init__(self):
-		print("NEWMAIN STREAM ----------------------------------------------------------------------------")
+		print("YENI ANA AKIS ----------------------------------------------------------------------------")
 		net.SetHandler(self)
 		net.SetTCPRecvBufferSize(128*1024)
 		net.SetTCPSendBufferSize(4096)
@@ -120,7 +120,7 @@ class MainStream(ui.NoWindow):
 		self.newPhaseWindow = 0
 
 	def __del__(self):
-		print("---------------------------------------------------------------------------- DELETE MAIN STREAM ")
+		print("---------------------------------------------------------------------------- ANA AKIS SIL ")
 		if ui.WOC_ENABLE_PRINT_DEL_DEBUG: import dbg; dbg.TraceError("{} __del__ called".format(self.__class__.__name__))
 
 	def Hide(self):

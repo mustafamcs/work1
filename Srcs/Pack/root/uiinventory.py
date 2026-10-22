@@ -38,11 +38,11 @@ class CostumeWindow(ui.ScriptWindow):
 		import exception
 
 		if not app.ENABLE_COSTUME_SYSTEM:
-			exception.Abort("What do you do?")
+			exception.Abort("Ne yapıyorsun?")
 			return
 
 		if not wndInventory:
-			exception.Abort("wndInventory parameter must be set to InventoryWindow")
+			exception.Abort("wndInventory parametresi InventoryWindow olmalı")
 			return
 
 		ui.ScriptWindow.__init__(self)
@@ -118,11 +118,11 @@ class BeltInventoryWindow(ui.ScriptWindow):
 		import exception
 
 		if not app.ENABLE_NEW_EQUIPMENT_SYSTEM:
-			exception.Abort("What do you do?")
+			exception.Abort("Ne yapıyorsun?")
 			return
 
 		if not wndInventory:
-			exception.Abort("wndInventory parameter must be set to InventoryWindow")
+			exception.Abort("wndInventory parametresi InventoryWindow olmalı")
 			return
 
 		ui.ScriptWindow.__init__(self)
@@ -488,7 +488,7 @@ class InventoryWindow(ui.ScriptWindow):
 
 		if self.wndBelt:
 			self.isOpenedBeltWindowWhenClosingInventory = self.wndBelt.IsOpeningInventory()
-			print "Is Opening Belt Inven?? ", self.isOpenedBeltWindowWhenClosingInventory
+			print "Kemer Envanteri Açılıyor mu??", self.isOpenedBeltWindowWhenClosingInventory
 			self.wndBelt.Close()
 
 		if self.dlgPickMoney:
@@ -522,7 +522,7 @@ class InventoryWindow(ui.ScriptWindow):
 		self.interface.ToggleDragonSoulWindow()
 
 	def ClickCostumeButton(self):
-		print "Click Costume Button"
+		print "Kostüm Düğmesine Tıkla"
 		if self.wndCostume:
 			if self.wndCostume.IsShow():
 				self.wndCostume.Hide()
@@ -1377,9 +1377,9 @@ class InventoryWindow(ui.ScriptWindow):
 			self.wndDragonSoulRefine = wndDragonSoulRefine
 
 	def OnMoveWindow(self, x, y):
-		# print "Inventory Global Pos : ", self.GetGlobalPosition()
+		# print "Envanter Global Konum :", self.GetGlobalPosition()
 		if self.wndBelt:
-			# print "Belt Global Pos : ", self.wndBelt.GetGlobalPosition()
+			# print "Kemer Global Konum :", self.wndBelt.GetGlobalPosition()
 			self.wndBelt.AdjustPositionAndSize()
 
 	if app.ENABLE_ACCE_COSTUME_SYSTEM:

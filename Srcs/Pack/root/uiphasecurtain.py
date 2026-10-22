@@ -17,7 +17,7 @@ class PhaseCurtain(ui.Bar):
 		self.AddFlag("float")
 
 	def __del__(self):
-		print "---------------------------------------------------------------------------- DELETE CURTAIN"
+		print "---------------------------------------------------------------------------- PERDE SIL"
 		ui.Bar.__del__(self)
 
 	def SAFE_FadeOut(self, event, args = -1):

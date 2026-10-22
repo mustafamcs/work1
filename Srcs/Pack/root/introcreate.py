@@ -144,20 +144,20 @@ class CreateCharacterWindow(ui.Window):
 			grp.SetInterfaceRenderState()
 
 	def __init__(self, stream):
-		print "NEW CREATE WINDOW ----------------------------------------------------------------------------"
+		print "YENI OLUSTURMA PENCERESI ----------------------------------------------------------------------------"
 		ui.Window.__init__(self)
 		net.SetPhaseWindow(net.PHASE_WINDOW_CREATE, self)
 
 		self.stream=stream
 
 	def __del__(self):
-		print "---------------------------------------------------------------------------- DELETE CREATE WINDOW"
+		print "---------------------------------------------------------------------------- OLUSTURMA PENCERESI SIL"
 
 		net.SetPhaseWindow(net.PHASE_WINDOW_CREATE, 0)
 		ui.Window.__del__(self)
 
 	def Open(self):
-		print "OPEN CREATE WINDOW ----------------------------------------------------------------------------"
+		print "OLUSTURMA PENCERESI AC ----------------------------------------------------------------------------"
 
 		playerSettingModule.LoadGameData("INIT")
 
@@ -314,7 +314,7 @@ class CreateCharacterWindow(ui.Window):
 		app.ShowCursor()
 
 	def Close(self):
-		print "---------------------------------------------------------------------------- CLOSE CREATE WINDOW"
+		print "---------------------------------------------------------------------------- OLUSTURMA PENCERESI KAPAT"
 
 		self.editCharacterName.Enable()
 		self.dlgBoard.ClearDictionary()

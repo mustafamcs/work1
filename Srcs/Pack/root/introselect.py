@@ -140,7 +140,7 @@ class SelectCharacterWindow(ui.Window):
 	def Open(self):
 		if not self.__LoadBoardDialog(uiScriptLocale.LOCALE_UISCRIPT_PATH + "selectcharacterwindow.py"):
 			import dbg
-			dbg.TraceError("SelectCharacterWindow.Open - __LoadScript Error")
+			dbg.TraceError("SelectCharacterWindow.Open - __LoadScript Hatası")
 			return
 
 		if not self.__LoadQuestionDialog("uiscript/questiondialog.py"):

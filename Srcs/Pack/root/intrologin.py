@@ -126,7 +126,7 @@ class LoginWindow(ui.ScriptWindow):
 	IS_TEST = net.IsTest()
 
 	def __init__(self, stream):
-		print "NEW LOGIN WINDOW ----------------------------------------------------------------------------"
+		print "YENI GIRIS PENCERESI ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 		net.SetPhaseWindow(net.PHASE_WINDOW_LOGIN, self)
 		net.SetAccountConnectorHandler(self)
@@ -168,12 +168,12 @@ class LoginWindow(ui.ScriptWindow):
 		net.ClearPhaseWindow(net.PHASE_WINDOW_LOGIN, self)
 		net.SetAccountConnectorHandler(0)
 		ui.ScriptWindow.__del__(self)
-		print "---------------------------------------------------------------------------- DELETE LOGIN WINDOW"
+		print "---------------------------------------------------------------------------- GIRIS PENCERESI SIL"
 
 	def Open(self):
 		ServerStateChecker.Create(self)
 
-		print "LOGIN WINDOW OPEN ----------------------------------------------------------------------------"
+		print "GIRIS PENCERESI AC ----------------------------------------------------------------------------"
 
 		self.loginFailureMsgDict={
 			#"DEFAULT" : localeInfo.LOGIN_FAILURE_UNKNOWN,
@@ -205,7 +205,7 @@ class LoginWindow(ui.ScriptWindow):
 		self.SetWindowName("LoginWindow")
 
 		if not self.__LoadScript(uiScriptLocale.LOCALE_UISCRIPT_PATH + "LoginWindow.py"):
-			dbg.TraceError("LoginWindow.Open - __LoadScript Error")
+			dbg.TraceError("LoginWindow.Open - __LoadScript Hatası")
 			return
 
 		self.__LoadLoginInfo("loginInfo.xml")
@@ -271,7 +271,7 @@ class LoginWindow(ui.ScriptWindow):
 
 		ServerStateChecker.Initialize(self)
 
-		print "---------------------------------------------------------------------------- CLOSE LOGIN WINDOW "
+		print "---------------------------------------------------------------------------- GIRIS PENCERESI KAPAT "
 		#
 		#
 		if musicInfo.loginMusic != "" and musicInfo.selectMusic != "":
@@ -344,7 +344,7 @@ class LoginWindow(ui.ScriptWindow):
 			file=old_open("channel.inf", "w")
 			file.write("%d %d %d" % (self.__GetServerID(), self.__GetChannelID(), self.__GetRegionID()))
 		except:
-			print "LoginWindow.__SaveChannelInfo - SaveError"
+			print "LoginWindow.__SaveChannelInfo - KaydetmeHatası"
 
 	def __LoadChannelInfo(self):
 		try:
@@ -363,7 +363,7 @@ class LoginWindow(ui.ScriptWindow):
 				return regionID, selServerID, selChannelID
 
 		except:
-			print "LoginWindow.__LoadChannelInfo - OpenError"
+			print "LoginWindow.__LoadChannelInfo - AçmaHatası"
 			return -1, -1, -1
 
 	def __ExitGame(self):
@@ -500,7 +500,7 @@ class LoginWindow(ui.ScriptWindow):
 
 		def SAB_BtnRearrange(self):
 			def tooltipArrange(_btnObj):
-				_tMexTip = "Account ID: %s" % id
+				_tMexTip = "Hesap ID: %s" % id
 				_btnObj.SetToolTipText(_tMexTip)
 				if _btnObj.ToolTipText:
 					_btnObj.ToolTipText.SetPackedFontColor(0xff66FFFF)
@@ -963,7 +963,7 @@ class LoginWindow(ui.ScriptWindow):
 					lines = file.readlines()
 			except:
 				import dbg
-				dbg.LogBox("__LoadLocaleListFile error locale_list.txt")
+				dbg.LogBox("__LoadLocaleListFile hatası locale_list.txt")
 				app.Abort()
 
 			lineIndex = 1
@@ -980,7 +980,7 @@ class LoginWindow(ui.ScriptWindow):
 
 						self.language_list.append({"name" : name, "code_page" : code_page, "locale" : locale})
 					else:
-						raise RuntimeError, "Unknown TokenSize"
+						raise RuntimeError, "Bilinmeyen TokenSize"
 
 					lineIndex += 1
 				except:
@@ -994,7 +994,7 @@ class LoginWindow(ui.ScriptWindow):
 					file.write("{} {}".format(code_page, locale))
 			except:
 				import dbg
-				dbg.LogBox("__SaveLoca error")
+				dbg.LogBox("__SaveLoca hatası")
 				app.Abort()
 
 		def __ClickLanguage(self, index):
@@ -1303,7 +1303,7 @@ class LoginWindow(ui.ScriptWindow):
 		try:
 			channelDict = serverInfo.REGION_DICT[regionID][serverID]["channel"]
 		except:
-			print " __RequestServerStateList - serverInfo.REGION_DICT(%d, %d)" % (regionID, serverID)
+			print "__RequestServerStateList - serverInfo.REGION_DICT(%d, %d)" % (regionID, serverID)
 			return
 
 		ServerStateChecker.Initialize()
@@ -1326,7 +1326,7 @@ class LoginWindow(ui.ScriptWindow):
 		try:
 			channelDict = serverInfo.REGION_DICT[regionID][serverID]["channel"]
 		except:
-			print " __RequestServerStateList - serverInfo.REGION_DICT(%d, %d)" % (regionID, serverID)
+			print "__RequestServerStateList - serverInfo.REGION_DICT(%d, %d)" % (regionID, serverID)
 			return
 
 		for channelID, channelDataDict in channelDict.items():
@@ -1364,7 +1364,7 @@ class LoginWindow(ui.ScriptWindow):
 			exception.Abort(localeInfo.CHANNEL_NOT_FIND_INFO)
 
 	def __OnClickExitServerButton(self):
-		print "exit server"
+		print "sunucudan çık"
 		self.__OpenLoginBoard()
 
 		if IsFullBackImage():
@@ -1432,7 +1432,7 @@ class LoginWindow(ui.ScriptWindow):
 			addrKey = serverInfo.REGION_DICT[regionID][serverID]["channel"][channelID]["key"]
 
 		except:
-			print " ERROR __OnClickSelectServerButton(%d, %d, %d)" % (regionID, serverID, channelID)
+			print "HATA __OnClickSelectServerButton(%d, %d, %d)" % (regionID, serverID, channelID)
 			serverName = localeInfo.CHANNEL_EMPTY_SERVER
 			channelName = localeInfo.CHANNEL_NORMAL % channelID
 

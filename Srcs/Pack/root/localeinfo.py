@@ -20,22 +20,22 @@ BLEND_POTION_NO_INFO = "BLEND_POTION_NO_INFO"
 
 APP_TITLE = "METIN2"
 
-GUILD_HEADQUARTER = "Main Building"
-GUILD_FACILITY = "Facility"
-GUILD_OBJECT = "Object"
-GUILD_MEMBER_COUNT_INFINITY = "INFINITY"
+GUILD_HEADQUARTER = "Ana Bina"
+GUILD_FACILITY = "Tesis"
+GUILD_OBJECT = "Nesne"
+GUILD_MEMBER_COUNT_INFINITY = "Sonsuz"
 
-LOGIN_FAILURE_WEB_BLOCK = "BLOCK_LOGIN(WEB)"
-LOGIN_FAILURE_BLOCK_LOGIN = "BLOCK_LOGIN"
+LOGIN_FAILURE_WEB_BLOCK = "Bu hesap web üzerinden engellendi."
+LOGIN_FAILURE_BLOCK_LOGIN = "Kapalı sunucu: Lütfen başka server seç!"
 CHANNEL_NOTIFY_FULL = "CHANNEL_NOTIFY_FULL"
 
 GUILD_BUILDING_LIST_TXT = app.GetLocalePath() + "/GuildBuildingList.txt"
 
 GUILD_MARK_MIN_LEVEL = "3"
-GUILD_MARK_NOT_ENOUGH_LEVEL = "Guild mark not enough level."
+GUILD_MARK_NOT_ENOUGH_LEVEL = "Lonca işareti için yeterli seviye yok."
 
-ERROR_MARK_UPLOAD_NEED_RECONNECT = "UploadMark: Reconnect to game"
-ERROR_MARK_CHECK_NEED_RECONNECT = "CheckMark: Reconnect to game"
+ERROR_MARK_UPLOAD_NEED_RECONNECT = "UploadMark: Oyuna yeniden bağlan"
+ERROR_MARK_CHECK_NEED_RECONNECT = "CheckMark: Oyuna yeniden bağlan"
 
 VIRTUAL_KEY_ALPHABET_LOWERS  = r"[1234567890]/qwertyuiop\=asdfghjkl;`'zxcvbnm.,"
 VIRTUAL_KEY_ALPHABET_UPPERS  = r'{1234567890}?QWERTYUIOP|+ASDFGHJKL:~"ZXCVBNM<>'
@@ -56,8 +56,8 @@ __IS_CIBN10		= "locale/cibn10" == app.GetLocalePath()
 __IS_WE_KOREA	= "locale/we_korea" == app.GetLocalePath()
 __IS_TAIWAN		= "locale/taiwan" == app.GetLocalePath()
 __IS_JAPAN		= "locale/japan" == app.GetLocalePath()
-LOGIN_FAILURE_WRONG_SOCIALID = "ASDF"
-LOGIN_FAILURE_SHUTDOWN_TIME = "ASDF"
+LOGIN_FAILURE_WRONG_SOCIALID = "Sosyal kimlik yanlış."
+LOGIN_FAILURE_SHUTDOWN_TIME = "Oynama süresi doldu."
 
 if __IS_CANADA:
 	__IS_EUROPE = True
@@ -241,7 +241,7 @@ if app.__BL_MULTI_LANGUAGE__:
 					localeDict[tokens.rstrip()] = ""
 				# @fixme010 END
 				else:
-					raise RuntimeError, "Unknown TokenSize"
+					raise RuntimeError, "Bilinmeyen TokenSize"
 
 				lineIndex += 1
 			except:
@@ -468,7 +468,7 @@ else:
 					localeDict[tokens.rstrip()] = ""
 				# @fixme010 END
 				else:
-					raise RuntimeError, "Unknown TokenSize"
+					raise RuntimeError, "Bilinmeyen TokenSize"
 
 				lineIndex += 1
 			except:

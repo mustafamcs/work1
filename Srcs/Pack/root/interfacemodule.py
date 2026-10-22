@@ -1608,7 +1608,7 @@ class Interface(object):
 			self.__CheckGameMaster(btn.name)
 		except:
 			import dbg
-			dbg.TraceError("interface.ShowWhisperDialog - Failed to find key")
+			dbg.TraceError("interface.ShowWhisperDialog - Anahtar bulunamadı")
 
 		self.__DestroyWhisperButton(btn)
 
@@ -1635,7 +1635,7 @@ class Interface(object):
 			del self.whisperDialogDict[name]
 		except:
 			import dbg
-			dbg.TraceError("interface.CloseWhisperDialog - Failed to find key")
+			dbg.TraceError("interface.CloseWhisperDialog - Anahtar bulunamadı")
 
 	def __ArrangeWhisperButton(self):
 

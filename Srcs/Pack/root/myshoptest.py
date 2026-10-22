@@ -7,19 +7,19 @@ import uiScriptLocale
 DECO_SHOP_MODEL_LIST = [
 	["Default", 30000],
 	["1001 Nights", 30002],
-	["BBQ King", 30003],
-	["Treasure Hunter", 30004],
-	["Frugal Flame", 30005],
-	["Arms Dealer", 30006],
-	["Armour Dealership", 30007],
+	["Mangal Kralı", 30003],
+	["Hazine Avcısı", 30004],
+	["Tutumlu Alev", 30005],
+	["Silah Satıcısı", 30006],
+	["Zırh Satıcısı", 30007],
 	["Alchemist", 30008]
 ]
 
 DECO_SHOP_TITLE_LIST = [
 	["Inferno", "d:/ymir work/ui/pattern/myshop/fire/p_fire", "0xFF976D"],
-	["Ice Age", "d:/ymir work/ui/pattern/myshop/ice/p_ice", "0xF9F4FF"],
+	["Buz Çağı", "d:/ymir work/ui/pattern/myshop/ice/p_ice", "0xF9F4FF"],
 	["Parchment", "d:/ymir work/ui/pattern/myshop/paper/p_paper", "0xFFBF8B"],
-	["War Banner", "d:/ymir work/ui/pattern/myshop/ribon/p_ribon", "0xFFECD1"],
+	["Savaş Sancağı", "d:/ymir work/ui/pattern/myshop/ribon/p_ribon", "0xFFECD1"],
 	["Wings", "d:/ymir work/ui/pattern/myshop/wing/p_wing", "0xF1ECE1"],
 ]
 
@@ -211,7 +211,7 @@ class MyShopDecoration(ui.ScriptWindow):
 			pyScrLoader.LoadScriptFile(self, "UIScript/" + FileName)
 		except:
 			import exception
-			exception.Abort("UIScript/MyShopDecorationWindow.py Load Fail")
+			exception.Abort("UIScript/MyShopDecorationWindow.py Yükleme Başarısız")
 			
 	def __RefreshLeftBoard(self):
 		self.SelectBtnIdx = 0
@@ -309,7 +309,7 @@ class MyShopDecoration(ui.ScriptWindow):
 		self.CancelBtn.Hide()
 		self.PrevBtn.Show()
 		self.CompleteBtn.Show()
-		self.TitleBar.SetText("Choose your name's appearance.")		
+		self.TitleBar.SetText("Adınızın görünümünü seçin.")		
 		self.ViewMode = self.MODE_TITLE_VIEW
 				
 		self.__ShopTitleListSetting()
@@ -320,7 +320,7 @@ class MyShopDecoration(ui.ScriptWindow):
 		self.CancelBtn.Show()
 		self.PrevBtn.Hide()
 		self.CompleteBtn.Hide()
-		self.TitleBar.SetText("Choose your shop's appearance.")
+		self.TitleBar.SetText("Dükkanınızın görünümünü seçin.")
 		self.ViewMode = self.MODE_MODEL_VIEW
 		
 		self.__AllShopTitleHide()

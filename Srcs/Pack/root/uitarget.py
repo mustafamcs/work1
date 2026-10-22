@@ -662,7 +662,7 @@ class TargetBoard(ui.ThinBoard):
 
 	def __del__(self):
 		ui.ThinBoard.__del__(self)
-		print "===================================================== DESTROYED TARGET BOARD"
+		print "===================================================== HEDEF PANELI YOK EDILDI"
 
 	def __Initialize(self):
 		self.nameString = ""

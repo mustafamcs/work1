@@ -503,11 +503,11 @@ class CharacterWindow(ui.ScriptWindow):
 		mouseModule.mouseController.AttachObject(self, player.SLOT_TYPE_EMOTION, slotIndex, slotIndex)
 
 	def __ClickEmotionSlot(self, slotIndex):
-		print "click emotion"
+		print "ifade tıkla"
 		if not slotIndex in emotion.EMOTION_DICT:
 			return
 
-		print "check acting"
+		print "hareketi kontrol et"
 		if player.IsActingEmotion():
 			return
 

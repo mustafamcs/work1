@@ -22,7 +22,7 @@ window = {
 			"width" : 180,
 			"height" : 230,
 
-			"title" : "Character Name",
+			"title" : "Karakter Adı",
 
 			"children" :
 			(

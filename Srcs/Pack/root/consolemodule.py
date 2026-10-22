@@ -47,17 +47,17 @@ class Console(object):
 		self.game = game
 
 	def Exit(self):
-		"Exit Program"
+		"Programdan Çık"
 		app.Exit()
 
 	def EnablePerformanceTime(self, mode, isEnable):
 		app.EnablePerformanceTime(mode, int(isEnable))
 
 	def ReloadLocale(self):
-		"Reload Locale"
+		"Locale Yeniden Yükle"
 		reload(localeInfo)
 		reload(uiScriptLocale)
-		self.Print("RELOAD LOCALE")
+		self.Print("LOCALE YENİDEN YÜKLE")
 
 	def ReloadDevel(self):
 		"ReloadDevel"
@@ -70,47 +70,47 @@ class Console(object):
 		self.Print("ReloadInventory")
 
 	def ShowPerformanceInfo(self):
-		"Shows Performance Info"
+		"Performans Bilgisi Gösterir"
 		self.Print(app.GetInfo(app.INFO_ACTOR))
 		self.Print(app.GetInfo(app.INFO_ITEM))
 		self.Print(app.GetInfo(app.INFO_EFFECT))
 		self.Print(app.GetInfo(app.INFO_TEXTTAIL))
 
 	def Disconnect(self):
-		"Disconnect by sending unknown packet"
+		"Bilinmeyen paket göndererek bağlantıyı kes"
 		net.SendStrangePacket()
 
 	def ToggleActorDirectionLine(self):
-		"Shows character's direction line"
+		"Karakterin yön çizgisini gösterir"
 		chrmgr.ToggleDirectionLine()
 
 	def RegisterCharacterEffect(self, effectType, effectFileName):
-		"Set character's effect state (state number, bone name, effect filename/number)"
+		"Karakterin efekt durumunu ayarla (durum no, kemik adı, efekt dosyası/no)"
 		if effectFileName.isdigit():
 			effectFileName = self.GetFileName(int(effectFileName))
 
 		effectFullPathFileName = self.GetFullPathName(effectFileName)
 		chrmgr.RegisterEffect(chrmgr.EFFECT_STATE+int(effectType), "", effectFullPathFileName)
-		self.Print("effect state %d: %s" % (int(effectType), effectFullPathFileName))
+		self.Print("efekt durumu %d: %s" % (int(effectType), effectFullPathFileName))
 
 	def SetCharacterAffect(self, affectType, isVisible):
-		"Set character's affect (number, visiblity 1|0)"
+		"Karakterin etkisini ayarla (numara, görünürlük 1|0)"
 		chrmgr.SetAffect(-1, int(affectType), int(isVisible))
-		self.Print("affect set %d: %d" % (int(affectType), int(isVisible)))
+		self.Print("etki ayarla %d: %d" % (int(affectType), int(isVisible)))
 
 	def SetCharacterEmoticon(self, EmoticonNum):
-		"Show emoticon (number)"
+		"İfade göster (numara)"
 		chrmgr.SetEmoticon(-1, int(EmoticonNum))
-		self.Print("Emoticon %d" % int(EmoticonNum))
+		self.Print("İfade %d" % int(EmoticonNum))
 
 	def ShowPickedCharacterInfo(self):
-		"Show information of picked character"
+		"Seçili karakterin bilgisini göster"
 		vid=chrmgr.GetPickedVID()
 		info=chrmgr.GetVIDInfo(vid)
 		self.Print(info)
 
 	def ShowCharacterInfo(self, arg):
-		"Show information of character (vid)"
+		"Karakter bilgisini göster (vid)"
 		if arg.isdigit():
 			vid=int(arg)
 		else:
@@ -120,7 +120,7 @@ class Console(object):
 		self.Print(info)
 
 	def SetWeaponTraceTexture(self, arg):
-		"Sets sword afterimage texture (filename)"
+		"Kılıç art görüntü dokusu ayarlar (dosya adı)"
 		if arg.isdigit():
 			textureFileName = self.GetFileName(int(arg))
 		else:
@@ -129,28 +129,28 @@ class Console(object):
 		chr.WeaponTraceSetTexture(textureFileName)
 
 	def SetAutoCameraRotationSpeed(self, arg):
-		"Auto camera rotation speed (angle per sec)"
+		"Otomatik kamera dönüş hızı (açı/sn)"
 		spd=float(arg)
 		player.SetAutoCameraRotationSpeed(spd)
 
-		self.Print("Auto camera rotation speed: %f" % (spd))
+		self.Print("Otomatik kamera dönüş hızı: %f" % (spd))
 
 	def SetWeaponTraceMode(self, *mode):
-		"Sword afterimage mode (0 = Use alpha, 1 = Use texture)"
+		"Kılıç art görüntü modu (0 = Alfa kullan, 1 = Doku kullan)"
 		if mode and mode[0].isdigit() and int(mode[0]):
 			chr.WeaponTraceUseTexture()
 		else:
 			chr.WeaponTraceUseAlpha()
 
 	def SetCollision(self, *mode):
-		"Show collison objects (0 | 1)"
+		"Çarpışma nesnelerini göster (0 | 1)"
 		if mode and mode[0].isdigit():
 			self.collision = int(mode[0])
 		else:
 			self.collision = not self.collision
 
 	def SetMovingSpeed(self, arg):
-		"Set walking speed"
+		"Yürüme hızını ayarla"
 		chrmgr.SetMovingSpeed(int(arg))
 
 	def SetMusicVolume(self, arg):
@@ -158,7 +158,7 @@ class Console(object):
 		snd.SetMusicVolume(float(arg))
 
 	def SetSoundVolume(self, arg):
-		"Set Effect sound volumn (0 ~ 5)"
+		"Efekt ses düzeyini ayarla (0 ~ 5)"
 		snd.SetSoundVolume(int(arg))
 
 	def SetSoundScale(self, arg):
@@ -166,24 +166,24 @@ class Console(object):
 		snd.SetSoundScale(int(arg))
 
 	def SetAmbienceSoundScale(self, arg):
-		"3D Ambience sound scale (default : 200)"
+		"3D Ortam sesi ölçeği (varsayılan : 200)"
 		snd.SetAmbienceSoundScale(int(arg))
 
 	def SetCoolTime(self):
-		"Cooltime toggle"
+		"Bekleme süresi değiştir"
 		flag = player.ToggleCoolTime()
 		if flag:
-			self.Print("Cooltime will be applied")
+			self.Print("Bekleme süresi uygulanacak")
 		else:
-			self.Print("Cooltime disabled")
+			self.Print("Bekleme süresi devre dışı")
 
 	def SetLevelLimit(self):
-		"Sets Level limit"
+		"Seviye sınırı ayarlar"
 		flag = player.ToggleLevelLimit()
 		if flag:
-			self.Print("Level limit will be applied")
+			self.Print("Seviye sınırı uygulanacak")
 		else:
-			self.Print("Level limit disabled")
+			self.Print("Seviye sınırı devre dışı")
 
 	def ShowCursor(self):
 		app.ShowCursor()
@@ -202,7 +202,7 @@ class Console(object):
 			newPathName=newPathName+'\\'
 
 		if os.access(newPathName, os.R_OK)==0:
-			self.Print(newPathName+" Cannot find path")
+			self.Print(newPathName+"Yol bulunamıyor")
 			return
 
 		nameList=os.listdir(newPathName)
@@ -240,7 +240,7 @@ class Console(object):
 			return ""
 
 	def	MoveParentPath(self):
-		"Go to Parent directory"
+		"Üst dizine git"
 		newPathName=self.GetPath()
 
 		lastPos=-1
@@ -249,7 +249,7 @@ class Console(object):
 
 		lastPos=newPathName.rfind('\\', 0,	lastPos)
 		if 0>lastPos:
-			self.Print("Here is root")
+			self.Print("Kök dizin burası")
 			return
 
 		newPathName=newPathName[0:lastPos]+'\\'
@@ -265,9 +265,9 @@ class Console(object):
 		return sParentPathName+sPathName
 
 	def	MoveChildPath(self, directory):
-		"[Directory name/number] change to child directory"
+		"[Dizin adı/numarası] alt dizine geç"
 		if ""==directory:
-			self.Print("You need directory name or number")
+			self.Print("Dizin adı veya numarası gerekli")
 			return
 
 		if directory.isdigit():
@@ -278,7 +278,7 @@ class Console(object):
 		self.SetPath(newPathName)
 
 	def SetHitEffect(self, arg):
-		"Sets hit effect"
+		"Vuruş efekti ayarlar"
 		if arg.isdigit():
 			effectFileName = self.GetFileName(int(arg))
 		else:
@@ -287,22 +287,22 @@ class Console(object):
 		effectFullPathFileName=self.GetFullPathName(effectFileName)
 		chrmgr.RegisterEffect(chrmgr.EFFECT_HIT, "", effectFullPathFileName)
 
-		self.Print("Hit effect: "+effectFullPathFileName)
+		self.Print("Vuruş efekti:"+effectFullPathFileName)
 
 	def SetStunEffect(self, arg):
-		"Sets stun effect"
+		"Sersemletme efekti ayarlar"
 		if arg.isdigit():
 			effectFileName = self.GetFileName(int(arg))
 		else:
 			effectFileName = arg
 
 		effectFullPathFileName = self.GetFullPathName(effectFileName)
-		chrmgr.RegisterEffect(chrmgr.EFFECT_STUN, "Bip01 Head", effectFullPathFileName)
+		chrmgr.RegisterEffect(chrmgr.EFFECT_STUN, "Bip01 Kafa", effectFullPathFileName)
 
-		self.Print("Stun effect: "+effectFullPathFileName)
+		self.Print("Sersemletme efekti:"+effectFullPathFileName)
 
 	def SetDustEffect(self, arg):
-		"Sets dirt effect"
+		"Kir efekti ayarlar"
 		if arg.isdigit():
 			effectFileName = self.GetFileName(int(arg))
 		else:
@@ -311,98 +311,98 @@ class Console(object):
 		effectFullPathFileName = self.GetFullPathName(effectFileName)
 		chrmgr.RegisterEffect(chrmgr.EFFECT_DUST, "", effectFullPathFileName)
 
-		self.Print("Dirt effect: "+effectFullPathFileName)
+		self.Print("Kir efekti:"+effectFullPathFileName)
 
 	def SetDustGap(self, arg):
-		"Sets dirt effect gap"
+		"Kir efekti aralığı ayarlar"
 		if arg.isdigit() == 0:
-			self.Print("Dirt effect gap argument must be a number")
+			self.Print("Kir efekti aralık argümanı sayı olmalı")
 		else:
 			gap = int(arg)
 			chrmgr.SetDustGap(gap)
-			self.Print("Dirt effect gap: %d" % (gap))
+			self.Print("Kir efekti aralığı: %d" % (gap))
 
 	def ShowBackgroundPart(self, arg):
-		"Show background part"
+		"Arka plan parçasını göster"
 		try:
 			background.SetVisiblePart(self.bgPartDict[arg], 1);
 		except KeyError:
-			self.Print("Unknown part: ", arg);
+			self.Print("Bilinmeyen parça:", arg);
 		except:
 			raise
 
 	def HideBackgroundPart(self, arg):
-		"Hide background part"
+		"Arka plan parçasını gizle"
 		try:
 			background.SetVisiblePart(self.bgPartDict[arg], 0);
 		except KeyError:
-			self.Print("Unknown part: ", arg);
+			self.Print("Bilinmeyen parça:", arg);
 		except:
 			raise
 
 	def SetShadowLevel(self, arg):
-		"Shadow level setting (0~5)"
+		"Gölge seviyesi ayarı (0~5)"
 		if arg.isdigit() == 0:
-			self.Print("Shadow setting must be a number")
+			self.Print("Gölge ayarı sayı olmalı")
 		else:
 			level = int(arg)
 
 			if level < 0 or level > 5:
-				self.Print("Shadow level range is 0~5")
+				self.Print("Gölge seviyesi aralığı 0~5")
 			else:
 				background.SetShadowLevel(level)
-				self.Print("Shadow level: %d" % (level))
+				self.Print("Gölge seviyesi: %d" % (level))
 
 	def SetSplatLimit(self, arg):
-		"Splat number limit"
+		"Splat sayı limiti"
 		if arg.isdigit() == 0:
-			self.Print("Splat number limit must be a number")
+			self.Print("Splat sayı limiti sayı olmalı")
 		else:
 			limit = int(arg)
 
 			background.SetSplatLimit(limit)
-			self.Print("Splat number limit: %d" % (limit))
+			self.Print("Splat sayı limiti: %d" % (limit))
 
 	def SelectViewDistanceNum(self, arg):
 		"View distance (0~4)"
 		if arg.isdigit() == 0:
-			self.Print("Enter between 0 to 4")
+			self.Print("0 ile 4 arasında girin")
 		else:
 			settingnum = int(arg)
 
 			if settingnum < 0 or settingnum > 4:
-				self.Print("View distance range is 0 to 4")
+				self.Print("Görüş mesafesi aralığı 0 ile 4 arası")
 
 			else:
 				background.SelectViewDistanceNum(settingnum)
-				self.Print("View distance: %d" % (settingnum))
+				self.Print("Görüş mesafesi: %d" % (settingnum))
 
 	def SetBGLoading(self, bBGLoading):
-		"Background loading (0, 1)"
+		"Arka plan yükleme (0, 1)"
 		bResultBoolean = int(bBGLoading)
 
 		if bResultBoolean != 0 and bResultBoolean != 1:
-			self.Print("Enter 0 or 1")
+			self.Print("0 veya 1 girin")
 		else:
 			background.SetBGLoading(bResultBoolean)
-			self.Print("Background loading: %d" % (bResultBoolean))
+			self.Print("Arka plan yükleme: %d" % (bResultBoolean))
 
 	def SetTerrainRenderSort(self, arg):
-		"Terrain rendering type"
+		"Arazi render tipi"
 		try:
 			background.SetRenderSort(self.bgSortDict[arg]);
 		except KeyError:
-			self.Print("Unknown part: ", arg);
+			self.Print("Bilinmeyen parça:", arg);
 		except:
 			raise
 
 	def SetTransparentTree(self, arg):
-		"Tree's leaf transparency"
+		"Ağacın yaprak şeffaflığı"
 		bTransparent = int(arg)
 		try:
 			background.SetTransparentTree(bTransparent);
 		except KeyError:
-			self.Print("must be 0 or 1: ", bTransparent);
+			self.Print("0 veya 1 olmalı:", bTransparent);
 		except:
 			raise
 
@@ -422,32 +422,32 @@ class Console(object):
 			exception.Abort("consoleModule.Console.WarpTest")
 
 	def ToggleDebugInfo(self):
-		"Show DebugInfo"
+		"DebugInfo Göster"
 		net.ToggleGameDebugInfo()
 
 	def ShowPath(self):
-		"Show current path"
-		self.Print("Current path is "+self.GetPath())
+		"Şu anki yolu göster"
+		self.Print("Şu anki yol"+self.GetPath())
 
 	def	ShowList(self):
-		"Show current path's list"
+		"Şu anki yolun listesini göster"
 		self.ShowDirList()
 		self.ShowFileList()
 
 	def	ShowDirList(self):
-		"Show current path's child directories"
+		"Şu anki yolun alt dizinlerini göster"
 		self.Print(self.GetPath()+" directories:")
 		self.ShowNameList(self.dirNameList)
 		self.Print("")
 
 	def	ShowFileList(self, Filter=[]):
-		"Show current path's files (extension filter)"
+		"Şu anki yolun dosyalarını göster (uzantı filtresi)"
 		self.Print(self.GetPath()+" files:")
 		self.ShowNameList(self.fileNameList, Filter)
 		self.Print("")
 
 	def	ShowEffectList(self):
-		"Show current path's effect"
+		"Şu anki yolun efektlerini göster"
 		self.Print(self.GetPath()+" effects:")
 		self.ShowNameList(self.fileNameList, ["mse"])
 		self.Print("")
@@ -460,31 +460,31 @@ class Console(object):
 			app.ShowWebPage("http://wiki.metin.co.kr/metin1help/01.htm", (0, 0, 320, 600))
 
 	def ShowUI(self):
-		"Shows UI"
+		"Arayüzü gösterir"
 		self.game.CheckGameButton()
 		self.game.interface.ShowDefaultWindows()
 		self.game.interface.wndChat.Show()
 
 	def HideUI(self):
-		"Hides UI"
+		"Arayüzü gizler"
 		self.game.interface.HideAllWindows()
 		self.game.interface.wndChat.Hide()
 
 	def SetCameraSpeed(self, percentage):
-		"Sets camera speed (Default = 100)"
+		"Kamera hızı ayarlar (Varsayılan = 100)"
 		app.SetCameraSpeed(int(percentage))
 
 	def SaveCameraSetting(self, filename):
-		"Save current camera attributes (filename)"
+		"Şu anki kamera özelliklerini kaydet (dosya adı)"
 		app.SaveCameraSetting(filename)
 
 	def LoadCameraSetting(self, filename):
-		"Load camera attributes (filename)"
+		"Kamera özelliklerini yükle (dosya adı)"
 		if not app.LoadCameraSetting(filename):
-			self.Print("Could not load camera attribute")
+			self.Print("Kamera özelliği yüklenemedi")
 
 	def SetDefaultCamera(self):
-		"Return to default camera attribute"
+		"Varsayılan kamera özelliğine dön"
 		app.SetDefaultCamera()
 
 	def ShowClock(self, second):
@@ -495,14 +495,14 @@ class Console(object):
 
 	def ShowNotice(self):
 		app.SetVisibleNotice(True)
-		self.Print("Show Notice")
+		self.Print("Duyuruyu Göster")
 
 	def HideNotice(self):
 		app.SetVisibleNotice(False)
-		self.Print("Hide Notice")
+		self.Print("Duyuruyu Gizle")
 
 	def SetSight(self, range):
-		"Set Force Sight Range"
+		"Görüş Mesafesini Zorla Ayarla"
 		app.SetSightRange(int(range))
 
 	def SetComboType(self, type):
@@ -510,11 +510,11 @@ class Console(object):
 
 	def SetSkillGroupFake(self, index):
 		net.SetSkillGroupFake(int(index))
-		self.Print(" SetSkillGroupFake : %d" % int(index))
+		self.Print("SetSkillGroupFake : %d" % int(index))
 
 	def SetEmpireLanguageMode(self, mode):
 		net.SetEmpireLanguageMode(int(mode))
-		self.Print(" SetEmpireLanguageMode : %d" % int(mode))
+		self.Print("SetEmpireLanguageMode : %d" % int(mode))
 
 	def SetCharacterRenderModeTypeAdd(self, color):
 		vid = player.GetTargetVID()
@@ -772,7 +772,7 @@ class ConsoleWindow(ui.Window):
 					argnames = v.im_func.func_code.co_varnames[1:argcount+1]
 					if argcount:
 						Console.Print("%s(%s) : %s" % (k,argcount, v.__doc__))
-						Console.Print("   arg : %s" % argnames)
+						Console.Print("arg : %s" % argnames)
 					else:
 						Console.Print("%s : %s" % (k,v.__doc__))
 				except:
@@ -784,9 +784,9 @@ class ConsoleWindow(ui.Window):
 							Console.Print("%s(%s) : %s" % (k,argcount, v.__doc__))
 						else:
 							Console.Print("%s : %s" % (k,v.__doc__))
-					Console.Print("? : All commands list")
-					Console.Print("h : Help for all commands")
-					Console.Print("h blah : Help for blah")
+					Console.Print("? : Tüm komutların listesi")
+					Console.Print("h : Tüm komutlar için yardım")
+					Console.Print("h blah : blah için yardım")
 
 				Console.Print("")
 			elif sCmd == '?':

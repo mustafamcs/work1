@@ -59,7 +59,7 @@ class pack_file(object):
 	def __init__(self, filename, mode = 'rb'):
 		assert mode in ('r', 'rb')
 		if not pack.Exist(filename):
-			raise IOError, 'No file or directory'
+			raise IOError, 'Dosya veya dizin yok'
 		self.data = pack.Get(filename)
 		if NEW_PACK_FILE and not self.data:
 			tmp = old_open(filename)
@@ -143,7 +143,7 @@ def _process_result(code, fqname):
 
 	# fetch from sys.modules instead of returning module directly.
 	# also make module's __name__ agree with fqname, in case
-	# the "exec code in module.__dict__" played games on us.
+	# the "module.__dict__ içinde kod çalıştır" played games on us.
 	module = sys.modules[fqname]
 	module.__name__ = fqname
 	return module
@@ -155,10 +155,10 @@ if __USE_CYTHON__:
 def __hybrid_import(name,globals=None,locals=None,fromlist=None, level=-1):
 	if __USE_CYTHON__ and rootlib.isExist(name):
 		if name in sys.modules:
-			dbg.Tracen('importing from sys.modules %s' % name)
+			dbg.Tracen('sys.modules %s içinden import ediliyor' % name)
 			return sys.modules[name]
 
-		dbg.Tracen('importing from rootlib %s' % name)
+		dbg.Tracen('rootlib %s içinden import ediliyor' % name)
 		newmodule = rootlib.moduleImport(name)
 
 		module_do(newmodule)
@@ -169,17 +169,17 @@ def __hybrid_import(name,globals=None,locals=None,fromlist=None, level=-1):
 
 		if pack.Exist(filename):
 			if name in sys.modules:
-				dbg.Tracen('importing from sys.modules %s' % name)
+				dbg.Tracen('sys.modules %s içinden import ediliyor' % name)
 				return sys.modules[name]
 
-			dbg.Tracen('importing from pack %s' % name)
+			dbg.Tracen('pack %s içinden import ediliyor' % name)
 
 			newmodule = _process_result(compile(pack_file(filename,'r').read(),filename,'exec'),name)
 
 			module_do(newmodule)
 			return newmodule
 		else:
-			dbg.Tracen('importing from lib %s' % name)
+			dbg.Tracen('lib %s içinden import ediliyor' % name)
 			return old_import(name,globals,locals,fromlist)#, level)
 
 def splitext(p):

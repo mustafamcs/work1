@@ -264,7 +264,7 @@ class CubeWindow(ui.ScriptWindow):
 						if True == bAlreadyExists:
 							continue #continue inventory iterating
 
-						#print "Cube Status : ", self.cubeItemInfo
+						#print "Küp Durumu :", self.cubeItemInfo
 
 						bCanAddSlot = False
 						for slotPos in xrange(self.cubeSlot.GetSlotCount()):
@@ -428,7 +428,7 @@ class CubeWindow(ui.ScriptWindow):
 			if 3 <= i:
 				break
 
-		#print "self.cubeMaterialInfos : ", self.cubeMaterialInfos
+		#print "self.cubeMaterialInfos :", self.cubeMaterialInfos
 		if self.firstSlotIndex in self.cubeMaterialInfos:
 			for i in xrange(self.RESULT_SLOT_COUNT):
 				materialList = self.cubeMaterialInfos[self.firstSlotIndex + i]

@@ -2,11 +2,11 @@
 import pack
 import os
 
-AUTOBAN_QUIZ_ANSWER = "ANSWER"
-AUTOBAN_QUIZ_REFRESH = "REFRESH"
-AUTOBAN_QUIZ_REST_TIME = "REST_TIME"
+AUTOBAN_QUIZ_ANSWER = "CEVAP"
+AUTOBAN_QUIZ_REFRESH = "YENİLE"
+AUTOBAN_QUIZ_REST_TIME = "KALAN SÜRE"
 
-OPTION_SHADOW = "SHADOW"
+OPTION_SHADOW = "GÖLGE"
 
 CODEPAGE = str(app.GetDefaultCodePage())
 
@@ -38,9 +38,9 @@ def _ui_utf8_to_cp1254(data):
 if app.__BL_MULTI_LANGUAGE__:
 	def LoadLocaleFile(srcFileName):
 		localeDict = {}
-		localeDict["CUBE_INFO_TITLE"] = "Recipe"
-		localeDict["CUBE_REQUIRE_MATERIAL"] = "Requirements"
-		localeDict["CUBE_REQUIRE_MATERIAL_OR"] = "or"
+		localeDict["CUBE_INFO_TITLE"] = "Tarif"
+		localeDict["CUBE_REQUIRE_MATERIAL"] = "Gerekenler"
+		localeDict["CUBE_REQUIRE_MATERIAL_OR"] = "veya"
 
 		try:
 			f = open(srcFileName, "rb")
@@ -117,17 +117,14 @@ if app.__BL_MULTI_LANGUAGE__:
 
 		global LOCALE_NAME_DICT
 		LOCALE_NAME_DICT = {
-			"en" : globals()['LANGUAGE_EN'],
 			"tr" : globals()['LANGUAGE_TR'],
 		}
-		if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-			LOCALE_NAME_DICT["eu"] = globals()['LANGUAGE_ANONYMOUS']
 
 else:
 	def LoadLocaleFile(srcFileName, localeDict):
-		localeDict["CUBE_INFO_TITLE"] = "Recipe"
-		localeDict["CUBE_REQUIRE_MATERIAL"] = "Requirements"
-		localeDict["CUBE_REQUIRE_MATERIAL_OR"] = "or"
+		localeDict["CUBE_INFO_TITLE"] = "Tarif"
+		localeDict["CUBE_REQUIRE_MATERIAL"] = "Gerekenler"
+		localeDict["CUBE_REQUIRE_MATERIAL_OR"] = "veya"
 
 		try:
 			f = open(srcFileName, "rb")
@@ -216,8 +213,5 @@ if app.ENABLE_LOCALE_COMMON:
 
 if app.__BL_MULTI_LANGUAGE__:
 	LOCALE_NAME_DICT = {
-		"en" : globals()['LANGUAGE_EN'],
 		"tr" : globals()['LANGUAGE_TR'],
 	}
-	if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-		LOCALE_NAME_DICT["eu"] = globals()['LANGUAGE_ANONYMOUS']

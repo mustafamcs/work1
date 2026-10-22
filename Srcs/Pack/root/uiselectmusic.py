@@ -42,7 +42,7 @@ class Item(ui.ListBoxEx.Item):
 
 class PopupDialog(ui.ScriptWindow):
 	def __init__(self, parent):
-		print "NEW POPUP WINDOW   ----------------------------------------------------------------------------"
+		print "YENI POPUP PENCERESI   ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 
 		self.__Load()
@@ -50,7 +50,7 @@ class PopupDialog(ui.ScriptWindow):
 
 	def __del__(self):
 		ui.ScriptWindow.__del__(self)
-		print "---------------------------------------------------------------------------- DELETE POPUP WINDOW"
+		print "---------------------------------------------------------------------------- POPUP PENCERESI SIL"
 
 	def __Load(self):
 		try:
@@ -81,7 +81,7 @@ class PopupDialog(ui.ScriptWindow):
 
 class FileListDialog(ui.ScriptWindow):
 	def __init__(self):
-		print "NEW LIST DIALOG   ----------------------------------------------------------------------------"
+		print "YENI LISTE PENCERESI   ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 
 		self.isLoaded=0
@@ -90,7 +90,7 @@ class FileListDialog(ui.ScriptWindow):
 
 	def __del__(self):
 		ui.ScriptWindow.__del__(self)
-		print "---------------------------------------------------------------------------- DELETE LIST DIALOG"
+		print "---------------------------------------------------------------------------- LISTE PENCERESI SIL"
 
 	def Show(self):
 		if self.isLoaded==0:

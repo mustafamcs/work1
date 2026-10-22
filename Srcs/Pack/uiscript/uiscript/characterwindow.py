@@ -549,7 +549,7 @@ window = {
 
 									"x" : 7,
 									"y" : 1,
-									"text" : "Active",
+									"text" : "Aktif",
 
 									"vertical_align" : "center",
 									"text_vertical_align" : "center",

@@ -36,7 +36,7 @@ import uiRestart
 
 class LoadingWindow(ui.ScriptWindow):
 	def __init__(self, stream):
-		print "NEW LOADING WINDOW -------------------------------------------------------------------------------"
+		print "YENI YUKLEME PENCERESI -------------------------------------------------------------------------------"
 		ui.Window.__init__(self)
 		net.SetPhaseWindow(net.PHASE_WINDOW_LOAD, self)
 
@@ -55,7 +55,7 @@ class LoadingWindow(ui.ScriptWindow):
 		ui.Window.__del__(self)
 
 	def Open(self):
-		print "OPEN LOADING WINDOW -------------------------------------------------------------------------------"
+		print "YUKLEME PENCERESI AC -------------------------------------------------------------------------------"
 
 		#app.HideCursor()
 
@@ -68,7 +68,7 @@ class LoadingWindow(ui.ScriptWindow):
 				pyScrLoader.LoadScriptFile(self, "UIScript/LoadingWindow.py")
 		except:
 			import exception
-			exception.Abort("LodingWindow.Open - LoadScriptFile Error")
+			exception.Abort("LodingWindow.Open - LoadScriptFile Hatası")
 
 		try:
 			self.loadingImage=self.GetChild("BackGround")
@@ -76,7 +76,7 @@ class LoadingWindow(ui.ScriptWindow):
 			self.loadingGage=self.GetChild("FullGage")
 		except:
 			import exception
-			exception.Abort("LodingWindow.Open - LoadScriptFile Error")
+			exception.Abort("LodingWindow.Open - LoadScriptFile Hatası")
 
 		self.errMsg.Hide()
 
@@ -92,7 +92,7 @@ class LoadingWindow(ui.ScriptWindow):
 			self.loadingImage.LoadImage(imgFileName)
 
 		except:
-			print "LoadingWindow.Open.LoadImage - %s File Load Error" % (imgFileName)
+			print "LoadingWindow.Open.LoadImage - %s Dosya Yükleme Hatası" % (imgFileName)
 			self.loadingImage.Hide()
 
 
@@ -110,7 +110,7 @@ class LoadingWindow(ui.ScriptWindow):
 		app.SetFrameSkip(0)
 
 	def Close(self):
-		print "---------------------------------------------------------------------------- CLOSE LOADING WINDOW"
+		print "---------------------------------------------------------------------------- YUKLEME PENCERESI KAPAT"
 
 		app.SetFrameSkip(1)
 
@@ -201,7 +201,7 @@ class LoadingWindow(ui.ScriptWindow):
 
 
 				import dbg
-				dbg.TraceError(" !!! Failed to load game data : STEP [%d]" % (progress))
+				dbg.TraceError("!!! Oyun verisi yüklenemedi : ADIM [%d]" % (progress))
 
 				#import shutil
 				#import os

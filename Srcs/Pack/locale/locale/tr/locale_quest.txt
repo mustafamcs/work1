@@ -1747,18 +1747,18 @@
 1750	Burada sıralamada en yüksek sekiz loncayı ve[ENTER]istatistiklerini görebilirsin:[ENTER][DELAY value;0][ENTER]|Lonca adı |Puanı |Zaferleri |Beraberlikleri[ENTER]|Yenilgileri[ENTER]%s[/DELAY][ENTER]
 1751	Kendi lonca sıralaman %s.
 1752	Puan miktarı : %s
-1753	Current Setting
-1754	Maximum number: %d
-1755	Please input level.
-1756	Please input ladder point.
-1757	Please input waiting time(sec.).
-1758	Please input max. member.
-1759	Do you want to close the dungeon forcibly?
-1760	Input guild name that you want to close.
+1753	Mevcut Ayar
+1754	Azami sayı: %d
+1755	Lütfen seviye girin.
+1756	Lütfen lider puanı girin.
+1757	Lütfen bekleme süresini girin (sn.).
+1758	Lütfen azami üye sayısını girin.
+1759	Zindanı zorla kapatmak istiyor musunuz?
+1760	Kapatmak istediğiniz loncanın adını girin.
 1761	Sung Mahi'nin Ejderhaları mı?
 1762	Korkarım çoğu yarın hayatta olmayacak. Tüm[ENTER]iblislerin tanrısı Sung Mahi tekrar uyandı... ve[ENTER]onunla birlikte üç ejderhası da.
 1763	İnsanların ruhlarıyla besleniyorlar. Yeterince[ENTER]yedikten sonra Sung Mahi'nin gücüne güç[ENTER]katıyorlar. Bu da... son demek. Hepimiz için.
-1764	Change Level
+1764	Seviye Değiştir
 1765	Buna izin veremeyiz! Ama cesur bir savaşçıdan çok[ENTER]daha fazlasına ihtiyaç var. Sadece loncalar bu[ENTER]pullu hayvanla yüzleşebilir.
 1766	Yardım edebilir misin? Senin kadar cesur[ENTER]maceracılar tanıyor musun? Ama seni uyarıyorum:[ENTER]Ejderhalara karşı çıkanlarla ilgili ürkütücü[ENTER]hikayeler anlatılıyor.
 1767	Asla geri dönmediler...
@@ -1813,8 +1813,8 @@
 1816	Input Metin Stone number.
 1817	Please input the HP to end 1st phase.
 1818	Please input the HP to end 2nd phase.
-1819	Please input the HP to end 3rd phase.
-1820	Level limit : %d
+1819	3. aşamayı bitirmek için HP girin.
+1820	Seviye sınırı: %d
 1821	Savaşı başlat
 1822	Ejderha mağarasındaki savaş devam ediyor.
 1823	Savaşı şimdi başlatmak isitoyr musun?
@@ -4254,10 +4254,10 @@
 4257	Kestane rengi at
 4258	3
 4259	Evlenirken, çiftler arasında en fazla kaç level[ENTER]olabilir?
-4260	30 level
-4261	25 level
-4262	20 level
-4263	15 level
+4260	30 seviye
+4261	25 seviye
+4262	20 seviye
+4263	15 seviye
 4264	4
 4265	Hangisi en iyi çift el silahtır?
 4266	Hançer

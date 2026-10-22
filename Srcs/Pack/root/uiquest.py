@@ -119,7 +119,7 @@ class EventCurtain(ui.Bar):
 	STATE_IN = 2
 
 	def __init__(self, index):
-		print "NEW EVENT CURTAIN  ----------------------------------------------------------------------------"
+		print "YENI OLAY PERDESI  ----------------------------------------------------------------------------"
 		ui.Bar.__init__(self, "CURTAIN")
 		self.SetWindowName("EventCurtain")
 		self.AddFlag("float")
@@ -134,7 +134,7 @@ class EventCurtain(ui.Bar):
 		self.eventIndex = index
 
 	def __del__(self):
-		print "---------------------------------------------------------------------------- DELETE EVENT CURTAIN"
+		print "---------------------------------------------------------------------------- OLAY PERDESI SIL"
 		ui.Bar.__del__(self)
 
 	def SetAlpha(self, alpha):
@@ -253,7 +253,7 @@ class QuestDialog(ui.ScriptWindow):
 	def __init__(self,skin,idx):
 
 		ui.ScriptWindow.__init__(self)
-		self.SetWindowName("quest dialog")
+		self.SetWindowName("görev penceresi")
 
 		self.focusIndex = 0
 
@@ -613,7 +613,7 @@ class QuestDialog(ui.ScriptWindow):
 		focusIndex = self.focusIndex;
 		lastFocusIndex = focusIndex;
 
-		#print "QuestDialog key down - focus, last : ", focusIndex, lastFocusIndex
+		#print "QuestDialog tuş basımı - odak, son :", focusIndex, lastFocusIndex
 
 		answerCount = len(self.btnAnswer)
 

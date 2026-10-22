@@ -1134,7 +1134,7 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 
 		except Exception, e:
 			import dbg
-			dbg.TraceError("Exception : __SelectRefineEmptySlot, %s" % e)
+			dbg.TraceError("İstisna : __SelectRefineEmptySlot, %s" % e)
 
 	def __SelectRefineItemSlot(self, selectedSlotPos):
 		if constInfo.GET_ITEM_QUESTION_DIALOG_STATUS() == 1:
@@ -1187,7 +1187,7 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 
 		except Exception, e:
 			import dbg
-			dbg.TraceError("Exception : __SelectRefineItemSlot, %s" % e)
+			dbg.TraceError("İstisna : __SelectRefineItemSlot, %s" % e)
 
 		self.Refresh()
 
@@ -1270,7 +1270,7 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 			self.wndRefineSlot.RefreshSlot()
 		except Exception, e:
 			import dbg
-			dbg.TraceError("Exception : __RefreshRefineItemSlot, %s" % e)
+			dbg.TraceError("İstisna : __RefreshRefineItemSlot, %s" % e)
 
 	def __GetEmptySlot(self, itemVnum = 0):
 		if DragonSoulRefineWindow.REFINE_TYPE_STRENGTH == self.currentRefineType:

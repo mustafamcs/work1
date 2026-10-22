@@ -53,7 +53,7 @@ class SelectEmpireWindow(ui.ScriptWindow):
 			event.RenderEventSet(self.descIndex)
 
 	def __init__(self, stream):
-		print "NEW EMPIRE WINDOW  ----------------------------------------------------------------------------"
+		print "YENI IMPARATORLUK PENCERESI  ----------------------------------------------------------------------------"
 		ui.ScriptWindow.__init__(self)
 		net.SetPhaseWindow(net.PHASE_WINDOW_EMPIRE, self)
 
@@ -74,10 +74,10 @@ class SelectEmpireWindow(ui.ScriptWindow):
 	def __del__(self):
 		ui.ScriptWindow.__del__(self)
 		net.SetPhaseWindow(net.PHASE_WINDOW_EMPIRE, 0)
-		print "---------------------------------------------------------------------------- DELETE EMPIRE WINDOW"
+		print "---------------------------------------------------------------------------- IMPARATORLUK PENCERESI SIL"
 
 	def Close(self):
-		print "---------------------------------------------------------------------------- CLOSE EMPIRE WINDOW"
+		print "---------------------------------------------------------------------------- IMPARATORLUK PENCERESI KAPAT"
 
 		self.ClearDictionary()
 		self.leftButton = None
@@ -99,14 +99,14 @@ class SelectEmpireWindow(ui.ScriptWindow):
 		event.Destroy()
 
 	def Open(self):
-		print "OPEN EMPIRE WINDOW ----------------------------------------------------------------------------"
+		print "IMPARATORLUK PENCERESI AC ----------------------------------------------------------------------------"
 
 		self.SetSize(wndMgr.GetScreenWidth(), wndMgr.GetScreenHeight())
 		self.SetWindowName("SelectEmpireWindow")
 		self.Show()
 
 		if not self.__LoadScript(uiScriptLocale.LOCALE_UISCRIPT_PATH + "SelectEmpireWindow.py"):
-			dbg.TraceError("SelectEmpireWindow.Open - __LoadScript Error")
+			dbg.TraceError("SelectEmpireWindow.Open - __LoadScript Hatası")
 			return
 
 		self.OnSelectEmpire(self.empireID)

@@ -133,7 +133,7 @@ class ChatLine(ui.EditLine):
 
 	def __init__(self):
 		ui.EditLine.__init__(self)
-		self.SetWindowName("Chat Line")
+		self.SetWindowName("Sohbet Satırı")
 		self.lastShoutTime = 0
 		self.eventEscape = lambda *arg: None
 		self.eventReturn = lambda *arg: None

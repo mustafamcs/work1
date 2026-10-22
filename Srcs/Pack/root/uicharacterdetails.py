@@ -209,12 +209,12 @@ class CharacterDetailsUI(ui.ScriptWindow):
 		self.RefreshLabel()
 
 	def Show(self):
-		#print "CharacterDetailsUI Show"
+		#print "CharacterDetailsUI Göster"
 		ui.ScriptWindow.Show(self)
 		self.SetTop()
 
 	def Close(self):
-		#print "CharacterDetailsUI Close"
+		#print "CharacterDetailsUI Kapat"
 		self.Hide()
 
 	def AdjustPosition(self, x, y):
