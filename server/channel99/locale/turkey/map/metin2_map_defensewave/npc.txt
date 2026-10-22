@@ -1,2 +1,0 @@
-//type	cx	cy	sx	sy	z	dig	time	percent	count	vnum
-//----------------------------------------------------------
