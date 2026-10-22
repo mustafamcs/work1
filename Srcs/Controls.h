@@ -7,18 +7,15 @@
 // Tum sistem ayarlari/defineleri yalnizca bu dosyadan yonetilir.
 // Aktif : #define X  veya  #define X <deger>
 // Kapali: // #define X
-// Eski dosyalar: Client/UserInterface/Locale_inc.h ve Server/common/CommonDefines.h
-// bu dosyada birlestirildi ve kaldirildi.
 // =========================================================================
 
 //////////////////////////////////////////////////////////////////////////
-// ### Default Ymir Macros (client) ###
+// ### Default Ymir Macros ###
 #define LOCALE_SERVICE_EUROPE
 #define ENABLE_COSTUME_SYSTEM
 #define ENABLE_ENERGY_SYSTEM
 #define ENABLE_DRAGON_SOUL_SYSTEM
 #define ENABLE_NEW_EQUIPMENT_SYSTEM
-// ### Default Ymir Macros ###
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -29,11 +26,10 @@
 #endif
 #define __UDP_BLOCK__
 //#define ENABLE_QUEST_CATEGORY
-// ### END Standard Features ###
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Ortak / New Features (client + server) ###
+// ### Ortak Sistemler ###
 #define ENABLE_NO_MOUNT_CHECK
 #define ENABLE_D_NJGUILD
 #define ENABLE_FULL_NOTICE
@@ -95,11 +91,10 @@ enum eCommonDefines {
 #ifdef ENABLE_MAGIC_REDUCTION_SYSTEM
 // #define USE_MAGIC_REDUCTION_STONES
 #endif
-// ### END New Features ###
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Client Ozellikleri (New From LocaleInc) ###
+// ### Client Ozellikleri ###
 #define ENABLE_PACK_GET_CHECK
 #define ENABLE_CANSEEHIDDENTHING_FOR_GM
 #define ENABLE_PROTOSTRUCT_AUTODETECT
@@ -128,11 +123,10 @@ enum eCommonDefines {
 #define ENABLE_SHOW_MOBLEVEL
 #define WJ_SHOW_MOB_INFO_EX
 #endif
-// ### New From LocaleInc ###
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Ex / Extended Features (ortak) ###
+// ### Extended Features ###
 #define DISABLE_STOP_RIDING_WHEN_DIE //	if DISABLE_TOP_RIDING_WHEN_DIE is defined, the player doesn't lose the horse after dying
 #define ENABLE_ACCE_COSTUME_SYSTEM //fixed version
 #ifdef ENABLE_ACCE_COSTUME_SYSTEM
@@ -157,14 +151,13 @@ enum eCommonDefines {
 	// #define USE_ITEM_AWARD_CHECK_ATTRIBUTES //it prevents bonuses higher than item_attr lvl1-lvl5 min-max range limit
 #endif
 
-// Won / cheque yok. Yang bigint. Ikinci para kolonu acilmaz. (server karari; client eskiden acikti)
+// Won / cheque yok. Yang bigint. Ikinci para kolonu acilmaz.
 // #define ENABLE_CHEQUE_SYSTEM
 #ifdef ENABLE_CHEQUE_SYSTEM
 #define ENABLE_SHOP_USE_CHEQUE
 #define DISABLE_CHEQUE_DROP
 #define ENABLE_WON_EXCHANGE_WINDOW
 #endif
-// ### END Ex Features ###
 //////////////////////////////////////////////////////////////////////////
 
 #define ENABLE_TARGET_INFORMATION_SYSTEM					// Mop Drop Info / Mob info
@@ -188,189 +181,104 @@ enum eCommonDefines {
 // #define ENABLE_PRINT_RECV_PACKET_DEBUG
 
 //////////////////////////////////////////////////////////////////////////
-// ### Daginik Dosyalardan Toplanan Ayarlar (client) ###
-// <Client/EterBase/error.cpp>
+// ### Client Ayarlari ###
 #define ENABLE_CRASH_MINIDUMP
-// <Client/EterLib/lineintersect_utils.cpp>
 //#define USE_CRAMERS_RULE
-// <Client/EterPack/EterPack.cpp>
 #define ENABLE_CRC32_CHECK
-// <Client/GameLib/ActorInstance.h>
 #define ENABLE_HAIR_SPECULAR
-// <Client/GameLib/ActorInstanceCollisionDetection.cpp>
 #define ENABLE_NPC_WITHOUT_COLLISIONS
-// <Client/GameLib/ActorInstanceCollisionDetection.cpp>
 #ifndef ENABLE_NPC_WITHOUT_COLLISIONS
 #define ENABLE_PETS_WITHOUT_COLLISIONS
 #define ENABLE_SHOPS_WITHOUT_COLLISIONS
 #define ENABLE_MOUNTS_WITHOUT_COLLISIONS
 #endif
-// <Client/GameLib/ActorInstanceMotion.cpp>
 #define ENABLE_WALK_RUN_ANI_ALTERNATIVE
-// <Client/GameLib/ItemData.cpp>
 #define ENABLE_LOAD_ALTER_ITEMICON
-// <Client/GameLib/MapOutdoor.cpp>
 //#define USE_LEVEL
-// <Client/GameLib/MapOutdoor.cpp>
 // #define ENABLE_FOG_LOAD
-// <Client/GameLib/RaceDataFile.cpp>
 #define ENABLE_SKIN_EXTENDED
-// <Client/SpeedTreeLib/Constants.h>
 // #define USE_SPEEDGRASS   // Constants.h hicbir yerde include edilmiyor - orijinalde kapaliydi
-// <Client/UserInterface/InstanceBase.cpp>
 // #define ENABLE_SIMPLE_REFINED_EFFECT_CHECK
-// <Client/UserInterface/InstanceBase.cpp>
 // #define USE_WEAPON_COSTUME_WITH_EFFECT
-// <Client/UserInterface/InstanceBase.cpp>
 // #define USE_BODY_COSTUME_WITH_EFFECT
-// <Client/UserInterface/PythonApplication.cpp>
 #define ENABLE_LOAD_ITEM_LIST_FROM_ROOT
-// <Client/UserInterface/PythonApplication.cpp>
 #define ENABLE_LOAD_ITEM_SCALE_FROM_ROOT
-// <Client/UserInterface/PythonApplication.cpp>
 #define ENABLE_LOAD_SKILL_TABLE_FROM_ROOT
-// <Client/UserInterface/PythonBackground.cpp>
 #define ENABLE_ATLASINFO_FROM_ROOT
-// <Client/UserInterface/PythonNonPlayer.h>
 // #define ENABLE_NEW_MOB_PROTO_STRUCT_20141125	// bleeding resistance 2014/11/25
-// <Client/UserInterface/PythonNonPlayer.h>
 // #define ENABLE_NEW_MOB_PROTO_STRUCT_20151020	// claw resistance 2015/10/20
-// <Client/UserInterface/PythonPlayer.cpp>
 #define ENABLE_NO_PICKUP_LIMIT
-// <Client/UserInterface/UserInterface.cpp>
 #define ENABLE_PYLIB_CHECK
-// <Client/UserInterface/UserInterface.cpp>
 #define ENABLE_MILES_CHECK
-// <Client/UserInterface/UserInterface.cpp>
 // #define ENABLE_DAEMONPROTECTION
 
 //////////////////////////////////////////////////////////////////////////
-// ### Daginik Dosyalardan Toplanan Ayarlar (server) ###
-// <Server/db/src/ClientManager.cpp>
+// ### Server Ayarlari ###
 #define ENABLE_DEFAULT_PRIV
-// <Server/db/src/ClientManager.cpp>
 #define ENABLE_ITEMAWARD_REFRESH
-// <Server/db/src/ClientManager.h>
 #define ENABLE_PROTO_FROM_DB
-// <Server/db/src/ClientManagerBoot.cpp>
 #ifdef ENABLE_PROTO_FROM_DB
 #define ENABLE_AUTODETECT_VNUMRANGE
 #endif
-// <Server/db/src/ProtoReader.cpp>
 #define ENABLE_NUMERIC_FIELD
-// <Server/game/src/char.cpp>
 // #define ENABLE_SHOWNPCLEVEL
-// <Server/game/src/char.cpp>
 #define ENABLE_GM_FLAG_IF_TEST_SERVER
-// <Server/game/src/char.cpp>
 #define ENABLE_GM_FLAG_FOR_LOW_WIZARD
-// <Server/game/src/char.cpp>
 #define ENABLE_GOHOME_IF_MAP_NOT_ALLOWED
-// <Server/game/src/char.cpp>
 // #define ENABLE_MOUNT_ENTITY_REFRESH
-// <Server/game/src/char.h>
 // #define ENABLE_ANTI_CMD_FLOOD
-// <Server/game/src/char.h>
 #define ENABLE_OPEN_SHOP_WITH_ARMOR
-// <Server/game/src/char.h>
 #define ENABLE_SKILL_COOLDOWN_CHECK
-// <Server/game/src/char_battle.cpp>
 #define ENABLE_EFFECT_PENETRATE
-// <Server/game/src/char_battle.cpp>
 #define ENABLE_NEWEXP_CALCULATION
-// <Server/game/src/char_battle.cpp>
 // #define ENABLE_NO_DAMAGE_QUEST_RUNNING
-// <Server/game/src/char_item.cpp>
 #define ENABLE_EFFECT_EXTRAPOT
-// <Server/game/src/char_item.cpp>
 #define ENABLE_BOOKS_STACKFIX
-// <Server/game/src/char_item.cpp>
 #define ENABLE_ITEM_RARE_ATTR_LEVEL_PCT
-// <Server/game/src/char_item.cpp>
 #define ENABLE_UNIQUE_ITEM_AUTOSPLIT
-// <Server/game/src/char_item.cpp>
 // #define ENABLE_FIREWORK_STUN
-// <Server/game/src/char_item.cpp>
 #define ENABLE_ADDSTONE_FAILURE
-// <Server/game/src/char_resist.cpp>
 // #define ENABLE_IMMUNE_PERC
-// <Server/game/src/char_skill.cpp>
 #define ENABLE_FORCE2MASTERSKILL
-// <Server/game/src/char_skill.cpp>
 // #define ENABLE_NULLIFYAFFECT_LIMIT
-// <Server/game/src/char_skill.cpp>
 // #define ENABLE_MASTER_SKILLBOOK_NO_STEPS
-// <Server/game/src/cmd.cpp>
 // #define ENABLE_BLOCK_CMD_SHORTCUT
-// <Server/game/src/cmd_gm.cpp>
 #define ENABLE_CMD_IPURGE_EX
-// <Server/game/src/cmd_gm.cpp>
 #define ENABLE_SET_STATE_WITH_TARGET
-// <Server/game/src/cmd_gm.cpp>
 #define ENABLE_STATPLUS_NOLIMIT
-// <Server/game/src/config.cpp>
 #define ENABLE_AUTODETECT_INTERNAL_IP
-// <Server/game/src/config.cpp>
 #define ENABLE_CMD_PLAYER
-// <Server/game/src/config.cpp>
 #define ENABLE_EXPTABLE_FROMDB
-// <Server/game/src/config.cpp>
 // #define ENABLE_GENERAL_CMD
-// <Server/game/src/config.cpp>
 // #define ENABLE_GENERAL_CONFIG
-// <Server/game/src/db.cpp>
 // #define ENABLE_SPAMDB_REFRESH
-// <Server/game/src/debug_allocator.h>
 // #define DEBUG_ALLOC                  // debug allocator/DebugPtr sistemi (acinca USE_DEBUG_PTR otomatik gelir)
-// <Server/game/src/fishing.cpp>
 #define ENABLE_FISHINGROD_RENEWAL
-// <Server/game/src/guild.cpp>
 #define ENABLE_GUILD_COMMENT_ANTIFLOOD
-// <Server/game/src/guild.h>
 // #define ENABLE_NEWGUILDMAKE
-// <Server/game/src/horse_rider.h>
 // #define ENABLE_INFINITE_HORSE_HEALTH_STAMINA
-// <Server/game/src/ikarus_shop_manager.cpp>
 // #define ENABLE_IKASHOP_GM_PROTECTION
-// <Server/game/src/input_auth.cpp>
 // #define ENABLE_ACCOUNT_W_SPECIALCHARS
-// <Server/game/src/input_db.cpp>
 #define ENABLE_GOHOME_IF_MAP_NOT_EXIST
-// <Server/game/src/input_login.cpp>
 // #define USE_LYCAN_CREATE_POSITION
-// <Server/game/src/input_main.cpp>
 #define ENABLE_CHAT_COLOR_SYSTEM
-// <Server/game/src/input_main.cpp>
 #define ENABLE_CHAT_LOGGING
-// <Server/game/src/input_main.cpp>
 #define ENABLE_CHAT_SPAMLIMIT
-// <Server/game/src/input_main.cpp>
 #define ENABLE_WHISPER_CHAT_SPAMLIMIT
-// <Server/game/src/input_main.cpp>
 #define ENABLE_CHECK_GHOSTMODE
-// <Server/game/src/input_main.cpp>
 		// #define ENABLE_TP_SPEED_CHECK
-// <Server/game/src/item.cpp>
 #define ENABLE_IMMUNE_FIX
-// <Server/game/src/item_manager.h>
 #define ENABLE_ITEM_PROTO_MAP
-// <Server/game/src/limit_time.h>
 //#define ENABLE_LIMIT_TIME
-// <Server/game/src/mining.cpp>
 #define ENABLE_PICKAXE_RENEWAL
-// <Server/game/src/questlua.cpp>
 #define ENABLE_TRANSLATE_LUA
-// <Server/game/src/questlua_pc.cpp>
 // #define ENABLE_LOCALECHECK_CHANGENAME
-// <Server/game/src/questlua_pc.cpp>
 // #define ENABLE_PC_OPENSHOP
-// <Server/game/src/questmanager.cpp>
 #define ENABLE_PARTYKILL
-// <Server/game/src/shop.cpp>
 //#define ENABLE_SHOP_BLACKLIST
 
 //////////////////////////////////////////////////////////////////////////
-// ### Pack/Python Ayarlari (client) ###
+// ### Pack/Python Ayarlari ###
 // Buradaki tum tanimlar derleme sirasinda app.X olarak python'a aktarilir.
 // Aktif: #define X / #define X <deger>   Kapali: // #define X
 
@@ -447,51 +355,51 @@ enum eCommonDefines {
 #define MINIMAP_POSITIONINFO_ENABLE 1
 
 //////////////////////////////////////////////////////////////////////////
-// ### Hic Tanimlanmamis Kapali Ozellikler (envanter, client+server) ###
-// #define ENABLE_678TH_SKILL                         // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_ACCE_SYSTEM                         // Server/game/src/ikarus_shop_manager.cpp
-// #define ENABLE_AURA_COSTUME_SYSTEM                 // Client/GameLib/ItemManager.cpp
-// #define ENABLE_AUTO_L2R                            // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_AUTO_SYSTEM                         // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_CHANGELOOK_SYSTEM                   // Client/UserInterface/PythonIkarusShop.h, Server/db/src/ClientManagerIkarusShop.cpp, Server/db/src/IkarusShopCache.cpp
-// #define ENABLE_CONQUEROR_LEVEL                     // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_DISCORD_JOIN_URL                    // Client/UserInterface/PythonNetworkStreamPhaseGame.cpp
-// #define ENABLE_ENVIRONMENT_EFFECT_OPTION           // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_GOLD_FIELD_AS_SELL_PRICE            // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_GOOGLE_TEST                         // Server/game/src/main.cpp
-// #define ENABLE_GROWTH_PET_SYSTEM                   // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_HACK_TELEPORT_LOG                   // Server/game/src/input_main.cpp
-// #define ENABLE_HELP_RENEWAL                        // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_IKASHOP_LOGS                        // Server/db/src/ClientManager.h, Server/db/src/ClientManagerIkarusShop.cpp, Server/db/src/IkarusShopCache.cpp
-// #define ENABLE_ITEM_COUNT_LIMIT_SYSTEM             // Client/UserInterface/Packet.h, Server/game/src/packet.h
-// #define ENABLE_MONARCH_MOB_CMD_MAP_CHECK           // Server/game/src/cmd_general.cpp
-// #define ENABLE_MONSTER_CARD                        // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_OFFLINESHOP_DEBUG                   // Server/db/src/ClientManagerIkarusShop.cpp
-// #define ENABLE_PLAYER_CHECKAFFECT                  // Client/UserInterface/PythonPlayerModule.cpp
-// #define ENABLE_PREMIUM_LOOT_FILTER                 // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_SASH_SYSTEM                         // Server/game/src/ikarus_shop_manager.cpp
-// #define ENABLE_SEALBIND_SYSTEM                     // Client/UserInterface/PythonItemModule.cpp, Client/UserInterface/PythonPlayerModule.cpp
-// #define ENABLE_SOULBIND_SYSTEM                     // Client/GameLib/ItemData.h, Client/UserInterface/PythonApplicationModule.cpp, Server/game/src/ikarus_shop_manager.cpp
-// #define ENABLE_UI_CIRCLE                           // Client/UserInterface/PythonApplicationModule.cpp
-// #define ENABLE_UI_MOVING                           // Client/UserInterface/PythonApplicationModule.cpp
-// #define USE_STACKTRACE                             // Server/game/src/main.cpp
-// #define ENABLE_DRAGON_GATE                         // Pack/locale ui scriptleri (app.X sorgusu)
-// #define ENABLE_MERCENARY_SYSTEM                    // Pack/locale ui scriptleri (app.X sorgusu)
-// #define ENABLE_SUNGMAHEE_GATE                      // Pack/locale ui scriptleri (app.X sorgusu)
-// #define ENABLE_ADDITIONAL_EQUIPMENT_PAGE           // Pack/locale ui scriptleri (app.X sorgusu)
-// #define ENABLE_SERVER_SELECT_RENEWAL               // Pack/locale ui scriptleri (app.X sorgusu)
-// #define ENABLE_PREMIUM_PRIVATE_SHOP                // Pack/locale ui scriptleri (app.X sorgusu)
-// #define LOCALE_SERVICE_GLOBAL                      // Client/UserInterface/Locale.cpp
-// #define LOCALE_SERVICE_JAPAN                       // Client/UserInterface/StdAfx.h
-// #define LOCALE_SERVICE_STAGE_DEVELOPMENT           // Client/UserInterface/PythonApplicationModule.cpp
-// #define LOCALE_SERVICE_STAGE_TEST                  // Client/UserInterface/PythonApplicationModule.cpp
-// #define LOCALE_SERVICE_VIETNAM_MILD                // Client/UserInterface/UserInterface.cpp
-// #define LOCALE_SERVICE_WE_JAPAN                    // Client/UserInterface/Locale.cpp, Client/UserInterface/PythonSystem.cpp
-// #define LOCALE_SERVICE_YMIR                        // Client/UserInterface/UserInterface.cpp
-// #define USE_OPENID                                 // Client/UserInterface/PythonApplicationModule.cpp
-// #define USE_RELATIVE_PATH                          // Client/UserInterface/UserInterface.cpp
-// #define __BL_CLIP_MASK__                           // Client/UserInterface/PythonApplicationModule.cpp, Client/UserInterface/PythonChat.cpp
-// #define __BL_MOUSE_WHEEL_TOP_WINDOW__              // Client/UserInterface/PythonApplicationModule.cpp
-// #define __BL_OFFICIAL_LOOT_FILTER__                // Client/UserInterface/PythonApplicationModule.cpp
+// ### Kapali Ozellikler ###
+// #define ENABLE_678TH_SKILL
+// #define ENABLE_ACCE_SYSTEM
+// #define ENABLE_AURA_COSTUME_SYSTEM
+// #define ENABLE_AUTO_L2R
+// #define ENABLE_AUTO_SYSTEM
+// #define ENABLE_CHANGELOOK_SYSTEM
+// #define ENABLE_CONQUEROR_LEVEL
+// #define ENABLE_DISCORD_JOIN_URL
+// #define ENABLE_ENVIRONMENT_EFFECT_OPTION
+// #define ENABLE_GOLD_FIELD_AS_SELL_PRICE
+// #define ENABLE_GOOGLE_TEST
+// #define ENABLE_GROWTH_PET_SYSTEM
+// #define ENABLE_HACK_TELEPORT_LOG
+// #define ENABLE_HELP_RENEWAL
+// #define ENABLE_IKASHOP_LOGS
+// #define ENABLE_ITEM_COUNT_LIMIT_SYSTEM
+// #define ENABLE_MONARCH_MOB_CMD_MAP_CHECK
+// #define ENABLE_MONSTER_CARD
+// #define ENABLE_OFFLINESHOP_DEBUG
+// #define ENABLE_PLAYER_CHECKAFFECT
+// #define ENABLE_PREMIUM_LOOT_FILTER
+// #define ENABLE_SASH_SYSTEM
+// #define ENABLE_SEALBIND_SYSTEM
+// #define ENABLE_SOULBIND_SYSTEM
+// #define ENABLE_UI_CIRCLE
+// #define ENABLE_UI_MOVING
+// #define USE_STACKTRACE
+// #define ENABLE_DRAGON_GATE
+// #define ENABLE_MERCENARY_SYSTEM
+// #define ENABLE_SUNGMAHEE_GATE
+// #define ENABLE_ADDITIONAL_EQUIPMENT_PAGE
+// #define ENABLE_SERVER_SELECT_RENEWAL
+// #define ENABLE_PREMIUM_PRIVATE_SHOP
+// #define LOCALE_SERVICE_GLOBAL
+// #define LOCALE_SERVICE_JAPAN
+// #define LOCALE_SERVICE_STAGE_DEVELOPMENT
+// #define LOCALE_SERVICE_STAGE_TEST
+// #define LOCALE_SERVICE_VIETNAM_MILD
+// #define LOCALE_SERVICE_WE_JAPAN
+// #define LOCALE_SERVICE_YMIR
+// #define USE_OPENID
+// #define USE_RELATIVE_PATH
+// #define __BL_CLIP_MASK__
+// #define __BL_MOUSE_WHEEL_TOP_WINDOW__
+// #define __BL_OFFICIAL_LOOT_FILTER__
 
 #endif // __INC_METIN2_CONTROLS_H__
