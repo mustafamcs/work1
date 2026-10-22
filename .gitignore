@@ -95,12 +95,20 @@ server/**/p2p_packet_info.txt
 # Kodlama onarim raporlari (uretilmis)
 tools/fffd_rapor*.txt
 
-# Locale junction/symlink hedefleri (tek kopya share/locale altinda)
+# Locale/data junction-symlink hedefleri (tek kopya share altinda)
 server/auth/locale/
 server/channel1/core1/locale/
 server/channel99/locale/
+server/auth/data/
+server/channel1/core1/data/
+server/channel99/data/
 # db exe PROTO_FROM_DB kapaliyken okudugu uretilmis proto txt'leri (DumpProto -u -i -m)
 server/db/item_proto.txt
 server/db/item_names.txt
 server/db/mob_proto.txt
 server/db/mob_names.txt
+
+# Runtime uretilen istatistik dosyalari
+server/**/mob_count
+# define_kapat_test yedegi (89_define_test.bat uretir)
+Srcs/Controls.h.on

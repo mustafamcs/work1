@@ -93,6 +93,10 @@ bool CLIENT_DESC::Connect(int iPhaseWhenSucceed)
 		sys_log(0, "SYSTEM: connected to server (fd %d, ptr %p)", m_sock, this);
 		fdwatch_add_fd(m_lpFdw, m_sock, this, FDW_READ, false);
 		fdwatch_add_fd(m_lpFdw, m_sock, this, FDW_WRITE, false);
+		if (m_lpInputBuffer)
+			buffer_reset(m_lpInputBuffer);
+		if (m_lpOutputBuffer)
+			buffer_reset(m_lpOutputBuffer);
 		SetPhase(m_iPhaseWhenSucceed);
 		return true;
 	}
