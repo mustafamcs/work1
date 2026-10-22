@@ -23,7 +23,7 @@ __INC_METIN_II_SERVER_TARGA_H__	targa.h	2;"	d
 bytePtr	attribute.h	/^	BYTE **	bytePtr;$/;"	m	class:CAttribute
 colorBegin	targa.h	/^    WORD colorBegin;	\/\/ 0$/;"	m	struct:TGA_HEADER
 colorBits	targa.h	/^    char colorBits;$/;"	m	struct:TGA_HEADER
-colorCount	targa.h	/^    WORD colorCount;	\/\/ 파레트 있으면 256, 없음 0$/;"	m	struct:TGA_HEADER
+colorCount	targa.h	/^    WORD colorCount;	\/\/ 256 if palette exists, 0 if not$/;"	m	struct:TGA_HEADER
 data	attribute.h	/^	void * data;$/;"	m	class:CAttribute
 dataType	attribute.h	/^	int dataType;$/;"	m	class:CAttribute
 defaultAttr	attribute.h	/^	DWORD defaultAttr;$/;"	m	class:CAttribute
@@ -32,7 +32,7 @@ dwordPtr	attribute.h	/^	DWORD ** dwordPtr;$/;"	m	class:CAttribute
 height	attribute.h	/^	int width, height;$/;"	m	class:CAttribute
 height	targa.h	/^    WORD height;$/;"	m	struct:TGA_HEADER
 idLen	targa.h	/^    char idLen;		\/\/ 0$/;"	m	struct:TGA_HEADER
-imgType	targa.h	/^    char imgType;	\/\/ 파레트있으면 1, 없음 2$/;"	m	struct:TGA_HEADER
+imgType	targa.h	/^    char imgType;	\/\/ 1 if palette exists, 2 if not$/;"	m	struct:TGA_HEADER
 left	targa.h	/^    WORD left;$/;"	m	struct:TGA_HEADER
 m_header	targa.h	/^	TGA_HEADER	m_header;$/;"	m	class:CTargaImage
 m_iHeight	grid.h	/^	int	m_iHeight;$/;"	m	class:CGrid
@@ -41,8 +41,8 @@ m_pGrid	grid.h	/^	char *	m_pGrid;$/;"	m	class:CGrid
 m_pbuf	targa.h	/^	char *		m_pbuf;$/;"	m	class:CTargaImage
 m_x	targa.h	/^	int		m_x, m_y;$/;"	m	class:CTargaImage
 m_y	targa.h	/^	int		m_x, m_y;$/;"	m	class:CTargaImage
-palEntrySize	targa.h	/^    char palEntrySize;	\/\/ 파레트 있으면 24, 없음 0$/;"	m	struct:TGA_HEADER
-palType	targa.h	/^    char palType;	\/\/ 파레트있으면 1, 없음 0$/;"	m	struct:TGA_HEADER
+palEntrySize	targa.h	/^    char palEntrySize;	\/\/ 24 if palette exists, 0 if not$/;"	m	struct:TGA_HEADER
+palType	targa.h	/^    char palType;	\/\/ 1 if palette exists, 0 if not$/;"	m	struct:TGA_HEADER
 top	targa.h	/^    WORD top;$/;"	m	struct:TGA_HEADER
 width	attribute.h	/^	int width, height;$/;"	m	class:CAttribute
 width	targa.h	/^    WORD width;$/;"	m	struct:TGA_HEADER

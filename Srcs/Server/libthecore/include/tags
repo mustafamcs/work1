@@ -8,9 +8,10 @@ ENUM_PROFILER	main.h	/^    enum ENUM_PROFILER$/
 FDWATCH	fdwatch.h	/^    typedef struct fdwatch	FDWATCH;$/
 HASH	hash.h	/^    typedef struct yhash	HASH;$/
 HASHNODE	hash.h	/^    typedef struct yhash_node	HASHNODE;$/
-HEART	heart.h	/^typedef struct heart	HEART;$/
+HEART	heart.h	/^typedef struct heart	HEART;
+$/
 INSERT_TO_LIST	utils.h	/^#define INSERT_TO_LIST(item, head, next)          /
-INSERT_TO_TW_LIST	utils.h	/^    \/\/ Next 와 Prev 가 있는 리스트에 추가$/
+INSERT_TO_TW_LIST	utils.h	/^    \/\/ add to a list that has Next and Prev$/
 INT	typedef.h	/^typedef int			INT;$/
 KEVENT	fdwatch.h	/^    typedef struct kevent	KEVENT;$/
 KEYT	hash.h	/^    typedef unsigned long	KEYT; $/
@@ -21,7 +22,8 @@ LPBUFFER	buffer.h	/^    typedef struct buffer *	LPBUFFER;$/
 LPFDWATCH	fdwatch.h	/^    typedef struct fdwatch *	LPFDWATCH;$/
 LPHASH	hash.h	/^    typedef struct yhash*	LPHASH;$/
 LPHASHNODE	hash.h	/^    typedef struct yhash_node*	LPHASHNODE;$/
-LPHEART	heart.h	/^typedef struct heart *	LPHEART;$/
+LPHEART	heart.h	/^typedef struct heart *	LPHEART;
+$/
 LPKEVENT	fdwatch.h	/^    typedef struct kevent *	LPKEVENT;$/
 MAKEFOURCC	utils.h	/^#define MAKEFOURCC(ch0, ch1, ch2, ch3)            /
 QWORD	tags	/^QWORD	typedef.h	\/^typedef unsigned long int      /
@@ -42,7 +44,8 @@ buffer	buffer.h	/^    struct buffer$/
 core_dump	utils.h	/^#define core_dump()	core_dump_unix(__FILE__, __LIN/
 fdwatch	fdwatch.h	/^    struct fdwatch$/
 h	tags	/^__INC_LIBTHECORE_TYPEDEF_H__	typedef.h	2;"	d$/
-heart	heart.h	/^struct heart$/
+heart	heart.h	/^struct heart
+$/
 ishan	hangul.h	/^#define ishan(ch)       (((ch) & 0xE0) > 0x90)$/
 ishanalp	hangul.h	/^#define ishanalp(ch)    (isalpha(ch) || ishan(ch))/
 ishanasc	hangul.h	/^#define ishanasc(ch)    (isascii(ch) || ishan(ch))/

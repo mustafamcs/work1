@@ -586,7 +586,7 @@ bool CPythonEventManager::ProcessEventSet(TEventSet * pEventSet)
 			int idx = atoi(GetArgument("idx", ScriptCommand.argList));
 			const char * name = GetArgument("name", ScriptCommand.argList);
 
-			if (!strcmp(name, "조각난 용혼석?....")) {
+			if (!strcmp(name, "Shattered Dragon Soul Stone?....")) {
 				PyCallClassMemberFunc(m_poInterface, "BINARY_RecvQuest", Py_BuildValue("(isss)", idx, name, "highlight", ""));
 			}
 			else {
@@ -1247,7 +1247,7 @@ void CPythonEventManager::SetLeftTimeString(const char * c_szString)
 }
 
 CPythonEventManager::CPythonEventManager()
-	: m_poInterface(0), m_strLeftTimeString("남은 시간 : %d초")
+	: m_poInterface(0), m_strLeftTimeString("Remaining time : %d sec")
 {
 	EventTypeMap["LETTER"]=EVENT_TYPE_LETTER;
 	EventTypeMap["COLOR"]=EVENT_TYPE_COLOR;

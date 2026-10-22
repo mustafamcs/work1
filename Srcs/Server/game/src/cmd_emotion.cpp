@@ -23,30 +23,30 @@ struct emotion_type_s
 	long	flag;
 	float	extra_delay;
 } emotion_types[] = {
-	{ "키스",	"french_kiss",	NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		2.0f },
-	{ "뽀뽀",	"kiss",		NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		1.5f },
-	{ "따귀",	"slap",		NEED_PC | SELF_DISARM,				1.5f },
-	{ "박수",	"clap",		0,						1.0f },
-	{ "와",		"cheer1",	0,						1.0f },
-	{ "만세",	"cheer2",	0,						1.0f },
+	{ "öpücük",	"french_kiss",	NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		2.0f },
+	{ "öp",	"kiss",		NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		1.5f },
+	{ "tokat",	"slap",		NEED_PC | SELF_DISARM,				1.5f },
+	{ "alkış",	"clap",		0,						1.0f },
+	{ "yaşa",		"cheer1",	0,						1.0f },
+	{ "yaşasın",	"cheer2",	0,						1.0f },
 
 	// DANCE
-	{ "댄스1",	"dance1",	0,						1.0f },
-	{ "댄스2",	"dance2",	0,						1.0f },
-	{ "댄스3",	"dance3",	0,						1.0f },
-	{ "댄스4",	"dance4",	0,						1.0f },
-	{ "댄스5",	"dance5",	0,						1.0f },
-	{ "댄스6",	"dance6",	0,						1.0f },
+	{ "dans1",	"dance1",	0,						1.0f },
+	{ "dans2",	"dance2",	0,						1.0f },
+	{ "dans3",	"dance3",	0,						1.0f },
+	{ "dans4",	"dance4",	0,						1.0f },
+	{ "dans5",	"dance5",	0,						1.0f },
+	{ "dans6",	"dance6",	0,						1.0f },
 	// END_OF_DANCE
-	{ "축하",	"congratulation",	0,				1.0f	},
-	{ "용서",	"forgive",			0,				1.0f	},
-	{ "화남",	"angry",			0,				1.0f	},
-	{ "유혹",	"attractive",		0,				1.0f	},
-	{ "슬픔",	"sad",				0,				1.0f	},
-	{ "브끄",	"shy",				0,				1.0f	},
-	{ "응원",	"cheerup",			0,				1.0f	},
-	{ "질투",	"banter",			0,				1.0f	},
-	{ "기쁨",	"joy",				0,				1.0f	},
+	{ "tebrik",	"congratulation",	0,				1.0f	},
+	{ "affet",	"forgive",			0,				1.0f	},
+	{ "kızgın",	"angry",			0,				1.0f	},
+	{ "baştan",	"attractive",		0,				1.0f	},
+	{ "üzgün",	"sad",				0,				1.0f	},
+	{ "utangaç",	"shy",				0,				1.0f	},
+	{ "destek",	"cheerup",			0,				1.0f	},
+	{ "kıskanç",	"banter",			0,				1.0f	},
+	{ "neşe",	"joy",				0,				1.0f	},
 	{ "\n",	"\n",		0,						0.0f },
 };
 
@@ -56,7 +56,7 @@ ACMD(do_emotion_allow)
 {
 	if ( ch->GetArena() )
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련장에서 사용하실 수 없습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bunu arenada kullanamazsın."));
 		return;
 	}
 
@@ -99,7 +99,7 @@ ACMD(do_emotion)
 	{
 		if (ch->IsRiding())
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("말을 탄 상태에서 감정표현을 할 수 없습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("At sürerken duygularınızı ifade edemezsiniz."));
 			return;
 		}
 	}
@@ -121,13 +121,13 @@ ACMD(do_emotion)
 
 	if (!CHARACTER_CanEmotion(*ch))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("열정의 가면을 착용시에만 할 수 있습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bunu Duygu Maskesi taktığında yapabilirsin."));
 		return;
 	}
 
 	if (IS_SET(emotion_types[i].flag, WOMAN_ONLY) && SEX_MALE==GET_SEX(ch))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("여자만 할 수 있습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bunu sadece bayanlar yapabilir."));
 		return;
 	}
 
@@ -143,7 +143,7 @@ ACMD(do_emotion)
 	{
 		if (!victim)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("그런 사람이 없습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Kişi bulunamadı."));
 			return;
 		}
 	}
@@ -155,7 +155,7 @@ ACMD(do_emotion)
 
 		if (victim->IsRiding())
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("말을 탄 상대와 감정표현을 할 수 없습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("At süren bir kişiye duygularınızı ifade edemezsiniz."));
 			return;
 		}
 
@@ -163,13 +163,13 @@ ACMD(do_emotion)
 
 		if (distance < 10)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("너무 가까이 있습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Çok yakınsın."));
 			return;
 		}
 
 		if (distance > 500)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("너무 멀리 있습니다"));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Çok uzaksın."));
 			return;
 		}
 
@@ -177,7 +177,7 @@ ACMD(do_emotion)
 		{
 			if (GET_SEX(ch)==GET_SEX(victim))
 			{
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이성간에만 할 수 있습니다."));
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu sadece diğer cinsiyetle birlikte yapılabilen bir aksiyon."));
 				return;
 			}
 		}
@@ -194,13 +194,13 @@ ACMD(do_emotion)
 
 					if (0 == other || other != victim->GetPlayerID())
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이 행동은 상호동의 하에 가능 합니다."));
+						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bunun için eşinin onayı gerekli."));
 						return;
 					}
 				}
 				else
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이 행동은 상호동의 하에 가능 합니다."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bunun için eşinin onayı gerekli."));
 					return;
 				}
 			}

@@ -171,7 +171,7 @@ ACMD(do_add_socket);
 
 ACMD(do_inputall)
 {
-	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("명령어를 모두 입력하세요."));
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Lütfen düzenlemenin tam ismini giriniz."));
 }
 
 ACMD(do_show_arena_list);
@@ -688,20 +688,20 @@ void interpret_command(LPCHARACTER ch, const char * argument, size_t len)
 		switch (ch->GetPosition())
 		{
 			case POS_MOUNTING:
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("탄 상태에서는 할 수 없습니다."));
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bunu at üzerinde yapamazsınız."));
 				break;
 
 			case POS_DEAD:
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("쓰러진 상태에서는 할 수 없습니다."));
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bunu düşmüş haldeyken yapamazsın."));
 				break;
 
 			case POS_SLEEPING:
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("꿈속에서 어떻게요?"));
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Rüyamda? Ne?"));
 				break;
 
 			case POS_RESTING:
 			case POS_SITTING:
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("먼저 일어 나세요."));
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Önce kalk."));
 				break;
 
 			default:
@@ -714,13 +714,13 @@ void interpret_command(LPCHARACTER ch, const char * argument, size_t len)
 
 	if (*cmd_info[icmd].command == '\n')
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("그런 명령어는 없습니다"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu düzenleme mevcut değil."));
 		return;
 	}
 
 	if (cmd_info[icmd].gm_level && (cmd_info[icmd].gm_level > ch->GetGMLevel() || cmd_info[icmd].gm_level == GM_DISABLE))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("그런 명령어는 없습니다"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu düzenleme mevcut değil."));
 		return;
 	}
 

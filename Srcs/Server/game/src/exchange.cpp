@@ -54,7 +54,7 @@ bool CHARACTER::ExchangeStart(LPCHARACTER victim)
 
 	if (IsObserverMode())
 	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("관전 상태에서는 교환을 할 수 없습니다."));
+		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İzleme sırasında ticaret yapamazsın."));
 		return false;
 	}
 
@@ -70,13 +70,13 @@ bool CHARACTER::ExchangeStart(LPCHARACTER victim)
 	//PREVENT_TRADE_WINDOW
 	if ( IsOpenSafebox() || GetShopOwner() || GetMyShop() || IsCubeOpen())
 	{
-		ChatPacket( CHAT_TYPE_INFO, LC_TEXT("다른 거래창이 열려있을경우 거래를 할수 없습니다." ) );
+		ChatPacket( CHAT_TYPE_INFO, LC_TEXT("Pencereler açıkken başkaları ile ticaret yapamazsın." ) );
 		return false;
 	}
 
 	if ( victim->IsOpenSafebox() || victim->GetShopOwner() || victim->GetMyShop() || victim->IsCubeOpen() )
 	{
-		ChatPacket( CHAT_TYPE_INFO, LC_TEXT("상대방이 다른 거래중이라 거래를 할수 없습니다." ) );
+		ChatPacket( CHAT_TYPE_INFO, LC_TEXT("Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın." ) );
 		return false;
 	}
 	//END_PREVENT_TRADE_WINDOW
@@ -96,7 +96,7 @@ bool CHARACTER::ExchangeStart(LPCHARACTER victim)
 
 	if (victim->IsBlockMode(BLOCK_EXCHANGE))
 	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("상대방이 교환 거부 상태입니다."));
+		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Diğer oyuncu ticareti iptal etti."));
 		return false;
 	}
 
@@ -161,7 +161,7 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 
 	if (IS_SET(item->GetAntiFlag(), ITEM_ANTIFLAG_GIVE))
 	{
-		m_pOwner->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("아이템을 건네줄 수 없습니다."));
+		m_pOwner->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu nesneyle ticaret yapamazsın."));
 		return false;
 	}
 
@@ -576,29 +576,29 @@ bool CExchange::Accept(bool bAccept)
 
 		if (!Check(&iItemCount))
 		{
-			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("돈이 부족하거나 아이템이 제자리에 없습니다."));
-			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("상대방의 돈이 부족하거나 아이템이 제자리에 없습니다."));
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Yeterli Yang veya envanter boş yer yok."));
+			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Diğer kişide yeterli Yang veya envanterinde boş yer yok."));
 			goto EXCHANGE_END;
 		}
 
 		if (!CheckSpace())
 		{
-			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("상대방의 소지품에 빈 공간이 없습니다."));
-			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("소지품에 빈 공간이 없습니다."));
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Diğer kişinin envanterinde hiç boş yer yok."));
+			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Envanterde yeterli boşluk yok."));
 			goto EXCHANGE_END;
 		}
 
 		if (!GetCompany()->Check(&iItemCount))
 		{
-			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("돈이 부족하거나 아이템이 제자리에 없습니다."));
-			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("상대방의 돈이 부족하거나 아이템이 제자리에 없습니다."));
+			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Yeterli Yang veya envanter boş yer yok."));
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Diğer kişide yeterli Yang veya envanterinde boş yer yok."));
 			goto EXCHANGE_END;
 		}
 
 		if (!GetCompany()->CheckSpace())
 		{
-			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("상대방의 소지품에 빈 공간이 없습니다."));
-			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("소지품에 빈 공간이 없습니다."));
+			victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Diğer kişinin envanterinde hiç boş yer yok."));
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Envanterde yeterli boşluk yok."));
 			goto EXCHANGE_END;
 		}
 
@@ -629,8 +629,8 @@ bool CExchange::Accept(bool bAccept)
 #endif
 
 				// INTERNATIONAL_VERSION
-				GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s 님과의 교환이 성사 되었습니다."), victim->GetName());
-				victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s 님과의 교환이 성사 되었습니다."), GetOwner()->GetName());
+				GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s ile olan ticaret başarıyla gerçekleşti."), victim->GetName());
+				victim->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s ile olan ticaret başarıyla gerçekleşti."), GetOwner()->GetName());
 				// END_OF_INTERNATIONAL_VERSION
 			}
 		}

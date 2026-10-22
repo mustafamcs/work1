@@ -7,8 +7,8 @@ std::string g_strImagePath = "d:/ymir work/ui/";
 std::string g_strGuildSymbolPathName = "mark/10/";
 
 // DEFAULT_FONT
-static std::string gs_strDefaultFontName = "굴림체:12.fnt";
-static std::string gs_strDefaultItalicFontName = "굴림체:12i.fnt";
+static std::string gs_strDefaultFontName = "Tahoma:12.fnt";
+static std::string gs_strDefaultItalicFontName = "Tahoma:12i.fnt";
 static CResource* gs_pkDefaultFont = NULL;
 static CResource* gs_pkDefaultItalicFont = NULL;
 

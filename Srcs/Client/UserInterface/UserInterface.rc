@@ -15,7 +15,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 일본어 resources
+// Japanese resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 #ifdef _WIN32
@@ -33,12 +33,12 @@ BEGIN
     IDS_POSSESSIVE_MORPHENE "'s"
 END
 
-#endif    // 일본어 resources
+#endif    // Japanese resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// 중국어(중국) resources
+// Chinese (China) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 #ifdef _WIN32
@@ -54,16 +54,17 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 STRINGTABLE
 BEGIN
     IDS_POSSESSIVE_MORPHENE "'s"
-    IDS_WARN_BAD_DRIVER     "句寡퀭콘뫘劤鞫엥혜땡。"
-    IDS_WARN_NO_TNL         "퀭돨鞫엥꼇連넣3D TnL 袒숭속醵\n踏狗쉥轟랬攣끽頓契。"
+    IDS_WARN_BAD_DRIVER     "Please update your graphics driver."
+    IDS_WARN_NO_TNL         "Your graphics card does not support 3D TnL hardware acceleration,
+so the game may run slowly or not run properly."
 END
 
-#endif    // 중국어(중국) resources
+#endif    // Chinese (China) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// 한국어 resources
+// Korean resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
 #ifdef _WIN32
@@ -204,21 +205,21 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APP_NAME            "메틴2"
-    IDS_POSSESSIVE_MORPHENE "의"
-    IDS_WARN_BAD_DRIVER     "그래픽 드라이버를 업데이트 하시기 바랍니다."
-    IDS_WARN_NO_TNL         "사용하고 계신 시스템의 그래픽카드는 3D TnL 하드웨어 가속이 지원되지 않아\n게임이 느리게 실행되거나 제대로 실행되지 않을수 있습니다."
-    IDS_ERR_CANNOT_READ_FILE "%s 파일을 읽을 수 없습니다."
-    IDS_ERR_NOT_LATEST_FILE "'%s' 파일은 최신버전이 아닙니다. 런처를 다시 실행해주세요."
-    IDS_ERR_MUST_LAUNCH_FROM_PATCHER "클라이언트는 패처를 사용해서 실행되어야 합니다."
+    IDS_APP_NAME            "Metin2"
+    IDS_POSSESSIVE_MORPHENE "'s"
+    IDS_WARN_BAD_DRIVER     "Please update your graphics driver."
+    IDS_WARN_NO_TNL         "Your system's graphics card does not support 3D TnL hardware acceleration,\nso the game may run slowly or not run properly."
+    IDS_ERR_CANNOT_READ_FILE "Cannot read file %s."
+    IDS_ERR_NOT_LATEST_FILE "'%s' is not the latest version. Please run the launcher again."
+    IDS_ERR_MUST_LAUNCH_FROM_PATCHER "The client must be launched through the patcher."
 END
 
-#endif    // 한국어 resources
+#endif    // Korean resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// 영어(미국) resources
+// English (US) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 #ifdef _WIN32
@@ -242,7 +243,7 @@ BEGIN
     IDS_ERR_MUST_LAUNCH_FROM_PATCHER "Please run patcher."
 END
 
-#endif    // 영어(미국) resources
+#endif    // English (US) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

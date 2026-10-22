@@ -155,11 +155,11 @@ bool COXEventManager::ShowQuizList(LPCHARACTER pkChar)
 	{
 		for (size_t j = 0; j < m_vec_quiz[i].size(); ++j, ++c)
 		{
-			pkChar->ChatPacket(CHAT_TYPE_INFO, "%d %s %s", m_vec_quiz[i][j].level, m_vec_quiz[i][j].Quiz, m_vec_quiz[i][j].answer ? LC_TEXT("참") : LC_TEXT("거짓"));
+			pkChar->ChatPacket(CHAT_TYPE_INFO, "%d %s %s", m_vec_quiz[i][j].level, m_vec_quiz[i][j].Quiz, m_vec_quiz[i][j].answer ? LC_TEXT("DOĞRU") : LC_TEXT("YANLIŞ"));
 		}
 	}
 
-	pkChar->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("총 퀴즈 수: %d"), c);
+	pkChar->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Toplam Quiz sayısı: %d"), c);
 	return true;
 }
 
@@ -197,25 +197,25 @@ EVENTFUNC(oxevent_timer)
 	switch (flag)
 	{
 		case 0:
-			SendNoticeMap(LC_TEXT("10초뒤 판정하겠습니다."), OXEVENT_MAP_INDEX, true);
+			SendNoticeMap(LC_TEXT("Sonucu 10 saniye içinde alacaksın."), OXEVENT_MAP_INDEX, true);
 			flag++;
 			return PASSES_PER_SEC(10);
 
 		case 1:
-			SendNoticeMap(LC_TEXT("정답은"), OXEVENT_MAP_INDEX, true);
+			SendNoticeMap(LC_TEXT("Doğru cevap:"), OXEVENT_MAP_INDEX, true);
 
 			if (info->answer == true)
 			{
 				COXEventManager::instance().CheckAnswer(true);
-				SendNoticeMap(LC_TEXT("O 입니다"), OXEVENT_MAP_INDEX, true);
+				SendNoticeMap(LC_TEXT("Evet (O)"), OXEVENT_MAP_INDEX, true);
 			}
 			else
 			{
 				COXEventManager::instance().CheckAnswer(false);
-				SendNoticeMap(LC_TEXT("X 입니다"), OXEVENT_MAP_INDEX, true);
+				SendNoticeMap(LC_TEXT("Hayır (X)"), OXEVENT_MAP_INDEX, true);
 			}
 
-			SendNoticeMap(LC_TEXT("5초 뒤 틀리신 분들을 바깥으로 이동 시키겠습니다."), OXEVENT_MAP_INDEX, true);
+			SendNoticeMap(LC_TEXT("Yanlış cevap veren katılımcılar 5 saniye sonra silinecekler."), OXEVENT_MAP_INDEX, true);
 
 			flag++;
 			return PASSES_PER_SEC(5);
@@ -223,7 +223,7 @@ EVENTFUNC(oxevent_timer)
 		case 2:
 			COXEventManager::instance().WarpToAudience();
 			COXEventManager::instance().SetStatus(OXEVENT_CLOSE);
-			SendNoticeMap(LC_TEXT("다음 문제 준비해주세요."), OXEVENT_MAP_INDEX, true);
+			SendNoticeMap(LC_TEXT("Sonraki soru için hazır mısın?"), OXEVENT_MAP_INDEX, true);
 			flag = 0;
 			break;
 	}
@@ -240,9 +240,9 @@ bool COXEventManager::Quiz(unsigned char level, int timelimit)
 
 	int idx = number(0, m_vec_quiz[level].size()-1);
 
-	SendNoticeMap(LC_TEXT("문제 입니다."), OXEVENT_MAP_INDEX, true);
+	SendNoticeMap(LC_TEXT("Soru."), OXEVENT_MAP_INDEX, true);
 	SendNoticeMap(m_vec_quiz[level][idx].Quiz, OXEVENT_MAP_INDEX, true);
-	SendNoticeMap(LC_TEXT("맞으면 O, 틀리면 X로 이동해주세요"), OXEVENT_MAP_INDEX, true);
+	SendNoticeMap(LC_TEXT("Doğruysa O'ya git, yanlışsa X'e git."), OXEVENT_MAP_INDEX, true);
 
 	if (m_timedEvent != NULL) {
 		event_cancel(&m_timedEvent);
@@ -305,7 +305,7 @@ bool COXEventManager::CheckAnswer(bool answer)
 			}
 			else
 			{
-				pkChar->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("정답입니다!"));
+				pkChar->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Doğru!"));
 				// pkChar->CreateFly(number(FLY_FIREWORK1, FLY_FIREWORK6), pkChar);
 				char chatbuf[256];
 				int len = snprintf(chatbuf, sizeof(chatbuf),

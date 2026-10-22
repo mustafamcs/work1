@@ -219,7 +219,7 @@ bool ITEM_MANAGER::ReadSpecialDropItemFile(const char * c_pszFileName)
 					if (!GetValidVnum(name.c_str(), dwVnum)
 						&& !GetVnumByOriginalName(name.c_str(), dwVnum))
 					{
-						if (name == "경험치" || name == "exp")
+						if (name == "exp")
 						{
 							dwVnum = CSpecialItemGroup::EXP;
 						}
@@ -397,7 +397,7 @@ bool ITEM_MANAGER::ConvSpecialDropItemFile()
 						dwVnum = 0;
 					}
 					// @fixme148 BEGIN
-					else if (name == "경험치")
+					else if (name == "exp")
 					{
 						dwVnum = 0;
 						name = "exp";

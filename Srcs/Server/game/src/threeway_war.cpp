@@ -327,7 +327,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 	{
 		char szBuf[64 + 1];
 
-		snprintf(szBuf, sizeof(szBuf), LC_TEXT("현재 스코어 신수국:%d 천조국:%d 진노국:%d"),
+		snprintf(szBuf, sizeof(szBuf), LC_TEXT("Mevcut Puan Durumu: Shinsoo %d, Chunjo %d, Jinno %d"),
 				GetKillScore(1), GetKillScore(2), GetKillScore(3));
 
 		SendNoticeMap(szBuf, GetSungziMapIndex(), false);
@@ -393,9 +393,9 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 		//----------------------
 		const std::string Nation(EMPIRE_NAME(bLoseEmpire));
 		const std::string Script(
-				LC_TEXT("성지의 마왕: 너희 ") +
+				LC_TEXT("Kutsal Yerin Şeytanı: [ENTER][ENTER]") +
 				Nation +
-				LC_TEXT("녀석들은 이곳 성지에 있을 자격을 잃었다. 모두 성지에서 물러나거라~~[ENTER][ENTER] 10초 후에 모두 마을로 이동하게 됩니다. ") +
+				LC_TEXT(", burada olmaya hakkın yok. 10 saniye içinde krallığına bağlı olanlar bu kutsal toprakları terk edecek.") +
 				"[ENTER][DONE]"
 				);
 
@@ -405,7 +405,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 
 		//----------------------
 		char szNotice[512+1];
-		snprintf(szNotice, sizeof(szNotice), LC_TEXT("삼거리 전투에서 %s 국가가 가장먼저 탈락을 하였습니다"), Nation.c_str());
+		snprintf(szNotice, sizeof(szNotice), LC_TEXT("%s Krallığı yenildi ve krallık savaşından çıktı."), Nation.c_str());
 		BroadcastNotice(szNotice);
 
 		snprintf(szNotice, sizeof(szNotice), "First Step: %s exclusion", Nation.c_str());
@@ -483,7 +483,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 		//------------------------------
 		{
 			char szBuf[64 + 1];
-			snprintf(szBuf, sizeof(szBuf), LC_TEXT("현재 스코어 신수국:%d 천조국:%d 진노국:%d"),
+			snprintf(szBuf, sizeof(szBuf), LC_TEXT("Mevcut Puan Durumu: Shinsoo %d, Chunjo %d, Jinno %d"),
 					GetKillScore(1), GetKillScore(2), GetKillScore(3));
 
 			SendNoticeMap(szBuf, GetSungziMapIndex(), false);
@@ -496,7 +496,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 			const std::string EmpireName(EMPIRE_NAME(nVictoryEmpireIndex));
 			const std::string Script(
 					EmpireName +
-					LC_TEXT(". 너희가 성지의 수호자를 잡게 된다면 너희는 성지의 주인이 된다.[ENTER][ENTER] ") +
+					LC_TEXT("Eğer Kutsal Alanın Bekçisini öldürürsen, onun sahibi olacaksın.") +
 					"[ENTER][DONE]");
 
 			struct packet_script pack_script;

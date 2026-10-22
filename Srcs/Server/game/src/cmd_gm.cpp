@@ -1372,7 +1372,7 @@ ACMD(do_monarch_notice)
 	}
 	else
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("군주만이 사용 가능한 기능입니다"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu özellik sadece İmparator tarafından kullanılabilir."));
 	}
 }
 
@@ -1867,12 +1867,12 @@ ACMD(do_makeguild)
 
 	if (!check_name(cp.name))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("적합하지 않은 길드 이름 입니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Lonca ismi geçersiz."));
 		return;
 	}
 
 	[[maybe_unused]] auto guildID = gm.CreateGuild(cp);
-	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("(%s) 길드가 생성되었습니다. [임시]"), cp.name);
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("(%s) Lonca kuruldu. [Temporary]"), cp.name);
 
 #ifdef ENABLE_GUILD_TOKEN_AUTH
 	CGuildManager::instance().GuildRelink(guildID, ch);
@@ -2456,7 +2456,7 @@ ACMD(do_level)
 
 ACMD(do_gwlist)
 {
-	ch->ChatPacket(CHAT_TYPE_NOTICE, LC_TEXT("현재 전쟁중인 길드 입니다"));
+	ch->ChatPacket(CHAT_TYPE_NOTICE, LC_TEXT("Bu lonca savaşta."));
 	CGuildManager::instance().ShowGuildWarList(ch);
 }
 
@@ -2514,7 +2514,7 @@ ACMD(do_guild_state)
 	}
 	else
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s: 존재하지 않는 길드 입니다."), arg1);
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s: Lonca bulunamadı."), arg1);
 	}
 }
 
@@ -2874,7 +2874,7 @@ ACMD(do_priv_guild)
 		}
 
 		if (!g)
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("그런 이름 또는 번호의 길드가 없습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Belirtilen isim veya numarada lonca mevcut değil."));
 		else
 		{
 			char buf[1024+1];
@@ -2987,7 +2987,7 @@ ACMD(do_block_chat_list)
 {
 	if (!ch || (ch->GetGMLevel() < GM_HIGH_WIZARD && ch->GetQuestFlag("chat_privilege.block") <= 0))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("그런 명령어는 없습니다"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu düzenleme mevcut değil."));
 		return;
 	}
 
@@ -3052,7 +3052,7 @@ ACMD(do_block_chat)
 {
 	if (ch && (ch->GetGMLevel() < GM_HIGH_WIZARD && ch->GetQuestFlag("chat_privilege.block") <= 0))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("그런 명령어는 없습니다"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu düzenleme mevcut değil."));
 		return;
 	}
 
@@ -3074,8 +3074,8 @@ ACMD(do_block_chat)
 	{
 		if (ch)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, "잘못된 형식의 시간입니다. h, m, s를 붙여서 지정해 주십시오.");
-			ch->ChatPacket(CHAT_TYPE_INFO, "예) 10s, 10m, 1m 30s");
+			ch->ChatPacket(CHAT_TYPE_INFO, "Invalid time format. Please specify with h, m, s suffixes.");
+			ch->ChatPacket(CHAT_TYPE_INFO, "e.g.) 10s, 10m, 1m 30s");
 		}
 		return;
 	}
@@ -3178,7 +3178,7 @@ ACMD(do_build)
 				const TObjectProto * t = CManager::instance().GetObjectProto(dwVnum);
 				if (!t)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("존재하지 않는 건물입니다."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bina mevcut değil."));
 					return;
 				}
 
@@ -3188,7 +3188,7 @@ ACMD(do_build)
 				{
 					if (pkLand->FindObjectByGroup(t->dwGroupVnum))
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("같이 지을 수 없는 종류의 건물이 지어져 있습니다."));
+						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu tip binalar sadece bir kez inşa edilebilir."));
 						return;
 					}
 				}
@@ -3200,7 +3200,7 @@ ACMD(do_build)
 					{
 						if (!pkLand->FindObjectByGroup(t->dwDependOnGroupVnum))
 						{
-							ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("건설에 필요한 건물이 지어져 있지 않습니다."));
+							ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İlk olarak temel binaları inşa etmelisin."));
 							return;
 						}
 					}
@@ -3210,13 +3210,13 @@ ACMD(do_build)
 				{
 					if (t->dwPrice > BUILDING_MAX_PRICE)
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("건물 비용 정보 이상으로 건설 작업에 실패했습니다."));
+						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Yanlış fiyat nedeniyle bina inşa edilemedi."));
 						return;
 					}
 
 					if (ch->GetGold() < (int)t->dwPrice)
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("건설 비용이 부족합니다."));
+						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Binayi inşa edebilmek için loncan yeterli Yang'a sahip değil."));
 						return;
 					}
 
@@ -3231,7 +3231,7 @@ ACMD(do_build)
 
 						if ((int) dwItemCount > ch->CountSpecifyItem(dwItemVnum))
 						{
-							ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("자재가 부족하여 건설할 수 없습니다."));
+							ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu binayı inşa edebilmek için yeterli kaynağın yok."));
 							return;
 						}
 					}
@@ -3257,7 +3257,7 @@ ACMD(do_build)
 				if (!isSuccess)
 				{
 					if (test_server)
-						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("건물을 지을 수 없는 위치입니다."));
+						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu alana bir bina inşa edemezsin."));
 					return;
 				}
 
@@ -3433,7 +3433,7 @@ ACMD(do_horse_level)
 
 	if (NULL == victim)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("존재하지 않는 캐릭터 입니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Karakter bulunamadı."));
 		return;
 	}
 
@@ -3620,17 +3620,17 @@ ACMD(do_end_duel)
 	LPCHARACTER pChar = CHARACTER_MANAGER::instance().FindPC(szName);
 	if (pChar == NULL)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("존재하지 않는 캐릭터 입니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Karakter bulunamadı."));
 		return;
 	}
 
 	if (CArenaManager::instance().EndDuel(pChar->GetPlayerID()) == false)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련 강제 종료 실패"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Düello iptal edilmedi."));
 	}
 	else
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련 강제 종료 성공"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Düello iptali başarılı."));
 	}
 }
 
@@ -3677,7 +3677,7 @@ ACMD(do_duel)
 			}
 			else
 			{
-				pChar1->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<파티> 파티에서 나가셨습니다."));
+				pChar1->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Group] Gruptan ayrıldın."));
 				pParty->Quit(pChar1->GetPlayerID());
 			}
 		}
@@ -3691,23 +3691,23 @@ ACMD(do_duel)
 			}
 			else
 			{
-				pChar2->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<파티> 파티에서 나가셨습니다."));
+				pChar2->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Group] Gruptan ayrıldın."));
 				pParty->Quit(pChar2->GetPlayerID());
 			}
 		}
 
 		if (CArenaManager::instance().StartDuel(pChar1, pChar2, set, minute) == true)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련이 성공적으로 시작 되었습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Düello başarıyla başladı."));
 		}
 		else
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련 시작에 문제가 있습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Düellonun başlamasıyla ilgili bir problem var."));
 		}
 	}
 	else
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련자가 없습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Burada savaşçı yok."));
 	}
 }
 
@@ -3723,7 +3723,7 @@ ACMD(do_stat_plus_amount)
 
 	if (ch->IsPolymorphed())
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("둔갑 중에는 능력을 올릴 수 없습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Dönüşmüş durumda olduğunuz sürece statünüzü değiştiremezsiniz."));
 		return;
 	}
 
@@ -3731,7 +3731,7 @@ ACMD(do_stat_plus_amount)
 
 	if (nRemainPoint <= 0)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("남은 스탯 포인트가 없습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Statü Puanı kalmadı."));
 		return;
 	}
 
@@ -3740,13 +3740,13 @@ ACMD(do_stat_plus_amount)
 
 	if (nRemainPoint < nPoint)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("남은 스탯 포인트가 적습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Kalan Statü puanları çok düşük."));
 		return;
 	}
 
 	if (nPoint < 0)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("값을 잘못 입력하였습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Yanlış değer girdin."));
 		return;
 	}
 
@@ -3782,7 +3782,7 @@ ACMD(do_stat_plus_amount)
 			break;
 
 		default :
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("명령어의 서브 커맨드가 잘못 되었습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Sıralama veya alt sıralama yanlış."));
 			return;
 			break;
 	}
@@ -3816,7 +3816,7 @@ ACMD(do_break_marriage)
 	str_to_number(pids.pid1, arg1);
 	str_to_number(pids.pid2, arg2);
 
-	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("플레이어 %d 와 플레이어  %d를 파혼시킵니다.."), pids.pid1, pids.pid2);
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%d ve %d oyuncuları arasındaki anlaşma bozuldu."), pids.pid1, pids.pid2);
 	db_clientdesc->DBPacket(HEADER_GD_BREAK_MARRIAGE, 0, &pids, sizeof(pids));
 }
 
@@ -3849,8 +3849,8 @@ struct FCountInMap
 
 ACMD(do_threeway_war_info)
 {
-	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("각제국 진행 정보"));
-	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("선택 맵 정보 성지 %d 통로 %d %d %d"), GetSungziMapIndex(), GetPassMapIndex(1), GetPassMapIndex(2), GetPassMapIndex(3));
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Krallık Bilgileri"));
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Haritadan kutsal alan bilgisini seç %d Giriş Yap %d %d %d"), GetSungziMapIndex(), GetPassMapIndex(1), GetPassMapIndex(2), GetPassMapIndex(3));
 	ch->ChatPacket(CHAT_TYPE_INFO, "ThreewayPhase %d", CThreeWayWar::instance().GetRegenFlag());
 
 	for (int n = 1; n < 4; ++n)
@@ -3873,7 +3873,7 @@ ACMD(do_threeway_war_info)
 
 ACMD(do_threeway_war_myinfo)
 {
-	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("나의 삼거리 진행정보"));
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İmparatorluk savaşı hakkında bilgi"));
 	ch->ChatPacket(CHAT_TYPE_INFO, "Deadcount %d",
 			CThreeWayWar::instance().GetReviveTokenForPlayer(ch->GetPlayerID()));
 }
@@ -3955,7 +3955,7 @@ ACMD(do_check_monarch_money)
 	str_to_number(empire, arg1);
 	int NationMoney = CMonarch::instance().GetMoney(empire);
 
-	ch->ChatPacket(CHAT_TYPE_INFO, "국고: %d 원", NationMoney);
+	ch->ChatPacket(CHAT_TYPE_INFO, "Treasury: %d", NationMoney);
 }
 
 ACMD(do_reset_subskill)
@@ -4208,13 +4208,13 @@ ACMD(do_set_stat)
 	{
 		if (tch->IsPolymorphed())
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("둔갑 중에는 능력을 올릴 수 없습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Dönüşmüş durumda olduğunuz sürece statünüzü değiştiremezsiniz."));
 			return;
 		}
 
 		if (subcmd != POINT_HT && subcmd != POINT_IQ && subcmd != POINT_ST && subcmd != POINT_DX)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("명령어의 서브 커맨드가 잘못 되었습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Sıralama veya alt sıralama yanlış."));
 			return;
 		}
 		int nRemainPoint = tch->GetPoint(POINT_STAT);
@@ -4268,7 +4268,7 @@ ACMD(do_set_stat)
 
 		if (nRemainPoint < nChangeAmount)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("남은 스탯 포인트가 적습니다."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Kalan Statü puanları çok düşük."));
 			return;
 		}
 
@@ -4668,7 +4668,7 @@ ACMD (do_use_item)
 	}
 	else
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "아이템이 없어서 착용할 수 없어.");
+		ch->ChatPacket(CHAT_TYPE_INFO, "Cannot equip, item not found.");
 	}
 }
 

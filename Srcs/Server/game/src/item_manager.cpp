@@ -1428,7 +1428,7 @@ void ITEM_MANAGER::CreateQuestDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, 
 
 	if (GetDropPerKillPct(100, 2000, iDeltaPercent, "2006_drop") >= number(1, iRandRange))
 	{
-		sys_log(0, "육각보합 DROP EVENT ");
+		sys_log(0, "Hexagon Box DROP EVENT ");
 
 		const static DWORD dwVnum = 50037;
 
@@ -1439,7 +1439,7 @@ void ITEM_MANAGER::CreateQuestDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, 
 
 	if (GetDropPerKillPct(100, 2000, iDeltaPercent, "2007_drop") >= number(1, iRandRange))
 	{
-		sys_log(0, "육각보합 DROP EVENT ");
+		sys_log(0, "Hexagon Box DROP EVENT ");
 
 		const static DWORD dwVnum = 50043;
 

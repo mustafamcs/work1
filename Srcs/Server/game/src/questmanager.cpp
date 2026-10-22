@@ -570,7 +570,7 @@ namespace quest
 			{
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 				if (ch)
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 				return false;
 			}
 			// call script
@@ -704,7 +704,7 @@ namespace quest
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 
 				if (ch)
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 
 				return;
 			}
@@ -730,7 +730,7 @@ namespace quest
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 				if (ch)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 				}
 				return;
 			}
@@ -755,7 +755,7 @@ namespace quest
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 				if (ch)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 				}
 				return false;
 			}
@@ -783,7 +783,7 @@ namespace quest
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 				if (ch)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 				}
 				return false;
 			}
@@ -826,7 +826,7 @@ namespace quest
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 				if (ch)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 				}
 				return false;
 			}
@@ -880,7 +880,7 @@ namespace quest
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 
 				if (ch)
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 
 				return false;
 			}
@@ -1932,7 +1932,7 @@ namespace quest
 				LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(pc);
 				if (ch)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("퀘스트를 로드하는 중입니다. 잠시만 기다려 주십시오."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsteğin yükleniyor. Anlayışın için teşekkür ederiz."));
 				}
 				return false;
 			}

@@ -289,12 +289,12 @@ void Cube_open (LPCHARACTER ch)
 
 	if (ch->IsCubeOpen())
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이미 제조창이 열려있습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İnşa penceresi zaten açık."));
 		return;
 	}
 	if ( ch->GetExchange() || ch->GetMyShop() || ch->GetShopOwner() || ch->IsOpenSafebox() || ch->IsCubeOpen() )
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("다른 거래중(창고,교환,상점)에는 사용할 수 없습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Başka bir Ticaret/Depo penceresi açıkken herhangi birşey inşa edemezsiniz."));
 		return;
 	}
 
@@ -489,7 +489,7 @@ bool Cube_make (LPCHARACTER ch)
 
 	if (!(ch)->IsCubeOpen())
 	{
-		(ch)->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("제조창이 열려있지 않습니다"));
+		(ch)->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İnşa penceresi açık değil."));
 		return false;
 	}
 
@@ -504,13 +504,13 @@ bool Cube_make (LPCHARACTER ch)
 
 	if (NULL == cube_proto)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("제조 재료가 부족합니다"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Doğru maddeye sahip değilsiniz."));
 		return false;
 	}
 	int cube_gold = cube_proto->gold;
 	if (cube_gold < 0 || ch->GetGold() < cube_gold)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("돈이 부족하거나 아이템이 제자리에 없습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Yeterli Yang veya envanter boş yer yok."));
 		return false;
 	}
 
@@ -533,7 +533,7 @@ bool Cube_make (LPCHARACTER ch)
 	}
 	else
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("제조에 실패하였습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Üretim başarısız oldu."));
 		ch->ChatPacket(CHAT_TYPE_COMMAND, "cube fail");
 		LogManager::instance().CubeLog(ch->GetPlayerID(), ch->GetX(), ch->GetY(),
 				reward_value->vnum, 0, 0, 0);

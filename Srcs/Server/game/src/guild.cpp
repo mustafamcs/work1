@@ -68,12 +68,12 @@ CGuild::CGuild(TGuildCreateParameter & cp)
 
 	strlcpy(m_data.name, cp.name, sizeof(m_data.name));
 	m_data.master_pid = cp.master->GetPlayerID();
-	strlcpy(m_data.grade_array[0].grade_name, LC_TEXT("길드장"), sizeof(m_data.grade_array[0].grade_name));
+	strlcpy(m_data.grade_array[0].grade_name, LC_TEXT("Lider"), sizeof(m_data.grade_array[0].grade_name));
 	m_data.grade_array[0].auth_flag = GUILD_AUTH_ADD_MEMBER | GUILD_AUTH_REMOVE_MEMBER | GUILD_AUTH_NOTICE | GUILD_AUTH_USE_SKILL;
 
 	for (int i = 1; i < GUILD_GRADE_COUNT; ++i)
 	{
-		strlcpy(m_data.grade_array[i].grade_name, LC_TEXT("길드원"), sizeof(m_data.grade_array[i].grade_name));
+		strlcpy(m_data.grade_array[i].grade_name, LC_TEXT("Üye"), sizeof(m_data.grade_array[i].grade_name));
 		m_data.grade_array[i].auth_flag = 0;
 	}
 
@@ -911,7 +911,7 @@ bool CGuild::OfferExp(LPCHARACTER ch, int amount)
 
 	if (ch->GetExp() < (DWORD) amount)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 제공하고자 하는 경험치가 남은 경험치보다 많습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Sağlanan tecrübe kaybedilenden tecrübeden daha fazla."));
 		return false;
 	}
 
@@ -1025,7 +1025,7 @@ void CGuild::DeleteComment(LPCHARACTER ch, DWORD comment_id)
 		pmsg = DBManager::instance().DirectQuery("DELETE FROM guild_comment%s WHERE id = %u AND guild_id = %u AND name = '%s'",get_table_postfix(), comment_id, m_data.guild_id, ch->GetName());
 
 	if (pmsg->Get()->uiAffectedRows == 0 || pmsg->Get()->uiAffectedRows == (uint32_t)-1)
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 삭제할 수 없는 글입니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Mesaj silinemez."));
 	else
 		RefreshCommentForce(ch->GetPlayerID());
 }
@@ -1253,7 +1253,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 
 	if (GetSP() < iNeededSP)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 용신력이 부족합니다. (%d, %d)"), GetSP(), iNeededSP);
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Yeterli Ejderha hayaleti yok. (%d, %d)"), GetSP(), iNeededSP);
 		return;
 	}
 
@@ -1262,7 +1262,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 
 	if (!abSkillUsable[dwRealVnum])
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 쿨타임이 끝나지 않아 길드 스킬을 사용할 수 없습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Henüz Lonca Becerilerini kullanamazsın."));
 		return;
 	}
 
@@ -1276,7 +1276,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 	abSkillUsable[dwRealVnum] = false;
 
 	if (test_server)
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> %d 스킬을 사용함 (%d, %d) to %u"), dwVnum, GetSP(), iNeededSP, pid);
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<Lonca> %d yeteneği kullanıldı (%d, %d) -> %u"), dwVnum, GetSP(), iNeededSP, pid);
 
 	switch (dwVnum)
 	{
@@ -1293,7 +1293,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 
 					if (pcci->bChannel != g_bChannel)
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 상대가 %d 채널에 있습니다. (현재 채널 %d)"), pcci->bChannel, g_bChannel);
+						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild]  Oyuncu şu an %d kanalında. (Bulunulan kanal: %d)"), pcci->bChannel, g_bChannel);
 					}
 					else
 					{
@@ -1306,7 +1306,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 					}
 				}
 				else
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 상대가 온라인 상태가 아닙니다."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Oyuncu çevrim dışı."));
 			}
 			break;
 
@@ -1314,7 +1314,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 			{
 				if (!UnderAnyWar())
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 길드 스킬은 길드전 중에만 사용할 수 있습니다."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Bu Lonca Becerisi sadece savaşlarda kullanılabilir."));
 					return;
 				}
 
@@ -1629,7 +1629,7 @@ bool CGuild::ChargeSP(LPCHARACTER ch, int iSP)
 
 	SendDBSkillUpdate(iSP);
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> %u의 용신력을 회복하였습니다."), iSP);
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<Lonca> %u ejder gücü yenilendi."), iSP);
 	}
 	return true;
 }
@@ -1693,7 +1693,7 @@ void CGuild::RequestDepositMoney(LPCHARACTER ch, int iGold)
 {
 	if (false==ch->CanDeposit())
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 잠시후에 이용해주십시오"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Lütfen daha sonra tekrar deneyin."));
 		return;
 	}
 
@@ -1719,19 +1719,19 @@ void CGuild::RequestWithdrawMoney(LPCHARACTER ch, int iGold)
 {
 	if (false==ch->CanDeposit())
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 잠시후에 이용해주십시오"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Lütfen daha sonra tekrar deneyin."));
 		return;
 	}
 
 	if (ch->GetPlayerID() != GetMasterPID())
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 길드 금고에선 길드장만 출금할 수 있습니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Sadece Lonca lideri Yang çekebilir."));
 		return;
 	}
 
 	if (m_data.gold < iGold)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 가지고 있는 돈이 부족합니다."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Yeterli Yang yok."));
 		return;
 	}
 
@@ -1821,7 +1821,7 @@ void CGuild::Invite( LPCHARACTER pchInviter, LPCHARACTER pchInvitee )
 {
 	if (quest::CQuestManager::instance().GetPCForce(pchInviter->GetPlayerID())->IsRunning() == true)
 	{
-	    pchInviter->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 상대방이 초대 신청을 받을 수 없는 상태입니다."));
+	    pchInviter->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<Lonca> Karşı taraf şu an davet alamıyor."));
 	    return;
 	}
 
@@ -1830,17 +1830,17 @@ void CGuild::Invite( LPCHARACTER pchInviter, LPCHARACTER pchInvitee )
 
 	if ( pchInvitee->IsBlockMode( BLOCK_GUILD_INVITE ) )
 	{
-		pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<길드> 상대방이 길드 초대 거부 상태입니다.") );
+		pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("[Guild] Oyuncu Lonca davetini reddetti.") );
 		return;
 	}
 	else if ( !HasGradeAuth( GetMember( pchInviter->GetPlayerID() )->grade, GUILD_AUTH_ADD_MEMBER ) )
 	{
-		pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<길드> 길드원을 초대할 권한이 없습니다.") );
+		pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("[Guild] Loncaya birini davet edemezsin.") );
 		return;
 	}
 	else if ( pchInvitee->GetEmpire() != pchInviter->GetEmpire() )
 	{
-		pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<길드> 다른 제국 사람을 길드에 초대할 수 없습니다.") );
+		pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("[Guild] Diğer Krallıklardan olan oyuncuları Loncaya davet edemezsin.") );
 		return;
 	}
 
@@ -1850,18 +1850,18 @@ void CGuild::Invite( LPCHARACTER pchInviter, LPCHARACTER pchInvitee )
 		case GERR_NONE: break;
 		case GERR_WITHDRAWPENALTY:
 						pchInviter->ChatPacket( CHAT_TYPE_INFO,
-								LC_TEXT("<길드> 탈퇴한 후 %d일이 지나지 않은 사람은 길드에 초대할 수 없습니다."),
+								LC_TEXT("[Lonca] Bu oyuncuyu %d gün sonra tekrar davet edebilirsin."),
 								quest::CQuestManager::instance().GetEventFlag( "guild_withdraw_delay" ) );
 						return;
 		case GERR_COMMISSIONPENALTY:
 						pchInviter->ChatPacket( CHAT_TYPE_INFO,
-								LC_TEXT("<길드> 길드를 해산한 지 %d일이 지나지 않은 사람은 길드에 초대할 수 없습니다."),
+								LC_TEXT("[Guild] Düzenlemeden sonraki  %d gün içinde üyeleri davet edebilirsin."),
 								quest::CQuestManager::instance().GetEventFlag( "guild_disband_delay") );
 						return;
-		case GERR_ALREADYJOIN:	pchInviter->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 상대방이 이미 다른 길드에 속해있습니다.")); return;
-		case GERR_GUILDISFULL:	pchInviter->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 최대 길드원 수를 초과했습니다.")); return;
-		case GERR_GUILD_IS_IN_WAR : pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<길드> 현재 길드가 전쟁 중 입니다.") ); return;
-		case GERR_INVITE_LIMIT : pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<길드> 현재 신규 가입 제한 상태 입니다.") ); return;
+		case GERR_ALREADYJOIN:	pchInviter->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Bu oyuncu zaten başka bir Loncaya üye.")); return;
+		case GERR_GUILDISFULL:	pchInviter->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Lonca kapasitesi maximum seviyeye ulaştı.")); return;
+		case GERR_GUILD_IS_IN_WAR : pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Lonca şu an savaşta.") ); return;
+		case GERR_INVITE_LIMIT : pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Yeni üye alımı şu an kapalı.") ); return;
 
 		default: sys_err( "ignore guild join error(%d)", errcode ); return;
 	}
@@ -1908,18 +1908,18 @@ void CGuild::InviteAccept( LPCHARACTER pchInvitee )
 		case GERR_NONE: break;
 		case GERR_WITHDRAWPENALTY:
 						pchInvitee->ChatPacket( CHAT_TYPE_INFO,
-								LC_TEXT("<길드> 탈퇴한 후 %d일이 지나지 않은 사람은 길드에 초대할 수 없습니다."),
+								LC_TEXT("[Lonca] Bu oyuncuyu %d gün sonra tekrar davet edebilirsin."),
 								quest::CQuestManager::instance().GetEventFlag( "guild_withdraw_delay" ) );
 						return;
 		case GERR_COMMISSIONPENALTY:
 						pchInvitee->ChatPacket( CHAT_TYPE_INFO,
-								LC_TEXT("<길드> 길드를 해산한 지 %d일이 지나지 않은 사람은 길드에 초대할 수 없습니다."),
+								LC_TEXT("[Guild] Düzenlemeden sonraki  %d gün içinde üyeleri davet edebilirsin."),
 								quest::CQuestManager::instance().GetEventFlag( "guild_disband_delay") );
 						return;
-		case GERR_ALREADYJOIN:	pchInvitee->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 상대방이 이미 다른 길드에 속해있습니다.")); return;
-		case GERR_GUILDISFULL:	pchInvitee->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<길드> 최대 길드원 수를 초과했습니다.")); return;
-		case GERR_GUILD_IS_IN_WAR : pchInvitee->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<길드> 현재 길드가 전쟁 중 입니다.") ); return;
-		case GERR_INVITE_LIMIT : pchInvitee->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<길드> 현재 신규 가입 제한 상태 입니다.") ); return;
+		case GERR_ALREADYJOIN:	pchInvitee->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Bu oyuncu zaten başka bir Loncaya üye.")); return;
+		case GERR_GUILDISFULL:	pchInvitee->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Guild] Lonca kapasitesi maximum seviyeye ulaştı.")); return;
+		case GERR_GUILD_IS_IN_WAR : pchInvitee->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Lonca şu an savaşta.") ); return;
+		case GERR_INVITE_LIMIT : pchInvitee->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Yeni üye alımı şu an kapalı.") ); return;
 
 		default: sys_err( "ignore guild join error(%d)", errcode ); return;
 	}

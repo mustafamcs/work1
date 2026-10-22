@@ -57,7 +57,7 @@ void CShutdownManager::Update()
 			{
 				if((*i) != NULL)
 				{
-					(*i)->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("셧다운제 시행으로 10분 뒤 종료됩니다."));
+					(*i)->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Kapatma sistemi nedeniyle 10 dakika sonra kapanacak."));
 				}
 			}
 
