@@ -8,5 +8,6 @@ for %%P in (metin2client.exe db.exe game.exe qc.exe mariadbd.exe PackMakerLite.e
   taskkill /IM %%P /F >nul 2>&1
 )
 echo [OK] zorla kapatma gonderildi
+call "%~dp0_artik_kapat.bat"
 call "%~dp033_durum.bat"
 exit /b 0

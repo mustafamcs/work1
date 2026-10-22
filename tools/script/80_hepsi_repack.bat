@@ -19,4 +19,5 @@ for /d %%P in ("%SRCSPACK%\*") do (
 echo.
 echo [BITTI] repack: %OK% ok, %ERR% hata
 if %ERR% gtr 0 exit /b 1
+call "%~dp0_artik_kapat.bat"
 exit /b 0

@@ -21,3 +21,5 @@ rem artakalan varsa temizle
 if exist "%~1.eix" del /f "%~1.eix" >nul 2>&1
 if exist "%~1.epk" del /f "%~1.epk" >nul 2>&1
 echo [OK] %~1.eix/epk -^> client\pack\
+
+call "%~dp0_artik_kapat.bat"

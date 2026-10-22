@@ -43,4 +43,5 @@ for /f %%N in (%DEGISEN%) do (
 del /f "%DEGISEN%" >nul 2>&1
 echo.
 echo [OK] dil temizligi + repack bitti
+call "%~dp0_artik_kapat.bat"
 exit /b 0

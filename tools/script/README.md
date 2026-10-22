@@ -16,6 +16,16 @@ Tüm yollar `_ayar.bat` içindedir — taşıma durumunda sadece orayı düzenle
 `.bat` dosyasına çift tıklanırsa kendi konsolu kısa süre görünür; hiç
 pencere istemiyorsan `_gizli.vbs` üzerinden çağır (veya ona kısayol koy).
 
+## Artık süreç temizliği
+
+- **`_artik_kapat.bat`** — derleme/araç artıklarını kapatır (`MSBuild`,
+  `cl`, `link`, `mspdbsrv`, `VBCSCompiler`, `vctip`, `tracker`,
+  `PackMakerLite`, `DumpProto`). Oyun süreçlerine dokunmaz.
+- Tüm derleme (40–44, 84) ve repack (71, 80, 81) betikleri iş bitince
+  bunu otomatik çağırır; `85_zorla_kapat` da çağırır.
+- MSBuild çağrılarında `/nr:false` var — node-reuse sayesinde derleme
+  sonrası açık kalan `MSBuild.exe` işçileri artık oluşmaz.
+
 ## Süreç açma/kapama (bağımlılık sırasıyla)
 
 | Betik | İş |

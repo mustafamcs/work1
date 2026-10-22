@@ -9,7 +9,7 @@ for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":30003 " ^| findstr LISTENIN
 for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":30901 " ^| findstr LISTENING') do taskkill /PID %%a /F >nul 2>&1
 taskkill /IM qc.exe /F >nul 2>&1
 
-"%MSBUILD%" "%SLN%" /t:db;game;qc /p:Configuration=Release /p:Platform=Win32 /m /v:m /nologo
+"%MSBUILD%" "%SLN%" /t:db;game;qc /p:Configuration=Release /p:Platform=Win32 /m /nr:false /v:m /nologo
 if errorlevel 1 ( echo [HATA] derleme basarisiz & exit /b 1 )
 
 copy /y "%KOK%\out\db\Release\db.exe"     "%SRV%\db\db.exe" >nul
@@ -21,3 +21,5 @@ copy /y "%KOK%\out\game\Release\game.exe" "%SRV%\share\bin\game.exe" >nul
 copy /y "%KOK%\out\qc\Release\qc.exe"     "%QUESTDIR%\qc.exe" >nul
 copy /y "%KOK%\out\qc\Release\qc.exe"     "%SRV%\share\bin\qc.exe" >nul
 echo [OK] db + game + qc derlendi ve dagitildi
+
+call "%~dp0_artik_kapat.bat"

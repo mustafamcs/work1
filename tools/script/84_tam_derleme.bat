@@ -14,7 +14,7 @@ echo == 2/4 out dizini siliniyor ==
 if exist "%KOK%\out" rd /s /q "%KOK%\out"
 
 echo == 3/4 tum cozum derleniyor ^(Release^|Win32^) ==
-"%MSBUILD%" "%SLN_CLIENT%" /t:Rebuild /p:Configuration=Release /p:Platform=Win32 /m /nologo /v:m
+"%MSBUILD%" "%SLN_CLIENT%" /t:Rebuild /p:Configuration=Release /p:Platform=Win32 /m /nr:false /nologo /v:m
 if errorlevel 1 ( echo [HATA] derleme basarisiz & exit /b 1 )
 
 echo == 4/4 ciktilar dagitiliyor ==
@@ -31,4 +31,5 @@ copy /y "%OUT%\client\UserInterface\Release\bin\metin2client.exe" "%CLIENTDIR%\"
 
 echo.
 echo [OK] tam derleme + dagitim bitti
+call "%~dp0_artik_kapat.bat"
 exit /b 0
