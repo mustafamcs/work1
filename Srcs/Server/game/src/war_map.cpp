@@ -138,7 +138,7 @@ CWarMap::~CWarMap()
 	event_cancel(&m_pkTimeoutEvent);
 	event_cancel(&m_pkResetFlagEvent);
 
-	sys_log(0, "WarMap::~WarMap : map index %d", GetMapIndex());
+	sys_log(0, "WarMap::~WarMap : harita indeksi %d", GetMapIndex());
 
 	itertype(m_set_pkChr) it = m_set_pkChr.begin();
 
@@ -481,7 +481,7 @@ void CWarMap::CheckWarEnd()
 		Notice(LC_TEXT("Burada düşman yok."));
 		Notice(LC_TEXT("Eğer düşman bulunamazsa Lonca Savaşı otomatik olarak biter."));
 
-		sys_log(0, "CheckWarEnd: Timeout begin %u vs %u", m_TeamData[0].dwID, m_TeamData[1].dwID);
+		sys_log(0, "CheckWarEnd: Zaman aşımı başlangıcı %u vs %u", m_TeamData[0].dwID, m_TeamData[1].dwID);
 
 		war_map_info* info = AllocEventInfo<war_map_info>();
 		info->pWarMap = this;
@@ -549,7 +549,7 @@ void CWarMap::Timeout()
 				dwLoser = m_TeamData[0].dwID;
 			}
 
-			sys_err("WarMap: member count is not zero, guild1 %u %d guild2 %u %d, winner %u",
+			sys_err("WarMap: üye sayısı sıfır değil, lonca1 %u %d lonca2 %u %d, kazanan %u",
 					m_TeamData[0].dwID, m_TeamData[0].iMemberCount,
 					m_TeamData[1].dwID, m_TeamData[1].iMemberCount,
 					dwWinner);
@@ -719,7 +719,7 @@ bool CWarMap::CheckScore()
 	else if (dwWinner == m_TeamData[1].dwID)
 		iRewardGold = GetRewardGold(1);
 
-	sys_log(0, "WarMap::CheckScore end score %d guild1 %u score guild2 %d %u score %d winner %u reward %d",
+	sys_log(0, "WarMap::CheckScore bitiş skoru %d lonca1 %u skor lonca2 %d %u skor %d kazanan %u ödül %d",
 			iEndScore,
 			m_TeamData[0].dwID,
 			m_TeamData[0].iScore,
@@ -819,7 +819,7 @@ void CWarMap::OnKill(LPCHARACTER killer, LPCHARACTER ch)
 			break;
 
 		default:
-			sys_err("unknown war map type %u index %d", m_kMapInfo.bType, m_kMapInfo.lMapIndex);
+			sys_err("bilinmeyen savaş haritası tipi %u indeks %d", m_kMapInfo.bType, m_kMapInfo.lMapIndex);
 			break;
 	}
 }
@@ -1020,7 +1020,7 @@ bool CWarMapManager::GetStartPosition(long lMapIndex, BYTE bIdx, PIXEL_POSITION 
 
 	if (!pi)
 	{
-		sys_log(0, "GetStartPosition FAILED [%d] WarMapInfoSize(%d)", lMapIndex, m_map_kWarMapInfo.size());
+		sys_log(0, "GetStartPosition BAŞARISIZ [%d] WarMapInfoSize(%d)", lMapIndex, m_map_kWarMapInfo.size());
 
 		itertype(m_map_kWarMapInfo) it;
 		for (it	= m_map_kWarMapInfo.begin(); it != m_map_kWarMapInfo.end(); ++it)

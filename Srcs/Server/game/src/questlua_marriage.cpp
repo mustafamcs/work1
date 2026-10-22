@@ -33,7 +33,7 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		marriage::CManager::instance().RequestRemove(ch->GetPlayerID(), pMarriage->GetOther(ch->GetPlayerID()));
@@ -46,7 +46,7 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		pMarriage->SetMarried();
@@ -107,7 +107,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2))
 		{
-			sys_err("invalid player id for wedding map");
+			sys_err("düğün haritası için geçersiz oyuncu id");
 			return 0;
 		}
 
@@ -119,12 +119,12 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(pid1);
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		if (pMarriage->GetOther(pid1) != pid2)
 		{
-			sys_err("not married %u %u", pid1, pid2);
+			sys_err("evli değil %u %u", pid1, pid2);
 			return 0;
 		}
 		//PREVENT_HACK
@@ -142,7 +142,7 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 
@@ -161,7 +161,7 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		if (pMarriage->pWeddingInfo)
@@ -175,7 +175,7 @@ namespace quest
 	{
 		if (!lua_isboolean(L, 1))
 		{
-			sys_err("invalid argument 1 : must be boolean");
+			sys_err("geçersiz argüman 1 : boolean olmalı");
 			return 0;
 		}
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
@@ -183,7 +183,7 @@ namespace quest
 
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		if (pMarriage->pWeddingInfo)
@@ -199,7 +199,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1))
 		{
-			sys_err("invalid argument 1 : must be string");
+			sys_err("geçersiz argüman 1 : metin olmalı");
 			return 0;
 		}
 
@@ -207,7 +207,7 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		if (pMarriage->pWeddingInfo)
@@ -225,7 +225,7 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		if (pMarriage->pWeddingInfo)
@@ -244,12 +244,12 @@ namespace quest
 	{
 		if (!lua_isboolean(L, 1))
 		{
-			sys_err("invalid argument 1 : must be boolean");
+			sys_err("geçersiz argüman 1 : boolean olmalı");
 			return 0;
 		}
 		if (!lua_isstring(L, 2))
 		{
-			sys_err("invalid argument 2 : must be string");
+			sys_err("geçersiz argüman 2 : metin olmalı");
 			return 0;
 		}
 
@@ -257,7 +257,7 @@ namespace quest
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		if (pMarriage->pWeddingInfo)
@@ -274,14 +274,14 @@ namespace quest
 	{
 		if (!lua_isboolean(L, 1))
 		{
-			sys_err("invalid argument 1 : must be boolean");
+			sys_err("geçersiz argüman 1 : boolean olmalı");
 			return 0;
 		}
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		marriage::TMarriage* pMarriage = marriage::CManager::instance().Get(ch->GetPlayerID());
 		if (!pMarriage)
 		{
-			sys_err("pid[%d:%s] is not exist couple", ch->GetPlayerID(), ch->GetName());
+			sys_err("pid[%d:%s] çifti yok", ch->GetPlayerID(), ch->GetName());
 			return 0;
 		}
 		if (pMarriage->pWeddingInfo)
@@ -314,7 +314,7 @@ namespace quest
 
 		if (!pMarriage)
 		{
-			sys_err("trying to get time for not married character");
+			sys_err("evli olmayan karakter için süre alınmaya çalışılıyor");
 			lua_pushnumber(L, 0);
 			return 1;
 		}

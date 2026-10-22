@@ -84,7 +84,7 @@ int CDBManager::Connect(int iSlot, const char * db_address, const int db_port, c
 	if (iSlot < 0 || iSlot >= SQL_MAX_NUM)
 		return false;
 
-	sys_log(0, "CREATING DIRECT_SQL");
+	sys_log(0, "DIRECT_SQL OLUŞTURULUYOR");
 	m_directSQL[iSlot] = std::make_unique<CAsyncSQL2>();
 	if (!m_directSQL[iSlot]->Setup(db_address, user, pwd, db_name, g_stLocale.c_str(), true, db_port))
 	{
@@ -92,7 +92,7 @@ int CDBManager::Connect(int iSlot, const char * db_address, const int db_port, c
 		return false;
 	}
 
-	sys_log(0, "CREATING MAIN_SQL");
+	sys_log(0, "MAIN_SQL OLUŞTURULUYOR");
 	m_mainSQL[iSlot] = std::make_unique<CAsyncSQL2>();
 	if (!m_mainSQL[iSlot]->Setup(db_address, user, pwd, db_name, g_stLocale.c_str(), false, db_port))
 	{
@@ -100,7 +100,7 @@ int CDBManager::Connect(int iSlot, const char * db_address, const int db_port, c
 		return false;
 	}
 
-	sys_log(0, "CREATING ASYNC_SQL");
+	sys_log(0, "ASYNC_SQL OLUŞTURULUYOR");
 	m_asyncSQL[iSlot] = std::make_unique<CAsyncSQL2>();
 	if (!m_asyncSQL[iSlot]->Setup(db_address, user, pwd, db_name, g_stLocale.c_str(), false, db_port))
 	{
@@ -151,14 +151,14 @@ unsigned long CDBManager::EscapeString(void *to, const void *from, unsigned long
 void CDBManager::SetLocale(const char * szLocale)
 {
 	const std::string stLocale(szLocale);
-	sys_log(0, "SetLocale start %s", szLocale);
+	sys_log(0, "SetLocale başlangıç %s", szLocale);
 	for (int n = 0; n < SQL_MAX_NUM; ++n)
 	{
 		m_mainSQL[n]->SetLocale(stLocale);
 		m_directSQL[n]->SetLocale(stLocale);
 		m_asyncSQL[n]->SetLocale(stLocale);
 	}
-	sys_log(0, "SetLocale end %s", szLocale);
+	sys_log(0, "SetLocale son %s", szLocale);
 }
 
 void CDBManager::QueryLocaleSet()

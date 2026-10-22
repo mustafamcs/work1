@@ -52,7 +52,7 @@ inline bool __packet_encode(LPBUFFER pbuf, const void * data, int length, const 
 
 	if (buffer_has_space(pbuf) < length)
 	{
-		//sys_err("buffer length exceeded buffer size: %d, encoding %d bytes (%s:%d)", buffer_size(pbuf), length, file, line);
+		//sys_err("tampon uzunluğu tampon boyutunu aştı: %d, %d bayt kodlanıyor (%s:%d)", buffer_size(pbuf), length, file, line);
 		return false;
 	}
 

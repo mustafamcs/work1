@@ -91,7 +91,7 @@ int CThreeWayWar::GetKillScore( BYTE empire ) const
 {
 	if( empire <= 0 || empire >= EMPIRE_MAX_NUM )
 	{
-		sys_err("ThreeWayWar::GetKillScore Wrong Empire variable");
+		sys_err("ThreeWayWar::GetKillScore Hatalı İmparatorluk değişkeni");
 		return 0;
 	}
 
@@ -102,7 +102,7 @@ void CThreeWayWar::SetKillScore( BYTE empire, int count )
 {
 	if( empire <= 0 || empire >= EMPIRE_MAX_NUM )
 	{
-		sys_err("ThreeWayWar::SetKillScore Wrong Empire variable");
+		sys_err("ThreeWayWar::SetKillScore Hatalı İmparatorluk değişkeni");
 		return;
 	}
 
@@ -142,7 +142,7 @@ bool CThreeWayWar::LoadSetting(const char* szFileName)
 
 	if (NULL == pf)
 	{
-		sys_err("[INIT_FORKED] Do not open file (%s)", szPath );
+		sys_err("[INIT_FORKED] Dosya açılamıyor (%s)", szPath );
 		return false;
 	}
 
@@ -408,7 +408,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 		snprintf(szNotice, sizeof(szNotice), LC_TEXT("%s Krallığı yenildi ve krallık savaşından çıktı."), Nation.c_str());
 		BroadcastNotice(szNotice);
 
-		snprintf(szNotice, sizeof(szNotice), "First Step: %s exclusion", Nation.c_str());
+		snprintf(szNotice, sizeof(szNotice), "İlk Adım: %s dışlama", Nation.c_str());
 		LogManager::instance().CharLog(0, 0, 0, 0, "THREEWAY", szNotice, NULL);
 
 		//----------------------
@@ -515,7 +515,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 			pSecMap->for_each(fSend);
 
 			char szBuf[512];
-			snprintf(szBuf, sizeof(szBuf), "Second Step: %s remain", EMPIRE_NAME( nVictoryEmpireIndex ));
+			snprintf(szBuf, sizeof(szBuf), "İkinci Adım: %s kaldı", EMPIRE_NAME( nVictoryEmpireIndex ));
 			LogManager::instance().CharLog(0, 0, 0, 0, "THREEWAY", szBuf, NULL);
 		}
 

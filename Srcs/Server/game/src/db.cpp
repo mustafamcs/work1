@@ -33,7 +33,7 @@ bool DBManager::Connect(const char * host, const int port, const char * user, co
 		m_bIsConnect = true;
 
 	if (!m_sql_direct.Setup(host, user, pwd, db, g_stLocale.c_str(), true, port))
-		sys_err("cannot open direct sql connection to host %s", host);
+		sys_err("%s hostuna doğrudan sql bağlantısı açılamıyor", host);
 
 	return m_bIsConnect;
 }
@@ -169,7 +169,7 @@ void DBManager::SetBilling(DWORD dwKey, bool bOn, bool bSkipPush)
 
 	if (it == m_map_pkLoginData.end())
 	{
-		sys_err("cannot find login key %u", dwKey);
+		sys_err("%u giriş anahtarı bulunamıyor", dwKey);
 		return;
 	}
 
@@ -366,7 +366,7 @@ void DBManager::FlushBilling(bool bForce)
 
 						if (dwSecsConnected >= 60) // 60 second cycle
 						{
-							sys_log(0, "BILLING 1 %s remain %d connected secs %u",
+							sys_log(0, "BILLING 1 %s kalan %d bağlı saniye %u",
 									pkLD->GetLogin(), pkLD->GetRemainSecs(), dwSecsConnected);
 							PushBilling(pkLD);
 						}
@@ -377,7 +377,7 @@ void DBManager::FlushBilling(bool bForce)
 
 						if (dwSecsConnected > (DWORD) (pkLD->GetRemainSecs() - 600) || dwSecsConnected >= 600)
 						{
-							sys_log(0, "BILLING 2 %s remain %d connected secs %u",
+							sys_log(0, "BILLING 2 %s kalan %d bağlı saniye %u",
 									pkLD->GetLogin(), pkLD->GetRemainSecs(), dwSecsConnected);
 							PushBilling(pkLD);
 						}
@@ -393,7 +393,7 @@ void DBManager::CheckBilling()
 	std::vector<DWORD> vec;
 	vec.emplace_back(0);
 
-	//sys_log(0, "CheckBilling: map size %d", m_map_pkLoginData.size());
+	//sys_log(0, "CheckBilling: harita boyutu %d", m_map_pkLoginData.size());
 
 	itertype(m_map_pkLoginData) it = m_map_pkLoginData.begin();
 
@@ -403,7 +403,7 @@ void DBManager::CheckBilling()
 
 		if (pkLD->IsBilling())
 		{
-			sys_log(0, "BILLING: CHECK %u", pkLD->GetKey());
+			sys_log(0, "BILLING: KONTROL %u", pkLD->GetKey());
 			vec.emplace_back(pkLD->GetKey());
 		}
 	}
@@ -621,7 +621,7 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 
 					if (!row[col])
 					{
-						sys_err("error column %d", col);
+						sys_err("hata sütunu %d", col);
 						M2_DELETE(pinfo);
 					   	break;
 					}
@@ -630,7 +630,7 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 
 					if (!row[col])
 					{
-					   	sys_err("error column %d", col);
+					   	sys_err("hata sütunu %d", col);
 						M2_DELETE(pinfo);
 					   	break;
 				   	}
@@ -641,7 +641,7 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 
 					if (!row[col])
 				   	{
-						sys_err("error column %d", col);
+						sys_err("hata sütunu %d", col);
 						M2_DELETE(pinfo);
 						break;
 				   	}
@@ -650,7 +650,7 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 
 					if (!row[col])
 				   	{
-					   	sys_err("error column %d", col);
+					   	sys_err("hata sütunu %d", col);
 						M2_DELETE(pinfo);
 					   	break;
 				   	}
@@ -659,7 +659,7 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 
 					if (!row[col])
 					{
-					   	sys_err("error column %d", col);
+					   	sys_err("hata sütunu %d", col);
 						M2_DELETE(pinfo);
 						break;
 				   	}
@@ -767,7 +767,7 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 							break;
 						}
 
-						sys_log(0, "QID_AUTH_LOGIN: SUCCESS %s", pinfo->login);
+						sys_log(0, "QID_AUTH_LOGIN: BASARILI %s", pinfo->login);
 					}
 				}
 			}
@@ -778,7 +778,7 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 				TPacketCGLogin3 * pinfo = (TPacketCGLogin3 *) qi->pvData;
 				LPDESC d = DESC_MANAGER::instance().FindByLoginKey(qi->dwIdent);
 
-				sys_log(0, "QID_BILLING_GET_TIME: START ident %u d %p", qi->dwIdent, get_pointer(d));
+				sys_log(0, "QID_BILLING_GET_TIME: BAŞLANGIÇ ident %u d %p", qi->dwIdent, get_pointer(d));
 
 				if (d)
 				{
@@ -802,12 +802,12 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 						else if (bBillType == BILLING_NONE)
 						{
 							LoginFailure(d, "NOBILL");
-							sys_log(0, "QID_BILLING_GET_TIME: NO TIME");
+							sys_log(0, "QID_BILLING_GET_TIME: SURE YOK");
 						}
 						else
 						{
 							LoginPrepare(bBillType, 0, seconds, d, pinfo->adwClientKey);
-							sys_log(0, "QID_BILLING_GET_TIME: SUCCESS");
+							sys_log(0, "QID_BILLING_GET_TIME: BASARILI");
 						}
 					}
 				}
@@ -909,14 +909,14 @@ void DBManager::AnalyzeReturnQuery(SQLMsg * pMsg)
 				}
 				else
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, "No one currently blocked.");
+					ch->ChatPacket(CHAT_TYPE_INFO, "Şu anda engellenen kimse yok.");
 				}
 			}
 			break;
 			// END_OF_BLOCK_CHAT
 
 		default:
-			sys_err("FATAL ERROR!!! Unhandled return query id %d", qi->iType);
+			sys_err("ÖLÜMCÜL HATA!!! İşlenmemiş dönen sorgu id %d", qi->iType);
 			break;
 	}
 
@@ -966,7 +966,7 @@ bool AccountDB::Connect(const char * host, const int port, const char * user, co
 
 	if (false == m_IsConnect)
 	{
-		fprintf(stderr, "cannot open direct sql connection to host: %s user: %s db: %s\n", host, user, db);
+		fprintf(stderr, "doğrudan sql bağlantısı açılamıyor host: %s kullanıcı: %s db: %s\n", host, user, db);
 		return false;
 	}
 

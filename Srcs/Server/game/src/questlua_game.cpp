@@ -111,7 +111,7 @@ namespace quest
 
 		if (!item)
 		{
-			sys_err("cannot create item vnum %d count %d", item_vnum, count);
+			sys_err("eşya vnum %d adet %d oluşturulamıyor", item_vnum, count);
 			return 0;
 		}
 

@@ -38,7 +38,7 @@ inline std::optional<rapidjson::Document> str_to_json(const char* str) {
 	ret.Parse(str);
 
 	if (ret.HasParseError()) {
-		sys_err("Json Document has parse errors : %d (str %s)", (int)ret.GetParseError(), str);
+		sys_err("Json Belgesinde ayrıştırma hataları var : %d (str %s)", (int)ret.GetParseError(), str);
 		return std::nullopt;
 	}
 

@@ -66,7 +66,7 @@ bool CInputProcessor::Process(LPDESC lpDesc, const void * c_pvOrig, int iBytes, 
 
 	if (!m_pPacketInfo)
 	{
-		sys_err("No packet info has been binded to");
+		sys_err("Hiçbir paket bilgisi bağlanmamış");
 		return true;
 	}
 
@@ -79,7 +79,7 @@ bool CInputProcessor::Process(LPDESC lpDesc, const void * c_pvOrig, int iBytes, 
 			iPacketLen = 1;
 		else if (!m_pPacketInfo->Get(bHeader, &iPacketLen, &c_pszName))
 		{
-			sys_err("UNKNOWN HEADER: %d, LAST HEADER: %d(%d), REMAIN BYTES: %d, fd: %d",
+			sys_err("BİLİNMEYEN BAŞLIK: %d, SON BAŞLIK: %d(%d), KALAN BAYT: %d, fd: %d",
 					bHeader, bLastHeader, iLastPacketLen, m_iBufferLeft, lpDesc->GetSocket());
 			//printdata((BYTE *) c_pvOrig, m_iBufferLeft);
 			lpDesc->SetPhase(PHASE_CLOSE);
@@ -181,7 +181,7 @@ void CInputProcessor::Handshake(LPDESC d, const char * c_pData)
 
 	if (d->GetHandshake() != p->dwHandshake)
 	{
-		sys_err("Invalid Handshake on %d", d->GetSocket());
+		sys_err("%d üzerinde Geçersiz Handshake", d->GetSocket());
 		d->SetPhase(PHASE_CLOSE);
 	}
 	else
@@ -265,7 +265,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 #ifdef ENABLE_PORT_SECURITY
 		if (IsEmptyAdminPage() || !IsAdminPage(inet_ntoa(d->GetAddr().sin_addr))) // block if adminpage is not set or if not admin
 		{
-			sys_log(0, "SOCKET_CMD: BLOCK FROM(%s)", d->GetHostName());
+			sys_log(0, "SOCKET_CMD: ENGELLE KAYNAK(%s)", d->GetHostName());
 			d->SetPhase(PHASE_CLOSE);
 			return 0;
 		}
@@ -302,7 +302,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 				if (!IsAdminPage(inet_ntoa(d->GetAddr().sin_addr)))
 				{
 					char szTmp[64];
-					snprintf(szTmp, sizeof(szTmp), "WEBADMIN : Wrong Connector : %s", inet_ntoa(d->GetAddr().sin_addr));
+					snprintf(szTmp, sizeof(szTmp), "WEBADMIN : Yanlış Bağlayıcı : %s", inet_ntoa(d->GetAddr().sin_addr));
 					stResult += szTmp;
 				}
 				else
@@ -325,7 +325,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 			{
 				if (!IsAdminPage(inet_ntoa(d->GetAddr().sin_addr)))
 				{
-					snprintf(szTmp, sizeof(szTmp), "WEBADMIN : Wrong Connector : %s", inet_ntoa(d->GetAddr().sin_addr));
+					snprintf(szTmp, sizeof(szTmp), "WEBADMIN : Yanlış Bağlayıcı : %s", inet_ntoa(d->GetAddr().sin_addr));
 				}
 				else
 				{
@@ -378,7 +378,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 
 				TPacketDeleteAwardID p;
 				p.dwID = (DWORD)(atoi(msg.c_str()));
-				snprintf(szTmp,sizeof(szTmp),"Sent to DB cache to delete ItemAward, id: %d",p.dwID);
+				snprintf(szTmp,sizeof(szTmp),"ItemAward silme DB cache'e gönderildi, id: %d",p.dwID);
 				//sys_log(0,"%d",p.dwID);
 				// strlcpy(p.login, msg.c_str(), sizeof(p.login));
 				db_clientdesc->DBPacket(HEADER_GD_DELETE_AWARDID, 0, &p, sizeof(p));
@@ -410,13 +410,13 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 					TPacketGGShutdown p;
 					p.bHeader = HEADER_GG_SHUTDOWN;
 					P2P_MANAGER::instance().Send(&p, sizeof(TPacketGGShutdown));
-					sys_err("Accept shutdown command from %s.", d->GetHostName());
+					sys_err("%s tarafından kapatma komutu kabul edildi.", d->GetHostName());
 					Shutdown(10);
 				}
 				else if (!stBuf.compare("SHUTDOWN_ONLY"))
 				{
 					LogManager::instance().CharLog(0, 0, 0, 2, "SHUTDOWN", "", d->GetHostName());
-					sys_err("Accept shutdown only command from %s.", d->GetHostName());
+					sys_err("%s tarafından sadece kapatma komutu kabul edildi.", d->GetHostName());
 					Shutdown(10);
 				}
 				else if (!stBuf.compare(0, 3, "DC "))
@@ -478,7 +478,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 
 							case 'a':
 								db_clientdesc->DBPacket(HEADER_GD_RELOAD_ADMIN, 0, NULL, 0);
-								sys_log(0, "Reloading admin infomation.");
+								sys_log(0, "Yönetici bilgisi yeniden yükleniyor.");
 								break;
 						}
 					}
@@ -492,7 +492,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 
 					if (!is.fail())
 					{
-						sys_log(0, "EXTERNAL EVENT FLAG name %s value %d", strFlagName.c_str(), lValue);
+						sys_log(0, "HARİCİ OLAY BAYRAĞI isim %s değer %d", strFlagName.c_str(), lValue);
 						quest::CQuestManager::instance().RequestSetEventFlag(strFlagName, lValue);
 						stResult = "EVENT FLAG CHANGE ";
 						stResult += strFlagName;
@@ -512,7 +512,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 
 					if (!is.fail())
 					{
-						sys_log(0, "EXTERNAL BLOCK_CHAT name %s duration %d", strCharName.c_str(), lDuration);
+						sys_log(0, "HARİCİ SOHBET_ENGELİ isim %s süre %d", strCharName.c_str(), lDuration);
 
 						do_block_chat(NULL, const_cast<char*>(stBuf.c_str() + 11), 0, 0);
 
@@ -566,7 +566,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 	{
 		if (!guild_mark_server)
 		{
-			sys_err("Guild Mark login requested but i'm not a mark server!");
+			sys_err("Lonca işareti girişi istendi ama ben mark sunucusu değilim!");
 			d->SetPhase(PHASE_CLOSE);
 			return 0;
 		}
@@ -599,7 +599,7 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 		TPacketKeyAgreement* p = (TPacketKeyAgreement*)c_pData;
 		if (!d->IsCipherPrepared())
 		{
-			sys_err ("Cipher isn't prepared. %s maybe a Hacker.", inet_ntoa(d->GetAddr().sin_addr));
+			sys_err ("Şifre hazırlanmamış. %s hileci olabilir.", inet_ntoa(d->GetAddr().sin_addr));
 			d->DelayedDisconnect(5);
 			return 0;
 		}
@@ -611,14 +611,14 @@ int CInputHandshake::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 				d->SetPhase(PHASE_LOGIN);
 			}
 		} else {
-			sys_log(0, "[CInputHandshake] Key agreement failed: al=%u dl=%u",
+			sys_log(0, "[CInputHandshake] Anahtar anlaşması başarısız: al=%u dl=%u",
 				p->wAgreedLength, p->wDataLength);
 			d->SetPhase(PHASE_CLOSE);
 		}
 	}
 #endif // _IMPROVED_PACKET_ENCRYPTION_
 	else
-		sys_err("Handshake phase does not handle packet %d (fd %d) from %s:%u", bHeader, d->GetSocket(), d->GetHostName(), d->GetPort()); //@warme016 host and port
+		sys_err("Handshake aşaması %d paketini (fd %d) %s:%u adresinden işlemiyor", bHeader, d->GetSocket(), d->GetHostName(), d->GetPort()); //@warme016 host and port
 
 	return 0;
 }

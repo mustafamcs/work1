@@ -40,7 +40,7 @@ void CClientManager::GuildAddMember(CPeer* peer, TPacketGDGuildAddMember * p)
 	auto pmsg(CDBManager::instance().DirectQuery(szQuery));
 	if (pmsg->Get()->uiNumRows == 0)
 	{
-		sys_err("Query failed when getting guild member data %s", pmsg->stQuery.c_str());
+		sys_err("Lonca üye verisi alınırken sorgu başarısız %s", pmsg->stQuery.c_str());
 		return;
 	}
 
@@ -141,12 +141,12 @@ void CClientManager::GuildWar(CPeer* peer, TPacketGuildWar* p)
 	switch (p->bWar)
 	{
 		case GUILD_WAR_SEND_DECLARE:
-			sys_log(0, "GuildWar: GUILD_WAR_SEND_DECLARE type(%s) guild(%d - %d)",  __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+			sys_log(0, "GuildWar: GUILD_WAR_SEND_DECLARE tip(%s) lonca(%d - %d)",  __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().AddDeclare(p->bType, p->dwGuildFrom, p->dwGuildTo);
 			break;
 
 		case GUILD_WAR_REFUSE:
-			sys_log(0, "GuildWar: GUILD_WAR_REFUSE type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+			sys_log(0, "GuildWar: GUILD_WAR_REFUSE tip(%s) lonca(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RemoveDeclare(p->dwGuildFrom, p->dwGuildTo);
 			break;
 			/*
@@ -160,10 +160,10 @@ void CClientManager::GuildWar(CPeer* peer, TPacketGuildWar* p)
 			   */
 
 		case GUILD_WAR_WAIT_START:
-			sys_log(0, "GuildWar: GUILD_WAR_WAIT_START type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+			sys_log(0, "GuildWar: GUILD_WAR_WAIT_START tip(%s) lonca(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 		case GUILD_WAR_RESERVE:
 			if (p->bWar != GUILD_WAR_WAIT_START)
-				sys_log(0, "GuildWar: GUILD_WAR_RESERVE type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+				sys_log(0, "GuildWar: GUILD_WAR_RESERVE tip(%s) lonca(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RemoveDeclare(p->dwGuildFrom, p->dwGuildTo);
 
 			if (!CGuildManager::instance().ReserveWar(p))
@@ -174,23 +174,23 @@ void CClientManager::GuildWar(CPeer* peer, TPacketGuildWar* p)
 			break;
 
 		case GUILD_WAR_ON_WAR:
-			sys_log(0, "GuildWar: GUILD_WAR_ON_WAR type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+			sys_log(0, "GuildWar: GUILD_WAR_ON_WAR tip(%s) lonca(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RemoveDeclare(p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().StartWar(p->bType, p->dwGuildFrom, p->dwGuildTo);
 			break;
 
 		case GUILD_WAR_OVER:
-			sys_log(0, "GuildWar: GUILD_WAR_OVER type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+			sys_log(0, "GuildWar: GUILD_WAR_OVER tip(%s) lonca(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RecvWarOver(p->dwGuildFrom, p->dwGuildTo, p->bType, p->lWarPrice);
 			break;
 
 		case GUILD_WAR_END:
-			sys_log(0, "GuildWar: GUILD_WAR_END type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+			sys_log(0, "GuildWar: GUILD_WAR_END tip(%s) lonca(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().RecvWarEnd(p->dwGuildFrom, p->dwGuildTo);
 			return;
 
 		case GUILD_WAR_CANCEL :
-			sys_log(0, "GuildWar: GUILD_WAR_CANCEL type(%s) guild(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
+			sys_log(0, "GuildWar: GUILD_WAR_CANCEL tip(%s) lonca(%d - %d)", __GetWarType(p->bType), p->dwGuildFrom, p->dwGuildTo);
 			CGuildManager::instance().CancelWar(p->dwGuildFrom, p->dwGuildTo);
 			break;
 	}
@@ -205,20 +205,20 @@ void CClientManager::GuildWarScore(CPeer* peer, TPacketGuildWarScore * p)
 
 void CClientManager::GuildChangeLadderPoint(TPacketGuildLadderPoint* p)
 {
-	sys_log(0, "GuildChangeLadderPoint Recv %u %d", p->dwGuild, p->lChange);
+	sys_log(0, "GuildChangeLadderPoint Alındı %u %d", p->dwGuild, p->lChange);
 	CGuildManager::instance().ChangeLadderPoint(p->dwGuild, p->lChange);
 }
 
 void CClientManager::GuildUseSkill(TPacketGuildUseSkill* p)
 {
-	sys_log(0, "GuildUseSkill Recv %u %d", p->dwGuild, p->dwSkillVnum);
+	sys_log(0, "GuildUseSkill Alındı %u %d", p->dwGuild, p->dwSkillVnum);
 	CGuildManager::instance().UseSkill(p->dwGuild, p->dwSkillVnum, p->dwCooltime);
 	SendGuildSkillUsable(p->dwGuild, p->dwSkillVnum, false);
 }
 
 void CClientManager::SendGuildSkillUsable(DWORD guild_id, DWORD dwSkillVnum, bool bUsable)
 {
-	sys_log(0, "SendGuildSkillUsable Send %u %d %s", guild_id, dwSkillVnum, bUsable?"true":"false");
+	sys_log(0, "SendGuildSkillUsable Gönder %u %d %s", guild_id, dwSkillVnum, bUsable?"true":"false");
 
 	TPacketGuildSkillUsableChange p;
 

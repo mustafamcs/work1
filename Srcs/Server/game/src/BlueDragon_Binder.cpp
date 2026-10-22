@@ -31,7 +31,7 @@ unsigned int BlueDragon_GetSkillFactor(const size_t cnt, ...)
 		{
 			va_end(vl);
 			lua_settop( L, stack_top );
-			sys_err("BlueDragon: wrong key list");
+			sys_err("BlueDragon: hatalı anahtar listesi");
 			return 0;
 		}
 
@@ -42,7 +42,7 @@ unsigned int BlueDragon_GetSkillFactor(const size_t cnt, ...)
 		{
 			va_end(vl);
 			lua_settop( L, stack_top );
-			sys_err("BlueDragon: wrong key table %s", key);
+			sys_err("BlueDragon: hatalı anahtar tablosu %s", key);
 			return 0;
 		}
 	}
@@ -52,7 +52,7 @@ unsigned int BlueDragon_GetSkillFactor(const size_t cnt, ...)
 	if (false == lua_isnumber(L, -1))
 	{
 		lua_settop( L, stack_top );
-		sys_err("BlueDragon: Last key is not a number");
+		sys_err("BlueDragon: Son anahtar sayı değil");
 		return 0;
 	}
 
@@ -85,7 +85,7 @@ unsigned int BlueDragon_GetRangeFactor(const char* key, const int val)
 	{
 		lua_settop( L, stack_top );
 
-		sys_err("BlueDragon: no required table %s", key);
+		sys_err("BlueDragon: gerekli tablo yok %s", key);
 		return 0;
 	}
 
@@ -99,7 +99,7 @@ unsigned int BlueDragon_GetRangeFactor(const char* key, const int val)
 		{
 			lua_settop( L, stack_top );
 
-			sys_err("BlueDragon: wrong table index %s %d", key, i);
+			sys_err("BlueDragon: hatalı tablo indeksi %s %d", key, i);
 			return 0;
 		}
 
@@ -110,7 +110,7 @@ unsigned int BlueDragon_GetRangeFactor(const char* key, const int val)
 		{
 			lua_settop( L, stack_top );
 
-			sys_err("BlueDragon: no min value set %s", key);
+			sys_err("BlueDragon: min değer ayarlanmamış %s", key);
 			return 0;
 		}
 
@@ -125,7 +125,7 @@ unsigned int BlueDragon_GetRangeFactor(const char* key, const int val)
 		{
 			lua_settop( L, stack_top );
 
-			sys_err("BlueDragon: no max value set %s", key);
+			sys_err("BlueDragon: maks değer ayarlanmamış %s", key);
 			return 0;
 		}
 
@@ -142,7 +142,7 @@ unsigned int BlueDragon_GetRangeFactor(const char* key, const int val)
 			{
 				lua_settop( L, stack_top );
 
-				sys_err("BlueDragon: no pct value set %s", key);
+				sys_err("BlueDragon: pct değeri ayarlanmamış %s", key);
 				return 0;
 			}
 
@@ -183,7 +183,7 @@ unsigned int BlueDragon_GetIndexFactor(const char* container, const size_t idx, 
 	{
 		lua_settop( L, stack_top );
 
-		sys_err("BlueDragon: no required table %s", key);
+		sys_err("BlueDragon: gerekli tablo yok %s", key);
 		return 0;
 	}
 
@@ -193,7 +193,7 @@ unsigned int BlueDragon_GetIndexFactor(const char* container, const size_t idx, 
 	{
 		lua_settop( L, stack_top );
 
-		sys_err("BlueDragon: wrong table index %s %d", key, idx);
+		sys_err("BlueDragon: hatalı tablo indeksi %s %d", key, idx);
 		return 0;
 	}
 
@@ -204,7 +204,7 @@ unsigned int BlueDragon_GetIndexFactor(const char* container, const size_t idx, 
 	{
 		lua_settop( L, stack_top );
 
-		sys_err("BlueDragon: no min value set %s", key);
+		sys_err("BlueDragon: min değer ayarlanmamış %s", key);
 		return 0;
 	}
 

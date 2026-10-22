@@ -307,7 +307,7 @@ bool MatchFilter(const ikashop::TShopItem& info, const ikashop::TFilterInfo& fil
 	auto table = ITEM_MANAGER::instance().GetTable(info.vnum);
 	if (!table)
 	{
-		sys_err("CANNOT FIND ITEM TABLE [%d]", info.vnum);
+		sys_err("EŞYA TABLOSU BULUNAMADI [%d]", info.vnum);
 		return false;
 	}
 
@@ -792,7 +792,7 @@ namespace ikashop
 			auto itemInstance = shopItem->CreateItem();
 			if (!itemInstance)
 			{
-				sys_err("cannot create item ( itemid %u , vnum %u, shop owner %u, buyer %u )", itemid, shopItem->GetInfo().vnum, ownerid, buyerid );
+				sys_err("eşya oluşturulamıyor ( eşyaid %u , vnum %u, dükkan sahibi %u, alıcı %u )", itemid, shopItem->GetInfo().vnum, ownerid, buyerid );
 				return false;
 			}
 

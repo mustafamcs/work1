@@ -74,7 +74,7 @@ bool CTextFileLoader::LoadGroup(TGroupNode * pGroupNode)
 		{
 			if (2 != stTokenVector.size())
 			{
-				sys_err("Invalid group syntax token size: %u != 2 (DO NOT SPACE IN NAME)", stTokenVector.size());
+				sys_err("Geçersiz grup sözdizimi token sayısı: %u != 2 (İSİMDE BOŞLUK OLMAZ)", stTokenVector.size());
 				for (unsigned int i = 0; i < stTokenVector.size(); ++i)
 					sys_err("  %u %s", i, stTokenVector[i].c_str());
 				exit(1);
@@ -132,7 +132,7 @@ bool CTextFileLoader::LoadGroup(TGroupNode * pGroupNode)
 
 			if (1 == stTokenVector.size())
 			{
-				sys_err("CTextFileLoader::LoadGroup : must have a value (filename: %s line: %d key: %s)",
+				sys_err("CTextFileLoader::LoadGroup : bir değer olmalı (dosya: %s satır: %d anahtar: %s)",
 						m_strFileName.c_str(),
 						m_dwcurLineIndex,
 						key.c_str());

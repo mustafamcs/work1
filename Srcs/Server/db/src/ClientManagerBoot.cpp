@@ -19,7 +19,7 @@ bool CClientManager::InitializeTables()
 	if (!InitializeMobTable())
 #endif
 	{
-		sys_err("InitializeMobTable FAILED");
+		sys_err("InitializeMobTable BAŞARISIZ");
 		return false;
 	}
 #ifdef ENABLE_PROTO_FROM_DB
@@ -28,7 +28,7 @@ bool CClientManager::InitializeTables()
 	if (!InitializeItemTable())
 #endif
 	{
-		sys_err("InitializeItemTable FAILED");
+		sys_err("InitializeItemTable BAŞARISIZ");
 		return false;
 	}
 
@@ -38,12 +38,12 @@ bool CClientManager::InitializeTables()
 	{
 		if (!MirrorMobTableIntoDB())
 		{
-			sys_err("MirrorMobTableIntoDB FAILED");
+			sys_err("MirrorMobTableIntoDB BAŞARISIZ");
 			return false;
 		}
 		if (!MirrorItemTableIntoDB())
 		{
-			sys_err("MirrorItemTableIntoDB FAILED");
+			sys_err("MirrorItemTableIntoDB BAŞARISIZ");
 			return false;
 		}
 	}
@@ -51,67 +51,67 @@ bool CClientManager::InitializeTables()
 
 	if (!InitializeShopTable())
 	{
-		sys_err("InitializeShopTable FAILED");
+		sys_err("InitializeShopTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeSkillTable())
 	{
-		sys_err("InitializeSkillTable FAILED");
+		sys_err("InitializeSkillTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeRefineTable())
 	{
-		sys_err("InitializeRefineTable FAILED");
+		sys_err("InitializeRefineTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeItemAttrTable())
 	{
-		sys_err("InitializeItemAttrTable FAILED");
+		sys_err("InitializeItemAttrTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeItemRareTable())
 	{
-		sys_err("InitializeItemRareTable FAILED");
+		sys_err("InitializeItemRareTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeBanwordTable())
 	{
-		sys_err("InitializeBanwordTable FAILED");
+		sys_err("InitializeBanwordTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeLandTable())
 	{
-		sys_err("InitializeLandTable FAILED");
+		sys_err("InitializeLandTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeObjectProto())
 	{
-		sys_err("InitializeObjectProto FAILED");
+		sys_err("InitializeObjectProto BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeObjectTable())
 	{
-		sys_err("InitializeObjectTable FAILED");
+		sys_err("InitializeObjectTable BAŞARISIZ");
 		return false;
 	}
 
 	if (!InitializeMonarch())
 	{
-		sys_err("InitializeMonarch FAILED");
+		sys_err("InitializeMonarch BAŞARISIZ");
 		return false;
 	}
 #ifdef ENABLE_IKASHOP_RENEWAL
 	if (!InitializeIkarusShopTable())
 	{
-		sys_err("InitializeIkarusShopTable FAILED");
+		sys_err("InitializeIkarusShopTable BAŞARISIZ");
 		return false;
 	}
 #endif
@@ -200,7 +200,7 @@ bool CClientManager::InitializeMobTable()
 	cCsvTable nameData;
 	if(!nameData.Load("mob_names.txt",'\t'))
 	{
-		fprintf(stderr, "Could not load mob_names.txt\n");
+		fprintf(stderr, "mob_names.txt yüklenemedi\n");
 	} else {
 		nameData.Next();
 		while(nameData.Next()) {
@@ -214,7 +214,7 @@ bool CClientManager::InitializeMobTable()
 
 	if(!data.Load("mob_proto.txt",'\t'))
 	{
-		fprintf(stderr, "Could not load mob_proto.txt. Wrong file format?\n");
+		fprintf(stderr, "mob_proto.txt yüklenemedi. Hatalı dosya formatı?\n");
 		return false;
 	}
 	data.Next();
@@ -232,7 +232,7 @@ bool CClientManager::InitializeMobTable()
 	{
 		if (!Set_Proto_Mob_Table(mob_table, data, localMap))
 		{
-			fprintf(stderr, "Could not process entry.\n");
+			fprintf(stderr, "Girdi işlenemedi.\n");
 		}
 
 		sys_log(1, "MOB #%-5d %-24s %-24s level: %-3u rank: %u empire: %d", mob_table->dwVnum, mob_table->szName, mob_table->szLocaleName, mob_table->bLevel, mob_table->bRank, mob_table->bEmpire);
@@ -265,7 +265,7 @@ bool CClientManager::InitializeShopTable()
 
 	if (!pRes2->uiNumRows)
 	{
-		sys_err("InitializeShopTable : Table count is zero.");
+		sys_err("InitializeShopTable : Tablo sayısı sıfır.");
 		return false;
 	}
 
@@ -340,7 +340,7 @@ bool CClientManager::InitializeQuestItemTable()
 
 	if (!pRes->uiNumRows)
 	{
-		sys_err("query error or no rows: %s", query);
+		sys_err("sorgu hatası veya satır yok: %s", query);
 		return false;
 	}
 
@@ -367,7 +367,7 @@ bool CClientManager::InitializeQuestItemTable()
 
 		if (m_map_itemTableByVnum.find(tbl.dwVnum) != m_map_itemTableByVnum.end())
 		{
-			sys_err("QUEST_ITEM_ERROR! %lu vnum already exist! (name %s)", tbl.dwVnum, tbl.szLocaleName);
+			sys_err("QUEST_ITEM_ERROR! %lu vnum zaten var! (isim %s)", tbl.dwVnum, tbl.szLocaleName);
 			continue;
 		}
 
@@ -390,7 +390,7 @@ bool CClientManager::InitializeItemTable()
 	cCsvTable nameData;
 	if(!nameData.Load("item_names.txt",'\t'))
 	{
-		fprintf(stderr, "Could not load item_names.txt.\n");
+		fprintf(stderr, "item_names.txt yüklenemedi.\n");
 	} else {
 		nameData.Next();
 		while(nameData.Next()) {
@@ -403,7 +403,7 @@ bool CClientManager::InitializeItemTable()
 	cCsvTable data;
 	if(!data.Load("item_proto.txt",'\t'))
 	{
-		fprintf(stderr, "Could not load item_proto.txt. Wrong file format?\n");
+		fprintf(stderr, "item_proto.txt yüklenemedi. Hatalı dosya formatı?\n");
 		return false;
 	}
 	data.Next();
@@ -418,7 +418,7 @@ bool CClientManager::InitializeItemTable()
 	data.Destroy();
 	if(!data.Load("item_proto.txt",'\t'))
 	{
-		fprintf(stderr, "Could not load item_proto.txt. Wrong file format?\n");
+		fprintf(stderr, "item_proto.txt yüklenemedi. Hatalı dosya formatı?\n");
 		return false;
 	}
 	data.Next();
@@ -443,7 +443,7 @@ bool CClientManager::InitializeItemTable()
 	{
 		if (!Set_Proto_Item_Table(item_table, data, localMap, minProfileCol))
 		{
-			fprintf(stderr, "Failed to load item_proto table.\n");
+			fprintf(stderr, "item_proto tablosu yüklenemedi.\n");
 		}
 
 		m_map_itemTableByVnum.emplace(item_table->dwVnum, item_table);
@@ -490,7 +490,7 @@ bool CClientManager::InitializeItemTable()
 		if (0 != ProfileComputeLock(it->bType, it->bSubType, it->wMinProfile, NULL))
 			++dwLocked;
 	}
-	sys_log(0, "ITEM_PROTO: %u items, %u potentially locked (profile %d)", m_vec_itemTable.size(), dwLocked, ProfileId());
+	sys_log(0, "ITEM_PROTO: %u eşya, %u potansiyel kilitli (profil %d)", m_vec_itemTable.size(), dwLocked, ProfileId());
 	return true;
 }
 
@@ -512,7 +512,7 @@ bool CClientManager::InitializeSkillTable()
 
 	if (!pRes->uiNumRows)
 	{
-		sys_err("no result from skill_proto");
+		sys_err("skill_proto'dan sonuç yok");
 		return false;
 	}
 
@@ -637,7 +637,7 @@ bool CClientManager::InitializeItemAttrTable()
 
 	if (!pRes->uiNumRows)
 	{
-		sys_err("no result from item_attr");
+		sys_err("item_attr'den sonuç yok");
 		return false;
 	}
 
@@ -762,7 +762,7 @@ bool CClientManager::InitializeItemRareTable()
 
 	if (!pRes->uiNumRows)
 	{
-		sys_err("no result from item_attr_rare");
+		sys_err("item_attr_rare'den sonuç yok");
 		return false;
 	}
 
@@ -1308,7 +1308,7 @@ enum MProtoT
 
 bool CClientManager::InitializeMobTableFromDB()
 {	char query[2048];
-	fprintf(stdout, "Loading mob_proto from MySQL\n");
+	fprintf(stdout, "mob_proto MySQL'den yükleniyor\n");
 	snprintf(query, sizeof(query),
 		"SELECT vnum, name, %s, type, `rank`, battle_type, level, size+0,"
 		" ai_flag+0, setRaceFlag+0, setImmuneFlag+0, on_click, empire, drop_item,"
@@ -1462,7 +1462,7 @@ bool CClientManager::InitializeMobTableFromDB()
 	}
 	sort(m_vec_mobTable.begin(), m_vec_mobTable.end(), FCompareVnum());
 
-	fprintf(stdout, "Complete! %u Mobs loaded.\n", addNumber);
+	fprintf(stdout, "Tamamlandı! %u mob yüklendi.\n", addNumber);
 	return true;
 }
 
@@ -1485,7 +1485,7 @@ enum IProtoT
 bool CClientManager::InitializeItemTableFromDB()
 {
 	char query[2048];
-	fprintf(stdout, "Loading item_proto from MySQL\n");
+	fprintf(stdout, "item_proto MySQL'den yükleniyor\n");
 	snprintf(query, sizeof(query),
 		"SELECT vnum, type, subtype, name, %s, gold, shop_buy_price, weight, size,"
 		" flag, wearflag, antiflag, immuneflag+0, refined_vnum, refine_set, magic_pct,"
@@ -1599,7 +1599,7 @@ bool CClientManager::InitializeItemTableFromDB()
 	#endif
 	if (dwPrice > item_table->dwGold)
 	{
-		sys_err("ITEM: #%-5lu %-24s SELL_OVERFLOW dwGold: %u < dwShopBuyPrice %u",
+		sys_err("EŞYA: #%-5lu %-24s SELL_OVERFLOW dwGold: %u < dwShopBuyPrice %u",
 			item_table->dwVnum,
 			item_table->szLocaleName,
 			item_table->dwGold,
@@ -1631,7 +1631,7 @@ bool CClientManager::InitializeItemTableFromDB()
 	}
 	sort(m_vec_itemTable.begin(), m_vec_itemTable.end(), FCompareVnum());
 
-	fprintf(stdout, "Complete! %u Items loaded.\n", addNumber);
+	fprintf(stdout, "Tamamlandı! %u eşya yüklendi.\n", addNumber);
 	return true;
 }
 #endif

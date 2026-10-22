@@ -59,7 +59,7 @@ namespace quest
 					if (!strncasecmp(pde->d_name, "CVS", 3))
 						continue;
 
-					sys_log(1, "QUEST reading %s", pde->d_name);
+					sys_log(1, "GÖREV okunuyor %s", pde->d_name);
 					strlcpy(buf + is, pde->d_name, sizeof(buf) - is);
 					LoadStateScript(event_index, buf, pde->d_name);
 				}
@@ -93,7 +93,7 @@ namespace quest
 
 		if (quest_index == 0)
 		{
-			fprintf(stderr, "cannot find quest index for %s\n", stQuestName.c_str());
+			fprintf(stderr, "%s için görev indeksi bulunamıyor\n", stQuestName.c_str());
 			assert(!"cannot find quest index");
 			return;
 		}
@@ -113,7 +113,7 @@ namespace quest
 		int state_index = q.GetQuestStateIndex(stQuestName, stStateName);
 		///////////////////////////////////////////////////////////////////////////
 
-		sys_log(0, "QUEST loading %s : %s [STATE] %s",
+		sys_log(0, "GÖREV yükleniyor %s : %s [DURUM] %s",
 				filename, stQuestName.c_str(), stStateName.c_str());
 
 		if (i == s.npos)
@@ -134,7 +134,7 @@ namespace quest
 
 			if (i == s.npos)
 			{
-				sys_err("invalid QUEST STATE index [%s] [%s]",filename, script_name);
+				sys_err("geçersiz GÖREV DURUMU indeksi [%s] [%s]",filename, script_name);
 				return;
 			}
 
@@ -146,7 +146,7 @@ namespace quest
 
 			if (i != s.npos)
 			{
-				sys_err("invalid QUEST STATE name [%s] [%s]",filename, script_name);
+				sys_err("geçersiz GÖREV DURUMU ismi [%s] [%s]",filename, script_name);
 				return;
 			}
 
@@ -198,7 +198,7 @@ namespace quest
 
 	bool NPC::OnTarget(PC & pc, DWORD dwQuestIndex, const char * c_pszTargetName, const char * c_pszVerb, bool & bRet)
 	{
-		sys_log(1, "OnTarget begin %s verb %s qi %u", c_pszTargetName, c_pszVerb, dwQuestIndex);
+		sys_log(1, "OnTarget başlangıç %s fiil %s qi %u", c_pszTargetName, c_pszVerb, dwQuestIndex);
 
 		bRet = false;
 
@@ -217,7 +217,7 @@ namespace quest
 
 		if (it == r.end())
 		{
-			sys_log(1, "no target event, state %d", iState);
+			sys_log(1, "hedef olayı yok, durum %d", iState);
 			return false;
 		}
 
@@ -230,7 +230,7 @@ namespace quest
 			AArgScript & argScript = *(it_vec++);
 			const char * c_pszArg = argScript.arg.c_str();
 
-			sys_log(1, "OnTarget compare %s %d", c_pszArg, argScript.arg.length());
+			sys_log(1, "OnTarget karşılaştır %s %d", c_pszArg, argScript.arg.length());
 
 			if (strncmp(c_pszArg, c_pszTargetName, iTargetLen))
 				continue;
@@ -244,12 +244,12 @@ namespace quest
 				continue;
 
 			if (argScript.when_condition.size() > 0)
-				sys_log(1, "OnTarget when %s size %d", &argScript.when_condition[0], argScript.when_condition.size());
+				sys_log(1, "OnTarget ne zaman %s boyut %d", &argScript.when_condition[0], argScript.when_condition.size());
 
 			if (argScript.when_condition.size() != 0 && !IsScriptTrue(&argScript.when_condition[0], argScript.when_condition.size()))
 				continue;
 
-			sys_log(1, "OnTarget execute qi %u st %d code %s", dwQuestIndex, iState, (const char *) argScript.script.GetCode());
+			sys_log(1, "OnTarget çalıştır qi %u st %d kod %s", dwQuestIndex, iState, (const char *) argScript.script.GetCode());
 			bRet = CQuestManager::ExecuteQuestScript(pc, dwQuestIndex, iState, argScript.script.GetCode(), argScript.script.GetSize());
 			bRet = true;
 			return true;
@@ -395,10 +395,10 @@ namespace quest
 		   ++qmit;
 		   }
 
-		   sys_err("Cannot find any code for %s", c_pszQuestName);
+		   sys_err("%s için kod bulunamıyor", c_pszQuestName);
 		   }
 		   else
-		   sys_err("Cannot find quest index by %s", c_pszQuestName);
+		   sys_err("%s ile görev indeksi bulunamıyor", c_pszQuestName);
 		   }
 		 */
 		bool bRet = HandleReceiveAllNoWaitEvent(pc, QUEST_LOGIN_EVENT);
@@ -486,7 +486,7 @@ namespace quest
 	{
 		if (EventIndex < 0 || EventIndex >= QUEST_EVENT_COUNT)
 		{
-			sys_err("QUEST invalid EventIndex : %d", EventIndex);
+			sys_err("GÖREV geçersiz EventIndex : %d", EventIndex);
 			return false;
 		}
 
@@ -496,7 +496,7 @@ namespace quest
 			{
 				CQuestManager & mgr = CQuestManager::instance();
 
-				sys_err("QUEST There's suspended quest state, can't run new quest state (quest: %s pc: %s)",
+				sys_err("GÖREV Askıda görev durumu var, yeni görev durumu çalıştırılamaz (görev: %s pc: %s)",
 						pc.GetCurrentQuestName().c_str(),
 						mgr.GetCurrentCharacterPtr() ? mgr.GetCurrentCharacterPtr()->GetName() : "<none>");
 			}
@@ -605,7 +605,7 @@ namespace quest
 	{
 		if (EventIndex < 0 || EventIndex >= QUEST_EVENT_COUNT)
 		{
-			sys_err("QUEST invalid EventIndex : %d", EventIndex);
+			sys_err("GÖREV geçersiz EventIndex : %d", EventIndex);
 			return false;
 		}
 
@@ -615,7 +615,7 @@ namespace quest
 			{
 				CQuestManager & mgr = CQuestManager::instance();
 
-				sys_err("QUEST There's suspended quest state, can't run new quest state (quest: %s pc: %s)",
+				sys_err("GÖREV Askıda görev durumu var, yeni görev durumu çalıştırılamaz (görev: %s pc: %s)",
 						pc.GetCurrentQuestName().c_str(),
 						mgr.GetCurrentCharacterPtr() ? mgr.GetCurrentCharacterPtr()->GetName() : "<none>");
 			}
@@ -665,7 +665,7 @@ namespace quest
 								it->second.GetCode(),
 								it->second.GetSize()))
 					{
-						sys_err("QUEST NOT END RUNNING on Login/Logout - %s",
+						sys_err("GÖREV Login/Logout'ta ÇALIŞMA BİTMEDİ - %s",
 								CQuestManager::instance().GetQuestNameByIndex(itQuestMap->first).c_str());
 
 						QuestState& rqs = *pPC->GetRunningQuestState();
@@ -703,7 +703,7 @@ namespace quest
 							itQuestScript->second.GetCode(),
 							itQuestScript->second.GetSize()))
 				{
-					sys_err("QUEST NOT END RUNNING on Login/Logout - %s",
+					sys_err("GÖREV Login/Logout'ta ÇALIŞMA BİTMEDİ - %s",
 							CQuestManager::instance().GetQuestNameByIndex(itQuestMap->first).c_str());
 
 					QuestState& rqs = *pPC->GetRunningQuestState();
@@ -720,7 +720,7 @@ namespace quest
 		//cerr << EventIndex << endl;
 		if (EventIndex<0 || EventIndex>=QUEST_EVENT_COUNT)
 		{
-			sys_err("QUEST invalid EventIndex : %d", EventIndex);
+			sys_err("GÖREV geçersiz EventIndex : %d", EventIndex);
 			return false;
 		}
 
@@ -731,7 +731,7 @@ namespace quest
 			{
 				CQuestManager & mgr = CQuestManager::instance();
 
-				sys_err("QUEST There's suspended quest state, can't run new quest state (quest: %s pc: %s)",
+				sys_err("GÖREV Askıda görev durumu var, yeni görev durumu çalıştırılamaz (görev: %s pc: %s)",
 						pc.GetCurrentQuestName().c_str(),
 						mgr.GetCurrentCharacterPtr() ? mgr.GetCurrentCharacterPtr()->GetName() : "<none>");
 			}
@@ -760,7 +760,7 @@ namespace quest
 			{
 				CQuestManager & mgr = CQuestManager::instance();
 
-				sys_err("QUEST There's suspended quest state, can't run new quest state (quest: %s pc: %s)",
+				sys_err("GÖREV Askıda görev durumu var, yeni görev durumu çalıştırılamaz (görev: %s pc: %s)",
 						pc.GetCurrentQuestName().c_str(),
 						mgr.GetCurrentCharacterPtr() ? mgr.GetCurrentCharacterPtr()->GetName() : "<none>");
 			}
@@ -783,7 +783,7 @@ namespace quest
 
 		if (itQuestMap == rmapEventOwnQuest.end())
 		{
-			sys_err("QUEST no info event (quest %s)", questName);
+			sys_err("GÖREV info olayı yok (görev %s)", questName);
 			return false;
 		}
 
@@ -791,7 +791,7 @@ namespace quest
 
 		if (itQuestScript == itQuestMap->second.end())
 		{
-			sys_err("QUEST no info script by state %d (quest %s)", itPCQuest->second.st, questName);
+			sys_err("GÖREV %d durumu için info scripti yok (görev %s)", itPCQuest->second.st, questName);
 			return false;
 		}
 
@@ -809,7 +809,7 @@ namespace quest
 			{
 				CQuestManager & mgr = CQuestManager::instance();
 
-				sys_err("QUEST There's suspended quest state, can't run new quest state (quest: %s pc: %s)",
+				sys_err("GÖREV Askıda görev durumu var, yeni görev durumu çalıştırılamaz (görev: %s pc: %s)",
 						pc.GetCurrentQuestName().c_str(),
 						mgr.GetCurrentCharacterPtr() ? mgr.GetCurrentCharacterPtr()->GetName() : "<none>");
 			}
@@ -904,7 +904,7 @@ namespace quest
 			{
 				CQuestManager & mgr = CQuestManager::instance();
 
-				sys_err("QUEST There's suspended quest state, can't run new quest state (quest: %s pc: %s)",
+				sys_err("GÖREV Askıda görev durumu var, yeni görev durumu çalıştırılamaz (görev: %s pc: %s)",
 						pc.GetCurrentQuestName().c_str(),
 						mgr.GetCurrentCharacterPtr() ? mgr.GetCurrentCharacterPtr()->GetName() : "<none>");
 			}

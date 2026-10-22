@@ -92,7 +92,7 @@ namespace marriage
 		DWORD now = CClientManager::instance().GetCurrentTime();
 		if (IsMarried(dwPID1) || IsMarried(dwPID2))
 		{
-			sys_err("cannot marry already married character. %d - %d", dwPID1, dwPID2);
+			sys_err("zaten evli karakterle evlenilemez. %d - %d", dwPID1, dwPID2);
 			return;
 		}
 
@@ -105,11 +105,11 @@ namespace marriage
 		SQLResult* res = pmsg->Get();
 		if (res->uiAffectedRows == 0 || res->uiAffectedRows == (uint32_t)-1)
 		{
-			sys_err("cannot insert marriage");
+			sys_err("evlilik eklenemiyor");
 			return;
 		}
 
-		sys_log(0, "MARRIAGE ADD %u %u", dwPID1, dwPID2);
+		sys_log(0, "EVLİLİK EKLE %u %u", dwPID1, dwPID2);
 
 		TMarriage* pMarriage = new TMarriage(dwPID1, dwPID2, 0, now, 0, szName1, szName2);
 		m_Marriages.emplace(pMarriage);
@@ -130,7 +130,7 @@ namespace marriage
 		TMarriage* pMarriage = Get(dwPID1);
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
-			sys_err("not under marriage : %u %u", dwPID1, dwPID2);
+			sys_err("evlilik altında değil : %u %u", dwPID1, dwPID2);
 			return;
 		}
 
@@ -144,11 +144,11 @@ namespace marriage
 		SQLResult* res = pmsg->Get();
 		if (res->uiAffectedRows == 0 || res->uiAffectedRows == (uint32_t)-1)
 		{
-			sys_log(0, "cannot update marriage : PID:%u %u", dwPID1, dwPID2); // @warme012
+			sys_log(0, "evlilik güncellenemiyor : PID:%u %u", dwPID1, dwPID2); // @warme012
 			return;
 		}
 
-		sys_log(0, "MARRIAGE UPDATE PID:%u %u LP:%u ST:%d", dwPID1, dwPID2, iLovePoint, byMarried);
+		sys_log(0, "EVLİLİK GÜNCELLE PID:%u %u SP:%u DR:%d", dwPID1, dwPID2, iLovePoint, byMarried);
 		pMarriage->love_point = iLovePoint;
 		pMarriage->is_married = byMarried;
 
@@ -166,7 +166,7 @@ namespace marriage
 
 		if (pMarriage)
 		{
-			sys_log(0, "Break Marriage pid1 %d pid2 %d Other %d", dwPID1, dwPID2, pMarriage->GetOther(dwPID1));
+			sys_log(0, "Evlilik Boz pid1 %d pid2 %d Diğer %d", dwPID1, dwPID2, pMarriage->GetOther(dwPID1));
 		}
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
@@ -174,9 +174,9 @@ namespace marriage
 
 			for (; it != m_MarriageByPID.end(); ++it)
 			{
-				sys_log(0, "Marriage List pid1 %d pid2 %d", it->second->pid1, it->second->pid2);
+				sys_log(0, "Evlilik Listesi pid1 %d pid2 %d", it->second->pid1, it->second->pid2);
 			}
-			sys_err("not under marriage : PID:%u %u", dwPID1, dwPID2);
+			sys_err("evlilik altında değil : PID:%u %u", dwPID1, dwPID2);
 			return;
 		}
 
@@ -189,11 +189,11 @@ namespace marriage
 		SQLResult* res = pmsg->Get();
 		if (res->uiAffectedRows == 0 || res->uiAffectedRows == (uint32_t)-1)
 		{
-			sys_err("cannot delete marriage : PID:%u %u", dwPID1, dwPID2);
+			sys_err("evlilik silinemiyor : PID:%u %u", dwPID1, dwPID2);
 			return;
 		}
 
-		sys_log(0, "MARRIAGE REMOVE PID:%u %u", dwPID1, dwPID2);
+		sys_log(0, "EVLİLİK KALDIR PID:%u %u", dwPID1, dwPID2);
 
 		m_Marriages.erase(pMarriage);
 		m_MarriageByPID.erase(dwPID1);
@@ -212,13 +212,13 @@ namespace marriage
 		TMarriage* pMarriage = Get(dwPID1);
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
-			sys_err("not under marriage : PID:%u %u", dwPID1, dwPID2);
+			sys_err("evlilik altında değil : PID:%u %u", dwPID1, dwPID2);
 			return;
 		}
 
 		if (pMarriage->is_married)
 		{
-			sys_err("already married, cannot change engage to marry : PID:%u %u", dwPID1, dwPID2);
+			sys_err("zaten evli, nişan evliliğe çevrilemez : PID:%u %u", dwPID1, dwPID2);
 			return;
 		}
 
@@ -232,11 +232,11 @@ namespace marriage
 		SQLResult* res = pmsg->Get();
 		if (res->uiAffectedRows == 0 || res->uiAffectedRows == (uint32_t)-1)
 		{
-			sys_err("cannot change engage to marriage : PID:%u %u", dwPID1, dwPID2);
+			sys_err("nişan evliliğe çevrilemiyor : PID:%u %u", dwPID1, dwPID2);
 			return;
 		}
 
-		sys_log(0, "MARRIAGE ENGAGE->MARRIAGE PID:%u %u", dwPID1, dwPID2);
+		sys_log(0, "EVLİLİK NİŞAN->EVLİLİK PID:%u %u", dwPID1, dwPID2);
 		pMarriage->is_married = 1;
 
 		TPacketMarriageUpdate p;
@@ -307,7 +307,7 @@ namespace marriage
 		itertype(m_mapRunningWedding) it = m_mapRunningWedding.find(make_pair(dwPID1, dwPID2));
 		if (it == m_mapRunningWedding.end())
 		{
-			sys_err("try to end wedding %u %u", dwPID1, dwPID2);
+			sys_err("düğünü bitirmeye çalışıyor %u %u", dwPID1, dwPID2);
 			return;
 		}
 

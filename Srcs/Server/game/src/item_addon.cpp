@@ -16,7 +16,7 @@ void CItemAddonManager::ApplyAddonTo(int iAddonType, LPITEM pItem)
 {
 	if (!pItem)
 	{
-		sys_err("ITEM pointer null");
+		sys_err("EŞYA pointer null");
 		return;
 	}
 

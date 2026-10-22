@@ -27,7 +27,7 @@ public:
 
 		if (level >= _countof(beltGradeByLevelTable))
 		{
-			sys_err("CBeltInventoryHelper::GetBeltGradeByRefineLevel - Overflow level (%u)", level);
+			sys_err("CBeltInventoryHelper::GetBeltGradeByRefineLevel - Seviye taşması (%u)", level);
 			return 0;
 		}
 

@@ -18,14 +18,14 @@ bool CMapLocation::Get(long iIndex, long &lAddr, WORD &wPort, BYTE channel)
 {
 	// sys_log(0, "CMapLocation::Get - OK MapIndex[%d] channel %d", iIndex, channel);
 	if (iIndex == 0) {
-		// sys_log(0, "CMapLocation::Get - Error MapIndex[%d] channel %d", iIndex, channel);
+		// sys_log(0, "CMapLocation::Get - Hata MapIndex[%d] kanal %d", iIndex, channel);
 		return false;
 	}
 
 	auto key = std::make_pair(channel, iIndex);
 	auto it = m_map_address.find(key);
 	if (m_map_address.end() == it) {
-		// sys_log(0, "CMapLocation::Get - Error MapIndex[%d]", iIndex);
+		// sys_log(0, "CMapLocation::Get - Hata MapIndex[%d]", iIndex);
 		// for (auto & i : m_map_address)
 		// 	sys_log(0, "Map(%d:%d): Server(%s:%d)", i.first.first, i.first.second, inet_ntoa((in_addr)i.second.addr), i.second.port);
 		return false;
@@ -57,13 +57,13 @@ bool CMapLocation::Get(long x, long y, long &lIndex, long &lAddr, WORD &wPort)
 bool CMapLocation::Get(long iIndex, long &lAddr, WORD &wPort)
 {
 	if (iIndex == 0) {
-		sys_log(0, "CMapLocation::Get - Error MapIndex[%d]", iIndex);
+		sys_log(0, "CMapLocation::Get - Hata MapIndex[%d]", iIndex);
 		return false;
 	}
 
 	auto it = m_map_address.find(iIndex);
 	if (m_map_address.end() == it) {
-		sys_log(0, "CMapLocation::Get - Error MapIndex[%d]", iIndex);
+		sys_log(0, "CMapLocation::Get - Hata MapIndex[%d]", iIndex);
 		for (auto & i : m_map_address)
 			sys_log(0, "Map(%d): Server(%x:%d)", i.first, i.second.addr, i.second.port);
 		return false;

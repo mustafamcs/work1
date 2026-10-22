@@ -211,7 +211,7 @@ inline bool ProfileLoad()
 
 	if (!root)
 	{
-		std::fprintf(stderr, "active_profile not found; closed profile 99\n");
+		std::fprintf(stderr, "active_profile bulunamadı; profil 99 kapatıldı\n");
 		ProfileApplyIdDefaults(99);
 		return false;
 	}
@@ -219,7 +219,7 @@ inline bool ProfileLoad()
 	int id = 0;
 	if (!ProfileReadFirstInt(activePath, &id) || (id != 99 && id != 105 && id != 120))
 	{
-		std::fprintf(stderr, "active_profile invalid; closed profile 99\n");
+		std::fprintf(stderr, "active_profile geçersiz; profil 99 kapatıldı\n");
 		ProfileApplyIdDefaults(99);
 		return false;
 	}
@@ -230,7 +230,7 @@ inline bool ProfileLoad()
 	std::snprintf(confPath, sizeof(confPath), "%sserver/profiles/%d/profile.conf", root, id);
 	if (!ProfileLoadConf(confPath))
 	{
-		std::fprintf(stderr, "profile.conf missing (%s); features stay core\n", confPath);
+		std::fprintf(stderr, "profile.conf eksik (%s); özellikler çekirdekte kalıyor\n", confPath);
 		return false;
 	}
 

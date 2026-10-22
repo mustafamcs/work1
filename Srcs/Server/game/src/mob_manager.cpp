@@ -96,12 +96,12 @@ bool CMobManager::Initialize(TMobTable * pTable, int iSize)
 
 	if (!LoadGroup(szGroupFileName))
 	{
-		sys_err("cannot load %s", szGroupFileName);
+		sys_err("%s yüklenemiyor", szGroupFileName);
 		thecore_shutdown();
 	}
 	if (!LoadGroupGroup(szGroupGroupFileName))
 	{
-		sys_err("cannot load %s", szGroupGroupFileName);
+		sys_err("%s yüklenemiyor", szGroupGroupFileName);
 		thecore_shutdown();
 	}
 	// END_OF_LOCALE_SERVICE
@@ -262,7 +262,7 @@ bool CMobManager::LoadGroupGroup(const char * c_pszFileName)
 
 		if (!loader.GetTokenInteger("vnum", &iVnum))
 		{
-			sys_err("LoadGroupGroup : Syntax error %s : no vnum, node %s", c_pszFileName, stName.c_str());
+			sys_err("LoadGroupGroup : Sözdizimi hatası %s : vnum yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			continue;
 		}
@@ -323,7 +323,7 @@ bool CMobManager::LoadGroup(const char * c_pszFileName)
 
 		if (!loader.GetTokenInteger("vnum", &iVnum))
 		{
-			sys_err("LoadGroup : Syntax error %s : no vnum, node %s", c_pszFileName, stName.c_str());
+			sys_err("LoadGroup : Sözdizimi hatası %s : vnum yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			continue;
 		}
@@ -332,14 +332,14 @@ bool CMobManager::LoadGroup(const char * c_pszFileName)
 
 		if (!loader.GetTokenVector("leader", &pTok))
 		{
-			sys_err("LoadGroup : Syntax error %s : no leader, node %s", c_pszFileName, stName.c_str());
+			sys_err("LoadGroup : Sözdizimi hatası %s : lider yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			continue;
 		}
 
 		if (pTok->size() < 2)
 		{
-			sys_err("LoadGroup : Syntax error %s : no leader vnum, node %s", c_pszFileName, stName.c_str());
+			sys_err("LoadGroup : Sözdizimi hatası %s : lider vnum yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			continue;
 		}

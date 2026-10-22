@@ -145,7 +145,7 @@ bool ANI::load()
 	{
 		if (false == load_one_race(race, dir_name[race]))
 		{
-			sys_err("ANI directory = %s", dir_name[race]);
+			sys_err("ANI dizini = %s", dir_name[race]);
 			return false;
 		}
 	}

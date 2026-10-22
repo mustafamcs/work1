@@ -282,7 +282,7 @@ void Cube_open (LPCHARACTER ch)
 	{
 		if ( test_server == true )
 		{
-			sys_log(1, "cube not valid NPC");
+			sys_log(1, "cube geçerli NPC değil");
 		}
 		return;
 	}
@@ -316,8 +316,8 @@ void Cube_close (LPCHARACTER ch)
 	RETURN_IF_CUBE_IS_NOT_OPENED(ch);
 	Cube_clean_item(ch);
 	ch->SetCubeNpc(NULL);
-	ch->ChatPacket(CHAT_TYPE_COMMAND, "cube close");
-	sys_log(1, "<CUBE> close (%s)", ch->GetName());
+	ch->ChatPacket(CHAT_TYPE_COMMAND, "cube kapat");
+	sys_log(1, "<CUBE> kapat (%s)", ch->GetName());
 }
 
 void Cube_init()
@@ -339,7 +339,7 @@ void Cube_init()
 	s_cube_proto.clear();
 
 	if (false == Cube_load(file_name))
-		sys_err("Cube_Init failed");
+		sys_err("Cube_Init başarısız");
 }
 
 bool Cube_load (const char *file)
@@ -412,7 +412,7 @@ bool Cube_load (const char *file)
 			// TODO : check cube data
 			if (false == FN_check_cube_data(cube_data))
 			{
-				sys_log(1, "something wrong");
+				sys_log(1, "bir sorun var");
 				M2_DELETE(cube_data);
 				continue;
 			}
@@ -470,11 +470,11 @@ static bool FN_update_cube_status(LPCHARACTER ch)
 
 	if (NULL == cube)
 	{
-		ch->ChatPacket(CHAT_TYPE_COMMAND, "cube info 0 0 0");
+		ch->ChatPacket(CHAT_TYPE_COMMAND, "cube bilgi 0 0 0");
 		return false;
 	}
 
-	ch->ChatPacket(CHAT_TYPE_COMMAND, "cube info %d %d %d", cube->gold, 0, 0);
+	ch->ChatPacket(CHAT_TYPE_COMMAND, "cube bilgi %d %d %d", cube->gold, 0, 0);
 	return true;
 }
 
@@ -729,12 +729,12 @@ void Cube_InformationInitialize()
 
 		if (1 != rewards.size())
 		{
-			sys_err("[CubeInfo] WARNING! Does not support multiple rewards (count: %d)", rewards.size());
+			sys_err("[CubeInfo] UYARI! Birden fazla ödül desteklenmiyor (adet: %d)", rewards.size());
 			continue;
 		}
 		//if (1 != cubeData->npc_vnum.size())
 		//{
-		//	sys_err("[CubeInfo] WARNING! Does not support multiple NPC (count: %d)", cubeData->npc_vnum.size());
+		//	sys_err("[CubeInfo] UYARI! Birden fazla NPC desteklenmiyor (adet: %d)", cubeData->npc_vnum.size());
 		//	continue;
 		//}
 
@@ -809,7 +809,7 @@ void Cube_request_result_list(LPCHARACTER ch)
 	if (!FN_check_valid_npc(npcVNUM)) // @fixme127
 	{
 		if (test_server)
-			sys_log(1, "cube not valid NPC");
+			sys_log(1, "cube geçerli NPC değil");
 		return;
 	}
 
@@ -838,7 +838,7 @@ void Cube_request_result_list(LPCHARACTER ch)
 
 		if (resultText.size() - 20 >= CHAT_MAX_LEN)
 		{
-			sys_err("[CubeInfo] Too long cube result list text. (NPC: %d, length: %d)", npcVNUM, resultText.size());
+			sys_err("[CubeInfo] Küp sonuç listesi metni çok uzun. (NPC: %d, uzunluk: %d)", npcVNUM, resultText.size());
 			resultText.clear();
 			resultCount = 0;
 		}
@@ -865,7 +865,7 @@ void Cube_request_material_info(LPCHARACTER ch, int requestStartIndex, int reque
 	if (!FN_check_valid_npc(npcVNUM)) // @fixme127
 	{
 		if (test_server)
-			sys_log(1, "cube not valid NPC");
+			sys_log(1, "cube geçerli NPC değil");
 		return;
 	}
 
@@ -895,7 +895,7 @@ void Cube_request_material_info(LPCHARACTER ch, int requestStartIndex, int reque
 
 	if (false == bCatchInfo)
 	{
-		sys_err("[CubeInfo] Can't find matched material info (NPC: %d, index: %d, request count: %d)", npcVNUM, requestStartIndex, requestCount);
+		sys_err("[CubeInfo] Eşleşen malzeme bilgisi bulunamıyor (NPC: %d, indeks: %d, istenen adet: %d)", npcVNUM, requestStartIndex, requestCount);
 		return;
 	}
 
@@ -905,7 +905,7 @@ void Cube_request_material_info(LPCHARACTER ch, int requestStartIndex, int reque
 	// (Server -> Client) /cube m_info start_index count 125,1|126,2|127,2|123,5&555,5&555,4/120000
 	if (materialInfoText.size() - 20 >= CHAT_MAX_LEN)
 	{
-		sys_err("[CubeInfo] Too long material info. (NPC: %d, requestStart: %d, requestCount: %d, length: %d)", npcVNUM, requestStartIndex, requestCount, materialInfoText.size());
+		sys_err("[CubeInfo] Malzeme bilgisi çok uzun. (NPC: %d, istekBaşlangıcı: %d, istekAdedi: %d, uzunluk: %d)", npcVNUM, requestStartIndex, requestCount, materialInfoText.size());
 	}
 
 	ch->ChatPacket(CHAT_TYPE_COMMAND, "cube m_info %d %d %s", requestStartIndex, requestCount, materialInfoText.c_str());

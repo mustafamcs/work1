@@ -126,7 +126,7 @@ namespace mining
 
 		if (iFractionCount == 0)
 		{
-			sys_err("Wrong ore fraction count");
+			sys_err("Hatalı cevher kesir sayısı");
 			return;
 		}
 
@@ -134,7 +134,7 @@ namespace mining
 
 		if (!item)
 		{
-			sys_err("cannot create item vnum %d", dwRawOreVnum);
+			sys_err("eşya vnum %d oluşturulamıyor", dwRawOreVnum);
 			return;
 		}
 
@@ -241,7 +241,7 @@ namespace mining
 
 		if (!Pick_Check(*item))
 		{
-			sys_err("REFINE_PICK_HACK pid(%u) item(%s:%d) type(%d)", ch->GetPlayerID(), item->GetName(), item->GetID(), item->GetType());
+			sys_err("REFINE_PICK_HACK pid(%u) eşya(%s:%d) tip(%d)", ch->GetPlayerID(), item->GetName(), item->GetID(), item->GetType());
 			rkLogMgr.RefineLog(ch->GetPlayerID(), item->GetName(), item->GetID(), -1, 1, "PICK_HACK");
 			return 2;
 		}
@@ -418,13 +418,13 @@ namespace mining
 
 		if (item->GetOwner() != ch)
 		{
-			sys_err("wrong owner");
+			sys_err("yanlış sahip");
 			return false;
 		}
 
 		if (item->GetCount() < ORE_COUNT_FOR_REFINE)
 		{
-			sys_err("not enough count");
+			sys_err("yeterli adet yok");
 			return false;
 		}
 

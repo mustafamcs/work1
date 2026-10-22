@@ -112,7 +112,7 @@ EVENTFUNC(target_event)
 
 	if (event->is_force_to_end)
 	{
-		sys_log(0, "target_event: event canceled");
+		sys_log(0, "target_event: olay iptal edildi");
 		return 0;
 	}
 
@@ -141,14 +141,14 @@ void CTargetManager::CreateTarget(DWORD dwPID,
 		const char * c_pszTargetDesc,
 		int iSendFlag)
 {
-	sys_log(0, "CreateTarget : target pid %u quest %u name %s arg %d %d %d",
+	sys_log(0, "CreateTarget : hedef pid %u görev %u isim %s arg %d %d %d",
 			dwPID, dwQuestIndex, c_pszTargetName, iType, iArg1, iArg2);
 
 	LPCHARACTER pkChr = CHARACTER_MANAGER::instance().FindByPID(dwPID);
 
 	if (!pkChr)
 	{
-		sys_err("Cannot find character ptr by PID %u", dwPID);
+		sys_err("PID %u ile karakter ptr bulunamıyor", dwPID);
 		return;
 	}
 
@@ -168,13 +168,13 @@ void CTargetManager::CreateTarget(DWORD dwPID,
 
 			if (NULL == existInfo)
 			{
-				sys_err("CreateTarget : event already exist, but have no info");
+				sys_err("CreateTarget : olay zaten var ama bilgi yok");
 				return;
 			}
 
 			if (existInfo->dwQuestIndex == dwQuestIndex && !strcmp(existInfo->szTargetName, c_pszTargetName))
 			{
-				sys_log(0, "CreateTarget : same target will be replaced");
+				sys_log(0, "CreateTarget : aynı hedef değiştirilecek");
 
 				if (existInfo->bSendToClient)
 					SendTargetDeletePacket(pkChr->GetDesc(), existInfo->iID);

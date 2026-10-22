@@ -56,7 +56,7 @@ bool CGuildMarkImage::Save(const char* c_szFileName)
 
 bool CGuildMarkImage::Build(const char * c_szFileName)
 {
-	sys_log(0, "GuildMarkImage: creating new file %s", c_szFileName);
+	sys_log(0, "GuildMarkImage: yeni dosya oluşturuluyor %s", c_szFileName);
 
 	Destroy();
 	Create();
@@ -70,7 +70,7 @@ bool CGuildMarkImage::Build(const char * c_szFileName)
 
 	if (!ilTexImage(WIDTH, HEIGHT, 1, 4, IL_BGRA, IL_UNSIGNED_BYTE, data))
 	{
-		sys_err("GuildMarkImage: cannot initialize image");
+		sys_err("GuildMarkImage: resim başlatılamıyor");
 		return false;
 	}
 
@@ -95,19 +95,19 @@ bool CGuildMarkImage::Load(const char * c_szFileName)
 
 	if (!ilLoad(IL_TYPE_UNKNOWN, (const ILstring) c_szFileName))
 	{
-		sys_err("GuildMarkImage: %s cannot open file.", c_szFileName);
+		sys_err("GuildMarkImage: %s dosya açılamıyor.", c_szFileName);
 		return false;
 	}
 
 	if (ilGetInteger(IL_IMAGE_WIDTH) != WIDTH)
 	{
-		sys_err("GuildMarkImage: %s width must be %u", c_szFileName, WIDTH);
+		sys_err("GuildMarkImage: %s genişlik %u olmalı", c_szFileName, WIDTH);
 		return false;
 	}
 
 	if (ilGetInteger(IL_IMAGE_HEIGHT) != HEIGHT)
 	{
-		sys_err("GuildMarkImage: %s height must be %u", c_szFileName, HEIGHT);
+		sys_err("GuildMarkImage: %s yükseklik %u olmalı", c_szFileName, HEIGHT);
 		return false;
 	}
 
@@ -134,14 +134,14 @@ bool CGuildMarkImage::SaveMark(DWORD posMark, BYTE * pbImage)
 {
 	if (posMark >= MARK_TOTAL_COUNT)
 	{
-		sys_err("GuildMarkImage::CopyMarkFromData: Invalid mark position %u", posMark);
+		sys_err("GuildMarkImage::CopyMarkFromData: Geçersiz işaret konumu %u", posMark);
 		return false;
 	}
 
 	DWORD colMark = posMark % MARK_COL_COUNT;
 	DWORD rowMark = posMark / MARK_COL_COUNT;
 
-	printf("PutMark pos %u %ux%u\n", posMark, colMark * SGuildMark::WIDTH, rowMark * SGuildMark::HEIGHT);
+	printf("İşaret Koy konum %u %ux%u\n", posMark, colMark * SGuildMark::WIDTH, rowMark * SGuildMark::HEIGHT);
 	PutData(colMark * SGuildMark::WIDTH, rowMark * SGuildMark::HEIGHT, SGuildMark::WIDTH, SGuildMark::HEIGHT, pbImage);
 
 	DWORD rowBlock = rowMark / SGuildMarkBlock::MARK_PER_BLOCK_HEIGHT;
@@ -171,13 +171,13 @@ bool CGuildMarkImage::SaveBlockFromCompressedData(DWORD posBlock, const BYTE * p
 
 	if (LZO_E_OK != lzo1x_decompress_safe(pbComp, dwCompSize, (BYTE *) apxBuf, &sizeBuf, CLZO::Instance().GetWorkMemory()))
 	{
-		sys_err("GuildMarkImage::CopyBlockFromCompressedData: cannot decompress, compressed size = %u", dwCompSize);
+		sys_err("GuildMarkImage::CopyBlockFromCompressedData: sıkıştırma açılamıyor, sıkıştırılmış boyut = %u", dwCompSize);
 		return false;
 	}
 
 	if (sizeBuf != sizeof(apxBuf))
 	{
-		sys_err("GuildMarkImage::CopyBlockFromCompressedData: image corrupted, decompressed size = %u", sizeBuf);
+		sys_err("GuildMarkImage::CopyBlockFromCompressedData: resim bozuk, açılmış boyut = %u", sizeBuf);
 		return false;
 	}
 
@@ -283,7 +283,7 @@ void SGuildMarkBlock::Compress(const Pixel * pxBuf)
 
 	if (LZO_E_OK != lzo1x_1_compress((const BYTE *) pxBuf, sizeof(Pixel) * SGuildMarkBlock::SIZE, m_abCompBuf, &m_sizeCompBuf, CLZO::Instance().GetWorkMemory()))
 	{
-		sys_err("SGuildMarkBlock::Compress: Error! %u > %u", sizeof(Pixel) * SGuildMarkBlock::SIZE, m_sizeCompBuf);
+		sys_err("SGuildMarkBlock::Compress: Hata! %u > %u", sizeof(Pixel) * SGuildMarkBlock::SIZE, m_sizeCompBuf);
 		return;
 	}
 

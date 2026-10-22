@@ -24,7 +24,7 @@ CDungeon::CDungeon(IdType id, long lOriginalMapIndex, long lMapIndex)
 	m_map_Area(SECTREE_MANAGER::instance().GetDungeonArea(lOriginalMapIndex))
 {
 	Initialize();
-	//sys_log(0,"DUNGEON create orig %d real %d", lOriginalMapIndex, lMapIndex);
+	//sys_log(0,"ZINDAN oluştur orig %d gerçek %d", lOriginalMapIndex, lMapIndex);
 }
 
 CDungeon::~CDungeon()
@@ -33,7 +33,7 @@ CDungeon::~CDungeon()
 	{
 		m_pParty->SetDungeon_for_Only_party (NULL);
 	}
-	//sys_log(0,"DUNGEON destroy orig %d real %d", m_lOrigMapIndex, m_lMapIndex	);
+	//sys_log(0,"ZINDAN yok et orig %d gerçek %d", m_lOrigMapIndex, m_lMapIndex	);
 	ClearRegen();
 	event_cancel(&deadEvent);
 	// <Factor>
@@ -146,7 +146,7 @@ struct FWarpToDungeon
 void CDungeon::Join(LPCHARACTER ch)
 {
 	if (SECTREE_MANAGER::instance().GetMap(m_lMapIndex) == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 	FWarpToDungeon(m_lMapIndex, this) (ch);
@@ -158,18 +158,18 @@ void CDungeon::JoinParty(LPPARTY pParty)
 	m_map_pkParty.emplace(pParty,0);
 
 	if (SECTREE_MANAGER::instance().GetMap(m_lMapIndex) == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 	FWarpToDungeon f(m_lMapIndex, this);
 	pParty->ForEachOnlineMember(f);
-	//sys_log(0, "DUNGEON-PARTY join %p %p", this, pParty);
+	//sys_log(0, "ZINDAN-PARTİ katıl %p %p", this, pParty);
 }
 
 void CDungeon::QuitParty(LPPARTY pParty)
 {
 	pParty->SetDungeon(NULL);
-	//sys_log(0, "DUNGEON-PARTY quit %p %p", this, pParty);
+	//sys_log(0, "ZINDAN-PARTİ ayrıl %p %p", this, pParty);
 	TPartyMap::iterator it = m_map_pkParty.find(pParty); // @warme011 boom! crash!
 
 	if (it != m_map_pkParty.end())
@@ -237,7 +237,7 @@ void CDungeon::DecMember(LPCHARACTER ch)
 
 void CDungeon::IncPartyMember(LPPARTY pParty, LPCHARACTER ch)
 {
-	//sys_log(0, "DUNGEON-PARTY inc %p %p", this, pParty);
+	//sys_log(0, "ZINDAN-PARTİ artır %p %p", this, pParty);
 	TPartyMap::iterator it = m_map_pkParty.find(pParty);
 
 	if (it != m_map_pkParty.end())
@@ -250,11 +250,11 @@ void CDungeon::IncPartyMember(LPPARTY pParty, LPCHARACTER ch)
 
 void CDungeon::DecPartyMember(LPPARTY pParty, LPCHARACTER ch)
 {
-	//sys_log(0, "DUNGEON-PARTY dec %p %p", this, pParty);
+	//sys_log(0, "ZINDAN-PARTİ azalt %p %p", this, pParty);
 	TPartyMap::iterator it = m_map_pkParty.find(pParty);
 
 	if (it == m_map_pkParty.end())
-		sys_err("cannot find party");
+		sys_err("parti bulunamıyor");
 	else
 	{
 		it->second--;
@@ -327,7 +327,7 @@ void CDungeon::JumpAll(long lFromMapIndex, int x, int y)
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", lFromMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", lFromMapIndex);
 		return;
 	}
 
@@ -346,7 +346,7 @@ void CDungeon::WarpAll(long lFromMapIndex, int x, int y)
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", lFromMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", lFromMapIndex);
 		return;
 	}
 
@@ -366,7 +366,7 @@ void CDungeon::JumpGuild(CGuild* pGuild, long lFromMapIndex, int x, int y)
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", lFromMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", lFromMapIndex);
 		return;
 	}
 
@@ -378,7 +378,7 @@ void CDungeon::JumpGuild(CGuild* pGuild, long lFromMapIndex, int x, int y)
 		}
 		else if (m_pGuild != pGuild)
 		{
-			sys_err ("Dungeon already has guild. Another guild cannot jump in dungeon : index %d", GetMapIndex());
+			sys_err ("Zindanda zaten bir lonca var. Başka lonca giremez : indeks %d", GetMapIndex());
 			return;
 		}
 		pGuild->SetDungeon_for_Only_guild (this);
@@ -399,7 +399,7 @@ void CDungeon::JumpParty(LPPARTY pParty, long lFromMapIndex, int x, int y)
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", lFromMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", lFromMapIndex);
 		return;
 	}
 
@@ -411,7 +411,7 @@ void CDungeon::JumpParty(LPPARTY pParty, long lFromMapIndex, int x, int y)
 		}
 		else if (m_pParty != pParty)
 		{
-			sys_err ("Dungeon already has party. Another party cannot jump in dungeon : index %d", GetMapIndex());
+			sys_err ("Zindanda zaten bir parti var. Başka parti giremez : indeks %d", GetMapIndex());
 			return;
 		}
 		pParty->SetDungeon_for_Only_party (this);
@@ -429,7 +429,7 @@ void CDungeon::SetPartyNull()
 
 void CDungeonManager::Destroy(CDungeon::IdType dungeon_id)
 {
-	sys_log(0, "DUNGEON destroy : map index %u", dungeon_id);
+	sys_log(0, "ZINDAN yok et : harita indeksi %u", dungeon_id);
 	LPDUNGEON pDungeon = Find(dungeon_id);
 	if (pDungeon == NULL) {
 		return;
@@ -469,7 +469,7 @@ LPDUNGEON CDungeonManager::Create(long lOriginalMapIndex)
 
 	if (!lMapIndex)
 	{
-		sys_log( 0, "Fail to Create Dungeon : OrginalMapindex %d NewMapindex %d", lOriginalMapIndex, lMapIndex );
+		sys_log( 0, "Zindan Oluşturma Başarısız : OriginalMapindex %d NewMapindex %d", lOriginalMapIndex, lMapIndex );
 		return NULL;
 	}
 
@@ -501,7 +501,7 @@ void CDungeon::UniqueSetMaxHP(const std::string& key, int iMaxHP)
 	TUniqueMobMap::iterator it = m_map_UniqueMob.find(key);
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key : %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar : %s", key.c_str());
 		return;
 	}
 	it->second->SetMaxHP(iMaxHP);
@@ -512,7 +512,7 @@ void CDungeon::UniqueSetHP(const std::string& key, int iHP)
 	TUniqueMobMap::iterator it = m_map_UniqueMob.find(key);
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key : %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar : %s", key.c_str());
 		return;
 	}
 	it->second->SetHP(iHP);
@@ -523,7 +523,7 @@ void CDungeon::UniqueSetDefGrade(const std::string& key, int iGrade)
 	TUniqueMobMap::iterator it = m_map_UniqueMob.find(key);
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key : %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar : %s", key.c_str());
 		return;
 	}
 	it->second->PointChange(POINT_DEF_GRADE,iGrade - it->second->GetPoint(POINT_DEF_GRADE));
@@ -534,14 +534,14 @@ void CDungeon::SpawnMoveUnique(const char* key, DWORD vnum, const char* pos_from
 	TAreaMap::iterator it_to = m_map_Area.find(pos_to);
 	if (it_to == m_map_Area.end())
 	{
-		sys_err("Wrong position string : %s", pos_to);
+		sys_err("Hatalı konum dizgisi : %s", pos_to);
 		return;
 	}
 
 	TAreaMap::iterator it_from = m_map_Area.find(pos_from);
 	if (it_from == m_map_Area.end())
 	{
-		sys_err("Wrong position string : %s", pos_from);
+		sys_err("Hatalı konum dizgisi : %s", pos_from);
 		return;
 	}
 
@@ -553,7 +553,7 @@ void CDungeon::SpawnMoveUnique(const char* key, DWORD vnum, const char* pos_from
 
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 	for (int i=0;i<100;i++)
@@ -576,7 +576,7 @@ void CDungeon::SpawnMoveUnique(const char* key, DWORD vnum, const char* pos_from
 		}
 		else
 		{
-			sys_err("Cannot spawn at %d %d", pkSectreeMap->m_setting.iBaseX+((ai.sx+ai.ex)>>1), pkSectreeMap->m_setting.iBaseY+((ai.sy+ai.ey)>>1));
+			sys_err("%d %d konumunda doğulamıyor", pkSectreeMap->m_setting.iBaseX+((ai.sx+ai.ex)>>1), pkSectreeMap->m_setting.iBaseY+((ai.sy+ai.ey)>>1));
 		}
 	}
 }
@@ -586,7 +586,7 @@ void CDungeon::SpawnUnique(const char* key, DWORD vnum, const char* pos)
 	TAreaMap::iterator it = m_map_Area.find(pos);
 	if (it == m_map_Area.end())
 	{
-		sys_err("Wrong position string : %s", pos);
+		sys_err("Hatalı konum dizgisi : %s", pos);
 		return;
 	}
 
@@ -597,7 +597,7 @@ void CDungeon::SpawnUnique(const char* key, DWORD vnum, const char* pos)
 
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 	for (int i=0;i<100;i++)
@@ -616,7 +616,7 @@ void CDungeon::SpawnUnique(const char* key, DWORD vnum, const char* pos)
 		}
 		else
 		{
-			sys_err("Cannot spawn at %d %d", pkSectreeMap->m_setting.iBaseX+((ai.sx+ai.ex)>>1), pkSectreeMap->m_setting.iBaseY+((ai.sy+ai.ey)>>1));
+			sys_err("%d %d konumunda doğulamıyor", pkSectreeMap->m_setting.iBaseX+((ai.sx+ai.ex)>>1), pkSectreeMap->m_setting.iBaseY+((ai.sy+ai.ey)>>1));
 		}
 	}
 }
@@ -649,7 +649,7 @@ void CDungeon::PurgeUnique(const std::string& key)
 	TUniqueMobMap::iterator it = m_map_UniqueMob.find(key);
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key or Dead: %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar veya Ölü: %s", key.c_str());
 		return;
 	}
 	LPCHARACTER ch = it->second;
@@ -662,7 +662,7 @@ void CDungeon::KillUnique(const std::string& key)
 	TUniqueMobMap::iterator it = m_map_UniqueMob.find(key);
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key or Dead: %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar veya Ölü: %s", key.c_str());
 		return;
 	}
 	LPCHARACTER ch = it->second;
@@ -675,7 +675,7 @@ DWORD CDungeon::GetUniqueVid(const std::string& key)
 	TUniqueMobMap::iterator it = m_map_UniqueMob.find(key);
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key or Dead: %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar veya Ölü: %s", key.c_str());
 		return 0;
 	}
 	LPCHARACTER ch = it->second;
@@ -687,7 +687,7 @@ float CDungeon::GetUniqueHpPerc(const std::string& key)
 	TUniqueMobMap::iterator it = m_map_UniqueMob.find(key);
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key : %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar : %s", key.c_str());
 		return false;
 	}
 	return (100.f*it->second->GetHP())/it->second->GetMaxHP();
@@ -702,7 +702,7 @@ void CDungeon::DeadCharacter(LPCHARACTER ch)
 		{
 			if (it->second == ch)
 			{
-				//sys_log(0,"Dead unique %s", it->first.c_str());
+				//sys_log(0,"Benzersiz öldü %s", it->first.c_str());
 				m_map_UniqueMob.erase(it);
 				break;
 			}
@@ -717,7 +717,7 @@ bool CDungeon::IsUniqueDead(const std::string& key)
 
 	if (it == m_map_UniqueMob.end())
 	{
-		sys_err("Unknown Key or Dead : %s", key.c_str());
+		sys_err("Bilinmeyen Anahtar veya Ölü : %s", key.c_str());
 		return true;
 	}
 
@@ -726,12 +726,12 @@ bool CDungeon::IsUniqueDead(const std::string& key)
 
 void CDungeon::Spawn(DWORD vnum, const char* pos)
 {
-	//sys_log(0,"DUNGEON Spawn %u %s", vnum, pos);
+	//sys_log(0,"ZINDAN Doğma %u %s", vnum, pos);
 	TAreaMap::iterator it = m_map_Area.find(pos);
 
 	if (it == m_map_Area.end())
 	{
-		sys_err("Wrong position string : %s", pos);
+		sys_err("Hatalı konum dizgisi : %s", pos);
 		return;
 	}
 
@@ -743,7 +743,7 @@ void CDungeon::Spawn(DWORD vnum, const char* pos)
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL)
 	{
-		sys_err("cannot find map by index %d", m_lMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", m_lMapIndex);
 		return;
 	}
 	int dx = number(ai.sx, ai.ex);
@@ -758,7 +758,7 @@ LPCHARACTER CDungeon::SpawnMob(DWORD vnum, int x, int y, int dir)
 {
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return NULL;
 	}
 	sys_log(0, "CDungeon::SpawnMob %u %d %d", vnum, x,  y);
@@ -768,7 +768,7 @@ LPCHARACTER CDungeon::SpawnMob(DWORD vnum, int x, int y, int dir)
 	if (ch)
 	{
 		ch->SetDungeon(this);
-		sys_log(0, "CDungeon::SpawnMob name %s", ch->GetName());
+		sys_log(0, "CDungeon::SpawnMob isim %s", ch->GetName());
 	}
 
 	return ch;
@@ -778,7 +778,7 @@ LPCHARACTER CDungeon::SpawnMob_ac_dir(DWORD vnum, int x, int y, int dir)
 {
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return NULL;
 	}
 	sys_log(0, "CDungeon::SpawnMob %u %d %d", vnum, x,  y);
@@ -788,7 +788,7 @@ LPCHARACTER CDungeon::SpawnMob_ac_dir(DWORD vnum, int x, int y, int dir)
 	if (ch)
 	{
 		ch->SetDungeon(this);
-		sys_log(0, "CDungeon::SpawnMob name %s", ch->GetName());
+		sys_log(0, "CDungeon::SpawnMob isim %s", ch->GetName());
 	}
 
 	return ch;
@@ -798,7 +798,7 @@ void CDungeon::SpawnNameMob(DWORD vnum, int x, int y, const char* name)
 {
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 
@@ -816,7 +816,7 @@ void CDungeon::SpawnGotoMob(long lFromX, long lFromY, long lToX, long lToY)
 
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 
@@ -841,7 +841,7 @@ LPCHARACTER CDungeon::SpawnGroup(DWORD vnum, long x, long y, float radius, bool 
 {
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return NULL;
 	}
 
@@ -914,7 +914,7 @@ void CDungeon::SpawnMoveGroup(DWORD vnum, const char* pos_from, const char* pos_
 
 	if (it_to == m_map_Area.end())
 	{
-		sys_err("Wrong position string : %s", pos_to);
+		sys_err("Hatalı konum dizgisi : %s", pos_to);
 		return;
 	}
 
@@ -922,7 +922,7 @@ void CDungeon::SpawnMoveGroup(DWORD vnum, const char* pos_from, const char* pos_
 
 	if (it_from == m_map_Area.end())
 	{
-		sys_err("Wrong position string : %s", pos_from);
+		sys_err("Hatalı konum dizgisi : %s", pos_from);
 		return;
 	}
 
@@ -935,7 +935,7 @@ void CDungeon::SpawnMoveGroup(DWORD vnum, const char* pos_from, const char* pos_
 
 	LPSECTREE_MAP pkSectreeMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkSectreeMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 
@@ -983,7 +983,7 @@ namespace
 				M2_DESTROY_ITEM(item);
 			}
 			else
-				sys_err("unknown entity type %d is in dungeon", ent->GetType());
+				sys_err("bilinmeyen varlık tipi %d zindanda", ent->GetType());
 		}
 	};
 }
@@ -993,7 +993,7 @@ void CDungeon::KillAll()
 {
 	LPSECTREE_MAP pkMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 	FKillSectree f;
@@ -1005,7 +1005,7 @@ void CDungeon::Purge()
 {
 	LPSECTREE_MAP pkMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 	if (pkMap == NULL) {
-		sys_err("CDungeon: SECTREE_MAP not found for #%ld", m_lMapIndex);
+		sys_err("CDungeon: #%ld için SECTREE_MAP bulunamadı", m_lMapIndex);
 		return;
 	}
 	FPurgeSectree f;
@@ -1069,7 +1069,7 @@ int CDungeon::CountRealMonster()
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", m_lOrigMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", m_lOrigMapIndex);
 		return 0;
 	}
 
@@ -1100,7 +1100,7 @@ void CDungeon::ExitAll()
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", m_lMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", m_lMapIndex);
 		return;
 	}
 
@@ -1135,12 +1135,12 @@ namespace
 
 void CDungeon::Notice(const char* msg)
 {
-	sys_log(0, "XXX Dungeon Notice %p %s", this, msg);
+	sys_log(0, "XXX Zindan Bildirimi %p %s", this, msg);
 	LPSECTREE_MAP pMap = SECTREE_MANAGER::instance().GetMap(m_lMapIndex);
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", m_lMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", m_lMapIndex);
 		return;
 	}
 
@@ -1176,7 +1176,7 @@ void CDungeon::ExitAllToStartPosition()
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", m_lMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", m_lMapIndex);
 		return;
 	}
 
@@ -1202,7 +1202,7 @@ EVENTFUNC(dungeon_jump_to_event)
 	if (pDungeon)
 		pDungeon->JumpToEliminateLocation();
 	else
-		sys_err("cannot find dungeon with map index %u", info->dungeon_id);
+		sys_err("%u harita indeksli zindan bulunamıyor", info->dungeon_id);
 
 	return 0;
 }
@@ -1361,7 +1361,7 @@ bool CDungeon::IsAllPCNearTo(int x, int y, int dist)
 
 	if (!pMap)
 	{
-		sys_err("cannot find map by index %d", m_lMapIndex);
+		sys_err("%d indeksli harita bulunamıyor", m_lMapIndex);
 		return false;
 	}
 

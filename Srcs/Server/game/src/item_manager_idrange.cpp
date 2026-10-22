@@ -8,7 +8,7 @@ int touch(const char *path)
 
 	if ( !(fp = fopen(path, "a")) )
 	{
-		sys_err("touch failed");
+		sys_err("dokunma başarısız");
 		return (-1);
 	}
 
@@ -24,14 +24,14 @@ DWORD ITEM_MANAGER::GetNewID()
 	{
 		if ( m_ItemIDSpareRange.dwMin == 0 || m_ItemIDSpareRange.dwMax == 0 || m_ItemIDSpareRange.dwUsableItemIDMin == 0 )
 		{
-			for ( int i=0; i < 10; i++ ) sys_err("ItemIDRange: FATAL ERROR!!! no more item id");
+			for ( int i=0; i < 10; i++ ) sys_err("ItemIDRange: ÖLÜMCÜL HATA!!! eşya id kalmadı");
 			touch(".killscript");
 			thecore_shutdown();
 			return 0;
 		}
 		else
 		{
-			sys_log(0, "ItemIDRange: First Range is full. Change to SpareRange %u ~ %u %u",
+			sys_log(0, "ItemIDRange: İlk aralık dolu. Yedek Aralığa geçiliyor %u ~ %u %u",
 					m_ItemIDSpareRange.dwMin, m_ItemIDSpareRange.dwMax, m_ItemIDSpareRange.dwUsableItemIDMin);
 
 			db_clientdesc->DBPacket(HEADER_GD_REQ_SPARE_ITEM_ID_RANGE, 0, &m_ItemIDRange.dwMax, sizeof(DWORD));
@@ -53,7 +53,7 @@ bool ITEM_MANAGER::SetMaxItemID(TItemIDRangeTable range)
 
 	if ( m_ItemIDRange.dwMin == 0 || m_ItemIDRange.dwMax == 0 || m_ItemIDRange.dwUsableItemIDMin == 0 )
 	{
-		for ( int i=0; i < 10; i++ ) sys_err("ItemIDRange: FATAL ERROR!!! ITEM ID RANGE is not set.");
+		for ( int i=0; i < 10; i++ ) sys_err("ItemIDRange: ÖLÜMCÜL HATA!!! EŞYA ID ARALIĞI ayarlanmamış.");
 		touch(".killscript");
 		thecore_shutdown();
 		return false;
@@ -70,13 +70,13 @@ bool ITEM_MANAGER::SetMaxSpareItemID(TItemIDRangeTable range)
 {
 	if ( range.dwMin == 0 || range.dwMax == 0 || range.dwUsableItemIDMin == 0 )
 	{
-		for ( int i=0; i < 10; i++ ) sys_err("ItemIDRange: FATAL ERROR!!! Spare ITEM ID RANGE is not set");
+		for ( int i=0; i < 10; i++ ) sys_err("ItemIDRange: ÖLÜMCÜL HATA!!! Yedek EŞYA ID ARALIĞI ayarlanmamış");
 		return false;
 	}
 
 	m_ItemIDSpareRange = range;
 
-	sys_log(0, "ItemIDRange: New Spare ItemID Range Recv %u ~ %u %u",
+	sys_log(0, "ItemIDRange: Yeni Yedek ItemID Aralığı Alındı %u ~ %u %u",
 			m_ItemIDSpareRange.dwMin, m_ItemIDSpareRange.dwMax, m_ItemIDSpareRange.dwUsableItemIDMin);
 
 	return true;

@@ -66,7 +66,7 @@ void LogManager::ItemLog(LPCHARACTER ch, LPITEM item, const char * c_pszText, co
 	LOG_LEVEL_CHECK_N_RET(LOG_LEVEL_MIN);
 	if (NULL == ch || NULL == item)
 	{
-		sys_err("character or item nil (ch %p item %p text %s)", get_pointer(ch), get_pointer(item), c_pszText);
+		sys_err("karakter veya eşya nil (ch %p eşya %p metin %s)", get_pointer(ch), get_pointer(item), c_pszText);
 		return;
 	}
 
@@ -111,7 +111,7 @@ void LogManager::MoneyLog(BYTE type, DWORD vnum, long long gold)
 {
 	if (type == MONEY_LOG_RESERVED || type >= MONEY_LOG_TYPE_MAX_NUM)
 	{
-		sys_err("TYPE ERROR: type %d vnum %u gold %lld", type, vnum, gold);
+		sys_err("TİP HATASI: tip %d vnum %u gold %lld", type, vnum, gold);
 		return;
 	}
 

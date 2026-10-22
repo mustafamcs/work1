@@ -151,7 +151,7 @@ bool CObject::Show(long lMapIndex, long x, long y)
 
 	if (!tree)
 	{
-		sys_err("cannot find sectree by %dx%d mapindex %d", x, y, lMapIndex);
+		sys_err("%dx%d ile sectree bulunamıyor harita indeksi %d", x, y, lMapIndex);
 		return false;
 	}
 
@@ -289,7 +289,7 @@ void CObject::RegenNPC()
 
 	if (!m_chNPC)
 	{
-		sys_err("Cannot create guild npc");
+		sys_err("Lonca NPC'si oluşturulamıyor");
 		return;
 	}
 
@@ -502,7 +502,7 @@ bool CLand::RequestCreateObject(DWORD dwVnum, long lMapIndex, long x, long y, fl
 
 	if (!pkProto)
 	{
-		sys_err("Invalid Object vnum %u", dwVnum);
+		sys_err("Geçersiz Nesne vnum %u", dwVnum);
 		return false;
 	}
 	const TMapRegion * r = rkSecTreeMgr.GetMapRegion(lMapIndex);
@@ -535,7 +535,7 @@ bool CLand::RequestCreateObject(DWORD dwVnum, long lMapIndex, long x, long y, fl
 
 	if (tsx < sx || tex > ex || tsy < sy || tey > ey)
 	{
-		sys_err("invalid position: object is outside of land region\nLAND: %d %d ~ %d %d\nOBJ: %d %d ~ %d %d", sx, sy, ex, ey, osx, osy, oex, oey);
+		sys_err("geçersiz konum: nesne arazi bölgesinin dışında\nARAZİ: %d %d ~ %d %d\nNESNE: %d %d ~ %d %d", sx, sy, ex, ey, osx, osy, oex, oey);
 		return false;
 	}
 
@@ -544,7 +544,7 @@ bool CLand::RequestCreateObject(DWORD dwVnum, long lMapIndex, long x, long y, fl
 	{
 		if (rkSecTreeMgr.ForAttrRegion(lMapIndex, osx, osy, oex, oey, (long)zRot, ATTR_OBJECT, ATTR_REGION_MODE_CHECK))
 		{
-			sys_err("another object already exist");
+			sys_err("başka bir nesne zaten var");
 			return false;
 		}
 		FIsIn f (osx, osy, oex, oey);
@@ -552,7 +552,7 @@ bool CLand::RequestCreateObject(DWORD dwVnum, long lMapIndex, long x, long y, fl
 
 		if (f.bIn)
 		{
-			sys_err("another object already exist");
+			sys_err("başka bir nesne zaten var");
 			return false;
 		}
 	}
@@ -701,7 +701,7 @@ void CManager::UpdateLand(TLand * pTable)
 
 	if (!pkLand)
 	{
-		sys_err("cannot find land by id %u", pTable->dwID);
+		sys_err("id %u ile arazi bulunamıyor", pTable->dwID);
 		return;
 	}
 
@@ -810,7 +810,7 @@ bool CManager::LoadObject(TObject * pTable, bool isBoot) // from DB
 	CLand * pkLand = FindLand(pTable->dwLandID);
 	if (!pkLand)
 	{
-		sys_log(0, "Cannot find land by id %u", pTable->dwLandID);
+		sys_log(0, "id %u ile arazi bulunamıyor", pTable->dwLandID);
 		return false;
 	}
 
@@ -818,7 +818,7 @@ bool CManager::LoadObject(TObject * pTable, bool isBoot) // from DB
 
 	if (!pkProto)
 	{
-		sys_err("Cannot find object %u in prototype (id %u)", pTable->dwVnum, pTable->dwID);
+		sys_err("Prototipte nesne %u bulunamıyor (id %u)", pTable->dwVnum, pTable->dwID);
 		return false;
 	}
 
@@ -883,7 +883,7 @@ void CManager::FinalizeBoot()
 		const TLand & r = pkLand->GetData();
 
 		// LAND_MASTER_LOG
-		sys_log(0, "LandMaster map_index=%d pos=(%d, %d)", r.lMapIndex, r.x, r.y);
+		sys_log(0, "LandMaster map_index=%d konum=(%d, %d)", r.lMapIndex, r.x, r.y);
 		// END_OF_LAND_MASTER_LOG
 
 		if (r.dwGuildID != 0)
@@ -964,7 +964,7 @@ void CManager::SendLandList(LPDESC d, long lMapIndex)
 		++wCount;
 	}
 
-	sys_log(0, "SendLandList map %d count %u elem_size: %d", lMapIndex, wCount, buf.size());
+	sys_log(0, "SendLandList harita %d sayı %u elem_size: %d", lMapIndex, wCount, buf.size());
 
 	if (wCount != 0)
 	{
@@ -991,7 +991,7 @@ void CManager::ClearLand(DWORD dwLandID)
 
 	pLand->ClearLand();
 
-	sys_log(0, "LAND_CLEAR: request Land Clear. LandID: %d", pLand->GetID());
+	sys_log(0, "LAND_CLEAR: Arazi Temizleme isteği. LandID: %d", pLand->GetID());
 }
 
 void CManager::ClearLandByGuildID(DWORD dwGuildID)
@@ -1006,7 +1006,7 @@ void CManager::ClearLandByGuildID(DWORD dwGuildID)
 
 	pLand->ClearLand();
 
-	sys_log(0, "LAND_CLEAR: request Land Clear. LandID: %d", pLand->GetID());
+	sys_log(0, "LAND_CLEAR: Arazi Temizleme isteği. LandID: %d", pLand->GetID());
 }
 
 void CLand::ClearLand()

@@ -90,7 +90,7 @@ void FileMonitorFreeBSD::AddWatch(const std::string& strFileName, PFN_FileChange
 	int iFileHandle = -1;
 	if( (iFileHandle = open(strFileName.c_str(), O_RDONLY)) == -1)
 	{
-		sys_err("FileMonitorFreeBSD:AddWatch : can`t open file(%s).\n", strFileName.c_str());
+		sys_err("FileMonitorFreeBSD:AddWatch : dosya açılamıyor(%s).\n", strFileName.c_str());
 		return;
 	}
 
@@ -100,14 +100,14 @@ void FileMonitorFreeBSD::AddWatch(const std::string& strFileName, PFN_FileChange
 
 	if( m_KernelEventQueue == INVALID_KERNEL_EVENT )
 	{
-		sys_err("FileMonitorFreeBSD:AddWatch : failed to create kqueue.\n");
+		sys_err("FileMonitorFreeBSD:AddWatch : kqueue oluşturulamadı.\n");
 		return;
 	}
 
 	TMonitorFileHashMap::iterator it = m_FileLists.find( strFileName );
 	if( it != m_FileLists.end() )
 	{
-		sys_log(0, "FileMonitorFreeBSD:AddWatch : trying to add duplicated watch on file(%s).\n", strFileName.c_str() );
+		sys_log(0, "FileMonitorFreeBSD:AddWatch : dosya(%s) üzerine yinelenen izleme eklenmeye çalışılıyor.\n", strFileName.c_str() );
 		return;
 	}
 

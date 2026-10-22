@@ -79,7 +79,7 @@ TItemIDRangeTable CItemIDRangeManager::GetRange()
 	}
 
 	for (int i = 0; i < 10; ++i)
-		sys_err("ItemIDRange: NO MORE ITEM ID RANGE");
+		sys_err("ItemIDRange: EŞYA ID ARALIĞI KALMADI");
 
 	return ret;
 }
@@ -109,7 +109,7 @@ bool CItemIDRangeManager::BuildRange(DWORD dwMin, DWORD dwMax, TItemIDRangeTable
 
 	if ((dwMax < dwItemMaxID) || (dwMax - dwItemMaxID < cs_dwMinimumRemainCount))
 	{
-		sys_log(0, "ItemIDRange: Build %u ~ %u start: %u\tNOT USE remain count is below %u",
+		sys_log(0, "ItemIDRange: Aralık %u ~ %u başlangıç: %u\tKULLANMA kalan sayı %u altında",
 			   	dwMin, dwMax, dwItemMaxID, cs_dwMinimumRemainCount);
 	}
 	else

@@ -52,9 +52,9 @@ namespace quest
 	void PC::SetFlag(const string& name, int value, bool bSkipSave)
 	{
 		if ( test_server )
-			sys_log(0, "QUEST Setting flag %s %d", name.c_str(),value);
+			sys_log(0, "GÖREV Bayrak ayarlanıyor %s %d", name.c_str(),value);
 		else
-			sys_log(1, "QUEST Setting flag %s %d", name.c_str(),value);
+			sys_log(1, "GÖREV Bayrak ayarlanıyor %s %d", name.c_str(),value);
 
 		if (value == 0)
 		{
@@ -95,7 +95,7 @@ namespace quest
 
 		if (it != m_FlagMap.end())
 		{
-			sys_log(1, "QUEST getting flag %s %d", name.c_str(),it->second);
+			sys_log(1, "GÖREV bayrak alınıyor %s %d", name.c_str(),it->second);
 			return it->second;
 		}
 		return 0;
@@ -133,7 +133,7 @@ namespace quest
 	void PC::AddQuestStateChange(const string& quest_name, int prev_state, int next_state)
 	{
 		DWORD dwQuestIndex = CQuestManager::instance().GetQuestIndexByName(quest_name);
-		sys_log(0, "QUEST reserve Quest State Change quest %s[%u] from %d to %d", quest_name.c_str(), dwQuestIndex, prev_state, next_state);
+		sys_log(0, "GÖREV ayrılmış Görev Durumu Değişimi görev %s[%u] %d -> %d", quest_name.c_str(), dwQuestIndex, prev_state, next_state);
 		m_QuestStateChange.emplace_back(TQuestStateChangeInfo(dwQuestIndex, prev_state, next_state));
 	}
 
@@ -168,7 +168,7 @@ namespace quest
 	{
 		RemoveTimer(name);
 		m_TimerMap.emplace(name, pEvent);
-		sys_log(0, "QUEST add timer %p %d", get_pointer(pEvent), m_TimerMap.size());
+		sys_log(0, "GÖREV zamanlayıcı ekle %p %d", get_pointer(pEvent), m_TimerMap.size());
 	}
 
 	void PC::RemoveTimerNotCancel(const string & name)
@@ -177,11 +177,11 @@ namespace quest
 
 		if (it != m_TimerMap.end())
 		{
-			sys_log(0, "QUEST remove with no cancel %p", get_pointer(it->second));
+			sys_log(0, "GÖREV iptalsiz kaldır %p", get_pointer(it->second));
 			m_TimerMap.erase(it);
 		}
 
-		sys_log(1, "QUEST timer map size %d by RemoveTimerNotCancel", m_TimerMap.size());
+		sys_log(1, "GÖREV zamanlayıcı harita boyutu %d RemoveTimerNotCancel ile", m_TimerMap.size());
 	}
 
 	void PC::RemoveTimer(const string & name)
@@ -190,17 +190,17 @@ namespace quest
 
 		if (it != m_TimerMap.end())
 		{
-			sys_log(0, "QUEST remove timer %p", get_pointer(it->second));
+			sys_log(0, "GÖREV zamanlayıcı kaldır %p", get_pointer(it->second));
 			CancelTimerEvent(&it->second);
 			m_TimerMap.erase(it);
 		}
 
-		sys_log(1, "QUEST timer map size %d by RemoveTimer", m_TimerMap.size());
+		sys_log(1, "GÖREV zamanlayıcı harita boyutu %d RemoveTimer ile", m_TimerMap.size());
 	}
 
 	void PC::ClearTimer()
 	{
-		sys_log(0, "QUEST clear timer %d", m_TimerMap.size());
+		sys_log(0, "GÖREV zamanlayıcı temizle %d", m_TimerMap.size());
 		TTimerMap::iterator it = m_TimerMap.begin();
 
 		while (it != m_TimerMap.end())
@@ -249,7 +249,7 @@ namespace quest
 			BYTE temp = m_RunningQuestState->bStart?1:0;
 			buf.write(temp);
 			qi.size+=sizeof(temp);
-			sys_log(1, "QUEST BeginFlag %d", (int)temp);
+			sys_log(1, "GÖREV BeginFlag %d", (int)temp);
 		}
 		if (m_iSendToClient & QUEST_SEND_TITLE)
 		{
@@ -257,7 +257,7 @@ namespace quest
 			m_RunningQuestState->_title.reserve(TitleSize);
 			buf.write(m_RunningQuestState->_title.c_str(), TitleSize);
 			qi.size+=TitleSize;
-			sys_log(1, "QUEST Title %s", m_RunningQuestState->_title.c_str());
+			sys_log(1, "GÖREV Başlık %s", m_RunningQuestState->_title.c_str());
 		}
 		if (m_iSendToClient & QUEST_SEND_CLOCK_NAME)
 		{
@@ -265,13 +265,13 @@ namespace quest
 			m_RunningQuestState->_clock_name.reserve(ClockSize);
 			buf.write(m_RunningQuestState->_clock_name.c_str(), ClockSize);
 			qi.size+=ClockSize;
-			sys_log(1, "QUEST Clock Name %s", m_RunningQuestState->_clock_name.c_str());
+			sys_log(1, "GÖREV Saat İsmi %s", m_RunningQuestState->_clock_name.c_str());
 		}
 		if (m_iSendToClient & QUEST_SEND_CLOCK_VALUE)
 		{
 			buf.write(m_RunningQuestState->_clock_value);
 			qi.size+=sizeof(m_RunningQuestState->_clock_value);
-			sys_log(1, "QUEST Clock Value %d", m_RunningQuestState->_clock_value);
+			sys_log(1, "GÖREV Saat Değeri %d", m_RunningQuestState->_clock_value);
 		}
 		if (m_iSendToClient & QUEST_SEND_COUNTER_NAME)
 		{
@@ -279,13 +279,13 @@ namespace quest
 			m_RunningQuestState->_counter_name.reserve(CounterSize);
 			buf.write(m_RunningQuestState->_counter_name.c_str(), CounterSize);
 			qi.size+=CounterSize;
-			sys_log(1, "QUEST Counter Name %s", m_RunningQuestState->_counter_name.c_str());
+			sys_log(1, "GÖREV Sayaç İsmi %s", m_RunningQuestState->_counter_name.c_str());
 		}
 		if (m_iSendToClient & QUEST_SEND_COUNTER_VALUE)
 		{
 			buf.write(m_RunningQuestState->_counter_value);
 			qi.size+=sizeof(m_RunningQuestState->_counter_value);
-			sys_log(1, "QUEST Counter Value %d", m_RunningQuestState->_counter_value);
+			sys_log(1, "GÖREV Sayaç Değeri %d", m_RunningQuestState->_counter_value);
 		}
 		if (m_iSendToClient & QUEST_SEND_ICON_FILE)
 		{
@@ -293,7 +293,7 @@ namespace quest
 			m_RunningQuestState->_icon_file.reserve(IconSize);
 			buf.write(m_RunningQuestState->_icon_file.c_str(), IconSize);
 			qi.size+=IconSize;
-			sys_log(1, "QUEST Icon File %s", m_RunningQuestState->_icon_file.c_str());
+			sys_log(1, "GÖREV Simge Dosyası %s", m_RunningQuestState->_icon_file.c_str());
 		}
 
 		CQuestManager::instance().GetCurrentCharacterPtr()->GetDesc()->BufferedPacket(qi); // @fixme302
@@ -315,7 +315,7 @@ namespace quest
 				if (ch->GetPlayerID() == npc->GetQuestNPCID())
 				{
 					npc->SetQuestNPCID(0);
-					sys_log(0, "QUEST NPC lock isn't unlocked : pid %u", ch->GetPlayerID());
+					sys_log(0, "GÖREV NPC kilidi açılmamış : pid %u", ch->GetPlayerID());
 					CQuestManager::instance().WriteRunningStateToSyserr();
 				}
 			}
@@ -336,12 +336,12 @@ namespace quest
 
 		if (m_iSendToClient)
 		{
-			sys_log(1, "QUEST end running %d", m_iSendToClient);
+			sys_log(1, "GÖREV çalışmayı bitir %d", m_iSendToClient);
 			SendQuestInfoPakcet();
 		}
 
 		if (m_RunningQuestState == NULL) {
-			sys_log(0, "Entered PC::EndRunning() with invalid running quest state");
+			sys_log(0, "Geçersiz çalışan görev durumuyla PC::EndRunning() girildi");
 			return;
 		}
 		QuestState * pOldState = m_RunningQuestState;
@@ -396,7 +396,7 @@ namespace quest
 				it = quest_find(dwQuestIdx);
 			}
 
-			sys_log(0, "QUEST change reserved Quest State Change quest %u from %d to %d (%d %d)", dwQuestIdx, rInfo.prev_state, rInfo.next_state, it->second.st, rInfo.prev_state );
+			sys_log(0, "GÖREV ayrılmış Görev Durumu Değişimi görev %u %d -> %d (%d %d)", dwQuestIdx, rInfo.prev_state, rInfo.next_state, it->second.st, rInfo.prev_state );
 
 			assert(it->second.st == rInfo.prev_state);
 
@@ -534,7 +534,7 @@ namespace quest
 
 			if (iPos < 0)
 			{
-				sys_err("quest::PC::Save : cannot find . in FlagMap");
+				sys_err("quest::PC::Save : FlagMap içinde . bulunamıyor");
 				continue;
 			}
 
@@ -546,21 +546,21 @@ namespace quest
 
 			if (stName.length() == 0 || stState.length() == 0)
 			{
-				sys_err("quest::PC::Save : invalid quest data: %s", stComp.c_str());
+				sys_err("quest::PC::Save : geçersiz görev verisi: %s", stComp.c_str());
 				continue;
 			}
 
-			sys_log(1, "QUEST Save Flag %s, %s %d (%d)", stName.c_str(), stState.c_str(), lValue, i);
+			sys_log(1, "GÖREV Bayrak Kaydet %s, %s %d (%d)", stName.c_str(), stState.c_str(), lValue, i);
 
 			if (stName.length() >= QUEST_NAME_MAX_LEN)
 			{
-				sys_err("quest::PC::Save : quest name overflow");
+				sys_err("quest::PC::Save : görev isim taşması");
 				continue;
 			}
 
 			if (stState.length() >= QUEST_STATE_MAX_LEN)
 			{
-				sys_err("quest::PC::Save : quest state overflow");
+				sys_err("quest::PC::Save : görev durum taşması");
 				continue;
 			}
 
@@ -596,7 +596,7 @@ namespace quest
 
 	void PC::GiveItem(const string& label, DWORD dwVnum, int count)
 	{
-		sys_log(1, "QUEST GiveItem %s %d %d", label.c_str(),dwVnum,count);
+		sys_log(1, "GÖREV GiveItem %s %d %d", label.c_str(),dwVnum,count);
 		if (!GetFlag(m_stCurQuest+"."+label))
 		{
 			m_vRewardData.emplace_back(RewardData(RewardData::REWARD_TYPE_ITEM, dwVnum, count));
@@ -608,7 +608,7 @@ namespace quest
 
 	void PC::GiveExp(const string& label, DWORD exp)
 	{
-		sys_log(1, "QUEST GiveExp %s %d", label.c_str(),exp);
+		sys_log(1, "GÖREV GiveExp %s %d", label.c_str(),exp);
 
 		if (!GetFlag(m_stCurQuest+"."+label))
 		{
@@ -632,7 +632,7 @@ namespace quest
 			switch (it->type)
 			{
 				case RewardData::REWARD_TYPE_EXP:
-					sys_log(0, "EXP cur %d add %d next %d",ch->GetExp(), it->value1, ch->GetNextExp());
+					sys_log(0, "EXP şu anki %d ekleme %d sonraki %d",ch->GetExp(), it->value1, ch->GetNextExp());
 
 					if (ch->GetExp() + it->value1 > ch->GetNextExp())
 						ch->PointChange(POINT_EXP, ch->GetNextExp() - 1 - ch->GetExp());
@@ -647,7 +647,7 @@ namespace quest
 
 				case RewardData::REWARD_TYPE_NONE:
 				default:
-					sys_err("Invalid RewardData type");
+					sys_err("Geçersiz RewardData tipi");
 					break;
 			}
 		}

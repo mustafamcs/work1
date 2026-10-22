@@ -65,7 +65,7 @@ void CInputUDP::Handshake(LPDESC pDesc, const char * c_pData)
 		return;
 	}
 	else
-		sys_log(0, "UDP: Handshake differs %s", pDesc->GetHostName());
+		sys_log(0, "UDP: Handshake farklı %s", pDesc->GetHostName());
 }
 
 void CInputUDP::StateChecker(const char * c_pData)
@@ -77,7 +77,7 @@ int CInputUDP::Analyze(LPDESC pDesc, BYTE bHeader, const char * c_pData)
 	switch (bHeader)
 	{
 		default:
-			sys_err("unknown UDP header %u", bHeader);
+			sys_err("bilinmeyen UDP başlığı %u", bHeader);
 			break;
 	}
 

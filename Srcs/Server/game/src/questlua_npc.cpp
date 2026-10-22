@@ -189,7 +189,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("invalid vid");
+			sys_err("geçersiz vid");
 			lua_pushboolean(L, 0);
 			return 1;
 		}

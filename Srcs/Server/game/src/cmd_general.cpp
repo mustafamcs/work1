@@ -137,7 +137,7 @@ struct SendDisconnectFunc
 		if (d->GetCharacter())
 		{
 			if (d->GetCharacter()->GetGMLevel() == GM_PLAYER)
-				d->GetCharacter()->ChatPacket(CHAT_TYPE_COMMAND, "quit Shutdown(SendDisconnectFunc)");
+				d->GetCharacter()->ChatPacket(CHAT_TYPE_COMMAND, "quit Kapatma(SendDisconnectFunc)");
 		}
 	}
 };
@@ -183,7 +183,7 @@ EVENTFUNC(shutdown_event)
 
 	if (*pSec < 0)
 	{
-		sys_log(0, "shutdown_event sec %d", *pSec);
+		sys_log(0, "kapanış_olayı sn %d", *pSec);
 
 		if (--*pSec == -10)
 		{
@@ -238,7 +238,7 @@ void Shutdown(int iSec)
 
 ACMD(do_shutdown)
 {
-	sys_err("Accept shutdown command from %s.", (ch) ? ch->GetName() : "NONAME");
+	sys_err("%s tarafından kapatma komutu kabul edildi.", (ch) ? ch->GetName() : "NONAME");
 
 	TPacketGGShutdown p;
 	p.bHeader = HEADER_GG_SHUTDOWN;
@@ -546,7 +546,7 @@ ACMD(do_restart)
 			switch (subcmd)
 			{
 				case SCMD_RESTART_TOWN:
-					sys_log(0, "do_restart: restart town");
+					sys_log(0, "do_restart: şehirde yeniden başlat");
 					PIXEL_POSITION pos;
 
 					if (CWarMapManager::instance().GetStartPosition(ch->GetMapIndex(), ch->GetGuild()->GetID() < dwGuildOpponent ? 0 : 1, pos))
@@ -560,7 +560,7 @@ ACMD(do_restart)
 					break;
 
 				case SCMD_RESTART_HERE:
-					sys_log(0, "do_restart: restart here");
+					sys_log(0, "do_restart: burada yeniden başlat");
 					ch->RestartAtSamePos();
 					//ch->Show(ch->GetMapIndex(), ch->GetX(), ch->GetY());
 					ch->PointChange(POINT_HP, ch->GetMaxHP() - ch->GetHP());
@@ -575,7 +575,7 @@ ACMD(do_restart)
 	switch (subcmd)
 	{
 		case SCMD_RESTART_TOWN:
-			sys_log(0, "do_restart: restart town");
+			sys_log(0, "do_restart: şehirde yeniden başlat");
 			PIXEL_POSITION pos;
 
 			if (SECTREE_MANAGER::instance().GetRecallPositionByEmpire(ch->GetMapIndex(), ch->GetEmpire(), pos))
@@ -587,7 +587,7 @@ ACMD(do_restart)
 			break;
 
 		case SCMD_RESTART_HERE:
-			sys_log(0, "do_restart: restart here");
+			sys_log(0, "do_restart: burada yeniden başlat");
 			ch->RestartAtSamePos();
 			//ch->Show(ch->GetMapIndex(), ch->GetX(), ch->GetY());
 			ch->PointChange(POINT_HP, 50 - ch->GetHP());
@@ -1424,10 +1424,10 @@ ACMD(do_monarch_warpto)
 			PIXEL_POSITION pos;
 
 			if (!SECTREE_MANAGER::instance().GetCenterPositionOfMap(pkCCI->lMapIndex, pos))
-				ch->ChatPacket(CHAT_TYPE_INFO, "Cannot find map (index %d)", pkCCI->lMapIndex);
+				ch->ChatPacket(CHAT_TYPE_INFO, "Harita bulunamıyor (indeks %d)", pkCCI->lMapIndex);
 			else
 			{
-				//ch->ChatPacket(CHAT_TYPE_INFO, "You warp to (%d, %d)", pos.x, pos.y);
+				//ch->ChatPacket(CHAT_TYPE_INFO, "(%d, %d) konumuna ışınlandınız", pos.x, pos.y);
 				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s yanına naklet."), arg1);
 				ch->WarpSet(pos.x, pos.y);
 
@@ -1438,7 +1438,7 @@ ACMD(do_monarch_warpto)
 		}
 		else if (NULL == CHARACTER_MANAGER::instance().FindPC(arg1))
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, "There is no one by that name");
+			ch->ChatPacket(CHAT_TYPE_INFO, "Bu isimde kimse yok");
 		}
 
 		return;
@@ -1682,10 +1682,10 @@ ACMD(do_monarch_tax)
 
 	char szMsg[1024];
 
-	snprintf(szMsg, sizeof(szMsg), "By the monarch's order, the tax has been changed to %d %%", tax);
+	snprintf(szMsg, sizeof(szMsg), "Hükümdarın emriyle vergi %d %% olarak değiştirildi", tax);
 	BroadcastNotice(szMsg);
 
-	snprintf(szMsg, sizeof(szMsg), "From now on, %d %% of trade amounts will go to the state treasury.", tax);
+	snprintf(szMsg, sizeof(szMsg), "Bundan böyle ticaret tutarının %d %% kadarı hazineye gidecek.", tax);
 	BroadcastNotice(szMsg);
 
 	ch->SetMC(CHARACTER::MI_TAX);
@@ -1731,7 +1731,7 @@ ACMD(do_monarch_mob)
 
 	if (!*arg1)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "Usage: mmob <mob name>");
+		ch->ChatPacket(CHAT_TYPE_INFO, "Kullanım: mmob <mob adı>");
 		return;
 	}
 
@@ -1969,7 +1969,7 @@ ACMD(do_costume)
 	CItem* pWeapon = ch->GetWear(WEAR_COSTUME_WEAPON);
 #endif
 
-	ch->ChatPacket(CHAT_TYPE_INFO, "COSTUME status:");
+	ch->ChatPacket(CHAT_TYPE_INFO, "KOSTÜM durumu:");
 
 	if (pHair)
 	{
@@ -2096,7 +2096,7 @@ ACMD(do_cube)
 	if (!ch->CanDoCube())
 		return;
 
-	sys_log(1, "CUBE COMMAND <%s>: %s", ch->GetName(), argument);
+	sys_log(1, "CUBE KOMUTU <%s>: %s", ch->GetName(), argument);
 	int cube_index = 0, inven_index = 0;
 	const char *line;
 
@@ -2108,7 +2108,7 @@ ACMD(do_cube)
 	if (0 == arg1[0])
 	{
 		// print usage
-		ch->ChatPacket(CHAT_TYPE_INFO, "Usage: cube open");
+		ch->ChatPacket(CHAT_TYPE_INFO, "Kullanım: cube open");
 		ch->ChatPacket(CHAT_TYPE_INFO, "       cube close");
 		ch->ChatPacket(CHAT_TYPE_INFO, "       cube add <inveltory_index>");
 		ch->ChatPacket(CHAT_TYPE_INFO, "       cube delete <cube_index>");
@@ -2187,7 +2187,7 @@ ACMD(do_cube)
 			if (0 != arg2[0])
 			{
 				while (true == Cube_make(ch))
-					sys_log(1, "cube make success");
+					sys_log(1, "cube üretim başarılı");
 			}
 			else
 				Cube_make(ch);
@@ -2353,7 +2353,7 @@ ACMD(do_ride)
     {
 	if (ch->IsHorseRiding())
 	{
-	    sys_log(1, "[DO_RIDE] stop riding");
+	    sys_log(1, "[DO_RIDE] binmeyi durdur");
 	    ch->StopRiding();
 	    return;
 	}
@@ -2369,7 +2369,7 @@ ACMD(do_ride)
     {
 	if (ch->GetHorse() != NULL)
 	{
-	    sys_log(1, "[DO_RIDE] start riding");
+	    sys_log(1, "[DO_RIDE] binmeye başla");
 	    ch->StartRiding();
 	    return;
 	}
@@ -2390,7 +2390,7 @@ ACMD(do_ride)
 #endif
 			)
 			{
-				sys_log(1, "[DO_RIDE] USE UNIQUE ITEM");
+				sys_log(1, "[DO_RIDE] BENZERSİZ EŞYA KULLAN");
 				//ch->EquipItem(item);
 				ch->UseItem(TItemPos (INVENTORY, i));
 				return;
@@ -2403,13 +2403,13 @@ ACMD(do_ride)
 		case 71116:
 		case 71118:
 		case 71120:
-		    sys_log(1, "[DO_RIDE] USE QUEST ITEM");
+		    sys_log(1, "[DO_RIDE] GÖREV EŞYASI KULLAN");
 		    ch->UseItem(TItemPos (INVENTORY, i));
 		    return;
 	    }
 
 		if( (item->GetVnum() > 52000) && (item->GetVnum() < 52091) )	{
-			sys_log(1, "[DO_RIDE] USE QUEST ITEM");
+			sys_log(1, "[DO_RIDE] GÖREV EŞYASI KULLAN");
 			ch->UseItem(TItemPos (INVENTORY, i));
 		    return;
 		}

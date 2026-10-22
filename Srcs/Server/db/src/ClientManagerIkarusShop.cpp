@@ -40,7 +40,7 @@ bool CClientManager::InitializeIkarusShopTable()
 #ifdef EXTEND_IKASHOP_ULTIMATE
 	if(!m_offlineshopAveragePriceCache.InitializeTable())
 	{
-		sys_err("CANNOT INITIALIZE OFFLINESHOP: FAILED TO LOAD ikashop_sale TABLE");
+		sys_err("OFFLINESHOP BAŞLATILAMIYOR: ikashop_sale TABLOSU YÜKLENEMEDİ");
 		return false;
 	}
 #endif
@@ -62,7 +62,7 @@ bool CClientManager::InitializeIkarusShopShopTable()
 
 	// handling sql errors
 	if (msg->uiSQLErrno != 0 || !msg->Get()) {
-		sys_err("CANNOT LOAD ikashop_offlineshop TABLE , errorcode %d sql->Get() = %p", msg->uiSQLErrno, msg->Get());
+		sys_err("ikashop_offlineshop TABLOSU YÜKLENEMİYOR , hatakodu %d sql->Get() = %p", msg->uiSQLErrno, msg->Get());
 		return false;
 	}
 
@@ -119,7 +119,7 @@ bool CClientManager::InitializeIkarusShopShopItemsTable()
 
 	// handling sql errors
 	if (msg->uiSQLErrno != 0 || !msg->Get()){
-		sys_err("CANNOT LOAD SHOP ITEM TABLE , errorcode %d  sql %p", msg->uiSQLErrno, msg->Get());
+		sys_err("DÜKKÂN EŞYA TABLOSU YÜKLENEMİYOR , hatakodu %d  sql %p", msg->uiSQLErrno, msg->Get());
 		return false;
 	}
 
@@ -152,7 +152,7 @@ bool CClientManager::InitializeIkarusShopShopItemsTable()
 		std::string jsonStr = row[col++];
 		auto jsonOptional = str_to_json(jsonStr.c_str());
 		if (!jsonOptional) {
-			sys_err("INVALID JSON ON SHOP ITEM %d (owner %d)  json value (%s)", item.id, item.owner, jsonStr.c_str());
+			sys_err("DÜKKÂN EŞYASI %d ÜZERİNDE GEÇERSİZ JSON (sahip %d)  json değeri (%s)", item.id, item.owner, jsonStr.c_str());
 			continue;
 		}
 
@@ -161,7 +161,7 @@ bool CClientManager::InitializeIkarusShopShopItemsTable()
 		// fetching price yang
 		auto priceYang = jsonHelper::getValue<int64_t>(json, "yang");
 		if (!priceYang) {
-			sys_err("INVALID JSON ON SHOP ITEM %d (owner %d) CANNOT EXTRACT PRICE YANG   json value (%s)", item.id, item.owner, jsonStr.c_str());
+			sys_err("DÜKKÂN EŞYASI %d ÜZERİNDE GEÇERSİZ JSON (sahip %d) YANG FİYATI ÇIKARILAMIYOR   json değeri (%s)", item.id, item.owner, jsonStr.c_str());
 			continue;
 		}
 		item.price.yang = *priceYang;
@@ -170,7 +170,7 @@ bool CClientManager::InitializeIkarusShopShopItemsTable()
 #ifdef ENABLE_CHEQUE_SYSTEM
 		auto priceCheque = jsonHelper::getValue<int>(json, "cheque");
 		if (!priceCheque) {
-			sys_err("INVALID JSON ON SHOP ITEM %d (owner %d) CANNOT EXTRACT PRICE CHEQUE   json value (%s)", item.id, item.owner, jsonStr.c_str());
+			sys_err("DÜKKÂN EŞYASI %d ÜZERİNDE GEÇERSİZ JSON (sahip %d) ÇEK FİYATI ÇIKARILAMIYOR   json değeri (%s)", item.id, item.owner, jsonStr.c_str());
 			continue;
 		}
 		item.price.cheque = *priceCheque;
@@ -181,7 +181,7 @@ bool CClientManager::InitializeIkarusShopShopItemsTable()
 		item.expiration = static_cast<ikashop::ExpirationType>(expiration ? *expiration : 0);
 		
 		if (!m_offlineshopShopCache.PutItem(item.owner, item.id, item/*, isSold*/))
-			sys_err("cannot execute putitem !? owner %d , item %d", item.owner, item.id);
+			sys_err("putitem çalıştırılamıyor !? sahip %d , eşya %d", item.owner, item.id);
 	}
 
 	return true;
@@ -194,7 +194,7 @@ bool CClientManager::InitializeIkarusShopOfferTable()
 
 	// sql errors handling
 	if (msg->uiSQLErrno != 0 || !msg->Get())	{
-		sys_err("CANNOT LOAD ikashop_private_offer TABLE , errorcode %d  sql %p", msg->uiSQLErrno, msg->Get());
+		sys_err("ikashop_private_offer TABLOSU YÜKLENEMİYOR , hatakodu %d  sql %p", msg->uiSQLErrno, msg->Get());
 		return false;
 	}
 
@@ -261,7 +261,7 @@ bool CClientManager::InitializeIkarusShopAuctionTable()
 		str_to_cstring(info.ownername, row[col++]);
 
 		if(!jsonResult){
-			sys_err("FAILED FETCH JSON AUCTION : pid(%d) item(%d) playername(%s)", info.owner, info.id, info.ownername);
+			sys_err("JSON AÇIK ARTIRMA ALINAMADI : pid(%d) eşya(%d) oyuncuadı(%s)", info.owner, info.id, info.ownername);
 			continue;
 		}
 
@@ -271,7 +271,7 @@ bool CClientManager::InitializeIkarusShopAuctionTable()
 		// fetching json duration
 		auto extractedDuration = jsonHelper::getValue<int>(jsonValue, "duration");
 		if(!extractedDuration){
-			sys_err("FAILED FETCH JSON AUCTION DURATION : pid(%d) item(%d) playername(%s)", info.owner, info.id, info.ownername);
+			sys_err("JSON AÇIK ARTIRMA SÜRESİ ALINAMADI : pid(%d) eşya(%d) oyuncuadı(%s)", info.owner, info.id, info.ownername);
 			continue;
 		}
 		info.duration = *extractedDuration;
@@ -279,7 +279,7 @@ bool CClientManager::InitializeIkarusShopAuctionTable()
 		// fetching json starting price
 		auto extractedPrice = jsonHelper::getValue<int64_t>(jsonValue, "price");
 		if(!extractedPrice){
-			sys_err("FAILED FETCH JSON AUCTION STARTING PRICE : pid(%d) item(%d) playername(%s)", info.owner, info.id, info.ownername);
+			sys_err("JSON AÇIK ARTIRMA BAŞLANGIÇ FİYATI ALINAMADI : pid(%d) eşya(%d) oyuncuadı(%s)", info.owner, info.id, info.ownername);
 			continue;
 		}
 		info.price.yang = *extractedPrice;
@@ -287,7 +287,7 @@ bool CClientManager::InitializeIkarusShopAuctionTable()
 		// fetching json expiration
 		auto extractedExpiration = jsonHelper::getValue<int>(jsonValue, "expiration");
 		if (!extractedExpiration) {
-			sys_err("FAILED FETCH JSON AUCTION EXPIRATION : pid(%d) item(%d) playername(%s)", info.owner, info.id, info.ownername);
+			sys_err("JSON AÇIK ARTIRMA BİTİŞİ ALINAMADI : pid(%d) eşya(%d) oyuncuadı(%s)", info.owner, info.id, info.ownername);
 			continue;
 		}
 		info.expiration = static_cast<ikashop::ExpirationType>(*extractedExpiration);
@@ -297,7 +297,7 @@ bool CClientManager::InitializeIkarusShopAuctionTable()
 		// fetching json spawn map
 		auto extractedSpawnMap = jsonHelper::getValue<int>(jsonValue, "map");
 		if (!extractedSpawnMap) {
-			sys_err("FAILED FETCH JSON AUCTION SPAWN MAP : pid(%d) item(%d) playername(%s)", info.owner, info.id, info.ownername);
+			sys_err("JSON AÇIK ARTIRMA DOĞMA HARİTASI ALINAMADI : pid(%d) eşya(%d) oyuncuadı(%s)", info.owner, info.id, info.ownername);
 			continue;
 		}
 		info.spawn.map = *extractedSpawnMap;
@@ -305,7 +305,7 @@ bool CClientManager::InitializeIkarusShopAuctionTable()
 		// fetching json spawn x
 		auto extractedSpawnX = jsonHelper::getValue<int>(jsonValue, "x");
 		if (!extractedSpawnX) {
-			sys_err("FAILED FETCH JSON AUCTION SPAWN X : pid(%d) item(%d) playername(%s)", info.owner, info.id, info.ownername);
+			sys_err("JSON AÇIK ARTIRMA DOĞMA X ALINAMADI : pid(%d) eşya(%d) oyuncuadı(%s)", info.owner, info.id, info.ownername);
 			continue;
 		}
 		info.spawn.x = *extractedSpawnX;
@@ -313,7 +313,7 @@ bool CClientManager::InitializeIkarusShopAuctionTable()
 		// fetching json spawn y
 		auto extractedSpawnY = jsonHelper::getValue<int>(jsonValue, "y");
 		if (!extractedSpawnY) {
-			sys_err("FAILED FETCH JSON AUCTION SPAWN Y : pid(%d) item(%d) playername(%s)", info.owner, info.id, info.ownername);
+			sys_err("JSON AÇIK ARTIRMA DOĞMA Y ALINAMADI : pid(%d) eşya(%d) oyuncuadı(%s)", info.owner, info.id, info.ownername);
 			continue;
 		}
 		info.spawn.y = *extractedSpawnY;
@@ -335,7 +335,7 @@ bool CClientManager::InitializeIkarusShopAuctionOfferTable()
 	// sql error handling
 	if (msg->uiSQLErrno != 0 || !msg->Get())
 	{
-		sys_err("CANNOT LOAD offlineshop_auctions TABLE , errorcode %d  sql %p", msg->uiSQLErrno, msg->Get());
+		sys_err("offlineshop_auctions TABLOSU YÜKLENEMİYOR , hatakodu %d  sql %p", msg->uiSQLErrno, msg->Get());
 		return false;
 	}
 
@@ -498,7 +498,7 @@ void CClientManager::RecvIkarusShopPacket(CPeer* peer,const char* data)
 #endif
 
 	default:
-		sys_err("UNKNOW NEW OFFLINESHOP SUBHEADER GD %d",pack.bSubHeader);
+		sys_err("BİLİNMEYEN YENİ OFFLINESHOP ALT BAŞLIĞI GD %d",pack.bSubHeader);
 		break;
 	}
 
@@ -688,7 +688,7 @@ bool CClientManager::RecvIkarusShopRemoveItemPacket(CPeer* peer, const char* dat
 		SendIkarusShopRemoveItemPacket(subpack.ownerid, subpack.itemid, peer);
 
 	else
-		sys_err("cannot remove item %u shop %u item ?!", subpack.ownerid, subpack.itemid);
+		sys_err("eşya kaldırılamıyor %u dükkan %u eşya ?!", subpack.ownerid, subpack.itemid);
 
 	return true;
 }
@@ -956,7 +956,7 @@ bool CClientManager::RecvIkarusShopOfferCancel(const char* data)
 #endif
 	}
 	else
-		sys_err("some problems with cache cancel offer");
+		sys_err("önbellek teklif iptaliyle ilgili sorunlar");
 
 	return true;
 }
@@ -2008,7 +2008,7 @@ void CClientManager::IkarusShopLoadNotifications(CPeer* peer, DWORD owner)
 
 	if(!msg || !msg->Get() || msg->uiSQLErrno != 0)
 	{
-		sys_err("CANNOT LOAD NOTIFICATION FOR OWNER %u, errorno %d", owner, (int) msg->uiSQLErrno);
+		sys_err("%u SAHİBİ İÇİN BİLDİRİM YÜKLENEMİYOR, hata no %d", owner, (int) msg->uiSQLErrno);
 		return;
 	}
 
@@ -2061,7 +2061,7 @@ void CClientManager::AppendIkarusShopNotification(ikashop::ENotificationType typ
 	auto msg = CDBManager::instance().DirectQuery(query.c_str());
 	if(!msg || !msg->Get() || msg->uiSQLErrno != 0)
 	{
-		sys_err("CANNOT INSERT NOTIFICATION INTO TABLE, SKIPPING: Owner (%u)  Type (%d)", owner, (int)type);
+		sys_err("TABLOYA BİLDİRİM EKLENEMİYOR, ATLANIYOR: Sahip (%u)  Tip (%d)", owner, (int)type);
 		return;
 	}
 	

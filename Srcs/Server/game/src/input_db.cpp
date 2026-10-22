@@ -69,7 +69,7 @@ bool GetServerLocation(TAccountTable & rTab, BYTE bEmpire)
 		if (!CMapLocation::instance().Get(rTab.players[i].x, rTab.players[i].y, lIndex, rTab.players[i].lAddr, rTab.players[i].wPort))
 		#endif
 		{
-			sys_err("location error name %s mapindex %d %d x %d empire %d",
+			sys_err("konum hatası isim %s mapindex %d %d x %d imparatorluk %d",
 					rTab.players[i].szName, lIndex, rTab.players[i].x, rTab.players[i].y, rTab.bEmpire);
 
 			rTab.players[i].x = EMPIRE_START_X(rTab.bEmpire);
@@ -83,7 +83,7 @@ bool GetServerLocation(TAccountTable & rTab, BYTE bEmpire)
 			if (!CMapLocation::instance().Get(rTab.players[i].x, rTab.players[i].y, lIndex, rTab.players[i].lAddr, rTab.players[i].wPort))
 			#endif
 			{
-				sys_err("cannot find server for mapindex %d %d x %d (name %s)",
+				sys_err("mapindex %d %d x %d için sunucu bulunamıyor (isim %s)",
 						lIndex,
 						rTab.players[i].x,
 						rTab.players[i].y,
@@ -101,7 +101,7 @@ bool GetServerLocation(TAccountTable & rTab, BYTE bEmpire)
 #endif
 		struct in_addr in;
 		in.s_addr = rTab.players[i].lAddr;
-		sys_log(0, "success to %s:%d", inet_ntoa(in), rTab.players[i].wPort);
+		sys_log(0, "%s:%d baglantisi basarili", inet_ntoa(in), rTab.players[i].wPort);
 	}
 
 	return bFound;
@@ -119,7 +119,7 @@ void CInputDB::LoginSuccess(DWORD dwHandle, const char *data)
 	itertype(g_sim) it = g_sim.find(pTab->id);
 	if (g_sim.end() != it)
 	{
-		sys_log(0, "CInputDB::LoginSuccess - already exist sim [%s]", pTab->login);
+		sys_log(0, "CInputDB::LoginSuccess - sim zaten var [%s]", pTab->login);
 		it->second->SendLoad();
 		return;
 	}
@@ -128,7 +128,7 @@ void CInputDB::LoginSuccess(DWORD dwHandle, const char *data)
 
 	if (!d)
 	{
-		sys_log(0, "CInputDB::LoginSuccess - cannot find handle [%s]", pTab->login);
+		sys_log(0, "CInputDB::LoginSuccess - handle bulunamıyor [%s]", pTab->login);
 
 		TLogoutPacket pack;
 
@@ -218,7 +218,7 @@ void CInputDB::PlayerCreateSuccess(LPDESC d, const char * data)
 	if (!CMapLocation::instance().Get(pPacketDB->player.x, pPacketDB->player.y, lIndex, pPacketDB->player.lAddr, pPacketDB->player.wPort))
 	#endif
 	{
-		sys_err("InputDB::PlayerCreateSuccess: cannot find server for mapindex %d %d x %d (name %s)",
+		sys_err("InputDB::PlayerCreateSuccess: mapindex %d %d x %d için sunucu bulunamıyor (isim %s)",
 				lIndex,
 				pPacketDB->player.x,
 				pPacketDB->player.y,
@@ -369,7 +369,7 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 
 	if (!SECTREE_MANAGER::instance().GetValidLocation(pTab->lMapIndex, pTab->x, pTab->y, lMapIndex, pos, d->GetEmpire()))
 	{
-		sys_err("InputDB::PlayerLoad : cannot find valid location %d x %d (name: %s)", pTab->x, pTab->y, pTab->name);
+		sys_err("InputDB::PlayerLoad : geçerli konum bulunamıyor %d x %d (isim: %s)", pTab->x, pTab->y, pTab->name);
 #ifdef ENABLE_GOHOME_IF_MAP_NOT_EXIST
 		lMapIndex = EMPIRE_START_MAP(d->GetAccountTable().bEmpire);
 		pos.x = EMPIRE_START_X(d->GetAccountTable().bEmpire);
@@ -387,13 +387,13 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 	if (d->GetCharacter() || d->IsPhase(PHASE_GAME))
 	{
 		LPCHARACTER p = d->GetCharacter();
-		sys_err("login state already has main state (character %s %p)", p->GetName(), get_pointer(p));
+		sys_err("giriş durumunda zaten ana durum var (karakter %s %p)", p->GetName(), get_pointer(p));
 		return;
 	}
 
 	if (NULL != CHARACTER_MANAGER::Instance().FindPC(pTab->name))
 	{
-		sys_err("InputDB: PlayerLoad : %s already exist in game", pTab->name);
+		sys_err("InputDB: PlayerLoad : %s zaten oyunda", pTab->name);
 		return;
 	}
 
@@ -438,7 +438,7 @@ void CInputDB::PlayerLoad(LPDESC d, const char * data)
 	//if (!map_allow_find(lMapIndex >= 10000 ? lMapIndex / 10000 : lMapIndex) || !CheckEmpire(ch, lMapIndex))
 	if (!map_allow_find(lPublicMapIndex))
 	{
-		sys_err("InputDB::PlayerLoad : entering %d map is not allowed here (name: %s, empire %u)",
+		sys_err("InputDB::PlayerLoad : %d haritasına giriş burada izinli değil (isim: %s, imparatorluk %u)",
 				lMapIndex, pTab->name, d->GetEmpire());
 
 		ch->SetWarpLocation(EMPIRE_START_MAP(d->GetEmpire()),
@@ -484,7 +484,7 @@ void CInputDB::Boot(const char* data)
 	sys_log(0, "BOOT: VERSION: %d", bVersion);
 	if (bVersion != 6)
 	{
-		sys_err("boot version error");
+		sys_err("açılış sürüm hatası");
 		thecore_shutdown();
 	}
 
@@ -511,7 +511,7 @@ void CInputDB::Boot(const char* data)
 
 	if (decode_2bytes(data)!=sizeof(TMobTable))
 	{
-		sys_err("mob table size error");
+		sys_err("mob tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -533,7 +533,7 @@ void CInputDB::Boot(const char* data)
 
 	if (decode_2bytes(data) != sizeof(TItemTable))
 	{
-		sys_err("item table size error");
+		sys_err("eşya tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -555,7 +555,7 @@ void CInputDB::Boot(const char* data)
 
 	if (decode_2bytes(data) != sizeof(TShopTable))
 	{
-		sys_err("shop table size error");
+		sys_err("dükkan tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -569,7 +569,7 @@ void CInputDB::Boot(const char* data)
 	{
 		if (!CShopManager::instance().Initialize((TShopTable *) data, size))
 		{
-			sys_err("shop table Initialize error");
+			sys_err("dükkan tablosu başlatma hatası");
 			thecore_shutdown();
 			return;
 		}
@@ -582,7 +582,7 @@ void CInputDB::Boot(const char* data)
 
 	if (decode_2bytes(data) != sizeof(TSkillTable))
 	{
-		sys_err("skill table size error");
+		sys_err("beceri tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -596,7 +596,7 @@ void CInputDB::Boot(const char* data)
 	{
 		if (!CSkillManager::instance().Initialize((TSkillTable *) data, size))
 		{
-			sys_err("cannot initialize skill table");
+			sys_err("beceri tablosu başlatılamıyor");
 			thecore_shutdown();
 			return;
 		}
@@ -608,7 +608,7 @@ void CInputDB::Boot(const char* data)
 	 */
 	if (decode_2bytes(data) != sizeof(TRefineTable))
 	{
-		sys_err("refine table size error");
+		sys_err("geliştirme tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -629,7 +629,7 @@ void CInputDB::Boot(const char* data)
 	 */
 	if (decode_2bytes(data) != sizeof(TItemAttrTable))
 	{
-		sys_err("item attr table size error");
+		sys_err("eşya efsun tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -660,7 +660,7 @@ void CInputDB::Boot(const char* data)
      */
 	if (decode_2bytes(data) != sizeof(TItemAttrTable))
 	{
-		sys_err("item rare table size error");
+		sys_err("eşya nadir tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -692,7 +692,7 @@ void CInputDB::Boot(const char* data)
 
 	if (decode_2bytes(data) != sizeof(TBanwordTable))
 	{
-		sys_err("ban word table size error");
+		sys_err("yasaklı kelime tablosu boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -713,7 +713,7 @@ void CInputDB::Boot(const char* data)
 
 		if (decode_2bytes(data) != sizeof(TLand))
 		{
-			sys_err("land table size error");
+			sys_err("arazi tablosu boyut hatası");
 			thecore_shutdown();
 			return;
 		}
@@ -734,7 +734,7 @@ void CInputDB::Boot(const char* data)
 
 		if (decode_2bytes(data) != sizeof(TObjectProto))
 		{
-			sys_err("object proto table size error");
+			sys_err("nesne proto tablosu boyut hatası");
 			thecore_shutdown();
 			return;
 		}
@@ -751,7 +751,7 @@ void CInputDB::Boot(const char* data)
 		 */
 		if (decode_2bytes(data) != sizeof(TObject))
 		{
-			sys_err("object table size error");
+			sys_err("nesne tablosu boyut hatası");
 			thecore_shutdown();
 			return;
 		}
@@ -771,7 +771,7 @@ void CInputDB::Boot(const char* data)
 
 	if (decode_2bytes(data) != sizeof(TItemIDRangeTable) )
 	{
-		sys_err("ITEM ID RANGE size error");
+		sys_err("EŞYA ID ARALIĞI boyut hatası");
 		thecore_shutdown();
 		return;
 	}
@@ -792,7 +792,7 @@ void CInputDB::Boot(const char* data)
 	data += 2;
 	int HostSize = decode_2bytes(data );
 	data += 2;
-	sys_log(0, "GM Value Count %d %d", HostSize, ChunkSize  );
+	sys_log(0, "GM Değer Sayısı %d %d", HostSize, ChunkSize  );
 	for (int n = 0; n < HostSize; ++n )
 	{
 		gm_new_host_inert(data );
@@ -846,24 +846,24 @@ void CInputDB::Boot(const char* data)
 	WORD endCheck=decode_2bytes(data);
 	if (endCheck != 0xffff)
 	{
-		sys_err("boot packet end check error [%x]!=0xffff", endCheck);
+		sys_err("açılış paketi son kontrol hatası [%x]!=0xffff", endCheck);
 		thecore_shutdown();
 		return;
 	}
 	else
-		sys_log(0, "boot packet end check ok [%x]==0xffff", endCheck );
+		sys_log(0, "açılış paketi son kontrol tamam [%x]==0xffff", endCheck );
 	data +=2;
 
 	if (!ITEM_MANAGER::instance().SetMaxItemID(*range))
 	{
-		sys_err("not enough item id contact your administrator!");
+		sys_err("yeterli eşya id yok, yöneticinize başvurun!");
 		thecore_shutdown();
 		return;
 	}
 
 	if (!ITEM_MANAGER::instance().SetMaxSpareItemID(*rangespare))
 	{
-		sys_err("not enough item id for spare contact your administrator!");
+		sys_err("yedek için yeterli eşya id yok, yöneticinize başvurun!");
 		thecore_shutdown();
 		return;
 	}
@@ -896,13 +896,13 @@ void CInputDB::Boot(const char* data)
 	snprintf(szDragonSoulTableFileName, sizeof(szDragonSoulTableFileName),
 			"%s/dragon_soul_table.txt", LocaleService_GetBasePath().c_str());
 
-	sys_log(0, "Initializing Informations of Cube System");
+	sys_log(0, "Küp Sistemi Bilgileri başlatılıyor");
 	Cube_InformationInitialize();
 
 	sys_log(0, "LoadLocaleFile: CommonDropItem: %s", szCommonDropItemFileName);
 	if (!ITEM_MANAGER::instance().ReadCommonDropItemFile(szCommonDropItemFileName))
 	{
-		sys_err("cannot load CommonDropItem: %s", szCommonDropItemFileName);
+		sys_err("CommonDropItem yüklenemiyor: %s", szCommonDropItemFileName);
 		thecore_shutdown();
 		return;
 	}
@@ -910,7 +910,7 @@ void CInputDB::Boot(const char* data)
 	sys_log(0, "LoadLocaleFile: ETCDropItem: %s", szETCDropItemFileName);
 	if (!ITEM_MANAGER::instance().ReadEtcDropItemFile(szETCDropItemFileName))
 	{
-		sys_err("cannot load ETCDropItem: %s", szETCDropItemFileName);
+		sys_err("ETCDropItem yüklenemiyor: %s", szETCDropItemFileName);
 		thecore_shutdown();
 		return;
 	}
@@ -918,7 +918,7 @@ void CInputDB::Boot(const char* data)
 	sys_log(0, "LoadLocaleFile: DropItemGroup: %s", szDropItemGroupFileName);
 	if (!ITEM_MANAGER::instance().ReadDropItemGroup(szDropItemGroupFileName))
 	{
-		sys_err("cannot load DropItemGroup: %s", szDropItemGroupFileName);
+		sys_err("DropItemGroup yüklenemiyor: %s", szDropItemGroupFileName);
 		thecore_shutdown();
 		return;
 	}
@@ -926,7 +926,7 @@ void CInputDB::Boot(const char* data)
 	sys_log(0, "LoadLocaleFile: SpecialItemGroup: %s", szSpecialItemGroupFileName);
 	if (!ITEM_MANAGER::instance().ReadSpecialDropItemFile(szSpecialItemGroupFileName))
 	{
-		sys_err("cannot load SpecialItemGroup: %s", szSpecialItemGroupFileName);
+		sys_err("SpecialItemGroup yüklenemiyor: %s", szSpecialItemGroupFileName);
 		thecore_shutdown();
 		return;
 	}
@@ -934,13 +934,13 @@ void CInputDB::Boot(const char* data)
 	sys_log(0, "LoadLocaleFile: ItemVnumMaskTable : %s", szItemVnumMaskTableFileName);
 	if (!ITEM_MANAGER::instance().ReadItemVnumMaskTable(szItemVnumMaskTableFileName))
 	{
-		sys_log(0, "Could not open MaskItemTable");
+		sys_log(0, "MaskItemTable açılamadı");
 	}
 
 	sys_log(0, "LoadLocaleFile: MOBDropItemFile: %s", szMOBDropItemFileName);
 	if (!ITEM_MANAGER::instance().ReadMonsterDropItemGroup(szMOBDropItemFileName))
 	{
-		sys_err("cannot load MOBDropItemFile: %s", szMOBDropItemFileName);
+		sys_err("MOBDropItemFile yüklenemiyor: %s", szMOBDropItemFileName);
 		thecore_shutdown();
 		return;
 	}
@@ -948,7 +948,7 @@ void CInputDB::Boot(const char* data)
 	sys_log(0, "LoadLocaleFile: MapIndex: %s", szMapIndexFileName);
 	if (!SECTREE_MANAGER::instance().Build(szMapIndexFileName, LocaleService_GetMapPath().c_str()))
 	{
-		sys_err("cannot load MapIndex: %s", szMapIndexFileName);
+		sys_err("MapIndex yüklenemiyor: %s", szMapIndexFileName);
 		thecore_shutdown();
 		return;
 	}
@@ -956,7 +956,7 @@ void CInputDB::Boot(const char* data)
 	sys_log(0, "LoadLocaleFile: DragonSoulTable: %s", szDragonSoulTableFileName);
 	if (!DSManager::instance().ReadDragonSoulTableFile(szDragonSoulTableFileName))
 	{
-		sys_err("cannot load DragonSoulTable: %s", szDragonSoulTableFileName);
+		sys_err("DragonSoulTable yüklenemiyor: %s", szDragonSoulTableFileName);
 		//thecore_shutdown();
 		//return;
 	}
@@ -1032,7 +1032,7 @@ EVENTFUNC(quest_login_event)
 	}
 	else
 	{
-		sys_err(0, "input_db.cpp:quest_login_event INVALID PHASE pid %d", ch->GetPlayerID());
+		sys_err(0, "input_db.cpp:quest_login_event GEÇERSİZ AŞAMA pid %d", ch->GetPlayerID());
 		return 0;
 	}
 }
@@ -1057,7 +1057,7 @@ void CInputDB::QuestLoad(LPDESC d, const char * c_pData)
 		{
 			if (ch->GetPlayerID() != pQuestTable[0].dwPID)
 			{
-				sys_err("PID differs %u %u", ch->GetPlayerID(), pQuestTable[0].dwPID);
+				sys_err("PID farklı %u %u", ch->GetPlayerID(), pQuestTable[0].dwPID);
 				return;
 			}
 		}
@@ -1068,7 +1068,7 @@ void CInputDB::QuestLoad(LPDESC d, const char * c_pData)
 
 		if (!pkPC)
 		{
-			sys_err("null quest::PC with id %u", pQuestTable[0].dwPID);
+			sys_err("id %u ile null quest::PC", pQuestTable[0].dwPID);
 			return;
 		}
 
@@ -1113,7 +1113,7 @@ void CInputDB::SafeboxLoad(LPDESC d, const char * c_pData)
 
 	if (d->GetAccountTable().id != p->dwID)
 	{
-		sys_err("SafeboxLoad: safebox has different id %u != %u", d->GetAccountTable().id, p->dwID);
+		sys_err("SafeboxLoad: kasanın farklı id'si var %u != %u", d->GetAccountTable().id, p->dwID);
 		return;
 	}
 
@@ -1203,7 +1203,7 @@ void CInputDB::MallLoad(LPDESC d, const char * c_pData)
 
 	if (d->GetAccountTable().id != p->dwID)
 	{
-		sys_err("safebox has different id %u != %u", d->GetAccountTable().id, p->dwID);
+		sys_err("kasanın farklı id'si var %u != %u", d->GetAccountTable().id, p->dwID);
 		return;
 	}
 
@@ -1371,7 +1371,7 @@ void CInputDB::GuildWar(const char* c_pData)
 			break;
 
 		default:
-			sys_err("Unknown guild war state");
+			sys_err("Bilinmeyen lonca savaşı durumu");
 			break;
 	}
 }
@@ -1428,7 +1428,7 @@ void CInputDB::GuildChangeGrade(const char* c_pData)
 
 void CInputDB::GuildChangeMemberData(const char* c_pData)
 {
-	sys_log(0, "Recv GuildChangeMemberData");
+	sys_log(0, "GuildChangeMemberData Alındı");
 	TPacketGuildChangeMemberData * p = (TPacketGuildChangeMemberData *) c_pData;
 	CGuild * g = CGuildManager::instance().TouchGuild(p->guild_id);
 
@@ -1445,7 +1445,7 @@ void CInputDB::GuildDisband(const char* c_pData)
 void CInputDB::GuildLadder(const char* c_pData)
 {
 	TPacketGuildLadder* p = (TPacketGuildLadder*) c_pData;
-	sys_log(0, "Recv GuildLadder %u %d / w %d d %d l %d", p->dwGuild, p->lLadderPoint, p->lWin, p->lDraw, p->lLoss);
+	sys_log(0, "GuildLadder Alındı %u %d / g %d b %d m %d", p->dwGuild, p->lLadderPoint, p->lWin, p->lDraw, p->lLoss);
 	CGuild * g = CGuildManager::instance().TouchGuild(p->dwGuild);
 
 	g->SetLadderPoint(p->lLadderPoint);
@@ -1477,7 +1477,7 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 
 		if (!item)
 		{
-			sys_err("cannot create item by vnum %u (name %s id %u)", p->vnum, ch->GetName(), p->id);
+			sys_err("vnum %u ile eşya oluşturulamıyor (isim %s id %u)", p->vnum, ch->GetName(), p->id);
 			continue;
 		}
 
@@ -1529,7 +1529,7 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 					break;
 
 				default:
-					sys_log(0, "ITEM_LOAD: unknown window %d for item %u id %u (player %s), kept in db",
+					sys_log(0, "ITEM_LOAD: bilinmeyen pencere %d eşya %u id %u için (oyuncu %s), db'de tutuldu",
 						p->window, p->vnum, p->id, ch->GetName());
 					M2_DESTROY_ITEM(item);
 					item = NULL;
@@ -1541,7 +1541,7 @@ void CInputDB::ItemLoad(LPDESC d, const char * c_pData)
 			continue;
 
 		if (false == item->OnAfterCreatedItem())
-			sys_err("Failed to call ITEM::OnAfterCreatedItem (vnum: %d, id: %d)", item->GetVnum(), item->GetID());
+			sys_err("ITEM::OnAfterCreatedItem çağrılamadı (vnum: %d, id: %d)", item->GetVnum(), item->GetID());
 
 		item->SetSkipSave(false);
 	}
@@ -1738,7 +1738,7 @@ void CInputDB::AuthLogin(LPDESC d, const char * c_pData)
 	ptoc.bResult = bResult;
 
 	d->Packet(&ptoc, sizeof(TPacketGCAuthSuccess));
-	sys_log(0, "AuthLogin result %u key %u", bResult, d->GetLoginKey());
+	sys_log(0, "AuthLogin sonuç %u anahtar %u", bResult, d->GetLoginKey());
 }
 
 void CInputDB::ChangeEmpirePriv(const char* c_pData)
@@ -1984,7 +1984,7 @@ void CInputDB::MyshopPricelistRes(LPDESC d, const TPacketMyshopPricelistHeader* 
 	if (!d || !(ch = d->GetCharacter()) )
 		return;
 
-	sys_log(0, "RecvMyshopPricelistRes name[%s]", ch->GetName());
+	sys_log(0, "RecvMyshopPricelistRes isim[%s]", ch->GetName());
 	ch->UseSilkBotaryReal(p );
 }
 // END_OF_MYSHOP_PRICE_LIST
@@ -2057,7 +2057,7 @@ void IkarusShopLoadTables(const char* data)
 		auto shop = manager.GetShopByOwnerID(offerInfo.ownerid);
 		if (!shop)
 		{
-			sys_err("CANNOT FIND SHOP BY OWNERID (TOfferInfo) %d ", offerInfo.ownerid);
+			sys_err("SAHIP KIMLIGIYLE DUKKAN BULUNAMADI (TOfferInfo) %d ", offerInfo.ownerid);
 			continue;
 		}
 
@@ -2815,7 +2815,7 @@ bool CInputDB::Process(LPDESC d, const void * orig, int bytes, int & r_iBytesPro
 
 		if (Analyze(d, bHeader, pRealData) < 0)
 		{
-			sys_err("in InputDB: UNKNOWN HEADER: %d, LAST HEADER: %d(%d), REMAIN BYTES: %d, DESC: %d",
+			sys_err("InputDB'de: BİLİNMEYEN BAŞLIK: %d, SON BAŞLIK: %d(%d), KALAN BAYT: %d, DESC: %d",
 					bHeader, bLastHeader, iLastPacketLen, m_iBufferLeft, d->GetSocket());
 
 			//printdata((BYTE*) orig, bytes);
@@ -2905,7 +2905,7 @@ void CInputDB::ChangeMonarchLord(TPacketChangeMonarchLordACK* info)
 void CInputDB::UpdateMonarchInfo(TMonarchInfo* info)
 {
 	CMonarch::instance().SetMonarchInfo(info);
-	sys_log(0, "MONARCH INFO UPDATED");
+	sys_log(0, "İMPARATOR BİLGİSİ GÜNCELLENDİ");
 }
 
 void CInputDB::GuildChangeMaster(TPacketChangeGuildMaster* p)

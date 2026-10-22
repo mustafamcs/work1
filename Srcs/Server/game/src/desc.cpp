@@ -158,8 +158,8 @@ void DESC::Destroy()
 
 	if (m_sock != INVALID_SOCKET)
 	{
-		sys_log(0, "SYSTEM: closing socket. DESC #%d", m_sock);
-		Log("SYSTEM: closing socket. DESC #%d", m_sock);
+		sys_log(0, "SİSTEM: soket kapatılıyor. DESC #%d", m_sock);
+		Log("SİSTEM: soket kapatılıyor. DESC #%d", m_sock);
 		fdwatch_del_fd(m_lpFdw, m_sock);
 
 #ifdef _IMPROVED_PACKET_ENCRYPTION_
@@ -210,7 +210,7 @@ EVENTFUNC(ping_event)
 #ifdef ENABLE_LIMIT_TIME
 	if ((unsigned)get_global_time() >= GLOBAL_LIMIT_TIME)
 	{
-		sys_err("Server life time expired.");
+		sys_err("Sunucu ömür süresi doldu.");
 		exit(1);
 	}
 #endif
@@ -265,7 +265,7 @@ bool DESC::Setup(LPFDWATCH _fdw, socket_t _fd, const struct sockaddr_in & c_rSoc
 	SetPhase(PHASE_HANDSHAKE);
 	StartHandshake(_handshake);
 
-	sys_log(0, "SYSTEM: new connection from [%s] fd: %d handshake %u output input_len %d, ptr %p",
+	sys_log(0, "SİSTEM: [%s] yeni bağlantı fd: %d handshake %u çıktı input_len %d, ptr %p",
 			m_stHost.c_str(), m_sock, m_dwHandshake, buffer_size(m_lpInputBuffer), this);
 
 	Log("SYSTEM: new connection from [%s] fd: %d handshake %u ptr %p", m_stHost.c_str(), m_sock, m_dwHandshake, this);
@@ -278,7 +278,7 @@ int DESC::ProcessInput()
 
 	if (!m_lpInputBuffer)
 	{
-		sys_err("DESC::ProcessInput : nil input buffer");
+		sys_err("DESC::ProcessInput : nil girdi tamponu");
 		return -1;
 	}
 
@@ -293,7 +293,7 @@ int DESC::ProcessInput()
 	buffer_write_proceed(m_lpInputBuffer, bytes_read);
 
 	if (!m_pInputProcessor)
-		sys_err("no input processor");
+		sys_err("girdi işleyici yok");
 #ifdef _IMPROVED_PACKET_ENCRYPTION_
 	else
 	{
@@ -445,7 +445,7 @@ int DESC::ProcessOutput()
 
 	if (result == 0)
 	{
-		//sys_log(0, "%d bytes written to %s first %u", bytes_to_write, GetHostName(), *(BYTE *) buffer_read_peek(m_lpOutputBuffer));
+		//sys_log(0, "%d bayt yazıldı %s, ilk %u", bytes_to_write, GetHostName(), *(BYTE *) buffer_read_peek(m_lpOutputBuffer));
 		//Log("%d bytes written", bytes_to_write);
 		max_bytes_written = MAX(bytes_to_write, max_bytes_written);
 
@@ -555,7 +555,7 @@ void DESC::Packet(const void * c_pvData, int iSize)
 		SAFE_BUFFER_DELETE(m_lpBufferedOutputBuffer);
 	}
 
-	//sys_log(0, "%d bytes written (first byte %d)", iSize, *(BYTE *) c_pvData);
+	//sys_log(0, "%d bayt yazıldı (ilk bayt %d)", iSize, *(BYTE *) c_pvData);
 	if (m_iPhase != PHASE_CLOSE)
 		fdwatch_add_fd(m_lpFdw, m_sock, this, FDW_WRITE, true);
 }
@@ -563,7 +563,7 @@ void DESC::Packet(const void * c_pvData, int iSize)
 void DESC::LargePacket(const void * c_pvData, int iSize)
 {
 	buffer_adjust_size(m_lpOutputBuffer, iSize);
-	sys_log(0, "LargePacket Size %d", iSize, buffer_size(m_lpOutputBuffer));
+	sys_log(0, "BüyükPaket Boyutu %d", iSize, buffer_size(m_lpOutputBuffer));
 
 	Packet(c_pvData, iSize);
 }
@@ -695,7 +695,7 @@ bool DESC::HandshakeProcess(DWORD dwTime, long lDelta, bool bInfiniteRetry)
 
 	if (lDelta < 0)
 	{
-		sys_err("Desc::HandshakeProcess : value error (lDelta %d, ip %s)", lDelta, m_stHost.c_str());
+		sys_err("Desc::HandshakeProcess : değer hatası (lDelta %d, ip %s)", lDelta, m_stHost.c_str());
 		return false;
 	}
 
@@ -723,7 +723,7 @@ bool DESC::HandshakeProcess(DWORD dwTime, long lDelta, bool bInfiniteRetry)
 
 	if (lNewDelta < 0)
 	{
-		sys_log(0, "Handshake: lower than zero %d", lNewDelta);
+		sys_log(0, "Handshake: sıfırdan düşük %d", lNewDelta);
 		lNewDelta = (dwCurTime - m_dwHandshakeSentTime) / 2;
 	}
 
@@ -732,7 +732,7 @@ bool DESC::HandshakeProcess(DWORD dwTime, long lDelta, bool bInfiniteRetry)
 	if (!bInfiniteRetry)
 		if (++m_iHandshakeRetry > HANDSHAKE_RETRY_LIMIT)
 		{
-			sys_err("handshake retry limit reached! (limit %d character %s)",
+			sys_err("handshake yeniden deneme limiti doldu! (limit %d karakter %s)",
 					HANDSHAKE_RETRY_LIMIT, GetCharacter() ? GetCharacter()->GetName() : "!NO CHARACTER!");
 			SetPhase(PHASE_CLOSE);
 			return false;
@@ -818,7 +818,7 @@ void DESC::FlushOutput()
 	gettimeofday(&start_tv, NULL);
 
 	socket_block(m_sock);
-	sys_log(0, "FLUSH START %d", buffer_size(m_lpOutputBuffer));
+	sys_log(0, "BOŞALTMA BAŞLANGIÇ %d", buffer_size(m_lpOutputBuffer));
 
 	while (buffer_size(m_lpOutputBuffer) > 0)
 	{
@@ -862,7 +862,7 @@ void DESC::FlushOutput()
 
 					if (ProcessOutput() < 0)
 					{
-						sys_err("Cannot flush output buffer");
+						sys_err("Çıktı tamponu boşaltılamıyor");
 						SetPhase(PHASE_CLOSE);
 					}
 					break;
@@ -878,9 +878,9 @@ void DESC::FlushOutput()
 	}
 
 	if (buffer_size(m_lpOutputBuffer) == 0)
-		sys_log(0, "FLUSH SUCCESS");
+		sys_log(0, "BOŞALTMA BAŞARILI");
 	else
-		sys_log(0, "FLUSH FAIL");
+		sys_log(0, "BOŞALTMA BAŞARISIZ");
 
 	usleep(250000);
 }
@@ -1041,7 +1041,7 @@ void DESC::SetSecurityKey(const DWORD * c_pdwKey)
 	thecore_memcpy(&m_adwDecryptionKey, c_pdwKey, 16);
 	TEA_Encrypt(&m_adwEncryptionKey[0], &m_adwDecryptionKey[0], (const DWORD *) c_pszKey, 16);
 
-	sys_log(0, "SetSecurityKey decrypt %u %u %u %u encrypt %u %u %u %u",
+	sys_log(0, "SetSecurityKey çöz %u %u %u %u şifrele %u %u %u %u",
 			m_adwDecryptionKey[0], m_adwDecryptionKey[1], m_adwDecryptionKey[2], m_adwDecryptionKey[3],
 			m_adwEncryptionKey[0], m_adwEncryptionKey[1], m_adwEncryptionKey[2], m_adwEncryptionKey[3]);
 }

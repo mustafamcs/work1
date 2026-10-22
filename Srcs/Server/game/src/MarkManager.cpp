@@ -78,7 +78,7 @@ bool CGuildMarkManager::SaveMarkIndex()
 
 	if (!fp)
 	{
-		sys_err("MarkManager::SaveMarkIndex: cannot open index file.");
+		sys_err("MarkManager::SaveMarkIndex: indeks dosyası açılamıyor.");
 		return false;
 	}
 
@@ -86,7 +86,7 @@ bool CGuildMarkManager::SaveMarkIndex()
 		fprintf(fp, "%u %u\n", it->first, it->second);
 
 	fclose(fp);
-	sys_log(0, "MarkManager::SaveMarkIndex: index count %d", m_mapGID_MarkID.size());
+	sys_log(0, "MarkManager::SaveMarkIndex: indeks sayısı %d", m_mapGID_MarkID.size());
 	return true;
 }
 
@@ -114,7 +114,7 @@ void CGuildMarkManager::SaveMarkImage(DWORD imgIdx)
 
 	if (GetMarkImageFilename(imgIdx, path))
 		if (!__GetImage(imgIdx)->Save(path.c_str()))
-			sys_err("%s Save failed\n", path.c_str());
+			sys_err("%s kayıt başarısız\n", path.c_str());
 }
 
 CGuildMarkImage * CGuildMarkManager::__GetImage(DWORD imgIdx)
@@ -215,7 +215,7 @@ DWORD CGuildMarkManager::SaveMark(DWORD guildID, BYTE * pbMarkImage)
 	{
 		if ((idMark = __AllocMarkID(guildID)) == INVALID_MARK_ID)
 		{
-			sys_err("CGuildMarkManager: cannot alloc mark id %u", guildID);
+			sys_err("CGuildMarkManager: mark id %u ayrılamıyor", guildID);
 			return false;
 		}
 		else
@@ -264,7 +264,7 @@ void CGuildMarkManager::GetDiffBlocks(DWORD imgIdx, const DWORD * crcList, std::
 
 	if (m_mapIdx_Image.end() == m_mapIdx_Image.find(imgIdx))
 	{
-		sys_err("invalid idx %u", imgIdx);
+		sys_err("geçersiz idx %u", imgIdx);
 		return;
 	}
 
@@ -290,7 +290,7 @@ bool CGuildMarkManager::GetBlockCRCList(DWORD imgIdx, DWORD * crcList)
 {
 	if (m_mapIdx_Image.end() == m_mapIdx_Image.find(imgIdx))
 	{
-		sys_err("invalid idx %u", imgIdx);
+		sys_err("geçersiz idx %u", imgIdx);
 		return false;
 	}
 
@@ -350,7 +350,7 @@ void CGuildMarkManager::SaveSymbol(const char* filename)
 	FILE* fp = fopen(filename, "wb");
 	if (!fp)
 	{
-		sys_err("Cannot open Symbol file (name: %s)", filename);
+		sys_err("Sembol dosyası açılamıyor (isim: %s)", filename);
 		return;
 	}
 
@@ -371,7 +371,7 @@ void CGuildMarkManager::SaveSymbol(const char* filename)
 
 void CGuildMarkManager::UploadSymbol(DWORD guildID, int iSize, const BYTE* pbyData)
 {
-	sys_log(0, "GuildSymbolUpload guildID %u Size %d", guildID, iSize);
+	sys_log(0, "GuildSymbolUpload guildID %u Boyut %d", guildID, iSize);
 
 	if (m_mapSymbol.find(guildID) == m_mapSymbol.end())
 		m_mapSymbol.emplace(guildID, TGuildSymbol());

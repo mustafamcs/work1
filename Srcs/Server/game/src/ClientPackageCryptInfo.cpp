@@ -40,7 +40,7 @@ bool CClientPackageCryptInfo::LoadPackageCryptFile( const char* pCryptFile )
 	{
 		if (0 == iCryptKeySize)
 		{
-			sys_log(0, "[PackageCryptInfo] failed to load crypt key. (file: %s, key size: %d)", pCryptFile, iCryptKeySize);
+			sys_log(0, "[PackageCryptInfo] şifre anahtarı yüklenemedi. (dosya: %s, anahtar boyutu: %d)", pCryptFile, iCryptKeySize);
 			m_nCryptKeyPackageCnt -= iPackageCnt;
 		}
 		else
@@ -50,7 +50,7 @@ bool CClientPackageCryptInfo::LoadPackageCryptFile( const char* pCryptFile )
 
 			memcpy( &m_vecPackageCryptKeys[nCurKeySize], &iCryptKeySize, sizeof(int));
 			fread( &m_vecPackageCryptKeys[nCurKeySize + sizeof(int)], sizeof(BYTE), iCryptKeySize, fp );
-			sys_log(0, "[PackageCryptInfo] %s loaded. (key size: %d, count: %d, total: %d)", pCryptFile, iCryptKeySize, iPackageCnt, m_nCryptKeyPackageCnt);
+			sys_log(0, "[PackageCryptInfo] %s yüklendi. (anahtar boyutu: %d, adet: %d, toplam: %d)", pCryptFile, iCryptKeySize, iPackageCnt, m_nCryptKeyPackageCnt);
 		}
 	}
 
@@ -84,7 +84,7 @@ bool CClientPackageCryptInfo::LoadPackageCryptFile( const char* pCryptFile )
 
 		fread(&dwSDBFileCnt, sizeof(DWORD), 1, fp);
 
-		sys_log(0, "[PackageCryptInfo] SDB Loaded. (Name Hash : %d, Stream Size: %d, File Count: %d)", dwPackageNameHash,dwPackageStreamSize, dwSDBFileCnt);
+		sys_log(0, "[PackageCryptInfo] SDB Yüklendi. (İsim Hash : %d, Akış Boyutu: %d, Dosya Sayısı: %d)", dwPackageNameHash,dwPackageStreamSize, dwSDBFileCnt);
 
 		for( int j = 0; j < (int)dwSDBFileCnt; ++j )
 		{
@@ -94,7 +94,7 @@ bool CClientPackageCryptInfo::LoadPackageCryptFile( const char* pCryptFile )
 			strRelatedMapName.resize( dwMapNameSize );
 			fread(&strRelatedMapName[0], sizeof(BYTE), dwMapNameSize, fp);
 
-			sys_log(0, "[PackageCryptInfo] \t SDB each file info loaded.(MapName: %s, NameHash: %X)", strRelatedMapName.c_str(), dwFileNameHash);
+			sys_log(0, "[PackageCryptInfo] \t SDB her dosya bilgisi yüklendi.(HaritaAdı: %s, İsimHash: %X)", strRelatedMapName.c_str(), dwFileNameHash);
 
 			BYTE bSDBStreamSize;
 			std::vector<BYTE> vecSDBStream;
@@ -154,16 +154,16 @@ bool CClientPackageCryptInfo::LoadPackageCryptInfo( const char* pCryptInfoDir )
 		//if (strncmp( &(pDirEnt->d_name[0]), szPrefixCryptInfoFile, strlen(szPrefixCryptInfoFile)) )
 		if (std::string::npos == std::string(pDirEnt->d_name).find(szPrefixCryptInfoFile))
 		{
-			sys_log(0, "[PackageCryptInfo] %s is not crypt file. pass!", pDirEnt->d_name);
+			sys_log(0, "[PackageCryptInfo] %s şifreli dosya değil. geç!", pDirEnt->d_name);
 			continue;
 		}
 
 		std::string strFullPathName = std::string(pCryptInfoDir) + std::string(pDirEnt->d_name);
 
-		sys_log(0, "[PackageCryptInfo] Try to load crypt file: %s", strFullPathName.c_str());
+		sys_log(0, "[PackageCryptInfo] Şifreli dosya yüklenmeye çalışılıyor: %s", strFullPathName.c_str());
 
 		if (false == LoadPackageCryptFile( strFullPathName.c_str() ))
-			sys_err("[PackageCryptInfo] Failed to load %s", strFullPathName.c_str());
+			sys_err("[PackageCryptInfo] %s yuklenemedi", strFullPathName.c_str());
 	}
 
 	closedir(pDir);
@@ -208,14 +208,14 @@ bool CClientPackageCryptInfo::GetRelatedMapSDBStreams(const char* pMapName, BYTE
 	TPackageSDBMap::iterator it = m_mapPackageSDB.find( strLowerMapName.c_str() );
 	if( it == m_mapPackageSDB.end() || it->second.vecSDBInfos.size() == 0 )
 	{
-		//sys_err("GetRelatedMapSDBStreams Failed(%s)", strLowerMapName.c_str());
+		//sys_err("GetRelatedMapSDBStreams Başarısız(%s)", strLowerMapName.c_str());
 		return false;
 	}
 
 	*ppData = it->second.GetSerializedStream();
 	iDataSize = it->second.GetSize();
 
-	//sys_log(0, "GetRelatedMapSDBStreams Size(%d)", iDataSize);
+	//sys_log(0, "GetRelatedMapSDBStreams Boyut(%d)", iDataSize);
 
 	return true;
 }

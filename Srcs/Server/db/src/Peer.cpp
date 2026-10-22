@@ -29,12 +29,12 @@ void CPeer::OnAccept()
 	static DWORD current_handle = 0;
 	m_dwHandle = ++current_handle;
 
-	sys_log(0, "Connection accepted. (host: %s handle: %u fd: %d)", m_host, m_dwHandle, m_fd);
+	sys_log(0, "Bağlantı kabul edildi. (host: %s handle: %u fd: %d)", m_host, m_dwHandle, m_fd);
 }
 
 void CPeer::OnConnect()
 {
-	sys_log(0, "Connection established. (host: %s handle: %u fd: %d)", m_host, m_dwHandle, m_fd);
+	sys_log(0, "Bağlantı kuruldu. (host: %s handle: %u fd: %d)", m_host, m_dwHandle, m_fd);
 	m_state = STATE_PLAYING;
 }
 
@@ -42,7 +42,7 @@ void CPeer::OnClose()
 {
 	m_state = STATE_CLOSE;
 
-	sys_log(0, "Connection closed. (host: %s)", m_host);
+	sys_log(0, "Bağlantı kapandı. (host: %s)", m_host);
 	sys_log(0, "ItemIDRange: returned. %u ~ %u", m_itemRange.dwMin, m_itemRange.dwMax);
 
 	CItemIDRangeManager::instance().UpdateRange(m_itemRange.dwMin, m_itemRange.dwMax);
@@ -86,7 +86,7 @@ bool CPeer::PeekPacket(int & iBytesProceed, BYTE & header, DWORD & dwHandle, DWO
 	//sys_log(0, "%d header %d handle %u length %u", GetRecvLength(), header, dwHandle, dwLength);
 	if (iBytesProceed + dwLength + 9 > (DWORD) GetRecvLength())
 	{
-		sys_log(0, "PeekPacket: not enough buffer size: len %u, recv %d",
+		sys_log(0, "PeekPacket: yetersiz tampon boyutu: len %u, recv %d",
 				9+dwLength, GetRecvLength()-iBytesProceed);
 		return false;
 	}
@@ -145,7 +145,7 @@ void CPeer::SendSpareItemIDRange()
 
 		if (SetSpareItemIDRange(CItemIDRangeManager::instance().GetRange()) == false)
 		{
-			sys_log(0, "ItemIDRange: spare range set error");
+			sys_log(0, "ItemIDRange: yedek aralık ayar hatası");
 			m_itemSpareRange.dwMin = m_itemSpareRange.dwMax = m_itemSpareRange.dwUsableItemIDMin = 0;
 		}
 
@@ -169,7 +169,7 @@ bool CPeer::SetSpareItemIDRange(TItemIDRangeTable itemRange)
 	if (itemRange.dwMin == 0 || itemRange.dwMax == 0 || itemRange.dwUsableItemIDMin == 0) return false;
 
 	m_itemSpareRange = itemRange;
-	sys_log(0, "ItemIDRange: SPARE SET %s %u ~ %u start: %u", GetPublicIP(), m_itemSpareRange.dwMin, m_itemSpareRange.dwMax,
+	sys_log(0, "ItemIDRange: YEDEK SET %s %u ~ %u başlangıç: %u", GetPublicIP(), m_itemSpareRange.dwMin, m_itemSpareRange.dwMax,
 			m_itemSpareRange.dwUsableItemIDMin);
 
 	return true;
@@ -186,7 +186,7 @@ bool CPeer::CheckItemIDRangeCollision(TItemIDRangeTable itemRange)
 
 	if (m_itemSpareRange.dwMin < itemRange.dwMax && m_itemSpareRange.dwMax > itemRange.dwMin)
 	{
-		sys_err("ItemIDRange: Collision with spare range this %u ~ %u check %u ~ %u",
+		sys_err("ItemIDRange: Yedek aralıkla çakışma bu %u ~ %u kontrol %u ~ %u",
 				m_itemSpareRange.dwMin, m_itemSpareRange.dwMax, itemRange.dwMin, itemRange.dwMax);
 		return false;
 	}

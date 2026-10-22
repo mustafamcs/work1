@@ -28,7 +28,7 @@ void CPrivManager::RequestGiveGuildPriv(DWORD guild_id, BYTE type, int value, ti
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: RequestGiveGuildPriv: wrong guild priv type(%u)", type);
+		sys_err("PRIV_MANAGER: RequestGiveGuildPriv: hatalı lonca ayrıcalık tipi(%u)", type);
 		return;
 	}
 
@@ -48,7 +48,7 @@ void CPrivManager::RequestGiveEmpirePriv(BYTE empire, BYTE type, int value, time
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: RequestGiveEmpirePriv: wrong empire priv type(%u)", type);
+		sys_err("PRIV_MANAGER: RequestGiveEmpirePriv: hatalı imparatorluk ayrıcalık tipi(%u)", type);
 		return;
 	}
 
@@ -68,7 +68,7 @@ void CPrivManager::RequestGiveCharacterPriv(DWORD pid, BYTE type, int value)
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: RequestGiveCharacterPriv: wrong char priv type(%u)", type);
+		sys_err("PRIV_MANAGER: RequestGiveCharacterPriv: hatalı karakter ayrıcalık tipi(%u)", type);
 		return;
 	}
 
@@ -86,11 +86,11 @@ void CPrivManager::GiveGuildPriv(DWORD guild_id, BYTE type, int value, BYTE bLog
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: GiveGuildPriv: wrong guild priv type(%u)", type);
+		sys_err("PRIV_MANAGER: GiveGuildPriv: hatalı lonca ayrıcalık tipi(%u)", type);
 		return;
 	}
 
-	sys_log(0,"Set Guild Priv: guild_id(%u) type(%d) value(%d) duration_sec(%d)", guild_id, type, value, end_time_sec - get_global_time());
+	sys_log(0,"Lonca Ayrıcalığı Ayarla: guild_id(%u) type(%d) value(%d) duration_sec(%d)", guild_id, type, value, end_time_sec - get_global_time());
 
 	value = MINMAX(0, value, 50);
 	end_time_sec = MINMAX(0, end_time_sec, get_global_time()+60*60*24*7);
@@ -126,11 +126,11 @@ void CPrivManager::GiveCharacterPriv(DWORD pid, BYTE type, int value, BYTE bLog)
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: GiveCharacterPriv: wrong char priv type(%u)", type);
+		sys_err("PRIV_MANAGER: GiveCharacterPriv: hatalı karakter ayrıcalık tipi(%u)", type);
 		return;
 	}
 
-	sys_log(0,"Set Character Priv %u %d %d", pid, type, value);
+	sys_log(0,"Karakter Ayrıcalığı Ayarla %u %d %d", pid, type, value);
 
 	value = MINMAX(0, value, 100);
 
@@ -144,11 +144,11 @@ void CPrivManager::GiveEmpirePriv(BYTE empire, BYTE type, int value, BYTE bLog, 
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: GiveEmpirePriv: wrong empire priv type(%u)", type);
+		sys_err("PRIV_MANAGER: GiveEmpirePriv: hatalı imparatorluk ayrıcalık tipi(%u)", type);
 		return;
 	}
 
-	sys_log(0, "Set Empire Priv: empire(%d) type(%d) value(%d) duration_sec(%d)", empire, type, value, end_time_sec-get_global_time());
+	sys_log(0, "İmparatorluk Ayrıcalığı Ayarla: empire(%d) type(%d) value(%d) duration_sec(%d)", empire, type, value, end_time_sec-get_global_time());
 
 	value = MINMAX(0, value, 200);
 	end_time_sec = MINMAX(0, end_time_sec, get_global_time()+60*60*24*7);
@@ -188,7 +188,7 @@ void CPrivManager::RemoveGuildPriv(DWORD guild_id, BYTE type)
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: RemoveGuildPriv: wrong guild priv type(%u)", type);
+		sys_err("PRIV_MANAGER: RemoveGuildPriv: hatalı lonca ayrıcalık tipi(%u)", type);
 		return;
 	}
 
@@ -200,7 +200,7 @@ void CPrivManager::RemoveEmpirePriv(BYTE empire, BYTE type)
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: RemoveEmpirePriv: wrong empire priv type(%u)", type);
+		sys_err("PRIV_MANAGER: RemoveEmpirePriv: hatalı imparatorluk ayrıcalık tipi(%u)", type);
 		return;
 	}
 
@@ -213,7 +213,7 @@ void CPrivManager::RemoveCharacterPriv(DWORD pid, BYTE type)
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: RemoveCharacterPriv: wrong char priv type(%u)", type);
+		sys_err("PRIV_MANAGER: RemoveCharacterPriv: hatalı karakter ayrıcalık tipi(%u)", type);
 		return;
 	}
 

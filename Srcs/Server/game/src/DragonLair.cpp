@@ -136,7 +136,7 @@ DWORD CDragonLair::GetEstimatedTime() const
 
 void CDragonLair::OnDragonDead(LPCHARACTER pDragon)
 {
-	sys_log(0, "DragonLair: dragon died");
+	sys_log(0, "DragonLair: ejderha öldü");
 
 	LogManager::instance().DragonSlayLog(  GuildID_, pDragon->GetMobTable().dwVnum, StartTime_, get_global_time() );
 }
@@ -153,7 +153,7 @@ bool CDragonLairManager::Start(long MapIndexFrom, long BaseMapIndex, DWORD Guild
 {
 	long instanceMapIndex = SECTREE_MANAGER::instance().CreatePrivateMap(BaseMapIndex);
 	if (instanceMapIndex == 0) {
-		sys_err("CDragonLairManager::Start() : no private map index available");
+		sys_err("CDragonLairManager::Start() : kullanılabilir özel harita indeksi yok");
 		return false;
 	}
 

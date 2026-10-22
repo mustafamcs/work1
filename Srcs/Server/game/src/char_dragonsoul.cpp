@@ -122,7 +122,7 @@ bool CHARACTER::DragonSoul_RefineWindow_Open(LPENTITY pEntity)
 
 	if (NULL == d)
 	{
-		sys_err ("User(%s)'s DESC is NULL POINT.", GetName());
+		sys_err ("Kullanıcı(%s)'nın DESC'i NULL POINTER.", GetName());
 		return false;
 	}
 

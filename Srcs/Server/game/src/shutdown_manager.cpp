@@ -71,7 +71,7 @@ void CShutdownManager::Update()
 		{
 			if((*i) != NULL)
 			{
-				printf("ShutdownManager::Update() - Shutdown Account : %s\n", (*i)->GetAccountTable().login);
+				printf("ShutdownManager::Update() - Hesap Kapatılıyor : %s\n", (*i)->GetAccountTable().login);
 				(*i)->SetPhase(PHASE_CLOSE);
 			}
 		}

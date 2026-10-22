@@ -132,7 +132,7 @@ bool CShopManager::StartShopping(LPCHARACTER pkChr, LPCHARACTER pkChrShopKeeper,
 
 	if (!pkShop)
 	{
-		sys_log(1, "SHOP: NO SHOP");
+		sys_log(1, "SHOP: DUKKAN YOK");
 		return false;
 	}
 
@@ -334,7 +334,7 @@ void CShopManager::Sell(LPCHARACTER ch, BYTE bCell, BYTE bCount)
 	}
 
 	if (test_server)
-		sys_log(0, "Sell Item price id %d %s itemid %d", ch->GetPlayerID(), ch->GetName(), item->GetID());
+		sys_log(0, "Eşya Satış fiyatı id %d %s eşyaid %d", ch->GetPlayerID(), ch->GetName(), item->GetID());
 
 	const long long nTotalMoney = static_cast<long long>(ch->GetGold()) + static_cast<long long>(dwPrice);
 
@@ -345,7 +345,7 @@ void CShopManager::Sell(LPCHARACTER ch, BYTE bCell, BYTE bCount)
 		return;
 	}
 
-	sys_log(0, "SHOP: SELL: %s item name: %s(x%d):%u price: %lld", ch->GetName(), item->GetName(), bCount, item->GetID(), dwPrice);
+	sys_log(0, "DÜKKÂN: SATIŞ: %s eşya adı: %s(x%d):%u fiyat: %lld", ch->GetName(), item->GetName(), bCount, item->GetID(), dwPrice);
 
 	if (iVal > 0)
 		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("SHOP_TAX_INFO"), iVal);
@@ -378,19 +378,19 @@ bool ConvertToShopItemTable(IN CGroupNode* pNode, OUT TShopTableEx& shopTable)
 {
 	if (!pNode->GetValue("vnum", 0, shopTable.dwVnum))
 	{
-		sys_err("Group %s does not have vnum.", pNode->GetNodeName().c_str());
+		sys_err("%s grubunun vnum'u yok.", pNode->GetNodeName().c_str());
 		return false;
 	}
 
 	if (!pNode->GetValue("name", 0, shopTable.name))
 	{
-		sys_err("Group %s does not have name.", pNode->GetNodeName().c_str());
+		sys_err("%s grubunun ismi yok.", pNode->GetNodeName().c_str());
 		return false;
 	}
 
 	if (shopTable.name.length() >= SHOP_TAB_NAME_MAX)
 	{
-		sys_err("Shop name length must be less than %d. Error in Group %s, name %s", SHOP_TAB_NAME_MAX, pNode->GetNodeName().c_str(), shopTable.name.c_str());
+		sys_err("Dükkan ismi %d karakterden kısa olmalı. %s grubunda hata, isim %s", SHOP_TAB_NAME_MAX, pNode->GetNodeName().c_str(), shopTable.name.c_str());
 		return false;
 	}
 
@@ -410,14 +410,14 @@ bool ConvertToShopItemTable(IN CGroupNode* pNode, OUT TShopTableEx& shopTable)
 	}
 	else
 	{
-		sys_err("Group %s has undefine cointype(%s).", pNode->GetNodeName().c_str(), stCoinType.c_str());
+		sys_err("%s grubunda tanımsız cointype(%s) var.", pNode->GetNodeName().c_str(), stCoinType.c_str());
 		return false;
 	}
 
 	CGroupNode* pItemGroup = pNode->GetChildNode("items");
 	if (!pItemGroup)
 	{
-		sys_err("Group %s does not have 'group items'.", pNode->GetNodeName().c_str());
+		sys_err("%s grubunda 'group items' yok.", pNode->GetNodeName().c_str());
 		return false;
 	}
 
@@ -425,7 +425,7 @@ bool ConvertToShopItemTable(IN CGroupNode* pNode, OUT TShopTableEx& shopTable)
 	std::vector <TShopItemTable> shopItems(itemGroupSize);
 	if (itemGroupSize >= SHOP_HOST_ITEM_MAX_NUM)
 	{
-		sys_err("count(%d) of rows of group items of group %s must be smaller than %d", itemGroupSize, pNode->GetNodeName().c_str(), SHOP_HOST_ITEM_MAX_NUM);
+		sys_err("sayı(%d), %s grubu eşya satırları, %d sayısından küçük olmalı", itemGroupSize, pNode->GetNodeName().c_str(), SHOP_HOST_ITEM_MAX_NUM);
 		return false;
 	}
 
@@ -433,18 +433,18 @@ bool ConvertToShopItemTable(IN CGroupNode* pNode, OUT TShopTableEx& shopTable)
 	{
 		if (!pItemGroup->GetValue(i, "vnum", shopItems[i].vnum))
 		{
-			sys_err("row(%d) of group items of group %s does not have vnum column", i, pNode->GetNodeName().c_str());
+			sys_err("satır(%d), %s grubu eşyaları, vnum sütunu yok", i, pNode->GetNodeName().c_str());
 			return false;
 		}
 
 		if (!pItemGroup->GetValue(i, "count", shopItems[i].count))
 		{
-			sys_err("row(%d) of group items of group %s does not have count column", i, pNode->GetNodeName().c_str());
+			sys_err("satır(%d), %s grubu eşyaları, count sütunu yok", i, pNode->GetNodeName().c_str());
 			return false;
 		}
 		if (!pItemGroup->GetValue(i, "price", shopItems[i].price))
 		{
-			sys_err("row(%d) of group items of group %s does not have price column", i, pNode->GetNodeName().c_str());
+			sys_err("satır(%d), %s grubu eşyaları, price sütunu yok", i, pNode->GetNodeName().c_str());
 			return false;
 		}
 	}
@@ -473,7 +473,7 @@ bool ConvertToShopItemTable(IN CGroupNode* pNode, OUT TShopTableEx& shopTable)
 		TItemTable * item_table = ITEM_MANAGER::instance().GetTable(shopItems[i].vnum);
 		if (!item_table)
 		{
-			sys_err("vnum(%d) of group items of group %s does not exist", shopItems[i].vnum, pNode->GetNodeName().c_str());
+			sys_err("vnum(%d), %s grubu eşyaları içinde yok", shopItems[i].vnum, pNode->GetNodeName().c_str());
 			return false;
 		}
 
@@ -497,14 +497,14 @@ bool CShopManager::ReadShopTableEx(const char* stFileName)
 	CGroupTextParseTreeLoader loader;
 	if (!loader.Load(stFileName))
 	{
-		sys_err("%s Load fail.", stFileName);
+		sys_err("%s yükleme başarısız.", stFileName);
 		return false;
 	}
 
 	CGroupNode* pShopNPCGroup = loader.GetGroup("shopnpc");
 	if (NULL == pShopNPCGroup)
 	{
-		sys_err("Group ShopNPC is not exist.");
+		sys_err("ShopNPC grubu yok.");
 		return false;
 	}
 
@@ -516,25 +516,25 @@ bool CShopManager::ReadShopTableEx(const char* stFileName)
 		std::string shopName;
 		if (!pShopNPCGroup->GetValue(i, "npc", npcVnum) || !pShopNPCGroup->GetValue(i, "group", shopName))
 		{
-			sys_err("Invalid row(%d). Group ShopNPC rows must have 'npc', 'group' columns", i);
+			sys_err("Geçersiz satır(%d). ShopNPC grup satırları 'npc', 'group' sütunlarına sahip olmalı", i);
 			return false;
 		}
 		std::transform(shopName.begin(), shopName.end(), shopName.begin(), (int(*)(int))std::tolower);
 		CGroupNode* pShopGroup = loader.GetGroup(shopName.c_str());
 		if (!pShopGroup)
 		{
-			sys_err("Group %s is not exist.", shopName.c_str());
+			sys_err("%s grubu yok.", shopName.c_str());
 			return false;
 		}
 		TShopTableEx table;
 		if (!ConvertToShopItemTable(pShopGroup, table))
 		{
-			sys_err("Cannot read Group %s.", shopName.c_str());
+			sys_err("%s grubu okunamıyor.", shopName.c_str());
 			return false;
 		}
 		if (m_map_pkShopByNPCVnum.find(npcVnum) != m_map_pkShopByNPCVnum.end())
 		{
-			sys_err("%d cannot have both original shop and extended shop", npcVnum);
+			sys_err("%d hem normal hem genişletilmiş dükkâna sahip olamaz", npcVnum);
 			return false;
 		}
 
@@ -547,7 +547,7 @@ bool CShopManager::ReadShopTableEx(const char* stFileName)
 		TShopTableEx& table = it->second;
 		if (m_map_pkShop.find(table.dwVnum) != m_map_pkShop.end())
 		{
-			sys_err("Shop vnum(%d) already exists", table.dwVnum);
+			sys_err("Dükkan vnum(%d) zaten var", table.dwVnum);
 			return false;
 		}
 		TShopMap::iterator shop_it = m_map_pkShopByNPCVnum.find(npcVnum);
@@ -564,20 +564,20 @@ bool CShopManager::ReadShopTableEx(const char* stFileName)
 			pkShopEx = dynamic_cast <CShopEx*> (shop_it->second);
 			if (NULL == pkShopEx)
 			{
-				sys_err("WTF!!! It can't be happend. NPC(%d) Shop is not extended version.", shop_it->first);
+				sys_err("WTF!!! Olamaz. NPC(%d) Dükkanı genişletilmiş sürüm değil.", shop_it->first);
 				return false;
 			}
 		}
 
 		if (pkShopEx->GetTabCount() >= SHOP_TAB_COUNT_MAX)
 		{
-			sys_err("ShopEx cannot have tab more than %d", SHOP_TAB_COUNT_MAX);
+			sys_err("ShopEx %d'den fazla sekme içeremez", SHOP_TAB_COUNT_MAX);
 			return false;
 		}
 
 		if (pkShopEx->GetVnum() != 0 && m_map_pkShop.find(pkShopEx->GetVnum()) != m_map_pkShop.end())
 		{
-			sys_err("Shop vnum(%d) already exist.", pkShopEx->GetVnum());
+			sys_err("Dükkan vnum(%d) zaten var.", pkShopEx->GetVnum());
 			return false;
 		}
 		m_map_pkShop.emplace(pkShopEx->GetVnum(), pkShopEx);

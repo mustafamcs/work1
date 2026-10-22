@@ -179,7 +179,7 @@ void CGuild::SetWarScoreAgainstTo(DWORD dwOppGID, int iScore)
 {
 	DWORD dwSelfGID = GetID();
 
-	sys_log(0, "GuildWarScore Set %u from %u %d", dwSelfGID, dwOppGID, iScore);
+	sys_log(0, "GuildWarScore Ayarla %u kaynak %u %d", dwSelfGID, dwOppGID, iScore);
 	itertype(m_EnemyGuild) it = m_EnemyGuild.find(dwOppGID);
 
 	if (it != m_EnemyGuild.end())
@@ -225,11 +225,11 @@ int CGuild::GetWarScoreAgainstTo(DWORD dwOppGID)
 
 	if (it != m_EnemyGuild.end())
 	{
-		sys_log(0, "GuildWarScore Get %u from %u %d", GetID(), dwOppGID, it->second.score);
+		sys_log(0, "GuildWarScore Al %u kaynak %u %d", GetID(), dwOppGID, it->second.score);
 		return it->second.score;
 	}
 
-	sys_log(0, "GuildWarScore Get %u from %u No data", GetID(), dwOppGID);
+	sys_log(0, "GuildWarScore Al %u kaynak %u Veri yok", GetID(), dwOppGID);
 	return 0;
 }
 
@@ -378,7 +378,7 @@ void CGuild::RequestDeclareWar(DWORD dwOppGID, BYTE type)
 			}
 			break;
 		default:
-			sys_err("GuildWar.DeclareWar.UNKNOWN_STATE[%d]: id(%d vs %d), type(%d), guild(%s:%u)",
+			sys_err("GuildWar.DeclareWar.BILINMEYEN_DURUM[%d]: id(%d vs %d), tip(%d), lonca(%s:%u)",
 					it->second.state, GetID(), dwOppGID, type, GetName(), GetID());
 			break;
 	}
@@ -494,7 +494,7 @@ bool CGuild::WaitStartWar(DWORD dwOppGID)
 	DWORD lMapIndex = CWarMapManager::instance().CreateWarMap(rkGuildWarInfo, id1, id2);
 	if (!lMapIndex)
 	{
-		sys_err("GuildWar.WaitStartWar.CREATE_WARMAP_ERROR id(%u vs %u), type(%u), map(%d)", id1, id2, gw.type, rkGuildWarInfo.lMapIndex);
+		sys_err("GuildWar.WaitStartWar.SAVAS_HARITASI_HATASI id(%u vs %u), tip(%u), harita(%d)", id1, id2, gw.type, rkGuildWarInfo.lMapIndex);
 		CGuildManager::instance().RequestEndWar(GetID(), dwOppGID);
 		return false;
 	}
@@ -665,7 +665,7 @@ void CGuild::GuildWarEntryAsk(DWORD dwOppGID)
 	itertype(m_EnemyGuild) git = m_EnemyGuild.find(dwOppGID);
 	if (git == m_EnemyGuild.end())
 	{
-		sys_err("GuildWar.GuildWarEntryAsk.UNKNOWN_ENEMY(%d)", dwOppGID);
+		sys_err("GuildWar.GuildWarEntryAsk.BILINMEYEN_DUSMAN(%d)", dwOppGID);
 		return;
 	}
 
@@ -681,7 +681,7 @@ void CGuild::GuildWarEntryAsk(DWORD dwOppGID)
 	PIXEL_POSITION pos;
 	if (!CWarMapManager::instance().GetStartPosition(gw.map_index, GetID() < dwOppGID ? 0 : 1, pos))
 	{
-		sys_err("GuildWar.GuildWarEntryAsk.START_POSITION_ERROR id(%d vs %d), pos(%d, %d)", GetID(), dwOppGID, pos.x, pos.y);
+		sys_err("GuildWar.GuildWarEntryAsk.BASLANGIC_KONUMU_HATASI id(%d vs %d), konum(%d, %d)", GetID(), dwOppGID, pos.x, pos.y);
 		return;
 	}
 
@@ -702,7 +702,7 @@ void CGuild::GuildWarEntryAsk(DWORD dwOppGID)
 		}
 		else
 		{
-			sys_err("GuildWar.GuildWarEntryAsk.SendLetterToMember.QUEST_ERROR pid(%d), quest_name('guild_war_join.quest')",
+			sys_err("GuildWar.GuildWarEntryAsk.SendLetterToMember.GOREV_HATASI pid(%d), gorev_adi('guild_war_join.quest')",
 					ch->GetPlayerID(), questIndex);
 			break;
 		}

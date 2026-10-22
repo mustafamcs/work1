@@ -67,7 +67,7 @@ bool CArenaManager::AddArena(DWORD mapIdx, WORD startA_X, WORD startA_Y, WORD st
 
 	if (pArenaMap->AddArena(mapIdx, startA_X, startA_Y, startB_X, startB_Y) == false)
 	{
-		sys_log(0, "CArenaManager::AddArena - AddMap Error MapID: %d", mapIdx);
+		sys_log(0, "CArenaManager::AddArena - AddMap Hatası MapID: %d", mapIdx);
 		return false;
 	}
 
@@ -80,7 +80,7 @@ bool CArenaMap::AddArena(DWORD mapIdx, WORD startA_X, WORD startA_Y, WORD startB
 	{
 		if (!iter->CheckArea(startA_X, startA_Y, startB_X, startB_Y))
 		{
-			sys_log(0, "CArenaMap::AddArena - Same Start Position set. stA(%d, %d) stB(%d, %d)", startA_X, startA_Y, startB_X, startB_Y);
+			sys_log(0, "CArenaMap::AddArena - Aynı başlangıç konumu ayarlandı. stA(%d, %d) stB(%d, %d)", startA_X, startA_Y, startB_X, startB_Y);
 			return false;
 		}
 	}
@@ -111,7 +111,7 @@ void CArenaMap::Destroy()
 {
 	itertype(m_listArena) iter = m_listArena.begin();
 
-	sys_log(0, "ARENA: ArenaMap will be destroy. mapIndex(%d)", m_dwMapIndex);
+	sys_log(0, "ARENA: ArenaMap yok edilecek. mapIndex(%d)", m_dwMapIndex);
 
 	for (; iter != m_listArena.end(); iter++)
 	{
@@ -150,7 +150,7 @@ void CArenaMap::SendArenaMapListTo(LPCHARACTER pChar, DWORD mapIdx)
 
 	for (; iter != m_listArena.end(); iter++)
 	{
-		pChar->ChatPacket(CHAT_TYPE_INFO, "ArenaMapInfo Map: %d stA(%d, %d) stB(%d, %d)", mapIdx,
+		pChar->ChatPacket(CHAT_TYPE_INFO, "ArenaMapInfo Harita: %d stA(%d, %d) stB(%d, %d)", mapIdx,
 				(CArena*)(*iter)->GetStartPointA().x, (CArena*)(*iter)->GetStartPointA().y,
 				(CArena*)(*iter)->GetStartPointB().x, (CArena*)(*iter)->GetStartPointB().y);
 	}
@@ -222,7 +222,7 @@ EVENTFUNC(ready_to_start_event)
 
 	if (pArena == NULL)
 	{
-		sys_err("ARENA: Arena start event info is null.");
+		sys_err("ARENA: Arena başlangıç olay bilgisi null.");
 		return 0;
 	}
 
@@ -231,7 +231,7 @@ EVENTFUNC(ready_to_start_event)
 
 	if (chA == NULL || chB == NULL)
 	{
-		sys_err("ARENA: Player err in event func ready_start_event");
+		sys_err("ARENA: ready_start_event olay fonksiyonunda oyuncu hatası");
 
 		if (chA != NULL)
 		{
@@ -371,7 +371,7 @@ EVENTFUNC(ready_to_start_event)
 				chB->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Arenadaki bir problemden dolayı düello bitti."));
 				pArena->SendChatPacketToObserver(CHAT_TYPE_INFO, LC_TEXT("Arenadaki bir problemden dolayı düello bitti."));
 
-				sys_log(0, "ARENA: Something wrong in event func. info->state(%d)", info->state);
+				sys_log(0, "ARENA: Olay fonksiyonunda bir sorun var. info->state(%d)", info->state);
 
 				pArena->EndDuel();
 
@@ -397,7 +397,7 @@ EVENTFUNC(duel_time_out)
 
 	if (pArena == NULL)
 	{
-		sys_err("ARENA: Time out event error");
+		sys_err("ARENA: Zaman aşımı olay hatası");
 		return 0;
 	}
 
@@ -446,7 +446,7 @@ EVENTFUNC(duel_time_out)
 
 				info->state++;
 
-				sys_log(0, "ARENA: Because of time over, duel is end. PIDA(%d) vs PIDB(%d)", pArena->GetPlayerAPID(), pArena->GetPlayerBPID());
+				sys_log(0, "ARENA: Süre dolduğu için düello bitti. PIDA(%d) vs PIDB(%d)", pArena->GetPlayerAPID(), pArena->GetPlayerBPID());
 
 				return PASSES_PER_SEC(10);
 				break;
@@ -497,7 +497,7 @@ bool CArena::StartDuel(LPCHARACTER pCharFrom, LPCHARACTER pCharTo, int nSetPoint
 	pCharTo->PointChange(POINT_HP, pCharTo->GetMaxHP() - pCharTo->GetHP());
 	pCharTo->PointChange(POINT_SP, pCharTo->GetMaxSP() - pCharTo->GetSP());
 
-	sys_log(0, "ARENA: Start Duel with PID_A(%d) vs PID_B(%d)", GetPlayerAPID(), GetPlayerBPID());
+	sys_log(0, "ARENA: Düello Başladı PID_A(%d) vs PID_B(%d)", GetPlayerAPID(), GetPlayerBPID());
 	return true;
 }
 
@@ -578,7 +578,7 @@ void CArena::EndDuel()
 
 	m_mapObserver.clear();
 
-	sys_log(0, "ARENA: End Duel PID_A(%d) vs PID_B(%d)", GetPlayerAPID(), GetPlayerBPID());
+	sys_log(0, "ARENA: Düello Bitti PID_A(%d) vs PID_B(%d)", GetPlayerAPID(), GetPlayerBPID());
 
 	Clear();
 }
@@ -801,7 +801,7 @@ bool CArena::OnDead(DWORD dwPIDA, DWORD dwPIDB)
 		else
 		{
 			// wtf
-			sys_log(0, "ARENA : OnDead Error (%d, %d) (%d, %d)", m_dwPIDA, m_dwPIDB, dwPIDA, dwPIDB);
+			sys_log(0, "ARENA : OnDead Hatası (%d, %d) (%d, %d)", m_dwPIDA, m_dwPIDB, dwPIDA, dwPIDB);
 		}
 
 		int potion = quest::CQuestManager::instance().GetEventFlag("arena_potion_limit_count");
@@ -949,7 +949,7 @@ void CArena::OnDisconnect(DWORD pid)
 		if (GetPlayerB() != NULL)
 			GetPlayerB()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Savaşçılar ayrıldı. Düello sona erdi."));
 
-		sys_log(0, "ARENA : Duel is end because of Opp(%d) is disconnect. MyPID(%d)", GetPlayerAPID(), GetPlayerBPID());
+		sys_log(0, "ARENA : Rakip(%d) bağlantısı koptuğu için düello bitti. MyPID(%d)", GetPlayerAPID(), GetPlayerBPID());
 		EndDuel();
 	}
 	else if (m_dwPIDB == pid)
@@ -957,7 +957,7 @@ void CArena::OnDisconnect(DWORD pid)
 		if (GetPlayerA() != NULL)
 			GetPlayerA()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Savaşçılar ayrıldı. Düello sona erdi."));
 
-		sys_log(0, "ARENA : Duel is end because of Opp(%d) is disconnect. MyPID(%d)", GetPlayerBPID(), GetPlayerAPID());
+		sys_log(0, "ARENA : Rakip(%d) bağlantısı koptuğu için düello bitti. MyPID(%d)", GetPlayerBPID(), GetPlayerAPID());
 		EndDuel();
 	}
 }
@@ -1055,7 +1055,7 @@ bool CArenaManager::RegisterObserverPtr(LPCHARACTER pChar, DWORD mapIdx, WORD Ob
 
 	if (iter == m_mapArenaMap.end())
 	{
-		sys_log(0, "ARENA : Cannot find ArenaMap. %d %d %d", mapIdx, ObserverX, ObserverY);
+		sys_log(0, "ARENA : ArenaMap bulunamıyor. %d %d %d", mapIdx, ObserverX, ObserverY);
 		return false;
 	}
 

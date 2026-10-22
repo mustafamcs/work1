@@ -117,7 +117,7 @@ static bool read_line(FILE *fp, LPREGEN regen)
 					regen->type = REGEN_TYPE_ANYWHERE;
 				else
 				{
-					sys_err("read_line: unknown regen type %c", szTmp[0]);
+					sys_err("read_line: bilinmeyen regen tipi %c", szTmp[0]);
 					exit(1);
 				}
 
@@ -417,7 +417,7 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 
 	if (NULL == fp)
 	{
-		sys_err("SYSTEM: regen_do: %s: file not found", filename);
+		sys_err("SİSTEM: regen_do: %s: dosya bulunamadı", filename);
 		return false;
 	}
 
@@ -473,7 +473,7 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 
 				if (!p)
 				{
-					sys_err("In %s, No mob data by vnum %u", filename, regen->vnum);
+					sys_err("%s içinde, vnum %u için mob verisi yok", filename, regen->vnum);
 					if (!bOnce) {
 						M2_DELETE(regen);
 					}
@@ -514,7 +514,7 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 
 	if (NULL == fp)
 	{
-		sys_err("SYSTEM: regen_do: %s: file not found", filename);
+		sys_err("SİSTEM: regen_do: %s: dosya bulunamadı", filename);
 		return false;
 	}
 
@@ -563,7 +563,7 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 
 				if (!p)
 				{
-					sys_err("In %s, No mob data by vnum %u", filename, regen->vnum);
+					sys_err("%s içinde, vnum %u için mob verisi yok", filename, regen->vnum);
 					continue;
 				}
 			}
@@ -605,7 +605,7 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 
 	if (NULL == fp)
 	{
-		sys_log(0, "SYSTEM: regen_load: %s: file not found", filename);
+		sys_log(0, "SİSTEM: regen_load: %s: dosya bulunamadı", filename);
 		return false;
 	}
 
@@ -659,7 +659,7 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 
 				if (!p)
 				{
-					sys_err("In %s, No mob data by vnum %u", filename, regen->vnum);
+					sys_err("%s içinde, vnum %u için mob verisi yok", filename, regen->vnum);
 				}
 				else if (p->m_table.bType == CHAR_TYPE_NPC || p->m_table.bType == CHAR_TYPE_WARP || p->m_table.bType == CHAR_TYPE_GOTO)
 				{

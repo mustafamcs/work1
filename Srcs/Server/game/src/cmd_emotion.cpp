@@ -115,7 +115,7 @@ ACMD(do_emotion)
 
 	if (*emotion_types[i].command == '\n')
 	{
-		sys_err("cannot find emotion");
+		sys_err("duygu bulunamıyor");
 		return;
 	}
 

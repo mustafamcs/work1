@@ -159,7 +159,7 @@ int get_Item_SubType_Value(int type_value, std::string inputString)
 	auto itType = mapItemSubType.find(type_value);
 	if (itType == mapItemSubType.end())
 	{
-		sys_err("Type Out of range! (type_value: %d)", type_value);
+		sys_err("Tip aralık dışı! (type_value: %d)", type_value);
 		return -1;
 	}
 
@@ -167,7 +167,7 @@ int get_Item_SubType_Value(int type_value, std::string inputString)
 	auto itSubtype = std::find(vecSubtype.begin(), vecSubtype.end(), inputString);
 	if (itSubtype == vecSubtype.end())
 	{
-		sys_err("Subtype Out of range! (type_value: %d)", type_value);
+		sys_err("Alttip aralık dışı! (type_value: %d)", type_value);
 		return -1;
 	}
 
@@ -669,7 +669,7 @@ bool Set_Proto_Item_Table(TItemTable *itemTable, cCsvTable &csvTable,std::map<in
 
 	if (csvTable.ColCount() < 33 || (minProfileCol >= 0 && csvTable.ColCount() <= (size_t)minProfileCol))
 	{
-		sys_err("ItemProto Reading Failed : Malformed column count %u (vnum: %s, minProfileCol: %d)",
+		sys_err("ItemProto Okuma Başarısız : Bozuk sütun sayısı %u (vnum: %s, minProfileCol: %d)",
 			csvTable.ColCount(), csvTable.ColCount() ? csvTable.AsStringByIndex(0) : "?", minProfileCol);
 		exit(0);
 	}
@@ -721,8 +721,8 @@ bool Set_Proto_Item_Table(TItemTable *itemTable, cCsvTable &csvTable,std::map<in
 			for (size_t j = 0; j < i; ++j)
 				dataStream << dataArray[j] << ",";
 
-			//fprintf(stderr, "ItemProto Reading Failed : Invalid value.\n");
-			sys_err("ItemProto Reading Failed : Invalid value. (index: %d, col: %d, value: %s)", i, col, csvTable.AsStringByIndex(col));
+			//fprintf(stderr, "ItemProto Okuma Başarısız : Geçersiz değer.\n");
+			sys_err("ItemProto Okuma Başarısız : Geçersiz değer. (indeks: %d, sütun: %d, değer: %s)", i, col, csvTable.AsStringByIndex(col));
 			sys_err("\t%d ~ %d Values: %s", 0, i, dataStream.str().c_str());
 
 			exit(0);
@@ -748,7 +748,7 @@ bool Set_Proto_Item_Table(TItemTable *itemTable, cCsvTable &csvTable,std::map<in
 			int end_vnum = atoi(s_end_vnum.c_str());
 			if (0 == start_vnum || (0 != end_vnum && end_vnum < start_vnum))
 			{
-				sys_err ("INVALID VNUM %s", s.c_str());
+				sys_err ("GEÇERSİZ VNUM %s", s.c_str());
 				return false;
 			}
 			itemTable->dwVnum = start_vnum;
@@ -819,7 +819,7 @@ bool Set_Proto_Item_Table(TItemTable *itemTable, cCsvTable &csvTable,std::map<in
 	#endif
 	if (dwPrice > itemTable->dwGold)
 	{
-		sys_err("ITEM: #%-5lu %-24s SELL_OVERFLOW dwGold: %u < dwShopBuyPrice %u",
+		sys_err("EŞYA: #%-5lu %-24s SELL_OVERFLOW dwGold: %u < dwShopBuyPrice %u",
 			itemTable->dwVnum,
 			itemTable->szLocaleName,
 			itemTable->dwGold,

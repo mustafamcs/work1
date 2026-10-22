@@ -58,7 +58,7 @@ void CPVP::Packet(bool bDelete)
 	if (!m_players[0].dwVID || !m_players[1].dwVID)
 	{
 		if (bDelete)
-			sys_err("null vid when removing %u %u", m_players[0].dwVID, m_players[0].dwVID);
+			sys_err("%u %u kaldırılırken null vid", m_players[0].dwVID, m_players[0].dwVID);
 
 		return;
 	}
@@ -404,7 +404,7 @@ bool CPVPManager::CanAttack(LPCHARACTER pkChr, LPCHARACTER pkVictim)
 			case MOUNT_TYPE_NORMAL:
 			default:
 				if (test_server)
-					sys_log(0, "CanUseSkill: Mount can't attack. vnum(%u) type(%d)", pkChr->GetMountVnum(), static_cast<int>(eIsMount));
+					sys_log(0, "CanUseSkill: Binek saldıramaz. vnum(%u) tip(%d)", pkChr->GetMountVnum(), static_cast<int>(eIsMount));
 				return false;
 				break;
 		}

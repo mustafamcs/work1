@@ -119,7 +119,7 @@ const char *one_argument(const char *argument, char *first_arg, size_t first_siz
 
 	if (!argument || 0 == first_size)
 	{
-		sys_err("one_argument received a NULL pointer!");
+		sys_err("one_argument NULL pointer aldı!");
 		*first_arg = '\0';
 		return NULL;
 	}

@@ -52,7 +52,7 @@ bool CSafebox::Add(DWORD dwPos, LPITEM pkItem)
 {
 	if (!IsValidPosition(dwPos))
 	{
-		sys_err("SAFEBOX: item on wrong position at %d (size of grid = %d)", dwPos, m_pkGrid->GetSize());
+		sys_err("KASA: eşya %d konumunda hatalı (ızgara boyutu = %d)", dwPos, m_pkGrid->GetSize());
 		return false;
 	}
 
@@ -96,7 +96,7 @@ LPITEM CSafebox::Remove(DWORD dwPos)
 		return NULL;
 
 	if (!m_pkGrid)
-		sys_err("Safebox::Remove : nil grid");
+		sys_err("Safebox::Remove : nil ızgara");
 	else
 		m_pkGrid->Get(dwPos, 1, pkItem->GetSize());
 
@@ -124,7 +124,7 @@ void CSafebox::Save()
 	t.dwGold = m_lGold;
 
 	db_clientdesc->DBPacket(HEADER_GD_SAFEBOX_SAVE, 0, &t, sizeof(TSafeboxTable));
-	sys_log(1, "SAFEBOX: SAVE %s", m_pkChrOwner->GetName());
+	sys_log(1, "SAFEBOX: KAYDET %s", m_pkChrOwner->GetName());
 }
 
 bool CSafebox::IsEmpty(DWORD dwPos, BYTE bSize)
@@ -154,7 +154,7 @@ LPITEM CSafebox::GetItem(BYTE bCell)
 {
 	if (bCell >= 5 * m_iSize)
 	{
-		sys_err("CHARACTER::GetItem: invalid item cell %d", bCell);
+		sys_err("CHARACTER::GetItem: geçersiz eşya hücresi %d", bCell);
 		return NULL;
 	}
 

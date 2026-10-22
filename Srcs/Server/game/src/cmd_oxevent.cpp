@@ -10,9 +10,9 @@
 
 ACMD(do_oxevent_show_quiz)
 {
-	ch->ChatPacket(CHAT_TYPE_INFO, "===== OX QUIZ LIST =====");
+	ch->ChatPacket(CHAT_TYPE_INFO, "===== OX YARIŞMA LİSTESİ =====");
 	COXEventManager::instance().ShowQuizList(ch);
-	ch->ChatPacket(CHAT_TYPE_INFO, "===== OX QUIZ LIST END =====");
+	ch->ChatPacket(CHAT_TYPE_INFO, "===== OX YARIŞMA LİSTESİ SONU =====");
 }
 
 ACMD(do_oxevent_log)

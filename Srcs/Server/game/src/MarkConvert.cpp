@@ -14,7 +14,7 @@ static Pixel * LoadOldGuildMarkImageFile()
 
 	if (!fp)
 	{
-		sys_err("cannot open %s", OLD_MARK_INDEX_FILENAME);
+		sys_err("%s açılamıyor", OLD_MARK_INDEX_FILENAME);
 		return NULL;
 	}
 
@@ -56,7 +56,7 @@ bool GuildMarkConvert(const std::vector<DWORD> & vecGuildID)
 		return false;
 	}
 
-	sys_log(0, "Guild Mark Converting Start.");
+	sys_log(0, "Lonca İşareti Dönüştürme Başladı.");
 
 	char line[256];
 	DWORD guild_id;
@@ -78,7 +78,7 @@ bool GuildMarkConvert(const std::vector<DWORD> & vecGuildID)
 
 		if (row >= 42)
 		{
-			sys_err("invalid mark_id %u", mark_id);
+			sys_err("geçersiz mark_id %u", mark_id);
 			continue;
 		}
 
@@ -111,7 +111,7 @@ bool GuildMarkConvert(const std::vector<DWORD> & vecGuildID)
 	system("move /Y guild_mark.tga guild_mark.tga.removable");
 #endif
 
-	sys_log(0, "Guild Mark Converting Complete.");
+	sys_log(0, "Lonca İşareti Dönüştürme Tamamlandı.");
 
 	return true;
 }

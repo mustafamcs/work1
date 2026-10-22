@@ -21,7 +21,7 @@ bool CBanwordManager::Initialize(TBanwordTable * p, WORD wSize)
 		m_hashmap_words[p->szWord] = true;
 
 	char szBuf[256];
-	snprintf(szBuf, sizeof(szBuf), "Banword reloaded! (total %zu banwords)", m_hashmap_words.size());
+	snprintf(szBuf, sizeof(szBuf), "Yasaklı kelimeler yeniden yüklendi! (toplam %zu)", m_hashmap_words.size());
 	SendLog(szBuf);
 	return true;
 }

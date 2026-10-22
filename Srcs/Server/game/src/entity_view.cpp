@@ -173,7 +173,7 @@ void CEntity::UpdateSectree()
 		if (IsType(ENTITY_CHARACTER))
 		{
 			LPCHARACTER tch = (LPCHARACTER) this;
-			sys_err("null sectree name: %s %d %d",  tch->GetName(), GetX(), GetY());
+			sys_err("null sectree isim: %s %d %d",  tch->GetName(), GetX(), GetY());
 		}
 
 		return;

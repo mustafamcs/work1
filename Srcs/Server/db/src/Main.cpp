@@ -82,7 +82,7 @@ int main()
 	GuildManager.Initialize();
 	MarriageManager.Initialize();
 	ItemIDRangeManager.Build();
-	sys_log(0, "Metin2DBCacheServer Start\n");
+	sys_log(0, "Metin2DBCacheServer Başlat\n");
 
 	CClientManager::instance().MainLoop();
 
@@ -122,20 +122,20 @@ int Start()
 {
 	if (!CConfig::instance().LoadFile("conf.txt"))
 	{
-		fprintf(stderr, "Loading conf.txt failed.\n");
+		fprintf(stderr, "conf.txt yüklemesi başarısız.\n");
 		return false;
 	}
 
 	if (!CConfig::instance().GetValue("TEST_SERVER", &g_test_server))
 	{
-		fprintf(stderr, "Real Server\n");
+		fprintf(stderr, "Gerçek Sunucu\n");
 	}
 	else
-		fprintf(stderr, "Test Server\n");
+		fprintf(stderr, "Test Sunucusu\n");
 
 	if (!CConfig::instance().GetValue("LOG", &g_log))
 	{
-		fprintf(stderr, "Log Off");
+		fprintf(stderr, "Çıkış Yap");
 		g_log= 0;
 	}
 	else
@@ -149,7 +149,7 @@ int Start()
 	int heart_beat = 50;
 	if (!CConfig::instance().GetValue("CLIENT_HEART_FPS", &heart_beat))
 	{
-		fprintf(stderr, "Cannot find CLIENT_HEART_FPS configuration.\n");
+		fprintf(stderr, "CLIENT_HEART_FPS yapılandırması bulunamıyor.\n");
 		return false;
 	}
 
@@ -159,7 +159,7 @@ int Start()
 	{
 		tmpValue = MINMAX(3, tmpValue, 30);
 		log_set_expiration_days(tmpValue);
-		fprintf(stderr, "Setting log keeping days to %d\n", tmpValue);
+		fprintf(stderr, "Log saklama günü %d olarak ayarlanıyor\n", tmpValue);
 	}
 
 	thecore_init(heart_beat, emptybeat);
@@ -172,10 +172,10 @@ int Start()
 		g_stLocale = szBuf;
 		if (g_stLocale == "latin1" || g_stLocale == "latin5")
 		{
-			sys_log(0, "LOCALE %s replaced; product charset is utf8", szBuf);
+			sys_log(0, "LOCALE %s değiştirildi; ürün karakter seti utf8", szBuf);
 			g_stLocale = "utf8";
 		}
-		sys_log(0, "LOCALE set to %s", g_stLocale.c_str());
+		sys_log(0, "LOCALE %s olarak ayarlandı", g_stLocale.c_str());
 
 		// CHINA_DISABLE_HOTBACKUP
 		if ("gb2312" == g_stLocale)
@@ -198,7 +198,7 @@ int Start()
 
 	if (!CConfig::instance().GetValue("TABLE_POSTFIX", szBuf, 256))
 	{
-		sys_log(0, "TABLE_POSTFIX not configured use default"); // @warme012
+		sys_log(0, "TABLE_POSTFIX yapılandırılmamış, varsayılan kullanılıyor"); // @warme012
 		szBuf[0] = '\0';
 	}
 
@@ -233,7 +233,7 @@ int Start()
 	int iIDStart;
 	if (!CConfig::instance().GetValue("PLAYER_ID_START", &iIDStart))
 	{
-		sys_err("PLAYER_ID_START not configured");
+		sys_err("PLAYER_ID_START yapılandırılmamış");
 		return false;
 	}
 
@@ -252,7 +252,7 @@ int Start()
 	if (CConfig::instance().GetValue("SQL_PLAYER", line, 256))
 	{
 		sscanf(line, " %s %s %s %s %d ", szAddr, szDB, szUser, szPassword, &iPort);
-		sys_log(0, "connecting to MySQL server (player)");
+		sys_log(0, "MySQL sunucusuna bağlanılıyor (player)");
 
 		int iRetry = 5;
 
@@ -268,19 +268,19 @@ int Start()
 			fprintf(stderr, "   failed, retrying in 5 seconds");
 			sleep(5);
 		} while (iRetry--);
-		fprintf(stderr, "Success PLAYER\n");
+		fprintf(stderr, "Başarılı PLAYER\n");
 		SetPlayerDBName(szDB);
 	}
 	else
 	{
-		sys_err("SQL_PLAYER not configured");
+		sys_err("SQL_PLAYER yapılandırılmamış");
 		return false;
 	}
 
 	if (CConfig::instance().GetValue("SQL_ACCOUNT", line, 256))
 	{
 		sscanf(line, " %s %s %s %s %d ", szAddr, szDB, szUser, szPassword, &iPort);
-		sys_log(0, "connecting to MySQL server (account)");
+		sys_log(0, "MySQL sunucusuna bağlanılıyor (account)");
 
 		int iRetry = 5;
 
@@ -296,18 +296,18 @@ int Start()
 			fprintf(stderr, "   failed, retrying in 5 seconds");
 			sleep(5);
 		} while (iRetry--);
-		fprintf(stderr, "Success ACCOUNT\n");
+		fprintf(stderr, "Başarılı ACCOUNT\n");
 	}
 	else
 	{
-		sys_err("SQL_ACCOUNT not configured");
+		sys_err("SQL_ACCOUNT yapılandırılmamış");
 		return false;
 	}
 
 	if (CConfig::instance().GetValue("SQL_COMMON", line, 256))
 	{
 		sscanf(line, " %s %s %s %s %d ", szAddr, szDB, szUser, szPassword, &iPort);
-		sys_log(0, "connecting to MySQL server (common)");
+		sys_log(0, "MySQL sunucusuna bağlanılıyor (common)");
 
 		int iRetry = 5;
 
@@ -323,18 +323,18 @@ int Start()
 			fprintf(stderr, "   failed, retrying in 5 seconds");
 			sleep(5);
 		} while (iRetry--);
-		fprintf(stderr, "Success COMMON\n");
+		fprintf(stderr, "Başarılı COMMON\n");
 	}
 	else
 	{
-		sys_err("SQL_COMMON not configured");
+		sys_err("SQL_COMMON yapılandırılmamış");
 		return false;
 	}
 
 	if (CConfig::instance().GetValue("SQL_HOTBACKUP", line, 256))
 	{
 		sscanf(line, " %s %s %s %s %d ", szAddr, szDB, szUser, szPassword, &iPort);
-		sys_log(0, "connecting to MySQL server (hotbackup)");
+		sys_log(0, "MySQL sunucusuna bağlanılıyor (hotbackup)");
 
 		int iRetry = 5;
 
@@ -352,11 +352,11 @@ int Start()
 		}
 		while (iRetry--);
 
-		fprintf(stderr, "Success HOTBACKUP\n");
+		fprintf(stderr, "Başarılı HOTBACKUP\n");
 	}
 	else
 	{
-		sys_err("SQL_HOTBACKUP not configured");
+		sys_err("SQL_HOTBACKUP yapılandırılmamış");
 		return false;
 	}
 
@@ -365,7 +365,7 @@ int Start()
 	if (CConfig::instance().GetValue("SQL_LOG", line, 256))
 	{
 		sscanf(line, " %s %s %s %s %d ", szAddr, szDB, szUser, szPassword, &iPort);
-		sys_log(0, "connecting to MySQL server (log)");
+		sys_log(0, "MySQL sunucusuna bağlanılıyor (log)");
 
 		int iRetry = 5;
 
@@ -382,18 +382,18 @@ int Start()
 			sleep(5);
 		} while (iRetry--);
 
-		fprintf(stderr, "Success LOG\n");
+		fprintf(stderr, "Başarılı LOG\n");
 	}
 	else
 	{
-		sys_err("SQL_LOG not configured");
+		sys_err("SQL_LOG yapılandırılmamış");
 		return false;
 	}
 #endif
 
 	if (!CNetPoller::instance().Create())
 	{
-		sys_err("Cannot create network poller");
+		sys_err("Ağ poller'ı oluşturulamıyor");
 		return false;
 	}
 
@@ -401,7 +401,7 @@ int Start()
 
 	if (!CClientManager::instance().Initialize())
 	{
-		sys_log(0, "   failed");
+		sys_log(0, "   basarisiz");
 		return false;
 	}
 
@@ -409,7 +409,7 @@ int Start()
 
 	if (!PlayerHB::instance().Initialize())
 	{
-		sys_err("cannot initialize player hotbackup");
+		sys_err("oyuncu hotbackup'ı başlatılamıyor");
 		return false;
 	}
 

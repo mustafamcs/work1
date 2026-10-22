@@ -130,7 +130,7 @@ void CItem::AddAttribute(BYTE bApply, short sValue)
 	int i = GetAttributeCount();
 
 	if (i >= MAX_NORM_ATTR_NUM)
-		sys_err("item attribute overflow!");
+		sys_err("eşya efsun taşması!");
 	else
 	{
 		if (sValue)
@@ -149,7 +149,7 @@ void CItem::AddAttr(BYTE bApply, BYTE bLevel)
 	int i = GetAttributeCount();
 
 	if (i == MAX_NORM_ATTR_NUM)
-		sys_err("item attribute overflow!");
+		sys_err("eşya efsun taşması!");
 	else
 	{
 		const TItemAttrTable & r = g_map_itemAttr[bApply];
@@ -202,7 +202,7 @@ void CItem::PutAttributeWithLevel(BYTE bLevel)
 
 	if (!attr_idx)
 	{
-		sys_err("Cannot put item attribute %d %d", iAttributeSet, bLevel);
+		sys_err("Eşya efsunu eklenemiyor %d %d", iAttributeSet, bLevel);
 		return;
 	}
 
@@ -583,7 +583,7 @@ void CItem::PutRareAttributeWithLevel(BYTE bLevel)
 
 	if (!attr_idx)
 	{
-		sys_err("Cannot put item rare attribute %d %d", iAttributeSet, bLevel);
+		sys_err("Eşya nadir efsunu eklenemiyor %d %d", iAttributeSet, bLevel);
 		return;
 	}
 
@@ -609,7 +609,7 @@ void CItem::AddRareAttr(BYTE bApply, BYTE bLevel)
 	int i = ITEM_ATTRIBUTE_RARE_START + GetRareAttrCount();
 
 	if (i == ITEM_ATTRIBUTE_RARE_END)
-		sys_err("item rare attribute overflow!");
+		sys_err("eşya nadir efsun taşması!");
 	else
 	{
 		const TItemAttrTable & r = g_map_itemRare[bApply];

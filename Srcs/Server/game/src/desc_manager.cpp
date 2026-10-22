@@ -160,7 +160,7 @@ LPDESC DESC_MANAGER::AcceptDesc(LPFDWATCH fdw, socket_t s)
 	{
 		if (m_iSocketsConnected >= MAX_ALLOW_USER)
 		{
-			sys_err("max connection reached. MAX_ALLOW_USER = %d", MAX_ALLOW_USER);
+			sys_err("maks bağlantıya ulaşıldı. MAX_ALLOW_USER = %d", MAX_ALLOW_USER);
 			socket_close(desc);
 			return NULL;
 		}
@@ -199,7 +199,7 @@ LPDESC DESC_MANAGER::AcceptP2PDesc(LPFDWATCH fdw, socket_t bind_fd)
 
 	if (!pkDesc->Setup(fdw, fd, host, peer.sin_port))
 	{
-		sys_err("DESC_MANAGER::AcceptP2PDesc : Setup failed");
+		sys_err("DESC_MANAGER::AcceptP2PDesc : Kurulum başarısız");
 		socket_close(fd);
 		M2_DELETE(pkDesc);
 		return NULL;
@@ -559,7 +559,7 @@ void DESC_MANAGER::SendClientPackageSDBToLoadMap( LPDESC desc, const char* pMapN
 		if( !m_pPackageCrypt->GetRelatedMapSDBStreams( pMapName, &(packet.m_pDataSDBStream), packet.iStreamLen ) )
 			return;
 		if (test_server)
-			sys_log(0, "[PackageCryptInfo] send to %s from map %s. (SDB len: %d)", desc->GetAccountTable().login, pMapName, packet.iStreamLen);
+			sys_log(0, "[PackageCryptInfo] %s haritasından %s gönderildi. (SDB uzunluk: %d)", desc->GetAccountTable().login, pMapName, packet.iStreamLen);
 	}
 
 	if( packet.iStreamLen > 0 )

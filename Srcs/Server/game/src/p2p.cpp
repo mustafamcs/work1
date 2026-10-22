@@ -64,21 +64,21 @@ void P2P_MANAGER::FlushOutput()
 
 void P2P_MANAGER::RegisterAcceptor(LPDESC d)
 {
-	sys_log(0, "P2P Acceptor opened (host %s)", d->GetHostName());
+	sys_log(0, "P2P Acceptor açıldı (host %s)", d->GetHostName());
 	m_set_pkPeers.emplace(d);
 	Boot(d);
 }
 
 void P2P_MANAGER::UnregisterAcceptor(LPDESC d)
 {
-	sys_log(0, "P2P Acceptor closed (host %s)", d->GetHostName());
+	sys_log(0, "P2P Acceptor kapandı (host %s)", d->GetHostName());
 	EraseUserByDesc(d);
 	m_set_pkPeers.erase(d);
 }
 
 void P2P_MANAGER::RegisterConnector(LPDESC d)
 {
-	sys_log(0, "P2P Connector opened (host %s)", d->GetHostName());
+	sys_log(0, "P2P Connector açıldı (host %s)", d->GetHostName());
 	m_set_pkPeers.emplace(d);
 	Boot(d);
 
@@ -95,7 +95,7 @@ void P2P_MANAGER::UnregisterConnector(LPDESC d)
 
 	if (it != m_set_pkPeers.end())
 	{
-		sys_log(0, "P2P Connector closed (host %s)", d->GetHostName());
+		sys_log(0, "P2P Connector kapandı (host %s)", d->GetHostName());
 		EraseUserByDesc(d);
 		m_set_pkPeers.erase(it);
 	}
@@ -154,7 +154,7 @@ void P2P_MANAGER::Login(LPDESC d, const TPacketGGLogin * p)
 			}
 			else
 			{
-				sys_err("LOGIN_EMPIRE_ERROR: %d >= MAX(%d)", pkCCI->bEmpire, EMPIRE_MAX_NUM);
+				sys_err("GIRIS_IMPARATORLUK_HATASI: %d >= MAKS(%d)", pkCCI->bEmpire, EMPIRE_MAX_NUM);
 			}
 		}
 
@@ -190,7 +190,7 @@ void P2P_MANAGER::Logout(CCI * pkCCI)
 		}
 		else
 		{
-			sys_err("LOGOUT_EMPIRE_ERROR: %d >= MAX(%d)", pkCCI->bEmpire, EMPIRE_MAX_NUM);
+			sys_err("CIKIS_IMPARATORLUK_HATASI: %d >= MAKS(%d)", pkCCI->bEmpire, EMPIRE_MAX_NUM);
 		}
 	}
 

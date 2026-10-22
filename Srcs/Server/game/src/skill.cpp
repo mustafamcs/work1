@@ -126,7 +126,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (iIdx < 0)
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : cannot find point type on skill: %s szPointOn: %s", t->szName, t->szPointOn);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : beceride point tipi bulunamıyor: %s szPointOn: %s", t->szName, t->szPointOn);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -140,7 +140,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (iIdx2 < 0)
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : cannot find point type on skill: %s szPointOn2: %s", t->szName, t->szPointOn2);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : beceride point tipi bulunamıyor: %s szPointOn2: %s", t->szName, t->szPointOn2);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -160,7 +160,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 			}
 			else
 			{
-				snprintf(buf, sizeof(buf), "SkillManager::Initialize : cannot find point type on skill: %s szPointOn3: %s", t->szName, t->szPointOn3);
+				snprintf(buf, sizeof(buf), "SkillManager::Initialize : beceride point tipi bulunamıyor: %s szPointOn3: %s", t->szName, t->szPointOn3);
 				sys_err("%s", buf);
 				SendLog(buf);
 				bError = true;
@@ -173,7 +173,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kSplashAroundDamageAdjustPoly.Analyze(t->szSplashAroundDamageAdjustPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szSplashAroundDamageAdjustPoly: %s", t->szName, t->szSplashAroundDamageAdjustPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szSplashAroundDamageAdjustPoly: %s", t->szName, t->szSplashAroundDamageAdjustPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -183,7 +183,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kPointPoly.Analyze(t->szPointPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szPointPoly: %s", t->szName, t->szPointPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szPointPoly: %s", t->szName, t->szPointPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -193,7 +193,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kPointPoly2.Analyze(t->szPointPoly2))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szPointPoly2: %s", t->szName, t->szPointPoly2);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szPointPoly2: %s", t->szName, t->szPointPoly2);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -203,7 +203,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kPointPoly3.Analyze(t->szPointPoly3))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szPointPoly3: %s", t->szName, t->szPointPoly3);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szPointPoly3: %s", t->szName, t->szPointPoly3);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -213,7 +213,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kSPCostPoly.Analyze(t->szSPCostPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szSPCostPoly: %s", t->szName, t->szSPCostPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szSPCostPoly: %s", t->szName, t->szSPCostPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -223,7 +223,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kGrandMasterAddSPCostPoly.Analyze(t->szGrandMasterAddSPCostPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szGrandMasterAddSPCostPoly: %s", t->szName, t->szGrandMasterAddSPCostPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szGrandMasterAddSPCostPoly: %s", t->szName, t->szGrandMasterAddSPCostPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -233,7 +233,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kDurationPoly.Analyze(t->szDurationPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szDurationPoly: %s", t->szName, t->szDurationPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szDurationPoly: %s", t->szName, t->szDurationPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -243,7 +243,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kDurationPoly2.Analyze(t->szDurationPoly2))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szDurationPoly2: %s", t->szName, t->szDurationPoly2);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szDurationPoly2: %s", t->szName, t->szDurationPoly2);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -253,7 +253,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kDurationPoly3.Analyze(t->szDurationPoly3))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szDurationPoly3: %s", t->szName, t->szDurationPoly3);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szDurationPoly3: %s", t->szName, t->szDurationPoly3);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -263,7 +263,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kDurationSPCostPoly.Analyze(t->szDurationSPCostPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szDurationSPCostPoly: %s", t->szName, t->szDurationSPCostPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szDurationSPCostPoly: %s", t->szName, t->szDurationSPCostPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -273,7 +273,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 
 		if (!pkProto->kCooldownPoly.Analyze(t->szCooldownPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szCooldownPoly: %s", t->szName, t->szCooldownPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szCooldownPoly: %s", t->szName, t->szCooldownPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;
@@ -284,7 +284,7 @@ bool CSkillManager::Initialize(TSkillTable * pTab, int iSize)
 		sys_log(0, "Master %s", t->szMasterBonusPoly);
 		if (!pkProto->kMasterBonusPoly.Analyze(t->szMasterBonusPoly))
 		{
-			snprintf(buf, sizeof(buf), "SkillManager::Initialize : syntax error skill: %s szMasterBonusPoly: %s", t->szName, t->szMasterBonusPoly);
+			snprintf(buf, sizeof(buf), "SkillManager::Initialize : sözdizimi hatası beceri: %s szMasterBonusPoly: %s", t->szName, t->szMasterBonusPoly);
 			sys_err("%s", buf);
 			SendLog(buf);
 			bError = true;

@@ -106,9 +106,9 @@ namespace quest
 			int line = 0;
 
 			if (!inf.is_open())
-				sys_err( "QUEST Cannot open 'questnpc.txt'");
+				sys_err( "GÖREV 'questnpc.txt' açılamıyor");
 			else
-				sys_log(0, "QUEST can open 'questnpc.txt' (%s)", g_stQuestDir.c_str() );
+				sys_log(0, "GÖREV 'questnpc.txt' açılabilir (%s)", g_stQuestDir.c_str() );
 
 			while (1)
 			{
@@ -129,7 +129,7 @@ namespace quest
 
 				if (ri < li)
 				{
-					sys_err("QUEST questnpc.txt:%d:npc name error",line);
+					sys_err("GÖREV questnpc.txt:%d:npc isim hatası",line);
 					continue;
 				}
 
@@ -142,7 +142,7 @@ namespace quest
 
 				//cout << '-' << s << '-' << endl;
 				if ( test_server )
-					sys_log(0, "QUEST reading script of %s(%d)", s.c_str(), vnum);
+					sys_log(0, "GÖREV %s(%d) scripti okunuyor", s.c_str(), vnum);
 				m_mapNPC[vnum].Set(vnum, s);
 				m_mapNPCNameID[s] = vnum;
 			}
@@ -185,19 +185,19 @@ namespace quest
 
 		if (!pPC->IsRunning())
 		{
-			sys_err("no quest running for pc, cannot process input : %u", pc);
+			sys_err("pc için çalışan görev yok, girdi işlenemiyor : %u", pc);
 			return;
 		}
 
 		if (pPC->GetRunningQuestState()->suspend_state != SUSPEND_STATE_CONFIRM)
 		{
-			sys_err("not wait for a confirm : %u %d", pc, pPC->GetRunningQuestState()->suspend_state);
+			sys_err("onay beklenmiyor : %u %d", pc, pPC->GetRunningQuestState()->suspend_state);
 			return;
 		}
 
 		if (pc2 && !pPC->IsConfirmWait(pc2))
 		{
-			sys_err("not wait for a confirm : %u %d", pc, pPC->GetRunningQuestState()->suspend_state);
+			sys_err("onay beklenmiyor : %u %d", pc, pPC->GetRunningQuestState()->suspend_state);
 			return;
 		}
 
@@ -227,9 +227,9 @@ namespace quest
 		int c_qi = 99;
 
 		if (!inf.is_open())
-			sys_err( "QUEST Cannot open 'questcategory.txt'");
+			sys_err( "GÖREV 'questcategory.txt' açılamıyor");
 		else
-			sys_log(0, "QUEST can open 'questcategory.txt' (%s)", g_stQuestDir.c_str() );
+			sys_log(0, "GÖREV 'questcategory.txt' açılabilir (%s)", g_stQuestDir.c_str() );
 
 		while (1)
 		{
@@ -262,7 +262,7 @@ namespace quest
 
 			if (ri < li)
 			{
-				sys_err("QUEST questcategory.txt:%d:npc name error",line);
+				sys_err("GÖREV questcategory.txt:%d:npc isim hatası",line);
 				continue;
 			}
 
@@ -275,7 +275,7 @@ namespace quest
 
 			//cout << '-' << s << '-' << endl;
 			if ( test_server )
-				sys_log(0, "QUEST reading script of %s(%d)", s.c_str(), category_num);
+				sys_log(0, "GÖREV %s(%d) scripti okunuyor", s.c_str(), category_num);
 
 			if (qn == s)
 			{
@@ -301,13 +301,13 @@ namespace quest
 
 		if (!pPC->IsRunning())
 		{
-			sys_err("no quest running for pc, cannot process input : %u", pc);
+			sys_err("pc için çalışan görev yok, girdi işlenemiyor : %u", pc);
 			return;
 		}
 
 		if (pPC->GetRunningQuestState()->suspend_state != SUSPEND_STATE_INPUT)
 		{
-			sys_err("not wait for a input : %u %d", pc, pPC->GetRunningQuestState()->suspend_state);
+			sys_err("girdi beklenmiyor : %u %d", pc, pPC->GetRunningQuestState()->suspend_state);
 			return;
 		}
 
@@ -363,7 +363,7 @@ namespace quest
 		}
 		else
 		{
-			sys_err("wrong QUEST_SELECT request! : %d",pc);
+			sys_err("yanlış QUEST_SELECT isteği! : %d",pc);
 		}
 	}
 
@@ -389,7 +389,7 @@ namespace quest
 			//cerr << pPC->GetRunningQuestState()->suspend_state;
 			//cerr << SUSPEND_STATE_WAIT << endl;
 			//cerr << "wrong QUEST_WAIT request! : " << pc << endl;
-			sys_err("wrong QUEST_WAIT request! : %d",pc);
+			sys_err("yanlış QUEST_WAIT isteği! : %d",pc);
 		}
 	}
 
@@ -550,7 +550,7 @@ namespace quest
 #ifdef ENABLE_QUEST_BOOT_EVENT
 	bool CQuestManager::Boot()
 	{
-		sys_log(0, "XXX Boot Call NPC %p", GetPCForce(0));
+		sys_log(0, "XXX Boot NPC Çağrısı %p", GetPCForce(0));
 		m_pCurrentPC = GetPCForce(0);
 		m_pCurrentCharacter = NULL;
 		m_pSelectedDungeon = NULL;
@@ -562,7 +562,7 @@ namespace quest
 	bool CQuestManager::DND(uint32_t pc, LPITEM item_dnd, LPITEM item_victim, bool bReceiveAll)
 	{
 		if (test_server)
-			sys_log( 0, "CQuestManager::DND_EVENT Start: item_dnd(%d), item_victim(%d), PC(%d)", item_dnd->GetOriginalVnum(), item_victim->GetOriginalVnum(), pc);
+			sys_log( 0, "CQuestManager::DND_EVENT Başlangıç: item_dnd(%d), item_victim(%d), PC(%d)", item_dnd->GetOriginalVnum(), item_victim->GetOriginalVnum(), pc);
 		PC * pPC;
 		if ((pPC = GetPC(pc)))
 		{
@@ -581,7 +581,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST DND_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV DND_EVENT böyle pc id yok : %d", pc);
 			return false;
 		}
 
@@ -591,7 +591,7 @@ namespace quest
 	bool CQuestManager::ServerTimer(unsigned int npc, unsigned int arg)
 	{
 		SetServerTimerArg(arg);
-		sys_log(0, "XXX ServerTimer Call NPC %p vnum %u arg %u", GetPCForce(0), npc, arg);
+		sys_log(0, "XXX ServerTimer NPC Çağrısı %p vnum %u arg %u", GetPCForce(0), npc, arg);
 		m_pCurrentPC = GetPCForce(0);
 		m_pCurrentCharacter = NULL;
 		m_pSelectedDungeon = NULL;
@@ -614,7 +614,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST TIMER_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV TIMER_EVENT böyle pc id yok : %d", pc);
 			return false;
 		}
 		//cerr << "QUEST TIMER" << endl;
@@ -633,7 +633,7 @@ namespace quest
 		}
 		else
 		{
-			sys_err("QUEST LEVELUP_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV LEVELUP_EVENT böyle pc id yok : %d", pc);
 		}
 	}
 
@@ -715,7 +715,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST INFO_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV INFO_EVENT böyle pc id yok : %d", pc);
 		}
 	}
 
@@ -739,7 +739,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST CLICK_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV CLICK_EVENT böyle pc id yok : %d", pc);
 		}
 	}
 
@@ -766,7 +766,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST USE_ITEM_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV USE_ITEM_EVENT böyle pc id yok : %d", pc);
 			return false;
 		}
 	}
@@ -774,7 +774,7 @@ namespace quest
 	bool CQuestManager::UseItem(unsigned int pc, LPITEM item, bool bReceiveAll)
 	{
 		if (test_server)
-			sys_log( 0, "questmanager::UseItem Start : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
+			sys_log( 0, "questmanager::UseItem Başlangıç : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
 		PC* pPC;
 		if ((pPC = GetPC(pc)))
 		{
@@ -792,12 +792,12 @@ namespace quest
 			/*
 			if (test_server)
 			{
-				sys_log( 0, "Quest UseItem Start : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
+				sys_log( 0, "Görev UseItem Başlangıç : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
 				itertype(m_mapNPC) it = m_mapNPC.begin();
 				itertype(m_mapNPC) end = m_mapNPC.end();
 				for( ; it != end ; ++it)
 				{
-					sys_log( 0, "Quest UseItem : vnum : %d item Vnum : %d", it->first, item->GetOriginalVnum());
+					sys_log( 0, "Görev UseItem : vnum : %d eşya Vnum : %d", it->first, item->GetOriginalVnum());
 				}
 			}
 			if(test_server)
@@ -809,7 +809,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST USE_ITEM_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV USE_ITEM_EVENT böyle pc id yok : %d", pc);
 			return false;
 		}
 	}
@@ -817,7 +817,7 @@ namespace quest
 	bool CQuestManager::SIGUse(unsigned int pc, DWORD sig_vnum, LPITEM item, bool bReceiveAll)
 	{
 		if (test_server)
-			sys_log( 0, "questmanager::SIGUse Start : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
+			sys_log( 0, "questmanager::SIGUse Başlangıç : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
 		PC* pPC;
 		if ((pPC = GetPC(pc)))
 		{
@@ -838,7 +838,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST USE_ITEM_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV USE_ITEM_EVENT böyle pc id yok : %d", pc);
 			return false;
 		}
 	}
@@ -906,7 +906,7 @@ namespace quest
 
 				if (it == m_mapNPC.end())
 				{
-					sys_log(0, "CQuestManager::Click(pid=%d, target_npc_name=%s) - NOT EXIST NPC RACE VNUM[%d]",
+					sys_log(0, "CQuestManager::Click(pid=%d, target_npc_name=%s) - NPC RACE VNUM YOK[%d]",
 							pc,
 							pkChrTarget->GetName(),
 							dwCurrentNPCRace); // @warme012
@@ -923,7 +923,7 @@ namespace quest
 					if (!it->second.OnChat(*pPC))
 					{
 						if (test_server)
-							sys_log(0, "CQuestManager::Click->OnChat Failed");
+							sys_log(0, "CQuestManager::Click->OnChat Başarısız");
 
 						return it->second.OnClick(*pPC);
 					}
@@ -941,7 +941,7 @@ namespace quest
 		else
 		{
 			//cout << "no such pc id : " << pc;
-			sys_err("QUEST CLICK_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV CLICK_EVENT böyle pc id yok : %d", pc);
 			return false;
 		}
 		//cerr << "QUEST CLICk" << endl;
@@ -984,7 +984,7 @@ namespace quest
 
 			if (inf.is_open())
 			{
-				sys_log(0, "QUEST loading begin condition for %s", quest_name.c_str());
+				sys_log(0, "GÖREV %s için başlangıç koşulu yükleniyor", quest_name.c_str());
 
 				istreambuf_iterator<char> ib(inf), ie;
 				copy(ib, ie, back_inserter(m_hmQuestStartScript[idx]));
@@ -1082,7 +1082,7 @@ namespace quest
 			m_iCurrentSkin = QUEST_SKIN_NOWINDOW;
 		}
 
-		//sys_log(0, "Send Quest Script to %s", GetCurrentCharacterPtr()->GetName());
+		//sys_log(0, "Görev Scripti %s gönderildi", GetCurrentCharacterPtr()->GetName());
 		//send -_-!
 		struct ::packet_script packet_script;
 
@@ -1107,7 +1107,7 @@ namespace quest
 		if (test_server)
 			sys_log(0, "m_strScript %s size %d", m_strScript.c_str(), buf.size());
 #ifdef ENABLE_QUEST_CATEGORY
-			sys_log(0, "SendScript=====================On Quest flag %d", packet_script.quest_flag);
+			sys_log(0, "SendScript=====================Görev bayrağında %d", packet_script.quest_flag);
 #endif
 
 		ClearScript();
@@ -1120,7 +1120,7 @@ namespace quest
 		lua_getglobal(L, quest_name.c_str());
 		if (lua_isnil(L,-1))
 		{
-			sys_err("QUEST wrong quest state file %s.%d", quest_name.c_str(), state_index);
+			sys_err("GÖREV hatalı görev durum dosyası %s.%d", quest_name.c_str(), state_index);
 			lua_settop(L,x);
 			return "";
 		}
@@ -1138,7 +1138,7 @@ namespace quest
 		lua_getglobal(L, quest_name.c_str());
 		if (lua_isnil(L,-1))
 		{
-			sys_err("QUEST wrong quest state file %s.%s",quest_name.c_str(),state_name.c_str());
+			sys_err("GÖREV hatalı görev durum dosyası %s.%s",quest_name.c_str(),state_name.c_str());
 			lua_settop(L,x);
 			return 0;
 		}
@@ -1277,7 +1277,7 @@ namespace quest
 
 		if ((it = m_mapQuestNameByIndex.find(idx)) == m_mapQuestNameByIndex.end())
 		{
-			sys_err("cannot find quest name by index %u", idx);
+			sys_err("%u indeksli görev ismi bulunamıyor", idx);
 			assert(!"cannot find quest name by index");
 
 			static std::string st = "";
@@ -1321,7 +1321,7 @@ namespace quest
 
 		int prev_value = m_mapEventFlag[name];
 
-		sys_log(0, "QUEST eventflag %s %d prev_value %d", name.c_str(), value, m_mapEventFlag[name]);
+		sys_log(0, "GÖREV eventflag %s %d önceki_değer %d", name.c_str(), value, m_mapEventFlag[name]);
 		m_mapEventFlag[name] = value;
 
 		if (name == "mob_item")
@@ -1458,7 +1458,7 @@ namespace quest
 						PIXEL_POSITION posBase;
 						if (!SECTREE_MANAGER::instance().GetMapBasePositionByMapIndex(p->lMapIndex, posBase))
 						{
-							sys_err("cannot get map base position %d", p->lMapIndex);
+							sys_err("harita taban konumu alınamıyor %d", p->lMapIndex);
 							++p;
 							continue;
 						}
@@ -1510,7 +1510,7 @@ namespace quest
 
 						if (!SECTREE_MANAGER::instance().GetMapBasePositionByMapIndex(pPosition->lMapIndex, pos))
 						{
-							sys_err("cannot get map base position %d", pPosition->lMapIndex);
+							sys_err("harita taban konumu alınamıyor %d", pPosition->lMapIndex);
 							++pPosition;
 							continue;
 						}
@@ -1838,7 +1838,7 @@ namespace quest
 			LPCHARACTER ch = GetCurrentCharacterPtr();
 			if (ch)
 			{
-				ch->ChatPacket(CHAT_TYPE_PARTY, "error occurred on [%s:%d]", func,line);
+				ch->ChatPacket(CHAT_TYPE_PARTY, "[%s:%d] üzerinde hata oluştu", func,line);
 				ch->ChatPacket(CHAT_TYPE_PARTY, "%s", szMsg);
 			}
 		}
@@ -1859,7 +1859,7 @@ namespace quest
 			LPCHARACTER ch = GetCurrentCharacterPtr();
 			if (ch)
 			{
-				ch->ChatPacket(CHAT_TYPE_PARTY, "error occurred on [%s:%d]", func,line);
+				ch->ChatPacket(CHAT_TYPE_PARTY, "[%s:%d] üzerinde hata oluştu", func,line);
 				ch->ChatPacket(CHAT_TYPE_PARTY, "%s", szMsg);
 			}
 		}
@@ -1871,7 +1871,7 @@ namespace quest
 		sys_log(0, "XXX AddServerTimer %s %d %p", name.c_str(), arg, get_pointer(event));
 		if (m_mapServerTimer.find(make_pair(name, arg)) != m_mapServerTimer.end())
 		{
-			sys_err("already registered server timer name:%s arg:%u", name.c_str(), arg);
+			sys_err("sunucu zamanlayıcısı zaten kayıtlı isim:%s arg:%u", name.c_str(), arg);
 			return;
 		}
 		m_mapServerTimer.emplace(make_pair(name, arg), event);
@@ -1923,7 +1923,7 @@ namespace quest
 	bool CQuestManager::PickupItem(unsigned int pc, LPITEM item)
 	{
 		if (test_server)
-			sys_log( 0, "questmanager::PickupItem Start : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
+			sys_log( 0, "questmanager::PickupItem Başlangıç : itemVnum : %d PC : %d", item->GetOriginalVnum(), pc);
 		PC* pPC;
 		if ((pPC = GetPC(pc)))
 		{
@@ -1943,7 +1943,7 @@ namespace quest
 		}
 		else
 		{
-			sys_err("QUEST PICK_ITEM_EVENT no such pc id : %d", pc);
+			sys_err("GÖREV PICK_ITEM_EVENT böyle pc id yok : %d", pc);
 			return false;
 		}
 	}
@@ -1977,7 +1977,7 @@ namespace quest
 	{
 		if (m_vecPCStack.size() == 0)
 		{
-			sys_err("m_vecPCStack is alread empty. CurrentQuest{Name(%s), State(%s)}", GetCurrentQuestName().c_str(), GetCurrentState()->_title.c_str());
+			sys_err("m_vecPCStack zaten boş. ŞuankiGörev{İsim(%s), Durum(%s)}", GetCurrentQuestName().c_str(), GetCurrentState()->_title.c_str());
 			return;
 		}
 		DWORD pc = m_vecPCStack.back();

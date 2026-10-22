@@ -112,7 +112,7 @@ namespace quest
 	{
 		if (lua_tostring(L, -1)==NULL)
 		{
-			sys_err("state name is empty");
+			sys_err("durum ismi boş");
 			return 0;
 		}
 
@@ -123,9 +123,9 @@ namespace quest
 
 		if (L!=pqs->co)
 		{
-			luaL_error(L, "running thread != current thread???");
+			luaL_error(L, "çalışan thread != şu anki thread???");
 			if ( test_server )
-				sys_log(0 ,"running thread != current thread???");
+				sys_log(0 ,"çalışan thread != şu anki thread???");
 			return 0;
 		}
 
@@ -151,11 +151,11 @@ namespace quest
 
 		if (q.IsInOtherPCBlock())
 		{
-			sys_err("FATAL ERROR! Yield occur in other_pc_block.");
+			sys_err("ÖLÜMCÜL HATA! other_pc_block içinde Yield oluştu.");
 			PC* pPC = q.GetOtherPCBlockRootPC();
 			if (NULL == pPC)
 			{
-				sys_err("	... FFFAAATTTAAALLL Error. RootPC is NULL");
+				sys_err("	... KRRRIIIITTTIIIKKK Hata. RootPC NULL");
 				return 0;
 			}
 			QuestState* pQS = pPC->GetRunningQuestState();

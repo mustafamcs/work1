@@ -118,7 +118,7 @@ void WriteVersion()
 	}
 	else
 	{
-		fprintf(stderr, "cannot open VERSION.txt\n");
+		fprintf(stderr, "VERSION.txt açılamıyor\n");
 		exit(0);
 	}
 #endif

@@ -49,8 +49,8 @@ class CPartyManager : public singleton<CPartyManager>
 
 		//void		SendPartyToDB();
 
-		void		EnablePCParty() { m_bEnablePCParty = true; sys_log(0,"PARTY Enable"); }
-		void		DisablePCParty() { m_bEnablePCParty = false; sys_log(0,"PARTY Disable"); }
+		void		EnablePCParty() { m_bEnablePCParty = true; sys_log(0,"PARTİ Etkin"); }
+		void		DisablePCParty() { m_bEnablePCParty = false; sys_log(0,"PARTİ Devre Dışı"); }
 		bool		IsEnablePCParty() { return m_bEnablePCParty; }
 
 		LPPARTY		CreateParty(LPCHARACTER pkLeader);
@@ -425,7 +425,7 @@ struct FPartyDropDiceRoll
 			else // if (pickedNumber < m_lastNumber)
 			{
 			}
-			pParty->ChatPacketToAllMember(CHAT_TYPE_DICE_INFO, LC_TEXT("*** -> %16s - Dice score: %05d ***"), ch->GetName(), pickedNumber);
+			pParty->ChatPacketToAllMember(CHAT_TYPE_DICE_INFO, LC_TEXT("*** -> %16s - Zar sonucu: %05d ***"), ch->GetName(), pickedNumber);
 			break;
 		}
 	}

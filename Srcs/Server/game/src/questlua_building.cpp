@@ -17,7 +17,7 @@ namespace quest
 
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -49,7 +49,7 @@ namespace quest
 			}
 		}
 		else
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 
 		lua_pushnumber(L, price);
 		lua_pushnumber(L, owner);
@@ -61,7 +61,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -84,7 +84,7 @@ namespace quest
 
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushboolean(L, true);
 			return 1;
 		}

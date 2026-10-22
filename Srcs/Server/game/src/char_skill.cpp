@@ -49,7 +49,7 @@ time_t CHARACTER::GetSkillNextReadTime(DWORD dwVnum) const
 {
 	if (dwVnum >= SKILL_MAX_NUM)
 	{
-		sys_err("vnum overflow (vnum: %u)", dwVnum);
+		sys_err("vnum taşması (vnum: %u)", dwVnum);
 		return 0;
 	}
 
@@ -67,11 +67,11 @@ bool TSkillUseInfo::HitOnce(DWORD dwVnum)
 	if (!bUsed)
 		return false;
 
-	sys_log(1, "__HitOnce NextUse %u current %u count %d scount %d", dwNextSkillUsableTime, get_dword_time(), iHitCount, iSplashCount);
+	sys_log(1, "__HitOnce SonrakiKul %u şu anki %u sayı %d ssayı %d", dwNextSkillUsableTime, get_dword_time(), iHitCount, iSplashCount);
 
 	if (dwNextSkillUsableTime && dwNextSkillUsableTime<get_dword_time() && dwVnum != SKILL_MUYEONG && dwVnum != SKILL_HORSE_WILDATTACK)
 	{
-		sys_log(1, "__HitOnce can't hit");
+		sys_log(1, "__HitOnce vuramıyor");
 
 		return false;
 	}
@@ -98,7 +98,7 @@ bool TSkillUseInfo::UseSkill(bool isGrandMaster, DWORD vid, DWORD dwCooltime, in
 
 	if (bUsed && dwNextSkillUsableTime > dwCur)
 	{
-		sys_log(0, "cooltime is not over delta %u", dwNextSkillUsableTime - dwCur);
+		sys_log(0, "bekleme süresi dolmadı delta %u", dwNextSkillUsableTime - dwCur);
 		iHitCount = 0;
 		return false;
 	}
@@ -118,7 +118,7 @@ bool TSkillUseInfo::UseSkill(bool isGrandMaster, DWORD vid, DWORD dwCooltime, in
 	iMaxHitCount = iHitCount = hitcount;
 
 	if (test_server)
-		sys_log(0, "UseSkill NextUse %u  current %u cooltime %d hitcount %d/%d", dwNextSkillUsableTime, dwCur, dwCooltime, iHitCount, iMaxHitCount);
+		sys_log(0, "UseSkill SonrakiKul %u  şu anki %u beklemesüresi %d vuruşsayısı %d/%d", dwNextSkillUsableTime, dwCur, dwCooltime, iHitCount, iMaxHitCount);
 
 	dwVID = vid;
 	iSplashCount = splashcount;
@@ -200,7 +200,7 @@ void CHARACTER::SetSkillLevel(DWORD dwVnum, BYTE bLev)
 
 	if (dwVnum >= SKILL_MAX_NUM)
 	{
-		sys_err("vnum overflow (vnum %u)", dwVnum);
+		sys_err("vnum taşması (vnum %u)", dwVnum);
 		return;
 	}
 
@@ -302,7 +302,7 @@ bool CHARACTER::LearnGrandMasterSkill(DWORD dwSkillVnum)
 		return false;
 	}
 
-	sys_log(0, "learn grand master skill[%d] cur %d, next %d", dwSkillVnum, get_global_time(), GetSkillNextReadTime(dwSkillVnum));
+	sys_log(0, "büyük usta becerisi öğren[%d] şu anki %d, sonraki %d", dwSkillVnum, get_global_time(), GetSkillNextReadTime(dwSkillVnum));
 
 	if (pkSk->dwType == 0)
 	{
@@ -330,7 +330,7 @@ bool CHARACTER::LearnGrandMasterSkill(DWORD dwSkillVnum)
 
 	int idx = MIN(9, GetSkillLevel(dwSkillVnum) - 30);
 
-	sys_log(0, "LearnGrandMasterSkill %s table idx %d value %d", GetName(), idx, aiGrandMasterSkillBookCountForLevelUp[idx]);
+	sys_log(0, "LearnGrandMasterSkill %s tablo idx %d değer %d", GetName(), idx, aiGrandMasterSkillBookCountForLevelUp[idx]);
 
 	int iTotalReadCount = GetQuestFlag(strTrainSkill) + 1;
 	SetQuestFlag(strTrainSkill, iTotalReadCount);
@@ -355,7 +355,7 @@ bool CHARACTER::LearnGrandMasterSkill(DWORD dwSkillVnum)
 
 	DWORD nextTime = get_global_time() + number(g_dwSkillBookNextReadMin, g_dwSkillBookNextReadMax);
 
-	sys_log(0, "GrandMaster SkillBookCount min %d cur %d max %d (next_time=%d)", iMinReadCount, iTotalReadCount, iMaxReadCount, nextTime);
+	sys_log(0, "BüyükUsta SkillBookCount min %d şu anki %d max %d (next_time=%d)", iMinReadCount, iTotalReadCount, iMaxReadCount, nextTime);
 
 	bool bSuccess = n == 2;
 
@@ -461,7 +461,7 @@ bool CHARACTER::LearnSkillByBook(DWORD dwSkillVnum, BYTE bProb)
 		}
 		// END_OF_SKILL_BOOK_BONUS
 
-		sys_log(0, "LearnSkillByBook Pct %u prob %d", dwSkillVnum, bProb);
+		sys_log(0, "LearnSkillByBook Pct %u olasılık %d", dwSkillVnum, bProb);
 
 		if (number(1, 100) <= bProb)
 		{
@@ -480,7 +480,7 @@ bool CHARACTER::LearnSkillByBook(DWORD dwSkillVnum, BYTE bProb)
 	{
 		int idx = MIN(9, GetSkillLevel(dwSkillVnum) - 20);
 
-		sys_log(0, "LearnSkillByBook %s table idx %d value %d", GetName(), idx, aiSkillBookCountForLevelUp[idx]);
+		sys_log(0, "LearnSkillByBook %s tablo idx %d değer %d", GetName(), idx, aiSkillBookCountForLevelUp[idx]);
 
 		{
 			int need_bookcount = GetSkillLevel(dwSkillVnum) - 20;
@@ -583,7 +583,7 @@ bool CHARACTER::SkillLevelDown(DWORD dwVnum)
 
 	if (!pkSk)
 	{
-		sys_err("There is no such skill by number %u", dwVnum);
+		sys_err("%u numaralı beceri yok", dwVnum);
 		return false;
 	}
 
@@ -622,7 +622,7 @@ bool CHARACTER::SkillLevelDown(DWORD dwVnum)
 			idx = POINT_HORSE_SKILL;
 			break;
 		default:
-			sys_err("Wrong skill type %d skill vnum %d", pkSk->dwType, pkSk->dwVnum);
+			sys_err("Hatalı beceri tipi %d beceri vnum %d", pkSk->dwType, pkSk->dwVnum);
 			return false;
 
 	}
@@ -662,13 +662,13 @@ void CHARACTER::SkillLevelUp(DWORD dwVnum, BYTE bMethod)
 
 	if (!pkSk)
 	{
-		sys_err("There is no such skill by number (vnum %u)", dwVnum);
+		sys_err("Bu numarada beceri yok (vnum %u)", dwVnum);
 		return;
 	}
 
 	if (pkSk->dwVnum >= SKILL_MAX_NUM)
 	{
-		sys_err("Skill Vnum overflow (vnum %u)", dwVnum);
+		sys_err("Beceri Vnum taşması (vnum %u)", dwVnum);
 		return;
 	}
 
@@ -741,7 +741,7 @@ void CHARACTER::SkillLevelUp(DWORD dwVnum, BYTE bMethod)
 				break;
 
 			default:
-				sys_err("Wrong skill type %d skill vnum %d", pkSk->dwType, pkSk->dwVnum);
+				sys_err("Hatalı beceri tipi %d beceri vnum %d", pkSk->dwType, pkSk->dwVnum);
 				return;
 		}
 
@@ -945,11 +945,11 @@ EVENTFUNC(ChainLightningEvent)
 
 	if (!pkChr || !pkChrVictim)
 	{
-		sys_log(1, "use chainlighting, but no character");
+		sys_log(1, "zincir şimşek kullanıldı ama karakter yok");
 		return 0;
 	}
 
-	sys_log(1, "chainlighting event %s", pkChr->GetName());
+	sys_log(1, "zincir şimşek olayı %s", pkChr->GetName());
 
 	if (pkChrVictim->GetParty())
 	{
@@ -979,7 +979,7 @@ EVENTFUNC(ChainLightningEvent)
 	}
 	else
 	{
-		sys_log(1, "%s use chainlighting, but find victim failed near %s", pkChr->GetName(), pkChrVictim->GetName());
+		sys_log(1, "%s zincir şimşeği kullandı ama %s yakınında hedef bulunamadı", pkChr->GetName(), pkChrVictim->GetName());
 	}
 
 	return 0;
@@ -1029,7 +1029,7 @@ struct FuncSplashDamage
 	{
 		if (!ent->IsType(ENTITY_CHARACTER))
 		{
-			//if (m_pkSk->dwVnum == SKILL_CHAIN) sys_log(0, "CHAIN target not character %s", m_pkChr->GetName());
+			//if (m_pkSk->dwVnum == SKILL_CHAIN) sys_log(0, "ZİNCİR hedef karakter değil %s", m_pkChr->GetName());
 			return;
 		}
 
@@ -1038,14 +1038,14 @@ struct FuncSplashDamage
 		if (DISTANCE_APPROX(m_x - pkChrVictim->GetX(), m_y - pkChrVictim->GetY()) > m_pkSk->iSplashRange)
 		{
 			if(test_server)
-				sys_log(0, "XXX target too far %s", m_pkChr->GetName());
+				sys_log(0, "XXX hedef çok uzak %s", m_pkChr->GetName());
 			return;
 		}
 
 		if (!battle_is_attackable(m_pkChr, pkChrVictim))
 		{
 			if(test_server)
-				sys_log(0, "XXX target not attackable %s", m_pkChr->GetName());
+				sys_log(0, "XXX hedef saldırılabilir değil %s", m_pkChr->GetName());
 			return;
 		}
 
@@ -1055,7 +1055,7 @@ struct FuncSplashDamage
 				if (!m_bDisableCooltime && m_pInfo && !m_pInfo->HitOnce(m_pkSk->dwVnum) && m_pkSk->dwVnum != SKILL_MUYEONG)
 				{
 					if(test_server)
-						sys_log(0, "check guild skill %s", m_pkChr->GetName());
+						sys_log(0, "lonca becerisi kontrol %s", m_pkChr->GetName());
 					return;
 				}
 
@@ -1139,7 +1139,7 @@ struct FuncSplashDamage
 
 		if (test_server && iAmount == 0 && m_pkSk->bPointOn != POINT_NONE)
 		{
-			m_pkChr->ChatPacket(CHAT_TYPE_INFO, "No effect. Please check the skill formula");
+			m_pkChr->ChatPacket(CHAT_TYPE_INFO, "Etki yok. Lütfen beceri formülünü kontrol edin");
 		}
 		////////////////////////////////////////////////////////////////////////////////
 		iAmount = -iAmount;
@@ -1251,7 +1251,7 @@ struct FuncSplashDamage
 				break;
 
 			default:
-				sys_err("Unknown skill attr type %u vnum %u", m_pkSk->bSkillAttrType, m_pkSk->dwVnum);
+				sys_err("Bilinmeyen beceri attr tipi %u vnum %u", m_pkSk->bSkillAttrType, m_pkSk->dwVnum);
 				break;
 		}
 
@@ -1280,7 +1280,7 @@ struct FuncSplashDamage
 			pkChrVictim->BeginFight(m_pkChr);
 
 		if (m_pkSk->dwVnum == SKILL_CHAIN)
-			sys_log(0, "%s CHAIN INDEX %d DAM %d DT %d", m_pkChr->GetName(), m_pkChr->GetChainLightningIndex() - 1, iDam, dt);
+			sys_log(0, "%s ZİNCİR İNDEKSİ %d HASAR %d DT %d", m_pkChr->GetName(), m_pkChr->GetChainLightningIndex() - 1, iDam, dt);
 
 		{
 			BYTE AntiSkillID = 0;
@@ -1306,7 +1306,7 @@ struct FuncSplashDamage
 					CSkillProto* pkSk = CSkillManager::instance().Get(AntiSkillID);
 					if (!pkSk)
 					{
-						sys_err ("There is no anti skill(%d) in skill proto", AntiSkillID);
+						sys_err ("skill protoda karşı beceri(%d) yok", AntiSkillID);
 					}
 					else
 					{
@@ -1509,11 +1509,11 @@ struct FuncSplashAffect
 			LPCHARACTER pkChr = (LPCHARACTER) ent;
 
 			if (test_server)
-				sys_log(0, "FuncSplashAffect step 1 : name:%s vnum:%d iDur:%d", pkChr->GetName(), m_dwVnum, m_iDuration);
+				sys_log(0, "FuncSplashAffect adım 1 : isim:%s vnum:%d iDur:%d", pkChr->GetName(), m_dwVnum, m_iDuration);
 			if (DISTANCE_APPROX(m_x - pkChr->GetX(), m_y - pkChr->GetY()) < m_iDist)
 			{
 				if (test_server)
-					sys_log(0, "FuncSplashAffect step 2 : name:%s vnum:%d iDur:%d", pkChr->GetName(), m_dwVnum, m_iDuration);
+					sys_log(0, "FuncSplashAffect adım 2 : isim:%s vnum:%d iDur:%d", pkChr->GetName(), m_dwVnum, m_iDuration);
 				if (m_dwVnum == SKILL_TUSOK)
 					if (pkChr->CanBeginFight())
 						pkChr->BeginFight(m_pkChrAttacker);
@@ -1585,7 +1585,7 @@ EVENTFUNC(skill_gwihwan_event)
 		}
 		else
 		{
-			sys_err("CHARACTER::UseItem : cannot find spawn position (name %s, %d x %d)", ch->GetName(), ch->GetX(), ch->GetY());
+			sys_err("CHARACTER::UseItem : doğma konumu bulunamıyor (isim %s, %d x %d)", ch->GetName(), ch->GetX(), ch->GetY());
 			ch->WarpSet(EMPIRE_START_X(ch->GetEmpire()), EMPIRE_START_Y(ch->GetEmpire()));
 		}
 	}
@@ -1701,7 +1701,7 @@ int CHARACTER::ComputeSkillAtPosition(DWORD dwVnum, const PIXEL_POSITION& posTar
 
 	if (test_server && iAmount == 0 && pkSk->bPointOn != POINT_NONE)
 	{
-		ChatPacket(CHAT_TYPE_INFO, "No effect. Please check the skill formula");
+		ChatPacket(CHAT_TYPE_INFO, "Etki yok. Lütfen beceri formülünü kontrol edin");
 	}
 
 	if (IS_SET(pkSk->dwFlag, SKILL_FLAG_REMOVE_BAD_AFFECT))
@@ -1730,20 +1730,20 @@ int CHARACTER::ComputeSkillAtPosition(DWORD dwVnum, const PIXEL_POSITION& posTar
 			}
 			else
 			{
-				//if (dwVnum == SKILL_CHAIN) sys_log(0, "CHAIN skill call FuncSplashDamage %s", GetName());
+				//if (dwVnum == SKILL_CHAIN) sys_log(0, "ZİNCİR beceri FuncSplashDamage çağrısı %s", GetName());
 				f(this);
 			}
 		}
 		else
 		{
-			//if (dwVnum == SKILL_CHAIN) sys_log(0, "CHAIN skill no damage %d %s", iAmount, GetName());
+			//if (dwVnum == SKILL_CHAIN) sys_log(0, "ZİNCİR beceri hasar yok %d %s", iAmount, GetName());
 			int iDur = (int) pkSk->kDurationPoly.Eval();
 
 			if (IsPC())
 				if (!(dwVnum >= GUILD_SKILL_START && dwVnum <= GUILD_SKILL_END))
 					if (!m_bDisableCooltime && !m_SkillUseInfo[dwVnum].HitOnce(dwVnum) && dwVnum != SKILL_MUYEONG)
 					{
-						//if (dwVnum == SKILL_CHAIN) sys_log(0, "CHAIN skill cannot hit %s", GetName());
+						//if (dwVnum == SKILL_CHAIN) sys_log(0, "ZİNCİR beceri %s vuramaz", GetName());
 						return BATTLE_NONE;
 					}
 
@@ -1769,7 +1769,7 @@ int CHARACTER::ComputeSkillAtPosition(DWORD dwVnum, const PIXEL_POSITION& posTar
 		{
 			int iDur = (int) pkSk->kDurationPoly2.Eval();
 
-			sys_log(1, "try second %u %d %d", pkSk->dwVnum, pkSk->bPointOn2, iDur);
+			sys_log(1, "ikinci deneme %u %d %d", pkSk->dwVnum, pkSk->bPointOn2, iDur);
 
 			if (iDur > 0)
 			{
@@ -1953,7 +1953,7 @@ int CHARACTER::ComputeSkill(DWORD dwVnum, LPCHARACTER pkVictim, BYTE bSkillLevel
 	if (pkSk->dwTargetRange && DISTANCE_SQRT(GetX() - pkVictim->GetX(), GetY() - pkVictim->GetY()) >= pkSk->dwTargetRange + 50)
 	{
 		if (test_server)
-			sys_log(0, "ComputeSkill: Victim too far, skill %d : %s to %s (distance %u limit %u)",
+			sys_log(0, "ComputeSkill: Hedef çok uzak, beceri %d : %s -> %s (mesafe %u limit %u)",
 					dwVnum,
 					GetName(),
 					pkVictim->GetName(),
@@ -2067,11 +2067,11 @@ int CHARACTER::ComputeSkill(DWORD dwVnum, LPCHARACTER pkVictim, BYTE bSkillLevel
 
 	if (test_server && iAmount == 0 && pkSk->bPointOn != POINT_NONE)
 	{
-		ChatPacket(CHAT_TYPE_INFO, "No effect. Please check the skill formula");
+		ChatPacket(CHAT_TYPE_INFO, "Etki yok. Lütfen beceri formülünü kontrol edin");
 	}
 	// END_OF_ADD_GRANDMASTER_SKILL
 
-	//sys_log(0, "XXX SKILL Calc %d Amount %d", dwVnum, iAmount);
+	//sys_log(0, "XXX BECERİ Hesap %d Miktar %d", dwVnum, iAmount);
 
 	// REMOVE_BAD_AFFECT_BUG_FIX
 	if (IS_SET(pkSk->dwFlag, SKILL_FLAG_REMOVE_BAD_AFFECT))
@@ -2320,7 +2320,7 @@ int CHARACTER::ComputeSkill(DWORD dwVnum, LPCHARACTER pkVictim, BYTE bSkillLevel
 			pkSk->kDurationPoly3.SetVar("k", k/*bSkillLevel*/);
 			int iDur = (int) pkSk->kDurationPoly3.Eval();
 
-			sys_log(0, "try third %u %d %d %d 1894", pkSk->dwVnum, pkSk->bPointOn3, iDur, iAmount3);
+			sys_log(0, "üçüncü deneme %u %d %d %d 1894", pkSk->dwVnum, pkSk->bPointOn3, iDur, iAmount3);
 
 			if (iDur > 0)
 			{
@@ -2550,7 +2550,7 @@ bool CHARACTER::UseSkill(DWORD dwVnum, LPCHARACTER pkVictim, bool bUseGrandMaste
 				   	lMaxHit))
 		{
 			if (test_server)
-				ChatPacket(CHAT_TYPE_NOTICE, "cooltime not finished %s %d", pkSk->szName, iCooltime);
+				ChatPacket(CHAT_TYPE_NOTICE, "bekleme süresi bitmedi %s %d", pkSk->szName, iCooltime);
 
 			return false;
 		}
@@ -2600,7 +2600,7 @@ int CHARACTER::GetSkillMasterType(DWORD dwVnum) const
 
 	if (dwVnum >= SKILL_MAX_NUM)
 	{
-		sys_err("%s skill vnum overflow %u", GetName(), dwVnum);
+		sys_err("%s skill vnum taşması %u", GetName(), dwVnum);
 		return 0;
 	}
 
@@ -2631,7 +2631,7 @@ int CHARACTER::GetSkillPower(DWORD dwVnum, BYTE bLevel) const
 
 	if (dwVnum >= SKILL_MAX_NUM)
 	{
-		sys_err("%s skill vnum overflow %u", GetName(), dwVnum);
+		sys_err("%s skill vnum taşması %u", GetName(), dwVnum);
 		return 0;
 	}
 
@@ -2644,8 +2644,8 @@ int CHARACTER::GetSkillLevel(DWORD dwVnum) const
 {
 	if (dwVnum >= SKILL_MAX_NUM)
 	{
-		sys_err("%s skill vnum overflow %u", GetName(), dwVnum);
-		sys_log(0, "%s skill vnum overflow %u", GetName(), dwVnum);
+		sys_err("%s skill vnum taşması %u", GetName(), dwVnum);
+		sys_log(0, "%s skill vnum taşması %u", GetName(), dwVnum);
 		return 0;
 	}
 
@@ -2880,7 +2880,7 @@ bool CHARACTER::UseMobSkill(unsigned int idx)
 
 	if (m_pkMobData->m_mobSkillInfo[idx].vecSplashAttack.empty())
 	{
-		sys_err("No skill hit data for mob %s index %d", GetName(), idx);
+		sys_err("%s mobu için beceri vuruş verisi yok indeks %d", GetName(), idx);
 		return false;
 	}
 
@@ -3383,7 +3383,7 @@ void CHARACTER::ClearSubSkill()
 
 	if (m_pSkillLevels == NULL)
 	{
-		sys_err("m_pSkillLevels nil (name: %s)", GetName());
+		sys_err("m_pSkillLevels nil (isim: %s)", GetName());
 		return;
 	}
 
@@ -3408,13 +3408,13 @@ bool CHARACTER::ResetOneSkill(DWORD dwVnum)
 {
 	if (NULL == m_pSkillLevels)
 	{
-		sys_err("m_pSkillLevels nil (name %s, vnum %u)", GetName(), dwVnum);
+		sys_err("m_pSkillLevels nil (isim %s, vnum %u)", GetName(), dwVnum);
 		return false;
 	}
 
 	if (dwVnum >= SKILL_MAX_NUM)
 	{
-		sys_err("vnum overflow (name %s, vnum %u)", GetName(), dwVnum);
+		sys_err("vnum taşması (isim %s, vnum %u)", GetName(), dwVnum);
 		return false;
 	}
 
@@ -3594,7 +3594,7 @@ bool CHARACTER::CanUseSkill(DWORD dwSkillVnum) const
 		if (eIsMount != MOUNT_TYPE_MILITARY)
 		{
 			if (test_server)
-				sys_log(0, "CanUseSkill: Mount can't skill. vnum(%u) type(%d)", GetMountVnum(), static_cast<int>(eIsMount));
+				sys_log(0, "CanUseSkill: Binek beceri kullanamaz. vnum(%u) tip(%d)", GetMountVnum(), static_cast<int>(eIsMount));
 			return false;
 		}
 #endif
@@ -3633,7 +3633,7 @@ bool CHARACTER::CheckSkillHitCount(const BYTE SkillID, const VID TargetVID)
 
 	if (false == rSkillUseInfo.bUsed)
 	{
-		sys_log(0, "SkillHack: not used skill(%u)", SkillID);
+		sys_log(0, "BeceriHilesi: kullanılmayan beceri(%u)", SkillID);
 		return false;
 	}
 
@@ -3643,7 +3643,7 @@ bool CHARACTER::CheckSkillHitCount(const BYTE SkillID, const VID TargetVID)
 		case SKILL_HWAYEOMPOK:
 		case SKILL_DAEJINGAK:
 		case SKILL_PAERYONG:
-			sys_log(0, "SkillHack: cannot use attack packet for skill(%u)", SkillID);
+			sys_log(0, "BeceriHilesi: beceri(%u) için saldırı paketi kullanılamaz", SkillID);
 			return false;
 	}
 
@@ -3678,7 +3678,7 @@ bool CHARACTER::CheckSkillHitCount(const BYTE SkillID, const VID TargetVID)
 
 		if (iterTargetMap->second >= MaxAttackCountPerTarget)
 		{
-			sys_log(0, "SkillHack: Too Many Hit count from SkillID(%u) count(%u)", SkillID, iterTargetMap->second);
+			sys_log(0, "BeceriHilesi: SkillID(%u) için çok fazla vuruş sayısı(%u)", SkillID, iterTargetMap->second);
 			return false;
 		}
 

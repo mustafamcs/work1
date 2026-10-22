@@ -123,7 +123,7 @@ namespace
 				{
 					CAffect * pkAff = pkChr->FindAffect(AFFECT_WAR_FLAG);
 
-					sys_log(0, "FlagBase %s dist %d aff %p flag gid %d chr gid %u",
+					sys_log(0, "FlagBase %s mesafe %d aff %p flag gid %d chr gid %u",
 							pkChr->GetName(), iDist, pkAff, m_pkChr->GetPoint(POINT_STAT),
 							pkChr->GetGuild()->GetID());
 
@@ -301,7 +301,7 @@ void CHARACTER::CowardEscape()
 			if (Goto(iDestX, iDestY))
 				SendMovePacket(FUNC_WAIT, 0, 0, 0, 0);
 
-			sys_log(0, "WAEGU move to %d %d (far)", iDestX, iDestY);
+			sys_log(0, "WAEGU %d %d konumuna hareket (uzak)", iDestX, iDestY);
 			return;
 		}
 }
@@ -863,7 +863,7 @@ void CHARACTER::StateBattle()
 {
 	if (IsStone())
 	{
-		sys_err("Stone must not use battle state (name %s)", GetName());
+		sys_err("Taş savaş durumunu kullanmamalı (isim %s)", GetName());
 		return;
 	}
 

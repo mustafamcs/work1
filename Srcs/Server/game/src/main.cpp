@@ -151,9 +151,9 @@ void ContinueOnFatalError()
 
 	free(symbols);
 
-	sys_err("FatalError on %s", oss.str().c_str());
+	sys_err("KritikHata %s", oss.str().c_str());
 #else
-	sys_err("FatalError");
+	sys_err("KritikHata");
 #endif
 }
 
@@ -161,7 +161,7 @@ void ShutdownOnFatalError()
 {
 	if (!g_bShutdown)
 	{
-		sys_err("ShutdownOnFatalError!!!!!!!!!!");
+		sys_err("KritikHataNedeniyleKapaniyor!!!!!!!!!!");
 		{
 			char buf[256];
 
@@ -191,7 +191,7 @@ namespace
 			if (d->GetCharacter())
 			{
 				if (d->GetCharacter()->GetGMLevel() == GM_PLAYER)
-					d->GetCharacter()->ChatPacket(CHAT_TYPE_COMMAND, "quit Shutdown(SendDisconnectFunc)");
+					d->GetCharacter()->ChatPacket(CHAT_TYPE_COMMAND, "quit Kapatma(SendDisconnectFunc)");
 			}
 		}
 	};
@@ -231,7 +231,7 @@ void heartbeat(LPHEART ht, int pulse)
 #ifdef ENABLE_LIMIT_TIME
 		if ((unsigned)get_global_time() >= GLOBAL_LIMIT_TIME)
 		{
-			sys_err("Server life time expired.");
+			sys_err("Sunucu ömür süresi doldu.");
 			g_bShutdown = true;
 		}
 #endif
@@ -429,7 +429,7 @@ int main(int argc, char **argv)
 	const std::string strPackageCryptInfoDir = "package/";
 	if( !desc_manager.LoadClientPackageCryptInfo( strPackageCryptInfoDir.c_str() ) )
 	{
-		sys_err("Failed to Load ClientPackageCryptInfo File(%s)", strPackageCryptInfoDir.c_str());
+		sys_err("ClientPackageCryptInfo Dosyası(%s) Yüklenemedi", strPackageCryptInfoDir.c_str());
 	}
 
 #if defined (__FreeBSD__) && defined(__FILEMONITOR__)
@@ -466,17 +466,17 @@ int main(int argc, char **argv)
 		} while (1);
 	}
 
-	sys_log(0, "<shutdown> Destroying CArenaManager...");
+	sys_log(0, "<kapanış> CArenaManager yok ediliyor...");
 	arena_manager.Destroy();
-	sys_log(0, "<shutdown> Destroying COXEventManager...");
+	sys_log(0, "<kapanış> COXEventManager yok ediliyor...");
 	OXEvent_manager.Destroy();
 
-	sys_log(0, "<shutdown> Disabling signal timer...");
+	sys_log(0, "<kapanış> Sinyal zamanlayıcı devre dışı...");
 	signal_timer_disable();
 
-	sys_log(0, "<shutdown> Shutting down CHARACTER_MANAGER...");
+	sys_log(0, "<kapanış> CHARACTER_MANAGER kapatılıyor...");
 	char_manager.GracefulShutdown();
-	sys_log(0, "<shutdown> Shutting down ITEM_MANAGER...");
+	sys_log(0, "<kapanış> ITEM_MANAGER kapatılıyor...");
 	item_manager.GracefulShutdown();
 
 	sys_log(0, "<shutdown> Flushing db_clientdesc...");
@@ -484,17 +484,17 @@ int main(int argc, char **argv)
 	sys_log(0, "<shutdown> Flushing p2p_manager...");
 	p2p_manager.FlushOutput();
 
-	sys_log(0, "<shutdown> Destroying CShopManager...");
+	sys_log(0, "<kapanış> CShopManager yok ediliyor...");
 	shop_manager.Destroy();
-	sys_log(0, "<shutdown> Destroying CHARACTER_MANAGER...");
+	sys_log(0, "<kapanış> CHARACTER_MANAGER yok ediliyor...");
 	char_manager.Destroy();
-	sys_log(0, "<shutdown> Destroying ITEM_MANAGER...");
+	sys_log(0, "<kapanış> ITEM_MANAGER yok ediliyor...");
 	item_manager.Destroy();
-	sys_log(0, "<shutdown> Destroying DESC_MANAGER...");
+	sys_log(0, "<kapanış> DESC_MANAGER yok ediliyor...");
 	desc_manager.Destroy();
-	sys_log(0, "<shutdown> Destroying quest::CQuestManager...");
+	sys_log(0, "<kapanış> quest::CQuestManager yok ediliyor...");
 	quest_manager.Destroy();
-	sys_log(0, "<shutdown> Destroying building::CManager...");
+	sys_log(0, "<kapanış> building::CManager yok ediliyor...");
 	building_manager.Destroy();
 
 	destroy();
@@ -508,7 +508,7 @@ int main(int argc, char **argv)
 
 void usage()
 {
-	printf("Option list\n"
+	printf("Seçenek listesi\n"
 			"-p <port>    : bind port number (port must be over 1024)\n"
 			"-l <level>   : sets log level\n"
 			"-n <locale>  : sets locale name\n"
@@ -533,7 +533,7 @@ int start(int argc, char **argv)
 #ifdef ENABLE_LIMIT_TIME
 	if ((unsigned)get_global_time() >= GLOBAL_LIMIT_TIME)
 	{
-		sys_err("Server life time expired.");
+		sys_err("Sunucu ömür süresi doldu.");
 		return 0;
 	}
 #endif
@@ -630,7 +630,7 @@ int start(int argc, char **argv)
 
 	if (!is_thecore_initialized)
 	{
-		fprintf(stderr, "Could not initialize thecore, check owner of pid, syslog\n");
+		fprintf(stderr, "thecore başlatılamadı, pid sahibini ve syslog'u kontrol edin\n");
 		exit(0);
 	}
 
@@ -638,7 +638,7 @@ int start(int argc, char **argv)
 	{
 		if (false == g_bAuthServer)
 		{
-			fprintf(stderr, "Could not Load ThreeWayWar Setting file");
+			fprintf(stderr, "ThreeWayWar ayar dosyası yüklenemedi");
 			exit(0);
 		}
 	}
@@ -698,7 +698,7 @@ int start(int argc, char **argv)
 	/* game server */
 	else
 	{
-		sys_log(0, "SPAM_CONFIG: duration %u score %u reload cycle %u\n",
+		sys_log(0, "SPAM_CONFIG: süre %u skor %u yeniden yükleme döngüsü %u\n",
 				g_uiSpamBlockDuration, g_uiSpamBlockScore, g_uiSpamReloadCycle);
 
 		extern void LoadSpamDB();
@@ -711,13 +711,13 @@ int start(int argc, char **argv)
 
 void destroy()
 {
-	sys_log(0, "<shutdown> Canceling ReloadSpamEvent...");
+	sys_log(0, "<kapanış> ReloadSpamEvent iptal ediliyor...");
 	CancelReloadSpamEvent();
 
 	sys_log(0, "<shutdown> regen_free()...");
 	regen_free();
 
-	sys_log(0, "<shutdown> Closing sockets...");
+	sys_log(0, "<kapanış> Soketler kapatılıyor...");
 	socket_close(tcp_socket);
 #ifndef __UDP_BLOCK__
 	socket_close(udp_socket);
@@ -920,7 +920,7 @@ int io_loop(LPFDWATCH fdw)
 				break;
 
 			default:
-				sys_err("fdwatch_check_event returned unknown %d", iRet);
+				sys_err("fdwatch_check_event bilinmeyen %d döndürdü", iRet);
 				d->SetPhase(PHASE_CLOSE);
 				break;
 		}

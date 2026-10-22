@@ -331,7 +331,7 @@ int CInputMain::Whisper(LPCHARACTER ch, const char * data, size_t uiBytes)
 
 	if (iExtraLen < 0)
 	{
-		sys_err("invalid packet length (len %d size %u buffer %u)", iExtraLen, pinfo->wSize, uiBytes);
+		sys_err("geçersiz paket uzunluğu (len %d boyut %u tampon %u)", iExtraLen, pinfo->wSize, uiBytes);
 		ch->GetDesc()->SetPhase(PHASE_CLOSE);
 		return -1;
 	}
@@ -362,9 +362,9 @@ int CInputMain::Whisper(LPCHARACTER ch, const char * data, size_t uiBytes)
 	if (test_server)
 	{
 		if (!pkChr)
-			sys_log(0, "Whisper to %s(%s) from %s", "Null", pinfo->szNameTo, ch->GetName());
+			sys_log(0, "Fisilti alici %s(%s) gonderen %s", "Null", pinfo->szNameTo, ch->GetName());
 		else
-			sys_log(0, "Whisper to %s(%s) from %s", pkChr->GetName(), pinfo->szNameTo, ch->GetName());
+			sys_log(0, "Fisilti alici %s(%s) gonderen %s", pkChr->GetName(), pinfo->szNameTo, ch->GetName());
 	}
 
 	if (ch->IsBlockMode(BLOCK_WHISPER))
@@ -523,7 +523,7 @@ int CInputMain::Whisper(LPCHARACTER ch, const char * data, size_t uiBytes)
 						ch->GetDesc()->BufferedPacket(&pack, sizeof(pack));
 						ch->GetDesc()->Packet(buf, len);
 
-						sys_log(0, "WHISPER: not enough %s: char: %s", pTable->szLocaleName, ch->GetName());
+						sys_log(0, "FISILTI: yetersiz %s: karakter: %s", pTable->szLocaleName, ch->GetName());
 					}
 				}
 
@@ -716,7 +716,7 @@ int CInputMain::Chat(LPCHARACTER ch, const char * data, size_t uiBytes)
 
 	if (iExtraLen < 0)
 	{
-		sys_err("invalid packet length (len %d size %u buffer %u)", iExtraLen, pinfo->size, uiBytes);
+		sys_err("geçersiz paket uzunluğu (len %d boyut %u tampon %u)", iExtraLen, pinfo->size, uiBytes);
 		ch->GetDesc()->SetPhase(PHASE_CLOSE);
 		return -1;
 	}
@@ -939,7 +939,7 @@ int CInputMain::Chat(LPCHARACTER ch, const char * data, size_t uiBytes)
 			break;
 
 		default:
-			sys_err("Unknown chat type %d", pinfo->type);
+			sys_err("Bilinmeyen sohbet tipi %d", pinfo->type);
 			break;
 	}
 
@@ -1130,7 +1130,7 @@ int CInputMain::Messenger(LPCHARACTER ch, const char* c_pData, size_t uiBytes)
 			return CHARACTER_NAME_MAX_LEN;
 
 		default:
-			sys_err("CInputMain::Messenger : Unknown subheader %d : %s", p->subheader, ch->GetName());
+			sys_err("CInputMain::Messenger : Bilinmeyen alt başlık %d : %s", p->subheader, ch->GetName());
 			break;
 	}
 
@@ -1194,7 +1194,7 @@ int CInputMain::Shop(LPCHARACTER ch, const char * data, size_t uiBytes)
 			}
 
 		default:
-			sys_err("CInputMain::Shop : Unknown subheader %d : %s", p->subheader, ch->GetName());
+			sys_err("CInputMain::Shop : Bilinmeyen alt başlık %d : %s", p->subheader, ch->GetName());
 			break;
 	}
 
@@ -1285,7 +1285,7 @@ void CInputMain::Exchange(LPCHARACTER ch, const char * data)
 					{
 						if (quest::CQuestManager::instance().GiveItemToPC(ch->GetPlayerID(), to_ch))
 						{
-							sys_log(0, "Exchange canceled by quest %s %s", ch->GetName(), to_ch->GetName());
+							sys_log(0, "Takas görev tarafından iptal edildi %s %s", ch->GetName(), to_ch->GetName());
 							return;
 						}
 					}
@@ -1549,7 +1549,7 @@ void CInputMain::Move(LPCHARACTER ch, const char * data)
 
 	if (pinfo->bFunc >= FUNC_MAX_NUM && !(pinfo->bFunc & 0x80))
 	{
-		sys_err("invalid move type: %s", ch->GetName());
+		sys_err("geçersiz hareket tipi: %s", ch->GetName());
 		return;
 	}
 
@@ -1579,7 +1579,7 @@ void CInputMain::Move(LPCHARACTER ch, const char * data)
 					LogManager::instance().HackLog("Teleport", ch);
 			}
 			#endif
-			sys_log(0, "MOVE: %s trying to move too far (dist: %.1fm) Riding(%d)", ch->GetName(), fDist, ch->IsRiding());
+			sys_log(0, "MOVE: %s çok uzağa hareket etmeye çalışıyor (mesafe: %.1fm) Binek(%d)", ch->GetName(), fDist, ch->IsRiding());
 
 			ch->Show(ch->GetMapIndex(), ch->GetX(), ch->GetY(), ch->GetZ());
 			ch->Stop();
@@ -1610,7 +1610,7 @@ void CInputMain::Move(LPCHARACTER ch, const char * data)
 
 			if (iDelta >= 30000)
 			{
-				sys_log(0, "SPEEDHACK: slow timer name %s delta %d", ch->GetName(), iDelta);
+				sys_log(0, "HIZHİLESİ: yavaş zamanlayıcı isim %s delta %d", ch->GetName(), iDelta);
 				ch->GetDesc()->DelayedDisconnect(3);
 			}
 
@@ -1807,14 +1807,14 @@ int CInputMain::SyncPosition(LPCHARACTER ch, const char * c_pcData, size_t uiByt
 
 	if (iExtraLen < 0)
 	{
-		sys_err("invalid packet length (len %d size %u buffer %u)", iExtraLen, pinfo->wSize, uiBytes);
+		sys_err("geçersiz paket uzunluğu (len %d boyut %u tampon %u)", iExtraLen, pinfo->wSize, uiBytes);
 		ch->GetDesc()->SetPhase(PHASE_CLOSE);
 		return -1;
 	}
 
 	if (0 != (iExtraLen % sizeof(TPacketCGSyncPositionElement)))
 	{
-		sys_err("invalid packet length %d (name: %s)", pinfo->wSize, ch->GetName());
+		sys_err("geçersiz paket uzunluğu %d (isim: %s)", pinfo->wSize, ch->GetName());
 		return iExtraLen;
 	}
 
@@ -1827,7 +1827,7 @@ int CInputMain::SyncPosition(LPCHARACTER ch, const char * c_pcData, size_t uiByt
 
 	if( iCount > nCountLimit )
 	{
-		sys_err( "Too many SyncPosition Count(%d) from Name(%s)", iCount, ch->GetName() );
+		sys_err( "Çok fazla SyncPosition Sayısı(%d) İsim(%s)", iCount, ch->GetName() );
 		iCount = nCountLimit;
 	}
 
@@ -1875,7 +1875,7 @@ int CInputMain::SyncPosition(LPCHARACTER ch, const char * c_pcData, size_t uiByt
 			{
 				LogManager::instance().HackLog( "SYNC_POSITION_HACK", ch );
 
-				sys_err( "Too far SyncPosition DistanceWithSyncOwner(%f)(%s) from Name(%s) CH(%d,%d) VICTIM(%d,%d) SYNC(%d,%d)",
+				sys_err( "Çok uzak SyncPosition DistanceWithSyncOwner(%f)(%s) İsim(%s) CH(%d,%d) HEDEF(%d,%d) SYNC(%d,%d)",
 					fDistWithSyncOwner, victim->GetName(), ch->GetName(), ch->GetX(), ch->GetY(), victim->GetX(), victim->GetY(),
 					e->lX, e->lY );
 
@@ -1901,7 +1901,7 @@ int CInputMain::SyncPosition(LPCHARACTER ch, const char * c_pcData, size_t uiByt
 			{
 				LogManager::instance().HackLog( "SYNC_POSITION_HACK", ch );
 
-				sys_err( "Too often SyncPosition Interval(%ldms)(%s) from Name(%s) VICTIM(%d,%d) SYNC(%d,%d)",
+				sys_err( "Çok sık SyncPosition Aralık(%ldms)(%s) İsim(%s) HEDEF(%d,%d) SYNC(%d,%d)",
 					tvDiff->tv_sec * 1000 + tvDiff->tv_usec / 1000, victim->GetName(), ch->GetName(), victim->GetX(), victim->GetY(),
 					e->lX, e->lY );
 
@@ -1914,7 +1914,7 @@ int CInputMain::SyncPosition(LPCHARACTER ch, const char * c_pcData, size_t uiByt
 		{
 			LogManager::instance().HackLog( "SYNC_POSITION_HACK", ch );
 
-			sys_err( "Too far SyncPosition Distance(%f)(%s) from Name(%s) CH(%d,%d) VICTIM(%d,%d) SYNC(%d,%d)",
+			sys_err( "Çok uzak SyncPosition Mesafe(%f)(%s) İsim(%s) CH(%d,%d) HEDEF(%d,%d) SYNC(%d,%d)",
 				   	fDist, victim->GetName(), ch->GetName(), ch->GetX(), ch->GetY(), victim->GetX(), victim->GetY(),
 				  e->lX, e->lY );
 
@@ -1956,7 +1956,7 @@ void CInputMain::UseSkill(LPCHARACTER ch, const char * pcData)
 void CInputMain::ScriptButton(LPCHARACTER ch, const void* c_pData)
 {
 	TPacketCGScriptButton * p = (TPacketCGScriptButton *) c_pData;
-	sys_log(0, "QUEST ScriptButton pid %d idx %u", ch->GetPlayerID(), p->idx);
+	sys_log(0, "GÖREV ScriptButton pid %d idx %u", ch->GetPlayerID(), p->idx);
 
 	quest::PC* pc = quest::CQuestManager::instance().GetPCForce(ch->GetPlayerID());
 	if (pc && pc->IsConfirmWait())
@@ -1976,7 +1976,7 @@ void CInputMain::ScriptButton(LPCHARACTER ch, const void* c_pData)
 void CInputMain::ScriptAnswer(LPCHARACTER ch, const void* c_pData)
 {
 	TPacketCGScriptAnswer * p = (TPacketCGScriptAnswer *) c_pData;
-	sys_log(0, "QUEST ScriptAnswer pid %d answer %d", ch->GetPlayerID(), p->answer);
+	sys_log(0, "GÖREV ScriptAnswer pid %d cevap %d", ch->GetPlayerID(), p->answer);
 
 	if (p->answer > 250)
 	{
@@ -1992,7 +1992,7 @@ void CInputMain::ScriptAnswer(LPCHARACTER ch, const void* c_pData)
 void CInputMain::ScriptSelectItem(LPCHARACTER ch, const void* c_pData)
 {
 	TPacketCGScriptSelectItem* p = (TPacketCGScriptSelectItem*) c_pData;
-	sys_log(0, "QUEST ScriptSelectItem pid %d answer %d", ch->GetPlayerID(), p->selection);
+	sys_log(0, "GÖREV ScriptSelectItem pid %d cevap %d", ch->GetPlayerID(), p->selection);
 	quest::CQuestManager::Instance().SelectItem(ch->GetPlayerID(), p->selection);
 }
 // END_OF_SCRIPT_SELECT_ITEM
@@ -2003,7 +2003,7 @@ void CInputMain::QuestInputString(LPCHARACTER ch, const void* c_pData)
 
 	char msg[65];
 	strlcpy(msg, p->msg, sizeof(msg));
-	sys_log(0, "QUEST InputString pid %u msg %s", ch->GetPlayerID(), msg);
+	sys_log(0, "GÖREV InputString pid %u mesaj %s", ch->GetPlayerID(), msg);
 
 	quest::CQuestManager::Instance().Input(ch->GetPlayerID(), msg);
 }
@@ -2014,7 +2014,7 @@ void CInputMain::QuestConfirm(LPCHARACTER ch, const void* c_pData)
 	LPCHARACTER ch_wait = CHARACTER_MANAGER::instance().FindByPID(p->requestPID);
 	if (p->answer)
 		p->answer = quest::CONFIRM_YES;
-	sys_log(0, "QuestConfirm from %s pid %u name %s answer %d", ch->GetName(), p->requestPID, (ch_wait)?ch_wait->GetName():"", p->answer);
+	sys_log(0, "QuestConfirm %s pid %u isim %s cevap %d", ch->GetName(), p->requestPID, (ch_wait)?ch_wait->GetName():"", p->answer);
 	if (ch_wait)
 	{
 		quest::CQuestManager::Instance().Confirm(ch_wait->GetPlayerID(), (quest::EQuestConfirmType) p->answer, ch->GetPlayerID());
@@ -2236,7 +2236,7 @@ void CInputMain::PartyInvite(LPCHARACTER ch, const char * c_pData)
 
 	if (!pInvitee || !ch->GetDesc() || !pInvitee->GetDesc())
 	{
-		sys_err("PARTY Cannot find invited character");
+		sys_err("PARTİ Davet edilen karakter bulunamıyor");
 		return;
 	}
 
@@ -2299,7 +2299,7 @@ void CInputMain::PartySetState(LPCHARACTER ch, const char* c_pData)
 	}
 
 	DWORD pid = p->pid;
-	sys_log(0, "PARTY SetRole pid %d to role %d state %s", pid, p->byRole, p->flag ? "on" : "off");
+	sys_log(0, "PARTİ SetRole pid %d -> rol %d durum %s", pid, p->byRole, p->flag ? "on" : "off");
 
 	switch (p->byRole)
 	{
@@ -2325,7 +2325,7 @@ void CInputMain::PartySetState(LPCHARACTER ch, const char* c_pData)
 			break;
 
 		default:
-			sys_err("wrong byRole in PartySetState Packet name %s state %d", ch->GetName(), p->byRole);
+			sys_err("PartySetState paketinde yanlış byRole isim %s durum %d", ch->GetName(), p->byRole);
 			break;
 	}
 }
@@ -2787,7 +2787,7 @@ int CInputMain::Guild(LPCHARACTER ch, const char * data, size_t uiBytes)
 
 				if (length > GUILD_COMMENT_MAX_LEN)
 				{
-					sys_err("POST_COMMENT: %s comment too long (length: %u)", ch->GetName(), length);
+					sys_err("POST_COMMENT: %s yorum çok uzun (uzunluk: %u)", ch->GetName(), length);
 					ch->GetDesc()->SetPhase(PHASE_CLOSE);
 					return -1;
 				}
@@ -2953,7 +2953,7 @@ int CInputMain::MyShop(LPCHARACTER ch, const char * c_pData, size_t uiBytes)
 		return (iExtraLen);
 	}
 
-	sys_log(0, "MyShop count %d", p->bCount);
+	sys_log(0, "MyShop sayısı %d", p->bCount);
 	ch->OpenMyShop(p->szSign, (TShopItemTable *) (c_pData + sizeof(TPacketCGMyShop)), p->bCount);
 	return (iExtraLen);
 }
@@ -3021,7 +3021,7 @@ void CInputMain::Refine(LPCHARACTER ch, const char* c_pData)
 				}
 				else
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, "The demon tower completion reward can only be used once.");
+					ch->ChatPacket(CHAT_TYPE_INFO, "Şeytan kulesi tamamlama ödülü yalnızca bir kez kullanılabilir.");
 				}
 			}
 		}
@@ -3484,14 +3484,14 @@ int IkarusShopPacket(const char* data , LPCHARACTER ch, int iBufferLeft)
 			return IkarusShopPacketShopMoveItem(ch, data, iBufferLeft);
 #	endif
 		default:
-			sys_err("UNKNOWN SUBHEADER %d ", subheader);
+			sys_err("BILINMEYEN ALTBASLIK %d ", subheader);
 			return -1;
 		}
 	}
 
 	catch(const DecodeException& e)
 	{
-		sys_err("FAILED TO DECODE SUBHEADER %u", subheader);
+		sys_err("ALT BAŞLIK ÇÖZÜMLENEMEDİ %u", subheader);
 		return -1;
 	}
 }
@@ -3759,7 +3759,7 @@ int CInputMain::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 
 		case HEADER_CG_ANSWER_MAKE_GUILD:
 #ifdef ENABLE_NEWGUILDMAKE
-			ch->ChatPacket(CHAT_TYPE_INFO, "<%s> AnswerMakeGuild disabled", __FUNCTION__);
+			ch->ChatPacket(CHAT_TYPE_INFO, "<%s> AnswerMakeGuild devre dışı", __FUNCTION__);
 #else
 			AnswerMakeGuild(ch, c_pData);
 #endif

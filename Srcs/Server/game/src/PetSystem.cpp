@@ -162,7 +162,7 @@ DWORD CPetActor::Summon(const char* petName, LPITEM pSummonItem, bool bSpawnFar)
 
 	if (0 == m_pkChar)
 	{
-		sys_err("[CPetSystem::Summon] Failed to summon the pet. (vnum: %d)", m_dwVnum);
+		sys_err("[CPetSystem::Summon] Pet çağırma başarısız. (vnum: %d)", m_dwVnum);
 		return 0;
 	}
 
@@ -455,7 +455,7 @@ void CPetSystem::DeletePet(DWORD mobVnum)
 
 	if (m_petActorMap.end() == iter)
 	{
-		sys_err("[CPetSystem::DeletePet] Can't find pet on my list (VNUM: %d)", mobVnum);
+		sys_err("[CPetSystem::DeletePet] Listemde pet bulunamıyor (VNUM: %d)", mobVnum);
 		return;
 	}
 

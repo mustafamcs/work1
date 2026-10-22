@@ -28,7 +28,7 @@ void CHARACTER::AssignTriggers(const TMobTable * table)
 {
 	if (table->bOnClickType >= ON_CLICK_MAX_NUM)
 	{
-		sys_err("%s has invalid OnClick value %d", GetName(), table->bOnClickType);
+		sys_err("%s geçersiz OnClick değerine sahip %d", GetName(), table->bOnClickType);
 		abort();
 	}
 

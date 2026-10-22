@@ -621,7 +621,7 @@ static int luaB_yield (lua_State *L) {
 static int luaB_costatus (lua_State *L) {
   lua_State *co = lua_tothread(L, 1);
   luaL_argcheck(L, co, 1, "coroutine expected");
-  if (L == co) lua_pushliteral(L, "running");
+  if (L == co) lua_pushliteral(L, "koşuyor");
   else {
     lua_Debug ar;
     if (lua_getstack(co, 0, &ar) == 0 && lua_gettop(co) == 0)

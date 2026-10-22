@@ -37,7 +37,7 @@ template <class Func> Func CDungeon::ForEachMember(Func f)
 
 	for (it = m_set_pkCharacter.begin(); it != m_set_pkCharacter.end(); ++it)
 	{
-		sys_log(0, "Dungeon ForEachMember %s", (*it)->GetName());
+		sys_log(0, "Zindan ForEachMember %s", (*it)->GetName());
 		f(*it);
 	}
 	return f;
@@ -81,7 +81,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1) || !lua_isnumber(L,2))
 		{
-			sys_err("wrong set flag");
+			sys_err("yanlış set flag");
 		}
 		else
 		{
@@ -106,7 +106,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1))
 		{
-			sys_err("wrong get flag");
+			sys_err("yanlış get flag");
 		}
 
 		CQuestManager& q = CQuestManager::instance();
@@ -130,7 +130,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1) || !lua_isnumber(L,2))
 		{
-			sys_err("wrong get flag");
+			sys_err("yanlış get flag");
 		}
 
 		DWORD dwMapIndex = (DWORD) lua_tonumber(L, 2);
@@ -162,7 +162,7 @@ namespace quest
 
 		if (pDungeon)
 		{
-			sys_log(0, "Dungeon GetMapIndex %d",pDungeon->GetMapIndex());
+			sys_log(0, "Zindan GetMapIndex %d",pDungeon->GetMapIndex());
 			lua_pushnumber(L, pDungeon->GetMapIndex());
 		}
 		else
@@ -178,7 +178,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1))
 		{
-			sys_err("wrong filename");
+			sys_err("yanlış dosya adı");
 			return 0;
 		}
 
@@ -195,7 +195,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1))
 		{
-			sys_err("wrong filename");
+			sys_err("yanlış dosya adı");
 			return 0;
 		}
 		CQuestManager& q = CQuestManager::instance();
@@ -228,7 +228,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L,1))
 		{
-			sys_err("wrong time");
+			sys_err("yanlış zaman");
 			return 0;
 		}
 
@@ -245,13 +245,13 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("wrong time");
+			sys_err("yanlış zaman");
 			return 0;
 		}
 
 		if (!lua_isnumber(L, 2))
 		{
-			sys_err("wrong map index");
+			sys_err("yanlış harita indeksi");
 			return 0;
 		}
 
@@ -284,7 +284,7 @@ namespace quest
 										 c_pszRegenFile);
 		}
 		else
-			sys_err("cannot find dungeon");
+			sys_err("zindan bulunamıyor");
 
 		return 0;
 	}
@@ -293,13 +293,13 @@ namespace quest
 	{
 		if (lua_gettop(L) < 3)
 		{
-			sys_err("not enough argument");
+			sys_err("yeterli argüman yok");
 			return 0;
 		}
 
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("wrong argument");
+			sys_err("yanlış argüman");
 			return 0;
 		}
 
@@ -309,7 +309,7 @@ namespace quest
 
 		if (!pDungeon)
 		{
-			sys_err("cannot create dungeon %d", lMapIndex);
+			sys_err("zindan oluşturulamıyor %d", lMapIndex);
 			return 0;
 		}
 
@@ -325,7 +325,7 @@ namespace quest
 	{
 		if (lua_gettop(L)<3 || !lua_isnumber(L,1) || !lua_isnumber(L, 2) || !lua_isnumber(L,3))
 		{
-			sys_err("not enough argument");
+			sys_err("yeterli argüman yok");
 			return 0;
 		}
 
@@ -335,7 +335,7 @@ namespace quest
 
 		if (!pDungeon)
 		{
-			sys_err("cannot create dungeon %d", lMapIndex);
+			sys_err("zindan oluşturulamıyor %d", lMapIndex);
 			return 0;
 		}
 
@@ -343,7 +343,7 @@ namespace quest
 
 		if (ch->GetGuild() == NULL)
 		{
-			sys_err ("cannot go to dungeon alone.");
+			sys_err ("zindana tek başına gidilemez.");
 			return 0;
 		}
 
@@ -357,7 +357,7 @@ namespace quest
 	{
 		if (lua_gettop(L)<3 || !lua_isnumber(L,1) || !lua_isnumber(L, 2) || !lua_isnumber(L,3))
 		{
-			sys_err("not enough argument");
+			sys_err("yeterli argüman yok");
 			return 0;
 		}
 
@@ -367,7 +367,7 @@ namespace quest
 
 		if (!pDungeon)
 		{
-			sys_err("cannot create dungeon %d", lMapIndex);
+			sys_err("zindan oluşturulamıyor %d", lMapIndex);
 			return 0;
 		}
 
@@ -382,7 +382,7 @@ namespace quest
 	{
 		if (lua_gettop(L)<3 || !lua_isnumber(L,1) || !lua_isnumber(L, 2) || !lua_isnumber(L,3))
 		{
-			sys_err("not enough argument");
+			sys_err("yeterli argüman yok");
 			return 0;
 		}
 
@@ -392,7 +392,7 @@ namespace quest
 
 		if (!pDungeon)
 		{
-			sys_err("cannot create dungeon %d", lMapIndex);
+			sys_err("zindan oluşturulamıyor %d", lMapIndex);
 			return 0;
 		}
 
@@ -400,7 +400,7 @@ namespace quest
 
 		if (ch->GetParty() == NULL)
 		{
-			sys_err ("cannot go to dungeon alone.");
+			sys_err ("zindana tek başına gidilemez.");
 			return 0;
 		}
 		pDungeon->JumpParty(ch->GetParty(), ch->GetMapIndex(), (int)lua_tonumber(L, 2), (int)lua_tonumber(L, 3));
@@ -684,7 +684,7 @@ namespace quest
 
 		if (0 == mapIndex)
 		{
-			sys_err("_purge_area: cannot get a map index with (%u, %u)", x1, y1);
+			sys_err("_purge_area: (%u, %u) ile harita indeksi alınamıyor", x1, y1);
 			return 0;
 		}
 
@@ -750,7 +750,7 @@ namespace quest
 
 		if (0 == mapIndex)
 		{
-			sys_err("_kill_area: cannot get a map index with (%u, %u)", x1, y1);
+			sys_err("_kill_area: (%u, %u) ile harita indeksi alınamıyor", x1, y1);
 			return 0;
 		}
 
@@ -1098,7 +1098,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -1151,7 +1151,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -1179,7 +1179,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -1246,7 +1246,7 @@ namespace quest
 
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4) || !lua_isnumber(L, 6))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -1362,7 +1362,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1) || !lua_isstring(L, 2) || !lua_isstring(L, 3))
 		{
-			sys_log(0, "QUEST wrong set flag");
+			sys_log(0, "GÖREV hatalı set flag");
 			return 0;
 		}
 
@@ -1379,7 +1379,7 @@ namespace quest
 
 		if (!pMap)
 		{
-			sys_err("cannot find map by index %d", pDungeon->GetMapIndex());
+			sys_err("%d indeksli harita bulunamıyor", pDungeon->GetMapIndex());
 			return 0;
 		}
 		FSayDungeonByItemGroup f;
@@ -1390,7 +1390,7 @@ namespace quest
 
 		if (f.item_group == NULL)
 		{
-			sys_err ("invalid item group");
+			sys_err ("geçersiz eşya grubu");
 			return 0;
 		}
 
@@ -1433,7 +1433,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1))
 		{
-			sys_log(0, "QUEST wrong set flag");
+			sys_log(0, "GÖREV hatalı set flag");
 			return 0;
 		}
 
@@ -1450,7 +1450,7 @@ namespace quest
 
 		if (!pMap)
 		{
-			sys_err("cannot find map by index %d", pDungeon->GetMapIndex());
+			sys_err("%d indeksli harita bulunamıyor", pDungeon->GetMapIndex());
 			return 0;
 		}
 		FExitDungeonByItemGroup f;
@@ -1460,7 +1460,7 @@ namespace quest
 
 		if (f.item_group == NULL)
 		{
-			sys_err ("invalid item group");
+			sys_err ("geçersiz eşya grubu");
 			return 0;
 		}
 
@@ -1498,7 +1498,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1))
 		{
-			sys_log(0, "QUEST wrong set flag");
+			sys_log(0, "GÖREV hatalı set flag");
 			return 0;
 		}
 
@@ -1515,7 +1515,7 @@ namespace quest
 
 		if (!pMap)
 		{
-			sys_err("cannot find map by index %d", pDungeon->GetMapIndex());
+			sys_err("%d indeksli harita bulunamıyor", pDungeon->GetMapIndex());
 			return 0;
 		}
 		FDeleteItemInItemGroup f;
@@ -1525,7 +1525,7 @@ namespace quest
 
 		if (f.item_group == NULL)
 		{
-			sys_err ("invalid item group");
+			sys_err ("geçersiz eşya grubu");
 			return 0;
 		}
 
@@ -1704,7 +1704,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1) || !lua_isstring(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("Invalid Argument");
+			sys_err("Geçersiz Argüman");
 		}
 
 		f.flagname = string (lua_tostring(L, 1)) + "." + lua_tostring(L, 2);

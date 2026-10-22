@@ -43,7 +43,7 @@ namespace quest
 		}
 		else
 		{
-			sys_err("LUA ScriptRunError (code:%d src:[%s])", errcode, str.c_str());
+			sys_err("LUA ScriptRunError (kod:%d kaynak:[%s])", errcode, str.c_str());
 		}
 		lua_settop(L,x);
 		return retstr;
@@ -190,7 +190,7 @@ namespace quest
 		if (errcode)
 		{
 			char buf[100];
-			snprintf(buf, sizeof(buf), "LUA ScriptRunError (code:%%d src:[%%%ds])", size);
+			snprintf(buf, sizeof(buf), "LUA ScriptRunError (kod:%%d kaynak:[%%%ds])", size);
 			sys_err(buf, errcode, code);
 		}
 		lua_settop(L,x);
@@ -245,7 +245,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -260,7 +260,7 @@ namespace quest
 			count = 1;
 		else if (count > 10)
 		{
-			sys_err("count bigger than 10");
+			sys_err("sayı 10'dan büyük");
 			count = 10;
 		}
 
@@ -315,7 +315,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3) || !lua_isnumber(L, 4) || !lua_isnumber(L, 6))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -331,7 +331,7 @@ namespace quest
 			count = 1;
 		else if (count > 10)
 		{
-			sys_err("count bigger than 10");
+			sys_err("sayı 10'dan büyük");
 			count = 10;
 		}
 
@@ -423,7 +423,7 @@ namespace quest
 			lua_getglobal(L, c_pszName);
 			if (!lua_istable(L, -1))
 			{
-				sys_err("%s global index not found for %s", c_pszName, c_pszSubName);
+				sys_err("%s, %s için global indeks bulunamadı", c_pszName, c_pszSubName);
 				lua_settop(L, x);
 				return;
 			}
@@ -452,7 +452,7 @@ namespace quest
 			lua_getglobal(L, c_pszName);
 			if (!lua_istable(L, -1))
 			{
-				sys_err("%s global index not found (force=%d)", c_pszName, bForceCreation);
+				sys_err("%s global indeks bulunamadı (force=%d)", c_pszName, bForceCreation);
 				lua_settop(L, x);
 				if (bForceCreation)
 					AddLuaFunctionTable(c_pszName, preg);
@@ -481,7 +481,7 @@ namespace quest
 			{
 				if (!bOverwrite)
 				{
-					sys_err("%s global index already defined", c_pszName);
+					sys_err("%s global indeks zaten tanımlı", c_pszName);
 					lua_settop(L, x);
 					return;
 				}
@@ -501,7 +501,7 @@ namespace quest
 			{
 				if (!bForceCreation)
 				{
-					sys_err("%s global index for %s already defined", c_pszName, c_pszSubName);
+					sys_err("%s, %s için global indeks zaten tanımlı", c_pszName, c_pszSubName);
 					lua_settop(L, x);
 					return;
 				}
@@ -526,7 +526,7 @@ namespace quest
 			{
 				if (!bForceCreation)
 				{
-					sys_err("%s global index for %s already defined", c_pszName, c_pszSubName);
+					sys_err("%s, %s için global indeks zaten tanımlı", c_pszName, c_pszSubName);
 					lua_settop(L, x);
 					return;
 				}
@@ -550,7 +550,7 @@ namespace quest
 			lua_getglobal(L, c_pszName);
 			if (!lua_istable(L, -1))
 			{
-				sys_err("%s global index not found for %s", c_pszName, c_pszSubName);
+				sys_err("%s, %s için global indeks bulunamadı", c_pszName, c_pszSubName);
 				lua_settop(L, x);
 				return;
 			}
@@ -593,7 +593,7 @@ namespace quest
 
 		if (lua_isnil(L,-1))
 		{
-			sys_err("QUEST wrong quest state file for quest %s",questName);
+			sys_err("GÖREV %s görevi için hatalı görev durum dosyası",questName);
 			lua_settop(L,x);
 			return;
 		}
@@ -726,7 +726,7 @@ namespace quest
 			sys_log(0, "LoadTranslate(%s), returns %d", translateFileName, translateLoadingResult);
 			if (translateLoadingResult != 0)
 			{
-				sys_err("LOAD_TRANSLATE_ERROR(%s)", translateFileName);
+				sys_err("CEVIRI_YUKLEME_HATASI(%s)", translateFileName);
 				return false;
 			}
 		}
@@ -740,7 +740,7 @@ namespace quest
 			sys_log(0, "LoadQuestLocale(%s), returns %d", questLocaleFileName, questLocaleLoadingResult);
 			if (questLocaleLoadingResult != 0)
 			{
-				sys_err("LoadQuestLocale(%s) FAILURE", questLocaleFileName);
+				sys_err("LoadQuestLocale(%s) BASARISIZ", questLocaleFileName);
 				return false;
 			}
 		}
@@ -808,7 +808,7 @@ namespace quest
 			}
 			else
 			{
-				sys_err("SELECT wrong data %s", lua_typename(qs.co, -1));
+				sys_err("SELECT yanlis veri %s", lua_typename(qs.co, -1));
 				sys_err("here");
 			}
 			lua_pop(qs.co,1);
@@ -866,7 +866,7 @@ namespace quest
 		const char* szMsg = lua_tostring(qs.co, -2);
 		int iTimeout = (int) lua_tonumber(qs.co, -1);
 
-		sys_log(0, "GotoConfirmState vid %u msg '%s', timeout %d", dwVID, szMsg, iTimeout);
+		sys_log(0, "GotoConfirmState vid %u mesaj '%s', zaman aşımı %d", dwVID, szMsg, iTimeout);
 
 		// 1
 		LPCHARACTER ch = CHARACTER_MANAGER::instance().Find(dwVID);

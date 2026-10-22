@@ -145,7 +145,7 @@ void CItemPriceListTableCache::UpdateList(const TItemPriceListTable* pUpdateList
 
 	if (pUpdateList->byCount > SHOP_PRICELIST_MAX_NUM)
 	{
-		sys_err("Count overflow!");
+		sys_err("Sayı taşması!");
 		return;
 	}
 

@@ -202,7 +202,7 @@ CGuild*	CGuildManager::FindGuildByName(const std::string guild_name)
 
 void CGuildManager::Initialize()
 {
-	sys_log(0, "Initializing Guild");
+	sys_log(0, "Lonca başlatılıyor");
 
 	if (g_bAuthServer)
 	{
@@ -501,7 +501,7 @@ void CGuildManager::RequestWarOver(DWORD dwGuild1, DWORD dwGuild2, DWORD dwGuild
 
 	if (g1->GetGuildWarState(g2->GetID()) != GUILD_WAR_ON_WAR)
 	{
-		sys_log(0, "RequestWarOver : both guild was not in war %u %u", dwGuild1, dwGuild2);
+		sys_log(0, "RequestWarOver : iki lonca da savaşta değildi %u %u", dwGuild1, dwGuild2);
 		RequestEndWar(dwGuild1, dwGuild2);
 		return;
 	}
@@ -577,7 +577,7 @@ void CGuildManager::WaitStartWar(DWORD guild_id1, DWORD guild_id2)
 
 	if (!g1 || !g2)
 	{
-		sys_log(0, "GuildWar: CGuildManager::WaitStartWar(%d,%d) - something wrong in arg. there is no guild like that.", guild_id1, guild_id2);
+		sys_log(0, "GuildWar: CGuildManager::WaitStartWar(%d,%d) - argümanda sorun var. Öyle bir lonca yok.", guild_id1, guild_id2);
 		return;
 	}
 
@@ -682,7 +682,7 @@ bool CGuildManager::EndWar(DWORD guild_id1, DWORD guild_id2)
 
 	if (m_GuildWar.end() == it)
 	{
-		sys_log(0, "EndWar(%d,%d) - EndWar request but guild is not in list", guild_id1, guild_id2);
+		sys_log(0, "EndWar(%d,%d) - EndWar isteği ama lonca listede yok", guild_id1, guild_id2);
 		return false;
 	}
 

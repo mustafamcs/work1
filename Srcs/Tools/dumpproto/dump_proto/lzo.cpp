@@ -171,7 +171,7 @@ bool CLZObject::Compress()
 
 	if (LZO_E_OK != r)
 	{
-		fprintf(stderr, "LZO: lzo1x_compress failed\n");
+		fprintf(stderr, "LZO: lzo1x_compress başarısız\n");
 		return false;
 	}
 
@@ -186,7 +186,7 @@ bool CLZObject::BeginDecompress(const void * pvIn)
 
 	if (pHeader->dwFourCC != ms_dwFourCC)
 	{
-		fprintf(stderr, "LZObject: not a valid data\n");
+		fprintf(stderr, "LZObject: geçerli veri değil\n");
 		return false;
 	}
 
@@ -198,7 +198,7 @@ bool CLZObject::BeginDecompress(const void * pvIn)
 	static unsigned count = 0;
 	sum += pHeader->dwRealSize;
 	count++;
-	printf("decompress cur: %d, ave: %d\n", pHeader->dwRealSize, sum/count);
+	printf("sıkıştırma açma şu anki: %d, ort: %d\n", pHeader->dwRealSize, sum/count);
 	*/
 	m_dwBufferSize = pHeader->dwRealSize;
 	m_pbBuffer = gs_freeMemMgr.Alloc(m_dwBufferSize);
@@ -272,13 +272,13 @@ bool CLZObject::Decompress(DWORD * pdwKey)
 
 		if (*(DWORD *) pbDecryptedBuffer != ms_dwFourCC)
 		{
-			fprintf(stderr, "LZObject: key incorrect\n");
+			fprintf(stderr, "LZObject: anahtar hatalı\n");
 			return false;
 		}
 
 		if (LZO_E_OK != (r = lzo1x_decompress(pbDecryptedBuffer + sizeof(DWORD), m_pHeader->dwCompressedSize, m_pbBuffer, (lzo_uint*) &uiSize, NULL)))
 		{
-			fprintf(stderr, "LZObject: Decompress failed(decrypt) ret %d\n", r);
+			fprintf(stderr, "LZObject: Sıkıştırma açma başarısız(şifre çözme) ret %d\n", r);
 			return false;
 		}
 	}
@@ -289,14 +289,14 @@ bool CLZObject::Decompress(DWORD * pdwKey)
 		//if (LZO_E_OK != (r = lzo1x_decompress_safe(m_pbIn, m_pHeader->dwCompressedSize, m_pbBuffer, (lzo_uint*) &uiSize, NULL)))
 		if (LZO_E_OK != (r = lzo1x_decompress(m_pbIn, m_pHeader->dwCompressedSize, m_pbBuffer, (lzo_uint*) &uiSize, NULL)))
 		{
-			fprintf(stderr, "LZObject: Decompress failed : ret %d, CompressedSize %d\n", r, m_pHeader->dwCompressedSize);
+			fprintf(stderr, "LZObject: Sıkıştırma açma başarısız : ret %d, SıkıştırılmışBoyut %d\n", r, m_pHeader->dwCompressedSize);
 			return false;
 		}
 	}
 
 	if (uiSize != m_pHeader->dwRealSize)
 	{
-		fprintf(stderr, "LZObject: Size differs\n");
+		fprintf(stderr, "LZObject: Boyut farklı\n");
 		return false;
 	}
 
@@ -344,7 +344,7 @@ CLZO::CLZO() : m_pWorkMem(NULL)
 {
 	if (lzo_init() != LZO_E_OK)
 	{
-		fprintf(stderr, "LZO: cannot initialize (continuing anyway)\n");
+		fprintf(stderr, "LZO: başlatılamıyor (yine de devam ediliyor)\n");
 	}
 
 #if defined( LZO1X_999_MEM_COMPRESS )
@@ -355,7 +355,7 @@ CLZO::CLZO() : m_pWorkMem(NULL)
 
 	if (NULL == m_pWorkMem)
 	{
-		fprintf(stderr, "LZO: cannot alloc memory\n");
+		fprintf(stderr, "LZO: bellek ayrılamıyor\n");
 		return;
 	}
 }

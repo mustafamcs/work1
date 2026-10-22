@@ -49,7 +49,7 @@ bool CClientManager::DeleteLogonAccount(const char * c_pszLogin, DWORD dwHandle)
 
 	if (pkLD->GetConnectedPeerHandle() != dwHandle)
 	{
-		sys_err("%s tried to logout in other peer handle %lu, current handle %lu", szLogin, dwHandle, pkLD->GetConnectedPeerHandle());
+		sys_err("%s başka bir peer handle'da çıkış yapmaya çalıştı %lu, şu anki handle %lu", szLogin, dwHandle, pkLD->GetConnectedPeerHandle());
 		return false;
 	}
 
@@ -93,7 +93,7 @@ void CClientManager::QUERY_LOGIN_BY_KEY(CPeer * pkPeer, DWORD dwHandle, TPacketG
 
 	if (s_curTime >= GLOBAL_LIMIT_TIME)
 	{
-		sys_err("Server life time expired.");
+		sys_err("Sunucu ömür süresi doldu.");
 		exit(0);
 		return;
 	}
@@ -105,7 +105,7 @@ void CClientManager::QUERY_LOGIN_BY_KEY(CPeer * pkPeer, DWORD dwHandle, TPacketG
 
 	if (!pkLoginData)
 	{
-		sys_log(0, "LOGIN_BY_KEY key not exist %s %lu", szLogin, p->dwLoginKey);
+		sys_log(0, "LOGIN_BY_KEY anahtar yok %s %lu", szLogin, p->dwLoginKey);
 		pkPeer->EncodeReturn(HEADER_DG_LOGIN_NOT_EXIST, dwHandle);
 		return;
 	}
@@ -114,7 +114,7 @@ void CClientManager::QUERY_LOGIN_BY_KEY(CPeer * pkPeer, DWORD dwHandle, TPacketG
 
 	if (FindLogonAccount(r.login))
 	{
-		sys_log(0, "LOGIN_BY_KEY already login %s %lu", r.login, p->dwLoginKey);
+		sys_log(0, "LOGIN_BY_KEY zaten girişli %s %lu", r.login, p->dwLoginKey);
 		TPacketDGLoginAlready ptog;
 		strlcpy(ptog.szLogin, szLogin, sizeof(ptog.szLogin));
 		pkPeer->EncodeHeader(HEADER_DG_LOGIN_ALREADY, dwHandle, sizeof(TPacketDGLoginAlready));
@@ -124,7 +124,7 @@ void CClientManager::QUERY_LOGIN_BY_KEY(CPeer * pkPeer, DWORD dwHandle, TPacketG
 
 	if (strcasecmp(r.login, szLogin))
 	{
-		sys_log(0, "LOGIN_BY_KEY login differ %s %lu input %s", r.login, p->dwLoginKey, szLogin);
+		sys_log(0, "LOGIN_BY_KEY giriş farklı %s %lu girdi %s", r.login, p->dwLoginKey, szLogin);
 		pkPeer->EncodeReturn(HEADER_DG_LOGIN_NOT_EXIST, dwHandle);
 		return;
 	}
@@ -133,7 +133,7 @@ void CClientManager::QUERY_LOGIN_BY_KEY(CPeer * pkPeer, DWORD dwHandle, TPacketG
 	{
 		const DWORD * pdwClientKey = pkLoginData->GetClientKey();
 
-		sys_log(0, "LOGIN_BY_KEY client key differ %s %lu %lu %lu %lu, %lu %lu %lu %lu",
+		sys_log(0, "LOGIN_BY_KEY istemci anahtarı farklı %s %lu %lu %lu %lu, %lu %lu %lu %lu",
 				r.login,
 				p->adwClientKey[0], p->adwClientKey[1], p->adwClientKey[2], p->adwClientKey[3],
 				pdwClientKey[0], pdwClientKey[1], pdwClientKey[2], pdwClientKey[3]);
@@ -155,7 +155,7 @@ void CClientManager::QUERY_LOGIN_BY_KEY(CPeer * pkPeer, DWORD dwHandle, TPacketG
 	info->pAccountTable = pkTab;
 	strlcpy(info->ip, p->szIP, sizeof(info->ip));
 
-	sys_log(0, "LOGIN_BY_KEY success %s %lu %s", r.login, p->dwLoginKey, info->ip);
+	sys_log(0, "LOGIN_BY_KEY başarılı %s %lu %s", r.login, p->dwLoginKey, info->ip);
 	char szQuery[QUERY_MAX_LEN];
 #ifdef ENABLE_PLAYER_PER_ACCOUNT5
 	snprintf(szQuery, sizeof(szQuery), "SELECT pid1, pid2, pid3, pid4, pid5, empire FROM player_index%s WHERE id=%u", GetTablePostfix(), r.id);
@@ -191,11 +191,11 @@ void CClientManager::RESULT_LOGIN_BY_KEY(CPeer * peer, SQLMsg * msg)
 			" empire FROM player_index%s WHERE id=%u", GetTablePostfix(), account_id);
 		auto pMsg(CDBManager::instance().DirectQuery(szQuery, SQL_PLAYER));
 
-		sys_log(0, "RESULT_LOGIN_BY_KEY FAIL player_index's NULL : ID:%d", account_id);
+		sys_log(0, "RESULT_LOGIN_BY_KEY BAŞARISIZ player_index NULL : ID:%d", account_id);
 
 		if (pMsg->Get()->uiNumRows == 0)
 		{
-			sys_log(0, "RESULT_LOGIN_BY_KEY FAIL player_index's NULL : ID:%d", account_id);
+			sys_log(0, "RESULT_LOGIN_BY_KEY BAŞARISIZ player_index NULL : ID:%d", account_id);
 
 			// PLAYER_INDEX_CREATE_BUG_FIX
 			//snprintf(szQuery, sizeof(szQuery), "INSERT IGNORE INTO player_index%s (id) VALUES(%lu)", GetTablePostfix(), info->pAccountTable->id);
@@ -425,7 +425,7 @@ void CClientManager::RESULT_LOGIN(CPeer * peer, SQLMsg * msg)
 
 		if (!InsertLogonAccount(info->pAccountTable->login, peer->GetHandle(), info->ip))
 		{
-			sys_log(0, "RESULT_LOGIN: already logon %s", info->pAccountTable->login);
+			sys_log(0, "RESULT_LOGIN: zaten girişli %s", info->pAccountTable->login);
 
 			TPacketDGLoginAlready p;
 			strlcpy(p.szLogin, info->pAccountTable->login, sizeof(p.szLogin));
@@ -435,7 +435,7 @@ void CClientManager::RESULT_LOGIN(CPeer * peer, SQLMsg * msg)
 		}
 		else
 		{
-			sys_log(0, "RESULT_LOGIN: login success %s rows: %lu", info->pAccountTable->login, msg->Get()->uiNumRows);
+			sys_log(0, "RESULT_LOGIN: giriş başarılı %s satır: %lu", info->pAccountTable->login, msg->Get()->uiNumRows);
 
 			if (msg->Get()->uiNumRows > 0)
 				CreateAccountPlayerDataFromRes(msg->Get()->pSQLResult, info->pAccountTable);

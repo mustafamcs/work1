@@ -28,7 +28,7 @@ time_t UseBlueDragonSkill(LPCHARACTER pChar, unsigned int idx)
 	{
 		case 0:
 			{
-				sys_log(0, "BlueDragon: Using Skill Breath");
+				sys_log(0, "BlueDragon: Nefes Becerisi kullanıyor");
 
 				FSkillBreath f(pChar);
 
@@ -40,7 +40,7 @@ time_t UseBlueDragonSkill(LPCHARACTER pChar, unsigned int idx)
 
 		case 1:
 			{
-				sys_log(0, "BlueDragon: Using Skill Weak Breath");
+				sys_log(0, "BlueDragon: Zayıf Nefes Becerisi kullanıyor");
 
 				FSkillWeakBreath f(pChar);
 
@@ -52,7 +52,7 @@ time_t UseBlueDragonSkill(LPCHARACTER pChar, unsigned int idx)
 
 		case 2:
 			{
-				sys_log(0, "BlueDragon: Using Skill EarthQuake");
+				sys_log(0, "BlueDragon: Deprem Becerisi kullanıyor");
 
 				FSkillEarthQuake f(pChar);
 
@@ -68,7 +68,7 @@ time_t UseBlueDragonSkill(LPCHARACTER pChar, unsigned int idx)
 			break;
 
 		default:
-			sys_err("BlueDragon: Wrong Skill Index: %d", idx);
+			sys_err("BlueDragon: Hatalı Beceri İndeksi: %d", idx);
 			return 0;
 	}
 

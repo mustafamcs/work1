@@ -402,14 +402,14 @@ EVENTFUNC(load_affect_login_event)
 	}
 	else if (d->IsPhase(PHASE_GAME))
 	{
-		sys_log(1, "Affect Load by Event");
+		sys_log(1, "Etki Olayla Yüklendi");
 		ch->LoadAffect(info->count, (TPacketAffectElement*)info->data);
 		M2_DELETE_ARRAY(info->data);
 		return 0;
 	}
 	else
 	{
-		sys_err("input_db.cpp:quest_login_event INVALID PHASE pid %d", ch->GetPlayerID());
+		sys_err("input_db.cpp:quest_login_event GEÇERSİZ AŞAMA pid %d", ch->GetPlayerID());
 		M2_DELETE_ARRAY(info->data);
 		return 0;
 	}
@@ -422,7 +422,7 @@ void CHARACTER::LoadAffect(DWORD dwCount, TPacketAffectElement * pElements)
 	if (!GetDesc()->IsPhase(PHASE_GAME))
 	{
 		if (test_server)
-			sys_log(0, "LOAD_AFFECT: Creating Event", GetName(), dwCount);
+			sys_log(0, "LOAD_AFFECT: Olay Oluşturuluyor", GetName(), dwCount);
 
 		load_affect_login_event_info* info = AllocEventInfo<load_affect_login_event_info>();
 
@@ -463,14 +463,14 @@ void CHARACTER::LoadAffect(DWORD dwCount, TPacketAffectElement * pElements)
 
 		if (pElements->bApplyOn >= POINT_MAX_NUM)
 		{
-			sys_err("invalid affect data %s ApplyOn %u ApplyValue %d",
+			sys_err("geçersiz etki verisi %s ApplyOn %u ApplyValue %d",
 					GetName(), pElements->bApplyOn, pElements->lApplyValue);
 			continue;
 		}
 
 		if (test_server)
 		{
-			sys_log(0, "Load Affect : Affect %s %d %d", GetName(), pElements->dwType, pElements->bApplyOn );
+			sys_log(0, "Etki Yükle : Etki %s %d %d", GetName(), pElements->dwType, pElements->bApplyOn );
 		}
 
 		CAffect* pkAff = CAffect::Acquire();
@@ -526,7 +526,7 @@ bool CHARACTER::AddAffect(DWORD dwType, BYTE bApplyOn, long lApplyValue, DWORD d
 
 	if (lDuration == 0)
 	{
-		sys_err("Character::AddAffect lDuration == 0 type %d", lDuration, dwType);
+		sys_err("Character::AddAffect lDuration == 0 tip %d", lDuration, dwType);
 		lDuration = 1;
 	}
 

@@ -102,7 +102,7 @@ namespace quest
 		int nEmpire = ch->GetEmpire();
 		nMoney = nMoney * 10000;
 
-		sys_log(0 ,"[MONARCH] Take Money Empire(%d) pid(%d) Money(%d)", ch->GetEmpire(), ch->GetPlayerID(), nMoney);
+		sys_log(0 ,"[MONARCH] Para Al İmparatorluk(%d) pid(%d) Para(%d)", ch->GetEmpire(), ch->GetPlayerID(), nMoney);
 
 		db_clientdesc->DBPacketHeader(HEADER_GD_TAKE_MONARCH_MONEY, ch->GetDesc()->GetHandle(), sizeof(int) * 3);
 		db_clientdesc->Packet(&nEmpire, sizeof(int));
@@ -282,7 +282,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -298,7 +298,7 @@ namespace quest
 		if (!(pkMob = CMobManager::Instance().Get(mob_vnum)))
 			if (pkMob == NULL)
 			{
-				ch->ChatPacket(CHAT_TYPE_INFO, "No such mob by that vnum");
+				ch->ChatPacket(CHAT_TYPE_INFO, "Bu vnum'da mob yok");
 				return 0;
 			}
 
@@ -367,7 +367,7 @@ namespace quest
 		// mob_level(0-2), region(0~3)
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -383,7 +383,7 @@ namespace quest
 
 		if (pkMob == NULL)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, "No such mob by that vnum");
+			ch->ChatPacket(CHAT_TYPE_INFO, "Bu vnum'da mob yok");
 			return 0;
 		}
 		-----*/
@@ -464,7 +464,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -525,10 +525,10 @@ namespace quest
 				PIXEL_POSITION pos;
 
 				if (!SECTREE_MANAGER::instance().GetCenterPositionOfMap(pkCCI->lMapIndex, pos))
-					ch->ChatPacket(CHAT_TYPE_INFO, "Cannot find map (index %d)", pkCCI->lMapIndex);
+					ch->ChatPacket(CHAT_TYPE_INFO, "Harita bulunamıyor (indeks %d)", pkCCI->lMapIndex);
 				else
 				{
-					//ch->ChatPacket(CHAT_TYPE_INFO, "You warp to (%d, %d)", pos.x, pos.y);
+					//ch->ChatPacket(CHAT_TYPE_INFO, "(%d, %d) konumuna ışınlandınız", pos.x, pos.y);
 					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s yanına naklet."), name.c_str());
 					ch->WarpSet(pos.x, pos.y);
 
@@ -540,7 +540,7 @@ namespace quest
 			}
 			else if (NULL == CHARACTER_MANAGER::instance().FindPC(name.c_str()))
 			{
-				ch->ChatPacket(CHAT_TYPE_INFO, "There is no one by that name");
+				ch->ChatPacket(CHAT_TYPE_INFO, "Bu isimde kimse yok");
 			}
 
 			return 0;
@@ -610,7 +610,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 

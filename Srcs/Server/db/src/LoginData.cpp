@@ -82,7 +82,7 @@ void CLoginData::SetPlay(bool bOn)
 		SetLogonTime();
 	}
 	else
-		sys_log(0, "SetPlay off %lu %s", GetKey(), m_data.login);
+		sys_log(0, "SetPlay kapalı %lu %s", GetKey(), m_data.login);
 
 	m_bPlay = bOn;
 	m_lastPlayTime = CClientManager::instance().GetCurrentTime();

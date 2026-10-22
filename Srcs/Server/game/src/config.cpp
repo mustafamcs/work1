@@ -171,11 +171,11 @@ void map_allow_add(int index)
 {
 	if (map_allow_find(index) == true)
 	{
-		fprintf(stdout, "!!! FATAL ERROR !!! multiple MAP_ALLOW setting!!\n");
+		fprintf(stdout, "!!! ÖLÜMCÜL HATA !!! birden fazla MAP_ALLOW ayarı!!\n");
 		exit(1);
 	}
 
-	fprintf(stdout, "MAP ALLOW %d\n", index);
+	fprintf(stdout, "MAP İZİN %d\n", index);
 	s_set_map_allows.emplace(index);
 }
 
@@ -217,7 +217,7 @@ static void FN_log_adminpage()
 		++iter;
 	}
 
-	sys_log(1, "ADMIN_PAGE_PASSWORD = (set)");
+	sys_log(1, "ADMIN_PAGE_PASSWORD = (ayarli)");
 }
 
 #define ENABLE_AUTODETECT_INTERNAL_IP
@@ -348,7 +348,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 
 	if (!(fpOnlyForDB = fopen(configName, "r")))
 	{
-		fprintf(stderr, "Can not open [%s]\n", configName);
+		fprintf(stderr, "[%s] açılamıyor\n", configName);
 		exit(1);
 	}
 
@@ -383,7 +383,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 
 			if (!*db_host[0] || !*db_user[0] || !*db_pwd[0] || !*db_db[0])
 			{
-				fprintf(stderr, "PLAYER_SQL syntax: logsql <host user password db>\n");
+				fprintf(stderr, "PLAYER_SQL sözdizimi: logsql <host user password db>\n");
 				exit(1);
 			}
 
@@ -407,7 +407,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 
 			if (!*db_host[1] || !*db_user[1] || !*db_pwd[1] || !*db_db[1])
 			{
-				fprintf(stderr, "COMMON_SQL syntax: logsql <host user password db>\n");
+				fprintf(stderr, "COMMON_SQL sözdizimi: logsql <host user password db>\n");
 				exit(1);
 			}
 
@@ -431,7 +431,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 
 			if (!*log_host || !*log_user || !*log_pwd || !*log_db)
 			{
-				fprintf(stderr, "LOG_SQL syntax: logsql <host user password db>\n");
+				fprintf(stderr, "LOG_SQL sözdizimi: logsql <host user password db>\n");
 				exit(1);
 			}
 
@@ -470,11 +470,11 @@ static bool __LoadConnectConfigFile(const char* configName)
 
 	if (false == AccountDB::instance().IsConnected())
 	{
-		fprintf(stderr, "cannot start server while no common sql connected\n");
+		fprintf(stderr, "common sql bağlı değilken sunucu başlatılamıyor\n");
 		exit(1);
 	}
 
-	fprintf(stdout, "CommonSQL connected\n");
+	fprintf(stdout, "CommonSQL bağlandı\n");
 
 	{
 		char szQuery[512];
@@ -483,7 +483,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 		auto pMsg(AccountDB::instance().DirectQuery(szQuery));
 		if (pMsg->Get()->uiNumRows == 0)
 		{
-			fprintf(stderr, "COMMON_SQL: DirectQuery failed : %s\n", szQuery);
+			fprintf(stderr, "COMMON_SQL: DirectQuery başarısız : %s\n", szQuery);
 			exit(1);
 		}
 
@@ -495,7 +495,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 			{
 				if (LocaleService_Init(row[1]) == false)
 				{
-					fprintf(stderr, "COMMON_SQL: invalid locale key %s\n", row[1]);
+					fprintf(stderr, "COMMON_SQL: geçersiz locale anahtarı %s\n", row[1]);
 					exit(1);
 				}
 			}
@@ -516,7 +516,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 		exit(1);
 	}
 
-	fprintf(stdout, "PlayerSQL connected\n");
+	fprintf(stdout, "PlayerSQL bağlandı\n");
 
 	if (false == g_bAuthServer)
 	{
@@ -528,7 +528,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 			exit(1);
 		}
 
-		fprintf(stdout, "LogSQL connected\n");
+		fprintf(stdout, "LogSQL bağlandı\n");
 
 		LogManager::instance().BootLog(g_stHostname.c_str(), g_bChannel);
 	}
@@ -542,7 +542,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 		auto pMsg(AccountDB::instance().DirectQuery(szQuery));
 		if (pMsg->Get()->uiNumRows == 0)
 		{
-			fprintf(stderr, "[SKILL_PERCENT] Query failed: %s", szQuery);
+			fprintf(stderr, "[SKILL_PERCENT] Sorgu başarısız: %s", szQuery);
 			exit(1);
 		}
 
@@ -566,7 +566,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 			{
 				if (cnt != (SKILL_MAX_LEVEL + 1))
 				{
-					fprintf(stderr, "[SKILL_PERCENT] locale table has not enough skill information! (count: %d query: %s)", cnt, szQuery);
+					fprintf(stderr, "[SKILL_PERCENT] locale tablosunda yeterli beceri bilgisi yok! (adet: %d sorgu: %s)", cnt, szQuery);
 					exit(1);
 				}
 
@@ -602,7 +602,7 @@ static bool __LoadConnectConfigFile(const char* configName)
 				{
 					if (cnt != (SKILL_MAX_LEVEL + 1))
 					{
-						fprintf(stderr, "[SKILL_PERCENT] locale table has not enough skill information! (count: %d query: %s)", cnt, szQuery);
+						fprintf(stderr, "[SKILL_PERCENT] locale tablosunda yeterli beceri bilgisi yok! (adet: %d sorgu: %s)", cnt, szQuery);
 						exit(1);
 					}
 
@@ -689,14 +689,14 @@ static bool __LoadDefaultConfigFile(const char* configName)
 
 			if (!*szIP || (!*szPort && strcasecmp(szIP, "master")))
 			{
-				fprintf(stderr, "AUTH_SERVER: syntax error: <ip|master> <port>\n");
+				fprintf(stderr, "AUTH_SERVER: sözdizimi hatası: <ip|master> <port>\n");
 				exit(1);
 			}
 
 			g_bAuthServer = true;
 
 			if (!strcasecmp(szIP, "master"))
-				fprintf(stdout, "AUTH_SERVER: I am the master\n");
+				fprintf(stdout, "AUTH_SERVER: Ben ana sunucuyum\n");
 			else
 		{
 				g_stAuthMasterIP = szIP;
@@ -1197,7 +1197,7 @@ static bool __LoadGeneralConfigFile(const char* configName)
 
 		TOKEN("quest_dir")
 		{
-			sys_log(0, "QUEST_DIR SETTING : %s", value_string);
+			sys_log(0, "QUEST_DIR AYARI : %s", value_string);
 			g_stQuestDir = value_string;
 		}
 
@@ -1205,7 +1205,7 @@ static bool __LoadGeneralConfigFile(const char* configName)
 		{
 			//g_stQuestObjectDir = value_string;
 			std::istringstream is(value_string);
-			sys_log(0, "QUEST_OBJECT_DIR SETTING : %s", value_string);
+			sys_log(0, "QUEST_OBJECT_DIR AYARI : %s", value_string);
 			string dir;
 			while (!is.eof())
 			{
@@ -1213,7 +1213,7 @@ static bool __LoadGeneralConfigFile(const char* configName)
 				if (is.fail())
 					break;
 				g_setQuestObjectDir.emplace(dir);
-				sys_log(0, "QUEST_OBJECT_DIR INSERT : %s", dir .c_str());
+				sys_log(0, "QUEST_OBJECT_DIR EKLE : %s", dir .c_str());
 			}
 		}
 
@@ -1351,9 +1351,9 @@ static bool __LoadDefaultCMDFile(const char* cmdName)
 			if (!*cmd || !*levelname)
 			{
 #ifdef ENABLE_CMD_PLAYER
-				fprintf(stderr, "CMD syntax error: <cmd> <PLAYER | LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
+				fprintf(stderr, "CMD sözdizimi hatası: <cmd> <PLAYER | LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
 #else
-				fprintf(stderr, "CMD syntax error: <cmd> <LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
+				fprintf(stderr, "CMD sözdizimi hatası: <cmd> <LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
 #endif
 				exit(1);
 			}
@@ -1377,9 +1377,9 @@ static bool __LoadDefaultCMDFile(const char* cmdName)
 			else
 			{
 #ifdef ENABLE_CMD_PLAYER
-				fprintf(stderr, "CMD syntax error: <cmd> <PLAYER | LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
+				fprintf(stderr, "CMD sözdizimi hatası: <cmd> <PLAYER | LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
 #else
-				fprintf(stderr, "CMD syntax error: <cmd> <LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
+				fprintf(stderr, "CMD sözdizimi hatası: <cmd> <LOW_WIZARD | WIZARD | HIGH_WIZARD | GOD | IMPLEMENTOR | DISABLE>\n");
 #endif
 				exit(1);
 			}
@@ -1443,7 +1443,7 @@ void config_init(const string& st_localeServiceName)
 
 	if (!GetIPInfo())
 	{
-	//	fprintf(stderr, "Can not get public ip address\n");
+	//	fprintf(stderr, "Genel IP adresi alınamıyor\n");
 	//	exit(1);
 	}
 
@@ -1453,7 +1453,7 @@ void config_init(const string& st_localeServiceName)
 		!__LoadGeneralConfigFile(st_configFileName.c_str())
 	)
 	{
-		fprintf(stderr, "Can not open [%s]\n", st_configFileName.c_str());
+		fprintf(stderr, "[%s] açılamıyor\n", st_configFileName.c_str());
 		exit(1);
 	}
 #ifdef ENABLE_GENERAL_CONFIG
@@ -1462,21 +1462,21 @@ void config_init(const string& st_localeServiceName)
 		char szFileName[256];
 		snprintf(szFileName, sizeof(szFileName), "%s/conf/GENERAL_%s", LocaleService_GetBasePath().c_str(), st_configFileName.c_str());
 		if (__LoadGeneralConfigFile(szFileName))
-			fprintf(stderr, "GENERAL CONFIG LOAD OK [%s]\n", szFileName);
+			fprintf(stderr, "GENEL YAPILANDIRMA YÜKLEME TAMAM [%s]\n", szFileName);
 	}
 	// general config - locale n channel based
 	{
 		char szFileName[256];
 		snprintf(szFileName, sizeof(szFileName), "%s/conf/GENERAL_%s_CHANNEL_%d", LocaleService_GetBasePath().c_str(), st_configFileName.c_str(), g_bChannel);
 		if (__LoadGeneralConfigFile(szFileName))
-			fprintf(stderr, "GENERAL CONFIG LOAD OK [%s]\n", szFileName);
+			fprintf(stderr, "GENEL YAPILANDIRMA YÜKLEME TAMAM [%s]\n", szFileName);
 	}
 	// general config - locale n channel n hostname based
 	{
 		char szFileName[256];
 		snprintf(szFileName, sizeof(szFileName), "%s/conf/GENERAL_%s_CHANNEL_%d_HOSTNAME_%s", LocaleService_GetBasePath().c_str(), st_configFileName.c_str(), g_bChannel, g_stHostname.c_str());
 		if (__LoadGeneralConfigFile(szFileName))
-			fprintf(stderr, "GENERAL CONFIG LOAD OK [%s]\n", szFileName);
+			fprintf(stderr, "GENEL YAPILANDIRMA YÜKLEME TAMAM [%s]\n", szFileName);
 	}
 #endif
 
@@ -1485,19 +1485,19 @@ void config_init(const string& st_localeServiceName)
 
 	if (0 == db_port)
 	{
-		fprintf(stderr, "DB_PORT not configured\n");
+		fprintf(stderr, "DB_PORT yapılandırılmamış\n");
 		exit(1);
 	}
 
 	if (0 == g_bChannel)
 	{
-		fprintf(stderr, "CHANNEL not configured\n");
+		fprintf(stderr, "CHANNEL yapılandırılmamış\n");
 		exit(1);
 	}
 
 	if (g_stHostname.empty())
 	{
-		fprintf(stderr, "HOSTNAME must be configured.\n");
+		fprintf(stderr, "HOSTNAME yapılandırılmalı.\n");
 		exit(1);
 	}
 
@@ -1511,7 +1511,7 @@ void config_init(const string& st_localeServiceName)
 	if (!__LoadExpTableFromDB())
 	{
 		// do as you please to manage this
-		fprintf(stderr, "Failed to Load ExpTable from DB so exit\n");
+		fprintf(stderr, "ExpTable DB'den yüklenemedi, çıkılıyor\n");
 		// exit(1);
 	}
 #endif
@@ -1524,21 +1524,21 @@ void config_init(const string& st_localeServiceName)
 		char szFileName[256];
 		snprintf(szFileName, sizeof(szFileName), "%s/conf/GENERAL_%s", LocaleService_GetBasePath().c_str(), st_cmdFileName.c_str());
 		if (__LoadDefaultCMDFile(szFileName))
-			fprintf(stdout, "GENERAL CMD LOAD OK [%s]\n", szFileName);
+			fprintf(stdout, "GENEL KOMUT YÜKLEME TAMAM [%s]\n", szFileName);
 	}
 	// general cmd - locale n channel based
 	{
 		char szFileName[256];
 		snprintf(szFileName, sizeof(szFileName), "%s/conf/GENERAL_%s_CHANNEL_%d", LocaleService_GetBasePath().c_str(), st_cmdFileName.c_str(), g_bChannel);
 		if (__LoadDefaultCMDFile(szFileName))
-			fprintf(stdout, "GENERAL CMD LOAD OK [%s]\n", szFileName);
+			fprintf(stdout, "GENEL KOMUT YÜKLEME TAMAM [%s]\n", szFileName);
 	}
 	// general cmd - locale n channel n hostname based
 	{
 		char szFileName[256];
 		snprintf(szFileName, sizeof(szFileName), "%s/conf/GENERAL_%s_CHANNEL_%d_HOSTNAME_%s", LocaleService_GetBasePath().c_str(), st_cmdFileName.c_str(), g_bChannel, g_stHostname.c_str());
 		if (__LoadDefaultCMDFile(szFileName))
-			fprintf(stdout, "GENERAL CMD LOAD OK [%s]\n", szFileName);
+			fprintf(stdout, "GENEL KOMUT YÜKLEME TAMAM [%s]\n", szFileName);
 	}
 #endif
 
@@ -1555,7 +1555,7 @@ void config_init(const string& st_localeServiceName)
 	FN_log_adminpage();
 	if (g_szPublicIP[0] == '0')
 	{
-		fprintf(stderr, "Can not get public ip address\n");
+		fprintf(stderr, "Genel IP adresi alınamıyor\n");
 		exit(1);
 	}
 }

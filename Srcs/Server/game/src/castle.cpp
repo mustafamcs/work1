@@ -446,7 +446,7 @@ bool castle_boot()
 			else
 			{
 				fclose(fp);
-				sys_err("wrong empire number is null");
+				sys_err("yanlış imparatorluk numarası null");
 				return false;
 			}
 		}

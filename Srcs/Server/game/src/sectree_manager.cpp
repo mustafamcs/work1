@@ -168,7 +168,7 @@ int SECTREE_MANAGER::LoadSettingFile(long lMapIndex, const char * c_pszSettingFi
 
 	if (!fp)
 	{
-		sys_err("cannot open file: %s", c_pszSettingFileName);
+		sys_err("dosya açılamıyor: %s", c_pszSettingFileName);
 		return 0;
 	}
 
@@ -197,7 +197,7 @@ int SECTREE_MANAGER::LoadSettingFile(long lMapIndex, const char * c_pszSettingFi
 
 	if ((iWidth == 0 && iHeight == 0) || r_setting.iCellScale == 0)
 	{
-		sys_err("Invalid Settings file: %s", c_pszSettingFileName);
+		sys_err("Geçersiz Ayar dosyası: %s", c_pszSettingFileName);
 		return 0;
 	}
 
@@ -224,7 +224,7 @@ LPSECTREE_MAP SECTREE_MANAGER::BuildSectreeFromSetting(TMapSetting & r_setting)
 			tree->m_id.coord.x = x / SECTREE_SIZE;
 			tree->m_id.coord.y = y / SECTREE_SIZE;
 			pkMapSectree->Add(tree->m_id.package, tree);
-			sys_log(3, "new sectree %d x %d", tree->m_id.coord.x, tree->m_id.coord.y);
+			sys_log(3, "yeni sectree %d x %d", tree->m_id.coord.x, tree->m_id.coord.y);
 		}
 	}
 
@@ -289,7 +289,7 @@ void SECTREE_MANAGER::LoadDungeon(int iIndex, const char * c_pszFileName)
 
 	fclose(fp);
 
-	sys_log(0, "Dungeon Position Load [%3d]%s count %d", iIndex, c_pszFileName, count);
+	sys_log(0, "Zindan Konumu Yükleme [%3d]%s sayı %d", iIndex, c_pszFileName, count);
 }
 
 bool SECTREE_MANAGER::LoadMapRegion(const char * c_pszFileName, TMapSetting & r_setting, const char * c_pszMapName)
@@ -321,7 +321,7 @@ bool SECTREE_MANAGER::LoadMapRegion(const char * c_pszFileName, TMapSetting & r_
 	}
 	else
 	{
-		sys_log( 0, "LoadMapRegion no empire specific start point" );
+		sys_log( 0, "LoadMapRegion imparatorluğa özel başlangıç noktası yok" );
 	}
 
 	TMapRegion region;
@@ -375,7 +375,7 @@ bool SECTREE_MANAGER::LoadAttribute(LPSECTREE_MAP pkMapSectree, const char * c_p
 
 	if (!fp)
 	{
-		sys_err("SECTREE_MANAGER::LoadAttribute : cannot open %s", c_pszFileName);
+		sys_err("SECTREE_MANAGER::LoadAttribute : %s açılamıyor", c_pszFileName);
 		return false;
 	}
 
@@ -408,7 +408,7 @@ bool SECTREE_MANAGER::LoadAttribute(LPSECTREE_MAP pkMapSectree, const char * c_p
 			// SERVER_ATTR_LOAD_ERROR
 			if (tree == NULL)
 			{
-				sys_err("FATAL ERROR! LoadAttribute(%s) - cannot find sectree(package=%x, coord=(%u, %u), map_index=%u, map_base=(%u, %u))",
+				sys_err("ÖLÜMCÜL HATA! LoadAttribute(%s) - sectree bulunamıyor(package=%x, coord=(%u, %u), map_index=%u, map_base=(%u, %u))",
 						c_pszFileName, id.package, id.coord.x, id.coord.y, r_setting.iIndex, r_setting.iBaseX, r_setting.iBaseY);
 				sys_err("ERROR_ATTR_POS(%d, %d) attr_size(%d, %d)", x, y, iWidth, iHeight);
 				sys_err("CHECK! 'Setting.txt' and 'server_attr' MAP_SIZE!!");
@@ -426,7 +426,7 @@ bool SECTREE_MANAGER::LoadAttribute(LPSECTREE_MAP pkMapSectree, const char * c_p
 
 			if (tree->m_id.package != id.package)
 			{
-				sys_err("returned tree id mismatch! return %u, request %u",
+				sys_err("dönen ağaç id uyumsuzluğu! dönen %u, istenen %u",
 						tree->m_id.package, id.package);
 				fclose(fp);
 
@@ -446,7 +446,7 @@ bool SECTREE_MANAGER::LoadAttribute(LPSECTREE_MAP pkMapSectree, const char * c_p
 
 			if (uiDestSize != sizeof(DWORD) * (SECTREE_SIZE / CELL_SIZE) * (SECTREE_SIZE / CELL_SIZE))
 			{
-				sys_err("SECTREE_MANAGER::LoadAttribte : %s : %d %d size mismatch! %d",
+				sys_err("SECTREE_MANAGER::LoadAttribte : %s : %d %d boyut uyumsuzluğu! %d",
 						c_pszFileName, tree->m_id.coord.x, tree->m_id.coord.y, uiDestSize);
 				fclose(fp);
 
@@ -673,7 +673,7 @@ int SECTREE_MANAGER::Build(const char * c_pszListFileName, const char* c_pszMapB
 		if (tokens.size() < 2) // mapId mapName
 		{
 			if (!line.empty() && line.size() > 2)
-				sys_err("%s: can't load the line '%s'", c_pszListFileName, line.c_str());
+				sys_err("%s: '%s' satırı yüklenemiyor", c_pszListFileName, line.c_str());
 			continue;
 		}
 
@@ -682,7 +682,7 @@ int SECTREE_MANAGER::Build(const char * c_pszListFileName, const char* c_pszMapB
 
 		if (loadedMaps.find(iIndex) != loadedMaps.end()) // @fixme308
 		{
-			sys_err("%s: map %d already loaded", c_pszListFileName, iIndex);
+			sys_err("%s: harita %d zaten yüklü", c_pszListFileName, iIndex);
 			continue;
 		}
 		loadedMaps.emplace(iIndex);
@@ -694,7 +694,7 @@ int SECTREE_MANAGER::Build(const char * c_pszListFileName, const char* c_pszMapB
 
 		if (!LoadSettingFile(iIndex, filename.c_str(), setting))
 		{
-			sys_err("can't load file %s in LoadSettingFile", filename.c_str());
+			sys_err("LoadSettingFile içinde %s dosyası yüklenemiyor", filename.c_str());
 			return 0;
 		}
 
@@ -702,7 +702,7 @@ int SECTREE_MANAGER::Build(const char * c_pszListFileName, const char* c_pszMapB
 
 		if (!LoadMapRegion(filename.c_str(), setting, szMapName))
 		{
-			sys_err("can't load file %s in LoadMapRegion", filename.c_str());
+			sys_err("LoadMapRegion içinde %s dosyası yüklenemiyor", filename.c_str());
 			return 0;
 		}
 
@@ -799,7 +799,7 @@ bool SECTREE_MANAGER::GetValidLocation(long lMapIndex, long x, long y, long & r_
 		}
 		else
 		{
-			sys_err("cannot find sectree_map by map index %d", lMapIndex);
+			sys_err("%d harita indeksli sectree_map bulunamıyor", lMapIndex);
 			return false;
 		}
 	}
@@ -821,7 +821,7 @@ bool SECTREE_MANAGER::GetValidLocation(long lMapIndex, long x, long y, long & r_
 
 			if (!tree)
 			{
-				sys_err("cannot find tree by %d %d (map index %d)", x, y, lMapIndex);
+				sys_err("%d %d ile ağaç bulunamıyor (harita indeksi %d)", x, y, lMapIndex);
 				return false;
 			}
 
@@ -832,7 +832,7 @@ bool SECTREE_MANAGER::GetValidLocation(long lMapIndex, long x, long y, long & r_
 		}
 	}
 
-	sys_err("invalid location (map index %d %d x %d)", lRealMapIndex, x, y);
+	sys_err("geçersiz konum (harita indeksi %d %d x %d)", lRealMapIndex, x, y);
 	return false;
 }
 
@@ -912,7 +912,7 @@ long SECTREE_MANAGER::CreatePrivateMap(long lMapIndex)
 
 	if (!pkMapSectree)
 	{
-		sys_err("Cannot find map index %d", lMapIndex);
+		sys_err("%d harita indeksi bulunamıyor", lMapIndex);
 		return 0;
 	}
 
@@ -957,7 +957,7 @@ struct FDestroyPrivateMapEntity
 		if (ent->IsType(ENTITY_CHARACTER))
 		{
 			LPCHARACTER ch = (LPCHARACTER) ent;
-			sys_log(0, "PRIVAE_MAP: removing character %s", ch->GetName());
+			sys_log(0, "PRIVAE_MAP: karakter kaldırılıyor %s", ch->GetName());
 
 			if (ch->GetDesc())
 				DESC_MANAGER::instance().DestroyDesc(ch->GetDesc());
@@ -967,12 +967,12 @@ struct FDestroyPrivateMapEntity
 		else if (ent->IsType(ENTITY_ITEM))
 		{
 			LPITEM item = (LPITEM) ent;
-			sys_log(0, "PRIVATE_MAP: removing item %s", item->GetName());
+			sys_log(0, "PRIVATE_MAP: eşya kaldırılıyor %s", item->GetName());
 
 			M2_DESTROY_ITEM(item);
 		}
 		else
-			sys_err("PRIVAE_MAP: trying to remove unknown entity %d", ent->GetType());
+			sys_err("PRIVAE_MAP: bilinmeyen varlık kaldırılmaya çalışılıyor %d", ent->GetType());
 	}
 };
 
@@ -1154,7 +1154,7 @@ bool SECTREE_MANAGER::ForAttrRegionCell( long lMapIndex, long lCX, long lCY, DWO
 			break;
 
 		default:
-			sys_err("Unknown region mode %u", mode);
+			sys_err("Bilinmeyen bölge modu %u", mode);
 			break;
 	}
 
@@ -1209,7 +1209,7 @@ bool SECTREE_MANAGER::ForAttrRegionFreeAngle( long lMapIndex, long lCX, long lCY
 
 	if (0 == fdx1 || 0 == fdx2)
 	{
-		sys_err( "SECTREE_MANAGER::ForAttrRegion - Unhandled exception. MapIndex: %d", lMapIndex );
+		sys_err( "SECTREE_MANAGER::ForAttrRegion - İşlenmemiş istisna. MapIndex: %d", lMapIndex );
 		return false;
 	}
 
@@ -1256,7 +1256,7 @@ bool SECTREE_MANAGER::ForAttrRegion(long lMapIndex, long lStartX, long lStartY, 
 
 	if (!pkMapSectree)
 	{
-		sys_err("Cannot find SECTREE_MAP by map index %d", lMapIndex);
+		sys_err("%d harita indeksiyle SECTREE_MAP bulunamıyor", lMapIndex);
 		return mode == ATTR_REGION_MODE_CHECK ? true : false;
 	}
 
@@ -1290,7 +1290,7 @@ bool SECTREE_MANAGER::SaveAttributeToImage(int lMapIndex, const char * c_pszFile
 			pMap = pMapSrc;
 		else
 		{
-			sys_err("cannot find sectree_map %d", lMapIndex);
+			sys_err("sectree_map %d bulunamıyor", lMapIndex);
 			return false;
 		}
 	}
@@ -1300,7 +1300,7 @@ bool SECTREE_MANAGER::SaveAttributeToImage(int lMapIndex, const char * c_pszFile
 
 	if (iMapHeight < 0 || iMapWidth < 0)
 	{
-		sys_err("map size error w %d h %d", iMapWidth, iMapHeight);
+		sys_err("harita boyut hatası g %d y %d", iMapWidth, iMapHeight);
 		return false;
 	}
 
@@ -1337,7 +1337,7 @@ bool SECTREE_MANAGER::SaveAttributeToImage(int lMapIndex, const char * c_pszFile
 
 				if (!pSec)
 				{
-					sys_err("cannot get sectree for %d %d %d %d", id.coord.x, id.coord.y, pMap->m_setting.iBaseX, pMap->m_setting.iBaseY);
+					sys_err("%d %d %d %d için sectree alınamıyor", id.coord.x, id.coord.y, pMap->m_setting.iBaseX, pMap->m_setting.iBaseY);
 					continue;
 				}
 
@@ -1345,7 +1345,7 @@ bool SECTREE_MANAGER::SaveAttributeToImage(int lMapIndex, const char * c_pszFile
 
 				if (!pdwLine)
 				{
-					sys_err("cannot get attribute line pointer");
+					sys_err("özellik satır pointer'ı alınamıyor");
 					M2_DELETE_ARRAY(pdwLine);
 					continue;
 				}
@@ -1375,12 +1375,12 @@ bool SECTREE_MANAGER::SaveAttributeToImage(int lMapIndex, const char * c_pszFile
 
 	if (image.Save(c_pszFileName))
 	{
-		sys_log(0, "SECTREE: map %d attribute saved to %s (%d bytes)", lMapIndex, c_pszFileName, pixels);
+		sys_log(0, "SECTREE: harita %d özelliği %s kaydedildi (%d bayt)", lMapIndex, c_pszFileName, pixels);
 		return true;
 	}
 	else
 	{
-		sys_err("cannot save file, map_index %d filename %s", lMapIndex, c_pszFileName);
+		sys_err("dosya kaydedilemiyor, map_index %d dosyaadı %s", lMapIndex, c_pszFileName);
 		return false;
 	}
 }

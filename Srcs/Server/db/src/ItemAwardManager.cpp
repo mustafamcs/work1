@@ -126,7 +126,7 @@ void ItemAwardManager::Load(SQLMsg * pMsg)
 
 		m_map_award.emplace(dwID, kData);
 
-		printf("ITEM_AWARD load id %u bMall %d \n", kData->dwID, kData->bMall);
+		printf("ITEM_AWARD yükle id %u bMall %d \n", kData->dwID, kData->bMall);
 		sys_log(0, "ITEM_AWARD: load id %lu login %s vnum %lu count %u socket %lu", kData->dwID, kData->szLogin, kData->dwVnum, kData->dwCount, kData->dwSocket0);
 		std::set<TItemAward *> & kSet = m_map_kSetAwardByLogin[kData->szLogin];
 		kSet.emplace(kData);
@@ -152,7 +152,7 @@ void ItemAwardManager::Taken(DWORD dwAwardID, DWORD dwItemID)
 
 	if (it == m_map_award.end())
 	{
-		sys_log(0, "ITEM_AWARD: Taken ID not exist %lu", dwAwardID);
+		sys_log(0, "ITEM_AWARD: Alınan ID yok %lu", dwAwardID);
 		return;
 	}
 
@@ -503,7 +503,7 @@ void ItemAwardManager::CheckItemBlend(TItemAward & rkItemAward, const TItemTable
 	const auto dwApplyDuration = rkItemAward.dwSocket2;
 
 	if (bApplyType == 0 || bApplyValue == 0 || dwApplyDuration == 0)
-		sys_err("ItemAwardManager: Unknown sockets for ITEM_BLEND.");
+		sys_err("ItemAwardManager: ITEM_BLEND için bilinmeyen soketler.");
 }
 #endif
 

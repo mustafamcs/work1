@@ -195,7 +195,7 @@ int get_Item_SubType_Value(int type_value, std::string inputString)
 	auto itType = mapItemSubType.find(type_value);
 	if (itType == mapItemSubType.end())
 	{
-		//sys_err("Type Out of range! (type_value: %d)", type_value);
+		//sys_err("Tip aralık dışı! (type_value: %d)", type_value);
 		return -1;
 	}
 
@@ -203,7 +203,7 @@ int get_Item_SubType_Value(int type_value, std::string inputString)
 	auto itSubtype = std::find(vecSubtype.begin(), vecSubtype.end(), inputString);
 	if (itSubtype == vecSubtype.end())
 	{
-		//sys_err("Subtype Out of range! (type_value: %d)", type_value);
+		//sys_err("Alttip aralık dışı! (type_value: %d)", type_value);
 		return -1;
 	}
 

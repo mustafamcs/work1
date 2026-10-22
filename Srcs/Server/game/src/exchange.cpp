@@ -178,13 +178,13 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 
 	if (item->IsExchanging())
 	{
-		sys_log(0, "EXCHANGE under exchanging");
+		sys_log(0, "TAKAS devam ediyor");
 		return false;
 	}
 
 	if (!m_pGrid->IsEmpty(display_pos, 1, item->GetSize()))
 	{
-		sys_log(0, "EXCHANGE not empty item_pos %d %d %d", display_pos, 1, item->GetSize());
+		sys_log(0, "TAKAS boş değil item_pos %d %d %d", display_pos, 1, item->GetSize());
 		return false;
 	}
 
@@ -219,7 +219,7 @@ bool CExchange::AddItem(TItemPos item_pos, BYTE display_pos)
 				item->GetCount(),
 				item);
 
-		sys_log(0, "EXCHANGE AddItem success %s pos(%d, %d) %d", item->GetName(), item_pos.window_type, item_pos.cell, display_pos);
+		sys_log(0, "TAKAS AddItem başarılı %s konum(%d, %d) %d", item->GetName(), item_pos.window_type, item_pos.cell, display_pos);
 
 		return true;
 	}
@@ -481,7 +481,7 @@ bool CExchange::Done()
 
 		if (empty_pos < 0)
 		{
-			sys_err("Exchange::Done : Cannot find blank position in inventory %s <-> %s item %s",
+			sys_err("Exchange::Done : Envanterde boş konum bulunamıyor %s <-> %s eşya %s",
 					m_pOwner->GetName(), victim->GetName(), item->GetName());
 			continue;
 		}
@@ -604,9 +604,9 @@ bool CExchange::Accept(bool bAccept)
 
 		if (db_clientdesc->GetSocket() == INVALID_SOCKET)
 		{
-			sys_err("Cannot use exchange feature while DB cache connection is dead.");
-			victim->ChatPacket(CHAT_TYPE_INFO, "Unknown error");
-			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "Unknown error");
+			sys_err("DB cache bağlantısı ölüyken takas özelliği kullanılamaz.");
+			victim->ChatPacket(CHAT_TYPE_INFO, "Bilinmeyen hata");
+			GetOwner()->ChatPacket(CHAT_TYPE_INFO, "Bilinmeyen hata");
 			goto EXCHANGE_END;
 		}
 

@@ -48,7 +48,7 @@ void CBuffOnAttributes::RemoveBuffFromItem(LPITEM pItem)
 			}
 			else
 			{
-				sys_err ("Buff ERROR(type %d). This item(%d) attr_type(%d) was not in buff pool", m_bPointType, pItem->GetVnum(), attr.bType);
+				sys_err ("Buff HATASI(tip %d). Bu eşya(%d) attr_type(%d) buff havuzunda yok", m_bPointType, pItem->GetVnum(), attr.bType);
 				return;
 			}
 		}

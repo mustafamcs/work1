@@ -259,7 +259,7 @@ bool CHARACTER::Attack(LPCHARACTER pkVictim, BYTE bType)
 				break;
 
 			default:
-				sys_err("Unhandled battle type %d", GetMobBattleType());
+				sys_err("İşlenmemiş savaş tipi %d", GetMobBattleType());
 				iRet = BATTLE_NONE;
 				break;
 		}
@@ -270,13 +270,13 @@ bool CHARACTER::Attack(LPCHARACTER pkVictim, BYTE bType)
 		{
 			if (dwCurrentTime - m_dwLastSkillTime > 1500)
 			{
-				sys_log(1, "HACK: Too long skill using term. Name(%s) PID(%u) delta(%u)",
+				sys_log(1, "HİLE: Çok uzun beceri kullanım süresi. İsim(%s) PID(%u) delta(%u)",
 						GetName(), GetPlayerID(), (dwCurrentTime - m_dwLastSkillTime));
 				return false;
 			}
 		}
 
-		sys_log(1, "Attack call ComputeSkill %d %s", bType, pkVictim?pkVictim->GetName():"");
+		sys_log(1, "Saldırı ComputeSkill çağrısı %d %s", bType, pkVictim?pkVictim->GetName():"");
 		iRet = ComputeSkill(bType, pkVictim);
 	}
 
@@ -453,7 +453,7 @@ EVENTFUNC(dead_event)
 
 	if (NULL == ch)
 	{
-		sys_err("DEAD_EVENT: cannot find char pointer with %s id(%d)", info->isPC ? "PC" : "MOB", info->dwID );
+		sys_err("DEAD_EVENT: %s id(%d) ile karakter pointer'ı bulunamıyor", info->isPC ? "PC" : "MOB", info->dwID );
 		return 0;
 	}
 
@@ -471,7 +471,7 @@ EVENTFUNC(dead_event)
 			ch->WarpSet(pos.x, pos.y);
 		else
 		{
-			sys_err("cannot find spawn position (name %s)", ch->GetName());
+			sys_err("doğma konumu bulunamıyor (isim %s)", ch->GetName());
 			ch->WarpSet(EMPIRE_START_X(ch->GetEmpire()), EMPIRE_START_Y(ch->GetEmpire()));
 		}
 
@@ -597,8 +597,8 @@ void CHARACTER::RewardGold(LPCHARACTER pkAttacker)
 
 			if (test_server)
 			{
-				sys_log(0, "Drop Moeny MobGoldAmountRate %d %d", CHARACTER_MANAGER::instance().GetMobGoldAmountRate(pkAttacker), iGoldMultipler);
-				sys_log(0, "Drop Money gold %d GoldMin %d GoldMax %d", iGold, GetMobTable().dwGoldMax, GetMobTable().dwGoldMax);
+				sys_log(0, "Para Düşürme MobGoldAmountRate %d %d", CHARACTER_MANAGER::instance().GetMobGoldAmountRate(pkAttacker), iGoldMultipler);
+				sys_log(0, "Para Düşürme gold %d GoldMin %d GoldMax %d", iGold, GetMobTable().dwGoldMax, GetMobTable().dwGoldMax);
 			}
 
 			if ((item = ITEM_MANAGER::instance().CreateItem(1, iGold)))
@@ -697,7 +697,7 @@ void CHARACTER::Reward(bool bItemDrop)
 		iGold *= GetGoldMultipler();
 		int iSplitCount = number(25, 35);
 
-		sys_log(0, "WAEGU Dead gold %d split %d", iGold, iSplitCount);
+		sys_log(0, "WAEGU Ölü gold %d bölüşüm %d", iGold, iSplitCount);
 
 		for (int i = 1; i <= iSplitCount; ++i)
 		{
@@ -775,7 +775,7 @@ void CHARACTER::Reward(bool bItemDrop)
 	// @fixme194 END
 
 	if (test_server)
-		sys_log(0, "Drop money : Attacker %s", pkAttacker->GetName());
+		sys_log(0, "Para düşürme : Saldıran %s", pkAttacker->GetName());
 	RewardGold(pkAttacker);
 
 	LPITEM item;
@@ -851,7 +851,7 @@ void CHARACTER::Reward(bool bItemDrop)
 
 					if (!item)
 					{
-						sys_err("item null in vector idx %d", iItemIdx + 1);
+						sys_err("vektör idx %d içinde eşya null", iItemIdx + 1);
 						continue;
 					}
 
@@ -878,7 +878,7 @@ void CHARACTER::Reward(bool bItemDrop)
 
 					if (!item)
 					{
-						sys_err("item null in vector idx %d", iItemIdx + 1);
+						sys_err("vektör idx %d içinde eşya null", iItemIdx + 1);
 						continue;
 					}
 
@@ -1271,7 +1271,7 @@ void CHARACTER::Dead(LPCHARACTER pkKiller, bool bImmediateDead)
 		{
 			if (!isForked)
 			{
-				sys_log(1, "DEAD: %s %p WITH PENALTY", GetName(), this);
+				sys_log(1, "ÖLDÜ: %s %p CEZALI", GetName(), this);
 				SET_BIT(m_pointsInstant.instant_flag, INSTANT_FLAG_DEATH_PENALTY);
 				LogManager::instance().CharLog(this, pkKiller->GetRaceNum(), "DEAD_BY_NPC", pkKiller->GetName());
 			}
@@ -1324,7 +1324,7 @@ void CHARACTER::Dead(LPCHARACTER pkKiller, bool bImmediateDead)
 								pkKiller->UpdateAlignment(-20000);
 							else
 							{
-								sys_log(0, "ALIGNMENT PARTY count %d amount %d", f.m_iCount, f.m_iAmount);
+								sys_log(0, "DÜZEY PARTİ sayısı %d miktar %d", f.m_iCount, f.m_iAmount);
 
 								f.m_iStep = 1;
 								pkKiller->GetParty()->ForEachOnlineMember(f);
@@ -1353,7 +1353,7 @@ void CHARACTER::Dead(LPCHARACTER pkKiller, bool bImmediateDead)
 
 	ClearSync();
 
-	//sys_log(1, "stun cancel %s[%d]", GetName(), (DWORD)GetVID());
+	//sys_log(1, "sersemletme iptal %s[%d]", GetName(), (DWORD)GetVID());
 	event_cancel(&m_pkStunEvent);
 
 	if (IsPC())
@@ -1488,7 +1488,7 @@ void CHARACTER::Dead(LPCHARACTER pkKiller, bool bImmediateDead)
 		if (pkKiller && pkKiller->GetGuild())
 			CDragonLairManager::instance().OnDragonDead(this, pkKiller->GetGuild()->GetID());
 		else
-			sys_err("DragonLair: Dragon killed by nobody");
+			sys_err("DragonLair: Ejderha hiç kimse tarafından öldürülmedi");
 	}
 }
 
@@ -1587,7 +1587,7 @@ bool CHARACTER::Damage(LPCHARACTER pAttacker, int dam, EDamageType type) // retu
 			if (test_server)
 			{
 				auto & mgr = quest::CQuestManager::instance();
-				sys_err("QUEST There's suspended quest state for %s, can't run new quest state (quest: %s pc: %s)",
+				sys_err("GÖREV %s için askıda görev durumu var, yeni görev durumu çalıştırılamaz (görev: %s pc: %s)",
 						pAttacker->GetName(),
 						pPC->GetCurrentQuestName().c_str(),
 						mgr.GetCurrentCharacterPtr() ? mgr.GetCurrentCharacterPtr()->GetName() : "<none>");
@@ -1637,7 +1637,7 @@ bool CHARACTER::Damage(LPCHARACTER pAttacker, int dam, EDamageType type) // retu
 			DWORD dwGold = 1000;
 			int iSplitCount = number(10, 13);
 
-			sys_log(0, "WAEGU DropGoldOnHit %d times", GetMaxSP());
+			sys_log(0, "WAEGU DropGoldOnHit %d kez", GetMaxSP());
 
 			for (int i = 1; i <= iSplitCount; ++i)
 			{
@@ -2386,7 +2386,7 @@ static void GiveExp(LPCHARACTER from, LPCHARACTER to, int iExp)
 
 	if (test_server)
 	{
-		sys_log(0, "Bonus Exp : Ramadan Candy: %d MallExp: %d PointExp: %d",
+		sys_log(0, "Bonus Exp : Ramazan Şekeri: %d MallExp: %d PointExp: %d",
 				to->GetPoint(POINT_RAMADAN_CANDY_BONUS_EXP),
 				to->GetPoint(POINT_MALL_EXPBONUS),
 				to->GetPoint(POINT_EXP)
@@ -2400,7 +2400,7 @@ static void GiveExp(LPCHARACTER from, LPCHARACTER to, int iExp)
 	if (test_server)
 	{
 		if (quest::CQuestManager::instance().GetEventFlag("exp_bonus_log") && iBaseExp>0)
-			to->ChatPacket(CHAT_TYPE_INFO, "exp bonus %d%%", (iExp-iBaseExp)*100/iBaseExp);
+			to->ChatPacket(CHAT_TYPE_INFO, "exp bonusu %d%%", (iExp-iBaseExp)*100/iBaseExp);
 		to->ChatPacket(CHAT_TYPE_INFO, "exp(%d) base_exp(%d)", iExp, iBaseExp);
 	}
 
@@ -2487,7 +2487,7 @@ namespace NPartyExpDistribute
 						break;
 
 					default:
-						sys_err("Unknown party exp distribution mode %d", m_iMode);
+						sys_err("Bilinmeyen parti exp dağıtım modu %d", m_iMode);
 						return;
 				}
 
@@ -2667,15 +2667,15 @@ LPCHARACTER CHARACTER::DistributeExp()
 
 	if (m_pkChrStone)
 	{
-		//sys_log(0, "__ Give half to Stone : %d", iExpToDistribute>>1);
+		//sys_log(0, "__ Taşa yarısını ver : %d", iExpToDistribute>>1);
 		int iExp = iExpToDistribute >> 1;
 		m_pkChrStone->SetExp(m_pkChrStone->GetExp() + iExp);
 		iExpToDistribute -= iExp;
 	}
 
-	sys_log(1, "%s total exp: %d, damage_info_table.size() == %d, TotalDam %d",
+	sys_log(1, "%s toplam exp: %d, damage_info_table.size() == %d, ToplamHasar %d",
 			GetName(), iExpToDistribute, damage_info_table.size(), iTotalDam);
-	//sys_log(1, "%s total exp: %d, pq_damage.size() == %d, TotalDam %d",
+	//sys_log(1, "%s toplam exp: %d, pq_damage.size() == %d, ToplamHasar %d",
 	//GetName(), iExpToDistribute, pq_damage.size(), iTotalDam);
 
 	if (damage_info_table.empty())
@@ -2702,13 +2702,13 @@ LPCHARACTER CHARACTER::DistributeExp()
 
 		if (fPercent > 1.0f)
 		{
-			sys_err("DistributeExp percent over 1.0 (fPercent %f name %s)", fPercent, di->pAttacker->GetName());
+			sys_err("DistributeExp yüzde 1.0 üzeri (fPercent %f isim %s)", fPercent, di->pAttacker->GetName());
 			fPercent = 1.0f;
 		}
 
 		iExp += (int) (iExpToDistribute * fPercent);
 
-		//sys_log(0, "%s given exp percent %.1f + 20 dam %d", GetName(), fPercent * 100.0f, di.iDam);
+		//sys_log(0, "%s verilen exp yüzdesi %.1f + 20 hasar %d", GetName(), fPercent * 100.0f, di.iDam);
 
 		di->Distribute(this, iExp);
 
@@ -2729,11 +2729,11 @@ LPCHARACTER CHARACTER::DistributeExp()
 
 			if (fPercent > 1.0f)
 			{
-				sys_err("DistributeExp percent over 1.0 (fPercent %f name %s)", fPercent, di.pAttacker->GetName());
+				sys_err("DistributeExp yüzde 1.0 üzeri (fPercent %f isim %s)", fPercent, di.pAttacker->GetName());
 				fPercent = 1.0f;
 			}
 
-			//sys_log(0, "%s given exp percent %.1f dam %d", GetName(), fPercent * 100.0f, di.iDam);
+			//sys_log(0, "%s verilen exp yüzdesi %.1f hasar %d", GetName(), fPercent * 100.0f, di.iDam);
 			di.Distribute(this, (int) (iExpToDistribute * fPercent));
 		}
 	}
@@ -3065,7 +3065,7 @@ class CFuncShoot
 					break;
 
 				default:
-					sys_err("CFuncShoot: I don't know this type [%d] of range attack.", (int) m_bType);
+					sys_err("CFuncShoot: Bu menzilli saldırı tipini [%d] bilmiyorum.", (int) m_bType);
 					break;
 			}
 
@@ -3169,7 +3169,7 @@ void CHARACTER::SetVictim(LPCHARACTER pkVictim)
 	if (!pkVictim)
 	{
 		if (0 != (DWORD)m_kVIDVictim)
-			MonsterLog("attack target cleared");
+			MonsterLog("saldırı hedefi temizlendi");
 
 		m_kVIDVictim.Reset();
 		battle_end(this);
@@ -3177,7 +3177,7 @@ void CHARACTER::SetVictim(LPCHARACTER pkVictim)
 	else
 	{
 		if (m_kVIDVictim != pkVictim->GetVID())
-			MonsterLog("attack target set: %s", pkVictim->GetName());
+			MonsterLog("saldırı hedefi ayarlandı: %s", pkVictim->GetName());
 
 		m_kVIDVictim = pkVictim->GetVID();
 		m_dwLastVictimSetTime = get_dword_time();
@@ -3262,7 +3262,7 @@ void CHARACTER::SetKillerMode(bool isOn)
 
 	m_iKillerModePulse = thecore_pulse();
 	UpdatePacket();
-	sys_log(0, "SetKillerMode Update %s[%d]", GetName(), GetPlayerID());
+	sys_log(0, "SetKillerMode Güncelle %s[%d]", GetName(), GetPlayerID());
 }
 
 bool CHARACTER::IsKillerMode() const
@@ -3494,7 +3494,7 @@ void CHARACTER::UpdateAggrPointEx(LPCHARACTER pAttacker, EDamageType type, int d
 	if (info.iAggro < 0)
 		info.iAggro = 0;
 
-	//sys_log(0, "UpdateAggrPointEx for %s by %s dam %d total %d", GetName(), pAttacker->GetName(), dam, total);
+	//sys_log(0, "UpdateAggrPointEx %s için %s tarafından hasar %d toplam %d", GetName(), pAttacker->GetName(), dam, total);
 	if (GetParty() && dam > 0 && type != DAMAGE_TYPE_SPECIAL)
 	{
 		LPPARTY pParty = GetParty();

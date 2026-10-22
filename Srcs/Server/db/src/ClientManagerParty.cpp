@@ -13,11 +13,11 @@ void CClientManager::QUERY_PARTY_CREATE(CPeer* peer, TPacketPartyCreate* p)
 	{
 		pm.emplace(p->dwLeaderPID, TPartyMember());
 		ForwardPacket(HEADER_DG_PARTY_CREATE, p, sizeof(TPacketPartyCreate), peer->GetChannel(), peer);
-		sys_log(0, "PARTY Create [%lu]", p->dwLeaderPID);
+		sys_log(0, "PARTİ Oluştur [%lu]", p->dwLeaderPID);
 	}
 	else
 	{
-		sys_err("PARTY Create - Already exists [%lu]", p->dwLeaderPID);
+		sys_err("PARTİ Oluştur - [%lu] zaten var", p->dwLeaderPID);
 	}
 }
 
@@ -28,13 +28,13 @@ void CClientManager::QUERY_PARTY_DELETE(CPeer* peer, TPacketPartyDelete* p)
 
 	if (it == pm.end())
 	{
-		sys_err("PARTY Delete - Non exists [%lu]", p->dwLeaderPID);
+		sys_err("PARTİ Sil - [%lu] yok", p->dwLeaderPID);
 		return;
 	}
 
 	pm.erase(it);
 	ForwardPacket(HEADER_DG_PARTY_DELETE, p, sizeof(TPacketPartyDelete), peer->GetChannel(), peer);
-	sys_log(0, "PARTY Delete [%lu]", p->dwLeaderPID);
+	sys_log(0, "PARTİ Sil [%lu]", p->dwLeaderPID);
 }
 
 void CClientManager::QUERY_PARTY_ADD(CPeer* peer, TPacketPartyAdd* p)
@@ -44,7 +44,7 @@ void CClientManager::QUERY_PARTY_ADD(CPeer* peer, TPacketPartyAdd* p)
 
 	if (it == pm.end())
 	{
-		sys_err("PARTY Add - Non exists [%lu]", p->dwLeaderPID);
+		sys_err("PARTİ Ekle - [%lu] yok", p->dwLeaderPID);
 		return;
 	}
 
@@ -52,10 +52,10 @@ void CClientManager::QUERY_PARTY_ADD(CPeer* peer, TPacketPartyAdd* p)
 	{
 		it->second.emplace(p->dwPID, TPartyInfo());
 		ForwardPacket(HEADER_DG_PARTY_ADD, p, sizeof(TPacketPartyAdd), peer->GetChannel(), peer);
-		sys_log(0, "PARTY Add [%lu] to [%lu]", p->dwPID, p->dwLeaderPID);
+		sys_log(0, "PARTİ Ekle [%lu] -> [%lu]", p->dwPID, p->dwLeaderPID);
 	}
 	else
-		sys_err("PARTY Add - Already [%lu] in party [%lu]", p->dwPID, p->dwLeaderPID);
+		sys_err("PARTİ Ekle - [%lu] zaten [%lu] partisinde", p->dwPID, p->dwLeaderPID);
 }
 
 void CClientManager::QUERY_PARTY_REMOVE(CPeer* peer, TPacketPartyRemove* p)
@@ -65,7 +65,7 @@ void CClientManager::QUERY_PARTY_REMOVE(CPeer* peer, TPacketPartyRemove* p)
 
 	if (it == pm.end())
 	{
-		sys_err("PARTY Remove - Non exists [%lu] cannot remove [%lu]",p->dwLeaderPID, p->dwPID);
+		sys_err("PARTİ Kaldır - [%lu] yok, [%lu] kaldırılamıyor",p->dwLeaderPID, p->dwPID);
 		return;
 	}
 
@@ -75,10 +75,10 @@ void CClientManager::QUERY_PARTY_REMOVE(CPeer* peer, TPacketPartyRemove* p)
 	{
 		it->second.erase(pit);
 		ForwardPacket(HEADER_DG_PARTY_REMOVE, p, sizeof(TPacketPartyRemove), peer->GetChannel(), peer);
-		sys_log(0, "PARTY Remove [%lu] to [%lu]", p->dwPID, p->dwLeaderPID);
+		sys_log(0, "PARTİ Kaldır [%lu] -> [%lu]", p->dwPID, p->dwLeaderPID);
 	}
 	else
-		sys_err("PARTY Remove - Cannot find [%lu] in party [%lu]", p->dwPID, p->dwLeaderPID);
+		sys_err("PARTİ Kaldır - [%lu] [%lu] partisinde bulunamıyor", p->dwPID, p->dwLeaderPID);
 }
 
 void CClientManager::QUERY_PARTY_STATE_CHANGE(CPeer* peer, TPacketPartyStateChange* p)
@@ -88,7 +88,7 @@ void CClientManager::QUERY_PARTY_STATE_CHANGE(CPeer* peer, TPacketPartyStateChan
 
 	if (it == pm.end())
 	{
-		sys_err("PARTY StateChange - Non exists [%lu] cannot state change [%lu]",p->dwLeaderPID, p->dwPID);
+		sys_err("PARTİ StateChange - [%lu] yok, durum değiştirilemez [%lu]",p->dwLeaderPID, p->dwPID);
 		return;
 	}
 
@@ -96,7 +96,7 @@ void CClientManager::QUERY_PARTY_STATE_CHANGE(CPeer* peer, TPacketPartyStateChan
 
 	if (pit == it->second.end())
 	{
-		sys_err("PARTY StateChange - Cannot find [%lu] in party [%lu]", p->dwPID, p->dwLeaderPID);
+		sys_err("PARTİ StateChange - [%lu] [%lu] partisinde bulunamıyor", p->dwPID, p->dwLeaderPID);
 		return;
 	}
 
@@ -106,7 +106,7 @@ void CClientManager::QUERY_PARTY_STATE_CHANGE(CPeer* peer, TPacketPartyStateChan
 		pit->second.bRole = 0;
 
 	ForwardPacket(HEADER_DG_PARTY_STATE_CHANGE, p, sizeof(TPacketPartyStateChange), peer->GetChannel(), peer);
-	sys_log(0, "PARTY StateChange [%lu] at [%lu] from %d %d",p->dwPID, p->dwLeaderPID, p->bRole, p->bFlag);
+	sys_log(0, "PARTİ StateChange [%lu] -> [%lu] kaynak %d %d",p->dwPID, p->dwLeaderPID, p->bRole, p->bFlag);
 }
 
 void CClientManager::QUERY_PARTY_SET_MEMBER_LEVEL(CPeer* peer, TPacketPartySetMemberLevel* p)
@@ -116,7 +116,7 @@ void CClientManager::QUERY_PARTY_SET_MEMBER_LEVEL(CPeer* peer, TPacketPartySetMe
 
 	if (it == pm.end())
 	{
-		sys_err("PARTY SetMemberLevel - Non exists [%lu] cannot level change [%lu]",p->dwLeaderPID, p->dwPID);
+		sys_err("PARTİ SetMemberLevel - [%lu] yok, seviye değiştirilemez [%lu]",p->dwLeaderPID, p->dwPID);
 		return;
 	}
 
@@ -124,13 +124,13 @@ void CClientManager::QUERY_PARTY_SET_MEMBER_LEVEL(CPeer* peer, TPacketPartySetMe
 
 	if (pit == it->second.end())
 	{
-		sys_err("PARTY SetMemberLevel - Cannot find [%lu] in party [%lu]", p->dwPID, p->dwLeaderPID);
+		sys_err("PARTİ SetMemberLevel - [%lu] [%lu] partisinde bulunamıyor", p->dwPID, p->dwLeaderPID);
 		return;
 	}
 
 	pit->second.bLevel = p->bLevel;
 
 	ForwardPacket(HEADER_DG_PARTY_SET_MEMBER_LEVEL, p, sizeof(TPacketPartySetMemberLevel), peer->GetChannel());
-	sys_log(0, "PARTY SetMemberLevel pid [%lu] level %d",p->dwPID, p->bLevel);
+	sys_log(0, "PARTİ SetMemberLevel pid [%lu] seviye %d",p->dwPID, p->bLevel);
 }
 

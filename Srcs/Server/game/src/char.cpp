@@ -741,7 +741,7 @@ void CHARACTER::OpenMyShop(const char * c_pszSign, TShopItemTable * pTable, BYTE
 	{
 		if (cont.find((pTable + i)->pos) != cont.end())
 		{
-			sys_err("MYSHOP: duplicate shop item detected! (name: %s)", GetName());
+			sys_err("MYSHOP: yinelenen dükkan eşyası tespit edildi! (isim: %s)", GetName());
 			return;
 		}
 
@@ -1335,7 +1335,7 @@ void CHARACTER::CreatePlayerProto(TPlayerTable & tab)
 		tab.lExitY		= m_posExit.y;
 	}
 
-	sys_log(0, "SAVE: %s %dx%d", GetName(), tab.x, tab.y);
+	sys_log(0, "KAYIT: %s %dx%d", GetName(), tab.x, tab.y);
 
 	tab.st = GetRealPoint(POINT_ST);
 	tab.ht = GetRealPoint(POINT_HT);
@@ -1379,7 +1379,7 @@ void CHARACTER::SaveReal()
 
 	if (!GetDesc())
 	{
-		sys_err("Character::Save : no descriptor when saving (name: %s)", GetName());
+		sys_err("Character::Save : kaydederken descriptor yok (isim: %s)", GetName());
 		return;
 	}
 
@@ -1391,7 +1391,7 @@ void CHARACTER::SaveReal()
 	quest::PC * pkQuestPC = quest::CQuestManager::instance().GetPCForce(GetPlayerID());
 
 	if (!pkQuestPC)
-		sys_err("CHARACTER::Save : null quest::PC pointer! (name %s)", GetName());
+		sys_err("CHARACTER::Save : null quest::PC pointer! (isim %s)", GetName());
 	else
 	{
 		pkQuestPC->Save();
@@ -1500,7 +1500,7 @@ bool CHARACTER::Show(long lMapIndex, long x, long y, long z, bool bShowSpawnMoti
 
 	if (!sectree)
 	{
-		sys_log(0, "cannot find sectree by %dx%d mapindex %d", x, y, lMapIndex);
+		sys_log(0, "%dx%d ile sectree bulunamıyor harita indeksi %d", x, y, lMapIndex);
 		return false;
 	}
 
@@ -1751,7 +1751,7 @@ bool CHARACTER::ChangeSex()
 			break;
 #endif
 		default:
-			sys_err("CHANGE_SEX: %s unknown race %d", GetName(), src_race);
+			sys_err("CHANGE_SEX: %s bilinmeyen ırk %d", GetName(), src_race);
 			return false;
 	}
 
@@ -1818,7 +1818,7 @@ void CHARACTER::SetEmpire(BYTE bEmpire)
 void CHARACTER::SetPlayerProto(const TPlayerTable * t)
 {
 	if (!GetDesc() || !*GetDesc()->GetHostName())
-		sys_err("cannot get desc or hostname");
+		sys_err("desc veya hostname alınamıyor");
 	else
 		SetGMLevel();
 
@@ -2213,7 +2213,7 @@ void CHARACTER::ComputeBattlePoints()
 				break;
 #endif
 			default:
-				sys_err("invalid job %d", GetJob());
+				sys_err("geçersiz sınıf %d", GetJob());
 				iStatAtk = (2 * GetPoint(POINT_ST));
 				break;
 		}
@@ -2693,7 +2693,7 @@ bool CHARACTER::Sync(long x, long y)
 	{
 		if (GetDesc())
 		{
-			sys_err("cannot find tree at %d %d (name: %s)", x, y, GetName());
+			sys_err("%d %d konumunda ağaç bulunamıyor (isim: %s)", x, y, GetName());
 			// @fixme313 BEGIN
 			new_tree = GetSectree();
 			x = GetX();
@@ -2701,7 +2701,7 @@ bool CHARACTER::Sync(long x, long y)
 			if (!new_tree)
 			{
 				GetDesc()->SetPhase(PHASE_CLOSE);
-				sys_err("cannot find old tree at %d %d (name: %s)", x, y, GetName());
+				sys_err("%d %d konumunda eski ağaç bulunamıyor (isim: %s)", x, y, GetName());
 			}
 			// @fixme313 END
 		}
@@ -2745,7 +2745,7 @@ bool CHARACTER::Sync(long x, long y)
 			SECTREEID old_id = GetSectree()->GetID();
 
 			const float fDist = DISTANCE_SQRT(id.coord.x - old_id.coord.x, id.coord.y - old_id.coord.y);
-			sys_log(0, "SECTREE DIFFER: %s %dx%d was %dx%d dist %.1fm",
+			sys_log(0, "SECTREE FARKLI: %s %dx%d idi %dx%d uzaklık %.1fm",
 					GetName(),
 					id.coord.x,
 					id.coord.y,
@@ -2795,7 +2795,7 @@ bool CHARACTER::Goto(long x, long y)
 
 	if (!IsState(m_stateMove))
 	{
-		MonsterLog("[MOVE] %s", GetVictim() ? "chasing target" : "roaming");
+		MonsterLog("[MOVE] %s", GetVictim() ? "hedefi kovalıyor" : "geziniyor");
 
 		if (GetVictim())
 		{
@@ -2874,7 +2874,7 @@ float CHARACTER::GetMoveMotionSpeed() const
 		return -pkMotion->GetAccumVector().y / pkMotion->GetDuration();
 	else
 	{
-		sys_err("cannot find motion (name %s race %d mode %d)", GetName(), GetRaceNum(), dwMode);
+		sys_err("hareket bulunamıyor (isim %s ırk %d mod %d)", GetName(), GetRaceNum(), dwMode);
 		return 300.0f;
 	}
 }
@@ -2897,7 +2897,7 @@ void CHARACTER::CalculateMoveDuration()
 			(int) ((fDist / motionSpeed) * 1000.0f));
 
 	if (IsNPC())
-		sys_log(1, "%s: GOTO: distance %f, spd %u, duration %u, motion speed %f pos %d %d -> %d %d",
+		sys_log(1, "%s: GOTO: mesafe %f, hız %u, süre %u, hareket hızı %f konum %d %d -> %d %d",
 				GetName(), fDist, GetLimitPoint(POINT_MOV_SPEED), m_dwMoveDuration, motionSpeed,
 				m_posStart.x, m_posStart.y, m_posDest.x, m_posDest.y);
 
@@ -2978,7 +2978,7 @@ long long CHARACTER::GetPoint(BYTE type) const
 {
 	if (type >= POINT_MAX_NUM)
 	{
-		sys_err("Point type overflow (type %u)", type);
+		sys_err("Point tipi taşması (tip %u)", type);
 		return 0;
 	}
 
@@ -2997,7 +2997,7 @@ long long CHARACTER::GetPoint(BYTE type) const
 	}
 
 	if (val > max_val)
-		sys_err("POINT_ERROR: %s type %d val %lld (max: %lld)", GetName(), val, max_val);
+		sys_err("POINT_ERROR: %s tur %d deger %lld (azami: %lld)", GetName(), val, max_val);
 
 	return (val);
 }	
@@ -3006,7 +3006,7 @@ int CHARACTER::GetLimitPoint(BYTE type) const
 {
 	if (type >= POINT_MAX_NUM)
 	{
-		sys_err("Point type overflow (type %u)", type);
+		sys_err("Point tipi taşması (tip %u)", type);
 		return 0;
 	}
 
@@ -3049,7 +3049,7 @@ int CHARACTER::GetLimitPoint(BYTE type) const
 	}
 
 	if (val > max_val)
-		sys_err("POINT_ERROR: %s type %d val %d (max: %d)", GetName(), val, max_val);
+		sys_err("POINT_ERROR: %s tur %d deger %d (azami: %d)", GetName(), val, max_val);
 
 	if (val > limit)
 		val = limit;
@@ -3064,7 +3064,7 @@ void CHARACTER::SetPoint(BYTE type, long long val)
 {
 	if (type >= POINT_MAX_NUM)
 	{
-		sys_err("Point type overflow (type %u)", type);
+		sys_err("Point tipi taşması (tip %u)", type);
 		return;
 	}
 
@@ -3116,7 +3116,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 			SetLevel(GetLevel() + amount);
 			val = GetLevel();
 
-			sys_log(0, "LEVELUP: %s %d NEXT EXP %d", GetName(), GetLevel(), GetNextExp());
+			sys_log(0, "SEVİYE ATLAMA: %s %d SONRAKİ EXP %d", GetName(), GetLevel(), GetNextExp());
 
 #ifdef ENABLE_WOLFMAN_CHARACTER
 			if (GetJob() == JOB_WOLFMAN)
@@ -3187,7 +3187,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 
 				if ((amount < 0) && (exp < (DWORD)(-amount)))
 				{
-					sys_log(1, "%s AMOUNT < 0 %d, CUR EXP: %d", GetName(), -amount, exp);
+					sys_log(1, "%s MİKTAR < 0 %d, ŞU ANKI EXP: %d", GetName(), -amount, exp);
 					amount = -exp;
 
 					SetExp(exp + amount);
@@ -3199,7 +3199,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 						return;
 
 					if (test_server)
-						ChatPacket(CHAT_TYPE_INFO, "You have gained %d exp.", amount);
+						ChatPacket(CHAT_TYPE_INFO, "%d exp kazandınız.", amount);
 
 					DWORD iExpBalance = 0;
 
@@ -3222,7 +3222,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 
 					if (iLevStep >= 4)
 					{
-						sys_err("%s LEVEL_STEP bigger than 4! (%d)", GetName(), iLevStep);
+						sys_err("%s LEVEL_STEP 4'ten büyük! (%d)", GetName(), iLevStep);
 						iLevStep = 4;
 					}
 
@@ -3645,7 +3645,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 		case POINT_MELEE_MAGIC_ATT_BONUS_PER:
 			if (GetPoint(type) + amount > 100)
 			{
-				sys_err("MALL_BONUS exceeded over 100!! point type: %d name: %s amount %d", type, GetName(), amount);
+				sys_err("MALL_BONUS 100'ü aştı!! point tipi: %d isim: %s miktar %d", type, GetName(), amount);
 				amount = 100 - GetPoint(type);
 			}
 
@@ -3664,7 +3664,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 		case POINT_POTION_BONUS:	// 74
 			if (GetPoint(type) + amount > 100)
 			{
-				sys_err("BONUS exceeded over 100!! point type: %d name: %s amount %d", type, GetName(), amount);
+				sys_err("BONUS 100'ü aştı!! point type: %d isim: %s miktar %d", type, GetName(), amount);
 				amount = 100 - GetPoint(type);
 			}
 
@@ -3677,12 +3677,12 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 			val = GetPoint(type);
 			if (val)
 			{
-				// ChatPacket(CHAT_TYPE_INFO, "IMMUNE_STUN SET_BIT type(%u) amount(%d)", type, amount);
+				// ChatPacket(CHAT_TYPE_INFO, "IMMUNE_STUN SET_BIT tip(%u) miktar(%d)", type, amount);
 				SET_BIT(m_pointsInstant.dwImmuneFlag, IMMUNE_STUN);
 			}
 			else
 			{
-				// ChatPacket(CHAT_TYPE_INFO, "IMMUNE_STUN REMOVE_BIT type(%u) amount(%d)", type, amount);
+				// ChatPacket(CHAT_TYPE_INFO, "IMMUNE_STUN REMOVE_BIT tip(%u) miktar(%d)", type, amount);
 				REMOVE_BIT(m_pointsInstant.dwImmuneFlag, IMMUNE_STUN);
 			}
 			break;
@@ -3739,7 +3739,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 
 		case POINT_VOICE:
 		case POINT_EMPIRE_POINT:
-			//sys_err("CHARACTER::PointChange: %s: point cannot be changed. use SetPoint instead (type: %d)", GetName(), type);
+			//sys_err("CHARACTER::PointChange: %s: point değiştirilemez. SetPoint kullanın (tip: %d)", GetName(), type);
 			val = GetRealPoint(type);
 			break;
 
@@ -3765,7 +3765,7 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 			break;
 
 		default:
-			sys_err("CHARACTER::PointChange: %s: unknown point change type %d", GetName(), type);
+			sys_err("CHARACTER::PointChange: %s: bilinmeyen point değişim tipi %d", GetName(), type);
 			return;
 	}
 
@@ -3836,7 +3836,7 @@ void CHARACTER::ApplyPoint(BYTE bApplyType, int iVal)
 				int iAdd = iVal & 0x00800000;
 				int iChange = iVal & 0x007fffff;
 
-				sys_log(1, "APPLY_SKILL skill %d add? %d change %d", bSkillVnum, iAdd ? 1 : 0, iChange);
+				sys_log(1, "APPLY_SKILL beceri %d ekle? %d değişim %d", bSkillVnum, iAdd ? 1 : 0, iChange);
 
 				if (0 == iAdd)
 					iChange = -iChange;
@@ -4002,7 +4002,7 @@ void CHARACTER::ApplyPoint(BYTE bApplyType, int iVal)
 			break;
 
 		default:
-			sys_err("Unknown apply type %d name %s", bApplyType, GetName());
+			sys_err("Bilinmeyen efsun tipi %d isim %s", bApplyType, GetName());
 			break;
 	}
 }
@@ -4144,7 +4144,7 @@ void CHARACTER::mining_cancel()
 {
 	if (m_pkMiningEvent)
 	{
-		sys_log(0, "XXX MINING CANCEL");
+		sys_log(0, "XXX MADENCİLİK İPTAL");
 		event_cancel(&m_pkMiningEvent);
 		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Madencilik bitti."));
 	}
@@ -4290,7 +4290,7 @@ void CHARACTER::SetNextStatePulse(int iNextPulse)
 	m_dwNextStatePulse = iNextPulse;
 
 	if (iNextPulse < 10)
-		MonsterLog("moving to next state");
+		MonsterLog("sonraki duruma geçiliyor");
 }
 
 void CHARACTER::UpdateCharacter(DWORD dwPulse)
@@ -4377,7 +4377,7 @@ bool CHARACTER::SetSyncOwner(LPCHARACTER ch, bool bRemoveFromList)
 
 	if (ch == this)
 	{
-		sys_err("SetSyncOwner owner == this (%p)", this);
+		sys_err("SetSyncOwner sahip == bu (%p)", this);
 		return false;
 	}
 
@@ -4400,7 +4400,7 @@ bool CHARACTER::SetSyncOwner(LPCHARACTER ch, bool bRemoveFromList)
 
 		if (DISTANCE_APPROX(GetX() - ch->GetX(), GetY() - ch->GetY()) > 250)
 		{
-			sys_log(1, "SetSyncOwner distance over than 250 %s %s", GetName(), ch->GetName());
+			sys_log(1, "SetSyncOwner mesafe 250'den fazla %s %s", GetName(), ch->GetName());
 
 			if (m_pkChrSyncOwner == ch)
 				return true;
@@ -4422,7 +4422,7 @@ bool CHARACTER::SetSyncOwner(LPCHARACTER ch, bool bRemoveFromList)
 			static const timeval zero_tv = {0, 0};
 			SetLastSyncTime(zero_tv);
 
-			sys_log(1, "SetSyncOwner set %s %p to %s", GetName(), this, ch->GetName());
+			sys_log(1, "SetSyncOwner %s %p -> %s ayarlandı", GetName(), this, ch->GetName());
 		}
 
 		m_fSyncTime = get_float_time();
@@ -4472,9 +4472,9 @@ void CHARACTER::SetParty(LPPARTY pkParty)
 		return;
 
 	if (pkParty && m_pkParty)
-		sys_err("%s is trying to reassigning party (current %p, new party %p)", GetName(), get_pointer(m_pkParty), get_pointer(pkParty));
+		sys_err("%s partiyi yeniden atamaya çalışıyor (şu anki %p, yeni parti %p)", GetName(), get_pointer(m_pkParty), get_pointer(pkParty));
 
-	sys_log(1, "PARTY set to %p", get_pointer(pkParty));
+	sys_log(1, "PARTİ %p olarak ayarlandı", get_pointer(pkParty));
 
 	m_pkParty = pkParty;
 
@@ -4587,7 +4587,7 @@ bool CHARACTER::RequestToParty(LPCHARACTER leader)
 			return false;
 
 		default:
-			sys_err("Do not process party join error(%d)", errcode);
+			sys_err("Parti katılım hatası işlenmiyor(%d)", errcode);
 			return false;
 	}
 
@@ -4675,7 +4675,7 @@ void CHARACTER::AcceptToParty(LPCHARACTER member)
 									   member->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("[Group] Bu grup dolu olduğu için katılamazsın."));
 									   break;
 								   }
-			default: sys_err("Do not process party join error(%d)", errcode);
+			default: sys_err("Parti katılım hatası işlenmiyor(%d)", errcode);
 		}
 	}
 
@@ -4760,7 +4760,7 @@ void CHARACTER::PartyInvite(LPCHARACTER pchInvitee)
 			return;
 
 		default:
-			sys_err("Do not process party join error(%d)", errcode);
+			sys_err("Parti katılım hatası işlenmiyor(%d)", errcode);
 			return;
 	}
 
@@ -4786,7 +4786,7 @@ void CHARACTER::PartyInviteAccept(LPCHARACTER pchInvitee)
 
 	if (itFind == m_PartyInviteEventMap.end())
 	{
-		sys_log(1, "PartyInviteAccept from not invited character(%s)", pchInvitee->GetName());
+		sys_log(1, "Davet edilmemiş karakterden PartyInviteAccept(%s)", pchInvitee->GetName());
 		return;
 	}
 
@@ -4840,7 +4840,7 @@ void CHARACTER::PartyInviteAccept(LPCHARACTER pchInvitee)
 			return;
 
 		default:
-			sys_err("ignore party join error(%d)", errcode);
+			sys_err("parti katılım hatası yoksayılıyor(%d)", errcode);
 			return;
 	}
 
@@ -4862,7 +4862,7 @@ void CHARACTER::PartyInviteDeny(DWORD dwPID)
 
 	if (itFind == m_PartyInviteEventMap.end())
 	{
-		sys_log(1, "PartyInviteDeny to not exist event(inviter PID: %d, invitee PID: %d)", GetPlayerID(), dwPID);
+		sys_log(1, "Var olmayan olaya PartyInviteDeny(davet eden PID: %d, davetli PID: %d)", GetPlayerID(), dwPID);
 		return;
 	}
 
@@ -4924,7 +4924,7 @@ CHARACTER::PartyJoinErrCode CHARACTER::IsPartyJoinableMutableCondition(const LPC
 void CHARACTER::SetDungeon(LPDUNGEON pkDungeon)
 {
 	if (pkDungeon && m_pkDungeon)
-		sys_err("%s is trying to reassigning dungeon (current %p, new party %p)", GetName(), get_pointer(m_pkDungeon), get_pointer(pkDungeon));
+		sys_err("%s zindanı yeniden atamaya çalışıyor (şu anki %p, yeni parti %p)", GetName(), get_pointer(m_pkDungeon), get_pointer(pkDungeon));
 
 	if (m_pkDungeon == pkDungeon) {
 		return;
@@ -4949,7 +4949,7 @@ void CHARACTER::SetDungeon(LPDUNGEON pkDungeon)
 
 	if (pkDungeon)
 	{
-		sys_log(0, "%s DUNGEON set to %p, PARTY is %p", GetName(), get_pointer(pkDungeon), get_pointer(m_pkParty));
+		sys_log(0, "%s DUNGEON %p olarak ayarlandı, PARTY %p", GetName(), get_pointer(pkDungeon), get_pointer(m_pkParty));
 
 		if (IsPC())
 		{
@@ -5043,7 +5043,7 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
 	{
 		if (pkChrCauser->GetMyShop() && pkChrCauser != this)
 		{
-			sys_err("OnClick Fail (%s->%s) - pc has shop", pkChrCauser->GetName(), GetName());
+			sys_err("OnClick Başarısız (%s->%s) - pc'nin dükkanı var", pkChrCauser->GetName(), GetName());
 			return;
 		}
 	}
@@ -5051,7 +5051,7 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
 	{
 		if (pkChrCauser->GetExchange())
 		{
-			sys_err("OnClick Fail (%s->%s) - pc is exchanging", pkChrCauser->GetName(), GetName());
+			sys_err("OnClick Başarısız (%s->%s) - pc takas yapıyor", pkChrCauser->GetName(), GetName());
 			return;
 		}
 	}
@@ -5111,12 +5111,12 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
 	{
 		if (pkChrCauser->IsOverTime(OT_3HOUR))
 		{
-			sys_log(0, "Play OverTime : name = %s, hour = %d)", pkChrCauser->GetName(), 3);
+			sys_log(0, "Oyun Süre Aşımı : isim = %s, saat = %d)", pkChrCauser->GetName(), 3);
 			return;
 		}
 		else if (pkChrCauser->IsOverTime(OT_5HOUR))
 		{
-			sys_log(0, "Play OverTime : name = %s, hour = %d)", pkChrCauser->GetName(), 5);
+			sys_log(0, "Oyun Süre Aşımı : isim = %s, saat = %d)", pkChrCauser->GetName(), 5);
 			return;
 		}
 	}
@@ -5226,7 +5226,7 @@ void CHARACTER::ClearTarget()
 
 		if (!pkChr->GetDesc())
 		{
-			sys_err("%s %p does not have desc", pkChr->GetName(), get_pointer(pkChr));
+			sys_err("%s %p desc yok", pkChr->GetName(), get_pointer(pkChr));
 			abort();
 		}
 
@@ -5333,7 +5333,7 @@ void CHARACTER::BroadcastTargetPacket()
 
 		if (!pkChr->GetDesc())
 		{
-			sys_err("%s %p does not have desc", pkChr->GetName(), get_pointer(pkChr));
+			sys_err("%s %p desc yok", pkChr->GetName(), get_pointer(pkChr));
 			abort();
 		}
 
@@ -5383,7 +5383,7 @@ bool CHARACTER::WarpSet(long x, long y, long lPrivateMapIndex)
 
 	if (!CMapLocation::instance().Get(x, y, lMapIndex, lAddr, wPort))
 	{
-		sys_err("cannot find map location index %d x %d y %d name %s", lMapIndex, x, y, GetName());
+		sys_err("harita konumu bulunamıyor indeks %d x %d y %d isim %s", lMapIndex, x, y, GetName());
 		return false;
 	}
 
@@ -5409,7 +5409,7 @@ bool CHARACTER::WarpSet(long x, long y, long lPrivateMapIndex)
 	{
 		if (lPrivateMapIndex / 10000 != lMapIndex)
 		{
-			sys_err("Invalid map index %d, must be child of %d", lPrivateMapIndex, lMapIndex);
+			sys_err("Geçersiz harita indeksi %d, %d alt öğesi olmalı", lPrivateMapIndex, lMapIndex);
 			return false;
 		}
 
@@ -5431,7 +5431,7 @@ bool CHARACTER::WarpSet(long x, long y, long lPrivateMapIndex)
 	m_posWarp.x = x;
 	m_posWarp.y = y;
 
-	sys_log(0, "WarpSet %s %d %d current map %d target map %d", GetName(), x, y, GetMapIndex(), lMapIndex);
+	sys_log(0, "WarpSet %s %d %d şu anki harita %d hedef harita %d", GetName(), x, y, GetMapIndex(), lMapIndex);
 
 	TPacketGCWarp p;
 
@@ -5470,7 +5470,7 @@ void CHARACTER::WarpEnd()
 
 	if (!map_allow_find(index))
 	{
-		sys_err("location %d %d not allowed to login this server", m_posWarp.x, m_posWarp.y);
+		sys_err("%d %d konumu bu sunucuya giriş için izinli değil", m_posWarp.x, m_posWarp.y);
 #ifdef ENABLE_GOHOME_IF_MAP_NOT_ALLOWED
 		GoHome();
 #else
@@ -5520,7 +5520,7 @@ bool CHARACTER::Return()
 	SendMovePacket(FUNC_WAIT, 0, 0, 0, 0);
 
 	if (test_server)
-		sys_log(0, "%s %p giving up and returning! %d %d", GetName(), this, x, y);
+		sys_log(0, "%s %p vazgeçip geri dönüyor! %d %d", GetName(), this, x, y);
 
 	if (GetParty())
 		GetParty()->SendMessage(this, PM_RETURN, x, y);
@@ -5532,7 +5532,7 @@ bool CHARACTER::Follow(LPCHARACTER pkChr, float fMinDistance)
 {
 	if (IsPC())
 	{
-		sys_err("CHARACTER::Follow : PC cannot use this method", GetName());
+		sys_err("CHARACTER::Follow : PC bu metodu kullanamaz", GetName());
 		return false;
 	}
 
@@ -5710,7 +5710,7 @@ void CHARACTER::ReqSafeboxLoad(const char* pszPassword)
 	}
 	else if (m_bOpeningSafebox)
 	{
-		sys_log(0, "Overlapped safebox load request from %s", GetName());
+		sys_log(0, "%s kaynaklı çakışan kasa yükleme isteği", GetName());
 		return;
 	}
 
@@ -5761,7 +5761,7 @@ void CHARACTER::LoadSafebox(int iSize, DWORD dwGold, int iItemCount, TPlayerItem
 
 			if (!item)
 			{
-				sys_err("cannot create item vnum %d id %u (name: %s)", pItems->vnum, pItems->id, GetName());
+				sys_err("eşya vnum %d id %u oluşturulamıyor (isim: %s)", pItems->vnum, pItems->id, GetName());
 				continue;
 			}
 
@@ -5856,7 +5856,7 @@ void CHARACTER::LoadMall(int iItemCount, TPlayerItem * pItems)
 
 			if (!item)
 			{
-				sys_err("cannot create item vnum %d id %u (name: %s)", pItems->vnum, pItems->id, GetName());
+				sys_err("eşya vnum %d id %u oluşturulamıyor (isim: %s)", pItems->vnum, pItems->id, GetName());
 				continue;
 			}
 
@@ -5974,9 +5974,9 @@ void CHARACTER::SetNowWalking(bool bWalkFlag)
 		if (IsNPC())
 		{
 			if (m_bNowWalking)
-				MonsterLog("walking");
+				MonsterLog("yürüyor");
 			else
-				MonsterLog("running");
+				MonsterLog("koşuyor");
 		}
 
 		//sys_log(0, "%s is now %s", GetName(), m_bNowWalking?"walking.":"running.");
@@ -6524,7 +6524,7 @@ namespace {
 				if (3 != sscanf(pkWarp->GetName(), " %s %ld %ld ", szTmp, &m_lTargetX, &m_lTargetY))
 				{
 					if (number(1, 100) < 5)
-						sys_err("Warp NPC name wrong : vnum(%d) name(%s)", pkWarp->GetRaceNum(), pkWarp->GetName());
+						sys_err("Warp NPC ismi hatalı : vnum(%d) isim(%s)", pkWarp->GetRaceNum(), pkWarp->GetName());
 
 					m_bInvalid = true;
 
@@ -6767,7 +6767,7 @@ bool CHARACTER::WarpToPID(DWORD dwPID)
 			pcci->pkDesc->Packet(p);
 
 			if (test_server)
-				ChatPacket(CHAT_TYPE_PARTY, "sent find position packet for teleport");
+				ChatPacket(CHAT_TYPE_PARTY, "ışınlanma için konum bulma paketi gönderildi");
 		}
 	}
 	return true;
@@ -7945,17 +7945,17 @@ BYTE CHARACTER::CanRefineAcceMaterials()
 	}
 	else if (pkItemMaterial[0]->GetOwner()!=this || pkItemMaterial[1]->GetOwner() != this)
 	{
-		sys_err("CanRefineAcceMaterials: pkItemMaterial different ownership");
+		sys_err("CanRefineAcceMaterials: pkItemMaterial farklı sahiplik");
 		return bReturn;
 	}
 	else if (pkItemMaterial[0]->IsEquipped() || pkItemMaterial[1]->IsEquipped())
 	{
-		sys_err("CanRefineAcceMaterials: pkItemMaterial equipped");
+		sys_err("CanRefineAcceMaterials: pkItemMaterial kuşanılmış");
 		return bReturn;
 	}
 	else if (pkItemMaterial[0]->GetWindow() != INVENTORY || pkItemMaterial[1]->GetWindow() != INVENTORY)
 	{
-		sys_err("CanRefineAcceMaterials: pkItemMaterial not in INVENTORY");
+		sys_err("CanRefineAcceMaterials: pkItemMaterial envanterde değil");
 		return bReturn;
 	}
 	else if (!materialInfo[0].id || !materialInfo[1].id)
@@ -7965,12 +7965,12 @@ BYTE CHARACTER::CanRefineAcceMaterials()
 	}
 	else if (materialInfo[0].pos.cell != pkItemMaterial[0]->GetCell() || materialInfo[1].pos.cell != pkItemMaterial[1]->GetCell())
 	{
-		sys_err("CanRefineAcceMaterials: pkItemMaterial wrong cell");
+		sys_err("CanRefineAcceMaterials: pkItemMaterial hatalı hücre");
 		return bReturn;
 	}
 	else if (materialInfo[0].pos.window_type != pkItemMaterial[0]->GetWindow() || materialInfo[1].pos.window_type != pkItemMaterial[1]->GetWindow())
 	{
-		sys_err("CanRefineAcceMaterials: pkItemMaterial wrong window_type");
+		sys_err("CanRefineAcceMaterials: pkItemMaterial hatalı window_type");
 		return bReturn;
 	}
 
@@ -7978,7 +7978,7 @@ BYTE CHARACTER::CanRefineAcceMaterials()
 	{
 		if (!AcceIsSameGrade(pkItemMaterial[1]->GetValue(ACCE_GRADE_VALUE_FIELD)))
 		{
-			sys_err("CanRefineAcceMaterials: pkItemMaterial different acce grade");
+			sys_err("CanRefineAcceMaterials: pkItemMaterial farklı acce derecesi");
 			return bReturn;
 		}
 
@@ -8091,9 +8091,9 @@ void CHARACTER::RefineAcceMaterials()
 			pkItem->AttrLog();
 
 			if (lVal == 4)
-				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("New absorption rate: %d%"), dwAbs);
+				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Yeni emiş oranı: %%%d"), dwAbs);
 			else
-				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Success."));
+				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Oldu!"));
 
 			EffectPacket(SE_EFFECT_ACCE_SUCESS_ABSORB);
 			LogManager::instance().AcceLog(GetPlayerID(), GetX(), GetY(), dwItemVnum, pkItem->GetID(), 1, dwAbs, 1);
@@ -8107,7 +8107,7 @@ void CHARACTER::RefineAcceMaterials()
 
 			ITEM_MANAGER::instance().RemoveItem(pkItemMaterial[1], "COMBINE (REFINE FAIL)");
 
-			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Failed."));
+			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Olmadı!"));
 
 			LogManager::instance().AcceLog(GetPlayerID(), GetX(), GetY(), dwItemVnum, 0, 0, 0, 0);
 
@@ -8151,7 +8151,7 @@ void CHARACTER::RefineAcceMaterials()
 		ITEM_MANAGER::instance().FlushDelayedSave(pkItemMaterial[0]);
 		pkItemMaterial[0]->AttrLog();
 
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Success."));
+		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Oldu!"));
 		EffectPacket(SE_EFFECT_ACCE_SUCESS_ABSORB);
 
 		ClearAcceMaterials();
@@ -8239,7 +8239,7 @@ bool CHARACTER::ChangeChannel(BYTE newChannel)
 	WORD newPort;
 	if (!CMapLocation::instance().Get(GetX(), GetY(), newMapIndex, newAddr, newPort, newChannel))
 	{
-		sys_err("cannot find map location index %d x %d y %d name %s", newMapIndex, GetX(), GetY(), GetName());
+		sys_err("harita konumu bulunamıyor indeks %d x %d y %d isim %s", newMapIndex, GetX(), GetY(), GetName());
 		return false;
 	}
 
@@ -8268,7 +8268,7 @@ bool CHARACTER::ChangeChannel(BYTE newChannel)
 	m_posWarp.x = GetX();
 	m_posWarp.y = GetY();
 
-	sys_log(0, "ChangeChannel %s %d %d current map %d target map %d (%d %d)", GetName(), GetX(), GetY(), GetMapIndex(), GetMapIndex(), newAddr, newPort);
+	sys_log(0, "KanalDeğiştir %s %d %d şu anki harita %d hedef harita %d (%d %d)", GetName(), GetX(), GetY(), GetMapIndex(), GetMapIndex(), newAddr, newPort);
 
 	TPacketGCWarp p{};
 	p.bHeader	= HEADER_GC_WARP;
@@ -8292,14 +8292,14 @@ bool CHARACTER::SummonPetFromItem(LPITEM item)
 {
 	if (!item)
 	{
-		ChatPacket(CHAT_TYPE_INFO, "Item Pet nullptr");
+		ChatPacket(CHAT_TYPE_INFO, "Eşya Pet nullptr");
 		return false;
 	}
 
 	auto mobVnum = item->GetValue(0);
 	if (!mobVnum)
 	{
-		ChatPacket(CHAT_TYPE_INFO, "Item Pet %d with no mob in value0", item->GetVnum());
+		ChatPacket(CHAT_TYPE_INFO, "Eşya Pet %d value0'da mob yok", item->GetVnum());
 		return false;
 	}
 	auto * petSystem = GetPetSystem();

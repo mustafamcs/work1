@@ -413,10 +413,10 @@ namespace marriage
 				LPCHARACTER ch;
 				ch = CHARACTER_MANAGER::instance().FindByPID(m_pid1);
 				if (ch)
-					ch->ChatPacket(CHAT_TYPE_PARTY, "lovepoint bykill %.3g total %d", love_point / 1000000., GetMarriagePoint());
+					ch->ChatPacket(CHAT_TYPE_PARTY, "öldürmeyle sevgi puanı %.3g toplam %d", love_point / 1000000., GetMarriagePoint());
 				ch = CHARACTER_MANAGER::instance().FindByPID(m_pid2);
 				if (ch)
-					ch->ChatPacket(CHAT_TYPE_PARTY, "lovepoint bykill %.3g total %d", love_point / 1000000., GetMarriagePoint());
+					ch->ChatPacket(CHAT_TYPE_PARTY, "öldürmeyle sevgi puanı %.3g toplam %d", love_point / 1000000., GetMarriagePoint());
 			}
 		}
 	}
@@ -432,7 +432,7 @@ namespace marriage
 			PIXEL_POSITION pos;
 			if (!SECTREE_MANAGER::instance().GetRecallPositionByEmpire(pWeddingInfo->dwMapIndex/10000, 0, pos))
 			{
-				sys_err("cannot get warp position");
+				sys_err("ışınlanma konumu alınamıyor");
 				return;
 			}
 			ch->SaveExitLocation();
@@ -534,7 +534,7 @@ namespace marriage
 	{
 		if (IsEngagedOrMarried(dwPID1) || IsEngagedOrMarried(dwPID2))
 		{
-			sys_err("cannot marry already married character. %d - %d", dwPID1, dwPID2);
+			sys_err("zaten evli karakterle evlenilemez. %d - %d", dwPID1, dwPID2);
 			return;
 		}
 
@@ -580,7 +580,7 @@ namespace marriage
 
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
-			sys_err("not under marriage : %u %u", dwPID1, dwPID2);
+			sys_err("evlilik altında değil : %u %u", dwPID1, dwPID2);
 			return;
 		}
 
@@ -603,7 +603,7 @@ namespace marriage
 		TMarriage* pMarriage = Get(dwPID1);
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
-			sys_err("not under marriage : %u %u", dwPID1, dwPID2);
+			sys_err("evlilik altında değil : %u %u", dwPID1, dwPID2);
 			return;
 		}
 
@@ -645,7 +645,7 @@ namespace marriage
 		TMarriage* pMarriage = Get(dwPID1);
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
-			sys_err("wrong marriage %u, %u", dwPID1, dwPID2);
+			sys_err("yanlış evlilik %u, %u", dwPID1, dwPID2);
 			return;
 		}
 
@@ -666,7 +666,7 @@ namespace marriage
 		TMarriage* pMarriage = Get(dwPID1);
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
-			sys_err("wrong marriage %u, %u", dwPID1, dwPID2);
+			sys_err("yanlış evlilik %u, %u", dwPID1, dwPID2);
 			return;
 		}
 
@@ -686,20 +686,20 @@ namespace marriage
 		TMarriage* pMarriage = Get(dwPID1);
 		if (!pMarriage || pMarriage->GetOther(dwPID1) != dwPID2)
 		{
-			sys_err("wrong marriage %u, %u", dwPID1, dwPID2);
+			sys_err("yanlış evlilik %u, %u", dwPID1, dwPID2);
 			return;
 		}
 
 		if (!pMarriage->pWeddingInfo)
 		{
-			sys_err("not under wedding %u, %u", dwPID1, dwPID2);
+			sys_err("düğün altında değil %u, %u", dwPID1, dwPID2);
 			return;
 		}
 
 		if (map_allow_find(WEDDING_MAP_INDEX))
 			if (!WeddingManager::instance().End(pMarriage->pWeddingInfo->dwMapIndex))
 			{
-				sys_err("wedding map error: map_index=%d", pMarriage->pWeddingInfo->dwMapIndex);
+				sys_err("düğün haritası hatası: map_index=%d", pMarriage->pWeddingInfo->dwMapIndex);
 				return;
 			}
 

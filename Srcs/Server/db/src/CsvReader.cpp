@@ -310,7 +310,7 @@ int cCsvTable::AsInt(size_t index) const
     const cCsvRow* const row = CurRow();
     Assert(row);
 	if (index >= row->size())
-		sys_err("file %s index %d >= row size %d of row %s", m_fileName.c_str(), index, row->size(), row->AsString(0));
+		sys_err("dosya %s indeks %d >= satır boyutu %d, satır %s", m_fileName.c_str(), index, row->size(), row->AsString(0));
     Assert(index < row->size());
     return row->AsInt(index);
 }
@@ -323,7 +323,7 @@ double cCsvTable::AsDouble(size_t index) const
     const cCsvRow* const row = CurRow();
     Assert(row);
 	if (index >= row->size())
-		sys_err("file %s index %d >= row size %d of row %s", m_fileName.c_str(), index, row->size(), row->AsString(0));
+		sys_err("dosya %s indeks %d >= satır boyutu %d, satır %s", m_fileName.c_str(), index, row->size(), row->AsString(0));
     Assert(index < row->size());
     return row->AsDouble(index);
 }
@@ -336,7 +336,7 @@ const char* cCsvTable::AsStringByIndex(size_t index) const
     const cCsvRow* const row = CurRow();
     Assert(row);
 	if (index >= row->size())
-		sys_err("file %s index %d >= row size %d of row %s", m_fileName.c_str(), index, row->size(), row->AsString(0));
+		sys_err("dosya %s indeks %d >= satır boyutu %d, satır %s", m_fileName.c_str(), index, row->size(), row->AsString(0));
     Assert(index < row->size());
     return row->AsString(index);
 }

@@ -171,7 +171,7 @@ void CGuildManager::Initialize()
 		*str = '\0';
 
 	if (!polyPower.Analyze(str))
-		sys_err("cannot set power poly: %s", str);
+		sys_err("güç poly ayarlanamıyor: %s", str);
 	else
 		sys_log(0, "POWER_POLY: %s", str);
 
@@ -179,7 +179,7 @@ void CGuildManager::Initialize()
 		*str = '\0';
 
 	if (!polyHandicap.Analyze(str))
-		sys_err("cannot set handicap poly: %s", str);
+		sys_err("handikap poly ayarlanamıyor: %s", str);
 	else
 		sys_log(0, "HANDICAP_POLY: %s", str);
 
@@ -250,7 +250,7 @@ void CGuildManager::Update()
 	{
 		// UNKNOWN_GUILD_MANAGE_UPDATE_LOG
 		/*
-		   sys_log(0, "GuildManager::Update size %d now %d top %d, %s(%u) vs %s(%u)",
+		   sys_log(0, "GuildManager::Update boyut %d şimdi %d üst %d, %s(%u) vs %s(%u)",
 		   m_WarMap.size(),
 		   now,
 		   m_pqOnWar.top().first,
@@ -307,7 +307,7 @@ void CGuildManager::Update()
 		p.dwGuildTo	= ws.GID[1];
 
 		CClientManager::instance().ForwardPacket(HEADER_DG_GUILD_WAR, &p, sizeof(p));
-		sys_log(0, "GuildWar: GUILD sending start of wait start war %d %d", ws.GID[0], ws.GID[1]);
+		sys_log(0, "GuildWar: LONCA savaş bekleme başlangıcı gönderiyor %d %d", ws.GID[0], ws.GID[1]);
 	}
 }
 
@@ -402,7 +402,7 @@ bool CGuildManager::IsHalfWinLadderPoint(DWORD dwGuildWinner, DWORD dwGuildLoser
 
 void CGuildManager::ProcessDraw(DWORD dwGuildID1, DWORD dwGuildID2)
 {
-	sys_log(0, "GuildWar: \tThe war between %d and %d is ended in draw", dwGuildID1, dwGuildID2);
+	sys_log(0, "GuildWar: \t%d ile %d arasındaki savaş berabere bitti", dwGuildID1, dwGuildID2);
 
 	GuildWarDraw(dwGuildID1);
 	GuildWarDraw(dwGuildID2);
@@ -475,7 +475,7 @@ void CGuildManager::WarEnd(DWORD GID1, DWORD GID2, bool bForceDraw)
 
 	if (itWarMap == m_WarMap[GID1].end())
 	{
-		sys_err("GuildWar: war not exist or already ended. [1]");
+		sys_err("GuildWar: savaş yok veya zaten bitti. [1]");
 		return;
 	}
 
@@ -484,7 +484,7 @@ void CGuildManager::WarEnd(DWORD GID1, DWORD GID2, bool bForceDraw)
 
 	if (!pData || pData->bEnd)
 	{
-		sys_err("GuildWar: war not exist or already ended. [2]");
+		sys_err("GuildWar: savaş yok veya zaten bitti. [2]");
 		return;
 	}
 
@@ -609,7 +609,7 @@ void CGuildManager::UpdateScore(DWORD dwGainGID, DWORD dwOppGID, int iScoreDelta
 
 		if (!p || p->bEnd)
 		{
-			sys_err("GuildWar: war not exist or already ended.");
+			sys_err("GuildWar: savaş yok veya zaten bitti.");
 			return;
 		}
 
@@ -633,7 +633,7 @@ void CGuildManager::UpdateScore(DWORD dwGainGID, DWORD dwOppGID, int iScoreDelta
 			iNewBetScore = p->iBetScore[1];
 		}
 
-		sys_log(0, "GuildWar: SendGuildWarScore guild %u wartype %u score_delta %d betscore_delta %d result %u, %u",
+		sys_log(0, "GuildWar: SendGuildWarScore lonca %u wartype %u score_delta %d betscore_delta %d sonuç %u, %u",
 				dwGainGID, p->bType, iScoreDelta, iBetScoreDelta, iNewScore, iNewBetScore);
 
 		CClientManager::instance().for_each_peer(FSendGuildWarScore(dwGainGID, dwOppGID, iNewScore, iNewBetScore));
@@ -672,14 +672,14 @@ bool CGuildManager::TakeBetPrice(DWORD dwGuildTo, DWORD dwGuildFrom, long lWarPr
 
 	if (it_from == m_map_kGuild.end() || it_to == m_map_kGuild.end())
 	{
-		sys_log(0, "TakeBetPrice: guild not exist %u %u",
+		sys_log(0, "TakeBetPrice: lonca yok %u %u",
 				dwGuildFrom, dwGuildTo);
 		return false;
 	}
 
 	if (it_from->second.gold < lWarPrice || it_to->second.gold < lWarPrice)
 	{
-		sys_log(0, "TakeBetPrice: not enough gold %u %d to %u %d",
+		sys_log(0, "TakeBetPrice: yeterli gold yok %u %d -> %u %d",
 				dwGuildFrom, it_from->second.gold, dwGuildTo, it_to->second.gold);
 		return false;
 	}
@@ -786,7 +786,7 @@ void CGuildManager::DepositMoney(DWORD dwGuild, INT iGold)
 
 	if (it == m_map_kGuild.end())
 	{
-		sys_err("No guild by id %u", dwGuild);
+		sys_err("%u kimlikli lonca yok", dwGuild);
 		return;
 	}
 
@@ -802,7 +802,7 @@ void CGuildManager::WithdrawMoney(CPeer* peer, DWORD dwGuild, INT iGold)
 
 	if (it == m_map_kGuild.end())
 	{
-		sys_err("No guild by id %u", dwGuild);
+		sys_err("%u kimlikli lonca yok", dwGuild);
 		return;
 	}
 
@@ -934,9 +934,9 @@ void CGuildManager::BootReserveWar()
 			if (i == 0 || (int) t.dwTime - CClientManager::instance().GetCurrentTime() < 0)
 			{
 				if (i == 0)
-					sys_log(0, "%s : DB was shutdowned while war is being.", buf);
+					sys_log(0, "%s : Savaş sürerken DB kapatıldı.", buf);
 				else
-					sys_log(0, "%s : left time lower than 5 minutes, will be canceled", buf);
+					sys_log(0, "%s : kalan süre 5 dakikadan az, iptal edilecek", buf);
 
 				pkReserve->Draw();
 				delete pkReserve;
@@ -1061,7 +1061,7 @@ bool CGuildManager::ReserveWar(TPacketGuildWar * p)
 
 	if (pmsg->Get()->uiAffectedRows == 0 || pmsg->Get()->uiInsertID == 0 || pmsg->Get()->uiAffectedRows == (uint32_t)-1)
 	{
-		sys_err("GuildWar: Cannot insert row");
+		sys_err("GuildWar: Satır eklenemiyor");
 		return false;
 	}
 
@@ -1093,7 +1093,7 @@ void CGuildManager::ProcessReserveWar()
 			TGuild & r_1 = m_map_kGuild[r.dwGuildFrom];
 			TGuild & r_2 = m_map_kGuild[r.dwGuildTo];
 
-			sys_log(0, "GuildWar: started GID1 %u GID2 %u %d time %d min %d", r.dwGuildFrom, r.dwGuildTo, r.bStarted, dwCurTime - r.dwTime, iMin);
+			sys_log(0, "GuildWar: başladı GID1 %u GID2 %u %d süre %d dk %d", r.dwGuildFrom, r.dwGuildTo, r.bStarted, dwCurTime - r.dwTime, iMin);
 
 			if (iMin <= 0)
 			{
@@ -1141,7 +1141,7 @@ bool CGuildManager::Bet(DWORD dwID, const char * c_pszLogin, DWORD dwGold, DWORD
 
 	if (it == m_map_kWarReserve.end())
 	{
-		sys_log(0, "WAR_RESERVE: Bet: cannot find reserve war by id %u", dwID);
+		sys_log(0, "WAR_RESERVE: Bet: id %u ile rezerve savaş bulunamıyor", dwID);
 		snprintf(szQuery, sizeof(szQuery), "INSERT INTO item_award (login, vnum, socket0, given_time) VALUES('%s', %d, %u, NOW())",
 				c_pszLogin, ITEM_ELK_VNUM, dwGold);
 		CDBManager::instance().AsyncQuery(szQuery);
@@ -1150,7 +1150,7 @@ bool CGuildManager::Bet(DWORD dwID, const char * c_pszLogin, DWORD dwGold, DWORD
 
 	if (!it->second->Bet(c_pszLogin, dwGold, dwGuild))
 	{
-		sys_log(0, "WAR_RESERVE: Bet: cannot bet id %u, login %s, gold %u, guild %u", dwID, c_pszLogin, dwGold, dwGuild);
+		sys_log(0, "WAR_RESERVE: Bet: bahis yapılamıyor id %u, giriş %s, gold %u, lonca %u", dwID, c_pszLogin, dwGold, dwGuild);
 		snprintf(szQuery, sizeof(szQuery), "INSERT INTO item_award (login, vnum, socket0, given_time) VALUES('%s', %d, %u, NOW())",
 				c_pszLogin, ITEM_ELK_VNUM, dwGold);
 		CDBManager::instance().AsyncQuery(szQuery);
@@ -1259,19 +1259,19 @@ bool CGuildWarReserve::Bet(const char * pszLogin, DWORD dwGold, DWORD dwGuild)
 
 	if (m_data.dwGuildFrom != dwGuild && m_data.dwGuildTo != dwGuild)
 	{
-		sys_log(0, "GuildWarReserve::Bet: invalid guild id");
+		sys_log(0, "GuildWarReserve::Bet: geçersiz lonca id");
 		return false;
 	}
 
 	if (m_data.bStarted)
 	{
-		sys_log(0, "GuildWarReserve::Bet: war is already started");
+		sys_log(0, "GuildWarReserve::Bet: savaş zaten başladı");
 		return false;
 	}
 
 	if (mapBet.find(pszLogin) != mapBet.end())
 	{
-		sys_log(0, "GuildWarReserve::Bet: failed. already bet");
+		sys_log(0, "GuildWarReserve::Bet: başarısız. zaten bahis yapılmış");
 		return false;
 	}
 
@@ -1282,7 +1282,7 @@ bool CGuildWarReserve::Bet(const char * pszLogin, DWORD dwGold, DWORD dwGuild)
 	auto pmsg(CDBManager::instance().DirectQuery(szQuery));
 	if (pmsg->Get()->uiAffectedRows == 0 || pmsg->Get()->uiAffectedRows == (uint32_t)-1)
 	{
-		sys_log(0, "GuildWarReserve::Bet: failed. cannot insert row to guild_war_bet table");
+		sys_log(0, "GuildWarReserve::Bet: başarısız. guild_war_bet tablosuna satır eklenemiyor");
 		return false;
 	}
 
@@ -1373,12 +1373,12 @@ void CGuildWarReserve::End(int iScoreFrom, int iScoreTo)
 	{
 		if (m_data.lHandicap > iScoreFrom - iScoreTo)
 		{
-			sys_log(0, "WAR_REWARD: End: failed to overcome handicap, From is strong but To won");
+			sys_log(0, "WAR_REWARD: Son: handikap aşılamadı, From güçlü ama To kazandı");
 			dwWinner = m_data.dwGuildTo;
 		}
 		else
 		{
-			sys_log(0, "WAR_REWARD: End: success to overcome handicap, From win!");
+			sys_log(0, "WAR_REWARD: Son: handikap başarıyla aşıldı, From kazandı!");
 			dwWinner = m_data.dwGuildFrom;
 		}
 	}
@@ -1386,12 +1386,12 @@ void CGuildWarReserve::End(int iScoreFrom, int iScoreTo)
 	{
 		if (m_data.lHandicap > iScoreTo - iScoreFrom)
 		{
-			sys_log(0, "WAR_REWARD: End: failed to overcome handicap, To is strong but From won");
+			sys_log(0, "WAR_REWARD: Son: handikap aşılamadı, To güçlü ama From kazandı");
 			dwWinner = m_data.dwGuildFrom;
 		}
 		else
 		{
-			sys_log(0, "WAR_REWARD: End: success to overcome handicap, To win!");
+			sys_log(0, "WAR_REWARD: Son: handikap başarıyla aşıldı, To kazandı!");
 			dwWinner = m_data.dwGuildTo;
 		}
 	}
@@ -1413,17 +1413,17 @@ void CGuildWarReserve::End(int iScoreFrom, int iScoreTo)
 		dwWinnerBet = m_data.dwBetTo;
 	else
 	{
-		sys_err("WAR_REWARD: fatal error, winner does not exist!");
+		sys_err("WAR_REWARD: ölümcül hata, kazanan yok!");
 		return;
 	}
 
 	if (dwWinnerBet == 0)
 	{
-		sys_err("WAR_REWARD: total bet money on winner is zero");
+		sys_err("WAR_REWARD: kazanana yatırılan toplam bahis sıfır");
 		return;
 	}
 
-	sys_log(0, "WAR_REWARD: End: Total bet: %u, Winner bet: %u", dwTotalBet, dwWinnerBet);
+	sys_log(0, "WAR_REWARD: Son: Toplam bahis: %u, Kazanan bahsi: %u", dwTotalBet, dwWinnerBet);
 
 	itertype(mapBet) it = mapBet.begin();
 

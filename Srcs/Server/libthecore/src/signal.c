@@ -19,7 +19,7 @@ RETSIGTYPE checkpointing(int sig)
 {
     if (!tics)
     {
-        sys_err("CHECKPOINT shutdown: tics did not updated.");
+        sys_err("CHECKPOINT kapanış: tics güncellenmedi.");
         if (bCheckpointCheck)
             abort();
     }
@@ -31,7 +31,7 @@ RETSIGTYPE checkpointing(int sig)
 RETSIGTYPE hupsig(int sig)
 {
     shutdowned = TRUE;
-    sys_log(0, "SIGHUP, SIGINT, SIGTERM signal has been received. shutting down."); // @warme012
+    sys_log(0, "SIGHUP, SIGINT, SIGTERM sinyali alındı. kapatılıyor."); // @warme012
 }
 
 RETSIGTYPE usrsig(int sig)

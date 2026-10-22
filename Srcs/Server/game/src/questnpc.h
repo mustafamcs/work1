@@ -113,7 +113,7 @@ namespace quest
 		void NPC::MatchingQuest(PC& pc, TQuestMapType& QuestMap, FuncMatch& fMatch, FuncMiss& fMiss)
 		{
 			if (test_server)
-				sys_log(0, "Click Quest : MatchingQuest");
+				sys_log(0, "Görev Tıklandı : MatchingQuest");
 
 			PC::QuestInfoIterator itPCQuest = pc.quest_begin();
 			typename TQuestMapType::iterator itQuestMap = QuestMap.begin();

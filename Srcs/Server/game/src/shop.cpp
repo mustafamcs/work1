@@ -101,7 +101,7 @@ void CShop::SetShopItems(TShopItemTable * pTable, BYTE bItemCount)
 
 			if (!pkItem)
 			{
-				sys_err("cannot find item on pos (%d, %d) (name: %s)", pTable->pos.window_type, pTable->pos.cell, m_pkPC->GetName());
+				sys_err("(%d, %d) konumunda eşya bulunamıyor (isim: %s)", pTable->pos.window_type, pTable->pos.cell, m_pkPC->GetName());
 				continue;
 			}
 
@@ -117,7 +117,7 @@ void CShop::SetShopItems(TShopItemTable * pTable, BYTE bItemCount)
 
 		if (!item_table)
 		{
-			sys_err("Shop: no item table by item vnum #%d", pTable->vnum);
+			sys_err("Dükkan: eşya vnum #%d için eşya tablosu yok", pTable->vnum);
 			continue;
 		}
 
@@ -125,7 +125,7 @@ void CShop::SetShopItems(TShopItemTable * pTable, BYTE bItemCount)
 
 		if (IsPCShop())
 		{
-			sys_log(0, "MyShop: use position %d", pTable->display_pos);
+			sys_log(0, "MyShop: kullanılan konum %d", pTable->display_pos);
 			iPos = pTable->display_pos;
 		}
 		else
@@ -133,7 +133,7 @@ void CShop::SetShopItems(TShopItemTable * pTable, BYTE bItemCount)
 
 		if (iPos < 0)
 		{
-			sys_err("not enough shop window");
+			sys_err("yeterli dükkan penceresi yok");
 			continue;
 		}
 
@@ -141,11 +141,11 @@ void CShop::SetShopItems(TShopItemTable * pTable, BYTE bItemCount)
 		{
 			if (IsPCShop())
 			{
-				sys_err("not empty position for pc shop %s[%d]", m_pkPC->GetName(), m_pkPC->GetPlayerID());
+				sys_err("pc dükkanı için konum boş değil %s[%d]", m_pkPC->GetName(), m_pkPC->GetPlayerID());
 			}
 			else
 			{
-				sys_err("not empty position for npc shop");
+				sys_err("npc dükkanı için konum boş değil");
 			}
 			continue;
 		}
@@ -198,7 +198,7 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 {
 	if (pos >= m_itemVector.size())
 	{
-		sys_log(0, "Shop::Buy : invalid position %d : %s", pos, ch->GetName());
+		sys_log(0, "Shop::Buy : geçersiz konum %d : %s", pos, ch->GetName());
 		return SHOP_SUBHEADER_GC_INVALID_POS;
 	}
 
@@ -236,7 +236,7 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 	{
 		if (!pkSelectedItem)
 		{
-			sys_log(0, "Shop::Buy : Critical: This user seems to be a hacker : invalid pcshop item : BuyerPID:%d SellerPID:%d",
+			sys_log(0, "Shop::Buy : Kritik: Bu kullanıcı hileci gibi görünüyor : geçersiz pcshop eşyası : AlıcıPID:%d SatıcıPID:%d",
 					ch->GetPlayerID(),
 					m_pkPC->GetPlayerID());
 
@@ -245,7 +245,7 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 
 		if ((pkSelectedItem->GetOwner() != m_pkPC))
 		{
-			sys_log(0, "Shop::Buy : Critical: This user seems to be a hacker : invalid pcshop item : BuyerPID:%d SellerPID:%d",
+			sys_log(0, "Shop::Buy : Kritik: Bu kullanıcı hileci gibi görünüyor : geçersiz pcshop eşyası : AlıcıPID:%d SatıcıPID:%d",
 					ch->GetPlayerID(),
 					m_pkPC->GetPlayerID());
 
@@ -281,7 +281,7 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 #else
 	if (ch->GetGold() < (long long) dwPrice)
 	{
-		sys_log(1, "Shop::Buy : Not enough money : %s has %d, price %lld", ch->GetName(), ch->GetGold(), dwPrice);
+		sys_log(1, "Shop::Buy : Yeterli para yok : %s sahip %d, fiyat %lld", ch->GetName(), ch->GetGold(), dwPrice);
 		return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY;
 	}
 #endif
@@ -314,12 +314,12 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 	{
 		if (m_pkPC)
 		{
-			sys_log(1, "Shop::Buy at PC Shop : Inventory full : %s size %d", ch->GetName(), item->GetSize());
+			sys_log(1, "Shop::Buy PC Dükkanında : Envanter dolu : %s boyut %d", ch->GetName(), item->GetSize());
 			return SHOP_SUBHEADER_GC_INVENTORY_FULL;
 		}
 		else
 		{
-			sys_log(1, "Shop::Buy : Inventory full : %s size %d", ch->GetName(), item->GetSize());
+			sys_log(1, "Shop::Buy : Envanter dolu : %s boyut %d", ch->GetName(), item->GetSize());
 			M2_DESTROY_ITEM(item);
 			return SHOP_SUBHEADER_GC_INVENTORY_FULL;
 		}

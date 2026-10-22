@@ -56,7 +56,7 @@ EVENTFUNC(poison_event)
 	LPCHARACTER pkAttacker = CHARACTER_MANAGER::instance().FindByPID(info->attacker_pid);
 
 	int dam = ch->GetMaxHP() * GetPoisonDamageRate(ch) / 1000;
-	if (test_server) ch->ChatPacket(CHAT_TYPE_NOTICE, "Poison Damage %d", dam);
+	if (test_server) ch->ChatPacket(CHAT_TYPE_NOTICE, "Zehir Hasarı %d", dam);
 
 	if (ch->Damage(pkAttacker, dam, DAMAGE_TYPE_POISON))
 	{
@@ -129,7 +129,7 @@ EVENTFUNC(bleeding_event)
 	LPCHARACTER pkAttacker = CHARACTER_MANAGER::instance().FindByPID(info->attacker_pid);
 
 	int dam = ch->GetMaxHP() * GetBleedingDamageRate(ch) / 1000;
-	if (test_server) ch->ChatPacket(CHAT_TYPE_NOTICE, "Bleeding Damage %d", dam);
+	if (test_server) ch->ChatPacket(CHAT_TYPE_NOTICE, "Kanama Hasarı %d", dam);
 
 	if (ch->Damage(pkAttacker, dam, DAMAGE_TYPE_BLEEDING))
 	{
@@ -182,7 +182,7 @@ EVENTFUNC(fire_event)
 	LPCHARACTER pkAttacker = CHARACTER_MANAGER::instance().FindByPID(info->attacker_pid);
 
 	int dam = info->amount;
-	if (test_server) ch->ChatPacket(CHAT_TYPE_NOTICE, "Fire Damage %d", dam);
+	if (test_server) ch->ChatPacket(CHAT_TYPE_NOTICE, "Ateş Hasarı %d", dam);
 
 	if (ch->Damage(pkAttacker, dam, DAMAGE_TYPE_FIRE))
 	{

@@ -456,7 +456,7 @@ void Item_GetDamage(LPITEM pkItem, int* pdamMin, int* pdamMax)
 	}
 
 	if (pkItem->GetType() != ITEM_WEAPON)
-		sys_err("Item_GetDamage - !ITEM_WEAPON vnum=%d, type=%d", pkItem->GetOriginalVnum(), pkItem->GetType());
+		sys_err("Item_GetDamage - !ITEM_WEAPON vnum=%d, tip=%d", pkItem->GetOriginalVnum(), pkItem->GetType());
 
 	*pdamMin = pkItem->GetValue(3);
 	*pdamMax = pkItem->GetValue(4);
@@ -486,7 +486,7 @@ int CalcMeleeDamage(LPCHARACTER pkAttacker, LPCHARACTER pkVictim, bool bIgnoreDe
 				break;
 
 			case WEAPON_BOW:
-				sys_err("CalcMeleeDamage should not handle bows (name: %s)", pkAttacker->GetName());
+				sys_err("CalcMeleeDamage yayları işlememeli (isim: %s)", pkAttacker->GetName());
 				return 0;
 
 			default:
@@ -818,13 +818,13 @@ bool IS_SPEED_HACK(LPCHARACTER ch, LPCHARACTER victim, DWORD current_time)
 
 			if (test_server)
 			{
-				sys_log(0, "%s attack hack! time (delta, limit)=(%u, %u) hack_count %d",
+				sys_log(0, "%s saldırı hilesi! süre (delta, limit)=(%u, %u) hile_sayısı %d",
 						ch->GetName(),
 						current_time - ch->m_kAttackLog.dwTime,
 						GET_ATTACK_SPEED(ch),
 						ch->m_speed_hack_count);
 
-				ch->ChatPacket(CHAT_TYPE_INFO, "%s attack hack! time (delta, limit)=(%u, %u) hack_count %d",
+				ch->ChatPacket(CHAT_TYPE_INFO, "%s saldırı hilesi! süre (delta, limit)=(%u, %u) hile_sayısı %d",
 						ch->GetName(),
 						current_time - ch->m_kAttackLog.dwTime,
 						GET_ATTACK_SPEED(ch),
@@ -847,13 +847,13 @@ bool IS_SPEED_HACK(LPCHARACTER ch, LPCHARACTER victim, DWORD current_time)
 
 			if (test_server)
 			{
-				sys_log(0, "%s Attack Speed HACK! time (delta, limit)=(%u, %u), hack_count = %d",
+				sys_log(0, "%s Saldırı Hızı HİLESİ! süre (delta, limit)=(%u, %u), hile_sayısı = %d",
 						ch->GetName(),
 						current_time - victim->m_AttackedLog.dwAttackedTime,
 						GET_ATTACK_SPEED(ch),
 						ch->m_speed_hack_count);
 
-				ch->ChatPacket(CHAT_TYPE_INFO, "Attack Speed Hack(%s), (delta, limit)=(%u, %u)",
+				ch->ChatPacket(CHAT_TYPE_INFO, "Saldırı Hızı Hilesi(%s), (delta, limit)=(%u, %u)",
 						ch->GetName(),
 						current_time - victim->m_AttackedLog.dwAttackedTime,
 						GET_ATTACK_SPEED(ch));

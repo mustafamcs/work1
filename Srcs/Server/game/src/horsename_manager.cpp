@@ -31,7 +31,7 @@ void CHorseNameManager::UpdateHorseName(DWORD dwPlayerID, const char* szHorseNam
 {
 	if ( szHorseName == NULL )
 	{
-		sys_err("HORSE_NAME: NULL NAME (%u)", dwPlayerID);
+		sys_err("HORSE_NAME: NULL İSİM (%u)", dwPlayerID);
 		szHorseName = "";
 	}
 

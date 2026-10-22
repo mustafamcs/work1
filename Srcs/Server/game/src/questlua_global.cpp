@@ -168,7 +168,7 @@ namespace quest
 		}
 		else
 		{
-			sys_err("QUEST wrong skin index");
+			sys_err("GÖREV hatalı görünüm indeksi");
 		}
 
 		return 0;
@@ -180,7 +180,7 @@ namespace quest
 		if ((n != 2 || !lua_isnumber(L, 2) || !lua_isstring(L, 1)) &&
 				(n != 3 || !lua_isstring(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3)))
 		{
-			sys_err("QUEST set_server_timer argument count wrong.");
+			sys_err("GÖREV set_server_timer argüman sayısı hatalı.");
 			return 0;
 		}
 
@@ -206,7 +206,7 @@ namespace quest
 		if ((n != 2 || !lua_isnumber(L, 2) || !lua_isstring(L, 1)) &&
 				(n != 3 || !lua_isstring(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3)))
 		{
-			sys_err("QUEST set_server_timer argument count wrong.");
+			sys_err("GÖREV set_server_timer argüman sayısı hatalı.");
 			return 0;
 		}
 		const char * name = lua_tostring(L, 1);
@@ -238,7 +238,7 @@ namespace quest
 		int n = lua_gettop(L);
 
 		if (n != 2 || !lua_isnumber(L, -1) || !lua_isstring(L, -2))
-			sys_err("QUEST set_timer argument count wrong.");
+			sys_err("GÖREV set_timer argüman sayısı hatalı.");
 		else
 		{
 			const char * name = lua_tostring(L, -2);
@@ -261,7 +261,7 @@ namespace quest
 	ALUA(_set_timer)
 	{
 		if (lua_gettop(L) != 1 || !lua_isnumber(L, -1))
-			sys_err("QUEST invalid argument.");
+			sys_err("GÖREV geçersiz argüman.");
 		else
 		{
 			double t = lua_tonumber(L, -1);
@@ -279,7 +279,7 @@ namespace quest
 
 		if (n != 2 || !lua_isnumber(L, -1) || !lua_isstring(L, -2))
 		{
-			sys_err("QUEST set_timer argument count wrong.");
+			sys_err("GÖREV set_timer argüman sayısı hatalı.");
 		}
 		else
 		{
@@ -307,7 +307,7 @@ namespace quest
 		int n = lua_gettop(L);
 
 		if (n != 1 || !lua_isstring(L, -1))
-			sys_err("QUEST set_timer argument count wrong.");
+			sys_err("GÖREV set_timer argüman sayısı hatalı.");
 		else
 		{
 			CQuestManager & q = CQuestManager::instance();
@@ -338,7 +338,7 @@ namespace quest
 		if (lua_isstring(L, -1))
 			CQuestManager::Instance().AddScript(lua_tostring(L,-1));
 		else
-			sys_err("QUEST wrong argument: questname: %s", CQuestManager::instance().GetCurrentQuestName().c_str());
+			sys_err("GÖREV hatalı argüman: görevadı: %s", CQuestManager::instance().GetCurrentQuestName().c_str());
 
 		return 0;
 	}
@@ -552,7 +552,7 @@ namespace quest
 
 		if (MAX_PRIV_NUM <= type)
 		{
-			sys_err("PRIV_MANAGER: _give_char_privilege: wrong empire priv type(%u)", type);
+			sys_err("PRIV_MANAGER: _give_char_privilege: hatalı imparatorluk ayrıcalık tipi(%u)", type);
 			return 0;
 		}
 
@@ -571,7 +571,7 @@ namespace quest
 
 		if (MAX_PRIV_NUM <= type)
 		{
-			sys_err("PRIV_MANAGER: _give_empire_privilege: wrong empire priv type(%u)", type);
+			sys_err("PRIV_MANAGER: _give_empire_privilege: hatalı imparatorluk ayrıcalık tipi(%u)", type);
 			return 0;
 		}
 
@@ -595,7 +595,7 @@ namespace quest
 
 		if (MAX_PRIV_NUM <= type)
 		{
-			sys_err("PRIV_MANAGER: _give_guild_privilege: wrong empire priv type(%u)", type);
+			sys_err("PRIV_MANAGER: _give_guild_privilege: hatalı imparatorluk ayrıcalık tipi(%u)", type);
 			return 0;
 		}
 
@@ -681,7 +681,7 @@ namespace quest
 	ALUA(_get_guildid_byname)
 	{
 		if ( !lua_isstring( L, 1 ) ) {
-			sys_err( "_get_guildid_byname() - invalud argument" );
+			sys_err( "_get_guildid_byname() - geçersiz argüman" );
 			lua_pushnumber( L, 0 );
 			return 1;
 		}
@@ -799,7 +799,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -814,7 +814,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -828,7 +828,7 @@ namespace quest
 
 		if (test_server)
 		{
-			sys_log(0, "find_pc_cond map=%d, job=%d, level=%d~%d",
+			sys_log(0, "find_pc_cond harita=%d, sınıf=%d, seviye=%d~%d",
 					ch->GetMapIndex(),
 					uiJobFlag,
 					iMinLev, iMaxLev);
@@ -848,7 +848,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -873,7 +873,7 @@ namespace quest
 			}
 		}
 
-		//sys_err("not find(race=%d)", race);
+		//sys_err("bulunamadı(ırk=%d)", race);
 
 		lua_pushnumber(L, 0);
 		return 1;
@@ -890,8 +890,8 @@ namespace quest
 		//assert(L == pqs->co);
 		if (L!=pqs->co)
 		{
-			luaL_error(L, "running thread != current thread???");
-			sys_log(0,"running thread != current thread???");
+			luaL_error(L, "çalışan thread != şu anki thread???");
+			sys_log(0,"çalışan thread != şu anki thread???");
 			return -1;
 		}
 		if (pPC)
@@ -933,7 +933,7 @@ namespace quest
 			lua_pushnumber(L, nRet );
 
 			if ( test_server )
-				sys_log(0,"Get_quest_state name %s value %d", stQuestName.c_str(), nRet );
+				sys_log(0,"Get_quest_state isim %s değer %d", stQuestName.c_str(), nRet );
 		}
 		else
 		{
@@ -1189,7 +1189,7 @@ namespace quest
 
 		if ( COXEventManager::instance().AddQuiz(level, quiz, answer) == false )
 		{
-			sys_log(0, "OXEVENT : Cannot add quiz. %d %s %d", level, quiz, answer);
+			sys_log(0, "OXEVENT : Yarışma eklenemiyor. %d %s %d", level, quiz, answer);
 		}
 
 		return 1;
@@ -1317,7 +1317,7 @@ namespace quest
 				}
 			}
 
-			sys_log(0, "QUEST Spawn Monstster: VNUM(%u) COUNT(%u) isAggresive(%b)", dwVnum, SpawnCount, isAggresive);
+			sys_log(0, "GÖREV Yaratık Doğur: VNUM(%u) SAYI(%u) isAggresive(%b)", dwVnum, SpawnCount, isAggresive);
 		}
 
 		lua_pushnumber(L, SpawnCount);
@@ -1346,7 +1346,7 @@ namespace quest
 		PIXEL_POSITION pos;
 		if (!SECTREE_MANAGER::instance().GetMapBasePositionByMapIndex(iMapIndex, pos))
 		{
-			sys_err("QUEST _spawn_mob_in_map: cannot find base position in this map %d", iMapIndex);
+			sys_err("GÖREV _spawn_mob_in_map: bu haritada taban konumu bulunamıyor %d", iMapIndex);
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -1374,7 +1374,7 @@ namespace quest
 				}
 			}
 
-			sys_log(0, "QUEST Spawn Monster: VNUM(%u) COUNT(%u) isAggressive(%b)", dwVnum, SpawnCount, isAggressive);
+			sys_log(0, "GÖREV Yaratık Doğur: VNUM(%u) SAYI(%u) isAggressive(%b)", dwVnum, SpawnCount, isAggressive);
 		}
 
 		lua_pushnumber(L, SpawnCount);
@@ -1443,7 +1443,7 @@ namespace quest
 
 		if (0 == mapIndex)
 		{
-			sys_err("_purge_area: cannot get a map index with (%u, %u)", x1, y1);
+			sys_err("_purge_area: (%u, %u) ile harita indeksi alınamıyor", x1, y1);
 			return 0;
 		}
 
@@ -1506,7 +1506,7 @@ namespace quest
 
 		if (0 == mapIndex)
 		{
-			sys_err("_warp_all_in_area_to_area: cannot get a map index with (%u, %u)", from_x1, from_y1);
+			sys_err("_warp_all_in_area_to_area: (%u, %u) ile harita indeksi alınamıyor", from_x1, from_y1);
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -1520,7 +1520,7 @@ namespace quest
 			pSectree->for_each(func);
 
 			lua_pushnumber(L, func.warpCount);
-			sys_log(0, "_warp_all_in_area_to_area: %u character warp", func.warpCount);
+			sys_log(0, "_warp_all_in_area_to_area: %u karakter ışınlandı", func.warpCount);
 			return 1;
 		}
 		else
@@ -1535,7 +1535,7 @@ namespace quest
 	{
 		if (!lua_isnumber (L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 
@@ -1543,7 +1543,7 @@ namespace quest
 
 		if (!pItemGroup)
 		{
-			sys_err("cannot find special item group %d", (DWORD)lua_tonumber(L, 1));
+			sys_err("özel eşya grubu bulunamıyor %d", (DWORD)lua_tonumber(L, 1));
 			return 0;
 		}
 

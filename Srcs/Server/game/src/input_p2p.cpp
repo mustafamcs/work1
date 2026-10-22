@@ -50,7 +50,7 @@ int CInputP2P::Relay(LPDESC d, const char * c_pData, size_t uiBytes)
 
 	if (p->lSize < 0)
 	{
-		sys_err("invalid packet length %d", p->lSize);
+		sys_err("geçersiz paket uzunluğu %d", p->lSize);
 		d->SetPhase(PHASE_CLOSE);
 		return -1;
 	}
@@ -112,7 +112,7 @@ int CInputP2P::Notice(LPDESC d, const char * c_pData, size_t uiBytes)
 
 	if (p->lSize < 0)
 	{
-		sys_err("invalid packet length %d", p->lSize);
+		sys_err("geçersiz paket uzunluğu %d", p->lSize);
 		d->SetPhase(PHASE_CLOSE);
 		return -1;
 	}
@@ -136,7 +136,7 @@ int CInputP2P::MonarchNotice(LPDESC d, const char * c_pData, size_t uiBytes)
 
 	if (p->lSize < 0)
 	{
-		sys_err("invalid packet length %d", p->lSize);
+		sys_err("geçersiz paket uzunluğu %d", p->lSize);
 		d->SetPhase(PHASE_CLOSE);
 		return -1;
 	}
@@ -204,7 +204,7 @@ int CInputP2P::Guild(LPDESC d, const char* c_pData, size_t uiBytes)
 				return sizeof(int);
 			}
 		default:
-			sys_err ("UNKNOWN GUILD SUB PACKET");
+			sys_err ("BİLİNMEYEN LONCA ALT PAKETİ");
 			break;
 	}
 	return 0;
@@ -309,14 +309,14 @@ void CInputP2P::Setup(LPDESC d, const char * c_pData)
 void CInputP2P::MessengerAdd(const char * c_pData)
 {
 	TPacketGGMessenger * p = (TPacketGGMessenger *) c_pData;
-	sys_log(0, "P2P: Messenger Add %s %s", p->szAccount, p->szCompanion);
+	sys_log(0, "P2P: Messenger Ekle %s %s", p->szAccount, p->szCompanion);
 	MessengerManager::instance().__AddToList(p->szAccount, p->szCompanion);
 }
 
 void CInputP2P::MessengerRemove(const char * c_pData)
 {
 	TPacketGGMessenger * p = (TPacketGGMessenger *) c_pData;
-	sys_log(0, "P2P: Messenger Remove %s %s", p->szAccount, p->szCompanion);
+	sys_log(0, "P2P: Messenger Kaldır %s %s", p->szAccount, p->szCompanion);
 	MessengerManager::instance().__RemoveFromList(p->szAccount, p->szCompanion);
 }
 
@@ -437,12 +437,12 @@ void CInputP2P::BlockChat(const char * c_pData)
 
 	if (ch)
 	{
-		sys_log(0, "BLOCK CHAT apply name %s dur %d", p->szName, p->lBlockDuration);
+		sys_log(0, "SOHBET ENGELLE uygulandı isim %s süre %d", p->szName, p->lBlockDuration);
 		ch->AddAffect(AFFECT_BLOCK_CHAT, POINT_NONE, 0, AFF_NONE, p->lBlockDuration, 0, true);
 	}
 	else
 	{
-		sys_log(0, "BLOCK CHAT fail name %s dur %d", p->szName, p->lBlockDuration);
+		sys_log(0, "SOHBET ENGELLE başarısız isim %s süre %d", p->szName, p->lBlockDuration);
 	}
 }
 // END_OF_BLOCK_CHAT
@@ -452,7 +452,7 @@ void CInputP2P::IamAwake(LPDESC d, const char * c_pData)
 {
 	std::string hostNames;
 	P2P_MANAGER::instance().GetP2PHostNames(hostNames);
-	sys_log(0, "P2P Awakeness check from %s. My P2P connection number is %d. and details...\n%s", d->GetHostName(), P2P_MANAGER::instance().GetDescCount(), hostNames.c_str());
+	sys_log(0, "%s kaynaklı P2P canlılık kontrolü. P2P bağlantı sayım %d. ve detaylar...\n%s", d->GetHostName(), P2P_MANAGER::instance().GetDescCount(), hostNames.c_str());
 }
 
 int CInputP2P::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
@@ -492,7 +492,7 @@ int CInputP2P::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 			break;
 
 		case HEADER_GG_SHUTDOWN:
-			sys_err("Accept shutdown p2p command from %s.", d->GetHostName());
+			sys_err("%s tarafından p2p kapatma komutu kabul edildi.", d->GetHostName());
 			Shutdown(10);
 			break;
 

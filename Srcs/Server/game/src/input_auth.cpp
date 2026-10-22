@@ -74,7 +74,7 @@ void CInputAuth::Login(LPDESC d, const char * c_pData)
 
 	if (!g_bAuthServer)
 	{
-		sys_err ("CInputAuth class is not for game server. IP %s might be a hacker.",
+		sys_err ("CInputAuth sınıfı oyun sunucusu için değil. IP %s hileci olabilir.",
 			inet_ntoa(d->GetAddr().sin_addr));
 		d->DelayedDisconnect(5);
 		return;
@@ -188,7 +188,7 @@ int CInputAuth::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 {
 	if (!g_bAuthServer)
 	{
-		sys_err ("CInputAuth class is not for game server. IP %s might be a hacker.",
+		sys_err ("CInputAuth sınıfı oyun sunucusu için değil. IP %s hileci olabilir.",
 			inet_ntoa(d->GetAddr().sin_addr));
 		d->DelayedDisconnect(5);
 		return 0;
@@ -213,7 +213,7 @@ int CInputAuth::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 			break;
 
 		default:
-			sys_err("This phase does not handle this header %d (0x%x)(phase: AUTH)", bHeader, bHeader);
+			sys_err("Bu aşama bu başlığı işlemiyor %d (0x%x)(aşama: AUTH)", bHeader, bHeader);
 			break;
 	}
 

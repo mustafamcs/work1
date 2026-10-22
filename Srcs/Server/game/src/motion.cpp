@@ -96,7 +96,7 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 
 			default:
 				fclose(fp);
-				sys_err("Motion: no process for this motion(%d) vnum(%d)", motion, mobTable->dwVnum);
+				sys_err("Motion: bu hareket için işlem yok(%d) vnum(%d)", motion, mobTable->dwVnum);
 				return NULL;
 		}
 
@@ -125,7 +125,7 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 	}
 	else
 	{
-		sys_err("Motion: %s have not motlist.txt vnum(%d) folder(%s)", folder, mobTable->dwVnum, mobTable->szFolder);
+		sys_err("Motion: %s motlist.txt yok vnum(%d) klasör(%s)", folder, mobTable->dwVnum, mobTable->szFolder);
 	}
 
 	return NULL;
@@ -146,14 +146,14 @@ static void LoadMotion(CMotionSet* pMotionSet, TMobTable* mob_table, EPublicMoti
 	{
 		if (motion == MOTION_RUN)
 			if (0.0f == pMotion->GetAccumVector().y)
-				sys_err("cannot find accumulation data in file '%s'", cpFileName);
+				sys_err("'%s' dosyasında birikim verisi bulunamıyor", cpFileName);
 
 		pMotionSet->Insert(MAKE_MOTION_KEY(MOTION_MODE_GENERAL, motion), pMotion);
 	}
 	else
 	{
 		M2_DELETE(pMotion);
-		sys_err("Motion: Load failed vnum(%d) motion(%d) file(%s)", mob_table->dwVnum, motion, cpFileName);
+		sys_err("Motion: Yükleme başarısız vnum(%d) motion(%d) dosya(%s)", mob_table->dwVnum, motion, cpFileName);
 	}
 }
 
@@ -190,7 +190,7 @@ static void LoadSkillMotion(CMotionSet* pMotionSet, CMob* pMob, EPublicMotion mo
 	{
 		if (mob_table->Skills[idx].dwVnum != 0)
 		{
-			sys_err("Motion: Skill exist but no motion data for index %d mob %u skill %u",
+			sys_err("Motion: Beceri var ama indeks %d için hareket verisi yok mob %u beceri %u",
 				   	idx, mob_table->dwVnum, mob_table->Skills[idx].dwVnum);
 		}
 		M2_DELETE(pMotion);
@@ -432,7 +432,7 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 
 	if (!rkTextFileLoader.GetTokenFloat("motionduration", &m_fDuration))
 	{
-		sys_err("Motion: no motion duration %s", c_pszFileName);
+		sys_err("Motion: hareket süresi yok %s", c_pszFileName);
 		return false;
 	}
 
@@ -458,14 +458,14 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 			{
 				if (!rkTextFileLoader.SetChildNode("event", j))
 				{
-					sys_err("Motion: no event data %d %s", j, c_pszFileName);
+					sys_err("Motion: olay verisi yok %d %s", j, c_pszFileName);
 					return false;
 				}
 
 				int iType;
 				if (!rkTextFileLoader.GetTokenInteger("motioneventtype", &iType))
 				{
-					sys_err("Motion: no motioneventtype data %s", c_pszFileName);
+					sys_err("Motion: motioneventtype verisi yok %s", c_pszFileName);
 					return false;
 				}
 
@@ -489,7 +489,7 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 
 						if (!rkTextFileLoader.SetChildNode("spheredata", 0))
 						{
-							sys_err("Motion: no sphere data %s", c_pszFileName);
+							sys_err("Motion: sphere verisi yok %s", c_pszFileName);
 							return false;
 						}
 
@@ -497,7 +497,7 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 						//return false;
 						if (!rkTextFileLoader.GetTokenPosition("position", &v3Position))
 						{
-							sys_err("Motion: no position data %s", c_pszFileName);
+							sys_err("Motion: konum verisi yok %s", c_pszFileName);
 							return false;
 						}
 
@@ -513,7 +513,7 @@ bool CMotion::LoadMobSkillFromFile(const char * c_pszFileName, CMob* pMob, int i
 
 				if (!rkTextFileLoader.GetTokenFloat("startingtime", &fStartingTime))
 				{
-					sys_err("Motion: no startingtime data %s", c_pszFileName);
+					sys_err("Motion: startingtime verisi yok %s", c_pszFileName);
 					return false;
 				}
 
@@ -537,13 +537,13 @@ bool CMotion::LoadFromFile(const char * c_pszFileName)
 
 	if (!loader.Load(c_pszFileName))
 	{
-		sys_log(0, "Motion: LoadFromFile fail: %s", c_pszFileName);
+		sys_log(0, "Motion: LoadFromFile başarısız: %s", c_pszFileName);
 		return false;
 	}
 
 	if (!loader.GetTokenFloat("motionduration", &m_fDuration))
 	{
-		sys_err("Motion: %s does not have a duration", c_pszFileName);
+		sys_err("Motion: %s süresi yok", c_pszFileName);
 		return false;
 	}
 

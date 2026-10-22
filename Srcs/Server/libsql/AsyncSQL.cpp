@@ -43,7 +43,7 @@ void CAsyncSQL::Destroy()
 {
 	if (m_hDB.host)
 	{
-		sys_log(0, "AsyncSQL: closing mysql connection.");
+		sys_log(0, "AsyncSQL: mysql bağlantısı kapatılıyor.");
 		mysql_close(&m_hDB);
 		m_hDB.host = NULL;
 	}
@@ -100,7 +100,7 @@ bool CAsyncSQL::QueryLocaleSet()
 
 	if (mysql_set_character_set(&m_hDB, m_stLocale.c_str()))
 	{
-		sys_err("cannot set locale %s by 'mysql_set_character_set', errno %u %s", m_stLocale.c_str(), mysql_errno(&m_hDB) , mysql_error(&m_hDB));
+		sys_err("'mysql_set_character_set' ile locale %s ayarlanamıyor, errno %u %s", m_stLocale.c_str(), mysql_errno(&m_hDB) , mysql_error(&m_hDB));
 		return false;
 	}
 
@@ -113,7 +113,7 @@ bool CAsyncSQL::Connect()
 {
 	if (0 == mysql_init(&m_hDB))
 	{
-		fprintf(stderr, "mysql_init failed\n");
+		fprintf(stderr, "mysql_init başarısız\n");
 		return false;
 	}
 
@@ -238,7 +238,7 @@ std::unique_ptr<SQLMsg> CAsyncSQL::DirectQuery(const char * c_pszQuery)
 {
 	if (m_ulThreadID != mysql_thread_id(&m_hDB))
 	{
-		sys_log(0, "MySQL connection was reconnected. querying locale set"); // @warme012
+		sys_log(0, "MySQL bağlantısı yeniden kuruldu. locale seti sorgulanıyor"); // @warme012
 		while (!QueryLocaleSet());
 		m_ulThreadID = mysql_thread_id(&m_hDB);
 	}
@@ -254,7 +254,7 @@ std::unique_ptr<SQLMsg> CAsyncSQL::DirectQuery(const char * c_pszQuery)
 		char buf[1024];
 
 		snprintf(buf, sizeof(buf),
-				"AsyncSQL::DirectQuery : mysql_query error: %s\nquery: %s",
+				"AsyncSQL::DirectQuery : mysql_query hatası: %s\nsorgu: %s",
 				mysql_error(&m_hDB), p->stQuery.c_str());
 
 		sys_err(buf);
@@ -539,7 +539,7 @@ void CAsyncSQL::ChildLoop()
 
 			if (m_ulThreadID != mysql_thread_id(&m_hDB))
 			{
-				sys_log(0, "MySQL connection was reconnected. querying locale set"); // @warme012
+				sys_log(0, "MySQL bağlantısı yeniden kuruldu. locale seti sorgulanıyor"); // @warme012
 				while (!QueryLocaleSet());
 				m_ulThreadID = mysql_thread_id(&m_hDB);
 			}
@@ -548,7 +548,7 @@ void CAsyncSQL::ChildLoop()
 			{
 				p->uiSQLErrno = mysql_errno(&m_hDB);
 
-				sys_err("AsyncSQL: query failed: %s (query: %s errno: %d)",
+				sys_err("AsyncSQL: sorgu başarısız: %s (sorgu: %s errno: %d)",
 						mysql_error(&m_hDB), p->stQuery.c_str(), p->uiSQLErrno);
 
 				switch (p->uiSQLErrno)
@@ -577,7 +577,7 @@ void CAsyncSQL::ChildLoop()
 			profiler.Stop();
 
 			if (!profiler.IsOk())
-				sys_log(0, "[QUERY : LONG INTERVAL(OverSec %ld.%ld)] : %s",
+				sys_log(0, "[SORGU : UZUN ARALIK(OverSec %ld.%ld)] : %s",
 						profiler.GetResultSec(), profiler.GetResultUSec(), p->stQuery.c_str());
 
 			PopQueryFromCopyQueue();
@@ -600,7 +600,7 @@ void CAsyncSQL::ChildLoop()
 	{
 		if (m_ulThreadID != mysql_thread_id(&m_hDB))
 		{
-			sys_log(0, "MySQL connection was reconnected. querying locale set"); // @warme012
+			sys_log(0, "MySQL bağlantısı yeniden kuruldu. locale seti sorgulanıyor"); // @warme012
 			while (!QueryLocaleSet());
 			m_ulThreadID = mysql_thread_id(&m_hDB);
 		}
@@ -609,7 +609,7 @@ void CAsyncSQL::ChildLoop()
 		{
 			p->uiSQLErrno = mysql_errno(&m_hDB);
 
-			sys_err("AsyncSQL::ChildLoop : mysql_query error: %s:\nquery: %s",
+			sys_err("AsyncSQL::ChildLoop : mysql_query hatası: %s:\nsorgu: %s",
 					mysql_error(&m_hDB), p->stQuery.c_str());
 
 			switch (p->uiSQLErrno)
@@ -681,7 +681,7 @@ size_t CAsyncSQL::EscapeString(char* dst, size_t dstSize, const char *src, size_
 		size_t tmpLen = sizeof(tmp) > srcSize ? srcSize : sizeof(tmp);
 		strlcpy(tmp, src, tmpLen);
 
-		sys_err("FATAL ERROR!! not enough buffer size (dstSize %u srcSize %u src%s: %s)",
+		sys_err("ÖLÜMCÜL HATA!! yetersiz tampon boyutu (dstSize %u srcSize %u src%s: %s)",
 				dstSize, srcSize, tmpLen != srcSize ? "(trimmed to 255 characters)" : "", tmp);
 
 		dst[0] = '\0';

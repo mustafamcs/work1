@@ -38,7 +38,7 @@ void TELL_WAIT()
 	/* block SIGUSR1 and SIGUSR2, and save current signal mask */
 	if (sigprocmask(SIG_BLOCK, &newmask, &oldmask) < 0)
 	{
-		fprintf(stderr, "SIG_BLOCK error\n");
+		fprintf(stderr, "SIG_BLOCK hatası\n");
 		exit(1);
 	}
 }
@@ -58,7 +58,7 @@ void WAIT_PARENT(void)
 	/* reset signal mask to original value */
 	if (sigprocmask(SIG_SETMASK, &oldmask, NULL) < 0)
 	{
-		fprintf(stderr, "SIG_SETMASK error\n");
+		fprintf(stderr, "SIG_SETMASK hatası\n");
 		exit(1);
 	}
 }
@@ -78,7 +78,7 @@ void WAIT_CHILD(void)
 	/* reset signal mask to original value */
 	if (sigprocmask(SIG_SETMASK, &oldmask, NULL) < 0)
 	{
-		fprintf(stderr, "SIG_SETMASK error\n");
+		fprintf(stderr, "SIG_SETMASK hatası\n");
 		exit(1);
 	}
 }

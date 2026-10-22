@@ -90,7 +90,7 @@ bool COXEventManager::Enter(LPCHARACTER pkChar)
 {
 	if (GetStatus() == OXEVENT_FINISH)
 	{
-		sys_log(0, "OXEVENT : map finished. but char enter. %s", pkChar->GetName());
+		sys_log(0, "OXEVENT : harita bitti ama karakter girdi. %s", pkChar->GetName());
 		return false;
 	}
 
@@ -106,7 +106,7 @@ bool COXEventManager::Enter(LPCHARACTER pkChar)
 	}
 	else
 	{
-		sys_log(0, "OXEVENT : wrong pos enter %d %d", pos.x, pos.y);
+		sys_log(0, "OXEVENT : yanlış konum girişi %d %d", pos.x, pos.y);
 		return false;
 	}
 

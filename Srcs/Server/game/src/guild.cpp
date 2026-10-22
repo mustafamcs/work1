@@ -186,7 +186,7 @@ void CGuild::AddMember(TPacketDGGuildMember * p)
 
 	LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(p->dwPID);
 
-	sys_log(0, "GUILD: AddMember PID %u, grade %u, job %u, level %u, offer %u, name %s ptr %p",
+	sys_log(0, "LONCA: AddMember PID %u, rütbe %u, sınıf %u, seviye %u, teklif %u, isim %s ptr %p",
 			p->dwPID, p->bGrade, p->bJob, p->bLevel, p->dwOffer, p->szName, get_pointer(ch));
 
 	if (ch)
@@ -216,7 +216,7 @@ bool CGuild::RequestRemoveMember(DWORD pid)
 
 bool CGuild::RemoveMember(DWORD pid)
 {
-	sys_log(0, "Receive Guild P2P RemoveMember");
+	sys_log(0, "Lonca P2P RemoveMember Alındı");
 	TGuildMemberContainer::iterator it;
 
 	if ((it = m_member.find(pid)) == m_member.end())
@@ -571,7 +571,7 @@ void CGuild::LoadGuildData(SQLMsg* pmsg)
 {
 	if (pmsg->Get()->uiNumRows == 0)
 	{
-		sys_err("Query failed: getting guild data %s", pmsg->stQuery.c_str());
+		sys_err("Lonca verisi alınırken sorgu başarısız: %s", pmsg->stQuery.c_str());
 		return;
 	}
 
@@ -618,7 +618,7 @@ void CGuild::Load(DWORD guild_id)
 			#endif
 			" FROM guild%s WHERE id = %u", get_table_postfix(), m_data.guild_id);
 
-	sys_log(0, "GUILD: loading guild id %12s %u", m_data.name, guild_id);
+	sys_log(0, "LONCA: lonca id yükleniyor %12s %u", m_data.name, guild_id);
 
 	DBManager::instance().FuncQuery(msl::bind1st(std::mem_fn(&CGuild::LoadGuildGradeData), this),
 			"SELECT grade, name, auth+0 FROM guild_grade%s WHERE guild_id = %u", get_table_postfix(), m_data.guild_id);
@@ -783,7 +783,7 @@ void CGuild::ChangeGradeName(BYTE grade, const char* grade_name)
 
 	if (grade < 1 || grade > 15)
 	{
-		sys_err("Wrong guild grade value %d", grade);
+		sys_err("Hatalı lonca rütbe değeri %d", grade);
 		return;
 	}
 
@@ -831,7 +831,7 @@ void CGuild::ChangeGradeAuth(BYTE grade, BYTE auth)
 
 	if (grade < 1 || grade > 15)
 	{
-		sys_err("Wrong guild grade value %d", grade);
+		sys_err("Hatalı lonca rütbe değeri %d", grade);
 		return;
 	}
 
@@ -917,7 +917,7 @@ bool CGuild::OfferExp(LPCHARACTER ch, int amount)
 
 	if (ch->GetExp() - (DWORD) amount > ch->GetExp())
 	{
-		sys_err("Wrong guild offer amount %d by %s[%u]", amount, ch->GetName(), ch->GetPlayerID());
+		sys_err("Hatalı lonca teklif miktarı %d, %s[%u] tarafından", amount, ch->GetName(), ch->GetPlayerID());
 		return false;
 	}
 
@@ -1183,7 +1183,7 @@ void CGuild::SkillLevelUp(DWORD dwVnum)
 
 	if (!pkSk)
 	{
-		sys_err("There is no such guild skill by number %u", dwVnum);
+		sys_err("%u numaralı lonca becerisi yok", dwVnum);
 		return;
 	}
 
@@ -1202,7 +1202,7 @@ void CGuild::SkillLevelUp(DWORD dwVnum)
 
 	std::for_each(m_memberOnline.begin(), m_memberOnline.end(), msl::bind1st(std::mem_fn(&CGuild::SendSkillInfoPacket), this));
 
-	sys_log(0, "Guild SkillUp: %s %d level %d type %u", GetName(), pkSk->dwVnum, m_data.abySkill[dwRealVnum], pkSk->dwType);
+	sys_log(0, "Lonca SkillUp: %s %d seviye %d tip %u", GetName(), pkSk->dwVnum, m_data.abySkill[dwRealVnum], pkSk->dwType);
 }
 
 void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
@@ -1226,7 +1226,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 
 	if (!pkSk)
 	{
-		sys_err("There is no such guild skill by number %u", dwVnum);
+		sys_err("%u numaralı lonca becerisi yok", dwVnum);
 		return;
 	}
 
@@ -1302,7 +1302,7 @@ void CGuild::UseSkill(DWORD dwVnum, LPCHARACTER ch, DWORD pid)
 						p.dwFromPID = ch->GetPlayerID();
 						p.dwTargetPID = pid;
 						pcci->pkDesc->Packet(p);
-						if (test_server) ch->ChatPacket(CHAT_TYPE_PARTY, "sent find position packet for guild teleport");
+						if (test_server) ch->ChatPacket(CHAT_TYPE_PARTY, "lonca ışınlanması için konum bulma paketi gönderildi");
 					}
 				}
 				else
@@ -1652,7 +1652,7 @@ void CGuild::SkillUsableChange(DWORD dwSkillVnum, bool bUsable)
 void CGuild::SetMemberCountBonus(int iBonus)
 {
 	m_iMemberCountBonus = iBonus;
-	sys_log(0, "GUILD_IS_FULL_BUG : Bonus set to %d(val:%d)", iBonus, m_iMemberCountBonus);
+	sys_log(0, "LONCA_DOLU_BUG : Bonus %d olarak ayarlandı(değer:%d)", iBonus, m_iMemberCountBonus);
 }
 
 void CGuild::BroadcastMemberCountBonus()
@@ -1863,7 +1863,7 @@ void CGuild::Invite( LPCHARACTER pchInviter, LPCHARACTER pchInvitee )
 		case GERR_GUILD_IS_IN_WAR : pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Lonca şu an savaşta.") ); return;
 		case GERR_INVITE_LIMIT : pchInviter->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Yeni üye alımı şu an kapalı.") ); return;
 
-		default: sys_err( "ignore guild join error(%d)", errcode ); return;
+		default: sys_err( "lonca katılım hatası yoksayılıyor(%d)", errcode ); return;
 	}
 
 	if ( m_GuildInviteEventMap.end() != m_GuildInviteEventMap.find( pchInvitee->GetPlayerID() ) )
@@ -1895,7 +1895,7 @@ void CGuild::InviteAccept( LPCHARACTER pchInvitee )
 	EventMap::iterator itFind = m_GuildInviteEventMap.find( pchInvitee->GetPlayerID() );
 	if ( itFind == m_GuildInviteEventMap.end() )
 	{
-		sys_log( 0, "GuildInviteAccept from not invited character(invite guild: %s, invitee: %s)", GetName(), pchInvitee->GetName() );
+		sys_log( 0, "Davet edilmemiş karakterden GuildInviteAccept(davet loncası: %s, davetli: %s)", GetName(), pchInvitee->GetName() );
 		return;
 	}
 
@@ -1921,7 +1921,7 @@ void CGuild::InviteAccept( LPCHARACTER pchInvitee )
 		case GERR_GUILD_IS_IN_WAR : pchInvitee->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Lonca şu an savaşta.") ); return;
 		case GERR_INVITE_LIMIT : pchInvitee->ChatPacket( CHAT_TYPE_INFO, LC_TEXT("<Lonca> Yeni üye alımı şu an kapalı.") ); return;
 
-		default: sys_err( "ignore guild join error(%d)", errcode ); return;
+		default: sys_err( "lonca katılım hatası yoksayılıyor(%d)", errcode ); return;
 	}
 
 	RequestAddMember( pchInvitee, 15 );
@@ -1932,7 +1932,7 @@ void CGuild::InviteDeny( DWORD dwPID )
 	EventMap::iterator itFind = m_GuildInviteEventMap.find( dwPID );
 	if ( itFind == m_GuildInviteEventMap.end() )
 	{
-		sys_log( 0, "GuildInviteDeny from not invited character(invite guild: %s, invitee PID: %d)", GetName(), dwPID );
+		sys_log( 0, "Davet edilmemiş karakterden GuildInviteDeny(davet loncası: %s, davetli PID: %d)", GetName(), dwPID );
 		return;
 	}
 
@@ -2036,7 +2036,7 @@ void CGuild::SetSkillLevel(DWORD dwVnum, BYTE level, BYTE point)
 
 	if (!pkSk)
 	{
-		sys_err("There is no such guild skill by number %u", dwVnum);
+		sys_err("%u numaralı lonca becerisi yok", dwVnum);
 		return;
 	}
 
@@ -2058,7 +2058,7 @@ void CGuild::SetSkillLevel(DWORD dwVnum, BYTE level, BYTE point)
 
 	std::for_each(m_memberOnline.begin(), m_memberOnline.end(), msl::bind1st(std::mem_fn(&CGuild::SendSkillInfoPacket), this));
 
-	sys_log(0, "Guild SetSkillLevel: %s %d level %d type %u", GetName(), pkSk->dwVnum, m_data.abySkill[dwRealVnum], pkSk->dwType);
+	sys_log(0, "Lonca SetSkillLevel: %s %d seviye %d tip %u", GetName(), pkSk->dwVnum, m_data.abySkill[dwRealVnum], pkSk->dwType);
 }
 
 DWORD CGuild::GetSkillPoint()

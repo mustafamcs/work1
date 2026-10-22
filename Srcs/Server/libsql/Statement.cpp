@@ -78,7 +78,7 @@ bool CStmt::BindParam(enum_field_types type, void * p, int iMaxLen)
 {
 	if (m_uiParamCount >= m_vec_param.size())
 	{
-		sys_err("too many parameter in query: %s", m_stQuery.c_str());
+		sys_err("sorguda çok fazla parametre: %s", m_stQuery.c_str());
 		return false;
 	}
 
@@ -105,7 +105,7 @@ bool CStmt::BindResult(enum_field_types type, void * p, int iMaxLen)
 {
 	if (m_uiResultCount >= m_vec_result.size())
 	{
-		sys_err("too many result in query: %s", m_stQuery.c_str());
+		sys_err("sorguda çok fazla sonuç: %s", m_stQuery.c_str());
 		return false;
 	}
 
@@ -121,7 +121,7 @@ int CStmt::Execute()
 {
 	if (m_uiParamCount != m_vec_param.size())
 	{
-		sys_log(0, "Parameter not enough %d, expected %d query: %s", m_uiParamCount, m_vec_param.size(), m_stQuery.c_str());
+		sys_log(0, "Parametre yetersiz %d, beklenen %d sorgu: %s", m_uiParamCount, m_vec_param.size(), m_stQuery.c_str());
 		return 0;
 	}
 

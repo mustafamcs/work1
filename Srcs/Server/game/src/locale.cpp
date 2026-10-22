@@ -36,7 +36,7 @@ const char * locale_find(const char *string)
 		strlcpy(s_line + 5, string, sizeof(s_line) - 5);
 		#endif
 
-		sys_err("LOCALE_ERROR: \"%s\";", string);
+		sys_err("LOCALE_HATASI: \"%s\";", string);
 		return s_line;
 	}
 
@@ -188,7 +188,7 @@ void locale_init(const char *filename)
 
 				if (*tmp != '"')
 				{
-					sys_err("locale_init: invalid format filename %s", filename);
+					sys_err("locale_init: gecersiz dosya adi formati %s", filename);
 					break;
 				}
 			}

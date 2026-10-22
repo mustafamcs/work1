@@ -124,7 +124,7 @@ bool BuildMobTable()
 	cCsvTable nameData;
 	if(!nameData.Load("mob_names.txt",'\t'))
 	{
-		fprintf(stderr, "mob_names.txt Unable to read file\n");
+		fprintf(stderr, "mob_names.txt dosyası okunamıyor\n");
 		isNameFile = false;
 	} else {
 		nameData.Next();
@@ -148,7 +148,7 @@ bool BuildMobTable()
 	cCsvTable data;
 	if(!data.Load("mob_proto.txt",'\t'))
 	{
-		fprintf(stderr, "mob_proto.txt Unable to read file\n");
+		fprintf(stderr, "mob_proto.txt dosyası okunamıyor\n");
 		return false;
 	}
 	data.Next();
@@ -182,7 +182,7 @@ bool BuildMobTable()
 	data.Destroy();
 	if(!data.Load("mob_proto.txt",'\t'))
 	{
-		fprintf(stderr, "mob_proto.txt Unable to read file\n");
+		fprintf(stderr, "mob_proto.txt dosyası okunamıyor\n");
 		return false;
 	}
 	data.Next();
@@ -195,7 +195,7 @@ bool BuildMobTable()
 
 			if (!Set_Proto_Mob_Table(mob_table, data, localMap))
 			{
-				fprintf(stderr, "Mob prototype table setting failed.\n");
+				fprintf(stderr, "Mob prototip tablo ayarı başarısız.\n");
 			}
 
 		} else {
@@ -270,7 +270,7 @@ void SaveMobProto()
 	fopen_s(&fp, "mob_proto", "wb");
 	if (!fp)
 	{
-		printf("cannot open %s for writing\n", "mob_proto");
+		printf("%s yazmak için açılamıyor\n", "mob_proto");
 		return;
 	}
 
@@ -286,14 +286,14 @@ void SaveMobProto()
 
 	if (!CLZO::instance().CompressEncryptedMemory(zObj, m_pMobTable, sizeof(CPythonNonPlayer::TMobTable) * m_iMobTableSize, g_adwMobProtoKey))
 	{
-		printf("cannot compress\n");
+		printf("sıkıştırılamıyor\n");
 		fclose(fp);
 		return;
 	}
 
 	const CLZObject::THeader & r = zObj.GetHeader();
 
-	printf("MobProto count %u\n%u --Compress--> %u --Encrypt--> %u, GetSize %u\n",
+	printf("MobProto sayısı %u\n%u --Sıkıştır--> %u --Şifrele--> %u, GetSize %u\n",
 			m_iMobTableSize, r.dwRealSize, r.dwCompressedSize, r.dwEncryptSize, zObj.GetSize());
 
 	DWORD dwDataSize = zObj.GetSize();
@@ -317,7 +317,7 @@ void LoadMobProto()
 	fopen_s(&fp, "mob_proto", "rb");
 	if (fp==NULL)
 	{
-		printf("mob_proto not found\n");
+		printf("mob_proto bulunamadı\n");
 		return;
 	}
 
@@ -350,7 +350,7 @@ void LoadMobProto()
 			if ((zObj.GetSize() % sizeof(TMobTable)) != 0)
 #endif
 			{
-				printf("LoadMobProto: invalid size %u check data format. structSize %u, structDiff %u\n", zObj.GetSize(), structSize, structDiff);
+				printf("LoadMobProto: geçersiz boyut %u veri formatını kontrol edin. structSize %u, structDiff %u\n", zObj.GetSize(), structSize, structDiff);
 				return;
 			}
 
@@ -374,12 +374,12 @@ void LoadMobProto()
 				FILE * mf2; fopen_s(&mf2, "mob_proto.txt", "w");
 				if (mf1==NULL)
 				{
-					printf("mob_names.txt not writable");
+					printf("mob_names.txt yazılabilir değil");
 					return;
 				}
 				if (mf2==NULL)
 				{
-					printf("mob_proto.txt not writable");
+					printf("mob_proto.txt yazılabilir değil");
 					return;
 				}
 				fprintf(mf1, "VNUM\tLOCALE_NAME\n");
@@ -485,7 +485,7 @@ bool Set_Proto_Item_Table(CItemData::TItemTable *itemTable, cCsvTable &csvTable,
 			itemTable->dwVnum = atoi(s.c_str());
 			if (0 == itemTable->dwVnum)
 			{
-				printf ("INVALID VNUM %s\n", s.c_str());
+				printf ("GEÇERSİZ VNUM %s\n", s.c_str());
 				return false;
 			}
 			itemTable->dwVnumRange = 0;
@@ -499,7 +499,7 @@ bool Set_Proto_Item_Table(CItemData::TItemTable *itemTable, cCsvTable &csvTable,
 			int end_vnum = atoi(s_end_vnum.c_str());
 			if (0 == start_vnum || (0 != end_vnum && end_vnum < start_vnum))
 			{
-				printf ("INVALID VNUM RANGE%s\n", s.c_str());
+				printf ("GEÇERSİZ VNUM ARALIĞI%s\n", s.c_str());
 				return false;
 			}
 			itemTable->dwVnum = start_vnum;
@@ -569,7 +569,7 @@ bool BuildItemTable()
 	cCsvTable nameData;
 	if(!nameData.Load("item_names.txt",'\t'))
 	{
-		fprintf(stderr, "item_names.txt Unable to read file\n");
+		fprintf(stderr, "item_names.txt dosyası okunamıyor\n");
 		isNameFile = false;
 	} else {
 		nameData.Next();
@@ -596,7 +596,7 @@ bool BuildItemTable()
 	cCsvTable data;
 	if(!data.Load("item_proto.txt",'\t'))
 	{
-		fprintf(stderr, "item_proto.txt Unable to read file\n");
+		fprintf(stderr, "item_proto.txt dosyası okunamıyor\n");
 		return false;
 	}
 	data.Next();
@@ -618,7 +618,7 @@ bool BuildItemTable()
 	data.Destroy();
 	if(!data.Load("item_proto.txt",'\t'))
 	{
-		fprintf(stderr, "item_proto.txt Unable to read file\n");
+		fprintf(stderr, "item_proto.txt dosyası okunamıyor\n");
 		return false;
 	}
 	data.Next();
@@ -639,7 +639,7 @@ bool BuildItemTable()
 
 			if (!Set_Proto_Item_Table(item_table, data, localMap))
 			{
-				fprintf(stderr, "Mob prototype table setting failed.\n");
+				fprintf(stderr, "Mob prototip tablo ayarı başarısız.\n");
 			}
 		} else {
 			CItemData::TItemTable *tempTable = it_map_itemTable->second;
@@ -723,7 +723,7 @@ void LoadItemProto()
 	fopen_s(&fp, "item_proto", "rb");
 	if (fp==NULL)
 	{
-		printf("item_proto not found\n");
+		printf("item_proto bulunamadı\n");
 		return;
 	}
 
@@ -747,7 +747,7 @@ void LoadItemProto()
 	if (structSize != sizeof(CItemData::TItemTable))
 #endif
 	{
-		printf("LoadItemProto: invalid item_proto structSize[%d] != sizeof(SItemTable)[%d]\n", structSize, sizeof(CItemData::TItemTable));
+		printf("LoadItemProto: geçersiz item_proto structSize[%d] != sizeof(SItemTable)[%d]\n", structSize, sizeof(CItemData::TItemTable));
 		return;
 	}
 
@@ -780,12 +780,12 @@ void LoadItemProto()
 				FILE * mf2; fopen_s(&mf2, "item_proto.txt", "w");
 				if (mf1==NULL)
 				{
-					printf("item_names.txt not writable");
+					printf("item_names.txt yazılabilir değil");
 					return;
 				}
 				if (mf2==NULL)
 				{
-					printf("item_proto.txt not writable");
+					printf("item_proto.txt yazılabilir değil");
 					return;
 				}
 				fprintf(mf1, "VNUM\tLOCALE_NAME\n");
@@ -836,7 +836,7 @@ void SaveItemProto()
 	fopen_s(&fp, "item_proto", "wb");
 	if (!fp)
 	{
-		printf("cannot open %s for writing\n", "item_proto");
+		printf("%s yazmak için açılamıyor\n", "item_proto");
 		return;
 	}
 
@@ -857,7 +857,7 @@ void SaveItemProto()
 	std::sort (&m_pItemTable[0], &m_pItemTable[0] + m_iItemTableSize);
 	if (!CLZO::instance().CompressEncryptedMemory(zObj, m_pItemTable, sizeof(CItemData::TItemTable) * m_iItemTableSize, g_adwItemProtoKey))
 	{
-		printf("cannot compress\n");
+		printf("sıkıştırılamıyor\n");
 		fclose(fp);
 		return;
 	}
@@ -886,7 +886,7 @@ void SaveItemProto()
 	fread(&fourcc, sizeof(DWORD), 1, fp);
 	fread(&dwElements, sizeof(DWORD), 1, fp);
 
-	printf("Elements Check %u fourcc match %d\n", dwElements, fourcc == MAKEFOURCC('M', 'I', 'P', 'T'));
+	printf("Elemanlar Kontrol %u fourcc eşleşme %d\n", dwElements, fourcc == MAKEFOURCC('M', 'I', 'P', 'T'));
 	fclose(fp);
 }
 

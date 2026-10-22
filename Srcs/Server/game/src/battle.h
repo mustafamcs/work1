@@ -53,7 +53,7 @@ inline void AttackAffect(LPCHARACTER pkAttacker,
 
 			if (test_server)
 			{
-				pkVictim->ChatPacket(CHAT_TYPE_PARTY, "%s %s(%ld%%) SUCCESS", pkAttacker->GetName(), name, pkAttacker->GetPoint(att_point));
+				pkVictim->ChatPacket(CHAT_TYPE_PARTY, "%s %s(%ld%%) BASARILI", pkAttacker->GetName(), name, pkAttacker->GetPoint(att_point));
 			}
 		}
 		else if (test_server)

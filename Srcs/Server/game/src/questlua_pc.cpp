@@ -89,7 +89,7 @@ namespace quest
 
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("wrong skill index");
+			sys_err("yanlış beceri indeksi");
 			return 0;
 		}
 
@@ -103,13 +103,13 @@ namespace quest
 
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("wrong map index");
+			sys_err("yanlış harita indeksi");
 			return 0;
 		}
 
 		if (!lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("wrong coodinate");
+			sys_err("yanlış koordinat");
 			return 0;
 		}
 
@@ -123,13 +123,13 @@ namespace quest
 
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("wrong map index");
+			sys_err("yanlış harita indeksi");
 			return 0;
 		}
 
 		if (!lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("wrong coodinate");
+			sys_err("yanlış koordinat");
 			return 0;
 		}
 
@@ -138,7 +138,7 @@ namespace quest
 
 		if (!region)
 		{
-			sys_err("invalid map index %d", lMapIndex);
+			sys_err("geçersiz harita indeksi %d", lMapIndex);
 			return 0;
 		}
 
@@ -147,13 +147,13 @@ namespace quest
 
 		if (x > region->ex - region->sx)
 		{
-			sys_err("x coordinate overflow max: %d input: %d", region->ex - region->sx, x);
+			sys_err("x koordinat taşması maks: %d girdi: %d", region->ex - region->sx, x);
 			return 0;
 		}
 
 		if (y > region->ey - region->sy)
 		{
-			sys_err("y coordinate overflow max: %d input: %d", region->ey - region->sy, y);
+			sys_err("y koordinat taşması maks: %d girdi: %d", region->ey - region->sy, y);
 			return 0;
 		}
 
@@ -208,13 +208,13 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("no map index argument");
+			sys_err("harita indeksi argümanı yok");
 			return 0;
 		}
 
 		if (!lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("no coodinate argument");
+			sys_err("koordinat argümanı yok");
 			return 0;
 		}
 
@@ -223,7 +223,7 @@ namespace quest
 
 		if (!region)
 		{
-			sys_err("invalid map index %d", lMapIndex);
+			sys_err("geçersiz harita indeksi %d", lMapIndex);
 			return 0;
 		}
 
@@ -232,13 +232,13 @@ namespace quest
 
 		if (x > region->ex - region->sx)
 		{
-			sys_err("x coordinate overflow max: %d input: %d", region->ex - region->sx, x);
+			sys_err("x koordinat taşması maks: %d girdi: %d", region->ex - region->sx, x);
 			return 0;
 		}
 
 		if (y > region->ey - region->sy)
 		{
-			sys_err("y coordinate overflow max: %d input: %d", region->ey - region->sy, y);
+			sys_err("y koordinat taşması maks: %d girdi: %d", region->ey - region->sy, y);
 			return 0;
 		}
 
@@ -314,7 +314,7 @@ namespace quest
 
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("QUEST : wrong argument");
+			sys_err("GÖREV : hatalı argüman");
 			return 0;
 		}
 
@@ -322,7 +322,7 @@ namespace quest
 
 		if (iAmount <= 0)
 		{
-			sys_err("QUEST : gold amount less then zero");
+			sys_err("GÖREV : gold miktarı sıfırdan az");
 			return 0;
 		}
 
@@ -432,7 +432,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1) || !(lua_isstring(L, 2)||lua_isnumber(L, 2)))
 		{
-			sys_err("QUEST : wrong argument");
+			sys_err("GÖREV : hatalı argüman");
 			return 0;
 		}
 
@@ -442,7 +442,7 @@ namespace quest
 			dwVnum = (int) lua_tonumber(L, 2);
 		else if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L, 2), dwVnum))
 		{
-			sys_err("QUEST Make item call error : wrong item name : %s", lua_tostring(L,1));
+			sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya ismi : %s", lua_tostring(L,1));
 			return 0;
 		}
 
@@ -454,7 +454,7 @@ namespace quest
 
 			if (icount <= 0)
 			{
-				sys_err("QUEST Make item call error : wrong item count : %g", lua_tonumber(L, 2));
+				sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya adedi : %g", lua_tonumber(L, 2));
 				return 0;
 			}
 		}
@@ -471,7 +471,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1) && !lua_isnumber(L, 1))
 		{
-			sys_err("QUEST Make item call error : wrong argument");
+			sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı argüman");
 			lua_pushnumber (L, 0);
 			return 1;
 		}
@@ -484,7 +484,7 @@ namespace quest
 		}
 		else if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L, 1), dwVnum))
 		{
-			sys_err("QUEST Make item call error : wrong item name : %s", lua_tostring(L,1));
+			sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya ismi : %s", lua_tostring(L,1));
 			lua_pushnumber (L, 0);
 
 			return 1;
@@ -496,7 +496,7 @@ namespace quest
 			icount = (int)rint(lua_tonumber(L,2));
 			if (icount<=0)
 			{
-				sys_err("QUEST Make item call error : wrong item count : %g", lua_tonumber(L,2));
+				sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya adedi : %g", lua_tonumber(L,2));
 				lua_pushnumber (L, 0);
 				return 1;
 			}
@@ -527,7 +527,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1) && !lua_isnumber(L, 1))
 		{
-			sys_err("QUEST Make item call error : wrong argument");
+			sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı argüman");
 			lua_pushnumber (L, 0);
 			return 1;
 		}
@@ -540,7 +540,7 @@ namespace quest
 		}
 		else if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L, 1), dwVnum))
 		{
-			sys_err("QUEST Make item call error : wrong item name : %s", lua_tostring(L,1));
+			sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya ismi : %s", lua_tostring(L,1));
 			lua_pushnumber (L, 0);
 
 			return 1;
@@ -552,7 +552,7 @@ namespace quest
 			icount = (int)rint(lua_tonumber(L,2));
 			if (icount<=0)
 			{
-				sys_err("QUEST Make item call error : wrong item count : %g", lua_tonumber(L,2));
+				sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya adedi : %g", lua_tonumber(L,2));
 				lua_pushnumber(L, 0);
 				return 1;
 			}
@@ -584,7 +584,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1) && !lua_isnumber(L, 1))
 		{
-			sys_err("QUEST Make item call error : wrong argument");
+			sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı argüman");
 			return 0;
 		}
 
@@ -596,7 +596,7 @@ namespace quest
 		}
 		else if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L, 1), dwVnum))
 		{
-			sys_err("QUEST Make item call error : wrong item name : %s", lua_tostring(L,1));
+			sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya ismi : %s", lua_tostring(L,1));
 			return 0;
 		}
 
@@ -606,7 +606,7 @@ namespace quest
 			icount = (int)rint(lua_tonumber(L,2));
 			if (icount<=0)
 			{
-				sys_err("QUEST Make item call error : wrong item count : %g", lua_tonumber(L,2));
+				sys_err("GÖREV eşya oluşturma çağrı hatası : hatalı eşya adedi : %g", lua_tonumber(L,2));
 				return 0;
 			}
 		}
@@ -686,7 +686,7 @@ namespace quest
 
 			if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L,1), item_vnum))
 			{
-				sys_err("QUEST count_item call error : wrong item name : %s", lua_tostring(L,1));
+				sys_err("GÖREV count_item çağrı hatası : hatalı eşya ismi : %s", lua_tostring(L,1));
 				lua_pushnumber(L, 0);
 			}
 			else
@@ -714,17 +714,17 @@ namespace quest
 			{
 				if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L,1), item_vnum))
 				{
-					sys_err("QUEST remove_item call error : wrong item name : %s", lua_tostring(L,1));
+					sys_err("GÖREV remove_item çağrı hatası : hatalı eşya ismi : %s", lua_tostring(L,1));
 					return 0;
 				}
 			}
 			else
 			{
-				sys_err("QUEST remove_item wrong argument");
+				sys_err("GÖREV remove_item hatalı argüman");
 				return 0;
 			}
 
-			sys_log(0,"QUEST remove a item vnum %d of %s[%d]", item_vnum, CQuestManager::instance().GetCurrentCharacterPtr()->GetName(), CQuestManager::instance().GetCurrentCharacterPtr()->GetPlayerID());
+			sys_log(0,"GÖREV eşya vnum %d kaldır, %s[%d] için", item_vnum, CQuestManager::instance().GetCurrentCharacterPtr()->GetName(), CQuestManager::instance().GetCurrentCharacterPtr()->GetPlayerID());
 			CQuestManager::instance().GetCurrentCharacterPtr()->RemoveSpecifyItem(item_vnum);
 		}
 		else if (lua_gettop(L) == 2)
@@ -739,18 +739,18 @@ namespace quest
 			{
 				if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L,1), item_vnum))
 				{
-					sys_err("QUEST remove_item call error : wrong item name : %s", lua_tostring(L,1));
+					sys_err("GÖREV remove_item çağrı hatası : hatalı eşya ismi : %s", lua_tostring(L,1));
 					return 0;
 				}
 			}
 			else
 			{
-				sys_err("QUEST remove_item wrong argument");
+				sys_err("GÖREV remove_item hatalı argüman");
 				return 0;
 			}
 
 			DWORD item_count = (DWORD) lua_tonumber(L, 2);
-			sys_log(0, "QUEST remove items(vnum %d) count %d of %s[%d]",
+			sys_log(0, "GÖREV eşyaları kaldır(vnum %d) sayı %d, %s[%d] için",
 					item_vnum,
 					item_count,
 					CQuestManager::instance().GetCurrentCharacterPtr()->GetName(),
@@ -836,7 +836,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushboolean(L, 0);
 			return 1;
 		}
@@ -890,7 +890,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			return 0;
 		}
 		else
@@ -951,7 +951,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("QUEST wrong set flag");
+			sys_err("GÖREV hatalı set flag");
 			return 0;
 		}
 
@@ -1017,7 +1017,7 @@ namespace quest
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 
 		if (gold + ch->GetGold() < 0)
-			sys_err("QUEST wrong ChangeGold %d (now %lld)", gold, ch->GetGold());
+			sys_err("GÖREV hatalı ChangeGold %d (şimdi %lld)", gold, ch->GetGold());
 		else
 		{
 			DBManager::instance().SendMoneyLog(MONEY_LOG_QUEST, ch->GetPlayerID(), gold);
@@ -1031,7 +1031,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1) || !lua_isstring(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("QUEST wrong set flag");
+			sys_err("GÖREV hatalı set flag");
 			return 0;
 		}
 		else
@@ -1049,7 +1049,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1) || !lua_isstring(L,2))
 		{
-			sys_err("QUEST wrong get flag");
+			sys_err("GÖREV hatalı get flag");
 			return 0;
 		}
 		else
@@ -1071,7 +1071,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,-1))
 		{
-			sys_err("QUEST wrong get flag");
+			sys_err("GÖREV hatalı get flag");
 			return 0;
 		}
 		else
@@ -1088,7 +1088,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,-1))
 		{
-			sys_err("QUEST wrong get flag");
+			sys_err("GÖREV hatalı get flag");
 			return 0;
 		}
 		else
@@ -1107,7 +1107,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1) || !lua_isnumber(L,2))
 		{
-			sys_err("QUEST wrong set flag");
+			sys_err("GÖREV hatalı set flag");
 		}
 		else
 		{
@@ -1123,7 +1123,7 @@ namespace quest
 	{
 		if (!lua_isstring(L,1) || !lua_isnumber(L,2))
 		{
-			sys_err("QUEST wrong set flag");
+			sys_err("GÖREV hatalı set flag");
 		}
 		else
 		{
@@ -1139,7 +1139,7 @@ namespace quest
 	{
 		if (!lua_isstring(L, 1))
 		{
-			sys_err("argument error");
+			sys_err("argüman hatası");
 			return 0;
 		}
 
@@ -1156,7 +1156,7 @@ namespace quest
 		if (!lua_isnumber(L,1))
 			return 0;
 
-		sys_log(0,"QUEST [REWARD] %s give exp2 %d", ch->GetName(), (int)rint(lua_tonumber(L,1)));
+		sys_log(0,"GÖREV [ÖDÜL] %s exp2 ver %d", ch->GetName(), (int)rint(lua_tonumber(L,1)));
 
 		DWORD exp = (DWORD)rint(lua_tonumber(L,1));
 
@@ -1174,7 +1174,7 @@ namespace quest
 		CQuestManager& q = CQuestManager::instance();
 		LPCHARACTER ch = q.GetCurrentCharacterPtr();
 
-		sys_log(0,"QUEST [REWARD] %s give exp %s %d", ch->GetName(), lua_tostring(L,1), (int)rint(lua_tonumber(L,2)));
+		sys_log(0,"GÖREV [ÖDÜL] %s exp ver %s %d", ch->GetName(), lua_tostring(L,1), (int)rint(lua_tonumber(L,2)));
 
 		DWORD exp = (DWORD)rint(lua_tonumber(L,2));
 
@@ -1197,7 +1197,7 @@ namespace quest
 		int lev = (int)rint(lua_tonumber(L,2));
 		double proc = (lua_tonumber(L,3));
 
-		sys_log(0, "QUEST [REWARD] %s give exp %s lev %d percent %g%%", ch->GetName(), lua_tostring(L, 1), lev, proc);
+		sys_log(0, "GÖREV [ÖDÜL] %s exp ver %s seviye %d yüzde %g%%", ch->GetName(), lua_tostring(L, 1), lev, proc);
 
 		DWORD exp = (DWORD)((exp_table[MINMAX(0, lev, PLAYER_MAX_LEVEL_CONST)] * proc) / 100);
 		PC * pPC = CQuestManager::instance().GetCurrentPC();
@@ -1252,7 +1252,7 @@ namespace quest
 	ALUA(pc_set_skillgroup)
 	{
 		if (!lua_isnumber(L, 1))
-			sys_err("QUEST wrong skillgroup number");
+			sys_err("GÖREV hatalı beceri grubu numarası");
 		else
 		{
 			CQuestManager & q = CQuestManager::Instance();
@@ -1501,7 +1501,7 @@ namespace quest
 
 		if (!lua_isnumber(L,2))
 		{
-			sys_err("invalid radius");
+			sys_err("geçersiz yarıçap");
 			lua_pushboolean(L, 0);
 			return 1;
 		}
@@ -1541,7 +1541,7 @@ namespace quest
 		int cell = (int) lua_tonumber(L, 1);
 		if (cell < 0 || cell >= WEAR_MAX_NUM)
 		{
-			sys_err("invalid wear position %d", cell);
+			sys_err("geçersiz kuşanım konumu %d", cell);
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -1562,7 +1562,7 @@ namespace quest
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushboolean(L, 0);
 			return 1;
 		}
@@ -1638,7 +1638,7 @@ namespace quest
 	{
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("invalid argument");
+			sys_err("geçersiz argüman");
 			lua_pushnumber(L, 0);
 			return 1;
 		}
@@ -1856,17 +1856,17 @@ namespace quest
 	ALUA(pc_clear_one_skill)
 	{
 		int vnum = (int)lua_tonumber(L, 1);
-		sys_log(0, "%d skill clear", vnum);
+		sys_log(0, "%d beceri temizlendi", vnum);
 
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
 		if ( ch == NULL )
 		{
-			sys_log(0, "skill clear fail");
+			sys_log(0, "beceri temizleme başarısız");
 			lua_pushnumber(L, 0);
 			return 1;
 		}
 
-		sys_log(0, "%d skill clear", vnum);
+		sys_log(0, "%d beceri temizlendi", vnum);
 
 		ch->ResetOneSkill(vnum);
 
@@ -1946,11 +1946,11 @@ namespace quest
 
 						if (!SECTREE_MANAGER::instance().GetCenterPositionOfMap(pkCCI->lMapIndex, pos))
 						{
-							ch->ChatPacket(CHAT_TYPE_INFO, "Cannot find map (index %d)", pkCCI->lMapIndex);
+							ch->ChatPacket(CHAT_TYPE_INFO, "Harita bulunamıyor (indeks %d)", pkCCI->lMapIndex);
 						}
 						else
 						{
-							ch->ChatPacket(CHAT_TYPE_INFO, "You warp to ( %d, %d )", pos.x, pos.y);
+							ch->ChatPacket(CHAT_TYPE_INFO, "( %d, %d ) konumuna ışınlandınız", pos.x, pos.y);
 							ch->WarpSet(pos.x, pos.y);
 							lua_pushnumber(L, 1 );
 						}
@@ -1958,7 +1958,7 @@ namespace quest
 				}
 				else if (NULL == CHARACTER_MANAGER::instance().FindPC(arg1))
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, "There is no one by that name");
+					ch->ChatPacket(CHAT_TYPE_INFO, "Bu isimde kimse yok");
 				}
 
 				lua_pushnumber(L, 0 );
@@ -1977,7 +1977,7 @@ teleport_area:
 		x *= 100;
 		y *= 100;
 
-		ch->ChatPacket(CHAT_TYPE_INFO, "You warp to ( %d, %d )", x, y);
+		ch->ChatPacket(CHAT_TYPE_INFO, "( %d, %d ) konumuna ışınlandınız", x, y);
 		ch->WarpSet(x,y);
 		ch->Stop();
 		lua_pushnumber(L, 1 );
@@ -2001,7 +2001,7 @@ teleport_area:
 	{
 		if ( lua_isnumber(L, 1) != true && lua_isnumber(L, 2) != true && lua_isnumber(L, 3) != true && lua_isnumber(L, 4) != true )
 		{
-			sys_err("Wrong Quest Function Arguments: pc_give_polymorph_book");
+			sys_err("Hatalı Görev Fonksiyon Argümanları: pc_give_polymorph_book");
 			return 0;
 		}
 
@@ -2032,7 +2032,7 @@ teleport_area:
 
 		if (!lua_isnumber(L, 1))
 		{
-			sys_err("wrong premium index (is not number)");
+			sys_err("yanlış premium indeksi (sayı değil)");
 			return 0;
 		}
 
@@ -2049,7 +2049,7 @@ teleport_area:
 				break;
 
 			default:
-				sys_err("wrong premium index %d", premium_type);
+				sys_err("yanlış premium indeksi %d", premium_type);
 				return 0;
 		}
 
@@ -2147,7 +2147,7 @@ teleport_area:
 		// @fixme309 BEGIN
 		ch->Save();
 		ch->SetExchangeTime();
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("The name has been successfully changed. You're going to get disconnected."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("İsim başarıyla değiştirildi. Bağlantınız kesilecek."));
 		ch->GetDesc()->DelayedDisconnect(10);
 		// @fixme309 END
 
@@ -2739,7 +2739,7 @@ teleport_area:
 
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isstring(L, 3) )
 		{
-			sys_err("QUEST give award call error : wrong argument");
+			sys_err("GÖREV ödül verme çağrı hatası : hatalı argüman");
 			lua_pushnumber (L, 0);
 			return 1;
 		}
@@ -2767,7 +2767,7 @@ teleport_area:
 
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2) || !lua_isstring(L, 3) || !lua_isstring(L, 4) || !lua_isstring(L, 5) || !lua_isstring(L, 6) )
 		{
-			sys_err("QUEST give award call error : wrong argument");
+			sys_err("GÖREV ödül verme çağrı hatası : hatalı argüman");
 			lua_pushnumber (L, 0);
 			return 1;
 		}
@@ -2799,7 +2799,7 @@ teleport_area:
 
 		if( pChar != NULL )
 		{
-			//sys_err("quest cmd test %s", pChar->GetItemAward_cmd() );
+			//sys_err("görev komut testi %s", pChar->GetItemAward_cmd() );
 			lua_pushstring(L, pChar->GetItemAward_cmd() );
 		}
 		else
@@ -2871,7 +2871,7 @@ teleport_area:
 					{
 						if ((m_vnum = lua_tonumber(L, -1))<=0)
 						{
-							ch->ChatPacket(CHAT_TYPE_INFO, "#%u item not valid by that vnum.", m_vnum);
+							ch->ChatPacket(CHAT_TYPE_INFO, "#%u bu vnum ile eşya geçersiz.", m_vnum);
 							return 0;
 						}
 					}
@@ -2879,13 +2879,13 @@ teleport_area:
 					{
 						if (!ITEM_MANAGER::instance().GetVnum(lua_tostring(L, -1), m_vnum))
 						{
-							ch->ChatPacket(CHAT_TYPE_INFO, "#%u item not exist by that vnum.", m_vnum);
+							ch->ChatPacket(CHAT_TYPE_INFO, "#%u bu vnum ile eşya yok.", m_vnum);
 							return 0;
 						}
 					}
 					else
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, "#%u item not exist by that unknown vnum.");
+						ch->ChatPacket(CHAT_TYPE_INFO, "#%u bilinmeyen vnum ile eşya yok.");
 						return 0;
 					}
 					break;
@@ -2895,18 +2895,18 @@ teleport_area:
 						// if ((m_count = MINMAX(1, lua_tonumber(L, -1), ITEM_MAX_COUNT))<=0)
 						if ((m_count = lua_tonumber(L, -1))<=0)
 						{
-							ch->ChatPacket(CHAT_TYPE_INFO, "#%u item not valid by that count.", m_count);
+							ch->ChatPacket(CHAT_TYPE_INFO, "#%u bu adet ile eşya geçersiz.", m_count);
 							return 0;
 						}
 					}
 					else
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, "#%u item not exist by that unknown count.");
+						ch->ChatPacket(CHAT_TYPE_INFO, "#%u bilinmeyen adet ile eşya yok.");
 						return 0;
 					}
 					break;
 				default:
-					ch->ChatPacket(CHAT_TYPE_INFO, "arg1(%d) index found", m_idx);
+					ch->ChatPacket(CHAT_TYPE_INFO, "arg1(%d) indeks bulundu", m_idx);
 					break;
 			}
 			m_idx++;
@@ -2952,7 +2952,7 @@ teleport_area:
 		// start arg4
 		if ((m_state = lua_tonumber(L, 4))>=PCMI0_MAX)
 			return 0;
-		// ch->ChatPacket(CHAT_TYPE_INFO, "arg4 is %d", m_state);
+		// ch->ChatPacket(CHAT_TYPE_INFO, "arg4: %d", m_state);
 		// end arg4
 
 		// create item
@@ -2983,7 +2983,7 @@ teleport_area:
 					break;
 				case PCMI0_DROPWP:
 					if (lua_isnumber(L, 5) && (m_sec = lua_tonumber(L, 5)))
-						pkNewItem->SetOwnership(ch, m_sec<=0?1:m_sec); //, ch->ChatPacket(CHAT_TYPE_INFO, "arg5 is %d", m_sec<=0?1:m_sec);
+						pkNewItem->SetOwnership(ch, m_sec<=0?1:m_sec); //, ch->ChatPacket(CHAT_TYPE_INFO, "arg5: %d", m_sec<=0?1:m_sec);
 					else
 						pkNewItem->SetOwnership(ch);
 				case PCMI0_DROP:
@@ -3048,7 +3048,7 @@ teleport_area:
 	{
 		if (!lua_isstring(L, 1) || !lua_isstring(L, 2))
 		{
-			sys_err("QUEST wrong del flag");
+			sys_err("GÖREV hatalı del flag");
 			return 0;
 		}
 		else
@@ -3219,7 +3219,7 @@ teleport_area:
 	{
 		if (!lua_isnumber(L, 1) || !lua_isnumber(L, 2))
 		{
-			sys_err("arg1 and arg2 must be numbers");
+			sys_err("arg1 ve arg2 sayı olmalı");
 			return 0;
 		}
 		lua_pushnumber(L, (DWORD)((exp_table[MINMAX(0, lua_tonumber(L, 1), PLAYER_MAX_LEVEL_CONST)] / 100) * MINMAX(1, lua_tonumber(L, 2), 100)));
@@ -3468,7 +3468,7 @@ teleport_area:
 				pkChar->OpenAcce(lua_toboolean(L, 1));
 		}
 		else
-			sys_err("Invalid argument: arg1 must be boolean.");
+			sys_err("Geçersiz argüman: arg1 boolean olmalı.");
 		return 0;
 	}
 #endif

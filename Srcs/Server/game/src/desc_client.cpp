@@ -57,7 +57,7 @@ void CLIENT_DESC::Destroy()
 
 	fdwatch_del_fd(m_lpFdw, m_sock);
 
-	sys_log(0, "SYSTEM: closing client socket. DESC #%d", m_sock);
+	sys_log(0, "SİSTEM: istemci soketi kapatılıyor. DESC #%d", m_sock);
 
 	socket_close(m_sock);
 	m_sock = INVALID_SOCKET;
@@ -197,7 +197,7 @@ void CLIENT_DESC::SetPhase(int iPhase)
 						}
 					}
 
-					sys_log(0, "DB_SETUP current user %d size %d", p.dwLoginCount, buf.size());
+					sys_log(0, "DB_SETUP şu anki kullanıcı %d boyut %d", p.dwLoginCount, buf.size());
 
 					CPartyManager::instance().EnablePCParty();
 					//CPartyManager::instance().SendPartyToDB();
@@ -244,7 +244,7 @@ void CLIENT_DESC::DBPacketHeader(BYTE bHeader, DWORD dwHandle, DWORD dwSize)
 void CLIENT_DESC::DBPacket(BYTE bHeader, DWORD dwHandle, const void * c_pvData, DWORD dwSize)
 {
 	if (m_sock == INVALID_SOCKET) {
-		sys_log(0, "CLIENT_DESC [%s] trying DBPacket() while not connected",
+		sys_log(0, "CLIENT_DESC [%s] bağlı değilken DBPacket() deniyor",
 			GetKnownClientDescName(this));
 		return;
 	}
@@ -258,7 +258,7 @@ void CLIENT_DESC::DBPacket(BYTE bHeader, DWORD dwHandle, const void * c_pvData, 
 void CLIENT_DESC::Packet(const void * c_pvData, int iSize)
 {
 	if (m_sock == INVALID_SOCKET) {
-		sys_log(0, "CLIENT_DESC [%s] trying Packet() while not connected",
+		sys_log(0, "CLIENT_DESC [%s] bağlı değilken Packet() deniyor",
 			GetKnownClientDescName(this));
 		return;
 	}

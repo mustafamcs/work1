@@ -29,14 +29,14 @@ size_t PanamaLoad()
 
 		if (!fpIV)
 		{
-			sys_err("cannot open iv file %s", szIVFileName);
+			sys_err("iv dosyası açılamıyor %s", szIVFileName);
 			continue;
 		}
 
 		BYTE abIV[32];
 
 		if (32 != fread(abIV, sizeof(BYTE), 32, fpIV))
-			sys_err("IV file format error! %s", szIVFileName);
+			sys_err("IV dosya format hatası! %s", szIVFileName);
 		else
 		{
 			char szHex[64 + 1];

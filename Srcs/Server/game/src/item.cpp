@@ -95,7 +95,7 @@ EVENTFUNC(item_destroy_event)
 	LPITEM pkItem = info->item;
 
 	if (pkItem->GetOwner())
-		sys_err("item_destroy_event: Owner exist. (item %s owner %s)", pkItem->GetName(), pkItem->GetOwner()->GetName());
+		sys_err("item_destroy_event: Sahip var. (eşya %s sahip %s)", pkItem->GetName(), pkItem->GetOwner()->GetName());
 
 	pkItem->SetDestroyEvent(NULL);
 	M2_DESTROY_ITEM(pkItem);
@@ -310,7 +310,7 @@ LPITEM CItem::RemoveFromCharacter()
 {
 	if (!m_pOwner)
 	{
-		sys_err("Item::RemoveFromCharacter owner null");
+		sys_err("Item::RemoveFromCharacter sahip null");
 		return (this);
 	}
 
@@ -346,7 +346,7 @@ LPITEM CItem::RemoveFromCharacter()
 				TItemPos cell(INVENTORY, m_wCell);
 
 				if (false == cell.IsDefaultInventoryPosition() && false == cell.IsBeltInventoryPosition())
-					sys_err("CItem::RemoveFromCharacter: Invalid Item Position");
+					sys_err("CItem::RemoveFromCharacter: Geçersiz Eşya Konumu");
 				else
 				{
 					pOwner->SetItem(cell, NULL);
@@ -375,7 +375,7 @@ bool CItem::AddToCharacter(LPCHARACTER ch, TItemPos Cell)
 	{
 		if (m_wCell >= INVENTORY_MAX_NUM && BELT_INVENTORY_SLOT_START > m_wCell)
 		{
-			sys_err("CItem::AddToCharacter: cell overflow: %s to %s cell %d", m_pProto->szName, ch->GetName(), m_wCell);
+			sys_err("CItem::AddToCharacter: hücre taşması: %s -> %s hücre %d", m_pProto->szName, ch->GetName(), m_wCell);
 			return false;
 		}
 	}
@@ -383,7 +383,7 @@ bool CItem::AddToCharacter(LPCHARACTER ch, TItemPos Cell)
 	{
 		if (m_wCell >= DRAGON_SOUL_INVENTORY_MAX_NUM)
 		{
-			sys_err("CItem::AddToCharacter: cell overflow: %s to %s cell %d", m_pProto->szName, ch->GetName(), m_wCell);
+			sys_err("CItem::AddToCharacter: hücre taşması: %s -> %s hücre %d", m_pProto->szName, ch->GetName(), m_wCell);
 			return false;
 		}
 	}
@@ -437,19 +437,19 @@ bool CItem::AddToGround(long lMapIndex, const PIXEL_POSITION & pos, bool skipOwn
 {
 	if (0 == lMapIndex)
 	{
-		sys_err("wrong map index argument: %d", lMapIndex);
+		sys_err("yanlış harita indeksi argümanı: %d", lMapIndex);
 		return false;
 	}
 
 	if (GetSectree())
 	{
-		sys_err("sectree already assigned");
+		sys_err("sectree zaten atanmış");
 		return false;
 	}
 
 	if (!skipOwnerCheck && m_pOwner)
 	{
-		sys_err("owner pointer not null");
+		sys_err("sahip pointer'ı null değil");
 		return false;
 	}
 
@@ -457,7 +457,7 @@ bool CItem::AddToGround(long lMapIndex, const PIXEL_POSITION & pos, bool skipOwn
 
 	if (!tree)
 	{
-		sys_err("cannot find sectree by %dx%d", pos.x, pos.y);
+		sys_err("%dx%d ile sectree bulunamıyor", pos.x, pos.y);
 		return false;
 	}
 
@@ -669,7 +669,7 @@ void CItem::ModifyPoints(bool bAdd)
 
 				if (!p)
 				{
-					sys_err("cannot find table by vnum %u", dwVnum);
+					sys_err("vnum %u ile tablo bulunamıyor", dwVnum);
 					continue;
 				}
 
@@ -965,7 +965,7 @@ bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 {
 	if (!ch)
 	{
-		sys_err("EquipTo: nil character");
+		sys_err("EquipTo: nil karakter");
 		return false;
 	}
 
@@ -973,7 +973,7 @@ bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 	{
 		if (bWearCell < WEAR_MAX_NUM || bWearCell >= WEAR_MAX_NUM + DRAGON_SOUL_DECK_MAX_NUM * DS_SLOT_MAX)
 		{
-			sys_err("EquipTo: invalid dragon soul cell (this: #%d %s wearflag: %d cell: %d)", GetOriginalVnum(), GetName(), GetSubType(), bWearCell - WEAR_MAX_NUM);
+			sys_err("EquipTo: geçersiz ejder ruhu hücresi (this: #%d %s wearflag: %d hücre: %d)", GetOriginalVnum(), GetName(), GetSubType(), bWearCell - WEAR_MAX_NUM);
 			return false;
 		}
 	}
@@ -981,14 +981,14 @@ bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 	{
 		if (bWearCell >= WEAR_MAX_NUM)
 		{
-			sys_err("EquipTo: invalid wear cell (this: #%d %s wearflag: %d cell: %d)", GetOriginalVnum(), GetName(), GetWearFlag(), bWearCell);
+			sys_err("EquipTo: geçersiz kuşanım hücresi (this: #%d %s wearflag: %d hücre: %d)", GetOriginalVnum(), GetName(), GetWearFlag(), bWearCell);
 			return false;
 		}
 	}
 
 	if (ch->GetWear(bWearCell))
 	{
-		sys_err("EquipTo: item already exist (this: #%d %s cell: %d %s)", GetOriginalVnum(), GetName(), bWearCell, ch->GetWear(bWearCell)->GetName());
+		sys_err("EquipTo: eşya zaten var (this: #%d %s hücre: %d %s)", GetOriginalVnum(), GetName(), bWearCell, ch->GetWear(bWearCell)->GetName());
 		return false;
 	}
 
@@ -1008,7 +1008,7 @@ bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 	{
 		if (m_pOwner->GetWear(i))
 		{
-			// m_pOwner->ChatPacket(CHAT_TYPE_INFO, "unequip immuneflag(%u)", m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag); // always 0
+			// m_pOwner->ChatPacket(CHAT_TYPE_INFO, "kuşanım çıkarma immuneflag(%u)", m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag); // always 0
 			SET_BIT(dwImmuneFlag, m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag);
 		}
 	}
@@ -1095,7 +1095,7 @@ bool CItem::Unequip()
 	{
 		if (m_pOwner->GetWear(i))
 		{
-			// m_pOwner->ChatPacket(CHAT_TYPE_INFO, "unequip immuneflag(%u)", m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag); // always 0
+			// m_pOwner->ChatPacket(CHAT_TYPE_INFO, "kuşanım çıkarma immuneflag(%u)", m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag); // always 0
 			SET_BIT(dwImmuneFlag, m_pOwner->GetWear(i)->m_pProto->dwImmuneFlag);
 		}
 	}
@@ -1139,7 +1139,7 @@ bool CItem::CreateSocket(BYTE bSlot, BYTE bGold)
 
 	if (m_alSockets[bSlot] != 0)
 	{
-		sys_err("Item::CreateSocket : socket already exist %s %d", GetName(), bSlot);
+		sys_err("Item::CreateSocket : soket zaten var %s %d", GetName(), bSlot);
 		return false;
 	}
 
@@ -1296,7 +1296,7 @@ void CItem::AlterToSocketItem(int iSocketCount)
 {
 	if (iSocketCount >= ITEM_SOCKET_MAX_NUM)
 	{
-		sys_log(0, "Invalid Socket Count %d, set to maximum", ITEM_SOCKET_MAX_NUM);
+		sys_log(0, "Geçersiz Soket Sayısı %d, maksimuma ayarlandı", ITEM_SOCKET_MAX_NUM);
 		iSocketCount = ITEM_SOCKET_MAX_NUM;
 	}
 
@@ -1378,7 +1378,7 @@ int CItem::GetRefineLevel()
 		str_to_number(locale_rtn, p+1);
 		if (locale_rtn != rtn)
 		{
-			sys_err("refine_level_based_on_NAME(%d) is not equal to refine_level_based_on_LOCALE_NAME(%d).", rtn, locale_rtn);
+			sys_err("refine_level_based_on_NAME(%d), refine_level_based_on_LOCALE_NAME(%d) değerine eşit değil.", rtn, locale_rtn);
 		}
 	}
 
@@ -1451,7 +1451,7 @@ EVENTFUNC(timer_based_on_wear_expire_event)
 	int remain_time = pkItem->GetSocket(ITEM_SOCKET_REMAIN_SEC) - processing_time/passes_per_sec;
 	if (remain_time <= 0)
 	{
-		sys_log(0, "ITEM EXPIRED : expired %s %u", pkItem->GetName(), pkItem->GetID());
+		sys_log(0, "EŞYA SÜRESİ DOLDU : süresi dolan %s %u", pkItem->GetName(), pkItem->GetID());
 		pkItem->SetTimerBasedOnWearExpireEvent(NULL);
 		pkItem->SetSocket(ITEM_SOCKET_REMAIN_SEC, 0);
 

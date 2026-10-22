@@ -27,7 +27,7 @@ bool ITEM_MANAGER::ReadCommonDropItemFile(const char * c_pszFileName)
 
 	if (!fp)
 	{
-		sys_err("Cannot open %s", c_pszFileName);
+		sys_err("%s açılamıyor", c_pszFileName);
 		return false;
 	}
 
@@ -100,7 +100,7 @@ bool ITEM_MANAGER::ReadCommonDropItemFile(const char * c_pszFileName)
 
 		std::vector<CItemDropInfo>::iterator it = v.begin();
 
-		sys_log(1, "CommonItemDrop rank %d", i);
+		sys_log(1, "CommonItemDrop rütbe %d", i);
 
 		while (it != v.end())
 		{
@@ -131,7 +131,7 @@ bool ITEM_MANAGER::ReadSpecialDropItemFile(const char * c_pszFileName)
 
 		if (!loader.GetTokenInteger("vnum", &iVnum))
 		{
-			sys_err("ReadSpecialDropItemFile : Syntax error %s : no vnum, node %s", c_pszFileName, stName.c_str());
+			sys_err("ReadSpecialDropItemFile : Sözdizimi hatası %s : vnum yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			return false;
 		}
@@ -178,14 +178,14 @@ bool ITEM_MANAGER::ReadSpecialDropItemFile(const char * c_pszFileName)
 						apply_type = FN_get_apply_type(pTok->at(0).c_str());
 						if (0 == apply_type)
 						{
-							sys_err ("Invalid APPLY_TYPE %s in Special Item Group Vnum %d", pTok->at(0).c_str(), iVnum);
+							sys_err ("Geçersiz APPLY_TYPE %s, Special Item Group Vnum %d içinde", pTok->at(0).c_str(), iVnum);
 							return false;
 						}
 					}
 					str_to_number(apply_value, pTok->at(1).c_str());
 					if (apply_type > MAX_APPLY_NUM)
 					{
-						sys_err ("Invalid APPLY_TYPE %u in Special Item Group Vnum %d", apply_type, iVnum);
+						sys_err ("Geçersiz APPLY_TYPE %u, Special Item Group Vnum %d içinde", apply_type, iVnum);
 						M2_DELETE(pkGroup);
 						return false;
 					}
@@ -307,7 +307,7 @@ bool ITEM_MANAGER::ConvSpecialDropItemFile()
 	FILE *fp = fopen("special_item_group_vnum.txt", "w");
 	if (!fp)
 	{
-		sys_err("could not open file (%s)", "special_item_group_vnum.txt");
+		sys_err("dosya açılamadı (%s)", "special_item_group_vnum.txt");
 		return false;
 	}
 
@@ -331,7 +331,7 @@ bool ITEM_MANAGER::ConvSpecialDropItemFile()
 
 		if (!loader.GetTokenInteger("vnum", &iVnum))
 		{
-			sys_err("ConvSpecialDropItemFile : Syntax error %s : no vnum, node %s", szSpecialItemGroupFileName, stName.c_str());
+			sys_err("ConvSpecialDropItemFile : Sözdizimi hatası %s : vnum yok, node %s", szSpecialItemGroupFileName, stName.c_str());
 			loader.SetParentNode();
 			fclose(fp);
 			return false;
@@ -459,7 +459,7 @@ bool ITEM_MANAGER::ReadEtcDropItemFile(const char * c_pszFileName)
 
 	if (!fp)
 	{
-		sys_err("Cannot open %s", c_pszFileName);
+		sys_err("%s açılamıyor", c_pszFileName);
 		return false;
 	}
 
@@ -533,14 +533,14 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 
 		if (!loader.GetTokenString("type", &strType))
 		{
-			sys_err("ReadMonsterDropItemGroup : Syntax error %s : no type (kill|drop), node %s", c_pszFileName, stName.c_str());
+			sys_err("ReadMonsterDropItemGroup : Sözdizimi hatası %s : tip yok (kill|drop), node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			return false;
 		}
 
 		if (!loader.GetTokenInteger("mob", &iMobVnum))
 		{
-			sys_err("ReadMonsterDropItemGroup : Syntax error %s : no mob vnum, node %s", c_pszFileName, stName.c_str());
+			sys_err("ReadMonsterDropItemGroup : Sözdizimi hatası %s : mob vnum yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			return false;
 		}
@@ -549,7 +549,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 		{
 			if (!loader.GetTokenInteger("kill_drop", &iKillDrop))
 			{
-				sys_err("ReadMonsterDropItemGroup : Syntax error %s : no kill drop count, node %s", c_pszFileName, stName.c_str());
+				sys_err("ReadMonsterDropItemGroup : Sözdizimi hatası %s : kill drop adedi yok, node %s", c_pszFileName, stName.c_str());
 				loader.SetParentNode();
 				return false;
 			}
@@ -563,7 +563,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 		{
 			if ( !loader.GetTokenInteger("level_limit", &iLevelLimit) )
 			{
-				sys_err("ReadmonsterDropItemGroup : Syntax error %s : no level_limit, node %s", c_pszFileName, stName.c_str());
+				sys_err("ReadmonsterDropItemGroup : Sözdizimi hatası %s : level_limit yok, node %s", c_pszFileName, stName.c_str());
 				loader.SetParentNode();
 				return false;
 			}
@@ -610,7 +610,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 
 					if (iCount<1)
 					{
-						sys_err("ReadMonsterDropItemGroup : there is no count for item %s : node %s : vnum %d, count %d", name.c_str(), stName.c_str(), dwVnum, iCount);
+						sys_err("ReadMonsterDropItemGroup : %s eşyası için adet yok : node %s : vnum %d, adet %d", name.c_str(), stName.c_str(), dwVnum, iCount);
 						return false;
 					}
 
@@ -619,7 +619,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 
 					if (iPartPct == 0)
 					{
-						sys_err("ReadMonsterDropItemGroup : there is no drop percent for item %s : node %s : vnum %d, count %d, pct %d", name.c_str(), stName.c_str(), iPartPct);
+						sys_err("ReadMonsterDropItemGroup : %s eşyası için düşürme yüzdesi yok : node %s : vnum %d, adet %d, pct %d", name.c_str(), stName.c_str(), iPartPct);
 						return false;
 					}
 
@@ -675,7 +675,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 
 					if (iCount < 1)
 					{
-						sys_err("ReadMonsterDropItemGroup : there is no count for item %s : node %s", name.c_str(), stName.c_str());
+						sys_err("ReadMonsterDropItemGroup : %s eşyası için adet yok : node %s", name.c_str(), stName.c_str());
 						M2_DELETE(pkGroup);
 
 						return false;
@@ -724,7 +724,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 
 					if (iCount < 1)
 					{
-						sys_err("ReadMonsterDropItemGroup : there is no count for item %s : node %s", name.c_str(), stName.c_str());
+						sys_err("ReadMonsterDropItemGroup : %s eşyası için adet yok : node %s", name.c_str(), stName.c_str());
 						M2_DELETE(pkLevelItemGroup);
 						return false;
 					}
@@ -770,7 +770,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 
 					if (iCount < 1)
 					{
-						sys_err("ReadMonsterDropItemGroup : there is no count for item %s : node %s", name.c_str(), stName.c_str());
+						sys_err("ReadMonsterDropItemGroup : %s eşyası için adet yok : node %s", name.c_str(), stName.c_str());
 						M2_DELETE(pkGroup);
 
 						return false;
@@ -793,7 +793,7 @@ bool ITEM_MANAGER::ReadMonsterDropItemGroup(const char * c_pszFileName)
 		}
 		else
 		{
-			sys_err("ReadMonsterDropItemGroup : Syntax error %s : invalid type %s (kill|drop), node %s", c_pszFileName, strType.c_str(), stName.c_str());
+			sys_err("ReadMonsterDropItemGroup : Sözdizimi hatası %s : geçersiz tip %s (kill|drop), node %s", c_pszFileName, strType.c_str(), stName.c_str());
 			loader.SetParentNode();
 			return false;
 		}
@@ -824,14 +824,14 @@ bool ITEM_MANAGER::ReadDropItemGroup(const char * c_pszFileName)
 
 		if (!loader.GetTokenInteger("vnum", &iVnum))
 		{
-			sys_err("ReadDropItemGroup : Syntax error %s : no vnum, node %s", c_pszFileName, stName.c_str());
+			sys_err("ReadDropItemGroup : Sözdizimi hatası %s : vnum yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			return false;
 		}
 
 		if (!loader.GetTokenInteger("mob", &iMobVnum))
 		{
-			sys_err("ReadDropItemGroup : Syntax error %s : no mob vnum, node %s", c_pszFileName, stName.c_str());
+			sys_err("ReadDropItemGroup : Sözdizimi hatası %s : mob vnum yok, node %s", c_pszFileName, stName.c_str());
 			loader.SetParentNode();
 			return false;
 		}
@@ -878,7 +878,7 @@ bool ITEM_MANAGER::ReadDropItemGroup(const char * c_pszFileName)
 
 				if (iCount < 1)
 				{
-					sys_err("ReadDropItemGroup : there is no count for item %s : node %s", name.c_str(), stName.c_str());
+					sys_err("ReadDropItemGroup : %s eşyası için adet yok : node %s", name.c_str(), stName.c_str());
 
 					if (it == m_map_pkDropItemGroup.end())
 						M2_DELETE(pkGroup);

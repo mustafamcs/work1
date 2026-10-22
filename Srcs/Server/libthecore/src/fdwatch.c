@@ -76,7 +76,7 @@ int fdwatch(LPFDWATCH fdw, struct timeval *timeout)
 	int fd = fdw->kqrevents[i].ident;
 
 	if (fd >= fdw->nfiles)
-	    sys_err("ident overflow %d nfiles: %d", fdw->kqrevents[i].ident, fdw->nfiles);
+	    sys_err("ident taşması %d nfiles: %d", fdw->kqrevents[i].ident, fdw->nfiles);
 	else
 	{
 	    if (fdw->kqrevents[i].filter == EVFILT_WRITE)
@@ -143,7 +143,7 @@ void fdwatch_add_fd(LPFDWATCH fdw, socket_t fd, void * client_data, int rw, int 
 		flag = EV_ADD;
 	else
 	{
-		sys_log(2, "ADD ONESHOT fd_rw %d", fdw->fd_rw[fd]);
+		sys_log(2, "TEK SEFERLİK EKLE fd_rw %d", fdw->fd_rw[fd]);
 		flag = EV_ADD | EV_ONESHOT;
 		fdw->fd_rw[fd] |= FDW_WRITE_ONESHOT;
 	}
@@ -197,7 +197,7 @@ int fdwatch_check_event(LPFDWATCH fdw, socket_t fd, unsigned int event_idx)
 	}
     }
     else
-	sys_err("fdwatch_check_event: Unknown filter %d (descriptor %d)", fdw->kqrevents[event_idx].filter, fd);
+	sys_err("fdwatch_check_event: Bilinmeyen filtre %d (descriptor %d)", fdw->kqrevents[event_idx].filter, fd);
 
     return 0;
 }

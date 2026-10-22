@@ -68,7 +68,7 @@ namespace marriage
 	{
 		if (m_pEndEvent)
 		{
-			sys_err("WeddingMap::SetEnded - ALREADY EndEvent(m_pEndEvent=%x)", get_pointer(m_pEndEvent));
+			sys_err("WeddingMap::SetEnded - ZATEN EndEvent(m_pEndEvent=%x)", get_pointer(m_pEndEvent));
 			return;
 		}
 
@@ -148,7 +148,7 @@ namespace marriage
 
 	void WeddingMap::DestroyAll()
 	{
-		sys_log(0, "WeddingMap::DestroyAll: m_set_pkChr size %zu", m_set_pkChr.size());
+		sys_log(0, "WeddingMap::DestroyAll: m_set_pkChr boyut %zu", m_set_pkChr.size());
 
 		FDestroyEveryone f;
 
@@ -366,7 +366,7 @@ namespace marriage
 
 			if (!dwMapIndex)
 			{
-				sys_err("cannot create wedding map for %u, %u", dwPID1, dwPID2);
+				sys_err("%u, %u için düğün haritası oluşturulamıyor", dwPID1, dwPID2);
 				return;
 			}
 

@@ -54,7 +54,7 @@ bool CPeerBase::Accept(socket_t fd_accept)
 	std::string targetIP = inet_ntoa(peer.sin_addr);
 	if (targetIP.rfind("127.0.0.1", 0) && targetIP.rfind("192.168.", 0) && targetIP.rfind("10.", 0))
 	{
-		sys_log(0, "BLOCK CONNECTION FROM %s", inet_ntoa(peer.sin_addr));
+		sys_log(0, "%s BAĞLANTISI ENGELLENDİ", inet_ntoa(peer.sin_addr));
 		Destroy();
 		return false;
 	}
@@ -79,7 +79,7 @@ bool CPeerBase::Accept(socket_t fd_accept)
 	fdwatch_add_fd(m_fdWatcher, m_fd, this, FDW_READ, false);
 
 	OnAccept();
-	sys_log(0, "ACCEPT FROM %s", inet_ntoa(peer.sin_addr));
+	sys_log(0, "%s TARAFINDAN KABUL", inet_ntoa(peer.sin_addr));
 	return true;
 }
 
@@ -114,7 +114,7 @@ void CPeerBase::EncodeBYTE(BYTE b)
 {
 	if (!m_outBuffer)
 	{
-		sys_err("Not ready to write");
+		sys_err("Yazmaya hazır değil");
 		return;
 	}
 
@@ -126,7 +126,7 @@ void CPeerBase::EncodeWORD(WORD w)
 {
 	if (!m_outBuffer)
 	{
-		sys_err("Not ready to write");
+		sys_err("Yazmaya hazır değil");
 		return;
 	}
 
@@ -138,7 +138,7 @@ void CPeerBase::EncodeDWORD(DWORD dw)
 {
 	if (!m_outBuffer)
 	{
-		sys_err("Not ready to write");
+		sys_err("Yazmaya hazır değil");
 		return;
 	}
 
@@ -150,7 +150,7 @@ void CPeerBase::Encode(const void* data, DWORD size)
 {
 	if (!m_outBuffer)
 	{
-		sys_err("Not ready to write");
+		sys_err("Yazmaya hazır değil");
 		return;
 	}
 
@@ -162,7 +162,7 @@ int CPeerBase::Recv()
 {
 	if (!m_inBuffer)
 	{
-		sys_err("input buffer nil");
+		sys_err("girdi tamponu nil");
 		return -1;
 	}
 
@@ -172,7 +172,7 @@ int CPeerBase::Recv()
 
 	if (bytes_read < 0)
 	{
-		sys_err("socket_read failed %s", strerror(errno));
+		sys_err("socket_read başarısız %s", strerror(errno));
 		return -1;
 	}
 	else if (bytes_read == 0)

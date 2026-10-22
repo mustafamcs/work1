@@ -55,10 +55,10 @@ int socket_read(socket_t desc, char* read_point, size_t space_left)
 	if (wsa_error == WSAEWOULDBLOCK) {
 		return 0;
 	}
-	sys_log(0, "socket_read: WSAGetLastError returned %d", wsa_error);
+	sys_log(0, "socket_read: WSAGetLastError %d döndürdü", wsa_error);
 #endif
 
-    sys_err("about to lose connection");
+    sys_err("bağlantı kopmak üzere");
     return -1;
 }
 
@@ -93,7 +93,7 @@ int socket_write_tcp(socket_t desc, const char *txt, int length)
 	if (wsa_error == WSAEWOULDBLOCK) {
 		return 0;
 	}
-	sys_log(0, "socket_write_tcp: WSAGetLastError returned %d", wsa_error);
+	sys_log(0, "socket_write_tcp: WSAGetLastError %d döndürdü", wsa_error);
 #endif
 
     /* Looks like the error was fatal.  Too bad. */
@@ -117,9 +117,9 @@ int socket_write(socket_t desc, const char *data, size_t length)
 		errno = EAGAIN;
 #endif
 	    if (errno == EAGAIN)
-		sys_err("socket write would block, about to close!");
+		sys_err("soket yazma bloklanacak, kapatılıyor!");
 	    else
-		sys_err("write to desc error");
+		sys_err("desc'e yazma hatası");
 
 	    return -1;
 	}
@@ -179,11 +179,11 @@ int socket_bind(const char * ip, int port, int protocol)
 
     if (protocol == SOCK_STREAM)
     {
-	sys_log(0, "SYSTEM: BINDING TCP PORT ON [%d] (fd %d)", port, s);
+	sys_log(0, "SİSTEM: TCP PORT BAĞLANIYOR [%d] (fd %d)", port, s);
 	listen(s, SOMAXCONN);
     }
     else
-	sys_log(0, "SYSTEM: BINDING UDP PORT ON [%d] (fd %d)", port, s);
+	sys_log(0, "SİSTEM: UDP PORT BAĞLANIYOR [%d] (fd %d)", port, s);
 
     return s;
 }
@@ -249,7 +249,7 @@ socket_t socket_connect(const char* host, WORD port)
 
 	if ((hp = gethostbyname(host)) == NULL)
 	{
-	    sys_err("socket_connect(): can not connect to %s:%d", host, port);
+	    sys_err("socket_connect(): %s:%d adresine bağlanılamıyor", host, port);
 	    return -1;
 	}
 
@@ -287,25 +287,25 @@ socket_t socket_connect(const char* host, WORD port)
 #else
 		case EINTR:
 #endif
-		    sys_err("HOST %s:%d connection timeout.", host, port);
+		    sys_err("HOST %s:%d bağlantı zaman aşımı.", host, port);
 		    break;
 #ifdef __WIN32__
 		case WSAECONNREFUSED:
 #else
 		case ECONNREFUSED:
 #endif
-		    sys_err("HOST %s:%d port is not opened. connection refused.", host, port);
+		    sys_err("HOST %s:%d portu açık değil. bağlantı reddedildi.", host, port);
 		    break;
 #ifdef __WIN32__
 		case WSAENETUNREACH:
 #else
 		case ENETUNREACH:
 #endif
-		    sys_err("HOST %s:%d is not reachable from this host.", host, port);
+		    sys_err("HOST %s:%d bu hosttan erişilemiyor.", host, port);
 		    break;
 
 		default:
-		    sys_err("HOST %s:%d, could not connect.", host, port);
+		    sys_err("HOST %s:%d, bağlanılamadı.", host, port);
 		    break;
 	    }
 
@@ -436,7 +436,7 @@ void socket_rcvbuf(socket_t s, unsigned int opt)
 	return;
     }
 
-    sys_log(1, "SYSTEM: %d: receive buffer changed to %d", s, opt);
+    sys_log(1, "SİSTEM: %d: alma tamponu %d olarak değiştirildi", s, opt);
 }
 
 void socket_sndbuf(socket_t s, unsigned int opt)
@@ -460,7 +460,7 @@ void socket_sndbuf(socket_t s, unsigned int opt)
 	return;
     }
 
-    sys_log(1, "SYSTEM: %d: send buffer changed to %d", s, opt);
+    sys_log(1, "SİSTEM: %d: gönderme tamponu %d olarak değiştirildi", s, opt);
 }
 
 // sec : seconds, usec : microseconds
@@ -509,7 +509,7 @@ void socket_timeout(socket_t s, long sec, long usec)
     }
 
 #ifndef __WIN32__
-    sys_log(1, "SYSTEM: %d: TIMEOUT RCV: %d.%d, SND: %d.%d", s, rcvopt.tv_sec, rcvopt.tv_usec, sndopt.tv_sec, sndopt.tv_usec);
+    sys_log(1, "SİSTEM: %d: ZAMAN AŞIMI RCV: %d.%d, SND: %d.%d", s, rcvopt.tv_sec, rcvopt.tv_usec, sndopt.tv_sec, sndopt.tv_usec);
 #endif
 }
 

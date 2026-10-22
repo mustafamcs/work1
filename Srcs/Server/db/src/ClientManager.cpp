@@ -112,7 +112,7 @@ static bool __InitializeDefaultPriv()
 	if (bCleanOldPriv)
 	{
 		auto pCleanStuff(CDBManager::instance().DirectQuery("DELETE FROM priv_settings WHERE value <= 0 OR duration <= NOW();", SQL_COMMON));
-		printf("DEFAULT_PRIV_EMPIRE: removed %u expired priv settings.\n", pCleanStuff->Get()->uiAffectedRows);
+		printf("DEFAULT_PRIV_EMPIRE: %u süresi dolmuş ayrıcalık ayarı kaldırıldı.\n", pCleanStuff->Get()->uiAffectedRows);
 	}
 	auto pMsg(CDBManager::instance().DirectQuery("SELECT priv_type, id, type, value, UNIX_TIMESTAMP(duration) FROM priv_settings", SQL_COMMON));
 	if (pMsg->Get()->uiNumRows == 0)
@@ -139,7 +139,7 @@ static bool __InitializeDefaultPriv()
 			else
 				duration_sec -= now_time_sec;
 			// send priv
-			printf("DEFAULT_PRIV_EMPIRE: set empire(%u), type(%u), value(%d), duration(%u)\n", empire, type, value, duration_sec);
+			printf("DEFAULT_PRIV_EMPIRE: empire(%u), type(%u), value(%d), duration(%u) ayarlandı\n", empire, type, value, duration_sec);
 			CPrivManager::instance().AddEmpirePriv(empire, type, value, duration_sec);
 		}
 		else if (!strcmp(row[0], "GUILD"))
@@ -163,7 +163,7 @@ static bool __InitializeDefaultPriv()
 			// send priv
 			if (guild_id)
 			{
-				printf("DEFAULT_PRIV_GUILD: set guild_id(%u), type(%u), value(%d), duration(%u)\n", guild_id, type, value, duration_sec);
+				printf("DEFAULT_PRIV_GUILD: guild_id(%u), type(%u), value(%d), duration(%u) ayarlandı\n", guild_id, type, value, duration_sec);
 				CPrivManager::instance().AddGuildPriv(guild_id, type, value, duration_sec);
 			}
 		}
@@ -180,7 +180,7 @@ static bool __InitializeDefaultPriv()
 			// send priv
 			if (pid)
 			{
-				printf("DEFAULT_PRIV_PLAYER: set pid(%u), type(%u), value(%d)\n", pid, type, value);
+				printf("DEFAULT_PRIV_PLAYER: pid(%u), type(%u), value(%d) ayarlandı\n", pid, type, value);
 				CPrivManager::instance().AddCharPriv(pid, type, value);
 			}
 		}
@@ -207,13 +207,13 @@ bool CClientManager::Initialize()
 	//BOOT_LOCALIZATION
 	if (!InitializeLocalization())
 	{
-		fprintf(stderr, "Failed Localization Infomation so exit\n");
+		fprintf(stderr, "Yerelleştirme Bilgisi başarısız, çıkılıyor\n");
 		return false;
 	}
 #ifdef ENABLE_DEFAULT_PRIV
 	if (!__InitializeDefaultPriv())
 	{
-		// fprintf(stderr, "Failed Default Priv Setting so exit\n");
+		// fprintf(stderr, "Varsayılan Ayrıcalık Ayarı başarısız, çıkılıyor\n");
 		// return false;
 	}
 #endif
@@ -242,7 +242,7 @@ bool CClientManager::Initialize()
 #endif
 	if (!InitializeTables())
 	{
-		sys_err("Table Initialize FAILED");
+		sys_err("Tablo Başlatma BAŞARISIZ");
 		return false;
 	}
 
@@ -274,7 +274,7 @@ bool CClientManager::Initialize()
 
 	if (!CConfig::instance().GetValue("PLAYER_DELETE_LEVEL_LIMIT", &m_iPlayerDeleteLevelLimit))
 	{
-		sys_err("conf.txt: Cannot find PLAYER_DELETE_LEVEL_LIMIT, use default level %d", PLAYER_MAX_LEVEL_CONST + 1);
+		sys_err("conf.txt: PLAYER_DELETE_LEVEL_LIMIT bulunamıyor, varsayılan seviye %d kullanılıyor", PLAYER_MAX_LEVEL_CONST + 1);
 		m_iPlayerDeleteLevelLimit = PLAYER_MAX_LEVEL_CONST + 1;
 	}
 
@@ -283,8 +283,8 @@ bool CClientManager::Initialize()
 		m_iPlayerDeleteLevelLimitLower = 0;
 	}
 
-	sys_log(0, "PLAYER_DELETE_LEVEL_LIMIT set to %d", m_iPlayerDeleteLevelLimit);
-	sys_log(0, "PLAYER_DELETE_LEVEL_LIMIT_LOWER set to %d", m_iPlayerDeleteLevelLimitLower);
+	sys_log(0, "PLAYER_DELETE_LEVEL_LIMIT %d olarak ayarlandı", m_iPlayerDeleteLevelLimit);
+	sys_log(0, "PLAYER_DELETE_LEVEL_LIMIT_LOWER %d olarak ayarlandı", m_iPlayerDeleteLevelLimitLower);
 
 	m_bChinaEventServer = false;
 
@@ -307,7 +307,7 @@ void CClientManager::MainLoop()
 {
 	SQLMsg * tmp;
 
-	sys_log(0, "ClientManager pointer is %p", this);
+	sys_log(0, "ClientManager pointer %p", this);
 
 	while (!m_bShutdowned)
 	{
@@ -323,7 +323,7 @@ void CClientManager::MainLoop()
 		log_rotate();
 	}
 
-	sys_log(0, "MainLoop exited, Starting cache flushing");
+	sys_log(0, "MainLoop çıktı, önbellek boşaltma başlıyor");
 
 	signal_timer_disable();
 
@@ -504,7 +504,7 @@ void CClientManager::QUERY_BOOT(CPeer* peer, TPacketGDBoot * p)
 	for (size_t n = 0; n < vAdmin.size(); ++n)
 	{
 		peer->Encode(vAdmin[n]);
-		sys_log(0, "Admin name %s ConntactIP %s", vAdmin[n].m_szName, vAdmin[n].m_szContactIP);
+		sys_log(0, "Yönetici adı %s BağlantıIP %s", vAdmin[n].m_szName, vAdmin[n].m_szContactIP);
 	}
 	//END_ADMIN_MANAGER
 
@@ -523,7 +523,7 @@ void CClientManager::QUERY_BOOT(CPeer* peer, TPacketGDBoot * p)
 	//END_MONARCE
 
 	if (g_test_server)
-		sys_log(0, "MONARCHCandidacy Size %d", CMonarch::instance().MonarchCandidacySize());
+		sys_log(0, "İmparatorAdaylığı Boyutu %d", CMonarch::instance().MonarchCandidacySize());
 
 	peer->EncodeWORD(0xffff);
 #ifdef ENABLE_IKASHOP_RENEWAL
@@ -537,13 +537,13 @@ void CClientManager::SendPartyOnSetup(CPeer* pkPeer)
 
 	for (itertype(pm) it_party = pm.begin(); it_party != pm.end(); ++it_party)
 	{
-		sys_log(0, "PARTY SendPartyOnSetup Party [%u]", it_party->first);
+		sys_log(0, "PARTİ SendPartyOnSetup Parti [%u]", it_party->first);
 		pkPeer->EncodeHeader(HEADER_DG_PARTY_CREATE, 0, sizeof(TPacketPartyCreate));
 		pkPeer->Encode(it_party->first);
 
 		for (itertype(it_party->second) it_member = it_party->second.begin(); it_member != it_party->second.end(); ++it_member)
 		{
-			sys_log(0, "PARTY SendPartyOnSetup Party [%u] Member [%u]", it_party->first, it_member->first);
+			sys_log(0, "PARTİ SendPartyOnSetup Parti [%u] Üye [%u]", it_party->first, it_member->first);
 			pkPeer->EncodeHeader(HEADER_DG_PARTY_ADD, 0, sizeof(TPacketPartyAdd));
 			pkPeer->Encode(it_party->first);
 			pkPeer->Encode(it_member->first);
@@ -566,7 +566,7 @@ void CClientManager::QUERY_QUEST_SAVE(CPeer * pkPeer, TQuestTable * pTable, DWOR
 {
 	if (0 != (dwLen % sizeof(TQuestTable)))
 	{
-		sys_err("invalid packet size %d, sizeof(TQuestTable) == %d", dwLen, sizeof(TQuestTable));
+		sys_err("geçersiz paket boyutu %d, sizeof(TQuestTable) == %d", dwLen, sizeof(TQuestTable));
 		return;
 	}
 
@@ -701,14 +701,14 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 	{
 		if (!pi->pSafebox)
 		{
-			sys_err("null safebox pointer!");
+			sys_err("null kasa pointer'ı!");
 			delete pi;
 			return;
 		}
 
 		if (!msg->Get()->pSQLResult)
 		{
-			sys_err("null safebox result");
+			sys_err("null kasa sonucu");
 			delete pi;
 			return;
 		}
@@ -732,7 +732,7 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 				if (it == m_map_itemTableByVnum.end())
 				{
 					bEscape = true;
-					sys_err("invalid item vnum %u in safebox: login %s", r.vnum, pi->login);
+					sys_err("kasada geçersiz eşya vnum %u: giriş %s", r.vnum, pi->login);
 					break;
 				}
 
@@ -765,7 +765,7 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 
 					if (it == m_map_itemTableByVnum.end())
 					{
-						sys_err("invalid item vnum %u in item_award: login %s", pItemAward->dwVnum, pi->login);
+						sys_err("item_award içinde geçersiz eşya vnum %u: giriş %s", pItemAward->dwVnum, pi->login);
 						continue;
 					}
 
@@ -846,13 +846,13 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 						itertype(m_map_itemTableByVnum) it = m_map_itemTableByVnum.find (dwItemVnum);
 						if (it == m_map_itemTableByVnum.end())
 						{
-							sys_err ("Invalid item(vnum : %d). It is not in m_map_itemTableByVnum.", dwItemVnum);
+							sys_err ("Geçersiz eşya(vnum : %d). m_map_itemTableByVnum içinde yok.", dwItemVnum);
 							continue;
 						}
 						TItemTable* item_table = it->second;
 						if (item_table == NULL)
 						{
-							sys_err ("Invalid item_table (vnum : %d). It's value is NULL in m_map_itemTableByVnum.", dwItemVnum);
+							sys_err ("Geçersiz item_table (vnum : %d). m_map_itemTableByVnum içindeki değeri NULL.", dwItemVnum);
 							continue;
 						}
 						if (0 == pItemAward->dwSocket0)
@@ -922,7 +922,7 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 
 					auto pmsg(CDBManager::instance().DirectQuery(szQuery));
 					SQLResult * pRes = pmsg->Get();
-					sys_log(0, "SAFEBOX Query : [%s]", szQuery);
+					sys_log(0, "KASA Sorgusu : [%s]", szQuery);
 
 					if (pRes->uiAffectedRows == 0 || pRes->uiInsertID == 0 || pRes->uiAffectedRows == (uint32_t)-1)
 						break;
@@ -1078,7 +1078,7 @@ void CClientManager::RESULT_PRICELIST_LOAD(CPeer* peer, SQLMsg* pMsg)
 	peer->Encode(header);
 	peer->Encode(table.aPriceInfo, sizePriceListSize);
 
-	sys_log(0, "Load MyShopPricelist handle[%d] pid[%d] count[%d]", pReqInfo->first, pReqInfo->second, header.byCount);
+	sys_log(0, "MyShopPricelist Yükle handle[%d] pid[%d] sayı[%d]", pReqInfo->first, pReqInfo->second, header.byCount);
 
 	delete pReqInfo;
 }
@@ -1168,11 +1168,11 @@ void CClientManager::QUERY_EMPIRE_SELECT(CPeer * pkPeer, DWORD dwHandle, TEmpire
 			for (int i = 0; i < PLAYER_PER_ACCOUNT; ++i) // @fixme310
 			{
 				str_to_number(pids[i], row[i]);
-				sys_log(0, "EMPIRE PIDS[%d]", pids[i]);
+				sys_log(0, "İMPARATORLUK PIDS[%d]", pids[i]);
 
 				if (pids[i])
 				{
-					sys_log(0, "EMPIRE move to pid[%d] to village of %u, map_index %d",
+					sys_log(0, "İMPARATORLUK pid[%d] %u köyüne taşındı, map_index %d",
 							pids[i], p->bEmpire, g_start_map[p->bEmpire]);
 
 					snprintf(szQuery, sizeof(szQuery), "UPDATE player%s SET map_index=%u,x=%u,y=%u WHERE id=%u",
@@ -1386,7 +1386,7 @@ void CClientManager::QUERY_SETUP(CPeer * peer, DWORD dwHandle, const char * c_pD
 
 	if (m_pkAuthPeer && !vec_repair.empty())
 	{
-		sys_log(0, "REPAIR size %d", vec_repair.size());
+		sys_log(0, "TAMİR boyut %d", vec_repair.size());
 
 		m_pkAuthPeer->EncodeHeader(HEADER_DG_BILLING_REPAIR, 0, sizeof(DWORD) + sizeof(TPacketBillingRepair) * vec_repair.size());
 		m_pkAuthPeer->EncodeDWORD(vec_repair.size());
@@ -1432,7 +1432,7 @@ void CClientManager::QUERY_ITEM_SAVE(CPeer * pkPeer, const char * c_pData)
 			if (it != m_map_pkItemCacheSetPtr.end())
 			{
 				if (g_test_server)
-					sys_log(0, "ITEM_CACHE: safebox owner %u id %u", c->Get()->owner, c->Get()->id);
+					sys_log(0, "ITEM_CACHE: kasa sahibi %u id %u", c->Get()->owner, c->Get()->id);
 
 				it->second->erase(c);
 			}
@@ -1505,7 +1505,7 @@ void CClientManager::CreateItemCacheSet(DWORD pid)
 	m_map_pkItemCacheSetPtr.emplace(pid, pSet);
 
 	if (g_log)
-		sys_log(0, "ITEM_CACHE: new cache %u", pid);
+		sys_log(0, "ITEM_CACHE: yeni önbellek %u", pid);
 }
 
 void CClientManager::FlushItemCacheSet(DWORD pid)
@@ -1514,7 +1514,7 @@ void CClientManager::FlushItemCacheSet(DWORD pid)
 
 	if (it == m_map_pkItemCacheSetPtr.end())
 	{
-		sys_log(0, "FLUSH_ITEMCACHESET : No ItemCacheSet pid(%d)", pid);
+		sys_log(0, "FLUSH_ITEMCACHESET : ItemCacheSet yok pid(%d)", pid);
 		return;
 	}
 
@@ -1536,7 +1536,7 @@ void CClientManager::FlushItemCacheSet(DWORD pid)
 	m_map_pkItemCacheSetPtr.erase(it);
 
 	if (g_log)
-		sys_log(0, "FLUSH_ITEMCACHESET : Deleted pid(%d)", pid);
+		sys_log(0, "FLUSH_ITEMCACHESET : Silindi pid(%d)", pid);
 }
 
 CItemCache * CClientManager::GetItemCache(DWORD id)
@@ -1558,7 +1558,7 @@ void CClientManager::PutItemCache(TPlayerItem * pNew, bool bSkipQuery)
 	if (!c)
 	{
 		if (g_log)
-			sys_log(0, "ITEM_CACHE: PutItemCache ==> New CItemCache id%d vnum%d new owner%d", pNew->id, pNew->vnum, pNew->owner);
+			sys_log(0, "ITEM_CACHE: PutItemCache ==> Yeni CItemCache id%d vnum%d yeni sahip%d", pNew->id, pNew->vnum, pNew->owner);
 
 		c = new CItemCache;
 		m_map_itemCache.emplace(pNew->id, c);
@@ -1567,7 +1567,7 @@ void CClientManager::PutItemCache(TPlayerItem * pNew, bool bSkipQuery)
 	else
 	{
 		if (g_log)
-			sys_log(0, "ITEM_CACHE: PutItemCache ==> Have Cache");
+			sys_log(0, "ITEM_CACHE: PutItemCache ==> Önbellek Var");
 
 		if (pNew->owner != c->Get()->owner)
 		{
@@ -1576,7 +1576,7 @@ void CClientManager::PutItemCache(TPlayerItem * pNew, bool bSkipQuery)
 			if (it != m_map_pkItemCacheSetPtr.end())
 			{
 				if (g_log)
-				sys_log(0, "ITEM_CACHE: delete owner %u id %u new owner %u", c->Get()->owner, c->Get()->id, pNew->owner);
+				sys_log(0, "ITEM_CACHE: sahip sil %u id %u yeni sahip %u", c->Get()->owner, c->Get()->id, pNew->owner);
 				it->second->erase(c);
 			}
 		}
@@ -1597,9 +1597,9 @@ void CClientManager::PutItemCache(TPlayerItem * pNew, bool bSkipQuery)
 	else
 	{
 		if (g_log)
-			sys_log(0, "ITEM_CACHE: direct save %u id %u", c->Get()->owner, c->Get()->id);
+			sys_log(0, "ITEM_CACHE: doğrudan kaydet %u id %u", c->Get()->owner, c->Get()->id);
 		else
-			sys_log(1, "ITEM_CACHE: direct save %u id %u", c->Get()->owner, c->Get()->id);
+			sys_log(1, "ITEM_CACHE: doğrudan kaydet %u id %u", c->Get()->owner, c->Get()->id);
 
 		c->OnFlush();
 	}
@@ -1755,7 +1755,7 @@ void CClientManager::QUERY_RELOAD_PROTO()
 {
 	if (!InitializeTables())
 	{
-		sys_err("QUERY_RELOAD_PROTO: cannot load tables");
+		sys_err("QUERY_RELOAD_PROTO: tablolar yüklenemiyor");
 		return;
 	}
 
@@ -1888,7 +1888,7 @@ void CClientManager::QUERY_AUTH_LOGIN(CPeer * pkPeer, DWORD dwHandle, TPacketGDA
 
 	if (GetLoginData(p->dwLoginKey))
 	{
-		sys_err("LoginData already exist key %u login %s", p->dwLoginKey, p->szLogin);
+		sys_err("LoginData zaten var anahtar %u giriş %s", p->dwLoginKey, p->szLogin);
 		bResult = 0;
 
 		pkPeer->EncodeHeader(HEADER_DG_AUTH_LOGIN, dwHandle, sizeof(BYTE));
@@ -2005,7 +2005,7 @@ void CClientManager::BillingCheck(const char * data)
 
 		if (it == m_map_pkLoginData.end())
 		{
-			sys_log(0, "BillingCheck: key not exist: %u", dwKey);
+			sys_log(0, "BillingCheck: anahtar yok: %u", dwKey);
 			vec.emplace_back(dwKey);
 		}
 		else
@@ -2014,7 +2014,7 @@ void CClientManager::BillingCheck(const char * data)
 
 			if (!pkLD->IsPlay() && curTime - pkLD->GetLastPlayTime() > 180)
 			{
-				sys_log(0, "BillingCheck: not login: %u", dwKey);
+				sys_log(0, "BillingCheck: giriş yapılmamış: %u", dwKey);
 				vec.emplace_back(dwKey);
 			}
 		}
@@ -2104,7 +2104,7 @@ void CClientManager::CreateObject(TPacketGDCreateObject * p)
 	auto pmsg(CDBManager::instance().DirectQuery(szQuery));
 	if (pmsg->Get()->uiInsertID == 0)
 	{
-		sys_err("cannot insert object");
+		sys_err("nesne eklenemiyor");
 		return;
 	}
 
@@ -2217,7 +2217,7 @@ void CClientManager::MarriageAdd(TPacketMarriageAdd * p)
 
 void CClientManager::MarriageUpdate(TPacketMarriageUpdate * p)
 {
-	sys_log(0, "MarriageUpdate PID:%u %u LP:%d ST:%d", p->dwPID1, p->dwPID2, p->iLovePoint, p->byMarried);
+	sys_log(0, "EvlilikGüncelle PID:%u %u SP:%d DR:%d", p->dwPID1, p->dwPID2, p->iLovePoint, p->byMarried);
 	marriage::CManager::instance().Update(p->dwPID1, p->dwPID2, p->iLovePoint, p->byMarried);
 }
 
@@ -2254,7 +2254,7 @@ void CClientManager::MyshopPricelistUpdate(const TItemPriceListTable* pPacket) /
 {
 	if (pPacket->byCount > SHOP_PRICELIST_MAX_NUM)
 	{
-		sys_err("count overflow!");
+		sys_err("sayı taşması!");
 		return;
 	}
 
@@ -2293,7 +2293,7 @@ void CClientManager::MyshopPricelistRequest(CPeer* peer, DWORD dwHandle, DWORD d
 {
 	if (CItemPriceListTableCache* pCache = GetItemPriceListCache(dwPlayerID))
 	{
-		sys_log(0, "Cache MyShopPricelist handle[%d] pid[%d]", dwHandle, dwPlayerID);
+		sys_log(0, "Önbellek MyShopPricelist handle[%d] pid[%d]", dwHandle, dwPlayerID);
 
 		TItemPriceListTable* pTable = pCache->Get(false);
 
@@ -2312,7 +2312,7 @@ void CClientManager::MyshopPricelistRequest(CPeer* peer, DWORD dwHandle, DWORD d
 	}
 	else
 	{
-		sys_log(0, "Query MyShopPricelist handle[%d] pid[%d]", dwHandle, dwPlayerID);
+		sys_log(0, "Sorgu MyShopPricelist handle[%d] pid[%d]", dwHandle, dwPlayerID);
 
 		char szQuery[QUERY_MAX_LEN];
 		snprintf(szQuery, sizeof(szQuery), "SELECT item_vnum, price FROM myshop_pricelist%s WHERE owner_id=%u", GetTablePostfix(), dwPlayerID);
@@ -2732,7 +2732,7 @@ void CClientManager::ProcessPackets(CPeer * peer)
 				break;
 #endif
 			default:
-				sys_err("Unknown header (header: %d handle: %d length: %d)", header, dwHandle, dwLength);
+				sys_err("Bilinmeyen başlık (başlık: %d handle: %d uzunluk: %d)", header, dwHandle, dwLength);
 				break;
 		}
 	}
@@ -2774,7 +2774,7 @@ void CClientManager::RemovePeer(CPeer * pPeer)
 
 				if (pkLD->IsDeleted())
 				{
-					sys_log(0, "DELETING LoginData");
+					sys_log(0, "LoginData siliniyor");
 					delete pkLD;
 				}
 
@@ -2840,7 +2840,7 @@ int CClientManager::AnalyzeQueryResult(SQLMsg * msg)
 
 	if (!peer)
 	{
-		//sys_err("CClientManager::AnalyzeQueryResult: peer not exist anymore. (ident: %d)", qi->dwIdent);
+		//sys_err("CClientManager::AnalyzeQueryResult: peer artık yok. (ident: %d)", qi->dwIdent);
 #ifdef ENABLE_IKASHOP_RENEWAL
 		switch (qi->iType)
 		{
@@ -2964,7 +2964,7 @@ int CClientManager::AnalyzeQueryResult(SQLMsg * msg)
 #endif
 
 		default:
-			sys_log(0, "CClientManager::AnalyzeQueryResult unknown query result type: %d, str: %s", qi->iType, msg->stQuery.c_str());
+			sys_log(0, "CClientManager::AnalyzeQueryResult bilinmeyen sorgu sonuç tipi: %d, str: %s", qi->iType, msg->stQuery.c_str());
 			break;
 	}
 
@@ -3123,7 +3123,7 @@ int CClientManager::Process()
 
 			std::string st;
 			CClientManager::instance().GetPeerP2PHostNames(st);
-			sys_log(0, "Current Peer host names...\n%s", st.c_str());
+			sys_log(0, "Şu anki Peer host adları...\n%s", st.c_str());
 		}
 
 		if (!(thecore_heart->pulse % (thecore_heart->passes_per_sec * 3600)))
@@ -3149,7 +3149,7 @@ int CClientManager::Process()
 			}
 			else
 			{
-				sys_log(0, "FDWATCH: peer null in event: ident %d", fdwatch_get_ident(m_fdWatcher, idx)); // @warme012
+				sys_log(0, "FDWATCH: olayda peer null: ident %d", fdwatch_get_ident(m_fdWatcher, idx)); // @warme012
 			}
 
 			continue;
@@ -3160,14 +3160,14 @@ int CClientManager::Process()
 			case FDW_READ:
 				if (peer->Recv() < 0)
 				{
-					sys_err("Recv failed");
+					sys_err("Alma başarısız");
 					RemovePeer(peer);
 				}
 				else
 				{
 					if (peer == m_pkAuthPeer)
 						if (g_log)
-							sys_log(0, "AUTH_PEER_READ: size %d", peer->GetRecvLength());
+							sys_log(0, "AUTH_PEER_READ: boyut %d", peer->GetRecvLength());
 
 					ProcessPackets(peer);
 				}
@@ -3176,11 +3176,11 @@ int CClientManager::Process()
 			case FDW_WRITE:
 				if (peer == m_pkAuthPeer)
 					if (g_log)
-						sys_log(0, "AUTH_PEER_WRITE: size %d", peer->GetSendLength());
+						sys_log(0, "AUTH_PEER_WRITE: boyut %d", peer->GetSendLength());
 
 				if (peer->Send() < 0)
 				{
-					sys_err("Send failed");
+					sys_err("Gönderme başarısız");
 					RemovePeer(peer);
 				}
 
@@ -3191,7 +3191,7 @@ int CClientManager::Process()
 				break;
 
 			default:
-				sys_err("fdwatch_check_fd returned unknown result");
+				sys_err("fdwatch_check_fd bilinmeyen sonuç döndürdü");
 				RemovePeer(peer);
 				break;
 		}
@@ -3276,7 +3276,7 @@ bool CClientManager::InitializeNowItemID()
 
 	if (!CConfig::instance().GetTwoValue("ITEM_ID_RANGE", &dwMin, &dwMax))
 	{
-		sys_err("conf.txt: Cannot find ITEM_ID_RANGE [start_item_id] [end_item_id]");
+		sys_err("conf.txt: ITEM_ID_RANGE bulunamıyor [start_item_id] [end_item_id]");
 		return false;
 	}
 
@@ -3284,7 +3284,7 @@ bool CClientManager::InitializeNowItemID()
 
 	if (CItemIDRangeManager::instance().BuildRange(dwMin, dwMax, m_itemRange) == false)
 	{
-		sys_err("Can not build ITEM_ID_RANGE");
+		sys_err("ITEM_ID_RANGE oluşturulamıyor");
 		return false;
 	}
 
@@ -3313,7 +3313,7 @@ bool CClientManager::InitializeLocalization()
 	auto pMsg = CDBManager::instance().DirectQuery(szQuery, SQL_COMMON);
 	if (pMsg->Get()->uiNumRows == 0)
 	{
-		sys_err("InitializeLocalization() ==> DirectQuery failed(%s)", szQuery);
+		sys_err("InitializeLocalization() ==> DirectQuery başarısız(%s)", szQuery);
 		return false;
 	}
 
@@ -3680,9 +3680,9 @@ bool CClientManager::InitializeLocalization()
 				exit(0);
 			}
 			// @warme007
-			// sys_log(0,"before call SetLocale: %s",g_stLocale.c_str());
+			// sys_log(0,"SetLocale çağrısından önce: %s",g_stLocale.c_str());
 			// CDBManager::instance().SetLocale(g_stLocale.c_str());
-			// sys_log(0,"Called SetLocale");
+			// sys_log(0,"SetLocale çağrıldı");
 		}
 		else if (strcmp(locale.szKey, "DB_NAME_COLUMN") == 0)
 		{
@@ -3712,7 +3712,7 @@ bool CClientManager::__GetAdminInfo(const char *szIP, std::vector<tAdminInfo> & 
 
 	if (pMsg->Get()->uiNumRows == 0)
 	{
-		// sys_err("__GetAdminInfo() ==> DirectQuery failed(%s)", szQuery); // @warme013
+		// sys_err("__GetAdminInfo() ==> DirectQuery başarısız(%s)", szQuery); // @warme013
 		return false;
 	}
 
@@ -3761,7 +3761,7 @@ bool CClientManager::__GetHostInfo(std::vector<std::string> & rIPVec)
 
 	if (pMsg->Get()->uiNumRows == 0)
 	{
-		// sys_err("__GetHostInfo() ==> DirectQuery failed(%s)", szQuery); // @warme013
+		// sys_err("__GetHostInfo() ==> DirectQuery başarısız(%s)", szQuery); // @warme013
 		return false;
 	}
 
@@ -3815,7 +3815,7 @@ void CClientManager::ReloadAdmin(CPeer*, TPacketReloadAdmin* p)
 			peer->Encode(vAdmin[n]);
 	}
 
-	sys_log(0, "ReloadAdmin End %s", p->szIP);
+	sys_log(0, "ReloadAdmin Son %s", p->szIP);
 }
 
 //BREAK_MARRIAGE
@@ -3829,7 +3829,7 @@ void CClientManager::BreakMarriage(CPeer * peer, const char * data)
 	pid2 = *(int *) data;
 	data += sizeof(int);
 
-	sys_log(0, "Breaking off a marriage engagement! pid %d and pid %d", pid1, pid2);
+	sys_log(0, "Evlilik nişanı bozuluyor! pid %d ve pid %d", pid1, pid2);
 	marriage::CManager::instance().Remove(pid1, pid2);
 }
 //END_BREAK_MARIIAGE
@@ -3841,7 +3841,7 @@ void CClientManager::UpdateItemCacheSet(DWORD pid)
 	if (it == m_map_pkItemCacheSetPtr.end())
 	{
 		if (g_test_server)
-			sys_log(0, "UPDATE_ITEMCACHESET : UpdateItemCacheSet ==> No ItemCacheSet pid(%d)", pid);
+			sys_log(0, "UPDATE_ITEMCACHESET : UpdateItemCacheSet ==> ItemCacheSet yok pid(%d)", pid);
 		return;
 	}
 
@@ -3945,7 +3945,7 @@ void CClientManager::AddMonarchMoney(CPeer * peer, DWORD dwHandle, const char * 
 	data += sizeof(int);
 
 	if (g_test_server)
-		sys_log(0, "[MONARCH] Add money Empire(%d) Money(%d)", Empire, Money);
+		sys_log(0, "[MONARCH] Para Ekle İmparatorluk(%d) Para(%d)", Empire, Money);
 
 	CMonarch::instance().AddMoney(Empire, Money);
 
@@ -3980,7 +3980,7 @@ void CClientManager::DecMonarchMoney(CPeer * peer, DWORD dwHandle, const char * 
 	data += sizeof(int);
 
 	if (g_test_server)
-		sys_log(0, "[MONARCH] Dec money Empire(%d) Money(%d)", Empire, Money);
+		sys_log(0, "[MONARCH] Para Azalt İmparatorluk(%d) Para(%d)", Empire, Money);
 
 	CMonarch::instance().DecMoney(Empire, Money);
 
@@ -4018,7 +4018,7 @@ void CClientManager::TakeMonarchMoney(CPeer * peer, DWORD dwHandle, const char *
 	data += sizeof(int);
 
 	if (g_test_server)
-		sys_log(0, "[MONARCH] Take money Empire(%d) Money(%d)", Empire, Money);
+		sys_log(0, "[MONARCH] Para Al İmparatorluk(%d) Para(%d)", Empire, Money);
 
 	if (CMonarch::instance().TakeMoney(Empire, pid, Money) == true)
 	{
@@ -4045,7 +4045,7 @@ void CClientManager::RMCandidacy(CPeer * peer, DWORD dwHandle, const char * data
 	char szName[32];
 
 	strlcpy(szName, data, sizeof(szName));
-	sys_log(0, "[MONARCH_GM] Remove candidacy name(%s)", szName);
+	sys_log(0, "[MONARCH_GM] Adaylığı Kaldır isim(%s)", szName);
 
 	int iRet = CMonarch::instance().DelCandidacy(szName) ? 1 : 0;
 
@@ -4088,7 +4088,7 @@ void CClientManager::SetMonarch(CPeer * peer, DWORD dwHandle, const char * data)
 	strlcpy(szName, data, sizeof(szName));
 
 	if (g_test_server)
-		sys_log(0, "[MONARCH_GM] Set Monarch name(%s)", szName);
+		sys_log(0, "[MONARCH_GM] İmparator Ayarla isim(%s)", szName);
 
 	int iRet = CMonarch::instance().SetMonarch(szName) ? 1 : 0;
 
@@ -4131,7 +4131,7 @@ void CClientManager::RMMonarch(CPeer * peer, DWORD dwHandle, const char * data)
 	strlcpy(szName, data, sizeof(szName));
 
 	if (g_test_server)
-		sys_log(0, "[MONARCH_GM] Remove Monarch name(%s)", szName);
+		sys_log(0, "[MONARCH_GM] İmparatoru Kaldır isim(%s)", szName);
 
 	CMonarch::instance().DelMonarch(szName);
 
@@ -4246,19 +4246,19 @@ void CClientManager::DeleteLoginKey(TPacketDC *data)
 // delete gift notify icon
 void CClientManager::DeleteAwardId(TPacketDeleteAwardID *data)
 {
-	//sys_log(0,"data from game server arrived %d",data->dwID);
+	//sys_log(0,"oyun sunucusundan veri geldi %d",data->dwID);
 	std::map<DWORD, TItemAward *>::iterator it;
 	it = ItemAwardManager::Instance().GetMapAward().find(data->dwID);
 	if ( it != ItemAwardManager::Instance().GetMapAward().end() )
 	{
 		std::set<TItemAward *> & kSet = ItemAwardManager::Instance().GetMapkSetAwardByLogin()[it->second->szLogin];
 		if(kSet.erase(it->second))
-			sys_log(0,"erase ItemAward id: %d from cache", data->dwID);
+			sys_log(0,"ItemAward id: %d önbellekten siliniyor", data->dwID);
 		ItemAwardManager::Instance().GetMapAward().erase(data->dwID);
 	}
 	else
 	{
-		sys_log(0,"DELETE_AWARDID : could not find the id: %d", data->dwID);
+		sys_log(0,"DELETE_AWARDID : id bulunamadı: %d", data->dwID);
 	}
 }
 
@@ -4304,11 +4304,11 @@ void CClientManager::ChargeCash(const TRequestChargeCash* packet)
 		sprintf(szQuery, "update account set mileage = mileage + %d where id = %d limit 1", packet->dwAmount, packet->dwAID);
 	else
 	{
-		sys_err ("Invalid request charge type (type : %d, amount : %d, aid : %d)", packet->eChargeType, packet->dwAmount, packet->dwAID);
+		sys_err ("Geçersiz ücret talebi tipi (tip : %d, miktar : %d, aid : %d)", packet->eChargeType, packet->dwAmount, packet->dwAID);
 		return;
 	}
 
-	sys_err ("Request Charge (type : %d, amount : %d, aid : %d)", packet->eChargeType, packet->dwAmount, packet->dwAID);
+	sys_err ("Ücret Talebi (tip : %d, miktar : %d, aid : %d)", packet->eChargeType, packet->dwAmount, packet->dwAID);
 
 	CDBManager::Instance().AsyncQuery(szQuery, SQL_ACCOUNT);
 }

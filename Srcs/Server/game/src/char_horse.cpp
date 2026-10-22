@@ -218,7 +218,7 @@ void CHARACTER::HorseSummon(bool bSummon, bool bFromFar, DWORD dwVnum, const cha
 		if (!m_chHorse->Show(GetMapIndex(), x, y, GetZ()))
 		{
 			M2_DESTROY_CHARACTER(m_chHorse);
-			sys_err("cannot show monster");
+			sys_err("yaratık gösterilemiyor");
 			m_chHorse = NULL;
 			return;
 		}

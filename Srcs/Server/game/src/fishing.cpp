@@ -155,7 +155,7 @@ void Initialize()
 
 		if (!tab)
 		{
-			printf("Tab error on line: %s\n", buf);
+			printf("Satırda tab hatası: %s\n", buf);
 			SendLog("error! parsing fishing.txt");
 
 			if (*fish_info_bak[0].name)
@@ -244,7 +244,7 @@ void Initialize()
 			g_prob_accumulate[j][i] = fish_info[i].prob[j] + g_prob_accumulate[j][i - 1];
 
 		g_prob_sum[j] = g_prob_accumulate[j][MAX_FISH - 1];
-		sys_log(0, "FISH: prob table %d %d", j, g_prob_sum[j]);
+		sys_log(0, "BALIK: olasılık tablosu %d %d", j, g_prob_sum[j]);
 	}
 }
 
@@ -471,7 +471,7 @@ int Compute(DWORD fish_id, DWORD ms, DWORD* item, int level)
 
 	if (fish_id >= MAX_FISH)
 	{
-		sys_err("Wrong FISH ID : %d", fish_id);
+		sys_err("Hatalı BALIK ID : %d", fish_id);
 		return -2;
 	}
 
@@ -740,7 +740,7 @@ int RealRefineRod(LPCHARACTER ch, LPITEM item)
 	// REFINE_ROD_HACK_BUG_FIX
 	if (!RefinableRod(item))
 	{
-		sys_err("REFINE_ROD_HACK pid(%u) item(%s:%d)", ch->GetPlayerID(), item->GetName(), item->GetID());
+		sys_err("REFINE_ROD_HACK pid(%u) eşya(%s:%d)", ch->GetPlayerID(), item->GetName(), item->GetID());
 
 		LogManager::instance().RefineLog(ch->GetPlayerID(), item->GetName(), item->GetID(), -1, 1, "ROD_HACK");
 

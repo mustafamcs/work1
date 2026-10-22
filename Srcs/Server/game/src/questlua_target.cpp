@@ -15,7 +15,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1) || !lua_isnumber(L, 2) || !lua_isnumber(L, 3))
 		{
-			sys_err("invalid argument, name: %s, quest_index %d", ch->GetName(), iQuestIndex);
+			sys_err("geçersiz argüman, isim: %s, quest_index %d", ch->GetName(), iQuestIndex);
 			return 0;
 		}
 
@@ -23,7 +23,7 @@ namespace quest
 
 		if (!SECTREE_MANAGER::instance().GetMapBasePositionByMapIndex(ch->GetMapIndex(), pos))
 		{
-			sys_err("cannot find base position in this map %d", ch->GetMapIndex());
+			sys_err("bu haritada taban konumu bulunamıyor %d", ch->GetMapIndex());
 			return 0;
 		}
 
@@ -50,7 +50,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1) || !lua_isnumber(L, 2))
 		{
-			sys_err("invalid argument, name: %s, quest_index %d", ch->GetName(), iQuestIndex);
+			sys_err("geçersiz argüman, isim: %s, quest_index %d", ch->GetName(), iQuestIndex);
 			return 0;
 		}
 
@@ -74,7 +74,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1))
 		{
-			sys_err("invalid argument, name: %s, quest_index %d", ch->GetName(), iQuestIndex);
+			sys_err("geçersiz argüman, isim: %s, quest_index %d", ch->GetName(), iQuestIndex);
 			return 0;
 		}
 
@@ -100,7 +100,7 @@ namespace quest
 
 		if (!lua_isstring(L, 1))
 		{
-			sys_err("invalid argument, name: %s, quest_index %u", ch->GetName(), dwQuestIndex);
+			sys_err("geçersiz argüman, isim: %s, quest_index %u", ch->GetName(), dwQuestIndex);
 			lua_pushnumber(L, 0);
 			return 1;
 		}

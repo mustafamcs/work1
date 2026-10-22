@@ -114,7 +114,7 @@ void CPacketInfo::Log(const char * c_pszFileName)
 
 	std::map<int, TPacketElement *>::iterator it = m_pPacketMap.begin();
 
-	fprintf(fp, "Name             Called     Load       Ratio\n");
+	fprintf(fp, "İsim             Çağrılan     Yükleme       Oran\n");
 
 	while (it != m_pPacketMap.end())
 	{

@@ -362,7 +362,7 @@ void CClientManager::QUERY_PLAYER_LOAD(CPeer * peer, DWORD dwHandle, TPlayerLoad
 	//----------------------------------
 	else
 	{
-		sys_log(0, "[PLAYER_LOAD] Load from PlayerDB pid[%d]", packet->player_id);
+		sys_log(0, "[PLAYER_LOAD] PlayerDB'den yükle pid[%d]", packet->player_id);
 
 		char queryStr[QUERY_MAX_LEN];
 
@@ -605,7 +605,7 @@ void CClientManager::RESULT_COMPOSITE_PLAYER(CPeer * peer, SQLMsg * pMsg, DWORD 
 					break;
 				if( pLoginData1 == NULL )
 					break;
-				sys_log(0,"info of pLoginData1 before call ItemAwardfunction %d",pLoginData1);
+				sys_log(0,"ItemAwardfunction çağrısından önce pLoginData1 bilgisi %d",pLoginData1);
 				ItemAward(peer,pLoginData1->GetAccountRef().login);
 			}
 			break;
@@ -622,7 +622,7 @@ void CClientManager::RESULT_COMPOSITE_PLAYER(CPeer * peer, SQLMsg * pMsg, DWORD 
 
 			   if (!pMsg->Next())
 			   {
-			   sys_err("RESULT_COMPOSITE_PLAYER: QID_PLAYER_ITEM_QUEST_AFFECT: ITEM FAILED");
+			   sys_err("RESULT_COMPOSITE_PLAYER: QID_PLAYER_ITEM_QUEST_AFFECT: EŞYA BAŞARISIZ");
 			   return;
 			   }
 
@@ -632,7 +632,7 @@ void CClientManager::RESULT_COMPOSITE_PLAYER(CPeer * peer, SQLMsg * pMsg, DWORD 
 
 			   if (!pMsg->Next())
 			   {
-			   sys_err("RESULT_COMPOSITE_PLAYER: QID_PLAYER_ITEM_QUEST_AFFECT: QUEST FAILED");
+			   sys_err("RESULT_COMPOSITE_PLAYER: QID_PLAYER_ITEM_QUEST_AFFECT: GÖREV BAŞARISIZ");
 			   return;
 			   }
 
@@ -641,7 +641,7 @@ void CClientManager::RESULT_COMPOSITE_PLAYER(CPeer * peer, SQLMsg * pMsg, DWORD 
 			   RESULT_QUEST_LOAD(peer, pSQLResult, info->dwHandle);
 
 			   if (!pMsg->Next())
-			   sys_err("RESULT_COMPOSITE_PLAYER: QID_PLAYER_ITEM_QUEST_AFFECT: AFFECT FAILED");
+			   sys_err("RESULT_COMPOSITE_PLAYER: QID_PLAYER_ITEM_QUEST_AFFECT: ETKİ BAŞARISIZ");
 			   else
 			   RESULT_AFFECT_LOAD(peer, pSQLResult, info->dwHandle);
 
@@ -858,7 +858,7 @@ void CClientManager::__QUERY_PLAYER_CREATE(CPeer *peer, DWORD dwHandle, TPlayerC
 		if (row[0] && dwPID > 0)
 		{
 			peer->EncodeHeader(HEADER_DG_PLAYER_CREATE_ALREADY, dwHandle, 0);
-			sys_log(0, "ALREADY EXIST AccountChrIdx %d ID %d", packet->account_index, dwPID);
+			sys_log(0, "ZATEN VAR AccountChrIdx %d ID %d", packet->account_index, dwPID);
 			return;
 		}
 	}
@@ -889,7 +889,7 @@ void CClientManager::__QUERY_PLAYER_CREATE(CPeer *peer, DWORD dwHandle, TPlayerC
 
 		if (*row[0] != '0')
 		{
-			sys_log(0, "ALREADY EXIST name %s, row[0] %s query %s", packet->player_table.name, row[0], queryStr);
+			sys_log(0, "ZATEN VAR isim %s, row[0] %s sorgu %s", packet->player_table.name, row[0], queryStr);
 			peer->EncodeHeader(HEADER_DG_PLAYER_CREATE_ALREADY, dwHandle, 0);
 			return;
 		}
@@ -922,7 +922,7 @@ void CClientManager::__QUERY_PLAYER_CREATE(CPeer *peer, DWORD dwHandle, TPlayerC
 			packet->player_table.job, packet->player_table.voice, packet->player_table.dir, packet->player_table.x, packet->player_table.y, packet->player_table.z,
 			packet->player_table.hp, packet->player_table.sp, packet->player_table.sRandomHP, packet->player_table.sRandomSP, packet->player_table.stat_point, packet->player_table.stamina, packet->player_table.part_base, packet->player_table.part_base, packet->player_table.gold);
 
-	sys_log(0, "PlayerCreate accountid %d name %s level %d gold %lld, st %d ht %d job %d",
+	sys_log(0, "PlayerCreate accountid %d isim %s seviye %d gold %lld, st %d ht %d sınıf %d",
 			packet->account_id,
 			packet->player_table.name,
 			packet->player_table.level,
@@ -948,7 +948,7 @@ void CClientManager::__QUERY_PLAYER_CREATE(CPeer *peer, DWORD dwHandle, TPlayerC
 	if (pMsg2->Get()->uiAffectedRows <= 0)
 	{
 		peer->EncodeHeader(HEADER_DG_PLAYER_CREATE_ALREADY, dwHandle, 0);
-		sys_log(0, "ALREADY EXIST3 query: %s AffectedRows %lu", queryStr, pMsg2->Get()->uiAffectedRows);
+		sys_log(0, "ZATEN VAR3 sorgu: %s EtkilenenSatır %lu", queryStr, pMsg2->Get()->uiAffectedRows);
 		return;
 	}
 
@@ -1021,7 +1021,7 @@ void CClientManager::__QUERY_PLAYER_DELETE(CPeer* peer, DWORD dwHandle, TPlayerD
 		{
 			if (strlen(r.social_id) < 7 || strncmp(packet->private_code, r.social_id + strlen(r.social_id) - 7, 7))
 			{
-				sys_log(0, "PLAYER_DELETE FAILED len(%d)", strlen(r.social_id));
+				sys_log(0, "PLAYER_DELETE BAŞARISIZ len(%d)", strlen(r.social_id));
 				peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, dwHandle, 1);
 				peer->EncodeBYTE(packet->account_index);
 				return;
@@ -1034,7 +1034,7 @@ void CClientManager::__QUERY_PLAYER_DELETE(CPeer* peer, DWORD dwHandle, TPlayerD
 
 				if (pTab->level >= m_iPlayerDeleteLevelLimit)
 				{
-					sys_log(0, "PLAYER_DELETE FAILED LEVEL %u >= DELETE LIMIT %d", pTab->level, m_iPlayerDeleteLevelLimit);
+					sys_log(0, "PLAYER_DELETE BAŞARISIZ SEVİYE %u >= SİLME LİMİTİ %d", pTab->level, m_iPlayerDeleteLevelLimit);
 					peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, dwHandle, 1);
 					peer->EncodeBYTE(packet->account_index);
 					return;
@@ -1042,7 +1042,7 @@ void CClientManager::__QUERY_PLAYER_DELETE(CPeer* peer, DWORD dwHandle, TPlayerD
 
 				if (pTab->level < m_iPlayerDeleteLevelLimitLower)
 				{
-					sys_log(0, "PLAYER_DELETE FAILED LEVEL %u < DELETE LIMIT %d", pTab->level, m_iPlayerDeleteLevelLimitLower);
+					sys_log(0, "PLAYER_DELETE BAŞARISIZ SEVİYE %u < SİLME LİMİTİ %d", pTab->level, m_iPlayerDeleteLevelLimitLower);
 					peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, dwHandle, 1);
 					peer->EncodeBYTE(packet->account_index);
 					return;
@@ -1053,7 +1053,7 @@ void CClientManager::__QUERY_PLAYER_DELETE(CPeer* peer, DWORD dwHandle, TPlayerD
 #ifdef ENABLE_IKASHOP_RENEWAL
 	if (IsUsingIkarusShopSystem(packet->player_id))
 	{
-		sys_log(0, "PLAYER_DELETE FAILED %u IS USING OFFLINESHOP SYSTEM", packet->player_id);
+		sys_log(0, "PLAYER_DELETE BAŞARISIZ %u OFFLINESHOP SİSTEMİNİ KULLANIYOR", packet->player_id);
 		peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, dwHandle, 1);
 		peer->EncodeBYTE(packet->account_index);
 		return;
@@ -1067,7 +1067,7 @@ void CClientManager::__QUERY_PLAYER_DELETE(CPeer* peer, DWORD dwHandle, TPlayerD
 	ClientHandleInfo * pi = new ClientHandleInfo(dwHandle, packet->player_id);
 	pi->account_index = packet->account_index;
 
-	sys_log(0, "PLAYER_DELETE TRY: %s %d pid%d", packet->login, packet->player_id, packet->account_index + 1);
+	sys_log(0, "PLAYER_DELETE DENEME: %s %d pid%d", packet->login, packet->player_id, packet->account_index + 1);
 	CDBManager::instance().ReturnQuery(szQuery, QID_PLAYER_DELETE, peer->GetHandle(), pi);
 }
 
@@ -1094,7 +1094,7 @@ void CClientManager::__RESULT_PLAYER_DELETE(CPeer *peer, SQLMsg* msg)
 
 		if (deletedLevelLimit >= m_iPlayerDeleteLevelLimit && !IsChinaEventServer())
 		{
-			sys_log(0, "PLAYER_DELETE FAILED LEVEL %u >= DELETE LIMIT %d", deletedLevelLimit, m_iPlayerDeleteLevelLimit);
+			sys_log(0, "PLAYER_DELETE BAŞARISIZ SEVİYE %u >= SİLME LİMİTİ %d", deletedLevelLimit, m_iPlayerDeleteLevelLimit);
 			peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, pi->dwHandle, 1);
 			peer->EncodeBYTE(pi->account_index);
 			return;
@@ -1102,7 +1102,7 @@ void CClientManager::__RESULT_PLAYER_DELETE(CPeer *peer, SQLMsg* msg)
 
 		if (deletedLevelLimit < m_iPlayerDeleteLevelLimitLower)
 		{
-			sys_log(0, "PLAYER_DELETE FAILED LEVEL %u < DELETE LIMIT %d", deletedLevelLimit, m_iPlayerDeleteLevelLimitLower);
+			sys_log(0, "PLAYER_DELETE BAŞARISIZ SEVİYE %u < SİLME LİMİTİ %d", deletedLevelLimit, m_iPlayerDeleteLevelLimitLower);
 			peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, pi->dwHandle, 1);
 			peer->EncodeBYTE(pi->account_index);
 			return;
@@ -1116,14 +1116,14 @@ void CClientManager::__RESULT_PLAYER_DELETE(CPeer *peer, SQLMsg* msg)
 
 		if (pIns->Get()->uiAffectedRows == 0 || pIns->Get()->uiAffectedRows == (uint32_t)-1)
 		{
-			sys_log(0, "PLAYER_DELETE FAILED %u CANNOT INSERT TO player%s_deleted", dwPID, GetTablePostfix());
+			sys_log(0, "PLAYER_DELETE BAŞARISIZ %u player%s_deleted TABLOSUNA EKLENEMİYOR", dwPID, GetTablePostfix());
 
 			peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, pi->dwHandle, 1);
 			peer->EncodeBYTE(pi->account_index);
 			return;
 		}
 
-		sys_log(0, "PLAYER_DELETE SUCCESS %u", dwPID);
+		sys_log(0, "PLAYER_DELETE BAŞARILI %u", dwPID);
 
 		char account_index_string[16];
 
@@ -1164,7 +1164,7 @@ void CClientManager::__RESULT_PLAYER_DELETE(CPeer *peer, SQLMsg* msg)
 		auto pMsg(CDBManager::instance().DirectQuery(queryStr));
 		if (pMsg->Get()->uiAffectedRows == 0 || pMsg->Get()->uiAffectedRows == (uint32_t)-1)
 		{
-			sys_log(0, "PLAYER_DELETE FAIL WHEN UPDATE account table");
+			sys_log(0, "PLAYER_DELETE account tablosu güncellenirken BAŞARISIZ");
 			peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, pi->dwHandle, 1);
 			peer->EncodeBYTE(pi->account_index);
 			return;
@@ -1198,7 +1198,7 @@ void CClientManager::__RESULT_PLAYER_DELETE(CPeer *peer, SQLMsg* msg)
 	}
 	else
 	{
-		sys_log(0, "PLAYER_DELETE FAIL NO ROW");
+		sys_log(0, "PLAYER_DELETE BAŞARISIZ SATIR YOK");
 		peer->EncodeHeader(HEADER_DG_PLAYER_DELETE_FAILED, pi->dwHandle, 1);
 		peer->EncodeBYTE(pi->account_index);
 	}
@@ -1258,7 +1258,7 @@ void CClientManager::InsertLogoutPlayer(DWORD pid)
 	if (it != m_map_logout.end())
 	{
 		if (g_log)
-			sys_log(0, "LOGOUT: Update player time pid(%d)", pid);
+			sys_log(0, "LOGOUT: Oyuncu süresi güncelle pid(%d)", pid);
 
 		it->second->time = time(0);
 		return;
@@ -1270,7 +1270,7 @@ void CClientManager::InsertLogoutPlayer(DWORD pid)
 	m_map_logout.emplace(pid, pLogout);
 
 	if (g_log)
-		sys_log(0, "LOGOUT: Insert player pid(%d)", pid);
+		sys_log(0, "LOGOUT: Oyuncu ekle pid(%d)", pid);
 }
 
 void CClientManager::DeleteLogoutPlayer(DWORD pid)

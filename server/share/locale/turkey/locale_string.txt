@@ -1,4 +1,4 @@
-"The name has been successfully changed. You're going to get disconnected.";
+"İsim başarıyla değiştirildi. Bağlantınız kesilecek.";
 "[LS;1955]";
 
 "Daha fazla Yang alamazsın.";
@@ -2323,13 +2323,13 @@
 "Invalid parameter for the won exchange. Reported.";
 "[LS;1969]";
 
-"Failed.";
+"Olmadı!";
 "[LS;1126]";
 
-"Success.";
+"Oldu!";
 "[LS;1127]";
 
-"New absorption rate: %d%";
+"Yeni emiş oranı: %%%d";
 "[LS;1204;%d]";
 
 "You can combine just accees of same grade.";
@@ -2341,7 +2341,7 @@
 "*** Rolling of %s: %16s ***";
 "[LS;1203;%s;%s]";
 
-"*** -> %16s - Dice score: %05d ***";
+"*** -> %16s - Zar sonucu: %05d ***";
 "[LS;1202;%s;%d]";
 
 "SHOP_TAX_INFO";

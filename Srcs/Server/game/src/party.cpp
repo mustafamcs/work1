@@ -80,7 +80,7 @@ void CPartyManager::P2PJoinParty(DWORD leader, DWORD pid, BYTE role)
 	}
 	else
 	{
-		sys_err("No such party with leader [%d]", leader);
+		sys_err("[%d] liderli parti yok", leader);
 	}
 }
 
@@ -94,7 +94,7 @@ void CPartyManager::P2PQuitParty(DWORD pid)
 	}
 	else
 	{
-		sys_err("No such party with member [%d]", pid);
+		sys_err("[%d] üyeli parti yok", pid);
 	}
 }
 
@@ -125,7 +125,7 @@ void CPartyManager::P2PDeleteParty(DWORD pid)
 		M2_DELETE(it->second);
 	}
 	else
-		sys_err("PARTY P2PDeleteParty Cannot find party [%u]", pid);
+		sys_err("PARTİ P2PDeleteParty parti bulunamıyor [%u]", pid);
 }
 
 LPPARTY CPartyManager::CreateParty(LPCHARACTER pLeader)
@@ -407,7 +407,7 @@ void CParty::P2PJoin(DWORD dwPID)
 				else if (pcci->bChannel == g_bChannel)
 					Member.strName = pcci->szName;
 				else
-					sys_err("member is not in same channel PID: %u channel %d, this channel %d", dwPID, pcci->bChannel, g_bChannel);
+					sys_err("üye aynı kanalda değil PID: %u kanal %d, bu kanal %d", dwPID, pcci->bChannel, g_bChannel);
 			}
 		}
 
@@ -479,7 +479,7 @@ void CParty::P2PQuit(DWORD dwPID)
 	}
 	else
 	{
-		sys_err("ROLE_COUNT_QUIT_ERROR: INDEX(%d) > MAX(%d)", bRole, PARTY_ROLE_MAX_NUM);
+		sys_err("ROL_SAYACI_CIKIS_HATASI: DIZIN(%d) > MAKS(%d)", bRole, PARTY_ROLE_MAX_NUM);
 	}
 
 	if (ch)
@@ -520,7 +520,7 @@ void CParty::Link(LPCHARACTER pkChr)
 
 	if (it == m_memberMap.end())
 	{
-		sys_err("%s is not member of this party", pkChr->GetName());
+		sys_err("%s bu partinin üyesi değil", pkChr->GetName());
 		return;
 	}
 
@@ -556,7 +556,7 @@ void CParty::Link(LPCHARACTER pkChr)
 
 		SendParameter(pkChr);
 
-		//sys_log(0, "PARTY-DUNGEON connect %p %p", this, GetDungeon());
+		//sys_log(0, "PARTİ-ZİNDAN bağlantı %p %p", this, GetDungeon());
 		if (GetDungeon() && GetDungeon()->GetMapIndex() == pkChr->GetMapIndex())
 		{
 			pkChr->SetDungeon(GetDungeon());
@@ -583,7 +583,7 @@ void CParty::P2PSetMemberLevel(DWORD pid, BYTE level)
 
 	TMemberMap::iterator it;
 
-	sys_log(0, "PARTY P2PSetMemberLevel leader %d pid %d level %d", GetLeaderPID(), pid, level);
+	sys_log(0, "PARTİ P2PSetMemberLevel lider %d pid %d seviye %d", GetLeaderPID(), pid, level);
 
 	it = m_memberMap.find(pid);
 	if (it != m_memberMap.end())
@@ -614,7 +614,7 @@ void CParty::Unlink(LPCHARACTER pkChr)
 
 	if (it == m_memberMap.end())
 	{
-		sys_err("%s is not member of this party", pkChr->GetName());
+		sys_err("%s bu partinin üyesi değil", pkChr->GetName());
 		return;
 	}
 
@@ -779,7 +779,7 @@ void CParty::SendPartyInfoOneToAll(DWORD pid)
 	{
 		if ((it->second.pCharacter) && (it->second.pCharacter->GetDesc()))
 		{
-			//sys_log(2, "PARTY send info %s[%d] to %s[%d]", ch->GetName(), (DWORD)ch->GetVID(), it->second.pCharacter->GetName(), (DWORD)it->second.pCharacter->GetVID());
+			//sys_log(2, "PARTİ bilgi gönder %s[%d] -> %s[%d]", ch->GetName(), (DWORD)ch->GetVID(), it->second.pCharacter->GetName(), (DWORD)it->second.pCharacter->GetVID());
 			it->second.pCharacter->GetDesc()->Packet(&p, sizeof(p));
 		}
 	}
@@ -800,7 +800,7 @@ void CParty::SendPartyInfoOneToAll(LPCHARACTER ch)
 	{
 		if ((it->second.pCharacter) && (it->second.pCharacter->GetDesc()))
 		{
-			sys_log(2, "PARTY send info %s[%d] to %s[%d]", ch->GetName(), (DWORD)ch->GetVID(), it->second.pCharacter->GetName(), (DWORD)it->second.pCharacter->GetVID());
+			sys_log(2, "PARTİ bilgi gönder %s[%d] -> %s[%d]", ch->GetName(), (DWORD)ch->GetVID(), it->second.pCharacter->GetName(), (DWORD)it->second.pCharacter->GetVID());
 			it->second.pCharacter->GetDesc()->Packet(&p, sizeof(p));
 		}
 	}
@@ -827,7 +827,7 @@ void CParty::SendPartyInfoAllToOne(LPCHARACTER ch)
 		}
 
 		it->second.pCharacter->BuildUpdatePartyPacket(p);
-		sys_log(2, "PARTY send info %s[%d] to %s[%d]", it->second.pCharacter->GetName(), (DWORD)it->second.pCharacter->GetVID(), ch->GetName(), (DWORD)ch->GetVID());
+		sys_log(2, "PARTİ bilgi gönder %s[%d] -> %s[%d]", it->second.pCharacter->GetName(), (DWORD)it->second.pCharacter->GetVID(), ch->GetName(), (DWORD)ch->GetVID());
 		ch->GetDesc()->Packet(&p, sizeof(p));
 	}
 }
@@ -836,7 +836,7 @@ void CParty::SendMessage(LPCHARACTER ch, BYTE bMsg, DWORD dwArg1, DWORD dwArg2)
 {
 	if (ch->GetParty() != this)
 	{
-		sys_err("%s is not member of this party %p", ch->GetName(), this);
+		sys_err("%s bu partinin üyesi değil %p", ch->GetName(), this);
 		return;
 	}
 
@@ -867,7 +867,7 @@ void CParty::SendMessage(LPCHARACTER ch, BYTE bMsg, DWORD dwArg1, DWORD dwArg2)
 						if (pkChr->Goto(x, y))
 						{
 							LPCHARACTER victim = pkChr->GetVictim();
-							sys_log(0, "%s %p RETURN victim %p", pkChr->GetName(), get_pointer(pkChr), get_pointer(victim));
+							sys_log(0, "%s %p GERİ DÖNÜŞ hedef %p", pkChr->GetName(), get_pointer(pkChr), get_pointer(victim));
 							pkChr->SendMovePacket(FUNC_WAIT, 0, 0, 0, 0);
 						}
 					}
@@ -961,7 +961,7 @@ bool CParty::SetRole(DWORD dwPID, BYTE bRole, bool bSet)
 		}
 		else
 		{
-			sys_err("ROLE_COUNT_INC_ERROR: INDEX(%d) > MAX(%d)", bRole, PARTY_ROLE_MAX_NUM);
+			sys_err("ROL_SAYACI_ARTIS_HATASI: DIZIN(%d) > MAKS(%d)", bRole, PARTY_ROLE_MAX_NUM);
 		}
 	}
 	else
@@ -983,7 +983,7 @@ bool CParty::SetRole(DWORD dwPID, BYTE bRole, bool bSet)
 		}
 		else
 		{
-			sys_err("ROLE_COUNT_DEC_ERROR: INDEX(%d) > MAX(%d)", bRole, PARTY_ROLE_MAX_NUM);
+			sys_err("ROL_SAYACI_AZALIS_HATASI: DIZIN(%d) > MAKS(%d)", bRole, PARTY_ROLE_MAX_NUM);
 		}
 	}
 
@@ -1442,11 +1442,11 @@ int CParty::GetFlag(const std::string& name)
 
 	if (it != m_map_iFlag.end())
 	{
-		//sys_log(0,"PARTY GetFlag %s %d", name.c_str(), it->second);
+		//sys_log(0,"PARTİ GetFlag %s %d", name.c_str(), it->second);
 		return it->second;
 	}
 
-	//sys_log(0,"PARTY GetFlag %s 0", name.c_str());
+	//sys_log(0,"PARTİ GetFlag %s 0", name.c_str());
 	return 0;
 }
 
@@ -1454,7 +1454,7 @@ void CParty::SetFlag(const std::string& name, int value)
 {
 	TFlagMap::iterator it = m_map_iFlag.find(name);
 
-	//sys_log(0,"PARTY SetFlag %s %d", name.c_str(), value);
+	//sys_log(0,"PARTİ SetFlag %s %d", name.c_str(), value);
 	if (it == m_map_iFlag.end())
 	{
 		m_map_iFlag.emplace(name, value);
@@ -1571,7 +1571,7 @@ void CParty::SetParameter(int iMode)
 {
 	if (iMode >= PARTY_EXP_DISTRIBUTION_MAX_NUM)
 	{
-		sys_err("Invalid exp distribution mode %d", iMode);
+		sys_err("Geçersiz exp dağıtım modu %d", iMode);
 		return;
 	}
 

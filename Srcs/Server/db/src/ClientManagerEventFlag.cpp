@@ -21,7 +21,7 @@ void CClientManager::LoadEventFlag()
 			TPacketSetEventFlag p;
 			strlcpy(p.szFlagName, row[0], sizeof(p.szFlagName));
 			str_to_number(p.lValue, row[1]);
-			sys_log(0, "EventFlag Load %s %d", p.szFlagName, p.lValue);
+			sys_log(0, "EventFlag Yükle %s %d", p.szFlagName, p.lValue);
 			m_map_lEventFlag.emplace(p.szFlagName, p.lValue);
 			ForwardPacket(HEADER_DG_SET_EVENT_FLAG, &p, sizeof(TPacketSetEventFlag));
 		}

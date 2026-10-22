@@ -143,7 +143,7 @@ bool DSManager::RefreshItemAttributes(LPITEM pDS)
 {
 	if (!pDS->IsDragonSoul())
 	{
-		sys_err ("This item(ID : %d) is not DragonSoul.", pDS->GetID());
+		sys_err ("Bu eşya(ID : %d) Ejder Ruhu değil.", pDS->GetID());
 		return false;
 	}
 
@@ -155,20 +155,20 @@ bool DSManager::RefreshItemAttributes(LPITEM pDS)
 
 	if (!m_pTable->GetBasicApplys(ds_type, vec_basic_applys))
 	{
-		sys_err ("There is no BasicApply about %d type dragon soul.", ds_type);
+		sys_err ("%d tip ejder ruhu için BasicApply yok.", ds_type);
 		return false;
 	}
 
 	if (!m_pTable->GetAdditionalApplys(ds_type, vec_addtional_applys))
 	{
-		sys_err ("There is no AdditionalApply about %d type dragon soul.", ds_type);
+		sys_err ("%d tip ejder ruhu için AdditionalApply yok.", ds_type);
 		return false;
 	}
 
 	int basic_apply_num, add_min, add_max;
 	if (!m_pTable->GetApplyNumSettings(ds_type, grade_idx, basic_apply_num, add_min, add_max))
 	{
-		sys_err ("In ApplyNumSettings, INVALID VALUES Group type(%d), GRADE idx(%d)", ds_type, grade_idx);
+		sys_err ("ApplyNumSettings içinde, GEÇERSİZ DEĞERLER Grup tipi(%d), GRADE idx(%d)", ds_type, grade_idx);
 		return false;
 	}
 
@@ -212,7 +212,7 @@ bool DSManager::PutAttributes(LPITEM pDS)
 {
 	if (!pDS->IsDragonSoul())
 	{
-		sys_err ("This item(ID : %d) is not DragonSoul.", pDS->GetID());
+		sys_err ("Bu eşya(ID : %d) Ejder Ruhu değil.", pDS->GetID());
 		return false;
 	}
 
@@ -224,19 +224,19 @@ bool DSManager::PutAttributes(LPITEM pDS)
 
 	if (!m_pTable->GetBasicApplys(ds_type, vec_basic_applys))
 	{
-		sys_err ("There is no BasicApply about %d type dragon soul.", ds_type);
+		sys_err ("%d tip ejder ruhu için BasicApply yok.", ds_type);
 		return false;
 	}
 	if (!m_pTable->GetAdditionalApplys(ds_type, vec_addtional_applys))
 	{
-		sys_err ("There is no AdditionalApply about %d type dragon soul.", ds_type);
+		sys_err ("%d tip ejder ruhu için AdditionalApply yok.", ds_type);
 		return false;
 	}
 
 	int basic_apply_num, add_min, add_max;
 	if (!m_pTable->GetApplyNumSettings(ds_type, grade_idx, basic_apply_num, add_min, add_max))
 	{
-		sys_err ("In ApplyNumSettings, INVALID VALUES Group type(%d), GRADE idx(%d)", ds_type, grade_idx);
+		sys_err ("ApplyNumSettings içinde, GEÇERSİZ DEĞERLER Grup tipi(%d), GRADE idx(%d)", ds_type, grade_idx);
 		return false;
 	}
 
@@ -270,7 +270,7 @@ bool DSManager::PutAttributes(LPITEM pDS)
 		}
 		if (!MakeDistinctRandomNumberSet(list_probs, random_set))
 		{
-			sys_err ("MakeDistinctRandomNumberSet error.");
+			sys_err ("MakeDistinctRandomNumberSet hatası.");
 			return false;
 		}
 
@@ -346,7 +346,7 @@ bool DSManager::ExtractDragonHeart(LPCHARACTER ch, LPITEM pItem, LPITEM pExtract
 	//float sum = 0.f;
 	if (-1 == idx)
 	{
-		sys_err ("Gamble is failed. ds_type(%d), grade_idx(%d)", ds_type, grade_idx);
+		sys_err ("Kumar basarisiz. ds_type(%d), grade_idx(%d)", ds_type, grade_idx);
 		return false;
 	}
 
@@ -371,7 +371,7 @@ bool DSManager::ExtractDragonHeart(LPCHARACTER ch, LPITEM pItem, LPITEM pExtract
 
 		if (NULL == pDH)
 		{
-			sys_err ("Cannot create DRAGON_HEART(%d).", DRAGON_HEART_VNUM);
+			sys_err ("DRAGON_HEART(%d) oluşturulamıyor.", DRAGON_HEART_VNUM);
 			return false;
 		}
 
@@ -400,7 +400,7 @@ bool DSManager::PullOut(LPCHARACTER ch, TItemPos DestCell, LPITEM& pItem, LPITEM
 
 	if (NULL == ch || NULL == pItem)
 	{
-		sys_err ("NULL POINTER. ch(%p) or pItem(%p)", ch, pItem);
+		sys_err ("NULL POINTER. ch(%p) veya pItem(%p)", ch, pItem);
 		return false;
 	}
 
@@ -511,8 +511,8 @@ bool DSManager::DoRefineGrade(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL
 
 	if (!ch->DragonSoul_RefineWindow_CanRefine())
 	{
-		sys_err ("%s do not activate DragonSoulRefineWindow. But how can he come here?", ch->GetName());
-		ch->ChatPacket(CHAT_TYPE_INFO, "[SYSTEM ERROR]You cannot upgrade dragon soul without refine window.");
+		sys_err ("%s DragonSoulRefineWindow'u aktive etmedi. Ama buraya nasıl geldi?", ch->GetName());
+		ch->ChatPacket(CHAT_TYPE_INFO, "[SİSTEM HATASI]Geliştirme penceresi olmadan ejder ruhunu yükseltemezsiniz.");
 		return false;
 	}
 
@@ -585,7 +585,7 @@ bool DSManager::DoRefineGrade(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL
 
 	if (count != need_count)
 	{
-		sys_err ("Possiblity of invalid client. Name %s", ch->GetName());
+		sys_err ("Geçersiz istemci olasılığı. İsim %s", ch->GetName());
 		BYTE bSubHeader = count < need_count? DS_SUB_HEADER_REFINE_FAIL_NOT_ENOUGH_MATERIAL : DS_SUB_HEADER_REFINE_FAIL_TOO_MUCH_MATERIAL;
 		SendRefineResultPacket(ch, bSubHeader, NPOS);
 		return false;
@@ -600,7 +600,7 @@ bool DSManager::DoRefineGrade(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL
 
 	if (-1 == (result_grade = Gamble(vec_probs)))
 	{
-		sys_err ("Gamble failed. See RefineGardeTables' probabilities");
+		sys_err ("Şans başarısız. RefineGardeTables olasılıklarına bakın");
 		return false;
 	}
 
@@ -608,7 +608,7 @@ bool DSManager::DoRefineGrade(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL
 
 	if (NULL == pResultItem)
 	{
-		sys_err ("INVALID DRAGON SOUL(%d)", MakeDragonSoulVnum(ds_type, (BYTE)result_grade, 0, 0));
+		sys_err ("GEÇERSİZ EJDER RUHU(%d)", MakeDragonSoulVnum(ds_type, (BYTE)result_grade, 0, 0));
 		return false;
 	}
 
@@ -667,8 +667,8 @@ bool DSManager::DoRefineStep(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL_
 
 	if (!ch->DragonSoul_RefineWindow_CanRefine())
 	{
-		sys_err ("%s do not activate DragonSoulRefineWindow. But how can he come here?", ch->GetName());
-		ch->ChatPacket(CHAT_TYPE_INFO, "[SYSTEM ERROR]You cannot use dragon soul refine window.");
+		sys_err ("%s DragonSoulRefineWindow'u aktive etmedi. Ama buraya nasıl geldi?", ch->GetName());
+		ch->ChatPacket(CHAT_TYPE_INFO, "[SİSTEM HATASI]Ejder ruhu geliştirme penceresini kullanamazsınız.");
 		return false;
 	}
 
@@ -734,7 +734,7 @@ bool DSManager::DoRefineStep(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL_
 
 	if (count != need_count)
 	{
-		sys_err ("Possiblity of invalid client. Name %s", ch->GetName());
+		sys_err ("Geçersiz istemci olasılığı. İsim %s", ch->GetName());
 		BYTE bSubHeader = count < need_count? DS_SUB_HEADER_REFINE_FAIL_NOT_ENOUGH_MATERIAL : DS_SUB_HEADER_REFINE_FAIL_TOO_MUCH_MATERIAL;
 		SendRefineResultPacket(ch, bSubHeader, NPOS);
 		return false;
@@ -751,7 +751,7 @@ bool DSManager::DoRefineStep(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL_
 
 	if (-1 == (result_step = Gamble(vec_probs)))
 	{
-		sys_err ("Gamble failed. See RefineStepTables' probabilities");
+		sys_err ("Şans başarısız. RefineStepTables olasılıklarına bakın");
 		return false;
 	}
 
@@ -759,7 +759,7 @@ bool DSManager::DoRefineStep(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_SOUL_
 
 	if (NULL == pResultItem)
 	{
-		sys_err ("INVALID DRAGON SOUL(%d)", MakeDragonSoulVnum(ds_type, grade_idx, (BYTE)result_step, 0));
+		sys_err ("GEÇERSİZ EJDER RUHU(%d)", MakeDragonSoulVnum(ds_type, grade_idx, (BYTE)result_step, 0));
 		return false;
 	}
 
@@ -825,8 +825,8 @@ bool DSManager::DoRefineStrength(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_S
 
 	if (!ch->DragonSoul_RefineWindow_CanRefine())
 	{
-		sys_err ("%s do not activate DragonSoulRefineWindow. But how can he come here?", ch->GetName());
-		ch->ChatPacket(CHAT_TYPE_INFO, "[SYSTEM ERROR]You cannot use dragon soul refine window.");
+		sys_err ("%s DragonSoulRefineWindow'u aktive etmedi. Ama buraya nasıl geldi?", ch->GetName());
+		ch->ChatPacket(CHAT_TYPE_INFO, "[SİSTEM HATASI]Ejder ruhu geliştirme penceresini kullanamazsınız.");
 		return false;
 	}
 
@@ -936,7 +936,7 @@ bool DSManager::DoRefineStrength(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_S
 		pResult = ITEM_MANAGER::instance().CreateItem(MakeDragonSoulVnum(bType, bGrade, bStep, bStrength + 1));
 		if (NULL == pResult)
 		{
-			sys_err ("INVALID DRAGON SOUL(%d)", MakeDragonSoulVnum(bType, bGrade, bStep, bStrength + 1));
+			sys_err ("GEÇERSİZ EJDER RUHU(%d)", MakeDragonSoulVnum(bType, bGrade, bStep, bStrength + 1));
 			return false;
 		}
 		pDragonSoul->RemoveFromCharacter();
@@ -961,7 +961,7 @@ bool DSManager::DoRefineStrength(LPCHARACTER ch, TItemPos (&aItemPoses)[DRAGON_S
 			pResult = ITEM_MANAGER::instance().CreateItem(MakeDragonSoulVnum(bType, bGrade, bStep, bStrength - 1));
 			if (NULL == pResult)
 			{
-				sys_err ("INVALID DRAGON SOUL(%d)", MakeDragonSoulVnum(bType, bGrade, bStep, bStrength - 1));
+				sys_err ("GEÇERSİZ EJDER RUHU(%d)", MakeDragonSoulVnum(bType, bGrade, bStep, bStrength - 1));
 				return false;
 			}
 			pDragonSoul->CopyAttributeTo(pResult);
@@ -1066,7 +1066,7 @@ bool DSManager::ActivateDragonSoul(LPITEM pItem)
 		if (IsTimeLeftDragonSoul(pItem) && !IsActiveDragonSoul(pItem))
 		{
 			char buf[128];
-			sprintf (buf, "LEFT TIME(%d)", LeftTime(pItem));
+			sprintf (buf, "KALAN SÜRE(%d)", LeftTime(pItem));
 			LogManager::instance().ItemLog(pOwner, pItem, "DS_ACTIVATE", buf);
 			pItem->ModifyPoints(true);
 			pItem->SetSocket(ITEM_SOCKET_DRAGON_SOUL_ACTIVE_IDX, 1);
@@ -1096,7 +1096,7 @@ bool DSManager::DeactivateDragonSoul(LPITEM pItem, bool bSkipRefreshOwnerActiveS
 	pItem->SetSocket(ITEM_SOCKET_DRAGON_SOUL_ACTIVE_IDX, 0);
 	pItem->ModifyPoints(false);
 
-	sprintf (buf, "LEFT TIME(%d)", LeftTime(pItem));
+	sprintf (buf, "KALAN SÜRE(%d)", LeftTime(pItem));
 	LogManager::instance().ItemLog(pOwner, pItem, "DS_DEACTIVATE", buf);
 
 	if (false == bSkipRefreshOwnerActiveState)

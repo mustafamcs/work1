@@ -59,9 +59,9 @@ static lzo_bool strength_reduce_bug(int *);	/* avoid inlining */
 static lzo_bool __lzo_assert_fail(const char *s, unsigned line)
 {
 #if defined(__palmos__)
-	printf("LZO assertion failed in line %u: '%s'\n",line,s);
+	printf("LZO doğrulama başarısız %u. satırda: '%s'\n",line,s);
 #else
-	fprintf(stderr,"LZO assertion failed in line %u: '%s'\n",line,s);
+	fprintf(stderr,"LZO doğrulama başarısız %u. satırda: '%s'\n",line,s);
 #endif
 	return 0;
 }

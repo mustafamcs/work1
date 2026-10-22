@@ -117,7 +117,7 @@ END_OF_TIMER_EVENT:
 		if (info->name)
 			strlcpy(info->name, name, nameCapacity);
 
-		sys_log(0, "QUEST timer name %s cycle %d pc %u npc %u loop? %d", name ? name : "<noname>", ltime_cycle, player_id, npc_id, loop ? 1 : 0);
+		sys_log(0, "GÖREV zamanlayıcı isim %s döngü %d pc %u npc %u loop? %d", name ? name : "<noname>", ltime_cycle, player_id, npc_id, loop ? 1 : 0);
 
 		info->time_cycle	= loop ? ltime_cycle : 0;
 		return event_create(quest_timer_event, info, ltime_cycle);

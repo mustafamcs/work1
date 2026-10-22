@@ -81,7 +81,7 @@ void CPrivManager::AddCharPriv(DWORD pid, BYTE type, int value)
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: AddCharPriv: wrong char priv type(%u) recved", type);
+		sys_err("PRIV_MANAGER: AddCharPriv: hatalı karakter ayrıcalık tipi(%u) alındı", type);
 		return;
 	}
 
@@ -116,7 +116,7 @@ void CPrivManager::AddGuildPriv(DWORD guild_id, BYTE type, int value, time_t dur
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: AddGuildPriv: wrong guild priv type(%u) recved", type);
+		sys_err("PRIV_MANAGER: AddGuildPriv: hatalı lonca ayrıcalık tipi(%u) alındı", type);
 		return;
 	}
 
@@ -137,14 +137,14 @@ void CPrivManager::AddGuildPriv(DWORD guild_id, BYTE type, int value, time_t dur
 	SendChangeGuildPriv(guild_id, type, value, end);
 	// END_OF_ADD_GUILD_PRIV_TIME
 
-	sys_log(0, "Guild Priv guild(%d) type(%d) value(%d) duration_sec(%d)", guild_id, type, value, duration_sec);
+	sys_log(0, "Lonca Ayrıcalığı guild(%d) type(%d) value(%d) duration_sec(%d)", guild_id, type, value, duration_sec);
 }
 
 void CPrivManager::AddEmpirePriv(BYTE empire, BYTE type, int value, time_t duration_sec)
 {
 	if (MAX_PRIV_NUM <= type)
 	{
-		sys_err("PRIV_MANAGER: AddEmpirePriv: wrong empire priv type(%u) recved", type);
+		sys_err("PRIV_MANAGER: AddEmpirePriv: hatalı imparatorluk ayrıcalık tipi(%u) alındı", type);
 		return;
 	}
 
@@ -167,7 +167,7 @@ void CPrivManager::AddEmpirePriv(BYTE empire, BYTE type, int value, time_t durat
 	SendChangeEmpirePriv(empire, type, value, end);
 	// END_OF_ADD_EMPIRE_PRIV_TIME
 
-	sys_log(0, "Empire Priv empire(%d) type(%d) value(%d) duration_sec(%d)", empire, type, value, duration_sec);
+	sys_log(0, "İmparatorluk Ayrıcalığı empire(%d) type(%d) value(%d) duration_sec(%d)", empire, type, value, duration_sec);
 }
 
 struct FSendChangeGuildPriv

@@ -44,7 +44,7 @@ bool DragonSoulTable::ReadDragonSoulTableFile(const char * c_pszFileName)
 
 	if (false == loader.Load(c_pszFileName))
 	{
-		sys_err ("dragon_soul_table.txt load error");
+		sys_err ("dragon_soul_table.txt yükleme hatası");
 		return false;
 	}
 
@@ -80,7 +80,7 @@ bool DragonSoulTable::ReadDragonSoulTableFile(const char * c_pszFileName)
 	}
 	else
 	{
-		sys_err ("DragonSoul table Check failed.");
+		sys_err ("DragonSoul tablo kontrolü başarısız.");
 		return false;
 	}
 }
@@ -95,7 +95,7 @@ bool DragonSoulTable::GetDragonSoulGroupName(BYTE bType, std::string& stGroupNam
 	}
 	else
 	{
-		sys_err ("Invalid DragonSoul Type(%d)", bType);
+		sys_err ("Geçersiz Ejder Ruhu Tipi(%d)", bType);
 		return false;
 	}
 }
@@ -109,14 +109,14 @@ bool DragonSoulTable::ReadVnumMapper()
 
 	if (NULL == pGroupNode)
 	{
-		sys_err ("dragon_soul_table.txt need VnumMapper.");
+		sys_err ("dragon_soul_table.txt VnumMapper gerekiyor.");
 		return false;
 	}
 	{
 		int n = pGroupNode->GetRowCount();
 		if (0 == n)
 		{
-			sys_err	("Group VnumMapper is Empty.");
+			sys_err	("VnumMapper grubu boş.");
 			return false;
 		}
 
@@ -131,18 +131,18 @@ bool DragonSoulTable::ReadVnumMapper()
 			BYTE bType;
 			if (!pRow->GetValue("dragonsoulname", stDragonSoulName))
 			{
-				sys_err ("In Group VnumMapper, No DragonSoulName column.");
+				sys_err ("VnumMapper grubunda, DragonSoulName sütunu yok.");
 				return false;
 			}
 			if (!pRow->GetValue("type", bType))
 			{
-				sys_err ("In Group VnumMapper, %s's Vnum is invalid", stDragonSoulName.c_str());
+				sys_err ("VnumMapper grubunda, %s'nin Vnum'u geçersiz", stDragonSoulName.c_str());
 				return false;
 			}
 
 			if (setTypes.end() != setTypes.find(bType))
 			{
-				sys_err ("In Group VnumMapper, duplicated vnum exist.");
+				sys_err ("VnumMapper grubunda, yinelenen vnum var.");
 				return false;
 			}
 			m_map_name_to_type.emplace(stDragonSoulName, bType);
@@ -160,7 +160,7 @@ bool DragonSoulTable::ReadBasicApplys()
 
 	if (NULL == pGroupNode)
 	{
-		sys_err ("dragon_soul_table.txt need BasicApplys.");
+		sys_err ("dragon_soul_table.txt BasicApplys gerekiyor.");
 		return false;
 	}
 
@@ -169,7 +169,7 @@ bool DragonSoulTable::ReadBasicApplys()
 		CGroupNode* pChild;
 		if (NULL == (pChild = pGroupNode->GetChildNode(m_vecDragonSoulNames[i])))
 		{
-			sys_err ("In Group BasicApplys, %s group is not defined.", m_vecDragonSoulNames[i].c_str());
+			sys_err ("BasicApplys grubunda, %s grubu tanımlı değil.", m_vecDragonSoulNames[i].c_str());
 			return false;
 		}
 		TVecApplys vecApplys;
@@ -184,7 +184,7 @@ bool DragonSoulTable::ReadBasicApplys()
 			pChild->GetRow(ss.str(), &pRow);
 			if (NULL == pRow)
 			{
-				sys_err("In Group BasicApplys, No %d row.", j);
+				sys_err("BasicApplys grubunda, %d. satır yok.", j);
 			}
 			EApplyTypes at;
 			int av;
@@ -192,17 +192,17 @@ bool DragonSoulTable::ReadBasicApplys()
 			std::string stTypeName;
 			if (!pRow->GetValue("apply_type", stTypeName))
 			{
-				sys_err ("In Group BasicApplys, %s group's apply_type is empty.", m_vecDragonSoulNames[i].c_str());
+				sys_err ("BasicApplys grubunda, %s grubunun apply_type'ı boş.", m_vecDragonSoulNames[i].c_str());
 				return false;
 			}
 			if (!(at = (EApplyTypes)FN_get_apply_type(stTypeName.c_str())))
 			{
-				sys_err ("In Group BasicApplys, %s group's apply_type %s is invalid.", m_vecDragonSoulNames[i].c_str(), stTypeName.c_str());
+				sys_err ("BasicApplys grubunda, %s grubunun apply_type %s'i geçersiz.", m_vecDragonSoulNames[i].c_str(), stTypeName.c_str());
 				return false;
 			}
 			if (!pRow->GetValue("apply_value", av))
 			{
-				sys_err ("In Group BasicApplys, %s group's apply_value %s is invalid.", m_vecDragonSoulNames[i].c_str(), av);
+				sys_err ("BasicApplys grubunda, %s grubunun apply_value %s'i geçersiz.", m_vecDragonSoulNames[i].c_str(), av);
 				return false;
 			}
 			vecApplys.emplace_back(SApply(at, av));
@@ -218,7 +218,7 @@ bool DragonSoulTable::ReadAdditionalApplys()
 	CGroupNode* pGroupNode = m_pLoader->GetGroup("additionalapplys");
 	if (NULL == pGroupNode)
 	{
-		sys_err ("dragon_soul_table.txt need AdditionalApplys.");
+		sys_err ("dragon_soul_table.txt AdditionalApplys gerekiyor.");
 		return false;
 	}
 
@@ -227,7 +227,7 @@ bool DragonSoulTable::ReadAdditionalApplys()
 		CGroupNode* pChild;
 		if (NULL == (pChild = pGroupNode->GetChildNode(m_vecDragonSoulNames[i])))
 		{
-			sys_err ("In Group AdditionalApplys, %s group is not defined.", m_vecDragonSoulNames[i].c_str());
+			sys_err ("AdditionalApplys grubunda, %s grubu tanımlı değil.", m_vecDragonSoulNames[i].c_str());
 			return false;
 		}
 		TVecApplys vecApplys;
@@ -246,22 +246,22 @@ bool DragonSoulTable::ReadAdditionalApplys()
 			std::string stTypeName;
 			if (!pRow->GetValue("apply_type", stTypeName))
 			{
-				sys_err ("In Group AdditionalApplys, %s group's apply_type is empty.", m_vecDragonSoulNames[i].c_str());
+				sys_err ("AdditionalApplys grubunda, %s grubunun apply_type'ı boş.", m_vecDragonSoulNames[i].c_str());
 				return false;
 			}
 			if (!(at = (EApplyTypes)FN_get_apply_type(stTypeName.c_str())))
 			{
-				sys_err ("In Group AdditionalApplys, %s group's apply_type %s is invalid.", m_vecDragonSoulNames[i].c_str(), stTypeName.c_str());
+				sys_err ("AdditionalApplys grubunda, %s grubunun apply_type %s'i geçersiz.", m_vecDragonSoulNames[i].c_str(), stTypeName.c_str());
 				return false;
 			}
 			if (!pRow->GetValue("apply_value", av))
 			{
-				sys_err ("In Group AdditionalApplys, %s group's apply_value %s is invalid.", m_vecDragonSoulNames[i].c_str(), av);
+				sys_err ("AdditionalApplys grubunda, %s grubunun apply_value %s'i geçersiz.", m_vecDragonSoulNames[i].c_str(), av);
 				return false;
 			}
 			if (!pRow->GetValue("prob", prob))
 			{
-				sys_err ("In Group AdditionalApplys, %s group's probability %s is invalid.", m_vecDragonSoulNames[i].c_str(), prob);
+				sys_err ("AdditionalApplys grubunda, %s grubunun olasılığı %s geçersiz.", m_vecDragonSoulNames[i].c_str(), prob);
 				return false;
 			}
 			vecApplys.emplace_back(SApply(at, av, prob));
@@ -277,7 +277,7 @@ bool DragonSoulTable::CheckApplyNumSettings ()
 	// Group ApplyNumSettings Reading.
 	if (NULL == m_pApplyNumSettingNode)
 	{
-		sys_err ("dragon_soul_table.txt need ApplyNumSettings.");
+		sys_err ("dragon_soul_table.txt ApplyNumSettings gerekiyor.");
 		return false;
 	}
 	else
@@ -305,7 +305,7 @@ bool DragonSoulTable::CheckWeightTables ()
 	// Group WeightTables Reading.
 	if (NULL == m_pWeightTableNode)
 	{
-		sys_err ("dragon_soul_table.txt need WeightTables.");
+		sys_err ("dragon_soul_table.txt WeightTables gerekiyor.");
 		return false;
 	}
 	else
@@ -337,7 +337,7 @@ bool DragonSoulTable::CheckRefineGradeTables()
 	// Group UpgradeTables Reading.
 	if (NULL == m_pRefineGradeTableNode)
 	{
-		sys_err ("dragon_soul_table.txt need RefineGradeTables.");
+		sys_err ("dragon_soul_table.txt RefineGradeTables gerekiyor.");
 		return false;
 	}
 	else
@@ -356,26 +356,26 @@ bool DragonSoulTable::CheckRefineGradeTables()
 				}
 				if (need_count < 1)
 				{
-					sys_err ("In %s group of RefineGradeTables, need_count of Grade(%s) is less than 1.",
+					sys_err ("RefineGradeTables %s grubunda, Grade(%s) need_count'u 1'den küçük.",
 						m_vecDragonSoulNames[i].c_str(), g_astGradeName[j].c_str());
 					return false;
 				}
 				if (fee < 0)
 				{
-					sys_err ("In %s group of RefineGradeTables, fee of Grade(%s) is less than 0.",
+					sys_err ("RefineGradeTables %s grubunda, Grade(%s) ücreti 0'dan küçük.",
 						m_vecDragonSoulNames[i].c_str(), g_astGradeName[j].c_str());
 					return false;
 				}
 				if (DRAGON_SOUL_GRADE_MAX != vec_probs.size())
 				{
-					sys_err ("In %s group of RefineGradeTables, probability list size is not %d.", DRAGON_SOUL_GRADE_MAX);
+					sys_err ("RefineGradeTables %s grubunda, olasılık liste boyutu %d değil.", DRAGON_SOUL_GRADE_MAX);
 					return false;
 				}
 				for (size_t k = 0; k < vec_probs.size(); k++)
 				{
 					if (vec_probs[k] < 0.f)
 					{
-						sys_err ("In %s group of RefineGradeTables, probability(index : %d) is less than 0.", k);
+						sys_err ("RefineGradeTables %s grubunda, olasılık(indeks : %d) 0'dan küçük.", k);
 						return false;
 					}
 				}
@@ -391,7 +391,7 @@ bool DragonSoulTable::CheckRefineStepTables ()
 	// Group ImproveTables Reading.
 	if (NULL == m_pRefineStrengthTableNode)
 	{
-		sys_err ("dragon_soul_table.txt need RefineStepTables.");
+		sys_err ("dragon_soul_table.txt RefineStepTables gerekiyor.");
 		return false;
 	}
 	else
@@ -410,19 +410,19 @@ bool DragonSoulTable::CheckRefineStepTables ()
 				}
 				if (need_count < 1)
 				{
-					sys_err ("In %s group of RefineStepTables, need_count of Step(%s) is less than 1.",
+					sys_err ("RefineStepTables %s grubunda, Step(%s) need_count'u 1'den küçük.",
 						m_vecDragonSoulNames[i].c_str(), g_astStepName[j].c_str());
 					return false;
 				}
 				if (fee < 0)
 				{
-					sys_err ("In %s group of RefineStepTables, fee of Step(%s) is less than 0.",
+					sys_err ("RefineStepTables %s grubunda, Step(%s) ücreti 0'dan küçük.",
 						m_vecDragonSoulNames[i].c_str(), g_astStepName[j].c_str());
 					return false;
 				}
 				if (DRAGON_SOUL_STEP_MAX != vec_probs.size())  // @fixme322 DRAGON_SOUL_GRADE_MAX -> DRAGON_SOUL_STEP_MAX
 				{
-					sys_err ("In %s group of RefineStepTables, probability list size is not %d.",
+					sys_err ("RefineStepTables %s grubunda, olasılık liste boyutu %d değil.",
 						m_vecDragonSoulNames[i].c_str(), DRAGON_SOUL_STEP_MAX);
 					return false;
 				}
@@ -430,7 +430,7 @@ bool DragonSoulTable::CheckRefineStepTables ()
 				{
 					if (vec_probs[k] < 0.f)
 					{
-						sys_err ("In %s group of RefineStepTables, probability(index : %d) is less than 0.",
+						sys_err ("RefineStepTables %s grubunda, olasılık(indeks : %d) 0'dan küçük.",
 							m_vecDragonSoulNames[i].c_str(), k);
 						return false;
 					}
@@ -448,7 +448,7 @@ bool DragonSoulTable::CheckRefineStrengthTables()
 	// Group RefineTables Reading.
 	if (NULL == pGroupNode)
 	{
-		sys_err ("dragon_soul_table.txt need RefineStrengthTables.");
+		sys_err ("dragon_soul_table.txt RefineStrengthTables gerekiyor.");
 		return false;
 	}
 	for (size_t i = 0; i < m_vecDragonSoulTypes.size(); i++)
@@ -461,19 +461,19 @@ bool DragonSoulTable::CheckRefineStrengthTables()
 			{
 				if (!GetRefineStrengthValues(m_vecDragonSoulTypes[i], j, k, fee, prob))
 				{
-					sys_err ("In %s group of RefineStrengthTables, value(Material(%s), Strength(%d)) or fee are invalid.",
+					sys_err ("RefineStrengthTables %s grubunda, değer(Material(%s), Strength(%d)) veya ücret geçersiz.",
 						m_vecDragonSoulNames[i].c_str(), g_astMaterialName[j].c_str(), k);
 					return false;
 				}
 				if (fee < 0)
 				{
-					sys_err ("In %s group of RefineStrengthTables, fee of Material(%s) is less than 0.",
+					sys_err ("RefineStrengthTables %s grubunda, Material(%s) ücreti 0'dan küçük.",
 						m_vecDragonSoulNames[i].c_str(), g_astMaterialName[j].c_str());
 					return false;
 				}
 				if (prob < 0.f)
 				{
-					sys_err ("In %s group of RefineStrengthTables, probability(Material(%s), Strength(%d)) is less than 0.",
+					sys_err ("RefineStrengthTables %s grubunda, olasılık(Material(%s), Strength(%d)) 0'dan küçük.",
 						m_vecDragonSoulNames[i].c_str(), g_astMaterialName[j].c_str(), k);
 					return false;
 				}
@@ -489,7 +489,7 @@ bool DragonSoulTable::CheckDragonHeartExtTables()
 	// Group DragonHeartExtTables Reading.
 	if (NULL == m_pDragonHeartExtTableNode)
 	{
-		sys_err ("dragon_soul_table.txt need DragonHeartExtTables.");
+		sys_err ("dragon_soul_table.txt DragonHeartExtTables gerekiyor.");
 		return false;
 	}
 	for (size_t i = 0; i < m_vecDragonSoulTypes.size(); i++)
@@ -501,13 +501,13 @@ bool DragonSoulTable::CheckDragonHeartExtTables()
 
 			if (!GetDragonHeartExtValues(m_vecDragonSoulTypes[i], j, vec_chargings, vec_probs))
 			{
-				sys_err ("In %s group of DragonHeartExtTables, CHARGING row or Grade(%s) row are invalid.",
+				sys_err ("DragonHeartExtTables %s grubunda, CHARGING satırı veya Grade(%s) satırı geçersiz.",
 					m_vecDragonSoulNames[i].c_str(), g_astGradeName[j].c_str());
 				return false;
 			}
 			if (vec_chargings.size() != vec_probs.size())
 			{
-				sys_err ("In %s group of DragonHeartExtTables, CHARGING row size(%d) are not equal Grade(%s) row size(%d).",
+				sys_err ("DragonHeartExtTables %s grubunda, CHARGING satır boyutu(%d) Grade(%s) satır boyutuna(%d) eşit değil.",
 					m_vecDragonSoulNames[i].c_str(), vec_chargings.size(), vec_probs.size());
 				return false;
 			}
@@ -515,7 +515,7 @@ bool DragonSoulTable::CheckDragonHeartExtTables()
 			{
 				if (vec_chargings[k] < 0.f)
 				{
-					sys_err ("In %s group of DragonHeartExtTables, CHARGING value(index : %d) is less than 0",
+					sys_err ("DragonHeartExtTables %s grubunda, CHARGING değeri(indeks : %d) 0'dan küçük",
 						m_vecDragonSoulNames[i].c_str(), k);
 					return false;
 				}
@@ -524,7 +524,7 @@ bool DragonSoulTable::CheckDragonHeartExtTables()
 			{
 				if (vec_probs[k] < 0.f)
 				{
-					sys_err ("In %s group of DragonHeartExtTables, Probability(Grade : %s, index : %d) is less than 0",
+					sys_err ("DragonHeartExtTables %s grubunda, Olasılık(Grade : %s, indeks : %d) 0'dan küçük",
 						m_vecDragonSoulNames[i].c_str(), g_astGradeName[j].c_str(), k);
 					return false;
 				}
@@ -540,7 +540,7 @@ bool DragonSoulTable::CheckDragonSoulExtTables()
 	// Group DragonSoulExtTables Reading.
 	if (NULL == m_pDragonSoulExtTableNode)
 	{
-		sys_err ("dragon_soul_table.txt need DragonSoulExtTables.");
+		sys_err ("dragon_soul_table.txt DragonSoulExtTables gerekiyor.");
 		return false;
 	}
 	for (size_t i = 0; i < m_vecDragonSoulTypes.size(); i++)
@@ -557,13 +557,13 @@ bool DragonSoulTable::CheckDragonSoulExtTables()
 			}
 			if (prob < 0.f)
 			{
-				sys_err ("In %s group of DragonSoulExtTables, Probability(Grade : %s) is less than 0",
+				sys_err ("DragonSoulExtTables %s grubunda, Olasılık(Grade : %s) 0'dan küçük",
 					m_vecDragonSoulNames[i].c_str(), g_astGradeName[j].c_str());
 				return false;
 			}
 			if (0 != by_product && NULL == ITEM_MANAGER::instance().GetTable(by_product))
 			{
-				sys_err ("In %s group of DragonSoulExtTables, ByProduct(%d) of Grade %s is not exist.",
+				sys_err ("DragonSoulExtTables %s grubunda, ByProduct(%d), Grade %s için yok.",
 					m_vecDragonSoulNames[i].c_str(), by_product, g_astGradeName[j].c_str());
 				return false;
 			}
@@ -598,7 +598,7 @@ bool DragonSoulTable::GetApplyNumSettings(BYTE ds_type, BYTE grade_idx, OUT int&
 {
 	if (grade_idx >= DRAGON_SOUL_GRADE_MAX)
 	{
-		sys_err ("Invalid dragon soul grade_idx(%d).", grade_idx);
+		sys_err ("Geçersiz ejder ruhu grade_idx(%d).", grade_idx);
 		return false;
 	}
 
@@ -606,25 +606,25 @@ bool DragonSoulTable::GetApplyNumSettings(BYTE ds_type, BYTE grade_idx, OUT int&
 	std::string stDragonSoulName;
 	if (!GetDragonSoulGroupName(ds_type, stDragonSoulName))
 	{
-		sys_err ("Invalid dragon soul type(%d).", ds_type);
+		sys_err ("Geçersiz ejder ruhu tipi(%d).", ds_type);
 		return false;
 	}
 
 	if (!m_pApplyNumSettingNode->GetGroupValue(stDragonSoulName, "basis", g_astGradeName[grade_idx], basis))
 	{
-		sys_err ("Invalid basis value. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
+		sys_err ("Geçersiz taban değeri. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
 	if (!m_pApplyNumSettingNode->GetGroupValue(stDragonSoulName, "add_min", g_astGradeName[grade_idx], add_min))
 	{
-		sys_err ("Invalid add_min value. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
+		sys_err ("Geçersiz add_min değeri. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
 	if (!m_pApplyNumSettingNode->GetGroupValue(stDragonSoulName, "add_max", g_astGradeName[grade_idx], add_max))
 	{
-		sys_err ("Invalid add_max value. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
+		sys_err ("Geçersiz add_max değeri. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
@@ -635,7 +635,7 @@ bool DragonSoulTable::GetWeight(BYTE ds_type, BYTE grade_idx, BYTE step_index, B
 {
 	if (grade_idx >= DRAGON_SOUL_GRADE_MAX || step_index >= DRAGON_SOUL_STEP_MAX || strength_idx >= DRAGON_SOUL_STRENGTH_MAX)
 	{
-		sys_err ("Invalid dragon soul grade_idx(%d) step_index(%d) strength_idx(%d).", grade_idx, step_index, strength_idx);
+		sys_err ("Geçersiz ejder ruhu grade_idx(%d) step_index(%d) strength_idx(%d).", grade_idx, step_index, strength_idx);
 		return false;
 	}
 
@@ -643,7 +643,7 @@ bool DragonSoulTable::GetWeight(BYTE ds_type, BYTE grade_idx, BYTE step_index, B
 	std::string stDragonSoulName;
 	if (!GetDragonSoulGroupName(ds_type, stDragonSoulName))
 	{
-		sys_err ("Invalid dragon soul type(%d).", ds_type);
+		sys_err ("Geçersiz ejder ruhu tipi(%d).", ds_type);
 		return false;
 	}
 
@@ -660,13 +660,13 @@ bool DragonSoulTable::GetWeight(BYTE ds_type, BYTE grade_idx, BYTE step_index, B
 	{
 		if (!pDragonSoulGroup->GetGroupValue(g_astGradeName[grade_idx], g_astStepName[step_index], strength_idx, fWeight))
 		{
-			sys_err ("Invalid float. DragonSoulGroup(%s) Grade(%s) Row(%s) Col(%d))", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), g_astStepName[step_index].c_str(), strength_idx);
+			sys_err ("Geçersiz ondalık. DragonSoulGroup(%s) Grade(%s) Satır(%s) Sütun(%d))", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), g_astStepName[step_index].c_str(), strength_idx);
 			return false;
 		}
 		else
 			return true;
 	}
-	sys_err ("Invalid value. DragonSoulGroup(%s) Grade(%s) Row(%s) Col(%d))", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), g_astStepName[step_index].c_str(), strength_idx);
+	sys_err ("Geçersiz değer. DragonSoulGroup(%s) Grade(%s) Satır(%s) Sütun(%d))", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), g_astStepName[step_index].c_str(), strength_idx);
 	return false;
 }
 
@@ -674,7 +674,7 @@ bool DragonSoulTable::GetRefineGradeValues(BYTE ds_type, BYTE grade_idx, OUT int
 {
 	if (grade_idx >= DRAGON_SOUL_GRADE_MAX -1)
 	{
-		sys_err ("Invalid dragon soul grade_idx(%d).", grade_idx);
+		sys_err ("Geçersiz ejder ruhu grade_idx(%d).", grade_idx);
 		return false;
 	}
 
@@ -682,26 +682,26 @@ bool DragonSoulTable::GetRefineGradeValues(BYTE ds_type, BYTE grade_idx, OUT int
 	std::string stDragonSoulName;
 	if (!GetDragonSoulGroupName(ds_type, stDragonSoulName))
 	{
-		sys_err ("Invalid dragon soul type(%d).", ds_type);
+		sys_err ("Geçersiz ejder ruhu tipi(%d).", ds_type);
 		return false;
 	}
 
 	const CGroupNode::CGroupNodeRow * pRow;
 	if (!m_pRefineGradeTableNode->GetGroupRow(stDragonSoulName, g_astGradeName[grade_idx], &pRow))
 	{
-		sys_err ("Invalid row. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
+		sys_err ("Geçersiz satır. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
 	if (!pRow->GetValue("need_count", need_count))
 	{
-		sys_err ("Invalid value. DragonSoulGroup(%s) Grade(%s) Col(need_count)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
+		sys_err ("Geçersiz değer. DragonSoulGroup(%s) Grade(%s) Sütun(need_count)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
 	if (!pRow->GetValue("fee", fee))
 	{
-		sys_err ("Invalid value. DragonSoulGroup(%s) Grade(%s) Col(fee)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
+		sys_err ("Geçersiz değer. DragonSoulGroup(%s) Grade(%s) Sütun(ücret)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
@@ -710,7 +710,7 @@ bool DragonSoulTable::GetRefineGradeValues(BYTE ds_type, BYTE grade_idx, OUT int
 	{
 		if (!pRow->GetValue(g_astGradeName[i], vec_probs[i]))
 		{
-			sys_err ("Invalid value. DragonSoulGroup(%s) Grade(%s) Col(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), g_astGradeName[i].c_str());
+			sys_err ("Geçersiz değer. DragonSoulGroup(%s) Grade(%s) Sütun(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), g_astGradeName[i].c_str());
 			return false;
 		}
 	}
@@ -722,7 +722,7 @@ bool DragonSoulTable::GetRefineStepValues(BYTE ds_type, BYTE step_idx, OUT int& 
 {
 	if (step_idx >= DRAGON_SOUL_STEP_MAX - 1)
 	{
-		sys_err ("Invalid dragon soul step_idx(%d).", step_idx);
+		sys_err ("Geçersiz ejder ruhu step_idx(%d).", step_idx);
 		return false;
 	}
 
@@ -730,26 +730,26 @@ bool DragonSoulTable::GetRefineStepValues(BYTE ds_type, BYTE step_idx, OUT int& 
 	std::string stDragonSoulName;
 	if (!GetDragonSoulGroupName(ds_type, stDragonSoulName))
 	{
-		sys_err ("Invalid dragon soul type(%d).", ds_type);
+		sys_err ("Geçersiz ejder ruhu tipi(%d).", ds_type);
 		return false;
 	}
 
 	const CGroupNode::CGroupNodeRow * pRow;
 	if (!m_pRefineStepTableNode->GetGroupRow(stDragonSoulName, g_astStepName[step_idx], &pRow))
 	{
-		sys_err ("Invalid row. DragonSoulGroup(%s) Step(%s)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str());
+		sys_err ("Geçersiz satır. DragonSoulGroup(%s) Step(%s)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str());
 		return false;
 	}
 
 	if (!pRow->GetValue("need_count", need_count))
 	{
-		sys_err ("Invalid value. DragonSoulGroup(%s) Step(%s) Col(need_count)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str());
+		sys_err ("Geçersiz değer. DragonSoulGroup(%s) Step(%s) Sütun(need_count)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str());
 		return false;
 	}
 
 	if (!pRow->GetValue("fee", fee))
 	{
-		sys_err ("Invalid value. DragonSoulGroup(%s) Step(%s) Col(fee)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str());
+		sys_err ("Geçersiz değer. DragonSoulGroup(%s) Step(%s) Sütun(ücret)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str());
 		return false;
 	}
 
@@ -758,7 +758,7 @@ bool DragonSoulTable::GetRefineStepValues(BYTE ds_type, BYTE step_idx, OUT int& 
 	{
 		if (!pRow->GetValue(g_astStepName[i], vec_probs[i]))
 		{
-			sys_err ("Invalid value. DragonSoulGroup(%s) Step(%s) Col(%s)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str(), g_astStepName[i].c_str());
+			sys_err ("Geçersiz değer. DragonSoulGroup(%s) Step(%s) Sütun(%s)", stDragonSoulName.c_str(), g_astStepName[step_idx].c_str(), g_astStepName[i].c_str());
 			return false;
 		}
 	}
@@ -770,7 +770,7 @@ bool DragonSoulTable::GetRefineStrengthValues(BYTE ds_type, BYTE material_type, 
 {
 	if (material_type < MATERIAL_DS_REFINE_NORMAL || material_type > MATERIAL_DS_REFINE_HOLLY)
 	{
-		sys_err ("Invalid dragon soul material_type(%d).", material_type);
+		sys_err ("Geçersiz ejder ruhu material_type(%d).", material_type);
 		return false;
 	}
 
@@ -778,13 +778,13 @@ bool DragonSoulTable::GetRefineStrengthValues(BYTE ds_type, BYTE material_type, 
 	std::string stDragonSoulName;
 	if (!GetDragonSoulGroupName(ds_type, stDragonSoulName))
 	{
-		sys_err ("Invalid dragon soul type(%d).", ds_type);
+		sys_err ("Geçersiz ejder ruhu tipi(%d).", ds_type);
 		return false;
 	}
 
 	if (!m_pRefineStrengthTableNode->GetGroupValue(stDragonSoulName, g_astMaterialName[material_type], "fee", fee))
 	{
-		sys_err ("Invalid fee. DragonSoulGroup(%s) Material(%s)",
+		sys_err ("Geçersiz ücret. DragonSoulGroup(%s) Material(%s)",
 			stDragonSoulName.c_str(), g_astMaterialName[material_type].c_str());
 		return false;
 	}
@@ -792,7 +792,7 @@ bool DragonSoulTable::GetRefineStrengthValues(BYTE ds_type, BYTE material_type, 
 
 	if (!m_pRefineStrengthTableNode->GetGroupValue(stDragonSoulName, g_astMaterialName[material_type], stStrengthIdx, prob))
 	{
-		sys_err ("Invalid prob. DragonSoulGroup(%s) Material(%s) Strength(%d)",
+		sys_err ("Geçersiz olasılık. DragonSoulGroup(%s) Material(%s) Strength(%d)",
 			stDragonSoulName.c_str(), g_astMaterialName[material_type].c_str(), strength_idx);
 		return false;
 	}
@@ -804,21 +804,21 @@ bool DragonSoulTable::GetDragonHeartExtValues(BYTE ds_type, BYTE grade_idx, OUT 
 {
 	if (grade_idx >= DRAGON_SOUL_GRADE_MAX)
 	{
-		sys_err ("Invalid dragon soul grade_idx(%d).", grade_idx);
+		sys_err ("Geçersiz ejder ruhu grade_idx(%d).", grade_idx);
 		return false;
 	}
 
 	std::string stDragonSoulName;
 	if (!GetDragonSoulGroupName(ds_type, stDragonSoulName))
 	{
-		sys_err ("Invalid dragon soul type(%d).", ds_type);
+		sys_err ("Geçersiz ejder ruhu tipi(%d).", ds_type);
 		return false;
 	}
 
 	const CGroupNode::CGroupNodeRow * pRow;
 	if (!m_pDragonHeartExtTableNode->GetGroupRow(stDragonSoulName, "charging", &pRow))
 	{
-		sys_err ("Invalid CHARGING row. DragonSoulGroup(%s)", stDragonSoulName.c_str());
+		sys_err ("Geçersiz CHARGING satırı. DragonSoulGroup(%s)", stDragonSoulName.c_str());
 		return false;
 	}
 	int n = pRow->GetSize();
@@ -827,21 +827,21 @@ bool DragonSoulTable::GetDragonHeartExtValues(BYTE ds_type, BYTE grade_idx, OUT 
 	{
 		if (!pRow->GetValue(i, vec_chargings[i]))
 		{
-			sys_err ("Invalid CHARGING value. DragonSoulGroup(%s), Col(%d)", stDragonSoulName.c_str(), i);
+			sys_err ("Geçersiz CHARGING değeri. DragonSoulGroup(%s), Sütun(%d)", stDragonSoulName.c_str(), i);
 			return false;
 		}
 	}
 
 	if (!m_pDragonHeartExtTableNode->GetGroupRow(stDragonSoulName, g_astGradeName[grade_idx], &pRow))
 	{
-		sys_err ("Invalid row. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
+		sys_err ("Geçersiz satır. DragonSoulGroup(%s) Grade(%s)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
 	int m = pRow->GetSize();
 	if (n != m)
 	{
-		sys_err ("Invalid row size(%d). It must be same CHARGING row size(%d). DragonSoulGroup(%s) Grade(%s)", m, n,
+		sys_err ("Geçersiz satır boyutu(%d). CHARGING satır boyutuyla(%d) aynı olmalı. DragonSoulGroup(%s) Grade(%s)", m, n,
 				stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
@@ -850,7 +850,7 @@ bool DragonSoulTable::GetDragonHeartExtValues(BYTE ds_type, BYTE grade_idx, OUT 
 	{
 		if (!pRow->GetValue(i, vec_probs[i]))
 		{
-			sys_err ("Invalid value. DragonSoulGroup(%s), Grade(%s) Col(%d)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), i);
+			sys_err ("Geçersiz değer. DragonSoulGroup(%s), Grade(%s) Sütun(%d)", stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), i);
 			return false;
 		}
 	}
@@ -862,7 +862,7 @@ bool DragonSoulTable::GetDragonSoulExtValues(BYTE ds_type, BYTE grade_idx, OUT f
 {
 	if (grade_idx >= DRAGON_SOUL_GRADE_MAX)
 	{
-		sys_err ("Invalid dragon soul grade_idx(%d).", grade_idx);
+		sys_err ("Geçersiz ejder ruhu grade_idx(%d).", grade_idx);
 		return false;
 	}
 
@@ -870,20 +870,20 @@ bool DragonSoulTable::GetDragonSoulExtValues(BYTE ds_type, BYTE grade_idx, OUT f
 	std::string stDragonSoulName;
 	if (!GetDragonSoulGroupName(ds_type, stDragonSoulName))
 	{
-		sys_err ("Invalid dragon soul type(%d).", ds_type);
+		sys_err ("Geçersiz ejder ruhu tipi(%d).", ds_type);
 		return false;
 	}
 
 	if (!m_pDragonSoulExtTableNode->GetGroupValue(stDragonSoulName, g_astGradeName[grade_idx], "prob", prob))
 	{
-		sys_err ("Invalid Prob. DragonSoulGroup(%s) Grade(%s)",
+		sys_err ("Geçersiz Olasılık. DragonSoulGroup(%s) Grade(%s)",
 			stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), g_astGradeName[grade_idx].c_str());
 		return false;
 	}
 
 	if (!m_pDragonSoulExtTableNode->GetGroupValue(stDragonSoulName, g_astGradeName[grade_idx], "byproduct", by_product))
 	{
-		sys_err ("Invalid fee. DragonSoulGroup(%s) Grade(%d)",
+		sys_err ("Geçersiz ücret. DragonSoulGroup(%s) Grade(%d)",
 			stDragonSoulName.c_str(), g_astGradeName[grade_idx].c_str(), grade_idx);
 		return false;
 	}

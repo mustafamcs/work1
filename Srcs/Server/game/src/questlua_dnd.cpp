@@ -97,7 +97,7 @@ namespace quest
 			if (q.GetCurrentCharacterPtr() == item->GetOwner()) {
 				ITEM_MANAGER::instance().RemoveItem(item);
 			} else {
-				sys_err("Tried to remove invalid item %p", get_pointer(item));
+				sys_err("Geçersiz eşya kaldırılmaya çalışıldı %p", get_pointer(item));
 			}
 			q.ClearCurrentDNDItem();
 		}
@@ -322,7 +322,7 @@ namespace quest
 		}
 		else
 		{
-			sys_err("Cannot find item table of vnum %u", vnum);
+			sys_err("vnum %u için eşya tablosu bulunamıyor", vnum);
 			lua_pushnumber(L, 0);
 		}
 		return 1;

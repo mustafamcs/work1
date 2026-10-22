@@ -104,7 +104,7 @@ static int luaB_yield (lua_State *L) {
 static int luaB_costatus (lua_State *L) {
   lua_State *co = lua_tothread(L, 1);
   luaL_argcheck(L, co, 1, "coroutine expected");
-  if (L == co) lua_pushliteral(L, "running");
+  if (L == co) lua_pushliteral(L, "koşuyor");
   else {
     switch (lua_status(co)) {
       case LUA_YIELD:
@@ -139,7 +139,7 @@ static int luaB_corunning (lua_State *L) {
 static const luaL_Reg co_funcs[] = {
   {"create", luaB_cocreate},
   {"resume", luaB_coresume},
-  {"running", luaB_corunning},
+  {"koşuyor", luaB_corunning},
   {"status", luaB_costatus},
   {"wrap", luaB_cowrap},
   {"yield", luaB_yield},

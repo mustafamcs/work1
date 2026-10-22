@@ -28,12 +28,12 @@ void gm_new_insert( const tAdminInfo &rAdminInfo )
 	if ( strlen( rAdminInfo.m_szContactIP ) == 0 )
 	{
 		t.pset_Host = &g_set_Host;
-		sys_log(0, "GM Use ContactIP" );
+		sys_log(0, "GM ContactIP Kullandı" );
 	}
 	else
 	{
 		t.pset_Host = NULL;
-		sys_log(0, "GM Use Default Host List" );
+		sys_log(0, "GM Varsayılan Host Listesi Kullandı" );
 	}
 
 	memcpy ( &t.Info, &rAdminInfo, sizeof ( rAdminInfo ) );
@@ -68,11 +68,11 @@ BYTE gm_new_get_level( const char * name, const char * host, const char* account
 	    {
 		if ( strcmp ( it->second.Info.m_szAccount, account  ) != 0 )
 		{
-		    sys_log(0, "GM_NEW_GET_LEVEL : BAD ACCOUNT [ACCOUNT:%s/%s", it->second.Info.m_szAccount, account);
+		    sys_log(0, "GM_NEW_GET_LEVEL : HATALI HESAP [HESAP:%s/%s", it->second.Info.m_szAccount, account);
 		    return GM_PLAYER;
 		}
 	    }
-	    sys_log(0, "GM_NEW_GET_LEVEL : FIND ACCOUNT");
+	    sys_log(0, "GM_NEW_GET_LEVEL : HESAP BULUNDU");
 	    return it->second.Info.m_Authority;
 	}
 	// END_OF_GERMAN_GM_NOT_CHECK_HOST
@@ -84,7 +84,7 @@ BYTE gm_new_get_level( const char * name, const char * host, const char* account
 		{
 		    if ( it->second.pset_Host->end() == it->second.pset_Host->find( host ) )
 		    {
-			sys_log(0, "GM_NEW_GET_LEVEL : BAD HOST IN HOST_LIST");
+			sys_log(0, "GM_NEW_GET_LEVEL : HOST_LIST İÇİNDE HATALI HOST");
 			return GM_PLAYER;
 		    }
 		}
@@ -92,12 +92,12 @@ BYTE gm_new_get_level( const char * name, const char * host, const char* account
 		{
 		    if ( strcmp ( it->second.Info.m_szContactIP, host  ) != 0 )
 		    {
-			sys_log(0, "GM_NEW_GET_LEVEL : BAD HOST IN GMLIST");
+			sys_log(0, "GM_NEW_GET_LEVEL : GMLIST İÇİNDE HATALI HOST");
 			return GM_PLAYER;
 		    }
 		}
 	    }
-	    sys_log(0, "GM_NEW_GET_LEVEL : FIND HOST");
+	    sys_log(0, "GM_NEW_GET_LEVEL : HOST BULUNDU");
 
 	    return it->second.Info.m_Authority;
 	}

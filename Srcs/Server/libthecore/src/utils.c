@@ -345,7 +345,7 @@ int number_ex(int from, int to, const char *file, int line)
     {
 	int tmp = from;
 
-	sys_err("number(): first argument is bigger than second argument %d -> %d, %s %d", from, to, file, line);
+	sys_err("number(): ilk argüman ikinciden büyük %d -> %d, %s %d", from, to, file, line);
 
 	from = to;
 	to = tmp;
@@ -373,7 +373,7 @@ void thecore_sleep(struct timeval* timeout)
     {
 	if (errno != EINTR)
 	{
-	    sys_err("select sleep %s", strerror(errno));
+	    sys_err("select uyku %s", strerror(errno));
 	    return;
 	}
     }
@@ -389,7 +389,7 @@ void thecore_msleep(DWORD dwMillisecond)
 
 void core_dump_unix(const char *who, WORD line)
 {
-    sys_err("*** Dumping Core %s:%d ***", who, line);
+    sys_err("*** Core Dökümü %s:%d ***", who, line);
 
     fflush(stdout);
     fflush(stderr);

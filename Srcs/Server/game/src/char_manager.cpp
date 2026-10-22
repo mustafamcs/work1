@@ -120,7 +120,7 @@ void CHARACTER_MANAGER::DestroyCharacter(LPCHARACTER ch, const char* file, size_
 	// <Factor> Check whether it has been already deleted or not.
 	itertype(m_map_pkChrByVID) it = m_map_pkChrByVID.find(ch->GetVID());
 	if (it == m_map_pkChrByVID.end()) {
-		sys_err("[CHARACTER_MANAGER::DestroyCharacter] <Factor> %d not found", (long)(ch->GetVID()));
+		sys_err("[CHARACTER_MANAGER::DestroyCharacter] <Factor> %d bulunamadı", (long)(ch->GetVID()));
 		return; // prevent duplicated destrunction
 	}
 
@@ -242,7 +242,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 	{
 		if (dwVnum == 5001 && !quest::CQuestManager::instance().GetEventFlag("japan_regen"))
 		{
-			sys_log(1, "WAEGU[5001] regen disabled.");
+			sys_log(1, "WAEGU[5001] regen devre dışı.");
 			return NULL;
 		}
 	}
@@ -250,7 +250,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 	{
 		if (dwVnum == 5002 && !quest::CQuestManager::instance().GetEventFlag("newyear_mob"))
 		{
-			sys_log(1, "HAETAE (new-year-mob) [5002] regen disabled.");
+			sys_log(1, "HAETAE (yeni-yil-mob) [5002] regen devre dışı.");
 			return NULL;
 		}
 	}
@@ -258,7 +258,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 	{
 		if (dwVnum == 5004 && !quest::CQuestManager::instance().GetEventFlag("independence_day"))
 		{
-			sys_log(1, "INDEPENDECE DAY [5004] regen disabled.");
+			sys_log(1, "BAĞIMSIZLIK GÜNÜ [5004] regen devre dışı.");
 			return NULL;
 		}
 	}
@@ -267,13 +267,13 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 
 	if (!pkMob)
 	{
-		sys_err("no mob data for vnum %u", dwVnum);
+		sys_err("vnum %u için mob verisi yok", dwVnum);
 		return NULL;
 	}
 
 	if (!map_allow_find(lMapIndex))
 	{
-		sys_err("not allowed map %u", lMapIndex);
+		sys_err("izinli olmayan harita %u", lMapIndex);
 		return NULL;
 	}
 
@@ -307,7 +307,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 
 	if (i == 2000)
 	{
-		sys_err("cannot find valid location");
+		sys_err("geçerli konum bulunamıyor");
 		return NULL;
 	}
 
@@ -315,7 +315,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 
 	if (!sectree)
 	{
-		sys_log(0, "SpawnMobRandomPosition: cannot create monster at non-exist sectree %d x %d (map %d)", x, y, lMapIndex);
+		sys_log(0, "SpawnMobRandomPosition: var olmayan sectree'de yaratık oluşturulamıyor %d x %d (harita %d)", x, y, lMapIndex);
 		return NULL;
 	}
 
@@ -323,7 +323,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 
 	if (!ch)
 	{
-		sys_log(0, "SpawnMobRandomPosition: cannot create new character");
+		sys_log(0, "SpawnMobRandomPosition: yeni karakter oluşturulamıyor");
 		return NULL;
 	}
 
@@ -341,14 +341,14 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMobRandomPosition(DWORD dwVnum, long lMapInd
 	if (!ch->Show(lMapIndex, x, y, 0, false))
 	{
 		M2_DESTROY_CHARACTER(ch);
-		sys_err(0, "SpawnMobRandomPosition: cannot show monster");
+		sys_err(0, "SpawnMobRandomPosition: yaratık gösterilemiyor");
 		return NULL;
 	}
 
 	char buf[512+1];
 	long local_x = x - pkSectreeMap->m_setting.iBaseX;
 	long local_y = y - pkSectreeMap->m_setting.iBaseY;
-	snprintf(buf, sizeof(buf), "spawn %s[%d] random position at %ld %ld %ld %ld (time: %d)", ch->GetName(), dwVnum, x, y, local_x, local_y, get_global_time());
+	snprintf(buf, sizeof(buf), "%s[%d] doğması rastgele konum %ld %ld %ld %ld (süre: %d)", ch->GetName(), dwVnum, x, y, local_x, local_y, get_global_time());
 
 	if (test_server)
 		SendNotice(buf);
@@ -362,7 +362,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMob(DWORD dwVnum, long lMapIndex, long x, lo
 	const CMob * pkMob = CMobManager::instance().Get(dwVnum);
 	if (!pkMob)
 	{
-		sys_err("SpawnMob: no mob data for vnum %u", dwVnum);
+		sys_err("SpawnMob: vnum %u için mob verisi yok", dwVnum);
 		return NULL;
 	}
 
@@ -372,7 +372,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMob(DWORD dwVnum, long lMapIndex, long x, lo
 
 		if (!tree)
 		{
-			sys_log(0, "no sectree for spawn at %d %d mobvnum %d mapindex %d", x, y, dwVnum, lMapIndex);
+			sys_log(0, "%d %d konumunda doğma için sectree yok mobvnum %d mapindex %d", x, y, dwVnum, lMapIndex);
 			return NULL;
 		}
 
@@ -399,14 +399,14 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMob(DWORD dwVnum, long lMapIndex, long x, lo
 			}
 
 			if (s_isLog)
-				sys_log(0, "SpawnMob: BLOCKED position for spawn %s %u at %d %d (attr %u)", pkMob->m_table.szName, dwVnum, x, y, dwAttr);
+				sys_log(0, "SpawnMob: doğma için ENGELLİ konum %s %u konum %d %d (attr %u)", pkMob->m_table.szName, dwVnum, x, y, dwAttr);
 			// END_OF_SPAWN_BLOCK_LOG
 			return NULL;
 		}
 
 		if (IS_SET(dwAttr, ATTR_BANPK))
 		{
-			sys_log(0, "SpawnMob: BAN_PK position for mob spawn %s %u at %d %d", pkMob->m_table.szName, dwVnum, x, y);
+			sys_log(0, "SpawnMob: mob doğması için BAN_PK konumu %s %u konum %d %d", pkMob->m_table.szName, dwVnum, x, y);
 			return NULL;
 		}
 	}
@@ -415,7 +415,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMob(DWORD dwVnum, long lMapIndex, long x, lo
 
 	if (!sectree)
 	{
-		sys_log(0, "SpawnMob: cannot create monster at non-exist sectree %d x %d (map %d)", x, y, lMapIndex);
+		sys_log(0, "SpawnMob: var olmayan sectree'de yaratık oluşturulamıyor %d x %d (harita %d)", x, y, lMapIndex);
 		return NULL;
 	}
 
@@ -423,7 +423,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMob(DWORD dwVnum, long lMapIndex, long x, lo
 
 	if (!ch)
 	{
-		sys_log(0, "SpawnMob: cannot create new character");
+		sys_log(0, "SpawnMob: yeni karakter oluşturulamıyor");
 		return NULL;
 	}
 
@@ -442,7 +442,7 @@ LPCHARACTER CHARACTER_MANAGER::SpawnMob(DWORD dwVnum, long lMapIndex, long x, lo
 	if (bShow && !ch->Show(lMapIndex, x, y, z, bSpawnMotion))
 	{
 		M2_DESTROY_CHARACTER(ch);
-		sys_log(0, "SpawnMob: cannot show monster");
+		sys_log(0, "SpawnMob: yaratık gösterilemiyor");
 		return NULL;
 	}
 
@@ -717,7 +717,7 @@ void CHARACTER_MANAGER::Update(int iPulse)
 	}
 
 	if (test_server && 0 == (iPulse % PASSES_PER_SEC(60)))
-		sys_log(0, "CHARACTER COUNT vid %zu pid %zu", m_map_pkChrByVID.size(), m_map_pkChrByPID.size());
+		sys_log(0, "KARAKTER SAYISI vid %zu pid %zu", m_map_pkChrByVID.size(), m_map_pkChrByPID.size());
 
 	FlushPendingDestroy();
 
@@ -1080,7 +1080,7 @@ void CHARACTER_MANAGER::FlushPendingDestroy()
 
 	if (!m_set_pkChrPendingDestroy.empty())
 	{
-		sys_log(0, "FlushPendingDestroy size %d", m_set_pkChrPendingDestroy.size());
+		sys_log(0, "FlushPendingDestroy boyut %d", m_set_pkChrPendingDestroy.size());
 
 		CHARACTER_SET::iterator it = m_set_pkChrPendingDestroy.begin(),
 			end = m_set_pkChrPendingDestroy.end();

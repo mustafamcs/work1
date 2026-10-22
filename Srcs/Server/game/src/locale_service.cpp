@@ -468,7 +468,7 @@ void LocaleService_LoadEmpireTextConvertTables()
 	for (int iEmpire = 1; iEmpire <= 3; ++iEmpire)
 	{
 		snprintf(szFileName, sizeof(szFileName), "%s/lang%d.cvt", LocaleService_GetBasePath().c_str(), iEmpire);
-		sys_log(0, "Load %s", szFileName);
+		sys_log(0, "Yukleniyor %s", szFileName);
 
 		LoadEmpireTextConvertTable(iEmpire, szFileName);
 	}
@@ -1071,7 +1071,7 @@ bool LocaleService_Init(const std::string& c_rstServiceName)
 {
 	if (!g_stServiceName.empty())
 	{
-		sys_err("ALREADY exist service");
+		sys_err("Servis zaten mevcut");
 		return false;
 	}
 
@@ -1216,7 +1216,7 @@ bool LocaleService_Init(const std::string& c_rstServiceName)
 		__LocaleService_Init_DEFAULT();
 	}
 
-	fprintf(stdout, "Setting Locale \"%s\" (Path: %s)\n", g_stServiceName.c_str(), g_stServiceBasePath.c_str());
+	fprintf(stdout, "Locale Ayarlanıyor \"%s\" (Yol: %s)\n", g_stServiceName.c_str(), g_stServiceBasePath.c_str());
 
 	__CheckPlayerSlot(g_stServiceName);
 

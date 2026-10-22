@@ -27,8 +27,8 @@ static int pid_init(void)
 	}
 	else
 	{
-		printf("pid_init(): could not open file for writing. (filename: ./pid)");
-		sys_err("\nError writing pid file\n");
+		printf("pid_init(): dosya yazmak için açılamadı. (dosya: ./pid)");
+		sys_err("\npid dosyası yazma hatası\n");
 		return false;
 	}
 	return true;

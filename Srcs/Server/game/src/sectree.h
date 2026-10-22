@@ -164,7 +164,7 @@ class SECTREE
 				LPENTITY entity = *it;
 				// <Factor> Sanity check
 				if (entity->GetSectree() != this) {
-					sys_err("<Factor> SECTREE-ENTITY relationship mismatch");
+					sys_err("<Factor> SECTREE-ENTITY ilişki uyumsuzluğu");
 					m_set_entity.erase(it);
 					continue;
 				}

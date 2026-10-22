@@ -131,7 +131,7 @@ namespace xmas
 
 		if (CHARACTER_MANAGER::instance().SpawnMobRandomPosition(xmas::MOB_SANTA_VNUM, lMapIndex))
 		{
-			sys_log(0, "santa comes to town!");
+			sys_log(0, "noel baba şehre geliyor!");
 			return 0;
 		}
 
@@ -145,7 +145,7 @@ namespace xmas
 			iTimeGapSec /= 60;
 		}
 
-		sys_log(0, "santa respawn time = %d", iTimeGapSec);
+		sys_log(0, "noel baba yeniden doğma süresi = %d", iTimeGapSec);
 		spawn_santa_info* info = AllocEventInfo<spawn_santa_info>();
 
 		info->lMapIndex = lMapIndex;
@@ -180,7 +180,7 @@ namespace xmas
 					PIXEL_POSITION posBase;
 					if (!SECTREE_MANAGER::instance().GetMapBasePositionByMapIndex(p->lMapIndex, posBase))
 					{
-						sys_err("cannot get map base position %d", p->lMapIndex);
+						sys_err("harita taban konumu alınamıyor %d", p->lMapIndex);
 						p++;
 						continue;
 					}

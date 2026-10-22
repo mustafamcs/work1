@@ -53,12 +53,12 @@
 
 #define CREATE(result, type, number)  do { \
 	if (!((result) = (type *) calloc ((number), sizeof(type)))) { \
-		sys_err("calloc failed [%d] %s", errno, strerror(errno)); \
+		sys_err("calloc başarısız [%d] %s", errno, strerror(errno)); \
 		abort(); } } while(0)
 
 #define RECREATE(result,type,number) do { \
 	if (!((result) = (type *) realloc ((result), sizeof(type) * (number)))) { \
-		sys_err("realloc failed [%d] %s", errno, strerror(errno)); \
+		sys_err("realloc başarısız [%d] %s", errno, strerror(errno)); \
 		abort(); } } while(0)
 
 #define INSERT_TO_TW_LIST(item, head, prev, next)   \

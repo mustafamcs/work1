@@ -256,14 +256,14 @@ LPITEM CHARACTER::GetItem(TItemPos Cell) const
 	case EQUIPMENT:
 		if (wCell >= INVENTORY_AND_EQUIP_SLOT_MAX)
 		{
-			sys_err("CHARACTER::GetInventoryItem: invalid item cell %d", wCell);
+			sys_err("CHARACTER::GetInventoryItem: geçersiz eşya hücresi %d", wCell);
 			return NULL;
 		}
 		return m_PlayerSlots->pItems[wCell];
 	case DRAGON_SOUL_INVENTORY:
 		if (wCell >= DRAGON_SOUL_INVENTORY_MAX_NUM)
 		{
-			sys_err("CHARACTER::GetInventoryItem: invalid DS item cell %d", wCell);
+			sys_err("CHARACTER::GetInventoryItem: geçersiz DS eşya hücresi %d", wCell);
 			return NULL;
 		}
 		return m_PlayerSlots->pDSItems[wCell];
@@ -287,7 +287,7 @@ void CHARACTER::SetItem(TItemPos Cell, LPITEM pItem
 	BYTE window_type = Cell.window_type;
 	if ((unsigned long)((CItem*)pItem) == 0xff || (unsigned long)((CItem*)pItem) == 0xffffffff)
 	{
-		sys_err("!!! FATAL ERROR !!! item == 0xff (char: %s cell: %u)", GetName(), wCell);
+		sys_err("!!! ÖLÜMCÜL HATA !!! item == 0xff (karakter: %s hücre: %u)", GetName(), wCell);
 		core_dump();
 		return;
 	}
@@ -305,7 +305,7 @@ void CHARACTER::SetItem(TItemPos Cell, LPITEM pItem
 		{
 			if (wCell >= INVENTORY_AND_EQUIP_SLOT_MAX)
 			{
-				sys_err("CHARACTER::SetItem: invalid item cell %d", wCell);
+				sys_err("CHARACTER::SetItem: geçersiz eşya hücresi %d", wCell);
 				return;
 			}
 
@@ -383,7 +383,7 @@ void CHARACTER::SetItem(TItemPos Cell, LPITEM pItem
 			{
 				if (wCell >= DRAGON_SOUL_INVENTORY_MAX_NUM)
 				{
-					sys_err("CHARACTER::SetItem: invalid DS item cell %d", wCell);
+					sys_err("CHARACTER::SetItem: geçersiz DS eşya hücresi %d", wCell);
 					return;
 				}
 
@@ -407,7 +407,7 @@ void CHARACTER::SetItem(TItemPos Cell, LPITEM pItem
 		}
 		break;
 	default:
-		sys_err ("Invalid Inventory type %d", window_type);
+		sys_err ("Geçersiz Envanter tipi %d", window_type);
 		return;
 	}
 
@@ -474,7 +474,7 @@ LPITEM CHARACTER::GetWear(BYTE bCell) const
 
 	if (bCell >= WEAR_MAX_NUM + DRAGON_SOUL_DECK_MAX_NUM * DS_SLOT_MAX)
 	{
-		sys_err("CHARACTER::GetWear: invalid wear cell %d", bCell);
+		sys_err("CHARACTER::GetWear: geçersiz kuşanım hücresi %d", bCell);
 		return NULL;
 	}
 
@@ -485,7 +485,7 @@ void CHARACTER::SetWear(BYTE bCell, LPITEM item)
 {
 	if (bCell >= WEAR_MAX_NUM + DRAGON_SOUL_DECK_MAX_NUM * DS_SLOT_MAX)
 	{
-		sys_err("CHARACTER::SetItem: invalid item cell %d", bCell);
+		sys_err("CHARACTER::SetItem: geçersiz eşya hücresi %d", bCell);
 		return;
 	}
 
@@ -878,7 +878,7 @@ bool CHARACTER::DoRefine(LPITEM item, bool bMoneyOnly)
 
 	if (!pProto)
 	{
-		sys_err("DoRefine NOT GET ITEM PROTO %d", item->GetRefinedVnum());
+		sys_err("DoRefine EŞYA PROTO ALINAMADI %d", item->GetRefinedVnum());
 		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu eşya daha iyi hale gelemez."));
 		return false;
 	}
@@ -936,18 +936,18 @@ bool CHARACTER::DoRefine(LPITEM item, bool bMoneyOnly)
 			pkNewItem->AddToCharacter(this, TItemPos(INVENTORY, bCell));
 			ITEM_MANAGER::instance().FlushDelayedSave(pkNewItem);
 
-			sys_log(0, "Refine Success %d", cost);
+			sys_log(0, "Geliştirme Başarılı %d", cost);
 			pkNewItem->AttrLog();
 			//PointChange(POINT_GOLD, -cost);
 			sys_log(0, "PayPee %d", cost);
 			PayRefineFee(cost);
-			sys_log(0, "PayPee End %d", cost);
+			sys_log(0, "PayPee Son %d", cost);
 		}
 		else
 		{
 			// DETAIL_REFINE_LOG
 
-			sys_err("cannot create item %u", result_vnum);
+			sys_err("eşya oluşturulamıyor %u", result_vnum);
 			NotifyRefineFail(this, item, IsRefineThroughGuild() ? "GUILD" : "POWER");
 			// END_OF_DETAIL_REFINE_LOG
 		}
@@ -1058,7 +1058,7 @@ bool CHARACTER::DoRefineWithScroll(LPITEM item)
 
 	if (!pProto)
 	{
-		sys_err("DoRefineWithScroll NOT GET ITEM PROTO %d", item->GetRefinedVnum());
+		sys_err("DoRefineWithScroll EŞYA PROTO ALINAMADI %d", item->GetRefinedVnum());
 		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu eşya daha iyi hale gelemez."));
 		return false;
 	}
@@ -1109,7 +1109,7 @@ bool CHARACTER::DoRefineWithScroll(LPITEM item)
 		else if (pkItemScroll->GetValue(0) == HYUNIRON_CHN) {} // @fixme121
 		else
 		{
-			sys_err("REFINE : Unknown refine scroll item. Value0: %d", pkItemScroll->GetValue(0));
+			sys_err("REFINE : Bilinmeyen geliştirme parşömeni. Value0: %d", pkItemScroll->GetValue(0));
 		}
 
 		if (test_server)
@@ -1179,7 +1179,7 @@ bool CHARACTER::DoRefineWithScroll(LPITEM item)
 		}
 		else
 		{
-			sys_err("cannot create item %u", result_vnum);
+			sys_err("eşya oluşturulamıyor %u", result_vnum);
 			NotifyRefineFail(this, item, szRefineType);
 		}
 	}
@@ -1208,7 +1208,7 @@ bool CHARACTER::DoRefineWithScroll(LPITEM item)
 		}
 		else
 		{
-			sys_err("cannot create item %u", result_fail_vnum);
+			sys_err("eşya oluşturulamıyor %u", result_fail_vnum);
 			NotifyRefineFail(this, item, szRefineType);
 		}
 	}
@@ -1280,7 +1280,7 @@ bool CHARACTER::RefineInformation(BYTE bCell, BYTE bType, int iAdditionalCell)
 
 	if (!prt)
 	{
-		sys_err("RefineInformation NOT GET REFINE SET %d", item->GetRefineSet());
+		sys_err("RefineInformation REFINE SET ALINAMADI %d", item->GetRefineSet());
 		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bu eşya daha iyi hale gelemez."));
 		return false;
 	}
@@ -1685,7 +1685,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 	// @fixme402 (IsLoadedAffect to block affect hacking)
 	if (!IsLoadedAffect())
 	{
-		ChatPacket(CHAT_TYPE_INFO, "Affects are not loaded yet!");
+		ChatPacket(CHAT_TYPE_INFO, "Etkiler henüz yüklenmedi!");
 		return false;
 	}
 
@@ -1696,13 +1696,13 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 		if (NULL == beltItem)
 		{
-			ChatPacket(CHAT_TYPE_INFO, "<Belt> You can't use this item if you have no equipped belt.");
+			ChatPacket(CHAT_TYPE_INFO, "<Kemer> Kuşanılmış kemeriniz yoksa bu eşyayı kullanamazsınız.");
 			return false;
 		}
 
 		if (false == CBeltInventoryHelper::IsAvailableCell(item->GetCell() - BELT_INVENTORY_SLOT_START, beltItem->GetValue(0)))
 		{
-			ChatPacket(CHAT_TYPE_INFO, "<Belt> You can't use this item if you don't upgrade your belt.");
+			ChatPacket(CHAT_TYPE_INFO, "<Kemer> Kemerinizi geliştirmezseniz bu eşyayı kullanamazsınız.");
 			return false;
 		}
 	}
@@ -2216,7 +2216,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 				if (item->GetVnum() > 50800 && item->GetVnum() <= 50820)
 				{
 					if (test_server)
-						sys_log (0, "ADD addtional effect : vnum(%d) subtype(%d)", item->GetOriginalVnum(), item->GetSubType());
+						sys_log (0, "EKLE ek etki : vnum(%d) alttip(%d)", item->GetOriginalVnum(), item->GetSubType());
 
 					int affect_type = AFFECT_EXP_BONUS_EURO_FREE;
 					int apply_type = aApplyInfo[item->GetValue(0)].bPointType;
@@ -3429,7 +3429,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 									int delta = MIN(-GetAlignment(), item->GetValue(0));
 
-									sys_log(0, "%s ALIGNMENT ITEM %d", GetName(), delta);
+									sys_log(0, "%s DÜZEY EŞYASI %d", GetName(), delta);
 
 									UpdateAlignment(delta);
 									item->SetCount(item->GetCount() - 1);
@@ -4481,7 +4481,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 									}
 									else
 									{
-										sys_err("CHARACTER::UseItem : cannot find spawn position (name %s, %d x %d)", GetName(), GetX(), GetY());
+										sys_err("CHARACTER::UseItem : doğma konumu bulunamıyor (isim %s, %d x %d)", GetName(), GetX(), GetY());
 									}
 								}
 								else
@@ -4911,7 +4911,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 									else
 									{
 										// wtf ?!
-										sys_err("ADD_ATTRIBUTE2 : Item has wrong AttributeCount(%d)", item2->GetAttributeCount());
+										sys_err("ADD_ATTRIBUTE2 : Eşyada hatalı AttributeCount(%d)", item2->GetAttributeCount());
 									}
 									break;
 
@@ -5280,11 +5280,11 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 			break;
 
 		case ITEM_NONE:
-			sys_err("Item type NONE %s", item->GetName());
+			sys_err("Eşya tipi NONE %s", item->GetName());
 			break;
 
 		default:
-			sys_log(0, "UseItemEx: Unknown type %s %d", item->GetName(), item->GetType());
+			sys_log(0, "UseItemEx: Bilinmeyen tip %s %d", item->GetName(), item->GetType());
 			return false;
 	}
 
@@ -5552,7 +5552,7 @@ bool CHARACTER::DropItem(TItemPos Cell, BYTE bCount)
 		if (bCount == 0)
 		{
 			if (test_server)
-				sys_log(0, "[DROP_ITEM] drop item count == 0");
+				sys_log(0, "[DROP_ITEM] düşen eşya adedi == 0");
 			return false;
 		}
 
@@ -6020,7 +6020,7 @@ bool CHARACTER::PickupItem(DWORD dwVID)
 				int iEmptyCell = GetEmptyInventoryEx(item);
 				if (iEmptyCell == -1)
 				{
-					sys_log(0, "No empty inventory pid %u size %ud itemid %u", GetPlayerID(), item->GetSize(), item->GetID());
+					sys_log(0, "Boş envanter yok pid %u boyut %ud eşyaid %u", GetPlayerID(), item->GetSize(), item->GetID());
 					ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Çok fazla eşya taşıyorsun."));
 					return false;
 				}
@@ -6125,7 +6125,7 @@ bool CHARACTER::SwapItem(BYTE bCell, BYTE bDestCell)
 
 	if (item1 == item2)
 	{
-	    sys_log(0, "[WARNING][WARNING][HACK USER!] : %s %d %d", m_stName.c_str(), bCell, bDestCell);
+	    sys_log(0, "[UYARI][UYARI][HİLECİ!] : %s %d %d", m_stName.c_str(), bCell, bDestCell);
 	    return false;
 	}
 
@@ -6154,7 +6154,7 @@ bool CHARACTER::SwapItem(BYTE bCell, BYTE bDestCell)
 		if (item1->EquipTo(this, bEquipCell))
 			item2->AddToCharacter(this, TItemPos(INVENTORY, bInvenCell));
 		else
-			sys_err("SwapItem cannot equip %s! item1 %s", item2->GetName(), item1->GetName());
+			sys_err("SwapItem kuşanamıyor %s! eşya1 %s", item2->GetName(), item1->GetName());
 	}
 	else
 	{
@@ -6351,7 +6351,7 @@ bool CHARACTER::EquipItem(LPITEM item, int iCandidateCell)
 	{
 		if(GetInventoryItem(INVENTORY_MAX_NUM + iWearCell))
 		{
-			ChatPacket(CHAT_TYPE_INFO, "You are already wearing the same kind of dragon soul stone.");
+			ChatPacket(CHAT_TYPE_INFO, "Zaten aynı türde ejder ruhu taşı kuşanıyorsunuz.");
 			return false;
 		}
 
@@ -6642,7 +6642,7 @@ void CHARACTER::RemoveSpecifyItem(DWORD vnum, DWORD count)
 	}
 
 	if (count)
-		sys_log(0, "CHARACTER::RemoveSpecifyItem cannot remove enough item vnum %u, still remain %d", vnum, count);
+		sys_log(0, "CHARACTER::RemoveSpecifyItem yeterli eşya kaldırılamıyor vnum %u, hâlâ %d kaldı", vnum, count);
 }
 
 int CHARACTER::CountSpecifyTypeItem(BYTE type) const
@@ -6701,12 +6701,12 @@ void CHARACTER::AutoGiveItem(LPITEM item, bool longOwnerShip)
 {
 	if (NULL == item)
 	{
-		sys_err ("NULL point.");
+		sys_err ("Null pointer.");
 		return;
 	}
 	if (item->GetOwner())
 	{
-		sys_err ("item %d 's owner exists!",item->GetID());
+		sys_err ("eşya %d'nin sahibi var!",item->GetID());
 		return;
 	}
 
@@ -6843,7 +6843,7 @@ LPITEM CHARACTER::AutoGiveItem(DWORD dwItemVnum, BYTE bCount, int iRarePct, bool
 	LPITEM item = ITEM_MANAGER::instance().CreateItem(dwItemVnum, bCount, 0, true);
 	if (!item)
 	{
-		sys_err("cannot create item by vnum %u (name: %s)", dwItemVnum, GetName());
+		sys_err("vnum %u ile eşya oluşturulamıyor (isim: %s)", dwItemVnum, GetName());
 		return NULL;
 	}
 
@@ -7269,7 +7269,7 @@ bool CHARACTER::GiveItemFromSpecialItemGroup(DWORD dwGroupNum, std::vector<DWORD
 
 	if (!pGroup)
 	{
-		sys_err("cannot find special item group %d", dwGroupNum);
+		sys_err("özel eşya grubu bulunamıyor %d", dwGroupNum);
 		return false;
 	}
 
@@ -7515,7 +7515,7 @@ bool CHARACTER::ItemProcess_Polymorph(LPITEM item)
 			break;
 
 		default :
-			sys_err("POLYMORPH invalid item passed PID(%d) vnum(%d)", GetPlayerID(), item->GetOriginalVnum());
+			sys_err("POLYMORPH geçersiz eşya geçildi PID(%d) vnum(%d)", GetPlayerID(), item->GetOriginalVnum());
 			return false;
 	}
 
@@ -7825,13 +7825,13 @@ bool CHARACTER::CanEquipNow(const LPITEM item, const TItemPos& srcCell, const TI
 bool CHARACTER::CanUnequipNow(const LPITEM item, const TItemPos& srcCell, const TItemPos& destCell) /*const*/
 {
 	if (ITEM_BELT == item->GetType())
-		VERIFY_MSG(CBeltInventoryHelper::IsExistItemInBeltInventory(this), "Cannot unequip while items exist in the belt inventory.");
+		VERIFY_MSG(CBeltInventoryHelper::IsExistItemInBeltInventory(this), "Kemer envanterinde eşya varken çıkaramazsınız.");
 
 	if (IS_SET(item->GetFlag(), ITEM_FLAG_IRREMOVABLE))
 		return false;
 
 	int pos = GetEmptyInventoryEx(item);
-	VERIFY_MSG(-1 == pos, "No free space in your inventory.");
+	VERIFY_MSG(-1 == pos, "Envanterinizde boş alan yok.");
 
 	return true;
 }

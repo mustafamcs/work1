@@ -123,7 +123,7 @@ long long CShopEx::Buy(LPCHARACTER ch, BYTE pos)
 	BYTE slotPos = pos % SHOP_HOST_ITEM_MAX_NUM;
 	if (tabIdx >= GetTabCount())
 	{
-		sys_log(0, "ShopEx::Buy : invalid position %d : %s", pos, ch->GetName());
+		sys_log(0, "ShopEx::Buy : geçersiz konum %d : %s", pos, ch->GetName());
 		return SHOP_SUBHEADER_GC_INVALID_POS;
 	}
 
@@ -153,7 +153,7 @@ long long CShopEx::Buy(LPCHARACTER ch, BYTE pos)
 
 		if (ch->GetGold() < (long long) dwPrice)
 		{
-			sys_log(1, "ShopEx::Buy : Not enough money : %s has %d, price %lld", ch->GetName(), ch->GetGold(), dwPrice);
+			sys_log(1, "ShopEx::Buy : Yeterli para yok : %s sahip %d, fiyat %lld", ch->GetName(), ch->GetGold(), dwPrice);
 			return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY;
 		}
 		break;
@@ -163,7 +163,7 @@ long long CShopEx::Buy(LPCHARACTER ch, BYTE pos)
 			DWORD count = ch->CountSpecifyTypeItem(ITEM_SECONDARY_COIN);
 			if (count < dwPrice)
 			{
-				sys_log(1, "ShopEx::Buy : Not enough myeongdojun : %s has %d, price %d", ch->GetName(), count, dwPrice);
+				sys_log(1, "ShopEx::Buy : Yeterli myeongdojun yok : %s sahip %d, fiyat %d", ch->GetName(), count, dwPrice);
 				return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_EX;
 			}
 		}
@@ -180,7 +180,7 @@ long long CShopEx::Buy(LPCHARACTER ch, BYTE pos)
 	int iEmptyPos = ch->GetEmptyInventoryEx(item);
 	if (iEmptyPos < 0)
 	{
-		sys_log(1, "ShopEx::Buy : Inventory full : %s size %d", ch->GetName(), item->GetSize());
+		sys_log(1, "ShopEx::Buy : Envanter dolu : %s boyut %d", ch->GetName(), item->GetSize());
 		M2_DESTROY_ITEM(item);
 		return SHOP_SUBHEADER_GC_INVENTORY_FULL;
 	}

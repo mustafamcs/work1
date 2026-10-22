@@ -32,7 +32,7 @@ struct FSkillBreath
 
 					if ((signed)BlueDragon_GetSkillFactor(2, "Skill0", "damage_area") < DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()))
 					{
-						sys_log(0, "BlueDragon: Breath too far (%d)", DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()) );
+						sys_log(0, "BlueDragon: Nefes çok uzak (%d)", DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()) );
 						return;
 					}
 
@@ -162,7 +162,7 @@ struct FSkillWeakBreath
 
 					if ((signed)BlueDragon_GetSkillFactor(2, "Skill1", "damage_area") < DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()))
 					{
-						sys_log(0, "BlueDragon: Breath too far (%d)", DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()) );
+						sys_log(0, "BlueDragon: Nefes çok uzak (%d)", DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()) );
 						return;
 					}
 
@@ -216,7 +216,7 @@ struct FSkillEarthQuake
 
 					if ((signed)BlueDragon_GetSkillFactor(2, "Skill2", "damage_area") < DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()))
 					{
-						sys_log(0, "BlueDragon: Breath too far (%d)", DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()) );
+						sys_log(0, "BlueDragon: Nefes çok uzak (%d)", DISTANCE_APPROX(pAttacker->GetX()-ch->GetX(), pAttacker->GetY()-ch->GetY()) );
 						return;
 					}
 

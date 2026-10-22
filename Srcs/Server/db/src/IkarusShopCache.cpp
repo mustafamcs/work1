@@ -762,13 +762,13 @@ namespace ikashop
 #endif
 			auto result = str_to_json(row[col++]);
 			if(!result){
-				sys_err("CANNOT EXTRACT JSON FROM SHOP SAFEBOX ITEM : pid(%u) item_id(%u)", dwPID, item.id);
+				sys_err("SHOP SAFEBOX EŞYASINDAN JSON ÇIKARILAMIYOR : pid(%u) item_id(%u)", dwPID, item.id);
 				continue;
 			}
 
 			auto expirationResult = jsonHelper::getValue<int>(result.value(), "expiration");
 			if(!expirationResult){
-				sys_err("CANNOT EXTRACT JSON EXPIRATION FROM SHOP SAFEBOX ITEM : pid(%u) item_id(%u)", dwPID, item.id);
+				sys_err("SHOP SAFEBOX EŞYASINDAN JSON SÜRE ÇIKARILAMIYOR : pid(%u) item_id(%u)", dwPID, item.id);
 				continue;
 			}
 

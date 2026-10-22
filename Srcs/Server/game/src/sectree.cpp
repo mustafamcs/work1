@@ -30,7 +30,7 @@ void SECTREE::Destroy()
 {
 	if (!m_set_entity.empty())
 	{
-		sys_err("Sectree: entity set not empty!!");
+		sys_err("Sectree: varlık kümesi boş değil!!");
 
 		ENTITY_SET::iterator it = m_set_entity.begin();
 
@@ -42,7 +42,7 @@ void SECTREE::Destroy()
 			{
 				LPCHARACTER ch = (LPCHARACTER) ent;
 
-				sys_err("Sectree: destroying character: %s is_pc %d", ch->GetName(), ch->IsPC() ? 1 : 0);
+				sys_err("Sectree: karakter yok ediliyor: %s is_pc %d", ch->GetName(), ch->IsPC() ? 1 : 0);
 
 				if (ch->GetDesc())
 					DESC_MANAGER::instance().DestroyDesc(ch->GetDesc());
@@ -53,12 +53,12 @@ void SECTREE::Destroy()
 			{
 				LPITEM item = (LPITEM) ent;
 
-				sys_err("Sectree: destroying Item: %s", item->GetName());
+				sys_err("Sectree: eşya yok ediliyor: %s", item->GetName());
 
 				M2_DESTROY_ITEM(item);
 			}
 			else
-				sys_err("Sectree: unknown type: %d", ent->GetType());
+				sys_err("Sectree: bilinmeyen tip: %d", ent->GetType());
 		}
 	}
 	m_set_entity.clear();
@@ -101,7 +101,7 @@ void SECTREE::DecreasePC()
 		{
 			if (tree->m_iPCCount < 0)
 			{
-				sys_err("tree pc count lower than zero (value %d coord %d %d)", tree->m_iPCCount, tree->m_id.coord.x, tree->m_id.coord.y);
+				sys_err("ağaç pc sayısı sıfırdan düşük (değer %d koordinat %d %d)", tree->m_iPCCount, tree->m_id.coord.x, tree->m_id.coord.y);
 				tree->m_iPCCount = 0;
 			}
 
@@ -129,7 +129,7 @@ bool SECTREE::InsertEntity(LPENTITY pkEnt)
 		return false;
 
 	if (m_set_entity.find(pkEnt) != m_set_entity.end()) {
-		sys_err("entity %p already exist in this sectree!", get_pointer(pkEnt));
+		sys_err("varlık %p bu sectree'de zaten var!", get_pointer(pkEnt));
 		return false;
 	}
 

@@ -168,7 +168,7 @@ class CProfiler : public singleton<CProfiler>
 				fprintf(fp, "%-24s: %lu\n", rProfileStackData.strName.c_str(), rProfileStackData.iEndTime - rProfileStackData.iStartTime);
 			}
 
-			fprintf(fp, "Name                                 Call/Load       Ratio\n");
+			fprintf(fp, "İsim                                 Çağrı/Yükleme       Oran\n");
 
 			std::string stLine;
 

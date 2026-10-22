@@ -101,7 +101,7 @@ bool ITEM_MANAGER::Initialize(TItemTable * table, int size)
 		const TItemTable* tableInfo = GetTable(item->GetOriginalVnum());
 		if (!tableInfo)
 		{
-			sys_err("cannot reset item table for %d", item->GetOriginalVnum());
+			sys_err("%d için eşya tablosu sıfırlanamıyor", item->GetOriginalVnum());
 			item->SetProto(NULL);
 			continue;
 		}
@@ -521,7 +521,7 @@ void ITEM_MANAGER::DestroyItem(LPITEM item, const char* file, size_t line)
 		}
 		else
 		{
-			sys_err ("WTH! Invalid item owner. owner pointer : %p", item->GetOwner());
+			sys_err ("WTH! Geçersiz eşya sahibi. sahip pointer : %p", item->GetOwner());
 		}
 	}
 
@@ -853,7 +853,7 @@ bool ITEM_MANAGER::GetDropPct(LPCHARACTER pkChr, LPCHARACTER pkKiller, OUT int& 
 	else if (1 == number(1, 10000))
 		iDeltaPercent += 500;
 
-	sys_log(3, "CreateDropItem for level: %d rank: %u pct: %d", iLevel, bRank, iDeltaPercent);
+	sys_log(3, "CreateDropItem seviye: %d rütbe: %u pct: %d", iLevel, bRank, iDeltaPercent);
 	iDeltaPercent = iDeltaPercent * CHARACTER_MANAGER::instance().GetMobItemRate(pkKiller) / 100;
 
 	//if (pkKiller->GetPoint(POINT_MALL_ITEMBONUS) > 0)
@@ -1069,7 +1069,7 @@ bool ITEM_MANAGER::CreateDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, std::
 	if (pkKiller->IsHorseRiding() &&
 			GetDropPerKillPct(1000, 1000000, iDeltaPercent, "horse_skill_book_drop") >= number(1, iRandRange))
 	{
-		sys_log(0, "EVENT HORSE_SKILL_BOOK_DROP");
+		sys_log(0, "OLAY AT_BECERİ_KİTABI_DÜŞÜRME");
 
 		if ((item = CreateItem(ITEM_HORSE_SKILL_TRAIN_BOOK, 1, 0, true)))
 			vec_item.emplace_back(item);
@@ -1350,7 +1350,7 @@ void ITEM_MANAGER::CreateQuestDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, 
 	if (!pkKiller)
 		return;
 
-	sys_log(1, "CreateQuestDropItem victim(%s), killer(%s)", pkChr->GetName(), pkKiller->GetName() );
+	sys_log(1, "CreateQuestDropItem kurban(%s), katil(%s)", pkChr->GetName(), pkKiller->GetName() );
 
 	// DROPEVENT_CHARSTONE
 	__DropEvent_CharStone_DropItem(*pkKiller, *pkChr, *this, vec_item);
@@ -1375,7 +1375,7 @@ void ITEM_MANAGER::CreateQuestDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, 
 		{
 			int iPercent = 40000 * iDeltaPercent / iDropPerKill[pkChr->GetMobRank()];
 
-			sys_log(0, "SOCK DROP %d %d", iPercent, iRandRange);
+			sys_log(0, "SOCK DÜŞÜR %d %d", iPercent, iRandRange);
 			if (iPercent >= number(1, iRandRange))
 			{
 				if ((item = CreateItem(SOCK_ITEM_VNUM, 1, 0, true)))
@@ -1457,7 +1457,7 @@ void ITEM_MANAGER::CreateQuestDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, 
 
 	if (GetDropPerKillPct(100, 500, iDeltaPercent, "newyear_moon") >= number(1, iRandRange))
 	{
-		sys_log(0, "EVENT NEWYEAR_MOON DROP");
+		sys_log(0, "OLAY YENİYIL_AY DÜŞÜRME");
 
 		const static DWORD wonso_items[6] = { 50016, 50017, 50018, 50019, 50019, 50019, };
 		DWORD dwVnum = wonso_items[number(0,5)];
@@ -1468,7 +1468,7 @@ void ITEM_MANAGER::CreateQuestDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, 
 
 	if (GetDropPerKillPct(1, 2000, iDeltaPercent, "valentine_drop") >= number(1, iRandRange))
 	{
-		sys_log(0, "EVENT VALENTINE_DROP");
+		sys_log(0, "OLAY SEVGİLİLER_DÜŞÜRME");
 
 		const static DWORD valentine_items[2] = { 50024, 50025 };
 		DWORD dwVnum = valentine_items[number(0, 1)];
@@ -1538,7 +1538,7 @@ void ITEM_MANAGER::CreateQuestDropItem(LPCHARACTER pkChr, LPCHARACTER pkKiller, 
 
 	if (GetDropPerKillPct(100, 2000, iDeltaPercent, "whiteday_drop") >= number(1, iRandRange))
 	{
-		sys_log(0, "EVENT WHITEDAY_DROP");
+		sys_log(0, "OLAY BEYAZGÜN_DÜŞÜRME");
 		const static DWORD whiteday_items[2] = { ITEM_WHITEDAY_ROSE, ITEM_WHITEDAY_CANDY };
 		DWORD dwVnum = whiteday_items[number(0,1)];
 

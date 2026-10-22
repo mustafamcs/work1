@@ -55,7 +55,7 @@ void CMonarch::ElectMonarch()
 		++s[idx];
 
 		if (g_test_server)
-			sys_log (0, "[MONARCH_VOTE] pid(%d) come to vote candidacy pid(%d)", it->second->pid, m_vec_MonarchCandidacy[idx].pid);
+			sys_log (0, "[MONARCH_VOTE] pid(%d) adaylık için oy vermeye geldi pid(%d)", it->second->pid, m_vec_MonarchCandidacy[idx].pid);
 	}
 
 	delete [] s;
@@ -168,7 +168,7 @@ bool CMonarch::TakeMoney(int Empire, DWORD pid, int64_t Money)
 	CDBManager::instance().AsyncQuery(szQuery);
 
 	if (g_test_server)
-		sys_log(0, "[MONARCH] Take money empire(%d) money(%lld)", Empire, m_MonarchInfo.money[Empire]);
+		sys_log(0, "[MONARCH] Para Al imparatorluk(%d) para(%lld)", Empire, m_MonarchInfo.money[Empire]);
 	return true;
 }
 
@@ -195,7 +195,7 @@ bool CMonarch::LoadMonarch()
 		strlcpy(p->date[Empire], row[idx++], sizeof(p->date[Empire]));
 
 		if (g_test_server)
-			sys_log(0, "[LOAD_MONARCH] Empire %d pid %d money %lld windate %s", Empire, p->pid[Empire], p->money[Empire], p->date[Empire]);
+			sys_log(0, "[LOAD_MONARCH] İmparatorluk %d pid %d para %lld kazanma %s", Empire, p->pid[Empire], p->money[Empire], p->date[Empire]);
 	}
 
 	return true;
@@ -223,7 +223,7 @@ bool CMonarch::SetMonarch(const char * name)
 		p->money[Empire] = atoll(row[idx++]);
 
 		if (g_test_server)
-			sys_log(0, "[Set_MONARCH] Empire %d pid %d money %lld windate %s", Empire, p->pid[Empire], p->money[Empire], p->date[Empire]);
+			sys_log(0, "[Set_MONARCH] İmparatorluk %d pid %d para %lld kazanma %s", Empire, p->pid[Empire], p->money[Empire], p->date[Empire]);
 	}
 
 	snprintf(szQuery, sizeof(szQuery),

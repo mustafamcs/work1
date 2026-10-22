@@ -228,20 +228,20 @@ void CInputLogin::ChangeName(LPDESC d, const char * data)
 
 	if (!c_r.id)
 	{
-		sys_err("no account table");
+		sys_err("hesap tablosu yok");
 		return;
 	}
 
 	if (p->index >= PLAYER_PER_ACCOUNT) // @fixme190
 	{
-		sys_err("index overflow %d, login: %s", p->index, c_r.login);
+		sys_err("indeks taşması %d, giriş: %s", p->index, c_r.login);
 		d->SetPhase(PHASE_CLOSE);
 		return;
 	}
 
 	if (!c_r.players[p->index].dwID) // @fixme190
 	{
-		sys_err("player index not found, login: %s", c_r.login);
+		sys_err("oyuncu indeksi bulunamadı, giriş: %s", c_r.login);
 		d->SetPhase(PHASE_CLOSE);
 		return;
 	}
@@ -276,26 +276,26 @@ void CInputLogin::CharacterSelect(LPDESC d, const char * data)
 
 	if (!c_r.id)
 	{
-		sys_err("no account table");
+		sys_err("hesap tablosu yok");
 		return;
 	}
 
 	if (pinfo->index >= PLAYER_PER_ACCOUNT)
 	{
-		sys_err("index overflow %d, login: %s", pinfo->index, c_r.login);
+		sys_err("indeks taşması %d, giriş: %s", pinfo->index, c_r.login);
 		return;
 	}
 
 	if (!c_r.players[pinfo->index].dwID) // fixme190
 	{
-		sys_err("player index not found, login: %s", c_r.login);
+		sys_err("oyuncu indeksi bulunamadı, giriş: %s", c_r.login);
 		d->SetPhase(PHASE_CLOSE);
 		return;
 	}
 
 	if (c_r.players[pinfo->index].bChangeName)
 	{
-		sys_err("name must be changed idx %d, login %s, name %s",
+		sys_err("isim değiştirilmeli idx %d, giriş %s, isim %s",
 				pinfo->index, c_r.login, c_r.players[pinfo->index].szName);
 		return;
 	}
@@ -504,7 +504,7 @@ void CInputLogin::CharacterCreate(LPDESC d, const char * data)
 
 	if (pinfo->index >= PLAYER_PER_ACCOUNT)	// @fixme190
 	{
-		sys_err("index overflow %d, login: %s", pinfo->index, pinfo->name);
+		sys_err("indeks taşması %d, giriş: %s", pinfo->index, pinfo->name);
 		d->SetPhase(PHASE_CLOSE);
 		return;
 	}
@@ -518,7 +518,7 @@ void CInputLogin::CharacterCreate(LPDESC d, const char * data)
 #if defined(ENABLE_WOLFMAN_CHARACTER) && defined(DISABLE_WOLFMAN_ON_CREATE)
     if (pinfo->job == MAIN_RACE_WOLFMAN_M)
 	{
-        sys_err("Wolfman character creation disabled. account_id: %d, login: %s", d->GetAccountTable().id, pinfo->name);
+        sys_err("Wolfman karakter oluşturma devre dışı. account_id: %d, giriş: %s", d->GetAccountTable().id, pinfo->name);
         d->Packet(packFailure);
         return;
     }
@@ -540,7 +540,7 @@ void CInputLogin::CharacterCreate(LPDESC d, const char * data)
 
 	if (!NewPlayerTable2(&player_create_packet.player_table, pinfo->name, pinfo->job, pinfo->shape, d->GetEmpire()))
 	{
-		sys_err("player_prototype error: job %d face %d ", pinfo->job);
+		sys_err("player_prototype hatasi: meslek %d yuz %d ", pinfo->job);
 		d->Packet(&packFailure, sizeof(packFailure));
 		return;
 	}
@@ -567,7 +567,7 @@ void CInputLogin::CharacterDelete(LPDESC d, const char * data)
 
 	if (!c_rAccountTable.id)
 	{
-		sys_err("PlayerDelete: no login data");
+		sys_err("PlayerDelete: giriş verisi yok");
 		return;
 	}
 
@@ -575,13 +575,13 @@ void CInputLogin::CharacterDelete(LPDESC d, const char * data)
 
 	if (pinfo->index >= PLAYER_PER_ACCOUNT)
 	{
-		sys_err("PlayerDelete: index overflow %d, login: %s", pinfo->index, c_rAccountTable.login);
+		sys_err("PlayerDelete: indeks taşması %d, giriş: %s", pinfo->index, c_rAccountTable.login);
 		return;
 	}
 
 	if (!c_rAccountTable.players[pinfo->index].dwID)
 	{
-		sys_err("PlayerDelete: Wrong Social ID index %d, login: %s", pinfo->index, c_rAccountTable.login);
+		sys_err("PlayerDelete: Hatalı Social ID indeksi %d, giriş: %s", pinfo->index, c_rAccountTable.login);
 		d->Packet(encode_byte(HEADER_GC_CHARACTER_DELETE_WRONG_SOCIAL_ID), 1);
 		return;
 	}
@@ -683,7 +683,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 	d->Packet(&p2, sizeof(p2));
 
 #ifdef ENABLE_GUILD_TOKEN_AUTH
-	// ch->ChatPacket(CHAT_TYPE_INFO, "pid %d, guild id %d, guild leader id %d", ch->GetPlayerID(), ch->GetGuild() ? ch->GetGuild()->GetID() : 0, ch->GetGuild() ? ch->GetGuild()->GetMasterPID() : 0);
+	// ch->ChatPacket(CHAT_TYPE_INFO, "pid %d, lonca id %d, lonca lider id %d", ch->GetPlayerID(), ch->GetGuild() ? ch->GetGuild()->GetID() : 0, ch->GetGuild() ? ch->GetGuild()->GetMasterPID() : 0);
 	ch->SendGuildToken();
 #endif
 
@@ -702,7 +702,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 
 	if (g_bCheckClientVersion)
 	{
-		sys_log(0, "VERSION CHECK %s %s", g_stClientVersion.c_str(), d->GetClientVersion());
+		sys_log(0, "SÜRÜM KONTROLÜ %s %s", g_stClientVersion.c_str(), d->GetClientVersion());
 
 		if (!d->GetClientVersion())
 		{
@@ -716,7 +716,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 				d->DelayedDisconnect(0); // @fixme103 (10);
 				LogManager::instance().HackLog("VERSION_CONFLICT", ch);
 
-				sys_log(0, "VERSION : WRONG VERSION USER : account:%s name:%s hostName:%s server_version:%s client_version:%s",
+				sys_log(0, "VERSION : YANLIŞ SÜRÜM KULLANICI : hesap:%s isim:%s hostName:%s sunucu_sürümü:%s istemci_sürümü:%s",
 						d->GetAccountTable().login,
 						ch->GetName(),
 						d->GetHostName(),
@@ -727,7 +727,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 	}
 	else
 	{
-		sys_log(0, "VERSION : NO CHECK");
+		sys_log(0, "VERSION : KONTROL YOK");
 	}
 
 	if (ch->IsGM() == true)
@@ -752,7 +752,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 			ch->SetArenaObserverMode(true);
 			if (CArenaManager::instance().RegisterObserverPtr(ch, ch->GetMapIndex(), ch->GetX()/100, ch->GetY()/100))
 			{
-				sys_log(0, "ARENA : Observer add failed");
+				sys_log(0, "ARENA : İzleyici ekleme başarısız");
 			}
 
 			if (ch->IsHorseRiding() == true)
@@ -870,7 +870,7 @@ void CInputLogin::Empire(LPDESC d, const char * c_pData)
 		{
 			if (r.players[i].dwID)
 			{
-				sys_err("EmpireSelectFailed %d", r.players[i].dwID);
+				sys_err("ImparatorlukSecimiBasarisiz %d", r.players[i].dwID);
 				d->SetPhase(PHASE_CLOSE);
 				return;
 			}
@@ -899,7 +899,7 @@ int CInputLogin::GuildSymbolUpload(LPDESC d, const char* c_pData, size_t uiBytes
 
 #ifdef ENABLE_GUILD_TOKEN_AUTH
 	if (!p->guild_id || !CGuildManager::instance().IsCorrectGuildToken(p->guild_id, p->token)) {
-		sys_err("MARK_SERVER: GuildSymbolUpload: invalid token. guild_id %u token %u", p->guild_id, p->token);
+		sys_err("MARK_SERVER: GuildSymbolUpload: geçersiz token. guild_id %u token %u", p->guild_id, p->token);
 		d->SetPhase(PHASE_CLOSE);
 		return 0;
 	}
@@ -964,7 +964,7 @@ void CInputLogin::GuildMarkUpload(LPDESC d, const char* c_pData)
 
 #ifdef ENABLE_GUILD_TOKEN_AUTH
 	if (!p->gid || !CGuildManager::instance().IsCorrectGuildToken(p->gid, p->token)) {
-		sys_err("MARK_SERVER: GuildMarkUpload: invalid token. gid %u token %u", p->gid, p->token);
+		sys_err("MARK_SERVER: GuildMarkUpload: geçersiz token. gid %u token %u", p->gid, p->token);
 		return;
 	}
 #endif
@@ -1026,7 +1026,7 @@ void CInputLogin::GuildMarkIDXList(LPDESC d, const char* c_pData)
 	else
 		d->Packet(p);
 
-	sys_log(0, "MARK_SERVER: GuildMarkIDXList %d bytes sent.", p.bufSize);
+	sys_log(0, "MARK_SERVER: GuildMarkIDXList %d bayt gönderildi.", p.bufSize);
 }
 
 void CInputLogin::GuildMarkCRCList(LPDESC d, const char* c_pData)
@@ -1058,7 +1058,7 @@ void CInputLogin::GuildMarkCRCList(LPDESC d, const char* c_pData)
 	pGC.bufSize = buf.size() + sizeof(TPacketGCMarkBlock);
 	pGC.count = blockCount;
 
-	sys_log(0, "MARK_SERVER: Sending blocks. (imgIdx %u diff %u size %u)", pCG->imgIdx, mapDiffBlocks.size(), pGC.bufSize);
+	sys_log(0, "MARK_SERVER: Bloklar gönderiliyor. (imgIdx %u fark %u boyut %u)", pCG->imgIdx, mapDiffBlocks.size(), pGC.bufSize);
 
 	if (buf.size() > 0)
 	{
@@ -1159,7 +1159,7 @@ int CInputLogin::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 			break;
 
 		default:
-			sys_err("login phase does not handle this packet! header %d", bHeader);
+			sys_err("giriş aşaması bu paketi işlemiyor! başlık %d", bHeader);
 			//d->SetPhase(PHASE_CLOSE);
 			return (0);
 	}

@@ -605,7 +605,7 @@ void interpreter_set_privilege(const char *cmd, int lvl)
 		if (!str_cmp(cmd, cmd_info[i].command))
 		{
 			cmd_info[i].gm_level = lvl;
-			sys_log(0, "Setting command privilege: %s -> %d", cmd, lvl);
+			sys_log(0, "Komut ayrıcalığı ayarlanıyor: %s -> %d", cmd, lvl);
 			break;
 		}
 	}
@@ -646,7 +646,7 @@ void interpret_command(LPCHARACTER ch, const char * argument, size_t len)
 {
 	if (!ch)
 	{
-		sys_err("NULL CHRACTER");
+		sys_err("NULL KARAKTER");
 		return;
 	}
 
@@ -705,7 +705,7 @@ void interpret_command(LPCHARACTER ch, const char * argument, size_t len)
 				break;
 
 			default:
-				sys_err("unknown position %d", ch->GetPosition());
+				sys_err("bilinmeyen konum %d", ch->GetPosition());
 				break;
 		}
 
