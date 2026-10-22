@@ -5,6 +5,7 @@
 #include "item.h"
 #include "blend_item.h"
 #include "../../common/JsonTable.h"
+#include "sql_data.h"
 
 #define DO_ALL_BLEND_INFO(iter)	for (iter=s_blend_info.begin(); iter!=s_blend_info.end(); ++iter)
 
@@ -55,7 +56,7 @@ bool	Blend_Item_load(char *file)
 	if (0==file || 0==file[0])
 		return false;
 
-	if (!reader.Open(file))
+	if (!sqldata::OpenReader(reader, file))
 		return false;
 
 	while (reader.Gets(one_line, sizeof(one_line)))

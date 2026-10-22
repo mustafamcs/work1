@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "../../common/stl.h"
 #include "../../common/JsonTable.h"
+#include "sql_data.h"
 #include "text_file_loader.h"
 
 CDynamicPool<CTextFileLoader::TGroupNode> CTextFileLoader::ms_groupNodePool;
@@ -37,7 +38,12 @@ bool CTextFileLoader::Load(const char * c_szFileName)
 	const std::string jsonPath = jsontable::JsonPathFor(c_szFileName);
 	m_bJson = false;
 
-	if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()))
+	const std::string srcName = sqldata::SrcFromPath(c_szFileName);
+	if (sqldata::LoadRows(srcName.c_str(), m_jsonRows))
+	{
+		m_bJson = true;
+	}
+	else if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()))
 	{
 		if (!jsontable::LoadRows(jsonPath.c_str(), m_jsonRows))
 			return false;

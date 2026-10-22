@@ -12,6 +12,7 @@
 
 #include <sstream>
 #include "../../common/JsonTable.h"
+#include "sql_data.h"
 
 #define RETURN_IF_CUBE_IS_NOT_OPENED(ch) if (!(ch)->IsCubeOpen()) return
 
@@ -356,7 +357,7 @@ bool Cube_load (const char *file)
 	if (0 == file || 0 == file[0])
 		return false;
 
-	if (!reader.Open(file))
+	if (!sqldata::OpenReader(reader, file))
 		return false;
 
 	while (reader.Gets(one_line, sizeof(one_line)))

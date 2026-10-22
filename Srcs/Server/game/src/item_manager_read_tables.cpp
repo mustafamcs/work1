@@ -14,6 +14,7 @@
 #include "safebox.h"
 #include "blend_item.h"
 #include "../../common/JsonTable.h"
+#include "sql_data.h"
 #include "locale_service.h"
 #include "item.h"
 #include "item_manager.h"
@@ -26,7 +27,7 @@ bool ITEM_MANAGER::ReadCommonDropItemFile(const char * c_pszFileName)
 {
 	jsontable::CLineReader reader;
 
-	if (!reader.Open(c_pszFileName))
+	if (!sqldata::OpenReader(reader, c_pszFileName))
 	{
 		sys_err("%s açılamıyor", c_pszFileName);
 		return false;
@@ -455,7 +456,7 @@ bool ITEM_MANAGER::ReadEtcDropItemFile(const char * c_pszFileName)
 {
 	jsontable::CLineReader reader;
 
-	if (!reader.Open(c_pszFileName))
+	if (!sqldata::OpenReader(reader, c_pszFileName))
 	{
 		sys_err("%s açılamıyor", c_pszFileName);
 		return false;
@@ -903,7 +904,7 @@ bool ITEM_MANAGER::ReadItemVnumMaskTable(const char * c_pszFileName)
 {
 	jsontable::CLineReader reader;
 
-	if (!reader.Open(c_pszFileName))
+	if (!sqldata::OpenReader(reader, c_pszFileName))
 		return false;
 
 	if (reader.IsJson())

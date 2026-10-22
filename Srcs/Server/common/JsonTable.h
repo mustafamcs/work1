@@ -200,6 +200,14 @@ namespace jsontable
 		const std::vector<std::vector<std::string> >& Rows() const { return m_rows; }
 		bool IsJson() const { return m_bJson; }
 
+		// Dis kaynaktan gelen satirlari (orn. SQL) JSON modunda besler
+		void SetRows(std::vector<std::vector<std::string> >& rows)
+		{
+			m_rows.swap(rows);
+			m_bJson = true;
+			m_pos = 0;
+		}
+
 		void Close()
 		{
 			if (m_fp)

@@ -263,6 +263,7 @@
     <ClCompile Include="game\src\shutdown_manager.cpp" />
     <ClCompile Include="game\src\skill.cpp" />
     <ClCompile Include="game\src\skill_power.cpp" />
+    <ClCompile Include="game\src\sql_data.cpp" />
     <ClCompile Include="game\src\start_position.cpp" />
     <ClCompile Include="game\src\target.cpp" />
     <ClCompile Include="game\src\text_file_loader.cpp" />
@@ -387,6 +388,7 @@
     <ClInclude Include="game\src\shutdown_manager.h" />
     <ClInclude Include="game\src\skill.h" />
     <ClInclude Include="game\src\skill_power.h" />
+    <ClInclude Include="game\src\sql_data.h" />
     <ClInclude Include="game\src\spam.h" />
     <ClInclude Include="game\src\stable_priority_queue.h" />
     <ClInclude Include="game\src\start_position.h" />

@@ -1,6 +1,7 @@
 //#define __FISHING_MAIN__
 #include "stdafx.h"
 #include "../../common/JsonTable.h"
+#include "sql_data.h"
 #include "constants.h"
 #include "fishing.h"
 #include "locale_service.h"
@@ -126,7 +127,7 @@ void Initialize()
 	if (*fish_info_bak[0].name)
 		SendLog("Reloading fish table.");
 
-	if (!reader.Open(szFishingFileName))
+	if (!sqldata::OpenReader(reader, szFishingFileName))
 	{
 		SendLog("error! cannot open fishing.txt");
 

@@ -145,6 +145,7 @@ set(GAME_SOURCES
     src/shutdown_manager.cpp
     src/skill.cpp
     src/skill_power.cpp
+    src/sql_data.cpp
     src/start_position.cpp
     src/target.cpp
     src/text_file_loader.cpp

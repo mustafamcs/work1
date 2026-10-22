@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "../../common/JsonTable.h"
+#include "sql_data.h"
 #include "config.h"
 
 #include "threeway_war.h"
@@ -141,7 +142,7 @@ bool CThreeWayWar::LoadSetting(const char* szFileName)
 
 	jsontable::CLineReader reader;
 
-	if (!reader.Open(szPath))
+	if (!sqldata::OpenReader(reader, szPath))
 	{
 		sys_err("[INIT_FORKED] Dosya açılamıyor (%s)", szPath );
 		return false;
