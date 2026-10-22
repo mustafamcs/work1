@@ -10,17 +10,17 @@ IconFileName		"skill/assassin/gyeonggong.sub"
 Type			ACTIVE
 MaxLevel 		"30"
 
-949Name			"版傍贱"
-949Description	"个阑 啊罕霸 窍咯 捞悼 加档甫 臭牢促"
+949Name			"unused"
+949Description	"unused"
 List 949AffectData
 {
-	"捞悼加档 : +%.0f" "60*SkillPoint" ""
+	"unused" "60*SkillPoint" ""
 }
 
-936Name			"轻功"
-936Description	"身轻如燕，提升移动速度"
+936Name			"unused"
+936Description	"unused"
 List 936AffectData
 {
-	"移动速度 : +%.0f" "5 + 15*SkillPoint" ""
-	"瘤加矫埃 : %.0f檬" "15 + (SkillPoint * 30)" ""
+	"unused" "5 + 15*SkillPoint" ""
+	"unused" "15 + (SkillPoint * 30)" ""
 }

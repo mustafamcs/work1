@@ -4,8 +4,8 @@ Type				LOW
 Attribute			"NEED_TARGET" "ONLY_FOR_ALLIANCE" "CAN_USE_FOR_ME"
 Range				800
 
-Name				"盔脚焊贱"
-Description			"到绊磊 窍绰 磊俊霸 歹宽 钢府 杭 荐 乐绰 瓷仿阑 何咯 茄促"
+Name				"unused"
+Description			"unused"
 
 IconFileName		"skill/shaman/wonsin.sub"
 MotionIndex         27
@@ -13,8 +13,8 @@ MotionIndexForMe    26
 
 List 949AffectData
 {
-	"荤沥 芭府 : +%.0fm" "SkillPoint" ""
-	"瘤加 矫埃 : %.0f檬" "5 * 60 * (5 + JeungJi) / 5" ""
+	"unused" "SkillPoint" ""
+	"unused" "5 * 60 * (5 + JeungJi) / 5" ""
 }
 
 List RequireStatData
@@ -25,10 +25,10 @@ List RequireStatData
 MaxLevel			"5"
 NeedSPFormula		"80"
 
-936Name				"神目"
-936Description		"增加同伴的有利技能使用长度"
+936Name				"unused"
+936Description		"unused"
 List 936AffectData
 {
-	"使用长度 : +%.0fm" "SkillPoint" ""
-	"持续时间 : %.0f秒" "5 * 60 * (5 + JeungJi) / 5" ""
+	"unused" "SkillPoint" ""
+	"unused" "5 * 60 * (5 + JeungJi) / 5" ""
 }

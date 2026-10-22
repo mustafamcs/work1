@@ -484,10 +484,10 @@ class OptionDialog(ui.ScriptWindow):
 			app.SetReloadLocale(True)
 
 	if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-		def __EventShowFlags(self, type):
-			if type == "country":
+		def __EventShowFlags(self, tip):
+			if tip == "country":
 				systemSetting.SetShowCountryFlag(not systemSetting.IsShowCountryFlag())
-			elif type == "empire":
+			elif tip == "empire":
 				systemSetting.SetShowEmpireFlag(not systemSetting.IsShowEmpireFlag())
 
 			self.RefreshLanguageSettings()

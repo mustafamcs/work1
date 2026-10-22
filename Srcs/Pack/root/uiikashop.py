@@ -73,14 +73,14 @@ def DatetimeFormat(timestamp):
 def GetScreenSize():
 	return wndMgr.GetScreenWidth(), wndMgr.GetScreenHeight()
 
-class ProxyPrototype(object):
+class ProxyPrototip(object):
 	pass
 
 def IsProxy(obj):
 	if not hasattr(IsProxy, "test"):
-		fakeInstance = ProxyPrototype()
+		fakeInstance = ProxyPrototip()
 		IsProxy.test = proxy(fakeInstance)
-	return type(obj) == type(IsProxy.test)
+	return tip(obj) == tip(IsProxy.test)
 
 def SelfDestroyObject(instance):
 	def DestroyValue(value):
@@ -92,8 +92,8 @@ def SelfDestroyObject(instance):
 			else:
 				SelfDestroyObject(value)
 			return True
-		elif type(value) in (list, tuple, dict, set):
-			values = value if type(value) != dict else value.values()
+		elif tip(value) in (list, tuple, dict, set):
+			values = value if tip(value) != dict else value.values()
 			ret = [DestroyValue(val) for val in values]
 			return any(ret)
 		elif callable(value) and hasattr(value, '__self__'):
@@ -101,8 +101,8 @@ def SelfDestroyObject(instance):
 		return False
 
 	def MakeEmptyValue(value):
-		if type(value) in (list, tuple, dict, set):
-			return type(value)()
+		if tip(value) in (list, tuple, dict, set):
+			return tip(value)()
 		return None
 
 	# skipping all non-window instances
@@ -204,8 +204,8 @@ class IkarusShopWindow(ui.Window):
 			for window in self._dialogs:
 				window.Hide()
 
-	def CreateWidget(self, type, x = 0, y = 0, show = True, pos = None, size = None, parent = None, halign = None, valign = None):
-		child = type()
+	def CreateWidget(self, tip, x = 0, y = 0, show = True, pos = None, size = None, parent = None, halign = None, valign = None):
+		child = tip()
 		child.SetParent(parent if parent else self)
 		if show:
 			child.Show()
@@ -996,12 +996,12 @@ class IkarusShopListBoard(IkashopBoardWithTitleBar):
 		self.AddFlag("movable")
 		self.AddFlag("float")
 
-	def _MakeListElements(self, type, viewCount):
+	def _MakeListElements(self, tip, viewCount):
 		self.viewCount = viewCount
 		# making notifiction boxes
 		self.views = []
 		for i in xrange(self.viewCount):
-			view = self.CreateWidget(type, parent = self.boardBox)
+			view = self.CreateWidget(tip, parent = self.boardBox)
 			space = view.GetHeight()+2
 			view.SetPosition(9, 7 + i * space)
 			self.views.append(view)
@@ -1237,58 +1237,58 @@ if app.EXTEND_IKASHOP_PRO:
 
 			self.data = data
 			itemname = GetItemName(data['what'])
-			if data['type'] == ikashop.NOTIFICATION_SELLER_SELLER_SOLD_ITEM:
+			if data['tip'] == ikashop.NOTIFICATION_SELLER_SELLER_SOLD_ITEM:
 				price = extractPriceString(data['format'])
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_SOLD_ITEM.format(itemname, price)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_SELLER_NEW_OFFER_ON_ITEM:
+			elif data['tip'] == ikashop.NOTIFICATION_SELLER_NEW_OFFER_ON_ITEM:
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_NEW_OFFER_ON_ITEM.format(itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_SELLER_SHOP_EXPIRED:
+			elif data['tip'] == ikashop.NOTIFICATION_SELLER_SHOP_EXPIRED:
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_SHOP_EXPIRED
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_SELLER_ITEM_EXPIRED:
+			elif data['tip'] == ikashop.NOTIFICATION_SELLER_ITEM_EXPIRED:
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_ITEM_EXPIRED.format(itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_SELLER_AUCTION_NEW_OFFER:
+			elif data['tip'] == ikashop.NOTIFICATION_SELLER_AUCTION_NEW_OFFER:
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_AUCTION_NEW_OFFER.format(itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_SELLER_AUCTION_EXPIRED:
+			elif data['tip'] == ikashop.NOTIFICATION_SELLER_AUCTION_EXPIRED:
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_AUCTION_EXPIRED.format(itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_SELLER_AUCTION_SOLD:
+			elif data['tip'] == ikashop.NOTIFICATION_SELLER_AUCTION_SOLD:
 				price = long(data['format'])
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_AUCTION_SOLD.format(itemname, data['who'], locale.NumberToMoneyString(price))
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_SELLER_OFFER_CANCELLED:
+			elif data['tip'] == ikashop.NOTIFICATION_SELLER_OFFER_CANCELLED:
 				message = locale.IKASHOP_PRO_NOTIFICATION_SELLER_OFFER_CANCELLED.format(itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_BUYER_OFFER_DENIED:
+			elif data['tip'] == ikashop.NOTIFICATION_BUYER_OFFER_DENIED:
 				price = long(data['format'])
 				message = locale.IKASHOP_PRO_NOTIFICATION_BUYER_OFFER_DENIED.format(locale.NumberToMoneyString(price), itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_BUYER_OFFER_ACCEPTED:
+			elif data['tip'] == ikashop.NOTIFICATION_BUYER_OFFER_ACCEPTED:
 				price = long(data['format'])
 				message = locale.IKASHOP_PRO_NOTIFICATION_BUYER_OFFER_ACCEPTED.format(locale.NumberToMoneyString(price), itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_BUYER_OFFER_EXPIRED:
+			elif data['tip'] == ikashop.NOTIFICATION_BUYER_OFFER_EXPIRED:
 				price = long(data['format'])
 				message = locale.IKASHOP_PRO_NOTIFICATION_BUYER_OFFER_EXPIRED.format(locale.NumberToMoneyString(price), itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_BUYER_AUCTION_BUY:
+			elif data['tip'] == ikashop.NOTIFICATION_BUYER_AUCTION_BUY:
 				price = long(data['format'])
 				message = locale.IKASHOP_PRO_NOTIFICATION_BUYER_AUCTION_BUY.format(itemname, locale.NumberToMoneyString(price))
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_BUYER_AUCTION_RAISE:
+			elif data['tip'] == ikashop.NOTIFICATION_BUYER_AUCTION_RAISE:
 				message = locale.IKASHOP_PRO_NOTIFICATION_BUYER_AUCTION_RAISE.format(data['who'], itemname)
 				self.whatText.SetText(message)
-			elif data['type'] == ikashop.NOTIFICATION_BUYER_AUCTION_LOST:
+			elif data['tip'] == ikashop.NOTIFICATION_BUYER_AUCTION_LOST:
 				price = long(data['format'])
 				message = locale.IKASHOP_PRO_NOTIFICATION_BUYER_AUCTION_LOST.format(data['who'], itemname, locale.NumberToMoneyString(price))
 				self.whatText.SetText(message)
 
 			if app.EXTEND_IKASHOP_ULTIMATE:
-				if data['type'] == ikashop.NOTIFICATION_SELLER_DECORATION_EXPIRED:
+				if data['tip'] == ikashop.NOTIFICATION_SELLER_DECORATION_EXPIRED:
 					self.whatText.SetText(locale.IKASHOP_ULTIMATE_NOTIFICATION_SELLER_DECORATION_EXPIRED)
 
 			self.datetimeText.SetText(DatetimeFormat(data['datetime']))
@@ -1318,13 +1318,13 @@ if app.EXTEND_IKASHOP_PRO:
 		def SetNotifications(self, notifications):
 			cached = ikashop.GetNotifications()
 			for i, notification in enumerate(notifications):
-				type = notification['type']
+				tip = notification['tip']
 				who = notification['who']
 				what = notification['what']
 				format = notification['format']
 				datetime = notification['datetime']
 				save = i == len(notifications)-1
-				ikashop.RegisterNotification(type, who, what, format, datetime, save)
+				ikashop.RegisterNotification(tip, who, what, format, datetime, save)
 			notifications = cached + notifications
 			self.notifications = sorted(notifications, key = lambda val : val['datetime'], reverse=True)
 			self.SetElements(self.notifications)
@@ -2619,12 +2619,12 @@ class IkarusShopHistoryFilterView(IkarusShopWindow):
 		tooltip.ClearToolTip()
 		# adding item name
 		tooltip.AutoAppendTextLine(locale.IKASHOP_SEARCH_SHOP_HISTORY_WHAT_FORMAT.format(self.data['name'], self.data['count']))
-		# adding type/subtype
-		if self.data['type'] != 0:
-			tooltip.AutoAppendTextLine(locale.IKASHOP_SEARCH_SHOP_ITEM_TYPE_HEADER + ': ' + IkarusSearchShopBoard.ITEM_TYPES[self.data['type']])
-			if self.data['subtype'] != 0:
-				subtypes = IkarusSearchShopBoard.SUB_TYPES[self.data['type']]
-				tooltip.AutoAppendTextLine(locale.IKASHOP_SEARCH_SHOP_ITEM_SUBTYPE_HEADER + ': ' + subtypes[self.data['subtype']])
+		# adding tip/subtip
+		if self.data['tip'] != 0:
+			tooltip.AutoAppendTextLine(locale.IKASHOP_SEARCH_SHOP_ITEM_TYPE_HEADER + ': ' + IkarusSearchShopBoard.ITEM_TYPES[self.data['tip']])
+			if self.data['subtip'] != 0:
+				subtips = IkarusSearchShopBoard.SUB_TYPES[self.data['tip']]
+				tooltip.AutoAppendTextLine(locale.IKASHOP_SEARCH_SHOP_ITEM_SUBTYPE_HEADER + ': ' + subtips[self.data['subtip']])
 		# adding price min/max
 		if self.data['price_min'] != 0:
 			tooltip.AutoAppendTextLine(locale.IKASHOP_SEARCH_SHOP_ITEM_PRICE_MIN_HEADER + ': ' + locale.NumberToString(self.data['price_min']))
@@ -3325,7 +3325,7 @@ class IkarusSearchShopBoard(IkashopBoardWithTitleBar):
 		self.resetFilterButton.SAFE_SetEvent(self._OnClickResetFilters)
 		self.resetFilterButton.SetToolTipText(locale.IKASHOP_SEARCH_SHOP_RESET_FILTER_BUTTON_TEXT)
 
-		# item type filter
+		# item tip filter
 		self.itemTypeFilterBox = self.CreateWidget(ui.ExpandedImageBox, pos = (14, 72))
 		self.itemTypeFilterBox.LoadImage("ikashop/lite/search_shop/filter_box.png")
 
@@ -3342,7 +3342,7 @@ class IkarusSearchShopBoard(IkashopBoardWithTitleBar):
 		self.itemTypeSelectComboBox.SetItems(self.ITEM_TYPES)
 		self.itemTypeSelectComboBox.SetSelectItemEvent(self._OnSelectItemType)
 
-		# item subtype filter
+		# item subtip filter
 		self.itemSubTypeHeader = self.CreateWidget(ui.TextLine, pos = (6, 39), parent = self.itemTypeFilterBox)
 		self.itemSubTypeHeader.SetText(locale.IKASHOP_SEARCH_SHOP_ITEM_SUBTYPE_HEADER)
 
@@ -3586,13 +3586,13 @@ class IkarusSearchShopBoard(IkashopBoardWithTitleBar):
 	def _ExtractFilterSettings(self):
 		# getting values
 		inputName = self.inputNameEdit.GetText()
-		type, subtype = self._ExtractFilterTypes()
+		tip, subtip = self._ExtractFilterTypes()
 		prices = self._ExtractFilterPrice()
 		levels = self._ExtractFilterLevel()
 		attributes = self._ExtractFilterAttributes()
 		specials = self._ExtractFilterSpecial()
 		# making arg tuple
-		args = (inputName, type, subtype, prices, levels, attributes, specials)
+		args = (inputName, tip, subtip, prices, levels, attributes, specials)
 		if not IsUsingFilter(args):
 			return None
 		return args
@@ -3756,15 +3756,15 @@ class IkarusSearchShopBoard(IkashopBoardWithTitleBar):
 		self.itemLevelMaxEdit.SetText(str(settings['level_max']) if settings['level_max'] != 0 else "")
 		self.itemLevelMinEdit.SetText(str(settings['level_min']) if settings['level_min'] != 0 else "")
 		# setting up comboboxes
-		self.itemTypeSelectComboBox.SelectItem(settings['type'])
-		self.itemSubTypeSelectComboBox.SelectItem(settings['subtype'])
+		self.itemTypeSelectComboBox.SelectItem(settings['tip'])
+		self.itemSubTypeSelectComboBox.SelectItem(settings['subtip'])
 		self.itemSashAbsSelectComboBox.SelectItem(settings['sash'])
 		self.itemAlchemyGradeSelectComboBox.SelectItem(settings['alchemy'])
 		# setting up attributes
 		for attrComboBox, attrEdit, sett in zip(self.attrComboBoxes, self.attrValueEdits, settings['attrs']):
-			type, value = sett
+			tip, value = sett
 			attrEdit.SetText(str(value) if value != 0 else "")
-			attrComboBox.SelectItem(self.attributeBonusToItem[type])
+			attrComboBox.SelectItem(self.attributeBonusToItem[tip])
 
 	def HistoryRedoSearch(self, settings):
 		self._ApplySearchFilterSettings(settings)

@@ -229,9 +229,9 @@ if app.__BL_MULTI_LANGUAGE__:
 				if len(tokens) == 2:
 					localeDict[tokens[0]] = tokens[1]
 				elif len(tokens) >= 3:
-					type = tokens[2].strip()
-					if type:
-						localeDict[tokens[0]] = funcDict[type](tokens[1])
+					tip = tokens[2].strip()
+					if tip:
+						localeDict[tokens[0]] = funcDict[tip](tokens[1])
 					else:
 						localeDict[tokens[0]] = tokens[1]
 				# @fixme010 BEGIN
@@ -456,9 +456,9 @@ else:
 				if len(tokens) == 2:
 					localeDict[tokens[0]] = tokens[1]
 				elif len(tokens) >= 3:
-					type = tokens[2].strip()
-					if type:
-						localeDict[tokens[0]] = funcDict[type](tokens[1])
+					tip = tokens[2].strip()
+					if tip:
+						localeDict[tokens[0]] = funcDict[tip](tokens[1])
 					else:
 						localeDict[tokens[0]] = tokens[1]
 				# @fixme010 BEGIN

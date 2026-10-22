@@ -2,19 +2,19 @@ ScriptType		SkillDataScript
 
 Type			LOW
 Attribute		"STANDING_SKILL" "NEED_EMPTY_BOTTLE"
-949Name			"µ¶º´ Á¦ÀÛ"
-949Description	"ºóº´¿¡ µ¶À» ¸¸µé¾î ³Ö´Â´Ù"
+949Name			"unused"
+949Description	"unused"
 
 IconFileName	"skill/assassin/make_poison.sub"
 
 List 949ConditionData
 {
-	"ºóº´ ÇÊ¿ä"
+	"unused"
 }
 
 List 949AffectData
 {
-	"¼º°øÈ®·ü %.0f%%"	"SkillPoint*20"	""
+	"unused"	"SkillPoint*20"	""
 }
 
 List RequireStatData
@@ -26,14 +26,14 @@ MaxLevel			"5"
 CoolTimeFormula		"10"
 NeedSPFormula		"50"
 
-936Name			"Á¶¶¾"
-936Description	"½øÐÐ¶¾Ò©Á¶ÖÆ"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"ÐèÒª¿ÕÆ¿×Ó"
+	"unused"
 }
 
 List 936AffectData
 {
-	"³É¹¦¸ÅÂÊ%.0f%%"	"SkillPoint*20"	""
+	"unused"	"SkillPoint*20"	""
 }

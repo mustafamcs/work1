@@ -3,18 +3,18 @@ ScriptType		SkillDataScript
 Type			PASSIVE
 IconFileName	"skill/warrior/geunseong.sub"
 
-949Name			"辟己"
-949Description	"积疙仿 雀汗 加档 刘啊"
+949Name			"unused"
+949Description	"unused"
 MaxLevel		"40"
 
 List 949AffectData
 {
-	"积疙仿 雀汗樊 +%.0f%%"	"SkillPoint * 5"	""
+	"unused"	"SkillPoint * 5"	""
 }
 
-936Name			"松弛"
-936Description		"增加生命值恢复速度"
+936Name			"unused"
+936Description		"unused"
 List 936AffectData
 {
-	"生命值恢复量 +%.0f%%"	"SkillPoint * 5"	""
+	"unused"	"SkillPoint * 5"	""
 }

@@ -68,7 +68,7 @@ if ENABLE_RECURSIVE_UI_DESTROY:
 		if WOC_ENABLE_PRINT_DEBUG: dbg.TraceError("WindowObjectCleaner vars: {}".format(repr(vars(obj).keys())))
 		for elemName in vars(obj).keys():
 			elemObj = getattr(obj, elemName)
-			elemType = type(elemObj)
+			elemType = tip(elemObj)
 
 			if elemName in WOC_WHITELIST:
 				continue
@@ -107,8 +107,8 @@ HALF_WHITE_COLOR = grp.GenerateColor(1.0, 1.0, 1.0, 0.2)
 createToolTipWindowDict = {}
 def RegisterCandidateWindowClass(codePage, candidateWindowClass):
 	EditLine.candidateWindowClassDict[codePage]=candidateWindowClass
-def RegisterToolTipWindow(type, createToolTipWindow):
-	createToolTipWindowDict[type]=createToolTipWindow
+def RegisterToolTipWindow(tip, createToolTipWindow):
+	createToolTipWindowDict[tip]=createToolTipWindow
 
 app.SetDefaultFontName(localeInfo.UI_DEF_FONT)
 
@@ -186,7 +186,7 @@ if WOC_ENABLE_PRINT_REGISTERS:
 		return stacks
 
 	def WocDumpRegisters():
-		# if called at the end of prototype.py RunApp, you'll get no leaks, but you'll miss all the ingame-leaks
+		# if called at the end of prototip.py RunApp, you'll get no leaks, but you'll miss all the ingame-leaks
 		# if called inside networkmodule.py MainStream.Destroy, mouseModule.mouseController is still allocating NumberLine 1x
 		with old_open("windowRegisters.txt", "w") as f1:
 			for k,v in WocWindowRegister.items():
@@ -1213,7 +1213,7 @@ class EditLine(TextLine):
 		return False
 
 	def OnIMEUpdate(self):
-		snd.PlaySound("sound/ui/type.wav")
+		snd.PlaySound("sound/ui/tip.wav")
 		TextLine.SetText(self, ime.GetText(self.bCodePage))
 		if app.ENABLE_IKASHOP_RENEWAL:
 			if self.updateEvent:
@@ -1641,9 +1641,9 @@ class Button(Window):
 
 		self.TextChild.append(textLine)
 
-	def SetFormToolTipText(self, type, text, x, y):
+	def SetFormToolTipText(self, tip, text, x, y):
 		if not self.ToolTipText:
-			toolTip=createToolTipWindowDict[type]()
+			toolTip=createToolTipWindowDict[tip]()
 			toolTip.SetParent(self)
 			toolTip.SetSize(0, 0)
 			toolTip.SetHorizontalAlignCenter()
@@ -3711,7 +3711,7 @@ class PythonScriptLoader(object):
 
 	#####
 
-	DEFAULT_KEY_LIST = ( "type", "x", "y", )
+	DEFAULT_KEY_LIST = ( "tip", "x", "y", )
 	WINDOW_KEY_LIST = ( "width", "height", )
 	IMAGE_KEY_LIST = ( "image", )
 	EXPANDED_IMAGE_KEY_LIST = ( "image", )
@@ -3861,9 +3861,9 @@ class PythonScriptLoader(object):
 				Name = ElementValue["name"] = "NONAME"
 
 			try:
-				Type = ElementValue["type"]
+				Type = ElementValue["tip"]
 			except KeyError:
-				Type = ElementValue["type"] = "window"
+				Type = ElementValue["tip"] = "window"
 
 			if False == self.CheckKeyList(Name, ElementValue, self.DEFAULT_KEY_LIST):
 				del parent.Children[Index]

@@ -194,12 +194,12 @@ class AutoPotionImage(ui.ExpandedImageBox):
 	def __del__(self):
 		ui.ExpandedImageBox.__del__(self)
 
-	def SetPotionType(self, type):
-		self.potionType = type
+	def SetPotionType(self, tip):
+		self.potionType = tip
 
-		if player.AUTO_POTION_TYPE_HP == type:
+		if player.AUTO_POTION_TYPE_HP == tip:
 			self.filePath = self.FILE_PATH_HP
-		elif player.AUTO_POTION_TYPE_SP == type:
+		elif player.AUTO_POTION_TYPE_SP == tip:
 			self.filePath = self.FILE_PATH_SP
 
 
@@ -237,7 +237,7 @@ class AutoPotionImage(ui.ExpandedImageBox):
 
 		self.toolTip.ClearToolTip()
 
-		if player.AUTO_POTION_TYPE_HP == type:
+		if player.AUTO_POTION_TYPE_HP == tip:
 			self.toolTip.SetTitle(localeInfo.TOOLTIP_AUTO_POTION_HP)
 		else:
 			self.toolTip.SetTitle(localeInfo.TOOLTIP_AUTO_POTION_SP)
@@ -533,22 +533,22 @@ class AffectShower(ui.Window):
 				from _weakref import proxy
 				self.searchShopBoard = proxy(board)
 
-	def BINARY_NEW_AddAffect(self, type, pointIdx, value, duration):
+	def BINARY_NEW_AddAffect(self, tip, pointIdx, value, duration):
 
-		print "BINARY_NEW_AddAffect", type, pointIdx, value, duration
+		print "BINARY_NEW_AddAffect", tip, pointIdx, value, duration
 
-		if type < 500:
+		if tip < 500:
 			return
 
 		if app.ENABLE_IKASHOP_RENEWAL:
 			if app.EXTEND_IKASHOP_ULTIMATE:
-				if type == chr.NEW_AFFECT_SEARCH_SHOP_PREMIUM:
+				if tip == chr.NEW_AFFECT_SEARCH_SHOP_PREMIUM:
 					self.searchShopBoard.ActiveSortByPriceFeature()
 
-		if type == chr.NEW_AFFECT_MALL:
+		if tip == chr.NEW_AFFECT_MALL:
 			affect = self.MALL_DESC_IDX_START + pointIdx
 		else:
-			affect = type
+			affect = tip
 
 		if self.affectImageDict.has_key(affect):
 			return
@@ -612,18 +612,18 @@ class AffectShower(ui.Window):
 			print "except Aff affect ", e
 			pass
 
-	def BINARY_NEW_RemoveAffect(self, type, pointIdx):
-		if type == chr.NEW_AFFECT_MALL:
+	def BINARY_NEW_RemoveAffect(self, tip, pointIdx):
+		if tip == chr.NEW_AFFECT_MALL:
 			affect = self.MALL_DESC_IDX_START + pointIdx
 		else:
-			affect = type
+			affect = tip
 
 		if app.ENABLE_IKASHOP_RENEWAL:
 			if app.EXTEND_IKASHOP_ULTIMATE:
-				if type == chr.NEW_AFFECT_SEARCH_SHOP_PREMIUM:
+				if tip == chr.NEW_AFFECT_SEARCH_SHOP_PREMIUM:
 					self.searchShopBoard.DeactiveSortByPriceFeature()
 
-		print "Remove Affect %s %s" % ( type , pointIdx )
+		print "Remove Affect %s %s" % ( tip , pointIdx )
 		self.__RemoveAffect(affect)
 		self.__ArrangeImageList()
 

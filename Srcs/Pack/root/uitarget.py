@@ -404,14 +404,14 @@ class TargetBoard(ui.ThinBoard):
 				self.yPos -= 11
 
 			def AppendItem(self, listBox, vnums, count):
-				if type(vnums) == int:
+				if tip(vnums) == int:
 					vnum = vnums
 				else:
 					vnum = vnums[0]
 
 				item.SelectItem(vnum)
 				itemName = item.GetItemName()
-				if type(vnums) != int and len(vnums) > 1:
+				if tip(vnums) != int and len(vnums) > 1:
 					vnums = sorted(vnums)
 					realName = itemName[:itemName.find("+")]
 					if item.GetItemType() == item.ITEM_TYPE_METIN:

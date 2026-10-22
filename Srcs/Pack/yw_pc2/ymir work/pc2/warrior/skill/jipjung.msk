@@ -10,12 +10,12 @@ MaxLevel				"10"
 NeedSPFormula			"50"
 ContinuationSPFormula	"5"
 
-949Name				"笼吝规绢"
-949Description		"钢府辑 朝酒坷绰 傍拜阑 瞒窜茄促"
+949Name				"unused"
+949Description		"unused"
 
 List 949AffectData
 {
-	"Range 傍拜俊 措秦 %.0f%% 乔秦 皑家" "SkillPoint * 5" ""
+	"unused" "SkillPoint * 5" ""
 }
 
 List RequireStatData
@@ -23,9 +23,9 @@ List RequireStatData
 	"Level" "11"
 }
 
-936Name			"集中防御"
-936Description		"增加对远程攻击的防御"
+936Name			"unused"
+936Description		"unused"
 List 936AffectData
 {
-	"对远程的攻击，减少 %.0f%% 受伤" "SkillPoint * 5" ""
+	"unused" "SkillPoint * 5" ""
 }

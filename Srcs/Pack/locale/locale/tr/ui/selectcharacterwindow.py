@@ -22,14 +22,14 @@ window = {
 	(
 		## Board
 		{
-			"name" : "BackGround", "type" : "expanded_image", "x" : 0, "y" : 0,
+			"name" : "BackGround", "tip" : "expanded_image", "x" : 0, "y" : 0,
 			"x_scale" : float(SCREEN_WIDTH) / 1024.0, "y_scale" : float(SCREEN_HEIGHT) / 768.0,
 			"image" : "locale/tr/ui/select.sub",
 		},
 		## Name
 		{
 			"name" : "name_warrior",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -38,7 +38,7 @@ window = {
 		},
 		{
 			"name" : "name_assassin",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -47,7 +47,7 @@ window = {
 		},
 		{
 			"name" : "name_sura",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -56,7 +56,7 @@ window = {
 		},
 		{
 			"name" : "name_shaman",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -68,7 +68,7 @@ window = {
 		## Character Board
 		{
 			"name" : "character_board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 
 			"x" : BOARD_X,
 			"y" : BOARD_Y,
@@ -82,7 +82,7 @@ window = {
 				## Empire Flag
 				{
 					"name" : "EmpireFlag_A",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 21,
 					"y" : 12,
@@ -93,7 +93,7 @@ window = {
 				},
 				{
 					"name" : "EmpireFlag_B",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 21,
 					"y" : 12,
@@ -104,7 +104,7 @@ window = {
 				},
 				{
 					"name" : "EmpireFlag_C",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 21,
 					"y" : 12,
@@ -116,7 +116,7 @@ window = {
 
 				{
 					"name" : "EmpireNameSlot",
-					"type" : "image",
+					"tip" : "image",
 
 					"x" : 100,
 					"y" : 12,
@@ -127,7 +127,7 @@ window = {
 					(
 						{
 							"name" : "EmpireName",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -141,7 +141,7 @@ window = {
 
 				{
 					"name" : "GuildNameSlot",
-					"type" : "image",
+					"tip" : "image",
 
 					"x" : 100,
 					"y" : 33,
@@ -152,7 +152,7 @@ window = {
 					(
 						{
 							"name" : "GuildName",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -166,7 +166,7 @@ window = {
 
 				{
 					"name" : "character_name",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 17,
 					"y" : 124 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -177,7 +177,7 @@ window = {
 					(
 						{
 							"name" : "character_name_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 43,
 							"y" : -2,
@@ -186,7 +186,7 @@ window = {
 						},
 						{
 							"name" : "character_name_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 43 + 130/2,
 							"y" : 0,
@@ -199,7 +199,7 @@ window = {
 				},
 				{
 					"name" : "character_level",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 17,
 					"y" : 50 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -210,7 +210,7 @@ window = {
 					(
 						{
 							"name" : "character_level_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 43,
 							"y" : -2,
@@ -219,7 +219,7 @@ window = {
 						},
 						{
 							"name" : "character_level_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 43 + 130/2,
 							"y" : 0,
@@ -232,7 +232,7 @@ window = {
 				},
 				{
 					"name" : "character_play_time",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 17,
 					"y" : 76 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -243,7 +243,7 @@ window = {
 					(
 						{
 							"name" : "character_play_time_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 83,
 							"y" : -2,
@@ -252,7 +252,7 @@ window = {
 						},
 						{
 							"name" : "character_play_time_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 83 + 91/2,
 							"y" : 0,
@@ -265,7 +265,7 @@ window = {
 				},
 				{
 					"name" : "character_hth",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 17,
 					"y" : 102 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -276,7 +276,7 @@ window = {
 					(
 						{
 							"name" : "gauge_hth",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -286,7 +286,7 @@ window = {
 						},
 						{
 							"name" : "character_hth_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 134,
 							"y" : -2,
@@ -295,7 +295,7 @@ window = {
 						},
 						{
 							"name" : "character_hth_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 134 + 39/2,
 							"y" : 0,
@@ -308,7 +308,7 @@ window = {
 				},
 				{
 					"name" : "character_int",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 17,
 					"y" : 128 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -319,7 +319,7 @@ window = {
 					(
 						{
 							"name" : "gauge_int",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -329,7 +329,7 @@ window = {
 						},
 						{
 							"name" : "character_int_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 134,
 							"y" : -2,
@@ -338,7 +338,7 @@ window = {
 						},
 						{
 							"name" : "character_int_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 134 + 39/2,
 							"y" : 0,
@@ -351,7 +351,7 @@ window = {
 				},
 				{
 					"name" : "character_str",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 17,
 					"y" : 154 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -362,7 +362,7 @@ window = {
 					(
 						{
 							"name" : "gauge_str",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -372,7 +372,7 @@ window = {
 						},
 						{
 							"name" : "character_str_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 134,
 							"y" : -2,
@@ -381,7 +381,7 @@ window = {
 						},
 						{
 							"name" : "character_str_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 134 + 39/2,
 							"y" : 0,
@@ -394,7 +394,7 @@ window = {
 				},
 				{
 					"name" : "character_dex",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 17,
 					"y" : 180 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -405,7 +405,7 @@ window = {
 					(
 						{
 							"name" : "gauge_dex",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -415,7 +415,7 @@ window = {
 						},
 						{
 							"name" : "character_dex_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 134,
 							"y" : -2,
@@ -424,7 +424,7 @@ window = {
 						},
 						{
 							"name" : "character_dex_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 134 + 39/2,
 							"y" : 0,
@@ -439,7 +439,7 @@ window = {
 				## Buttons
 				{
 					"name" : "start_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 14,
 					"y" : 210 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -453,7 +453,7 @@ window = {
 				},
 				{
 					"name" : "create_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 14,
 					"y" : 210 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -467,7 +467,7 @@ window = {
 				},
 				{
 					"name" : "exit_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 105,
 					"y" : 245 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -480,7 +480,7 @@ window = {
 				},
 				{
 					"name" : "delete_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 14,
 					"y" : 245 + 100 - 21 + BOARD_ITEM_ADD_POSITION,
@@ -497,7 +497,7 @@ window = {
 		## Buttons
 		{
 			"name" : "left_button",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : SCREEN_WIDTH * (450 - 22*3) / 800,
 			"y" : SCREEN_HEIGHT * (505) / 600,
@@ -508,7 +508,7 @@ window = {
 		},
 		{
 			"name" : "right_button",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : SCREEN_WIDTH * (580 - 22) / 800,
 			"y" : SCREEN_HEIGHT * (505) / 600,

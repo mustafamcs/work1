@@ -12,26 +12,26 @@ IconFileName		"skill/warrior/geomgyeong.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name			"검경"
-949Description		"공격력을 일정시간 동안 증가시킨다"
+949Name			"unused"
+949Description		"unused"
 
 List 949ConditionData
 {
-	"기본 공격력 상승"
+	"unused"
 }
 List 949AffectData
 {
-	"공격력 +%.0f" "(100 + STR) * SkillPoint" ""
+	"unused" "(100 + STR) * SkillPoint" ""
 }
 
-936Name			"숲폭"
-936Description	"묑샌제뵨묑샌렀鍋瞳寧땍珂쇌코藤속"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"기본 공격만 적용"
+	"unused"
 }
 List 936AffectData
 {
-	"공격력 +%.0f" "100 * SkillPoint" ""
-	"지속시간 : %.0f초" "60 + (90 * SkillPoint)" ""
+	"unused" "100 * SkillPoint" ""
+	"unused" "60 + (90 * SkillPoint)" ""
 }

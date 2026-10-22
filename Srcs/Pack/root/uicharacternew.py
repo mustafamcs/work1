@@ -157,7 +157,7 @@ class CharacterWindow(ui.ScriptWindow):
 		self.characterNameValue = None
 
 		self.emotionToolTip = None
-		self.soloEmotionSlot = None
+		self.tekEmotionSlot = None
 		self.dualEmotionSlot = None
 
 		if ENABLE_CONQUEROR_UI:
@@ -377,7 +377,7 @@ class CharacterWindow(ui.ScriptWindow):
 		if SHOW_ONLY_ACTIVE_SKILL or HIDE_SUPPORT_SKILL_POINT:
 			self.GetChild("Support_Skill_Point_Label").Hide()
 
-		self.soloEmotionSlot = self.GetChild("SoloEmotionSlot")
+		self.tekEmotionSlot = self.GetChild("SoloEmotionSlot")
 		self.dualEmotionSlot = self.GetChild("DualEmotionSlot")
 		self.__SetEmotionSlot()
 
@@ -471,7 +471,7 @@ class CharacterWindow(ui.ScriptWindow):
 
 		self.emotionToolTip = uiToolTip.ToolTip()
 
-		for slot in (self.soloEmotionSlot, self.dualEmotionSlot):
+		for slot in (self.tekEmotionSlot, self.dualEmotionSlot):
 			slot.SetSlotStyle(wndMgr.SLOT_STYLE_NONE)
 			slot.SetSelectItemSlotEvent(ui.__mem_func__(self.__SelectEmotion))
 			slot.SetUnselectItemSlotEvent(ui.__mem_func__(self.__ClickEmotionSlot))
@@ -485,7 +485,7 @@ class CharacterWindow(ui.ScriptWindow):
 		for slotIdx, datadict in emotion.EMOTION_DICT.items():
 			emotionIdx = slotIdx
 
-			slot = self.soloEmotionSlot
+			slot = self.tekEmotionSlot
 			if slotIdx > 50:
 				slot = self.dualEmotionSlot
 
@@ -1372,12 +1372,12 @@ class CharacterWindow(ui.ScriptWindow):
 			exception.Abort("CharacterWindow.RefreshCharacter.BindObject")
 
 		race = net.GetMainActorRace()
-		group = net.GetMainActorSkillGroup()
+		grup = net.GetMainActorSkillGroup()
 		empire = net.GetMainActorEmpire()
 
 		## Job Text
 		job = chr.RaceToJob(race)
-		self.__SetJobText(job, group)
+		self.__SetJobText(job, grup)
 
 		## FaceImage
 		try:
@@ -1393,19 +1393,19 @@ class CharacterWindow(ui.ScriptWindow):
 			self.faceImage.Hide()
 
 		## GroupName
-		self.__SetSkillGroupName(race, group)
+		self.__SetSkillGroupName(race, grup)
 
 		## Skill
-		if 0 == group:
+		if 0 == grup:
 			self.__SelectSkillGroup(0)
 
 		else:
-			self.__SetSkillSlotData(race, group, empire)
+			self.__SetSkillSlotData(race, grup, empire)
 
 			if self.__CanUseHorseSkill():
 				self.__SelectSkillGroup(0)
 
-	def __SetSkillGroupName(self, race, group):
+	def __SetSkillGroupName(self, race, grup):
 
 		job = chr.RaceToJob(race)
 
@@ -1414,7 +1414,7 @@ class CharacterWindow(ui.ScriptWindow):
 
 		nameList = self.SKILL_GROUP_NAME_DICT[job]
 
-		if 0 == group:
+		if 0 == grup:
 			self.skillGroupButton1.SetText(nameList[1])
 			self.skillGroupButton2.SetText(nameList[2])
 			self.skillGroupButton1.Show()
@@ -1424,21 +1424,21 @@ class CharacterWindow(ui.ScriptWindow):
 
 			if self.__CanUseHorseSkill():
 				self.activeSkillGroupName.Hide()
-				self.skillGroupButton1.SetText(nameList.get(group, "Noname"))
+				self.skillGroupButton1.SetText(nameList.get(grup, "Noname"))
 				self.skillGroupButton2.SetText(localeInfo.SKILL_GROUP_HORSE)
 				self.skillGroupButton1.Show()
 				self.skillGroupButton2.Show()
 
 			else:
-				self.activeSkillGroupName.SetText(nameList.get(group, "Noname"))
+				self.activeSkillGroupName.SetText(nameList.get(grup, "Noname"))
 				self.activeSkillGroupName.Show()
 				self.skillGroupButton1.Hide()
 				self.skillGroupButton2.Hide()
 
-	def __SetSkillSlotData(self, race, group, empire=0):
+	def __SetSkillSlotData(self, race, grup, empire=0):
 
 		## SkillIndex
-		playerSettingModule.RegisterSkill(race, group, empire)
+		playerSettingModule.RegisterSkill(race, grup, empire)
 
 		## Event
 		self.__SetSkillSlotEvent()

@@ -3,18 +3,18 @@ ScriptType		SkillDataScript
 Type			PASSIVE
 IconFileName	"skill/warrior/tuji.sub"
 
-949Name			"捧瘤"
-949Description	"沥脚仿 雀汗 加档 刘啊"
+949Name			"unused"
+949Description	"unused"
 MaxLevel		"40"
 
 List 949AffectData
 {
-	"沥脚仿 雀汗樊 +%.0f%%" "SkillPoint * 5" ""
+	"unused" "SkillPoint * 5" ""
 }
 
-936Name			"沉思"
-936Description		"增加精力值恢复速度"
+936Name			"unused"
+936Description		"unused"
 List 936AffectData
 {
-	"精力恢复量 +%.0f%%" "SkillPoint * 5" ""
+	"unused" "SkillPoint * 5" ""
 }

@@ -12,27 +12,27 @@ IconFileName		"skill/shaman/jeongeop.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name		"Á¤¾÷ÀÎ"
-949Description	"ºûÀÇ ±â¿îÀ¸·Î »óÃ³¸¦ Ä¡À¯ÇÑ´Ù"
+949Name		"unused"
+949Description	"unused"
 List 949ConditionData
 {
-	"»ı¸í·Â È¸º¹"
-	"»óÅÂÀÌ»ó È¸º¹"
-	"µ¿·á¿¡°Ô »ç¿ë °¡´É"
+	"unused"
+	"unused"
+	"unused"
 }
 List 949AffectData
 {
-	"»ı¸í·Â È¸º¹ %.0f-%.0f" "200+4*lv+(10*iq+6*minmtk+600)*k" "200+4*lv+(10*iq+6*maxmtk+800)*k"
-	"»óÅÂÀÌ»ó È¸º¹ È®·ü %.0f%%" "20+80*k" "" 
+	"unused" "200+4*lv+(10*iq+6*minmtk+600)*k" "200+4*lv+(10*iq+6*maxmtk+800)*k"
+	"unused" "20+80*k" "" 
 }
 
-936Name			"¹âÉñ"
-936Description	"¹âÉñÈöÏÂ»Ö¸´Ö®¹â£¬ÉÙÁ¿»Ø¸´ÌåÁ¦"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"µ¿·á¿¡°Ô »ç¿ë °¡´É"
+	"unused"
 }
 List 936AffectData
 {
-	"»ı¸í·Â È¸º¹ : %.0f-%.0f" "200+LV+(INT+MinMWEP+1)*SkillPoint" "200+LV+(INT+MaxMWEP+1)*SkillPoint"
+	"unused" "200+LV+(INT+MinMWEP+1)*SkillPoint" "200+LV+(INT+MaxMWEP+1)*SkillPoint"
 }

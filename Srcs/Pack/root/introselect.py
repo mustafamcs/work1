@@ -460,13 +460,13 @@ class SelectCharacterWindow(ui.Window):
 		self.nameInputBoard = None
 		return True
 
-	def OnCreateFailure(self, type):
+	def OnCreateFailure(self, tip):
 		self.sendedChangeNamePacket = False
-		if 0 == type:
+		if 0 == tip:
 			self.PopupMessage(localeInfo.SELECT_CHANGE_FAILURE_STRANGE_NAME)
-		elif 1 == type:
+		elif 1 == tip:
 			self.PopupMessage(localeInfo.SELECT_CHANGE_FAILURE_ALREADY_EXIST_NAME)
-		elif 100 == type:
+		elif 100 == tip:
 			self.PopupMessage(localeInfo.SELECT_CHANGE_FAILURE_STRANGE_INDEX)
 
 	def CreateCharacter(self):

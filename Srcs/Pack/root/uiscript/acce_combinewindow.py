@@ -19,7 +19,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -33,7 +33,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 6,
@@ -44,14 +44,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":95, "y":3, "text":uiScriptLocale.ACCE_COMBINE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":95, "y":3, "text":uiScriptLocale.ACCE_COMBINE, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Slot
 				{
 					"name" : "Acce_Combine",
-					"type" : "image",
+					"tip" : "image",
 
 					"x" : 9,
 					"y" : 35,
@@ -62,7 +62,7 @@ window = {
 					(
 						{
 							"name" : "AcceSlot",
-							"type" : "slot",
+							"tip" : "slot",
 
 							"x" : 3,
 							"y" : 3,
@@ -78,20 +78,20 @@ window = {
 						},
 						## Help Text
 						{
-							"name" : "Main", "type" : "text", "text" : uiScriptLocale.ACCE_MAIN, "text_horizontal_align":"center", "x" : 85+12, "y" : 7+36,
+							"name" : "Main", "tip" : "text", "text" : uiScriptLocale.ACCE_MAIN, "text_horizontal_align":"center", "x" : 85+12, "y" : 7+36,
 						},
 						{
-							"name" : "serve", "type" : "text", "text" : uiScriptLocale.ACCE_SERVE, "text_horizontal_align":"center", "x" : 85+12, "y" : 60+38,
+							"name" : "serve", "tip" : "text", "text" : uiScriptLocale.ACCE_SERVE, "text_horizontal_align":"center", "x" : 85+12, "y" : 60+38,
 						},
 						{
-							"name" : "Result", "type" : "text", "text" : uiScriptLocale.ACCE_RESULT, "text_horizontal_align":"center", "x" : 85+12, "y" : 115+40
+							"name" : "Result", "tip" : "text", "text" : uiScriptLocale.ACCE_RESULT, "text_horizontal_align":"center", "x" : 85+12, "y" : 115+40
 						},
 
 					),
 				},
 				{
 					"name" : "NeedMoney",
-					"type" : "text",
+					"tip" : "text",
 					"text" : "",
 					"text_horizontal_align" : "center",
 					"x" : 105,
@@ -100,7 +100,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 40,
 					"y" : 235,
@@ -113,7 +113,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 114,
 					"y" : 235,

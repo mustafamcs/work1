@@ -17,7 +17,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"type" : "board_with_titlebar",
+			"tip" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -32,7 +32,7 @@ window = {
 				## Tab Area
 				{
 					"name" : "TabControl",
-					"type" : "window",
+					"tip" : "window",
 
 					"x" : 0,
 					"y" : 328,
@@ -45,7 +45,7 @@ window = {
 						## Tab
 						{
 							"name" : "Tab_01",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -57,7 +57,7 @@ window = {
 						},
 						{
 							"name" : "Tab_02",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -69,7 +69,7 @@ window = {
 						},
 						{
 							"name" : "Tab_03",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -81,7 +81,7 @@ window = {
 						},
 						{
 							"name" : "Tab_04",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -93,7 +93,7 @@ window = {
 						},
 						{
 							"name" : "Tab_05",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -105,7 +105,7 @@ window = {
 						},
 						{
 							"name" : "Tab_06",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 0,
 							"y" : 0,
@@ -118,7 +118,7 @@ window = {
 						## RadioButton
 						{
 							"name" : "Tab_Button_01",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 6,
 							"y" : 5,
@@ -128,7 +128,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_02",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 61,
 							"y" : 5,
@@ -138,7 +138,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_03",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 130,
 							"y" : 5,
@@ -148,7 +148,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_04",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 192,
 							"y" : 5,
@@ -158,7 +158,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_05",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 254,
 							"y" : 5,
@@ -168,7 +168,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_06",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 316,
 							"y" : 5,

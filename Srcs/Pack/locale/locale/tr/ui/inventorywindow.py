@@ -8,7 +8,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 	window = {
 		"name" : "InventoryWindow",
 
-		## 600 - (width + 오른쪽으로 부터 띄우기 24 px)
+		## 600 - (width + sağdan 24 px boşluk)
 		"x" : SCREEN_WIDTH - 176,
 		"y" : SCREEN_HEIGHT - 37 - BOARD_HEIGHT,
 
@@ -22,7 +22,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 			## Inventory, Equipment Slots
 			{
 				"name" : "board",
-				"type" : "board",
+				"tip" : "board",
 				"style" : ("attach",),
 
 				"x" : 0,
@@ -36,7 +36,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 					## Title
 					{
 						"name" : "TitleBar",
-						"type" : "titlebar",
+						"tip" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 8,
@@ -47,12 +47,12 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 
 						"children" :
 						(
-							{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
+							{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
 						),
 					},
 					{
 						"name" : "Inventory_Tab_01",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 10,
 						"y" : 33,
@@ -66,7 +66,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 						(
 							{
 								"name" : "Inventory_Tab_01_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -79,7 +79,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 					},
 					{
 						"name" : "Inventory_Tab_02",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						#"x" : 10 + 78,
 						"x" : 10 + 39,
@@ -94,7 +94,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 						(
 							{
 								"name" : "Inventory_Tab_02_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -108,7 +108,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 					
 					{
 						"name" : "Inventory_Tab_03",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 10 + 39 + 39,
 						"y" : 33,
@@ -122,7 +122,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 						(
 							{
 								"name" : "Inventory_Tab_03_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -136,7 +136,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 					
 					{
 						"name" : "Inventory_Tab_04",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 10 + 39 + 39 + 39,
 						"y" : 33,
@@ -150,7 +150,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 						(
 							{
 								"name" : "Inventory_Tab_04_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -165,7 +165,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 					## Item Slot
 					{
 						"name" : "ItemSlot",
-						"type" : "grid_table",
+						"tip" : "grid_table",
 
 						"x" : 8,
 						"y" : 55,
@@ -182,7 +182,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 					## Print
 					{
 						"name":"Money_Icon",
-						"type":"image",
+						"tip":"image",
 						"vertical_align":"bottom",
 						
 						"x":57,
@@ -192,7 +192,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 					},
 					{
 						"name":"Money_Slot",
-						"type":"button",
+						"tip":"button",
 
 						"x":75,
 						"y":28,
@@ -208,7 +208,7 @@ if app.ENABLE_ADDITIONAL_EQUIPMENT_PAGE:
 						(
 							{
 								"name" : "Money",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 3,
 								"y" : 3,
@@ -229,7 +229,7 @@ else:
 		window = {
 			"name" : "InventoryWindow",
 
-			## 600 - (width + 오른쪽으로 부터 띄우기 24 px)
+			## 600 - (width + sağdan 24 px boşluk)
 			"x" : SCREEN_WIDTH - 176,
 			"y" : SCREEN_HEIGHT - 37 - 565,
 
@@ -243,7 +243,7 @@ else:
 				## Inventory, Equipment Slots
 				{
 					"name" : "board",
-					"type" : "board",
+					"tip" : "board",
 					"style" : ("attach",),
 
 					"x" : 0,
@@ -257,7 +257,7 @@ else:
 						## Title
 						{
 							"name" : "TitleBar",
-							"type" : "titlebar",
+							"tip" : "titlebar",
 							"style" : ("attach",),
 
 							"x" : 8,
@@ -268,14 +268,14 @@ else:
 
 							"children" :
 							(
-								{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
+								{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
 							),
 						},
 
 						## Equipment Slot
 						{
 							"name" : "Equipment_Base",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 10,
 							"y" : 33,
@@ -287,7 +287,7 @@ else:
 
 								{
 									"name" : "EquipmentSlot",
-									"type" : "slot",
+									"tip" : "slot",
 
 									"x" : 3,
 									"y" : 3,
@@ -307,21 +307,21 @@ else:
 												{"index":EQUIPMENT_START_INDEX+8, "x":75, "y":145, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+9, "x":114, "y":2, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+10, "x":75, "y":35, "width":32, "height":32},
-												## 새 반지1
+												## yeni yüzük1
 												##{"index":item.EQUIPMENT_RING1, "x":2, "y":106, "width":32, "height":32},
-												## 새 반지2
+												## yeni yüzük2
 												##{"index":item.EQUIPMENT_RING2, "x":75, "y":106, "width":32, "height":32},
-												## 새 벨트
+												## yeni kemer
 												{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+27, "x":3, "y":106, "width":32, "height":32},
-												## 장갑
+												## eldiven
 												{"index":item.EQUIPMENT_GLOVE, "x":75, "y":106, "width":32, "height":32},
 											),
 								},
 								## Dragon Soul Button
 								{
 									"name" : "DSSButton",
-									"type" : "button",
+									"tip" : "button",
 
 									"x" : 117,
 									"y" : 148,
@@ -335,7 +335,7 @@ else:
 								## MallButton
 								{
 									"name" : "MallButton",
-									"type" : "button",
+									"tip" : "button",
 
 									"x" : 133,
 									"y" : 148,
@@ -349,7 +349,7 @@ else:
 								## CostumeButton
 								{
 									"name" : "CostumeButton",
-									"type" : "button",
+									"tip" : "button",
 
 									"x" : 78,
 									"y" : 5,
@@ -363,7 +363,7 @@ else:
 							
 								{
 									"name" : "Equipment_Tab_01",
-									"type" : "radio_button",
+									"tip" : "radio_button",
 
 									"x" : 86,
 									"y" : 161,
@@ -376,7 +376,7 @@ else:
 									(
 										{
 											"name" : "Equipment_Tab_01_Print",
-											"type" : "text",
+											"tip" : "text",
 
 											"x" : 0,
 											"y" : 0,
@@ -389,7 +389,7 @@ else:
 								},
 								{
 									"name" : "Equipment_Tab_02",
-									"type" : "radio_button",
+									"tip" : "radio_button",
 
 									"x" : 86 + 32,
 									"y" : 161,
@@ -402,7 +402,7 @@ else:
 									(
 										{
 											"name" : "Equipment_Tab_02_Print",
-											"type" : "text",
+											"tip" : "text",
 
 											"x" : 0,
 											"y" : 0,
@@ -419,7 +419,7 @@ else:
 
 						{
 							"name" : "Inventory_Tab_01",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 10,
 							"y" : 33 + 191,
@@ -433,7 +433,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_01_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -446,7 +446,7 @@ else:
 						},
 						{
 							"name" : "Inventory_Tab_02",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							#"x" : 10 + 78,
 							"x" : 10 + 39,
@@ -461,7 +461,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_02_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -475,7 +475,7 @@ else:
 					
 						{
 							"name" : "Inventory_Tab_03",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 10 + 39 + 39,
 							"y" : 33 + 191,
@@ -489,7 +489,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_03_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -503,7 +503,7 @@ else:
 					
 						{
 							"name" : "Inventory_Tab_04",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 10 + 39 + 39 + 39,
 							"y" : 33 + 191,
@@ -517,7 +517,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_04_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -532,7 +532,7 @@ else:
 						## Item Slot
 						{
 							"name" : "ItemSlot",
-							"type" : "grid_table",
+							"tip" : "grid_table",
 
 							"x" : 8,
 							"y" : 246,
@@ -549,7 +549,7 @@ else:
 						## Print
 						{
 							"name":"Money_Icon",
-							"type":"image",
+							"tip":"image",
 							"vertical_align":"bottom",
 						
 							"x":57,
@@ -559,7 +559,7 @@ else:
 						},
 						{
 							"name":"Money_Slot",
-							"type":"button",
+							"tip":"button",
 
 							"x":75,
 							"y":28,
@@ -575,7 +575,7 @@ else:
 							(
 								{
 									"name" : "Money",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 3,
 									"y" : 3,
@@ -595,7 +595,7 @@ else:
 		window = {
 			"name" : "InventoryWindow",
 
-			## 600 - (width + 오른쪽으로 부터 띄우기 24 px)
+			## 600 - (width + sağdan 24 px boşluk)
 			"x" : SCREEN_WIDTH - 176,
 			"y" : SCREEN_HEIGHT - 37 - 565,
 
@@ -609,7 +609,7 @@ else:
 				## Inventory, Equipment Slots
 				{
 					"name" : "board",
-					"type" : "board",
+					"tip" : "board",
 					"style" : ("attach",),
 
 					"x" : 0,
@@ -623,7 +623,7 @@ else:
 						## Title
 						{
 							"name" : "TitleBar",
-							"type" : "titlebar",
+							"tip" : "titlebar",
 							"style" : ("attach",),
 
 							"x" : 8,
@@ -634,14 +634,14 @@ else:
 
 							"children" :
 							(
-								{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
+								{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_TITLE, "text_horizontal_align":"center" },
 							),
 						},
 
 						## Equipment Slot
 						{
 							"name" : "Equipment_Base",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 10,
 							"y" : 33,
@@ -653,7 +653,7 @@ else:
 
 								{
 									"name" : "EquipmentSlot",
-									"type" : "slot",
+									"tip" : "slot",
 
 									"x" : 3,
 									"y" : 3,
@@ -673,11 +673,11 @@ else:
 												{"index":EQUIPMENT_START_INDEX+8, "x":75, "y":145, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+9, "x":114, "y":2, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+10, "x":75, "y":35, "width":32, "height":32},
-												## 새 반지1
+												## yeni yüzük1
 												##{"index":item.EQUIPMENT_RING1, "x":2, "y":106, "width":32, "height":32},
-												## 새 반지2
+												## yeni yüzük2
 												##{"index":item.EQUIPMENT_RING2, "x":75, "y":106, "width":32, "height":32},
-												## 새 벨트
+												## yeni kemer
 												{"index":item.EQUIPMENT_BELT, "x":39, "y":106, "width":32, "height":32},
 												{"index":EQUIPMENT_START_INDEX+27, "x":3, "y":106, "width":32, "height":32},
 											),
@@ -685,7 +685,7 @@ else:
 								## Dragon Soul Button
 								{
 									"name" : "DSSButton",
-									"type" : "button",
+									"tip" : "button",
 
 									"x" : 114,
 									"y" : 107,
@@ -699,7 +699,7 @@ else:
 								## MallButton
 								{
 									"name" : "MallButton",
-									"type" : "button",
+									"tip" : "button",
 
 									"x" : 118,
 									"y" : 148,
@@ -713,7 +713,7 @@ else:
 								## CostumeButton
 								{
 									"name" : "CostumeButton",
-									"type" : "button",
+									"tip" : "button",
 
 									"x" : 78,
 									"y" : 5,
@@ -727,7 +727,7 @@ else:
 							
 								{
 									"name" : "Equipment_Tab_01",
-									"type" : "radio_button",
+									"tip" : "radio_button",
 
 									"x" : 86,
 									"y" : 161,
@@ -740,7 +740,7 @@ else:
 									(
 										{
 											"name" : "Equipment_Tab_01_Print",
-											"type" : "text",
+											"tip" : "text",
 
 											"x" : 0,
 											"y" : 0,
@@ -753,7 +753,7 @@ else:
 								},
 								{
 									"name" : "Equipment_Tab_02",
-									"type" : "radio_button",
+									"tip" : "radio_button",
 
 									"x" : 86 + 32,
 									"y" : 161,
@@ -766,7 +766,7 @@ else:
 									(
 										{
 											"name" : "Equipment_Tab_02_Print",
-											"type" : "text",
+											"tip" : "text",
 
 											"x" : 0,
 											"y" : 0,
@@ -783,7 +783,7 @@ else:
 
 						{
 							"name" : "Inventory_Tab_01",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 10,
 							"y" : 33 + 191,
@@ -797,7 +797,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_01_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -810,7 +810,7 @@ else:
 						},
 						{
 							"name" : "Inventory_Tab_02",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							#"x" : 10 + 78,
 							"x" : 10 + 39,
@@ -825,7 +825,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_02_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -839,7 +839,7 @@ else:
 					
 						{
 							"name" : "Inventory_Tab_03",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 10 + 39 + 39,
 							"y" : 33 + 191,
@@ -853,7 +853,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_03_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -867,7 +867,7 @@ else:
 					
 						{
 							"name" : "Inventory_Tab_04",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 10 + 39 + 39 + 39,
 							"y" : 33 + 191,
@@ -881,7 +881,7 @@ else:
 							(
 								{
 									"name" : "Inventory_Tab_04_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -896,7 +896,7 @@ else:
 						## Item Slot
 						{
 							"name" : "ItemSlot",
-							"type" : "grid_table",
+							"tip" : "grid_table",
 
 							"x" : 8,
 							"y" : 246,
@@ -913,7 +913,7 @@ else:
 						## Print
 						{
 							"name":"Money_Icon",
-							"type":"image",
+							"tip":"image",
 							"vertical_align":"bottom",
 						
 							"x":57,
@@ -923,7 +923,7 @@ else:
 						},
 						{
 							"name":"Money_Slot",
-							"type":"button",
+							"tip":"button",
 
 							"x":75,
 							"y":28,
@@ -939,7 +939,7 @@ else:
 							(
 								{
 									"name" : "Money",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 3,
 									"y" : 3,
@@ -958,11 +958,11 @@ else:
 
 
 	if app.ENABLE_GLOVE_SYSTEM and app.ENABLE_PREMIUM_PRIVATE_SHOP:
-		# 위 코드블록 "children" 쪽 ( -> [ 로 변경함
+		# yukarıdaki kod bloğu "children" tarafı ( -> [ olarak değiştirildi
 		window["children"][0]["children"] = window["children"][0]["children"] + [
 			{
 				"name" : "premium_private_shop_button",
-				"type" : "button",
+				"tip" : "button",
 
 				"x" : 127,
 				"y" : 196,

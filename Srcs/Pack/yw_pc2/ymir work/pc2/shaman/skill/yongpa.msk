@@ -12,27 +12,27 @@ IconFileName		"skill/shaman/yongpa.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name			"용파산"
-949Description	"용신의 형상을 쏘아 전방의 적을 공격한다"
+949Name			"unused"
+949Description	"unused"
 List 949ConditionData
 {
-	"직선 범위 공격"
-	"지속 화염 효과"
+	"unused"
+	"unused"
 }
 List 949AffectData
 {
-	"마법공격력 : %.0f-%.0f" "60 + 5*lv + (18*iq + 6*minmtk + 120)*ar*k" "60 + 5*lv + (18*iq + 6*maxmtk + 120)*ar*k"
-	"지속 화염 확률  %.0f%%" "iq*0.2*k" ""
-	"지속 화염 공격력  %.0f" "lv+5*iq *k" ""
+	"unused" "60 + 5*lv + (18*iq + 6*minmtk + 120)*ar*k" "60 + 5*lv + (18*iq + 6*maxmtk + 120)*ar*k"
+	"unused" "iq*0.2*k" ""
+	"unused" "lv+5*iq *k" ""
 }
 
-936Name			"용파산"
-936Description	"용신의 형상을 쏘아 전방의 적을 공격한다"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"직선 범위 공격"
+	"unused"
 }
 List 936AffectData
 {
-	"마법공격력 : %.0f-%.0f" "60+5*LV+(6*INT+6*MinMWEP+500)*SkillPoint*HR/100" "60+5*LV+(6*INT+6*MaxMWEP+500)*SkillPoint*HR/100"
+	"unused" "60+5*LV+(6*INT+6*MinMWEP+500)*SkillPoint*HR/100" "60+5*LV+(6*INT+6*MaxMWEP+500)*SkillPoint*HR/100"
 }

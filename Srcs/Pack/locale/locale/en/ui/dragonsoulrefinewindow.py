@@ -3,7 +3,7 @@ import uiScriptLocale
 window = {
 	"name" : "DragonSoulRefineWindow",
 
-	## 용혼석 창 바로 왼쪽
+	## immediately left of the dragon soul stone window
 	#"x" : SCREEN_WIDTH - 176 - 287 - 10 - 287,
 	#"y" : SCREEN_HEIGHT - 37 - 505,
 

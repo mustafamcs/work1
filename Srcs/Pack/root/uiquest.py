@@ -433,7 +433,7 @@ class QuestDialog(ui.ScriptWindow):
 
 	## Event
 	# QUEST_CANCEL
-	def MakeNextButton(self, button_type):
+	def MakeNextButton(self, button_tip):
 		if self.SKIN_NONE == self.skin:
 			return
 
@@ -445,16 +445,16 @@ class QuestDialog(ui.ScriptWindow):
 		b.SetSize(100,26)
 		b.SetPosition(self.sx+self.board.GetWidth()/2-50,self.sy+yPos)
 
-		self.nextButtonType = button_type;
+		self.nextButtonType = button_tip;
 
 		import localeInfo
-		if event.BUTTON_TYPE_CANCEL == button_type:
+		if event.BUTTON_TYPE_CANCEL == button_tip:
 			b.SetEvent(lambda s=self:event.SelectAnswer(s.descIndex, 254) or s.OnCancel())
 			b.SetText(localeInfo.UI_CANCEL)
-		elif event.BUTTON_TYPE_DONE == button_type:
+		elif event.BUTTON_TYPE_DONE == button_tip:
 			b.SetEvent(lambda s=self:s.CloseSelf())
 			b.SetText(localeInfo.UI_OK)
-		elif event.BUTTON_TYPE_NEXT == button_type:
+		elif event.BUTTON_TYPE_NEXT == button_tip:
 			b.SetEvent(lambda s=self:event.SelectAnswer(s.descIndex, 254) or s.CloseSelf())
 			b.SetText(localeInfo.UI_NEXT)
 		b.Show()
@@ -718,8 +718,8 @@ class QuestDialog(ui.ScriptWindow):
 		# END_OF_IMAGE_EXCEPTION_BUG_FIX
 
 	# QUEST_IMAGE
-	def OnInsertItemIcon(self, type, idx, title, desc, index=0, total=1):
-		if "item" != type:
+	def OnInsertItemIcon(self, tip, idx, title, desc, index=0, total=1):
+		if "item" != tip:
 			return
 
 		import item

@@ -300,12 +300,12 @@ class ShopDialog(ui.ScriptWindow):
 				self.popup = popup
 				return
 
-			itemtype = player.INVENTORY
+			itemtip = player.INVENTORY
 
 			if player.SLOT_TYPE_DRAGON_SOUL_INVENTORY == attachedSlotType:
-				itemtype = player.DRAGON_SOUL_INVENTORY
+				itemtip = player.DRAGON_SOUL_INVENTORY
 
-			if player.IsValuableItem(itemtype, attachedSlotPos):
+			if player.IsValuableItem(itemtip, attachedSlotPos):
 
 				itemPrice = item.GetISellItemPrice()
 
@@ -322,7 +322,7 @@ class ShopDialog(ui.ScriptWindow):
 				questionDialog = uiCommon.QuestionDialog()
 				questionDialog.SetText(localeInfo.DO_YOU_SELL_ITEM(itemName, attachedCount, itemPrice))
 
-				questionDialog.SetAcceptEvent(lambda arg1=attachedSlotPos, arg2=attachedCount, arg3 = itemtype: self.OnSellItem(arg1, arg2, arg3))
+				questionDialog.SetAcceptEvent(lambda arg1=attachedSlotPos, arg2=attachedCount, arg3 = itemtip: self.OnSellItem(arg1, arg2, arg3))
 				questionDialog.SetCancelEvent(ui.__mem_func__(self.OnCloseQuestionDialog))
 				questionDialog.Open()
 				self.questionDialog = questionDialog
@@ -330,15 +330,15 @@ class ShopDialog(ui.ScriptWindow):
 				constInfo.SET_ITEM_QUESTION_DIALOG_STATUS(1)
 
 			else:
-				self.OnSellItem(attachedSlotPos, attachedCount, itemtype)
+				self.OnSellItem(attachedSlotPos, attachedCount, itemtip)
 
 		else:
 			snd.PlaySound("sound/ui/loginfail.wav")
 
 		mouseModule.mouseController.DeattachObject()
 
-	def OnSellItem(self, slotPos, count, itemtype):
-		net.SendShopSellPacketNew(slotPos, count, itemtype)
+	def OnSellItem(self, slotPos, count, itemtip):
+		net.SendShopSellPacketNew(slotPos, count, itemtip)
 		snd.PlaySound("sound/ui/money.wav")
 		self.OnCloseQuestionDialog()
 
@@ -387,11 +387,11 @@ class ShopDialog(ui.ScriptWindow):
 				selectedItemID = shop.GetItemID(selectedSlotPos)
 				itemCount = shop.GetItemCount(selectedSlotPos)
 
-				type = player.SLOT_TYPE_SHOP
+				tip = player.SLOT_TYPE_SHOP
 				if shop.IsPrivateShop():
-					type = player.SLOT_TYPE_PRIVATE_SHOP
+					tip = player.SLOT_TYPE_PRIVATE_SHOP
 
-				mouseModule.mouseController.AttachObject(self, type, selectedSlotPos, selectedItemID, itemCount)
+				mouseModule.mouseController.AttachObject(self, tip, selectedSlotPos, selectedItemID, itemCount)
 				mouseModule.mouseController.SetCallBack("INVENTORY", ui.__mem_func__(self.DropToInventory))
 				snd.PlaySound("sound/ui/pick.wav")
 

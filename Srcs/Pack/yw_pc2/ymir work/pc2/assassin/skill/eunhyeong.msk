@@ -12,25 +12,25 @@ IconFileName		"skill/assassin/eunhyeong.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name			"ÀºÇü¹ı"
-949Description	"ÀÚ½ÅÀÇ ¸ğ½ÀÀ» °¨Ãá´Ù"
+949Name			"unused"
+949Description	"unused"
 List 949ConditionData
 {
-	"°ø°İ½Ã ÇØÁ¦"
+	"unused"
 }
 List 949AffectData
 {
-	"¾Ï»ì ±â¼ú Ãß°¡ Å¸°İÄ¡ : +%.0f%%" "50 * SkillPoint" ""
+	"unused" "50 * SkillPoint" ""
 }
 
-936Name			"ÒşÉí"
-936Description	"Òş²Ø×Ô¼ºµÄÉíÓ°£¬Ê¹µÃµĞÈËÎŞ·¨Ñ°ÃÙÄãµÄ×Ù¼£"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"°ø°İ½Ã ÇØÁ¦"
+	"unused"
 }
 List 936AffectData
 {
-	"Áö¼Ó½Ã°£ : %.0fÃÊ" "15 + (30 * SkillPoint)" ""
-	"¾Ï»ì ±â¼ú Ãß°¡ Å¸°İÄ¡ : +%.0f%%" "50 * SkillPoint" ""
+	"unused" "15 + (30 * SkillPoint)" ""
+	"unused" "50 * SkillPoint" ""
 }

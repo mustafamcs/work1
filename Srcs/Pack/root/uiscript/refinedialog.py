@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -27,7 +27,7 @@ window = {
 			(
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -40,7 +40,7 @@ window = {
 					(
 						{
 							"name" : "TitleName",
-							"type" : "text",
+							"tip" : "text",
 							"text" : uiScriptLocale.REFINE_TTILE,
 							"horizontal_align" : "center",
 							"text_horizontal_align" : "center",
@@ -51,7 +51,7 @@ window = {
 				},
 				{
 					"name" : "SuccessPercentage",
-					"type" : "text",
+					"tip" : "text",
 					"text" : uiScriptLocale.REFINE_INFO,
 					"horizontal_align" : "center",
 					"vertical_align" : "bottom",
@@ -61,7 +61,7 @@ window = {
 				},
 				{
 					"name" : "Cost",
-					"type" : "text",
+					"tip" : "text",
 					"text" : uiScriptLocale.REFINE_COST,
 					"horizontal_align" : "center",
 					"vertical_align" : "bottom",
@@ -71,7 +71,7 @@ window = {
 				},
 				{
 					"name" : "AcceptButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : -35,
 					"y" : 35,
@@ -86,7 +86,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 35,
 					"y" : 35,

@@ -23,7 +23,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 		(
 			{
 				"name" : "board",
-				"type" : "board",
+				"tip" : "board",
 
 				"x" : 0,
 				"y" : 0,
@@ -36,7 +36,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 					## Title
 					{
 						"name" : "titlebar",
-						"type" : "titlebar",
+						"tip" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 8,
@@ -48,7 +48,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 						"children" :
 						(
 							{
-							"name":"titlename", "type":"text", "x":0, "y":3,
+							"name":"titlename", "tip":"text", "x":0, "y":3,
 							"horizontal_align":"center", "text_horizontal_align":"center",
 							"text": uiScriptLocale.SYSTEMOPTION_TITLE,
 							 },
@@ -59,7 +59,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 					## Music
 					{
 						"name" : "music_name",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 30,
 						"y" : 75,
@@ -69,7 +69,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "music_volume_controller",
-						"type" : "sliderbar",
+						"tip" : "sliderbar",
 
 						"x" : 110,
 						"y" : 75,
@@ -77,7 +77,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "bgm_button",
-						"type" : "button",
+						"tip" : "button",
 
 						"x" : 20,
 						"y" : 100,
@@ -91,7 +91,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "bgm_file",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 100,
 						"y" : 102,
@@ -102,7 +102,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 					## Sound
 					{
 						"name" : "sound_name",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 30,
 						"y" : 50,
@@ -112,7 +112,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "sound_volume_controller",
-						"type" : "sliderbar",
+						"tip" : "sliderbar",
 
 						"x" : 110,
 						"y" : 50,
@@ -120,7 +120,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "camera_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 40 + TEXT_TEMPORARY_X,
 						"y" : 135+2,
@@ -130,7 +130,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "camera_short",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 135,
@@ -144,7 +144,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "camera_long",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+70,
 						"y" : 135,
@@ -158,7 +158,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "fog_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 30,
 						"y" : 160+2,
@@ -168,7 +168,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "fog_level0",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 160,
@@ -182,7 +182,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "fog_level1",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+50,
 						"y" : 160,
@@ -196,7 +196,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "fog_level2",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110 + 100,
 						"y" : 160,
@@ -210,7 +210,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "tiling_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 40 + TEXT_TEMPORARY_X,
 						"y" : 185+2,
@@ -220,7 +220,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "tiling_cpu",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 185,
@@ -234,7 +234,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "tiling_gpu",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+50,
 						"y" : 185,
@@ -248,7 +248,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "tiling_apply",
-						"type" : "button",
+						"tip" : "button",
 
 						"x" : 110+100,
 						"y" : 185,
@@ -262,7 +262,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "night_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 40 + TEXT_TEMPORARY_X,
 						"y" : 210,
@@ -272,7 +272,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "night_mode_on",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 210,
@@ -286,7 +286,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "night_mode_off",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+50,
 						"y" : 210,
@@ -300,7 +300,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "snow_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 40 + TEXT_TEMPORARY_X,
 						"y" : 235,
@@ -310,7 +310,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "snow_mode_on",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 235,
@@ -324,7 +324,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "snow_mode_off",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+50,
 						"y" : 235,
@@ -338,7 +338,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "snow_texture_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 40 + TEXT_TEMPORARY_X,
 						"y" : 260,
@@ -348,7 +348,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "snow_texture_mode_on",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 260,
@@ -362,7 +362,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 					{
 						"name" : "snow_texture_mode_off",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+50,
 						"y" : 260,
@@ -376,7 +376,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 	#				{
 	#					"name" : "shadow_mode",
-	#					"type" : "text",
+	#					"tip" : "text",
 
 	#					"x" : 30,
 	#					"y" : 210,
@@ -386,7 +386,7 @@ if app.ENABLE_ENVIRONMENT_EFFECT_OPTION:
 
 	#				{
 	#					"name" : "shadow_bar",
-	#					"type" : "sliderbar",
+	#					"tip" : "sliderbar",
 
 	#					"x" : 110,
 	#					"y" : 210,
@@ -410,7 +410,7 @@ else:
 		(
 			{
 				"name" : "board",
-				"type" : "board",
+				"tip" : "board",
 
 				"x" : 0,
 				"y" : 0,
@@ -423,7 +423,7 @@ else:
 					## Title
 					{
 						"name" : "titlebar",
-						"type" : "titlebar",
+						"tip" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 8,
@@ -435,7 +435,7 @@ else:
 						"children" :
 						(
 							{
-							"name":"titlename", "type":"text", "x":0, "y":3,
+							"name":"titlename", "tip":"text", "x":0, "y":3,
 							"horizontal_align":"center", "text_horizontal_align":"center",
 							"text": uiScriptLocale.SYSTEMOPTION_TITLE,
 							 },
@@ -446,7 +446,7 @@ else:
 					## Music
 					{
 						"name" : "music_name",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 30,
 						"y" : 75,
@@ -456,7 +456,7 @@ else:
 
 					{
 						"name" : "music_volume_controller",
-						"type" : "sliderbar",
+						"tip" : "sliderbar",
 
 						"x" : 110,
 						"y" : 75,
@@ -464,7 +464,7 @@ else:
 
 					{
 						"name" : "bgm_button",
-						"type" : "button",
+						"tip" : "button",
 
 						"x" : 20,
 						"y" : 100,
@@ -478,7 +478,7 @@ else:
 
 					{
 						"name" : "bgm_file",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 100,
 						"y" : 102,
@@ -489,7 +489,7 @@ else:
 					## Sound
 					{
 						"name" : "sound_name",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 30,
 						"y" : 50,
@@ -499,7 +499,7 @@ else:
 
 					{
 						"name" : "sound_volume_controller",
-						"type" : "sliderbar",
+						"tip" : "sliderbar",
 
 						"x" : 110,
 						"y" : 50,
@@ -507,7 +507,7 @@ else:
 
 					{
 						"name" : "camera_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 40 + TEXT_TEMPORARY_X,
 						"y" : 135+2,
@@ -517,7 +517,7 @@ else:
 
 					{
 						"name" : "camera_short",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 135,
@@ -531,7 +531,7 @@ else:
 
 					{
 						"name" : "camera_long",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+70,
 						"y" : 135,
@@ -545,7 +545,7 @@ else:
 
 					{
 						"name" : "fog_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 30,
 						"y" : 160+2,
@@ -555,7 +555,7 @@ else:
 
 					{
 						"name" : "fog_level0",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 160,
@@ -569,7 +569,7 @@ else:
 
 					{
 						"name" : "fog_level1",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+50,
 						"y" : 160,
@@ -583,7 +583,7 @@ else:
 
 					{
 						"name" : "fog_level2",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110 + 100,
 						"y" : 160,
@@ -597,7 +597,7 @@ else:
 
 					{
 						"name" : "tiling_mode",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 40 + TEXT_TEMPORARY_X,
 						"y" : 185+2,
@@ -607,7 +607,7 @@ else:
 
 					{
 						"name" : "tiling_cpu",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110,
 						"y" : 185,
@@ -621,7 +621,7 @@ else:
 
 					{
 						"name" : "tiling_gpu",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 110+50,
 						"y" : 185,
@@ -635,7 +635,7 @@ else:
 
 					{
 						"name" : "tiling_apply",
-						"type" : "button",
+						"tip" : "button",
 
 						"x" : 110+100,
 						"y" : 185,
@@ -650,7 +650,7 @@ else:
 
 	#				{
 	#					"name" : "shadow_mode",
-	#					"type" : "text",
+	#					"tip" : "text",
 
 	#					"x" : 30,
 	#					"y" : 210,
@@ -660,7 +660,7 @@ else:
 
 	#				{
 	#					"name" : "shadow_bar",
-	#					"type" : "sliderbar",
+	#					"tip" : "sliderbar",
 
 	#					"x" : 110,
 	#					"y" : 210,
@@ -677,7 +677,7 @@ if app.__BL_MULTI_LANGUAGE__:
 	window["children"][0]["children"] = window["children"][0]["children"] + (
 		{
 			"name" : "language_change_window",
-			"type" : "window",
+			"tip" : "window",
 
 			"x" : 0,
 			"y" : MULTI_LANGUAGE_WINDOW_Y,
@@ -688,7 +688,7 @@ if app.__BL_MULTI_LANGUAGE__:
 			(
 				{
 					"name" : "language_select_text",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 40 + TEXT_TEMPORARY_X,
 					"y" : 2,
@@ -697,14 +697,14 @@ if app.__BL_MULTI_LANGUAGE__:
 				},
 				{
 					"name" : "language_select_img",
-					"type" : "image",
+					"tip" : "image",
 					"x" : 40 + TEXT_TEMPORARY_X,
 					"y" : 20,
 					"image" : "d:/ymir work/ui/quest_re/button_one.sub",
 				},
 				{
 					"name" : "cur_language_text_window",
-					"type" : "window",
+					"tip" : "window",
 
 					"x" : 40 + TEXT_TEMPORARY_X,
 					"y" : 20,
@@ -713,12 +713,12 @@ if app.__BL_MULTI_LANGUAGE__:
 
 					"children" :
 					(
-						{"name":"cur_language_text", "type":"text", "x":0, "y":0, "text": "-", "all_align" : "center"},
+						{"name":"cur_language_text", "tip":"text", "x":0, "y":0, "text": "-", "all_align" : "center"},
 					),
 				},
 				{
 					"name" : "language_select_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 40 + TEXT_TEMPORARY_X + 210 -16,
 					"y" : 20,
@@ -729,7 +729,7 @@ if app.__BL_MULTI_LANGUAGE__:
 				},
 				{
 					"name" : "language_change_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 40 + TEXT_TEMPORARY_X + 210 + 10,
 					"y" : -3 + 20,
@@ -743,7 +743,7 @@ if app.__BL_MULTI_LANGUAGE__:
 				},
 				{
 					"name" : "language_select_pivot_window",
-					"type" : "window",
+					"tip" : "window",
 
 					"x" : 40 + TEXT_TEMPORARY_X,
 					"y" : 16+20,
@@ -760,7 +760,7 @@ if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
 	window["children"][0]["children"] = window["children"][0]["children"] + (
 		{
 			"name" : "show_flags_text",
-			"type" : "text",
+			"tip" : "text",
 
 			"x" : 40 + TEXT_TEMPORARY_X,
 			"y" : MULTI_LANGUAGE_WINDOW_Y + 50 + 2,
@@ -770,7 +770,7 @@ if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
 
 		{
 			"name" : "show_country_flag_button",
-			"type" : "toggle_button",
+			"tip" : "toggle_button",
 
 			"x" : 110,
 			"y" : MULTI_LANGUAGE_WINDOW_Y + 50,
@@ -784,7 +784,7 @@ if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
 
 		{
 			"name" : "show_empire_flag_button",
-			"type" : "toggle_button",
+			"tip" : "toggle_button",
 
 			"x" : 110+70,
 			"y" : MULTI_LANGUAGE_WINDOW_Y + 50,
@@ -798,7 +798,7 @@ if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
 
 		{
 			"name" : "anonymous_text",
-			"type" : "text",
+			"tip" : "text",
 
 			"x" : 40 + TEXT_TEMPORARY_X,
 			"y" : MULTI_LANGUAGE_WINDOW_Y + 75 + 2,
@@ -808,7 +808,7 @@ if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
 
 		{
 			"name" : "anonymous_button",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : 110,
 			"y" : MULTI_LANGUAGE_WINDOW_Y + 75,

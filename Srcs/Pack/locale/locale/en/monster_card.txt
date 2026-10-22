@@ -1,6 +1,6 @@
 # type 0 : solo						
 # type 1 : party						
-##group	index	vnum	type	출현지역	mapid	
+##group	index	vnum	type	spawn area	mapid	
 1	1	151	0	1	21	41
 1	2	153	0	1	21	41
 1	3	152	0	1	21	41

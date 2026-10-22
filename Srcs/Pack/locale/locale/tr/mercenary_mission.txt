@@ -1,15 +1,15 @@
-﻿# 미션이름 1: 토벌(하) 2: 토별(상) 3: 파괴 4: 탐험																			
-# 생성 번호당 가능 지역																			
-# 1 1: 승룡곡 2: 영비사막 3: 거미던전 4: 밀교 5: 사귀타워 6: 천의동굴 7: 아귀동굴 8:백룡지성 9:적룡지성 10: 녹림지 11: 동광평야 																			
-# 2 1: 승룡곡 2: 영비사막 3: 거미던전 4: 밀교 5: 사귀타워 6: 천의동굴 7: 아귀동굴 8:백룡지성 9:적룡지성 10: 녹림지 11: 동광평야 12:신비던전																			
-# 3 1: 승룡곡 2: 영비사막 3: 거미던전 4: 밀교 5: 사귀타워 6: 천의동굴 7: 아귀동굴 8:백룡지성 9:적룡지성 10: 녹림지 11: 동광평야 12:신비던전 13: 스네이크밸리																			
-# 4 1: 승룡곡 2: 영비사막 3: 거미던전 4: 밀교 5: 사귀타워 6: 천의동굴 7: 아귀동굴 8:백룡지성 9:적룡지성 10: 녹림지 11: 동광평야 12:신비던전 13: 스네이크밸리 14: 뱀사원																			
-# 5 1: 승룡곡 2: 영비사막 3: 거미던전 4: 밀교 5: 사귀타워 6: 천의동굴 7: 아귀동굴 8:백룡지성 9:적룡지성 10: 녹림지 11: 동광평야 12:신비던전 13: 스네이크밸리 14: 뱀사원 15: 백룡동굴																			
-# 6 1: 승룡곡 2: 영비사막 3: 거미던전 4: 밀교 5: 사귀타워 6: 천의동굴 7: 아귀동굴 8:백룡지성 9:적룡지성 10: 녹림지 11: 동광평야 12:신비던전 13: 스네이크밸리 14: 뱀사원 15: 백룡동굴																			
-# 7 1: 승룡곡 2: 영비사막 3: 거미던전 4: 밀교 5: 사귀타워 6: 천의동굴 7: 아귀동굴 8:백룡지성 9:적룡지성 10: 녹림지 11: 동광평야 12:신비던전 13: 스네이크밸리 14: 뱀사원 15: 백룡동굴																			
-# 최대 생성번호 갯수 : 7																			
-# 최대 생성번호 갯수, 가능 지역 수정사항 생길시 프로그래머에게 이야기해주세요																			
-#생성번호	지역	미션이름	용병레벨	필요활동력	필요활동력추가참여용병배율	성공확률	성공확률추가참여용병배율	PC정복자경험치보상	yang보상	보상아이템VNUM1	보상아이템COUNT1	보상아이템VNUM2	보상아이템COUNT2	보상아이템VNUM3	보상아이템COUNT3	보상아이템VNUM4	보상아이템COUNT4	보상아이템VNUM5	보상아이템COUNT5
+﻿# görev adı 1: yok et(alt) 2: yok et(üst) 3: imha 4: keşif																			
+# üretim numarasına göre geçerli bölgeler																			
+# 1 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 																			
+# 2 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan																			
+# 3 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi																			
+# 4 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı																			
+# 5 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı 15: Beyaz Ejder Mağarası																			
+# 6 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı 15: Beyaz Ejder Mağarası																			
+# 7 1: Seungryong Vadisi 2: Yongbi Çölü 3: Örümcek Zindanı 4: Milgyo 5: Kötü Ruh Kulesi 6: Gök Kubbe Kıyafet Mağarası 7: Aç Ruh Mağarası 8:Beyaz Ejder Kalesi 9:Kızıl Ejder Kalesi 10: Yeşil Orman 11: Dongkwang Ovası 12:Gizemli Zindan 13: Yılan Vadisi 14: Yılan Tapınağı 15: Beyaz Ejder Mağarası																			
+# Maksimum oluşturma numarası sayısı : 7																			
+# Maksimum oluşturma numarası sayısı, mümkün bölge değişikliği olursa programcıya söyleyin																			
+#oluşturma_no	bölge	misyon_adı	paralı_seviye	gerekli_aktivite	gerekli_aktivite_ek_katılım_çarpanı	başarı_olasılığı	başarı_olasılığı_ek_katılım_çarpanı	PC_fatih_deneyim_ödülü	yang_ödülü	ödül_eşya_VNUM1	ödül_eşyaCOUNT1	ödül_eşyaVNUM2	ödül_eşyaCOUNT2	ödül_eşyaVNUM3	ödül_eşyaCOUNT3	ödül_eşyaVNUM4	ödül_eşyaCOUNT4	ödül_eşyaVNUM5	ödül_eşyaCOUNT5
 1	1	1	1	100	3	46	1	900	70000	83100	1	83115	1	39067	1	0	0	0	0
 1	1	2	1	100	3	46	1	900	40000	83100	1	83118	1	83036	1	0	0	0	0
 1	1	3	1	100	3	46	1	900	75000	83100	1	83124	1	50529	1	0	0	0	0

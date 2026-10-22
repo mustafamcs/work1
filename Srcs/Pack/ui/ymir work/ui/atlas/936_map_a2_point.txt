@@ -1,7 +1,7 @@
-//num	type	x	y	?????
-//type : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
+//num	tip	x	y	?????
+//tip : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
 //---------------------------------------------------------------------------------------------------
-0	WARP	147200	7300	"쉭쥬리"
+0	WARP	147200	7300	"Jayang"
 1	WARP	13100	74600	"弄彊群"
-2	WARP	64000	143600	"냈꾑群"
+2	WARP	64000	143600	"Bakra Kasabası"
 

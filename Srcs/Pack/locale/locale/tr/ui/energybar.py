@@ -14,10 +14,10 @@ window = {
 
 	"children" :
 	(
-		# 기력
+		# güç
 		{
 			"name" : "EnergyGauge_Board",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : 0,
 			"y" : -10 + Y_ADD_POSITION,
@@ -28,7 +28,7 @@ window = {
 			(
 				{
 					"name" : "EnergyGauge_Empty",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 5,
 					"y" : 8,
@@ -37,7 +37,7 @@ window = {
 				},
 				{
 					"name" : "EnergyGauge_Hungry",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 5,
 					"y" : 8,
@@ -46,7 +46,7 @@ window = {
 				},
 				{
 					"name" : "EnergyGauge_Full",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 5,
 					"y" : 8,
@@ -63,7 +63,7 @@ window = {
 			
 			"width"  : 50,
 			"height" : 10,		
-			"type" : "window",
+			"tip" : "window",
 		},		
 	),
 }

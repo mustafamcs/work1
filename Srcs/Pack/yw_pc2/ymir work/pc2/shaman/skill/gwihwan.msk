@@ -3,8 +3,8 @@ ScriptType			SkillDataScript
 Type				LOW
 Attribute			"STANDING_SKILL"
 
-949Name				"蓖券"
-949Description			"蓖券狼 柳阑 烹秦 付阑肺 倒酒埃促"
+949Name				"unused"
+949Description			"unused"
 
 IconFileName		"skill/shaman/gwihwan.sub"
 MotionIndex			7
@@ -13,5 +13,5 @@ NeedSPFormula		"50"
 MaxLevel			3
 LevelUpPoint		3
 
-936Name				"传送"
-936Description			"通过传送阵，回到村落"
+936Name				"unused"
+936Description			"unused"

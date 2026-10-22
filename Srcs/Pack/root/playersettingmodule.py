@@ -104,7 +104,7 @@ def DefineSkillIndexDict():
 			},
 		}
 
-def RegisterSkill(race, group, empire=0):
+def RegisterSkill(race, grup, empire=0):
 
 	DefineSkillIndexDict()
 
@@ -112,9 +112,9 @@ def RegisterSkill(race, group, empire=0):
 
 	## Character Skill
 	if SKILL_INDEX_DICT.has_key(job):
-		if SKILL_INDEX_DICT[job].has_key(group):
+		if SKILL_INDEX_DICT[job].has_key(grup):
 
-			activeSkillList = SKILL_INDEX_DICT[job][group]
+			activeSkillList = SKILL_INDEX_DICT[job][grup]
 
 			for i in xrange(len(activeSkillList)):
 				skillIndex = activeSkillList[i]
@@ -143,14 +143,14 @@ def RegisterSkill(race, group, empire=0):
 	for i in xrange(len(ACTIVE_GUILD_SKILL_INDEX_LIST)):
 		player.SetSkill(210+i, ACTIVE_GUILD_SKILL_INDEX_LIST[i])
 
-def RegisterSkillAt(race, group, pos, num):
+def RegisterSkillAt(race, grup, pos, num):
 
 	DefineSkillIndexDict()
 
 	job = chr.RaceToJob(race)
-	tmp = list(SKILL_INDEX_DICT[job][group])
+	tmp = list(SKILL_INDEX_DICT[job][grup])
 	tmp[pos] = num
-	SKILL_INDEX_DICT[job][group] = tuple(tmp)
+	SKILL_INDEX_DICT[job][grup] = tuple(tmp)
 	player.SetSkill(pos+1, num)
 
 FACE_IMAGE_DICT = {
@@ -443,31 +443,31 @@ def __LoadGameEffect():
 	EmoticonStr = "d:/ymir work/effect/etc/emoticon/"
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+0, "", EmoticonStr+"sweat.mse")
-	net.RegisterEmoticonString("(황당)")
+	net.RegisterEmoticonString("(Şaşkın)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+1, "", EmoticonStr+"money.mse")
-	net.RegisterEmoticonString("(돈)")
+	net.RegisterEmoticonString("(Para)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+2, "", EmoticonStr+"happy.mse")
-	net.RegisterEmoticonString("(기쁨)")
+	net.RegisterEmoticonString("(Mutluluk)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+3, "", EmoticonStr+"love_s.mse")
-	net.RegisterEmoticonString("(좋아)")
+	net.RegisterEmoticonString("(Beğen)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+4, "", EmoticonStr+"love_l.mse")
-	net.RegisterEmoticonString("(사랑)")
+	net.RegisterEmoticonString("(Aşk)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+5, "", EmoticonStr+"angry.mse")
-	net.RegisterEmoticonString("(분노)")
+	net.RegisterEmoticonString("(Öfke)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+6, "", EmoticonStr+"aha.mse")
-	net.RegisterEmoticonString("(아하)")
+	net.RegisterEmoticonString("(Aha)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+7, "", EmoticonStr+"gloom.mse")
-	net.RegisterEmoticonString("(우울)")
+	net.RegisterEmoticonString("(Üzgün)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+8, "", EmoticonStr+"sorry.mse")
-	net.RegisterEmoticonString("(죄송)")
+	net.RegisterEmoticonString("(Özür)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+9, "", EmoticonStr+"!_mix_back.mse")
 	net.RegisterEmoticonString("(!)")
@@ -1316,7 +1316,7 @@ def LoadGuildBuildingList(filename):
 			continue
 
 		vnum = int(tokens[TOKEN_VNUM])
-		type = tokens[TOKEN_TYPE]
+		tip = tokens[TOKEN_TYPE]
 		name = tokens[TOKEN_NAME]
 		localName = tokens[TOKEN_LOCAL_NAME]
 		xRotLimit = int(tokens[TOKEN_X_ROT_LIMIT])
@@ -1326,13 +1326,13 @@ def LoadGuildBuildingList(filename):
 		material = tokens[TOKEN_MATERIAL]
 
 		folderName = ""
-		if "HEADQUARTER" == type:
+		if "HEADQUARTER" == tip:
 			folderName = "headquarter"
-		elif "FACILITY" == type:
+		elif "FACILITY" == tip:
 			folderName = "facility"
-		elif "OBJECT" == type:
+		elif "OBJECT" == tip:
 			folderName = "object"
-		elif "WALL" == type:
+		elif "WALL" == tip:
 			folderName = "fence"
 
 		materialList = ["0", "0", "0"]
@@ -1360,7 +1360,7 @@ def LoadGuildBuildingList(filename):
 		chrmgr.RegisterRaceName(vnum, name)
 
 		appendingData = { "VNUM":vnum,
-						  "TYPE":type,
+						  "TYPE":tip,
 						  "NAME":name,
 						  "LOCAL_NAME":localName,
 						  "X_ROT_LIMIT":xRotLimit,

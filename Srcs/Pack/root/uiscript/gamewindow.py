@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name":"HelpButton",
-			"type":"button",
+			"tip":"button",
 			"x" : 50,
 			"y" : SCREEN_HEIGHT-170,
 			"default_image" : "d:/ymir work/ui/game/windows/btn_bigplus_up.sub",
@@ -25,7 +25,7 @@ window = {
 			(
 				{
 					"name":"HelpButtonLabel",
-					"type":"text",
+					"tip":"text",
 					"x": 16,
 					"y": 40,
 					"text":uiScriptLocale.GAME_HELP,
@@ -36,7 +36,7 @@ window = {
 		},
 		{
 			"name":"QuestButton",
-			"type":"button",
+			"tip":"button",
 			"x" : SCREEN_WIDTH-50-32,
 			"y" : SCREEN_HEIGHT-170,
 			"default_image" : "d:/ymir work/ui/game/windows/btn_bigplus_up.sub",
@@ -47,7 +47,7 @@ window = {
 			(
 				{
 					"name":"QuestButtonLabel",
-					"type":"text",
+					"tip":"text",
 					"x": 16,
 					"y": 40,
 					"text":uiScriptLocale.GAME_QUEST,
@@ -58,7 +58,7 @@ window = {
 		},
 		{
 			"name":"StatusPlusButton",
-			"type" : "button",
+			"tip" : "button",
 			"x" : 68,
 			"y" : SCREEN_HEIGHT-100,
 			"default_image" : "d:/ymir work/ui/game/windows/btn_bigplus_up.sub",
@@ -69,7 +69,7 @@ window = {
 			(
 				{
 					"name":"StatusPlusLabel",
-					"type":"text",
+					"tip":"text",
 					"x": 16,
 					"y": 40,
 					"text":uiScriptLocale.GAME_STAT_UP,
@@ -80,7 +80,7 @@ window = {
 		},
 		{
 			"name":"SkillPlusButton",
-			"type" : "button",
+			"tip" : "button",
 			"x" : SCREEN_WIDTH-50-32,
 			"y" : SCREEN_HEIGHT-100,
 			"default_image" : "d:/ymir work/ui/game/windows/btn_bigplus_up.sub",
@@ -91,7 +91,7 @@ window = {
 			(
 				{
 					"name":"SkillPlusLabel",
-					"type":"text",
+					"tip":"text",
 					"x": 16,
 					"y": 40,
 					"text":uiScriptLocale.GAME_SKILL_UP,
@@ -102,7 +102,7 @@ window = {
 		},
 		{
 			"name":"ExitObserver",
-			"type" : "button",
+			"tip" : "button",
 			"x" : SCREEN_WIDTH-50-32,
 			"y" : SCREEN_HEIGHT-170,
 			"default_image" : "d:/ymir work/ui/game/windows/btn_bigplus_up.sub",
@@ -113,7 +113,7 @@ window = {
 			(
 				{
 					"name":"ExitObserverButtonName",
-					"type":"text",
+					"tip":"text",
 					"x": 16,
 					"y": 40,
 					"text": uiScriptLocale.GAME_EXIT_OBSERVER,
@@ -124,7 +124,7 @@ window = {
 		},
 		{
 			"name":"BuildGuildBuilding",
-			"type" : "button",
+			"tip" : "button",
 			"x" : SCREEN_WIDTH-50-32,
 			"y" : SCREEN_HEIGHT-170,
 			"default_image" : "d:/ymir work/ui/game/windows/btn_bigplus_up.sub",
@@ -135,7 +135,7 @@ window = {
 			(
 				{
 					"name":"BuildGuildBuildingButtonName",
-					"type":"text",
+					"tip":"text",
 					"x": 16,
 					"y": 40,
 					"text": uiScriptLocale.GUILD_BUILDING_TITLE,

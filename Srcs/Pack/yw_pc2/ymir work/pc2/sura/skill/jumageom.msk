@@ -2,21 +2,21 @@ ScriptType		SkillDataScript
 
 Type			MIDDLE
 Attribute		"STANDING_SKILL" "TOGGLE"
-949Name			"林付八"
-949Description	"八俊 绢狄阑 粮犁矫挪促"
+949Name			"unused"
+949Description	"unused"
 
 IconFileName	"skill/sura/jumageom.sub"
 MotionIndex		12
 
 List 949ConditionData
 {
-	"傍拜 且锭付促 沥脚仿 10 家葛"
-	"林付癌苞 悼矫 矫傈 阂啊瓷"
+	"unused"
+	"unused"
 }
 
 List 949AffectData
 {
-	"傍拜仿 : +%.1f" "(Level / 4 + 2) * SkillPoint / 20" ""
+	"unused" "(Level / 4 + 2) * SkillPoint / 20" ""
 }
 
 List RequireStatData
@@ -29,16 +29,16 @@ LevelUpPoint			"2"
 NeedSPFormula			"50"
 ContinuationSPFormula	"2"
 
-936Name			"鬼怨"
-936Description		"剑上赋予黑暗力量"
+936Name			"unused"
+936Description		"unused"
 
 List 936ConditionData
 {
-	"每次攻击时消耗精力10"
-	"不能与噬体同时使用"
+	"unused"
+	"unused"
 }
 
 List 936AffectData
 {
-	"攻击力: +%.1f" "(Level / 4 + 2) * SkillPoint / 20" ""
+	"unused" "(Level / 4 + 2) * SkillPoint / 20" ""
 }

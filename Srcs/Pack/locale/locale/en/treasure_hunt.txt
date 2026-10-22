@@ -1,5 +1,5 @@
-# 이벤트 보상 목록 (index 순서대로 0~24까지 읽음)
-# 수정시 클라이언트 파일도 같이 수정 필요
+# event reward list (read 0-24 in index order)
+# update the client file as well when editing
 Group event_reward
 {
 	#index	item_vnum	count
@@ -30,17 +30,17 @@ Group event_reward
 	24	55031	1
 }
 
-# 이벤트 누적 보상 목록
-# 클라이언트도 똑같은 Group 존재, 다른점은 확률값이 추가 됨
-# vnum, count 수정시 클라이언트 파일도 같이 수정 필요
-# probability : 확률 (확률값/probability 총합)
-# 보상은 reward_info 그룹당 보상을 총 15개 까지 세팅할 수 있다.
+# event accumulated reward list
+# same Group exists client-side, difference is added probability
+# when vnum/count changes, update the client file too
+# probability : probability (value/total)
+# up to 15 rewards can be set per reward_info group.
 Group event_accumulated_reward_list
 {
-	# 1회 누적
+	# 1times accumulated
 	Group 1
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -49,10 +49,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 2회 누적
+	# 2times accumulated
 	Group 2
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -61,10 +61,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 3회 누적
+	# 3times accumulated
 	Group 3
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -73,10 +73,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 4회 누적
+	# 4times accumulated
 	Group 4
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -85,10 +85,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 5회 누적
+	# 5times accumulated
 	Group 5
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -103,17 +103,17 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 6회 누적
+	# 6times accumulated
 	Group 6
 	{
-		# 버프
+		# buff
 		Group affect_reward
 		{
 			#index	first_come	affect_type	point_type	apply_point	flag	duration
 			0	100	668	0	10	93	259200
 		}
 
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -121,10 +121,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 7회 누적
+	# 7times accumulated
 	Group 7
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -133,10 +133,10 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 8회 누적
+	# 8times accumulated
 	Group 8
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -151,20 +151,20 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 9회 누적
-	# 개량 재료 없이 개량할 수 있는 버프 1회권
-	# 51회 누적 부터, 9회차 보상만 지급
-	# 버프는 각 서버당 선착순 50명에게만 지급, 10개 미만 이후부터 서버 내 공지메시지를 띄워준다.
+	# 9times accumulated
+	# one-time buff allowing upgrade without materials
+	# from 51 times accumulated, only the 9th turn reward is granted
+	# buff granted to first 50 per server; below 10 a server notice is shown.
 	Group 9
 	{
-		# 버프
+		# buff
 		Group affect_reward
 		{
 			#index	first_come	affect_type	point_type	apply_point	flag	duration
 			0	50	669	0	0	94	259200
 		}
 
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability
@@ -172,11 +172,11 @@ Group event_accumulated_reward_list
 		}
 	}
 
-	# 10회 누적
-	# 11회차 이상누적 달성 시, 10회차 보상으로 계속 수령
+	# 10times accumulated
+	# 11once accumulated, keeps granting the 10th reward
 	Group 10
 	{
-		# 랜덤 아이템 보상
+		# random item reward
 		Group random_reward
 		{
 			#index	vnum	count	probability

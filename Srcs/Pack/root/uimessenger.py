@@ -325,7 +325,7 @@ class MessengerWindow(ui.ScriptWindow):
 		messenger.SetMessengerHandler(self)
 
 		self.board = None
-		self.groupList = []
+		self.grupList = []
 		self.showingItemList = []
 		self.selectedItem = None
 		self.whisperButtonEvent = lambda *arg: None
@@ -395,7 +395,7 @@ class MessengerWindow(ui.ScriptWindow):
 		self.resizeButton.SetMoveEvent(ui.__mem_func__(self.OnResizeDialog))
 		self.resizeButton.SetPosition(0, 300)
 
-		for list in self.groupList:
+		for list in self.grupList:
 			list.SetTop()
 
 	def __del__(self):
@@ -479,12 +479,12 @@ class MessengerWindow(ui.ScriptWindow):
 		member = MessengerFriendGroup(ui.__mem_func__(self.GetSelf))
 		member.Open()
 		member.Show()
-		self.groupList.append(member)
+		self.grupList.append(member)
 
 		member = MessengerGuildGroup(ui.__mem_func__(self.GetSelf))
 		member.Open()
 		member.Show()
-		self.groupList.append(member)
+		self.grupList.append(member)
 
 	def __AddFamilyGroup(self):
 		member = MessengerFamilyGroup(ui.__mem_func__(self.GetSelf))
@@ -494,7 +494,7 @@ class MessengerWindow(ui.ScriptWindow):
 		self.familyGroup = member
 
 	def ClearGuildMember(self):
-		self.groupList[GUILD].ClearMember()
+		self.grupList[GUILD].ClearMember()
 
 	def SetWhisperButtonEvent(self, event):
 		self.whisperButtonEvent=event
@@ -547,7 +547,7 @@ class MessengerWindow(ui.ScriptWindow):
 	def OnRemove(self):
 		if self.selectedItem:
 			if self.selectedItem.CanRemove():
-				map(lambda arg, argDeletingItem=self.selectedItem: arg.RemoveMember(argDeletingItem), self.groupList)
+				map(lambda arg, argDeletingItem=self.selectedItem: arg.RemoveMember(argDeletingItem), self.grupList)
 				self.selectedItem.OnRemove()
 				self.selectedItem.UnSelect()
 				self.selectedItem = None
@@ -608,14 +608,14 @@ class MessengerWindow(ui.ScriptWindow):
 			if self.familyGroup.GetLover():
 				self.showingItemList.append(self.familyGroup.GetLover())
 
-		for group in self.groupList:
+		for grup in self.grupList:
 
-			self.showingItemList.append(group)
+			self.showingItemList.append(grup)
 
-			if group.IsOpen():
+			if grup.IsOpen():
 
-				loginMemberList = group.GetLoginMemberList()
-				logoutMemberList = group.GetLogoutMemberList()
+				loginMemberList = grup.GetLoginMemberList()
+				logoutMemberList = grup.GetLogoutMemberList()
 
 				if loginMemberList or logoutMemberList:
 					for member in loginMemberList:
@@ -634,36 +634,36 @@ class MessengerWindow(ui.ScriptWindow):
 		self.OnRefreshList()
 
 	## EventHandler
-	def __AddList(self, groupIndex, key, name):
-		group = self.groupList[groupIndex]
-		member = group.FindMember(key)
+	def __AddList(self, grupIndex, key, name):
+		grup = self.grupList[grupIndex]
+		member = grup.FindMember(key)
 		if not member:
-			member = group.AppendMember(key, name)
+			member = grup.AppendMember(key, name)
 			self.OnSelectItem(None)
 		return member
 
-	def OnRemoveList(self, groupIndex, key):
-		group = self.groupList[groupIndex]
-		group.RemoveMember(group.FindMember(key))
+	def OnRemoveList(self, grupIndex, key):
+		grup = self.grupList[grupIndex]
+		grup.RemoveMember(grup.FindMember(key))
 		self.OnRefreshList()
 
-	def OnRemoveAllList(self, groupIndex):
-		group = self.groupList[groupIndex]
-		group.ClearMember()
+	def OnRemoveAllList(self, grupIndex):
+		grup = self.grupList[grupIndex]
+		grup.ClearMember()
 		self.OnRefreshList()
 
-	def OnLogin(self, groupIndex, key, name=None):
+	def OnLogin(self, grupIndex, key, name=None):
 		if not name:
 			name = key
-		group = self.groupList[groupIndex]
-		member = self.__AddList(groupIndex, key, name)
+		grup = self.grupList[grupIndex]
+		member = self.__AddList(grupIndex, key, name)
 		member.SetName(name)
 		member.Online()
 		self.OnRefreshList()
 
-	def OnLogout(self, groupIndex, key, name=None):
-		group = self.groupList[groupIndex]
-		member = self.__AddList(groupIndex, key, name)
+	def OnLogout(self, grupIndex, key, name=None):
+		grup = self.grupList[grupIndex]
+		member = self.__AddList(grupIndex, key, name)
 		if not name:
 			name = key
 		member.SetName(name)

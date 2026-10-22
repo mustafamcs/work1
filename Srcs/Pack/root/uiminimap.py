@@ -199,8 +199,8 @@ class AtlasWindow(ui.ScriptWindow):
 		self.Hide()
 		return True
 
-def __RegisterMiniMapColor(type, rgb):
-	miniMap.RegisterColor(type, rgb[0], rgb[1], rgb[2])
+def __RegisterMiniMapColor(tip, rgb):
+	miniMap.RegisterColor(tip, rgb[0], rgb[1], rgb[2])
 
 class MiniMap(ui.ScriptWindow):
 

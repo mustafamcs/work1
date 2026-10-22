@@ -1,8 +1,8 @@
-"성공적으로 속성이 추가 되었습니다";
+"Özellik başarıyla eklendi";
 "The attribute has been successfully added";
 
-"더 이상 이 아이템으로 속성을 추가할 수 없습니다";
+"Bu eşya ile daha fazla özellik eklenemez";
 "No more attributes can be added on this item";
 
-"변경 시킬 속성이 없습니다";
+"Değiştirilecek özellik yok";
 "There are no attributes to change";

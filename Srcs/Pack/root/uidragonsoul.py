@@ -247,8 +247,8 @@ class DragonSoulWindow(ui.ScriptWindow):
 	def RefreshStatus(self):
 		self.RefreshItemSlot()
 
-	def __InventoryLocalSlotPosToGlobalSlotPos(self, window_type, local_slot_pos):
-		if player.INVENTORY == window_type:
+	def __InventoryLocalSlotPosToGlobalSlotPos(self, window_tip, local_slot_pos):
+		if player.INVENTORY == window_tip:
 			return self.deckPageIndex * player.DRAGON_SOUL_EQUIPMENT_FIRST_SIZE + local_slot_pos
 		return (self.DSKindIndex * player.DRAGON_SOUL_PAGE_COUNT * player.DRAGON_SOUL_PAGE_SIZE) + self.inventoryPageIndex * player.DRAGON_SOUL_PAGE_SIZE + local_slot_pos
 
@@ -291,9 +291,9 @@ class DragonSoulWindow(ui.ScriptWindow):
 		self.__HighlightSlot_RefreshCurrentPage()
 		self.wndItem.RefreshSlot()
 
-	def ShowToolTip(self, window_type, slotIndex):
+	def ShowToolTip(self, window_tip, slotIndex):
 		if None != self.tooltipItem:
-			if player.INVENTORY == window_type:
+			if player.INVENTORY == window_tip:
 				self.tooltipItem.SetInventoryItem(slotIndex)
 			else:
 				self.tooltipItem.SetInventoryItem(slotIndex, player.DRAGON_SOUL_INVENTORY)
@@ -980,9 +980,9 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 			return False
 
 		if self.currentRecipe:
-			ds_type, grade, step, strength = ds_info
-			cur_refine_ds_type, cur_refine_grade, cur_refine_step, cur_refine_strength = self.currentRecipe["ds_info"]
-			if not (cur_refine_ds_type == ds_type and cur_refine_grade == grade):
+			ds_tip, grade, step, strength = ds_info
+			cur_refine_ds_tip, cur_refine_grade, cur_refine_step, cur_refine_strength = self.currentRecipe["ds_info"]
+			if not (cur_refine_ds_tip == ds_tip and cur_refine_grade == grade):
 				self.__PopUp(localeInfo.DRAGON_SOUL_INVALID_DRAGON_SOUL)
 				return False
 		else:
@@ -1004,9 +1004,9 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 			return False
 
 		if self.currentRecipe:
-			ds_type, grade, step, strength = ds_info
-			cur_refine_ds_type, cur_refine_grade, cur_refine_step, cur_refine_strength = self.currentRecipe["ds_info"]
-			if not (cur_refine_ds_type == ds_type and cur_refine_grade == grade and cur_refine_step == step):
+			ds_tip, grade, step, strength = ds_info
+			cur_refine_ds_tip, cur_refine_grade, cur_refine_step, cur_refine_strength = self.currentRecipe["ds_info"]
+			if not (cur_refine_ds_tip == ds_tip and cur_refine_grade == grade and cur_refine_step == step):
 				self.__PopUp(localeInfo.DRAGON_SOUL_INVALID_DRAGON_SOUL)
 				return False
 		else:
@@ -1023,10 +1023,10 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 
 	def __CanRefineStrength (self, vnum):
 		if self.__IsDragonSoul(vnum):
-			ds_type, grade, step, strength = self.__GetDragonSoulTypeInfo(vnum)
+			ds_tip, grade, step, strength = self.__GetDragonSoulTypeInfo(vnum)
 
 			import dragon_soul_refine_settings
-			if strength >= dragon_soul_refine_settings.dragon_soul_refine_info[ds_type]["strength_max_table"][grade][step]:
+			if strength >= dragon_soul_refine_settings.dragon_soul_refine_info[ds_tip]["strength_max_table"][grade][step]:
 				self.__PopUp(localeInfo.DRAGON_SOUL_CANNOT_REFINE_MORE)
 				return False
 
@@ -1048,27 +1048,27 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 					return False
 
 	def __GetRefineGradeRecipe (self, vnum):
-		ds_type, grade, step, strength = self.__GetDragonSoulTypeInfo(vnum)
+		ds_tip, grade, step, strength = self.__GetDragonSoulTypeInfo(vnum)
 		try:
 			import dragon_soul_refine_settings
 
 			return	{
-				"ds_info"		: (ds_type, grade, step, strength),
-				"need_count"	: dragon_soul_refine_settings.dragon_soul_refine_info[ds_type]["grade_need_count"][grade],
-				"fee"			: dragon_soul_refine_settings.dragon_soul_refine_info[ds_type]["grade_fee"][grade]
+				"ds_info"		: (ds_tip, grade, step, strength),
+				"need_count"	: dragon_soul_refine_settings.dragon_soul_refine_info[ds_tip]["grade_need_count"][grade],
+				"fee"			: dragon_soul_refine_settings.dragon_soul_refine_info[ds_tip]["grade_fee"][grade]
 					}
 		except:
 			return None
 
 	def __GetRefineStepRecipe (self, vnum):
-		ds_type, grade, step, strength = self.__GetDragonSoulTypeInfo(vnum)
+		ds_tip, grade, step, strength = self.__GetDragonSoulTypeInfo(vnum)
 		try:
 			import dragon_soul_refine_settings
 
 			return	{
-				"ds_info"		: (ds_type, grade, step, strength),
-				"need_count"	: dragon_soul_refine_settings.dragon_soul_refine_info[ds_type]["step_need_count"][step],
-				"fee"			: dragon_soul_refine_settings.dragon_soul_refine_info[ds_type]["step_fee"][step]
+				"ds_info"		: (ds_tip, grade, step, strength),
+				"need_count"	: dragon_soul_refine_settings.dragon_soul_refine_info[ds_tip]["step_need_count"][step],
+				"fee"			: dragon_soul_refine_settings.dragon_soul_refine_info[ds_tip]["step_fee"][step]
 					}
 		except:
 			return None
@@ -1092,15 +1092,15 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 	def __GetDragonSoulTypeInfo(self, vnum):
 		if not self.__IsDragonSoul(vnum):
 			return DragonSoulRefineWindow.INVALID_DRAGON_SOUL_INFO
-		ds_type = vnum / 10000
+		ds_tip = vnum / 10000
 		grade = vnum % 10000 /1000
 		step = vnum % 1000 / 100
 		strength = vnum % 100 / 10
 
-		return (ds_type, grade, step, strength)
+		return (ds_tip, grade, step, strength)
 
-	def __MakeDragonSoulVnum(self, ds_type, grade, step, strength):
-		return ds_type * 10000 + grade * 1000 + step * 100 + strength * 10
+	def __MakeDragonSoulVnum(self, ds_tip, grade, step, strength):
+		return ds_tip * 10000 + grade * 1000 + step * 100 + strength * 10
 
 	def __SelectRefineEmptySlot(self, selectedSlotPos):
 		try:
@@ -1193,13 +1193,13 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 
 	def __OverInRefineItem(self, slotIndex):
 		if self.refineItemInfo.has_key(slotIndex):
-			inven_type, inven_pos, item_count = self.refineItemInfo[slotIndex]
-			self.tooltipItem.SetInventoryItem(inven_pos, inven_type)
+			inven_tip, inven_pos, item_count = self.refineItemInfo[slotIndex]
+			self.tooltipItem.SetInventoryItem(inven_pos, inven_tip)
 
 	def __OverInResultItem(self, slotIndex):
 		if self.resultItemInfo.has_key(slotIndex):
-			inven_type, inven_pos, item_count = self.resultItemInfo[slotIndex]
-			self.tooltipItem.SetInventoryItem(inven_pos, inven_type)
+			inven_tip, inven_pos, item_count = self.resultItemInfo[slotIndex]
+			self.tooltipItem.SetInventoryItem(inven_pos, inven_tip)
 
 	def __OverOutItem(self):
 		if self.tooltipItem:
@@ -1303,23 +1303,23 @@ class DragonSoulRefineWindow(ui.ScriptWindow):
 		self.wndResultSlot.ClearSlot(0)
 		self.resultItemInfo = {}
 
-	def RefineSucceed(self, inven_type, inven_pos):
+	def RefineSucceed(self, inven_tip, inven_pos):
 		self.__Initialize()
 		self.Refresh()
 
-		itemCount = player.GetItemCount(inven_type, inven_pos)
+		itemCount = player.GetItemCount(inven_tip, inven_pos)
 		if itemCount > 0:
-			self.resultItemInfo[0] = (inven_type, inven_pos, itemCount)
-			self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_type, inven_pos), itemCount)
+			self.resultItemInfo[0] = (inven_tip, inven_pos, itemCount)
+			self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_tip, inven_pos), itemCount)
 
-	def	RefineFail(self, reason, inven_type, inven_pos):
+	def	RefineFail(self, reason, inven_tip, inven_pos):
 		if net.DS_SUB_HEADER_REFINE_FAIL == reason:
 			self.__Initialize()
 			self.Refresh()
-			itemCount = player.GetItemCount(inven_type, inven_pos)
+			itemCount = player.GetItemCount(inven_tip, inven_pos)
 			if itemCount > 0:
-				self.resultItemInfo[0] = (inven_type, inven_pos, itemCount)
-				self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_type, inven_pos), itemCount)
+				self.resultItemInfo[0] = (inven_tip, inven_pos, itemCount)
+				self.wndResultSlot.SetItemSlot(0, player.GetItemIndex(inven_tip, inven_pos), itemCount)
 		else:
 			self.Refresh()
 

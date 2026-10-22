@@ -13,26 +13,26 @@ IconFileName	"skill/shaman/hosin.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name			"호신"
-949Description	"돕고자 하는 자에게 보호의 진을 그려 보호한다"
+949Name			"unused"
+949Description	"unused"
 List 949ConditionData
 {
-	"물리 공격 저항"
-	"동료에게 사용 가능"
+	"unused"
+	"unused"
 }
 List 949AffectData
 {
-	"물리 공격 저항 : %.1f%%" "(iq*0.3+5)*(2*k+0.5)/(k+1.5)" ""
+	"unused" "(iq*0.3+5)*(2*k+0.5)/(k+1.5)" ""
 }
 
-936Name			"써썹"
-936Description	"藤속谿곈돨렝徒콘제"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"동료에게 사용 가능"
+	"unused"
 }
 List 936AffectData
 {
-	"물리 타격 저항 : %.1f%%" "20 * (2*SkillPoint + 0.5) / (SkillPoint + 1.5)" ""
-	"지속시간 : %.0f초" "100 + (240 * SkillPoint)" ""
+	"unused" "20 * (2*SkillPoint + 0.5) / (SkillPoint + 1.5)" ""
+	"unused" "100 + (240 * SkillPoint)" ""
 }

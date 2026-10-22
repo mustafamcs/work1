@@ -3,7 +3,7 @@ import uiScriptLocale
 window = {
 	"name" : "InventoryWindow",
 
-	## 600 - (width + 오른쪽으로 부터 띄우기 24 px)
+	## 600 - (width + sağdan 24 px boşluk)
 	"x" : SCREEN_WIDTH - 176 - 287 - 10,
 	"y" : SCREEN_HEIGHT - 37 - 505,
 
@@ -16,7 +16,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -30,7 +30,7 @@ window = {
 				## Equipment Slot
 				{
 					"name" : "Equipment_Base",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 0,
 					"y" : 0,
@@ -40,7 +40,7 @@ window = {
 				},
 				{
 					"name" : "Inventory_Tab_01",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 16,
 					"y" : 332,
@@ -53,7 +53,7 @@ window = {
 					(
 						{
 							"name" : "Inventory_Tab_01_Print",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -67,7 +67,7 @@ window = {
 				},
 				{
 					"name" : "Inventory_Tab_02",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 67,
 					"y" : 332,
@@ -80,7 +80,7 @@ window = {
 					(
 						{
 							"name" : "Inventory_Tab_02_Print",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -94,7 +94,7 @@ window = {
 				},
 				{
 					"name" : "Inventory_Tab_03",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 118,
 					"y" : 332,
@@ -107,7 +107,7 @@ window = {
 					(
 						{
 							"name" : "Inventory_Tab_03_Print",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -121,7 +121,7 @@ window = {
 				},
 				{
 					"name" : "Inventory_Tab_04",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 169,
 					"y" : 332,
@@ -134,7 +134,7 @@ window = {
 					(
 						{
 							"name" : "Inventory_Tab_04_Print",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -148,7 +148,7 @@ window = {
 				},
 				{
 					"name" : "Inventory_Tab_05",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 220,
 					"y" : 332,
@@ -161,7 +161,7 @@ window = {
 					(
 						{
 							"name" : "Inventory_Tab_05_Print",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -177,7 +177,7 @@ window = {
 				## Item Slot
 				{
 					"name" : "ItemSlot",
-					"type" : "grid_table",
+					"tip" : "grid_table",
 
 					"x" : 15,
 					"y" : 355,
@@ -192,7 +192,7 @@ window = {
 				},
 				{
 					"name" : "EquipmentSlot",
-					"type" : "slot",
+					"tip" : "slot",
 
 					"x" : 0,
 					"y" : 0,
@@ -211,7 +211,7 @@ window = {
 				},
 				{
 					"name" : "deck1",
-					"type" : "toggle_button",
+					"tip" : "toggle_button",
 
 					"x" : 21,
 					"y" : 230,
@@ -222,7 +222,7 @@ window = {
 				},
 				{
 					"name" : "deck2",
-					"type" : "toggle_button",
+					"tip" : "toggle_button",
 
 					"x" : 234,
 					"y" : 230,
@@ -234,7 +234,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -245,13 +245,13 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":130, "y":3, "text":uiScriptLocale.DRAGONSOUL_TITLE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":130, "y":3, "text":uiScriptLocale.DRAGONSOUL_TITLE, "text_horizontal_align":"center" },
 					),
 				},
 				## Tab Area
 				{
 					"name" : "TabControl",
-					"type" : "window",
+					"tip" : "window",
 
 					"x" : 10,
 					"y" : 279,
@@ -264,7 +264,7 @@ window = {
 						## Tab
 						{
 							"name" : "Tab_01",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -276,7 +276,7 @@ window = {
 						},
 						{
 							"name" : "Tab_02",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -288,7 +288,7 @@ window = {
 						},
 						{
 							"name" : "Tab_03",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -300,7 +300,7 @@ window = {
 						},
 						{
 							"name" : "Tab_04",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -312,7 +312,7 @@ window = {
 						},
 						{
 							"name" : "Tab_05",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -324,7 +324,7 @@ window = {
 						},
 						{
 							"name" : "Tab_06",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -337,7 +337,7 @@ window = {
 						## RadioButton
 						{
 							"name" : "Tab_Button_01",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 2,
 							"y" : 2,
@@ -347,7 +347,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_02",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 42,
 							"y" : 2,
@@ -357,7 +357,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_03",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 82,
 							"y" : 2,
@@ -367,7 +367,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_04",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 122,
 							"y" : 2,
@@ -377,7 +377,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_05",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 162,
 							"y" : 2,
@@ -387,7 +387,7 @@ window = {
 						},
 						{
 							"name" : "Tab_Button_06",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 202,
 							"y" : 2,
@@ -399,7 +399,7 @@ window = {
 				},
 				{
 					"name" : "tab_text_area",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 18,
 					"y" : 315,
@@ -409,7 +409,7 @@ window = {
 				},
 				{					
 					"name" : "activate",
-					"type" : "toggle_button",
+					"tip" : "toggle_button",
 
 					"x" : 217,
 					"y" : 492,

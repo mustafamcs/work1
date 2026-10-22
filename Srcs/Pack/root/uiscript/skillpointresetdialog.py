@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 
 			"x" : 0,
 			"y" : 0,
@@ -26,12 +26,12 @@ window = {
 			(
 				{
 					"name" : "reset_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 17,
 
-					"text" : "스킬포인트 리셋",
+					"text" : "Beceri Puanı Sıfırla",
 
 					"default_image" : ROOT + "XLarge_Button_01.sub",
 					"over_image" : ROOT + "XLarge_Button_02.sub",
@@ -40,12 +40,12 @@ window = {
 
 				{
 					"name" : "cancel_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 57,
 
-					"text" : "취소",
+					"text" : "İptal",
 
 					"default_image" : ROOT + "XLarge_Button_01.sub",
 					"over_image" : ROOT + "XLarge_Button_02.sub",

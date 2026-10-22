@@ -7981,9 +7981,9 @@
 7990	select_reward_item.prob_pos=%s
 7991	select_reward_item.overflow
 7992	%s Yang kazandın.
-7993	questscroll5.reward_MONEY.error type=%s
+7993	questscroll5.reward_MONEY.error tip=%s
 7994	%s tecrübe puanı kazandın.
-7995	questscroll5.reward_EXP.error type=%s
+7995	questscroll5.reward_EXP.error tip=%s
 7996	Alındı: %s
 7997	questscroll5.use.50317
 7998	questscroll5.use.50319

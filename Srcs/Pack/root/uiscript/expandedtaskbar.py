@@ -16,7 +16,7 @@ window = {
 	(
 		{
 			"name" : "ExpanedTaskBar_Board",
-			"type" : "window",
+			"tip" : "window",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 			(
 				{
 					"name" : "DragonSoulButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 0,
 					"y" : 0,

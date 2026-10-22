@@ -13,18 +13,18 @@ IconFileName		"skill/shaman/boho.sub"
 Type				MIDDLE
 MaxLevel			"30"
 
-949Name			"焊龋"
-949Description		"到绊磊 窍绰 磊狼 郴己俊 措茄 历亲仿阑 碍拳茄促"
+949Name			"unused"
+949Description		"unused"
 
 List 949AffectData
 {
-	"付过 规绢仿 惑铰 : +%.0f" "(3 + SkillPoint / 3) * (100 + INT) / 100" ""
+	"unused" "(3 + SkillPoint / 3) * (100 + INT) / 100" ""
 }
 
-936Name				"星云阵"
-936Description		"加强同伴的抵抗力"
+936Name				"unused"
+936Description		"unused"
 List 936AffectData
 {
-	"魔法抵抗 : +%.0f" "(3 + SkillPoint / 3) * (100 + INT) / 100" ""
-	"持续时间 : %.0f秒" "5 * 60 * (5 + JeungJi) / 5" ""
+	"unused" "(3 + SkillPoint / 3) * (100 + INT) / 100" ""
+	"unused" "5 * 60 * (5 + JeungJi) / 5" ""
 }

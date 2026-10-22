@@ -1,4 +1,4 @@
-﻿#복숭아꽃진액
+#Şeftali Çiçeği Suyu
 section
 npc	20018
 item	50721	1
@@ -7,7 +7,7 @@ category	ETC
 percent	100
 end
 
-#도라지진액
+#Çançiçeği Suyu
 section
 npc	20018
 item	50722	1
@@ -16,7 +16,7 @@ category	ETC
 percent	100
 end
 
-#감꽃진액
+#Kaki Çiçeği Suyu
 section
 npc	20018
 item	50723	1
@@ -25,7 +25,7 @@ category	ETC
 percent	100
 end
 
-#가시오가피진액
+#Gango Kökü Suyu
 section
 npc	20018
 item	50724	1
@@ -34,7 +34,7 @@ category	ETC
 percent	100
 end
 
-#복숭아꽃진액
+#Şeftali Çiçeği Suyu
 section
 npc	20017
 item	50721	1
@@ -43,7 +43,7 @@ category	ETC
 percent	100
 end
 
-#도라지진액
+#Çançiçeği Suyu
 section
 npc	20017
 item	50722	1
@@ -52,7 +52,7 @@ category	ETC
 percent	100
 end
 
-#감꽃진액
+#Kaki Çiçeği Suyu
 section
 npc	20017
 item	50723	1
@@ -61,7 +61,7 @@ category	ETC
 percent	100
 end
 
-#가시오가피진액
+#Gango Kökü Suyu
 section
 npc	20017
 item	50724	1
@@ -70,7 +70,7 @@ category	ETC
 percent	100
 end
 
-#활심액진액
+#Sim Suyu
 section
 npc	20017
 item	50801	1
@@ -80,7 +80,7 @@ category	ETC
 percent	100
 end
 
-#피독수
+#Dok-Suyu
 section
 npc	20017
 item	50802	1
@@ -90,7 +90,7 @@ category	ETC
 percent	100
 end
 
-#보환수
+#Bo Suyu
 section
 npc	20017
 item	50803	100
@@ -100,7 +100,7 @@ category	ETC
 percent	100
 end
 
-#영보수
+#Yöng Suyu
 section
 npc	20017
 item	50804	100
@@ -111,7 +111,7 @@ percent	100
 end
 
 
-#복숭아꽃진액
+#Şeftali Çiçeği Suyu
 section
 npc	20022
 item	50721	1
@@ -120,7 +120,7 @@ category	ETC
 percent	100
 end
 
-#도라지진액
+#Çançiçeği Suyu
 section
 npc	20022
 item	50722	1
@@ -129,7 +129,7 @@ category	ETC
 percent	100
 end
 
-#감꽃진액
+#Kaki Çiçeği Suyu
 section
 npc	20022
 item	50723	1
@@ -138,7 +138,7 @@ category	ETC
 percent	100
 end
 
-#가시오가피진액
+#Gango Kökü Suyu
 section
 npc	20022
 item	50724	1
@@ -147,7 +147,7 @@ category	ETC
 percent	100
 end
 
-#활심액진액
+#Sim Suyu
 section
 npc	20022
 item	50801	1
@@ -157,7 +157,7 @@ category	ETC
 percent	100
 end
 
-#피독수
+#Dok-Suyu
 section
 npc	20022
 item	50802	1
@@ -167,7 +167,7 @@ category	ETC
 percent	100
 end
 
-#보환수
+#Bo Suyu
 section
 npc	20022
 item	50803	100
@@ -177,7 +177,7 @@ category	ETC
 percent	100
 end
 
-#영보수
+#Yöng Suyu
 section
 npc	20022
 item	50804	100
@@ -188,7 +188,7 @@ percent	100
 end
 
 
-#진활심액진액
+#Zin Suyu
 section
 npc	20022
 item	50813	1
@@ -198,7 +198,7 @@ category	ETC
 percent	100
 end
 
-#진피독수
+#Sambo Suyu
 section
 npc	20022
 item	50814	1
@@ -208,7 +208,7 @@ category	ETC
 percent	100
 end
 
-#진보환수
+#Mong Suyu
 section
 npc	20022
 item	50815	100
@@ -218,7 +218,7 @@ category	ETC
 percent	100
 end
 
-#진영보수
+#Hwal Suyu
 section
 npc	20022
 item	50816	100
@@ -228,7 +228,7 @@ category	ETC
 percent	100
 end
 
-#적상액
+#Kırmızı Şebnem
 section
 npc	20022
 item	50901	10
@@ -238,7 +238,7 @@ category	ETC
 percent	100
 end
 
-#홍상액
+#Pembe Şebnem
 section
 npc	20022
 item	50901	10
@@ -248,7 +248,7 @@ category	ETC
 percent	100
 end
 
-#황상액
+#Sarı Şebnem
 section
 npc	20022
 item	50901	10
@@ -258,7 +258,7 @@ category	ETC
 percent	100
 end
 
-#녹상액
+#Yeşil Şebnem
 section
 npc	20022
 item	50901	10
@@ -268,7 +268,7 @@ category	ETC
 percent	100
 end
 
-#청상액
+#Mavi Şebnem
 section
 npc	20022
 item	50901	10
@@ -278,7 +278,7 @@ category	ETC
 percent	100
 end
 
-#백상액
+#Beyaz Şebnem
 section
 npc	20022
 item	50901	10
@@ -288,7 +288,7 @@ category	ETC
 percent	100
 end
 
-#경험의물약테스트
+#Tecrübe İksiri Testi
 #section
 #npc	20018
 #item	51001	100
@@ -298,7 +298,7 @@ end
 #percent	10
 #end
 
-#용신지검
+#Runik Kılıç +0
 section
 npc	20383
 item	145	1
@@ -354,7 +354,7 @@ category	WEAPON
 percent	50
 end
 
-#파멸지검
+#Ejderha Dişi Kılıcı +0
 section
 npc	20383
 item	155	1
@@ -410,7 +410,7 @@ category	WEAPON
 percent	50
 end
 
-#오행도
+#Beş Element Kılıcı +0
 section
 npc	20383
 item	1105	1
@@ -467,7 +467,7 @@ percent	50
 end
 
 
-#천룡지궁
+#Anka Yayı +0
 section
 npc	20383
 item	2145	1
@@ -524,7 +524,7 @@ percent	50
 end
 
 
-#태양검
+#Güneş Kılıcı +0
 section
 npc	20383
 item	3145	1
@@ -581,7 +581,7 @@ percent	50
 end
 
 
-#용신령
+#Ejderha Hayaleti Çanı +0
 section
 npc	20383
 item	5105	1
@@ -638,7 +638,7 @@ percent	50
 end
 
 
-#무아지선
+#Uyuyan Ejder Yelpazesi+0
 section
 npc	20383
 item	7145	1
@@ -695,7 +695,7 @@ percent	50
 end
 
 
-#녹맹아
+#Yeşil Filiz
 section
 npc	20383
 item	6055	1
@@ -751,7 +751,7 @@ category	WEAPON
 percent	50
 end
 
-#태을갑
+#Şeytan Boynuzu Zırhı +0
 section
 npc	20383
 item	11295	1
@@ -813,7 +813,7 @@ percent	50
 end
 
 
-#영보
+#Ejder Süvari Giysisi +0
 section
 npc	20383
 item	11495	1
@@ -875,7 +875,7 @@ percent	50
 end
 
 
-#현천갑
+#Kemik Plaka Zırh +0
 section
 npc	20383
 item	11695	1
@@ -937,7 +937,7 @@ percent	50
 end
 
 
-#삼관의
+#Altın Giysi +0
 section
 npc	20383
 item	11895	1
@@ -998,7 +998,7 @@ category	ARMOR
 percent	50
 end
 
-#위천갑
+#Üstün Gök Zırhı
 section
 npc	20383
 item	21075	1
@@ -1059,7 +1059,7 @@ category	ARMOR
 percent	50
 end
 
-#홍옥계열
+#Yakut Bileklik +0
 section
 npc	20383
 item	50635	3
@@ -1094,7 +1094,7 @@ percent	30
 end
 
 
-#석류계열
+#Grena Bileklik +0
 section
 npc	20383
 item	50636	3
@@ -1129,7 +1129,7 @@ percent	30
 end
 
 
-#녹주계열
+#Zümrüt Bileklik +0
 section
 npc	20383
 item	50637	3
@@ -1163,7 +1163,7 @@ category	ACCESSORY
 percent	30
 end
 
-#청옥계열
+#Safir Bileklik +0
 section
 npc	20383
 item	50638	3
@@ -1197,7 +1197,7 @@ category	ACCESSORY
 percent	30
 end
 
-#오광계열
+#Beş Işık Serisi
 section
 npc	20383
 item	50639	3
@@ -1220,7 +1220,7 @@ category	ACCESSORY
 percent	30
 end
 
-#밸트
+#Keten Kemer +0
 section
 npc	20017
 item	50624	10
@@ -1337,7 +1337,7 @@ category	BELT
 percent	10
 end
 
-#적화석재조
+#Kızıl Alev Taşı
 section
 npc	20383
 item	51001	50
@@ -1350,7 +1350,7 @@ category	ETC
 percent	10
 end
 
-#청호갑
+#Kutup Işığı Zırhı+0
 section
 npc	20413
 item	20005	1
@@ -1411,7 +1411,7 @@ category	ARMOR
 percent	50
 end
 
-#청건
+#Suikast Kıyafeti+0
 section
 npc	20413
 item	20255	1
@@ -1472,7 +1472,7 @@ category	ARMOR
 percent	50
 end
 
-#청마갑
+#Şeytan Pençesi Zırhı+0
 section
 npc	20413
 item	20505	1
@@ -1533,7 +1533,7 @@ category	ARMOR
 percent	50
 end
 
-#청상의
+#İnanç Kıyafeti+0
 section
 npc	20413
 item	20755	1
@@ -1594,7 +1594,7 @@ category	ARMOR
 percent	50
 end
 
-#청해갑
+#Mavi Deniz Zırhı
 section
 npc	20413
 item	21095	1
@@ -1655,7 +1655,7 @@ category	ARMOR
 percent	50
 end
 
-#적룡갑
+#Magma Koru Zırhı+0
 section
 npc	20413
 item	20005	1
@@ -1716,7 +1716,7 @@ category	ARMOR
 percent	50
 end
 
-#적현
+#Kanlı Ay Kıyafeti+0
 section
 npc	20413
 item	20255	1
@@ -1777,7 +1777,7 @@ category	ARMOR
 percent	50
 end
 
-#적상갑
+#Cehennem Koşucu Zırhı+0
 section
 npc	20413
 item	20505	1
@@ -1838,7 +1838,7 @@ category	ARMOR
 percent	50
 end
 
-#적선의
+#Ateş Kıyafeti+0
 section
 npc	20413
 item	20755	1
@@ -1899,7 +1899,7 @@ category	ARMOR
 percent	50
 end
 
-#적천갑
+#Kızıl Gök Zırhı
 section
 npc	20413
 item	21095	1
@@ -1960,7 +1960,7 @@ category	ARMOR
 percent	50
 end
 
-#백호갑
+#Balina Kemiği Zırhı+0
 section
 npc	20413
 item	20005	1
@@ -2021,7 +2021,7 @@ category	ARMOR
 percent	50
 end
 
-#백건
+#Dönüşüm Kıyafeti+0
 section
 npc	20413
 item	20255	1
@@ -2082,7 +2082,7 @@ category	ARMOR
 percent	50
 end
 
-#백마갑
+#Yanıltıcı Işık Zırhı+0
 section
 npc	20413
 item	20505	1
@@ -2143,7 +2143,7 @@ category	ARMOR
 percent	50
 end
 
-#백상의
+#Ahenk Kıyafeti+0
 section
 npc	20413
 item	20755	1
@@ -2204,7 +2204,7 @@ category	ARMOR
 percent	50
 end
 
-#백현갑
+#Beyaz Bilge Zırhı
 section
 npc	20413
 item	21095	1
@@ -2265,7 +2265,7 @@ category	ARMOR
 percent	50
 end
 
-#흑룡갑
+#Kül Yağmuru Zırhı+0
 section
 npc	20413
 item	20005	1
@@ -2326,7 +2326,7 @@ category	ARMOR
 percent	50
 end
 
-#흑현
+#Ölüm Gecesi Kıyafeti+0
 section
 npc	20413
 item	20255	1
@@ -2387,7 +2387,7 @@ category	ARMOR
 percent	50
 end
 
-#흑상갑
+#Kara Ateş Zırhı+0
 section
 npc	20413
 item	20505	1
@@ -2448,7 +2448,7 @@ category	ARMOR
 percent	50
 end
 
-#흑선
+#Ay Kıyafeti+0
 section
 npc	20413
 item	20755	1
@@ -2509,7 +2509,7 @@ category	ARMOR
 percent	50
 end
 
-#흑천갑
+#Kara Gök Zırhı
 section
 npc	20413
 item	21095	1
@@ -2570,7 +2570,7 @@ category	ARMOR
 percent	50
 end
 
-#화염신발
+#Ateş Ayakkabısı+0
 section
 npc	20413
 item	15435	1
@@ -2631,7 +2631,7 @@ category	ARMOR
 percent	50
 end
 
-#빙염신발
+#Okyanus Ayakkabısı+0
 section
 npc	20413
 item	15375	1
@@ -2692,7 +2692,7 @@ category	ARMOR
 percent	50
 end
 
-#비늘투구(파티)
+#Dragon Çelik Başlık+0
 section
 npc	20421
 item	12285	1
@@ -2763,7 +2763,7 @@ percent	50
 not_remove	12289
 end
 
-#용비두건(파티)
+#Dragon Kapüşonu+0
 section
 npc	20421
 item	12405	1
@@ -2834,7 +2834,7 @@ percent	50
 not_remove	12409
 end
 
-#귀혼투구(파티)
+#Dragon Zırhlı Başlık+0
 section
 npc	20421
 item	12545	1
@@ -2905,7 +2905,7 @@ percent	50
 not_remove	12549
 end
 
-#백제모(파티)
+#Dragon Şapkası+0
 section
 npc	20421
 item	12685	1
@@ -2976,7 +2976,7 @@ percent	50
 not_remove	12689
 end
 
-#용수투구(파티)
+#Ejder Su Miğferi(Parti)
 section
 npc	20421
 item	21545	1
@@ -3047,7 +3047,7 @@ percent	50
 not_remove	21549
 end
 
-#비늘투구
+#Ejderha Çeliği Kaskı +0
 section
 npc	20421
 item	12285	1
@@ -3108,7 +3108,7 @@ category	ARMOR
 percent	70
 end
 
-#용비두건
+#Ejderha Kapüşonu +0
 section
 npc	20421
 item	12405	1
@@ -3169,7 +3169,7 @@ category	ARMOR
 percent	70
 end
 
-#귀혼투구
+#Ejderha Zırhı Kaskı +0
 section
 npc	20421
 item	12545	1
@@ -3230,7 +3230,7 @@ category	ARMOR
 percent	70
 end
 
-#백제모
+#Ejderha Şapkası +0
 section
 npc	20421
 item	12685	1
@@ -3291,7 +3291,7 @@ category	ARMOR
 percent	70
 end
 
-#천수투구
+#Gök Eli Miğferi
 section
 npc	20421
 item	21545	1
@@ -3507,7 +3507,7 @@ category	EVENT
 percent	100
 end
 
-#복숭아꽃진액
+#Şeftali Çiçeği Suyu
 section
 npc	9009
 item	50721	1
@@ -3516,7 +3516,7 @@ category	ETC
 percent	100
 end
 
-#도라지진액
+#Çançiçeği Suyu
 section
 npc	9009
 item	50722	1
@@ -3525,7 +3525,7 @@ category	ETC
 percent	100
 end
 
-#감꽃진액
+#Kaki Çiçeği Suyu
 section
 npc	9009
 item	50723	1
@@ -3534,7 +3534,7 @@ category	ETC
 percent	100
 end
 
-#가시오가피진액
+#Gango Kökü Suyu
 section
 npc	9009
 item	50724	1
@@ -3543,7 +3543,7 @@ category	ETC
 percent	100
 end
 
-#각성의 돌
+#İnce uyanış taşı
 section
 npc	20470
 item	31108	5
@@ -3584,7 +3584,7 @@ category	ETC
 percent	25
 end
 
-#흑룡도
+#Kara ejderha kılıcı+0
 section
 npc	20473
 item	31115	10
@@ -3651,7 +3651,7 @@ percent	25
 end
 
 
-#흑룡마검
+#Kara ejderha jileti+0
 section
 npc	20473
 item	31115	10
@@ -3718,7 +3718,7 @@ percent	25
 end
 
 
-#흑룡대거
+#Kara ejderha hançeri+0
 section
 npc	20473
 item	31115	10
@@ -3785,7 +3785,7 @@ percent	25
 end
 
 
-#흑룡각궁
+#Kara ejderha yayı+0
 section
 npc	20473
 item	31115	10
@@ -3852,7 +3852,7 @@ percent	25
 end
 
 
-#흑룡지검
+#Kara ejderha bıçağı+0
 section
 npc	20473
 item	31115	10
@@ -3919,7 +3919,7 @@ percent	25
 end
 
 
-#흑룡사령
+#Kara ejderha çanı+0
 section
 npc	20473
 item	31115	10
@@ -3986,7 +3986,7 @@ percent	25
 end
 
 
-#흑룡수
+#Kara Ejder Eli
 section
 npc	20473
 item	31115	10
@@ -4053,7 +4053,7 @@ percent	25
 end
 
 
-#흑룡마선
+#Kara ejder. yelpazesi+0
 section
 npc	20473
 item	31115	10
@@ -4120,7 +4120,7 @@ percent	25
 end
 
 
-#흑룡포_무사
+#Kara ejderha zırhı+0
 section
 npc	20474
 item	31114	10
@@ -4187,7 +4187,7 @@ percent	25
 end
 
 
-#풍룡포_자객
+#Rüzgar ejderha. zırhı+0
 section
 npc	20474
 item	31114	10
@@ -4254,7 +4254,7 @@ percent	25
 end
 
 
-#마룡포_수라
+#Büyü ejderhası zırhı+0
 section
 npc	20474
 item	31114	10
@@ -4321,7 +4321,7 @@ percent	25
 end
 
 
-#신룡포_무당
+#Tanrılar ejder. zırhı+0
 section
 npc	20474
 item	31114	10
@@ -4388,7 +4388,7 @@ percent	25
 end
 
 
-#천룡포_수인
+#Gök Ejderi Topu_Kurt İnsan
 section
 npc	20474
 item	31114	10
@@ -4454,7 +4454,7 @@ category	ARMOR
 percent	25
 end
 
-#흑룡투구
+#Kara ejderha kaskı+0
 section
 npc	20474
 item	31114	10
@@ -4520,7 +4520,7 @@ category	ARMOR
 percent	25
 end
 
-#풍룡투구_자객
+#Rüzgar ejderha. kaskı+0
 section
 npc	20474
 item	31114	10
@@ -4587,7 +4587,7 @@ percent	25
 end
 
 
-#마룡투구_수라
+#Büyü ejderhası kaskı+0
 section
 npc	20474
 item	31114	10
@@ -4654,7 +4654,7 @@ percent	25
 end
 
 
-#신룡투구_무당
+#Tanrılar ejder. kaskı+0
 section
 npc	20474
 item	31114	10
@@ -4721,7 +4721,7 @@ percent	25
 end
 
 
-#천룡투구_수인
+#Gök Ejderi Miğferi_Kurt İnsan
 section
 npc	20474
 item	31114	10
@@ -4787,7 +4787,7 @@ category	ARMOR
 percent	25
 end
 
-#약재
+#Yanılsama ilacı
 section
 npc	20018
 item	31145	20
@@ -4796,7 +4796,7 @@ category	ETC
 percent	50
 end
 
-#영기(çÏÑ¨)의 코스튬
+#Genel Aura Giysisi
 section
 npc	20018
 item	31137	1
@@ -4808,7 +4808,7 @@ category	ACCESSORY
 percent	20
 end
 
-#역할수련서(고급)
+#Profesyonelin karizması
 section
 npc	20018
 item	50339	5
@@ -4817,7 +4817,7 @@ category	SKILL_BOOK
 percent	20
 end
 
-#통찰력(고급)
+#Profesyonelin ilhamı
 section
 npc	20018
 item	50342	5
@@ -4826,7 +4826,7 @@ category	SKILL_BOOK
 percent	20
 end
 
-#길드 pve 열쇠
+#Kral anahtarı
 section
 npc	20650
 item	90011	100
@@ -4838,7 +4838,7 @@ category	ETC
 percent	100
 end
 
-#직업유물[무사]
+#Savaşçı ruh kalıntısı
 section
 npc	20810
 item	30280	1
@@ -4848,7 +4848,7 @@ category	JOB
 percent	100
 end
 
-#직업유물[자객]
+#Ninja ruh kalıntısı
 section
 npc	20810
 item	30281	1
@@ -4858,7 +4858,7 @@ category	JOB
 percent	100
 end
 
-#직업유물[수라]
+#Sura ruh kalıntısı
 section
 npc	20810
 item	30282	1
@@ -4868,7 +4868,7 @@ category	JOB
 percent	100
 end
 
-#직업유물[무당]
+#Şaman ruhu kalıntısı
 section
 npc	20810
 item	30283	1
@@ -4878,7 +4878,7 @@ category	JOB
 percent	100
 end
 
-#직업유물[수인]
+#Sınıf Emaneti[Kurt İnsan]
 section
 npc	20810
 item	30284	1
@@ -4888,7 +4888,7 @@ category	JOB
 percent	100
 end
 
-#고귀하게 빛나는 무기 파편
+#Kuts. Silah Parçası II
 section
 npc	20433
 item	39097	200
@@ -4898,7 +4898,7 @@ category	ETC
 percent	70
 end
 
-#고귀하게 빛나는 갑옷 파편
+#Kuts. Zırh Parçası II
 section
 npc	20433
 item	39091	200
@@ -4908,7 +4908,7 @@ category	ETC
 percent	70
 end
 
-#고귀하게 빛나는 헬멧 파편
+#Kuts. Kask Parçası II
 section
 npc	20433
 item	39085	200
@@ -4918,7 +4918,7 @@ category	ETC
 percent	70
 end
 
-#숭고하게 빛나는 무기 파편
+#Görk. Silah Parçası II
 section
 npc	20433
 item	39098	200
@@ -4928,7 +4928,7 @@ category	ETC
 percent	70
 end
 
-#숭고하게 빛나는 갑옷 파편
+#Görk. Zırh Parçası II
 section
 npc	20433
 item	39092	200
@@ -4938,7 +4938,7 @@ category	ETC
 percent	70
 end
 
-#숭고하게 빛나는 헬멧 파편
+#Görk. Kask Parçası II
 section
 npc	20433
 item	39086	200
@@ -4948,7 +4948,7 @@ category	ETC
 percent	70
 end
 
-#거룩하게 빛나는 무기 파편
+#Kahr. Silah Parçası II
 section
 npc	20433
 item	39099	200
@@ -4958,7 +4958,7 @@ category	ETC
 percent	70
 end
 
-#거룩하게 빛나는 갑옷 파편
+#Kahr. Zırh Parçası II
 section
 npc	20433
 item	39093	200
@@ -4968,7 +4968,7 @@ category	ETC
 percent	70
 end
 
-#거룩하게 빛나는 헬멧 파편
+#Kahr. Kask Parçası II
 section
 npc	20433
 item	39087	200
@@ -4978,7 +4978,7 @@ category	ETC
 percent	70
 end
 
-#영롱하게 빛나는 무기 파편
+#Soylu Silah Parçası II
 section
 npc	20433
 item	39102	10
@@ -4988,7 +4988,7 @@ category	ETC
 percent	70
 end
 
-#영롱하게 빛나는 갑옷 파편
+#Soylu Zırh Parçası II
 section
 npc	20433
 item	39096	10
@@ -4998,7 +4998,7 @@ category	ETC
 percent	70
 end
 
-#영롱하게 빛나는 헬멧 파편
+#Soylu Kask Parçası II
 section
 npc	20433
 item	39090	10
@@ -5008,7 +5008,7 @@ category	ETC
 percent	70
 end
 
-#찬란하게 빛나는 무기 파편
+#Heyb. Silah Parçası II
 section
 npc	20433
 item	39105	10
@@ -5018,7 +5018,7 @@ category	ETC
 percent	70
 end
 
-#찬란하게 빛나는 갑옷 파편
+#Heyb. Zırh Parçası II
 section
 npc	20433
 item	39104	10
@@ -5028,7 +5028,7 @@ category	ETC
 percent	70
 end
 
-#찬란하게 빛나는 헬멧 파편
+#Heyb. Kask Parçası II
 section
 npc	20433
 item	39103	10
@@ -5038,7 +5038,7 @@ category	ETC
 percent	70
 end
 
-#고귀한 서모검
+#Zehir Kılıcı+7
 section
 npc	20475
 item	187	1
@@ -5081,7 +5081,7 @@ set_value	1
 not_remove	189
 end
 
-#고귀한 사자검
+#Aslan Kılıcı+7
 section
 npc	20475
 item	197	1
@@ -5124,7 +5124,7 @@ set_value	1
 not_remove	199
 end
 
-#고귀한 진퇴마도
+#Keskin Pala+7
 section
 npc	20475
 item	207	1
@@ -5167,7 +5167,7 @@ set_value	1
 not_remove	209
 end
 
-#고귀한 진무쌍검
+#Triton Kılıcı+7
 section
 npc	20475
 item	277	1
@@ -5210,7 +5210,7 @@ set_value	1
 not_remove	279
 end
 
-#고귀한 진귀아검
+#Kutsal Kılıç+7
 section
 npc	20475
 item	287	1
@@ -5253,7 +5253,7 @@ set_value	1
 not_remove	289
 end
 
-#고귀한 십이지도
+#Zodyak Bıçak+7
 section
 npc	20475
 item	307	1
@@ -5296,7 +5296,7 @@ set_value	1
 not_remove	309
 end
 
-#고귀한 십이지칼
+#Zodyak Kılıç+7
 section
 npc	20475
 item	317	1
@@ -5339,7 +5339,7 @@ set_value	1
 not_remove	319
 end
 
-#고귀한 흑룡도
+#Kara ejderha kılıcı+7
 section
 npc	20475
 item	327	1
@@ -5466,7 +5466,7 @@ set_value	1
 not_remove	335
 end
 
-#고귀한 흑룡마검
+#Kara ejderha jileti+7
 section
 npc	20475
 item	347	1
@@ -5592,7 +5592,7 @@ set_value	1
 not_remove	355
 end
 
-#고귀한 용신지검
+#Runik Kılıç +7
 section
 npc	20475
 item	467	1
@@ -5635,7 +5635,7 @@ set_value	1
 not_remove	469
 end
 
-#고귀한 파멸지검
+#Ejderha Dişi Kılıcı +7
 section
 npc	20475
 item	477	1
@@ -5678,7 +5678,7 @@ set_value	1
 not_remove	479
 end
 
-#고귀한 진파멸지검
+#Kyanit Kılıcı+7
 section
 npc	20475
 item	507	1
@@ -5721,7 +5721,7 @@ set_value	1
 not_remove	509
 end
 
-#고귀한 마인검
+#Şeytan Kanadı Çakram+7
 section
 npc	20475
 item	1137	1
@@ -5764,7 +5764,7 @@ set_value	1
 not_remove	1139
 end
 
-#고귀한 십이지단도
+#Zodyak Hançeri+7
 section
 npc	20475
 item	1187	1
@@ -5807,7 +5807,7 @@ set_value	1
 not_remove	1189
 end
 
-#고귀한 흑룡대거
+#Kara ejderha hançeri+7
 section
 npc	20475
 item	1197	1
@@ -5934,7 +5934,7 @@ set_value	1
 not_remove	1205
 end
 
-#고귀한 오행도
+#Beş Element Kılıcı +7
 section
 npc	20475
 item	1347	1
@@ -5977,7 +5977,7 @@ set_value	1
 not_remove	1349
 end
 
-#고귀한 진오행도
+#Kyanit Hançer+7
 section
 npc	20475
 item	1507	1
@@ -6020,7 +6020,7 @@ set_value	1
 not_remove	1509
 end
 
-#고귀한 진황룡대궁
+#Büyük Şeytan Yayı+7
 section
 npc	20475
 item	2167	1
@@ -6063,7 +6063,7 @@ set_value	1
 not_remove	2169
 end
 
-#고귀한 철패신궁
+#Havalı Çelik Yay+7
 section
 npc	20475
 item	2177	1
@@ -6106,7 +6106,7 @@ set_value	1
 not_remove	2179
 end
 
-#고귀한 십이지궁
+#Zodyak Yay+7
 section
 npc	20475
 item	2207	1
@@ -6149,7 +6149,7 @@ set_value	1
 not_remove	2209
 end
 
-#고귀한 흑룡각궁
+#Kara ejderha yayı+7
 section
 npc	20475
 item	2217	1
@@ -6276,7 +6276,7 @@ set_value	1
 not_remove	2225
 end
 
-#고귀한 천룡지궁
+#Anka Yayı +7
 section
 npc	20475
 item	2377	1
@@ -6319,7 +6319,7 @@ set_value	1
 not_remove	2379
 end
 
-#고귀한 진천룡지궁
+#Kyanit Yay+7
 section
 npc	20475
 item	2507	1
@@ -6362,7 +6362,7 @@ set_value	1
 not_remove	2509
 end
 
-#고귀한 혼원검
+#Kin Kılıcı+7
 section
 npc	20475
 item	3167	1
@@ -6405,7 +6405,7 @@ set_value	1
 not_remove	3169
 end
 
-#고귀한 태양검
+#Güneş Kılıcı +7
 section
 npc	20475
 item	3197	1
@@ -6448,7 +6448,7 @@ set_value	1
 not_remove	3199
 end
 
-#고귀한 십이지극
+#Zodyak Orağı+7
 section
 npc	20475
 item	3227	1
@@ -6491,7 +6491,7 @@ set_value	1
 not_remove	3229
 end
 
-#고귀한 흑룡지검
+#Kara ejderha bıçağı+7
 section
 npc	20475
 item	3237	1
@@ -6618,7 +6618,7 @@ set_value	1
 not_remove	3245
 end
 
-#고귀한 진태양검
+#Kyanit Bıçağı+7
 section
 npc	20475
 item	3507	1
@@ -6661,7 +6661,7 @@ set_value	1
 not_remove	3509
 end
 
-#고귀한 진용마도
+#Ruhsuz Bıçak+7
 section
 npc	20475
 item	4047	1
@@ -6704,7 +6704,7 @@ set_value	1
 not_remove	4049
 end
 
-#고귀한 청죽령
+#Orkide Çan+7
 section
 npc	20475
 item	5127	1
@@ -6747,7 +6747,7 @@ set_value	1
 not_remove	5129
 end
 
-#고귀한 십이지령
+#Zodyak Çanı+7
 section
 npc	20475
 item	5167	1
@@ -6790,7 +6790,7 @@ set_value	1
 not_remove	5169
 end
 
-#고귀한 흑룡사령
+#Kara ejderha çanı+7
 section
 npc	20475
 item	5177	1
@@ -6917,7 +6917,7 @@ set_value	1
 not_remove	5185
 end
 
-#고귀한 진진천령
+#Ejder Çenesi Çanı+7
 section
 npc	20475
 item	5337	1
@@ -6960,7 +6960,7 @@ set_value	1
 not_remove	5339
 end
 
-#고귀한 용신령
+#Ejderha Hayaleti Çanı +7
 section
 npc	20475
 item	5347	1
@@ -7003,7 +7003,7 @@ set_value	1
 not_remove	5349
 end
 
-#고귀한 진용신령
+#Kyanit Çanı+7
 section
 npc	20475
 item	5507	1
@@ -7046,7 +7046,7 @@ set_value	1
 not_remove	5509
 end
 
-#고귀한 적철수
+#Asil Kızıl Demir El
 section
 npc	20475
 item	6077	1
@@ -7089,7 +7089,7 @@ set_value	1
 not_remove	6079
 end
 
-#고귀한 진녹맹아
+#Asil Gerçek Yeşil Filiz
 section
 npc	20475
 item	6087	1
@@ -7132,7 +7132,7 @@ set_value	1
 not_remove	6089
 end
 
-#고귀한 패룡수
+#Asil Paeryong Eli
 section
 npc	20475
 item	6097	1
@@ -7175,7 +7175,7 @@ set_value	1
 not_remove	6099
 end
 
-#고귀한 십이지수
+#Asil On İki Burç Eli
 section
 npc	20475
 item	6127	1
@@ -7218,7 +7218,7 @@ set_value	1
 not_remove	6129
 end
 
-#고귀한 흑룡수
+#Asil Kara Ejder Eli
 section
 npc	20475
 item	6137	1
@@ -7345,7 +7345,7 @@ set_value	1
 not_remove	6145
 end
 
-#고귀한 진패룡수
+#Asil Gerçek Paeryong Eli
 section
 npc	20475
 item	6507	1
@@ -7388,7 +7388,7 @@ set_value	1
 not_remove	6509
 end
 
-#고귀한 진제마선
+#İblisin Yelpazesi+7
 section
 npc	20475
 item	7197	1
@@ -7431,7 +7431,7 @@ set_value	1
 not_remove	7199
 end
 
-#고귀한 십이지선
+#Zodyak yelpazesi+7
 section
 npc	20475
 item	7307	1
@@ -7474,7 +7474,7 @@ set_value	1
 not_remove	7309
 end
 
-#고귀한 흑룡마선
+#Kara ejder. yelpazesi+7
 section
 npc	20475
 item	7317	1
@@ -7601,7 +7601,7 @@ set_value	1
 not_remove	7325
 end
 
-#고귀한 무아지선
+#Uyuyan Ejder Yelpazesi+7
 section
 npc	20475
 item	7377	1
@@ -7644,7 +7644,7 @@ set_value	1
 not_remove	7379
 end
 
-#고귀한 진무아지선
+#Kyanit Yelpaze+7
 section
 npc	20475
 item	7507	1
@@ -7687,7 +7687,7 @@ set_value	1
 not_remove	7509
 end
 
-#고귀한 뱀룡도
+#Yılan kılıcı+7
 section
 npc	20475
 item	367	1
@@ -7814,7 +7814,7 @@ set_value	1
 not_remove	375
 end
 
-#고귀한 뱀룡마검
+#Yılan bıçağı+7
 section
 npc	20475
 item	387	1
@@ -7941,7 +7941,7 @@ set_value	1
 not_remove	395
 end
 
-#고귀한 뱀룡대거
+#Yılan hançeri+7
 section
 npc	20475
 item	1217	1
@@ -8068,7 +8068,7 @@ set_value	1
 not_remove	1225
 end
 
-#고귀한 뱀룡각궁
+#Yılan yayı+7
 section
 npc	20475
 item	2237	1
@@ -8195,7 +8195,7 @@ set_value	1
 not_remove	2245
 end
 
-#고귀한 뱀룡지검
+#Yılan büyük kılıcı+7
 section
 npc	20475
 item	3257	1
@@ -8322,7 +8322,7 @@ set_value	1
 not_remove	3265
 end
 
-#고귀한 뱀룡사령
+#Yılan çanı+7
 section
 npc	20475
 item	5207	1
@@ -8449,7 +8449,7 @@ set_value	1
 not_remove	5215
 end
 
-#고귀한 뱀룡수
+#Asil Yılan Ejder Eli
 section
 npc	20475
 item	6157	1
@@ -8576,7 +8576,7 @@ set_value	1
 not_remove	6165
 end
 
-#고귀한 뱀룡마선
+#Yılan yelpazesi+7
 section
 npc	20475
 item	7337	1
@@ -8703,7 +8703,7 @@ set_value	1
 not_remove	7345
 end
 
-#숭고한 서모검		
+#Zehir Kılıcı+7
 section		
 npc	20476	
 item	187	1
@@ -8746,7 +8746,7 @@ set_value	2
 not_remove	189	
 end		
 		
-#숭고한 사자검		
+#Aslan Kılıcı+7
 section		
 npc	20476	
 item	197	1
@@ -8789,7 +8789,7 @@ set_value	2
 not_remove	199	
 end		
 		
-#숭고한 진퇴마도		
+#Keskin Pala+7
 section		
 npc	20476	
 item	207	1
@@ -8832,7 +8832,7 @@ set_value	2
 not_remove	209	
 end		
 		
-#숭고한 진무쌍검		
+#Triton Kılıcı+7
 section		
 npc	20476	
 item	277	1
@@ -8875,7 +8875,7 @@ set_value	2
 not_remove	279	
 end		
 		
-#숭고한 진귀아검		
+#Kutsal Kılıç+7
 section		
 npc	20476	
 item	287	1
@@ -8918,7 +8918,7 @@ set_value	2
 not_remove	289	
 end		
 		
-#숭고한 십이지도		
+#Zodyak Bıçak+7
 section		
 npc	20476	
 item	307	1
@@ -8961,7 +8961,7 @@ set_value	2
 not_remove	309	
 end		
 		
-#숭고한 십이지칼		
+#Zodyak Kılıç+7
 section		
 npc	20476	
 item	317	1
@@ -9004,7 +9004,7 @@ set_value	2
 not_remove	319	
 end		
 		
-#숭고한 흑룡도		
+#Kara ejderha kılıcı+7
 section		
 npc	20476	
 item	327	1
@@ -9131,7 +9131,7 @@ set_value	2
 not_remove	335	
 end		
 		
-#숭고한 흑룡마검		
+#Kara ejderha jileti+7
 section		
 npc	20476	
 item	347	1
@@ -9257,7 +9257,7 @@ set_value	2
 not_remove	355	
 end		
 		
-#숭고한 용신지검		
+#Runik Kılıç +7
 section		
 npc	20476	
 item	467	1
@@ -9300,7 +9300,7 @@ set_value	2
 not_remove	469	
 end		
 		
-#숭고한 파멸지검		
+#Ejderha Dişi Kılıcı +7
 section		
 npc	20476	
 item	477	1
@@ -9343,7 +9343,7 @@ set_value	2
 not_remove	479	
 end		
 		
-#숭고한 진파멸지검		
+#Kyanit Kılıcı+7
 section		
 npc	20476	
 item	507	1
@@ -9386,7 +9386,7 @@ set_value	2
 not_remove	509	
 end		
 		
-#숭고한 마인검		
+#Şeytan Kanadı Çakram+7
 section		
 npc	20476	
 item	1137	1
@@ -9429,7 +9429,7 @@ set_value	2
 not_remove	1139	
 end		
 		
-#숭고한 십이지단도		
+#Zodyak Hançeri+7
 section		
 npc	20476	
 item	1187	1
@@ -9472,7 +9472,7 @@ set_value	2
 not_remove	1189	
 end		
 		
-#숭고한 흑룡대거		
+#Kara ejderha hançeri+7
 section		
 npc	20476	
 item	1197	1
@@ -9599,7 +9599,7 @@ set_value	2
 not_remove	1205	
 end		
 		
-#숭고한 오행도		
+#Beş Element Kılıcı +7
 section		
 npc	20476	
 item	1347	1
@@ -9642,7 +9642,7 @@ set_value	2
 not_remove	1349	
 end		
 		
-#숭고한 진오행도		
+#Kyanit Hançer+7
 section		
 npc	20476	
 item	1507	1
@@ -9685,7 +9685,7 @@ set_value	2
 not_remove	1509	
 end		
 		
-#숭고한 진황룡대궁		
+#Büyük Şeytan Yayı+7
 section		
 npc	20476	
 item	2167	1
@@ -9728,7 +9728,7 @@ set_value	2
 not_remove	2169	
 end		
 		
-#숭고한 철패신궁		
+#Havalı Çelik Yay+7
 section		
 npc	20476	
 item	2177	1
@@ -9771,7 +9771,7 @@ set_value	2
 not_remove	2179	
 end		
 		
-#숭고한 십이지궁		
+#Zodyak Yay+7
 section		
 npc	20476	
 item	2207	1
@@ -9814,7 +9814,7 @@ set_value	2
 not_remove	2209	
 end		
 		
-#숭고한 흑룡각궁		
+#Kara ejderha yayı+7
 section		
 npc	20476	
 item	2217	1
@@ -9941,7 +9941,7 @@ set_value	2
 not_remove	2225	
 end		
 		
-#숭고한 천룡지궁		
+#Anka Yayı +7
 section		
 npc	20476	
 item	2377	1
@@ -9984,7 +9984,7 @@ set_value	2
 not_remove	2379	
 end		
 		
-#숭고한 진천룡지궁		
+#Kyanit Yay+7
 section		
 npc	20476	
 item	2507	1
@@ -10027,7 +10027,7 @@ set_value	2
 not_remove	2509	
 end		
 		
-#숭고한 혼원검		
+#Kin Kılıcı+7
 section		
 npc	20476	
 item	3167	1
@@ -10070,7 +10070,7 @@ set_value	2
 not_remove	3169	
 end		
 		
-#숭고한 태양검		
+#Güneş Kılıcı +7
 section		
 npc	20476	
 item	3197	1
@@ -10113,7 +10113,7 @@ set_value	2
 not_remove	3199	
 end		
 		
-#숭고한 십이지극		
+#Zodyak Orağı+7
 section		
 npc	20476	
 item	3227	1
@@ -10156,7 +10156,7 @@ set_value	2
 not_remove	3229	
 end		
 		
-#숭고한 흑룡지검		
+#Kara ejderha bıçağı+7
 section		
 npc	20476	
 item	3237	1
@@ -10283,7 +10283,7 @@ set_value	2
 not_remove	3245	
 end		
 		
-#숭고한 진태양검		
+#Kyanit Bıçağı+7
 section		
 npc	20476	
 item	3507	1
@@ -10326,7 +10326,7 @@ set_value	2
 not_remove	3509	
 end		
 		
-#숭고한 진용마도		
+#Ruhsuz Bıçak+7
 section		
 npc	20476	
 item	4047	1
@@ -10369,7 +10369,7 @@ set_value	2
 not_remove	4049	
 end		
 		
-#숭고한 청죽령		
+#Orkide Çan+7
 section		
 npc	20476	
 item	5127	1
@@ -10412,7 +10412,7 @@ set_value	2
 not_remove	5129	
 end		
 		
-#숭고한 십이지령		
+#Zodyak Çanı+7
 section		
 npc	20476	
 item	5167	1
@@ -10455,7 +10455,7 @@ set_value	2
 not_remove	5169	
 end		
 		
-#숭고한 흑룡사령		
+#Kara ejderha çanı+7
 section		
 npc	20476	
 item	5177	1
@@ -10582,7 +10582,7 @@ set_value	2
 not_remove	5185	
 end		
 		
-#숭고한 진진천령		
+#Ejder Çenesi Çanı+7
 section		
 npc	20476	
 item	5337	1
@@ -10625,7 +10625,7 @@ set_value	2
 not_remove	5339	
 end		
 		
-#숭고한 용신령		
+#Ejderha Hayaleti Çanı +7
 section		
 npc	20476	
 item	5347	1
@@ -10668,7 +10668,7 @@ set_value	2
 not_remove	5349	
 end		
 		
-#숭고한 진용신령		
+#Kyanit Çanı+7
 section		
 npc	20476	
 item	5507	1
@@ -10711,7 +10711,7 @@ set_value	2
 not_remove	5509	
 end		
 		
-#숭고한 적철수		
+#Yüce Kızıl Demir El
 section		
 npc	20476	
 item	6077	1
@@ -10754,7 +10754,7 @@ set_value	2
 not_remove	6079	
 end		
 		
-#숭고한 진녹맹아		
+#Yüce Gerçek Yeşil Filiz
 section		
 npc	20476	
 item	6087	1
@@ -10797,7 +10797,7 @@ set_value	2
 not_remove	6089	
 end		
 		
-#숭고한 패룡수		
+#Yüce Paeryong Eli
 section		
 npc	20476	
 item	6097	1
@@ -10840,7 +10840,7 @@ set_value	2
 not_remove	6099	
 end		
 		
-#숭고한 십이지수		
+#Yüce On İki Burç Eli
 section		
 npc	20476	
 item	6127	1
@@ -10883,7 +10883,7 @@ set_value	2
 not_remove	6129	
 end		
 		
-#숭고한 흑룡수		
+#Yüce Kara Ejder Eli
 section		
 npc	20476	
 item	6137	1
@@ -11010,7 +11010,7 @@ set_value	2
 not_remove	6145	
 end		
 		
-#숭고한 진패룡수		
+#Yüce Gerçek Paeryong Eli
 section		
 npc	20476	
 item	6507	1
@@ -11053,7 +11053,7 @@ set_value	2
 not_remove	6509	
 end		
 		
-#숭고한 진제마선		
+#İblisin Yelpazesi+7
 section		
 npc	20476	
 item	7197	1
@@ -11096,7 +11096,7 @@ set_value	2
 not_remove	7199	
 end		
 		
-#숭고한 십이지선		
+#Zodyak yelpazesi+7
 section		
 npc	20476	
 item	7307	1
@@ -11139,7 +11139,7 @@ set_value	2
 not_remove	7309	
 end		
 		
-#숭고한 흑룡마선		
+#Kara ejder. yelpazesi+7
 section		
 npc	20476	
 item	7317	1
@@ -11266,7 +11266,7 @@ set_value	2
 not_remove	7325	
 end		
 		
-#숭고한 무아지선		
+#Uyuyan Ejder Yelpazesi+7
 section		
 npc	20476	
 item	7377	1
@@ -11309,7 +11309,7 @@ set_value	2
 not_remove	7379	
 end		
 		
-#숭고한 진무아지선		
+#Kyanit Yelpaze+7
 section		
 npc	20476	
 item	7507	1
@@ -11352,7 +11352,7 @@ set_value	2
 not_remove	7509	
 end		
 		
-#숭고한 뱀룡도		
+#Yılan kılıcı+7
 section		
 npc	20476	
 item	367	1
@@ -11479,7 +11479,7 @@ set_value	2
 not_remove	375	
 end		
 		
-#숭고한 뱀룡마검		
+#Yılan bıçağı+7
 section		
 npc	20476	
 item	387	1
@@ -11606,7 +11606,7 @@ set_value	2
 not_remove	395	
 end		
 		
-#숭고한 뱀룡대거		
+#Yılan hançeri+7
 section		
 npc	20476	
 item	1217	1
@@ -11733,7 +11733,7 @@ set_value	2
 not_remove	1225	
 end		
 		
-#숭고한 뱀룡각궁		
+#Yılan yayı+7
 section		
 npc	20476	
 item	2237	1
@@ -11860,7 +11860,7 @@ set_value	2
 not_remove	2245	
 end		
 		
-#숭고한 뱀룡지검		
+#Yılan büyük kılıcı+7
 section		
 npc	20476	
 item	3257	1
@@ -11987,7 +11987,7 @@ set_value	2
 not_remove	3265	
 end		
 		
-#숭고한 뱀룡사령		
+#Yılan çanı+7
 section		
 npc	20476	
 item	5207	1
@@ -12114,7 +12114,7 @@ set_value	2
 not_remove	5215	
 end		
 		
-#숭고한 뱀룡수		
+#Yüce Yılan Ejder Eli
 section		
 npc	20476	
 item	6157	1
@@ -12241,7 +12241,7 @@ set_value	2
 not_remove	6165	
 end		
 		
-#숭고한 뱀룡마선		
+#Yılan yelpazesi+7
 section		
 npc	20476	
 item	7337	1
@@ -12368,7 +12368,7 @@ set_value	2
 not_remove	7345	
 end		
 
-#거룩한 서모검		
+#Zehir Kılıcı+7
 section		
 npc	20477	
 item	187	1
@@ -12411,7 +12411,7 @@ set_value	3
 not_remove	189	
 end		
 		
-#거룩한 사자검		
+#Aslan Kılıcı+7
 section		
 npc	20477	
 item	197	1
@@ -12454,7 +12454,7 @@ set_value	3
 not_remove	199	
 end		
 		
-#거룩한 진퇴마도		
+#Keskin Pala+7
 section		
 npc	20477	
 item	207	1
@@ -12497,7 +12497,7 @@ set_value	3
 not_remove	209	
 end		
 		
-#거룩한 진무쌍검		
+#Triton Kılıcı+7
 section		
 npc	20477	
 item	277	1
@@ -12540,7 +12540,7 @@ set_value	3
 not_remove	279	
 end		
 		
-#거룩한 진귀아검		
+#Kutsal Kılıç+7
 section		
 npc	20477	
 item	287	1
@@ -12583,7 +12583,7 @@ set_value	3
 not_remove	289	
 end		
 		
-#거룩한 십이지도		
+#Zodyak Bıçak+7
 section		
 npc	20477	
 item	307	1
@@ -12626,7 +12626,7 @@ set_value	3
 not_remove	309	
 end		
 		
-#거룩한 십이지칼		
+#Zodyak Kılıç+7
 section		
 npc	20477	
 item	317	1
@@ -12669,7 +12669,7 @@ set_value	3
 not_remove	319	
 end		
 		
-#거룩한 흑룡도		
+#Kara ejderha kılıcı+7
 section		
 npc	20477	
 item	327	1
@@ -12796,7 +12796,7 @@ set_value	3
 not_remove	335	
 end		
 		
-#거룩한 흑룡마검		
+#Kara ejderha jileti+7
 section		
 npc	20477	
 item	347	1
@@ -12922,7 +12922,7 @@ set_value	3
 not_remove	355	
 end		
 		
-#거룩한 용신지검		
+#Runik Kılıç +7
 section		
 npc	20477	
 item	467	1
@@ -12965,7 +12965,7 @@ set_value	3
 not_remove	469	
 end		
 		
-#거룩한 파멸지검		
+#Ejderha Dişi Kılıcı +7
 section		
 npc	20477	
 item	477	1
@@ -13008,7 +13008,7 @@ set_value	3
 not_remove	479	
 end		
 		
-#거룩한 진파멸지검		
+#Kyanit Kılıcı+7
 section		
 npc	20477	
 item	507	1
@@ -13051,7 +13051,7 @@ set_value	3
 not_remove	509	
 end		
 		
-#거룩한 마인검		
+#Şeytan Kanadı Çakram+7
 section		
 npc	20477	
 item	1137	1
@@ -13094,7 +13094,7 @@ set_value	3
 not_remove	1139	
 end		
 		
-#거룩한 십이지단도		
+#Zodyak Hançeri+7
 section		
 npc	20477	
 item	1187	1
@@ -13137,7 +13137,7 @@ set_value	3
 not_remove	1189	
 end		
 		
-#거룩한 흑룡대거		
+#Kara ejderha hançeri+7
 section		
 npc	20477	
 item	1197	1
@@ -13264,7 +13264,7 @@ set_value	3
 not_remove	1205	
 end		
 		
-#거룩한 오행도		
+#Beş Element Kılıcı +7
 section		
 npc	20477	
 item	1347	1
@@ -13307,7 +13307,7 @@ set_value	3
 not_remove	1349	
 end		
 		
-#거룩한 진오행도		
+#Kyanit Hançer+7
 section		
 npc	20477	
 item	1507	1
@@ -13350,7 +13350,7 @@ set_value	3
 not_remove	1509	
 end		
 		
-#거룩한 진황룡대궁		
+#Büyük Şeytan Yayı+7
 section		
 npc	20477	
 item	2167	1
@@ -13393,7 +13393,7 @@ set_value	3
 not_remove	2169	
 end		
 		
-#거룩한 철패신궁		
+#Havalı Çelik Yay+7
 section		
 npc	20477	
 item	2177	1
@@ -13436,7 +13436,7 @@ set_value	3
 not_remove	2179	
 end		
 		
-#거룩한 십이지궁		
+#Zodyak Yay+7
 section		
 npc	20477	
 item	2207	1
@@ -13479,7 +13479,7 @@ set_value	3
 not_remove	2209	
 end		
 		
-#거룩한 흑룡각궁		
+#Kara ejderha yayı+7
 section		
 npc	20477	
 item	2217	1
@@ -13606,7 +13606,7 @@ set_value	3
 not_remove	2225	
 end		
 		
-#거룩한 천룡지궁		
+#Anka Yayı +7
 section		
 npc	20477	
 item	2377	1
@@ -13649,7 +13649,7 @@ set_value	3
 not_remove	2379	
 end		
 		
-#거룩한 진천룡지궁		
+#Kyanit Yay+7
 section		
 npc	20477	
 item	2507	1
@@ -13692,7 +13692,7 @@ set_value	3
 not_remove	2509	
 end		
 		
-#거룩한 혼원검		
+#Kin Kılıcı+7
 section		
 npc	20477	
 item	3167	1
@@ -13735,7 +13735,7 @@ set_value	3
 not_remove	3169	
 end		
 		
-#거룩한 태양검		
+#Güneş Kılıcı +7
 section		
 npc	20477	
 item	3197	1
@@ -13778,7 +13778,7 @@ set_value	3
 not_remove	3199	
 end		
 		
-#거룩한 십이지극		
+#Zodyak Orağı+7
 section		
 npc	20477	
 item	3227	1
@@ -13821,7 +13821,7 @@ set_value	3
 not_remove	3229	
 end		
 		
-#거룩한 흑룡지검		
+#Kara ejderha bıçağı+7
 section		
 npc	20477	
 item	3237	1
@@ -13948,7 +13948,7 @@ set_value	3
 not_remove	3245	
 end		
 		
-#거룩한 진태양검		
+#Kyanit Bıçağı+7
 section		
 npc	20477	
 item	3507	1
@@ -13991,7 +13991,7 @@ set_value	3
 not_remove	3509	
 end		
 		
-#거룩한 진용마도		
+#Ruhsuz Bıçak+7
 section		
 npc	20477	
 item	4047	1
@@ -14034,7 +14034,7 @@ set_value	3
 not_remove	4049	
 end		
 		
-#거룩한 청죽령		
+#Orkide Çan+7
 section		
 npc	20477	
 item	5127	1
@@ -14077,7 +14077,7 @@ set_value	3
 not_remove	5129	
 end		
 		
-#거룩한 십이지령		
+#Zodyak Çanı+7
 section		
 npc	20477	
 item	5167	1
@@ -14120,7 +14120,7 @@ set_value	3
 not_remove	5169	
 end		
 		
-#거룩한 흑룡사령		
+#Kara ejderha çanı+7
 section		
 npc	20477	
 item	5177	1
@@ -14247,7 +14247,7 @@ set_value	3
 not_remove	5185	
 end		
 		
-#거룩한 진진천령		
+#Ejder Çenesi Çanı+7
 section		
 npc	20477	
 item	5337	1
@@ -14290,7 +14290,7 @@ set_value	3
 not_remove	5339	
 end		
 		
-#거룩한 용신령		
+#Ejderha Hayaleti Çanı +7
 section		
 npc	20477	
 item	5347	1
@@ -14333,7 +14333,7 @@ set_value	3
 not_remove	5349	
 end		
 		
-#거룩한 진용신령		
+#Kyanit Çanı+7
 section		
 npc	20477	
 item	5507	1
@@ -14376,7 +14376,7 @@ set_value	3
 not_remove	5509	
 end		
 		
-#거룩한 적철수		
+#Kutsal Kızıl Demir El
 section		
 npc	20477	
 item	6077	1
@@ -14419,7 +14419,7 @@ set_value	3
 not_remove	6079	
 end		
 		
-#거룩한 진녹맹아		
+#Kutsal Gerçek Yeşil Filiz
 section		
 npc	20477	
 item	6087	1
@@ -14462,7 +14462,7 @@ set_value	3
 not_remove	6089	
 end		
 		
-#거룩한 패룡수		
+#Kutsal Paeryong Eli
 section		
 npc	20477	
 item	6097	1
@@ -14505,7 +14505,7 @@ set_value	3
 not_remove	6099	
 end		
 		
-#거룩한 십이지수		
+#Kutsal On İki Burç Eli
 section		
 npc	20477	
 item	6127	1
@@ -14548,7 +14548,7 @@ set_value	3
 not_remove	6129	
 end		
 		
-#거룩한 흑룡수		
+#Kutsal Kara Ejder Eli
 section		
 npc	20477	
 item	6137	1
@@ -14675,7 +14675,7 @@ set_value	3
 not_remove	6145	
 end		
 		
-#거룩한 진패룡수		
+#Kutsal Gerçek Paeryong Eli
 section		
 npc	20477	
 item	6507	1
@@ -14718,7 +14718,7 @@ set_value	3
 not_remove	6509	
 end		
 		
-#거룩한 진제마선		
+#İblisin Yelpazesi+7
 section		
 npc	20477	
 item	7197	1
@@ -14761,7 +14761,7 @@ set_value	3
 not_remove	7199	
 end		
 		
-#거룩한 십이지선		
+#Zodyak yelpazesi+7
 section		
 npc	20477	
 item	7307	1
@@ -14804,7 +14804,7 @@ set_value	3
 not_remove	7309	
 end		
 		
-#거룩한 흑룡마선		
+#Kara ejder. yelpazesi+7
 section		
 npc	20477	
 item	7317	1
@@ -14931,7 +14931,7 @@ set_value	3
 not_remove	7325	
 end		
 		
-#거룩한 무아지선		
+#Uyuyan Ejder Yelpazesi+7
 section		
 npc	20477	
 item	7377	1
@@ -14974,7 +14974,7 @@ set_value	3
 not_remove	7379	
 end		
 		
-#거룩한 진무아지선		
+#Kyanit Yelpaze+7
 section		
 npc	20477	
 item	7507	1
@@ -15017,7 +15017,7 @@ set_value	3
 not_remove	7509	
 end		
 		
-#거룩한 뱀룡도		
+#Yılan kılıcı+7
 section		
 npc	20477	
 item	367	1
@@ -15144,7 +15144,7 @@ set_value	3
 not_remove	375	
 end		
 		
-#거룩한 뱀룡마검		
+#Yılan bıçağı+7
 section		
 npc	20477	
 item	387	1
@@ -15271,7 +15271,7 @@ set_value	3
 not_remove	395	
 end		
 		
-#거룩한 뱀룡대거		
+#Yılan hançeri+7
 section		
 npc	20477	
 item	1217	1
@@ -15398,7 +15398,7 @@ set_value	3
 not_remove	1225	
 end		
 		
-#거룩한 뱀룡각궁		
+#Yılan yayı+7
 section		
 npc	20477	
 item	2237	1
@@ -15525,7 +15525,7 @@ set_value	3
 not_remove	2245	
 end		
 		
-#거룩한 뱀룡지검		
+#Yılan büyük kılıcı+7
 section		
 npc	20477	
 item	3257	1
@@ -15652,7 +15652,7 @@ set_value	3
 not_remove	3265	
 end		
 		
-#거룩한 뱀룡사령		
+#Yılan çanı+7
 section		
 npc	20477	
 item	5207	1
@@ -15779,7 +15779,7 @@ set_value	3
 not_remove	5215	
 end		
 		
-#거룩한 뱀룡수		
+#Kutsal Yılan Ejder Eli
 section		
 npc	20477	
 item	6157	1
@@ -15906,7 +15906,7 @@ set_value	3
 not_remove	6165	
 end		
 		
-#거룩한 뱀룡마선		
+#Yılan yelpazesi+7
 section		
 npc	20477	
 item	7337	1
@@ -16033,7 +16033,7 @@ set_value	3
 not_remove	7345	
 end		
 
-#영롱한 서모검		
+#Zehir Kılıcı+7
 section		
 npc	20478	
 item	187	1
@@ -16076,7 +16076,7 @@ set_value	4
 not_remove	189	
 end		
 		
-#영롱한 사자검		
+#Aslan Kılıcı+7
 section		
 npc	20478	
 item	197	1
@@ -16119,7 +16119,7 @@ set_value	4
 not_remove	199	
 end		
 		
-#영롱한 진퇴마도		
+#Keskin Pala+7
 section		
 npc	20478	
 item	207	1
@@ -16162,7 +16162,7 @@ set_value	4
 not_remove	209	
 end		
 		
-#영롱한 진무쌍검		
+#Triton Kılıcı+7
 section		
 npc	20478	
 item	277	1
@@ -16205,7 +16205,7 @@ set_value	4
 not_remove	279	
 end		
 		
-#영롱한 진귀아검		
+#Kutsal Kılıç+7
 section		
 npc	20478	
 item	287	1
@@ -16248,7 +16248,7 @@ set_value	4
 not_remove	289	
 end		
 		
-#영롱한 십이지도		
+#Zodyak Bıçak+7
 section		
 npc	20478	
 item	307	1
@@ -16291,7 +16291,7 @@ set_value	4
 not_remove	309	
 end		
 		
-#영롱한 십이지칼		
+#Zodyak Kılıç+7
 section		
 npc	20478	
 item	317	1
@@ -16334,7 +16334,7 @@ set_value	4
 not_remove	319	
 end		
 		
-#영롱한 흑룡도		
+#Kara ejderha kılıcı+7
 section		
 npc	20478	
 item	327	1
@@ -16461,7 +16461,7 @@ set_value	4
 not_remove	335	
 end		
 		
-#영롱한 흑룡마검		
+#Kara ejderha jileti+7
 section		
 npc	20478	
 item	347	1
@@ -16587,7 +16587,7 @@ set_value	4
 not_remove	355	
 end		
 		
-#영롱한 용신지검		
+#Runik Kılıç +7
 section		
 npc	20478	
 item	467	1
@@ -16630,7 +16630,7 @@ set_value	4
 not_remove	469	
 end		
 		
-#영롱한 파멸지검		
+#Ejderha Dişi Kılıcı +7
 section		
 npc	20478	
 item	477	1
@@ -16673,7 +16673,7 @@ set_value	4
 not_remove	479	
 end		
 		
-#영롱한 진파멸지검		
+#Kyanit Kılıcı+7
 section		
 npc	20478	
 item	507	1
@@ -16716,7 +16716,7 @@ set_value	4
 not_remove	509	
 end		
 		
-#영롱한 마인검		
+#Şeytan Kanadı Çakram+7
 section		
 npc	20478	
 item	1137	1
@@ -16759,7 +16759,7 @@ set_value	4
 not_remove	1139	
 end		
 		
-#영롱한 십이지단도		
+#Zodyak Hançeri+7
 section		
 npc	20478	
 item	1187	1
@@ -16802,7 +16802,7 @@ set_value	4
 not_remove	1189	
 end		
 		
-#영롱한 흑룡대거		
+#Kara ejderha hançeri+7
 section		
 npc	20478	
 item	1197	1
@@ -16929,7 +16929,7 @@ set_value	4
 not_remove	1205	
 end		
 		
-#영롱한 오행도		
+#Beş Element Kılıcı +7
 section		
 npc	20478	
 item	1347	1
@@ -16972,7 +16972,7 @@ set_value	4
 not_remove	1349	
 end		
 		
-#영롱한 진오행도		
+#Kyanit Hançer+7
 section		
 npc	20478	
 item	1507	1
@@ -17015,7 +17015,7 @@ set_value	4
 not_remove	1509	
 end		
 		
-#영롱한 진황룡대궁		
+#Büyük Şeytan Yayı+7
 section		
 npc	20478	
 item	2167	1
@@ -17058,7 +17058,7 @@ set_value	4
 not_remove	2169	
 end		
 		
-#영롱한 철패신궁		
+#Havalı Çelik Yay+7
 section		
 npc	20478	
 item	2177	1
@@ -17101,7 +17101,7 @@ set_value	4
 not_remove	2179	
 end		
 		
-#영롱한 십이지궁		
+#Zodyak Yay+7
 section		
 npc	20478	
 item	2207	1
@@ -17144,7 +17144,7 @@ set_value	4
 not_remove	2209	
 end		
 		
-#영롱한 흑룡각궁		
+#Kara ejderha yayı+7
 section		
 npc	20478	
 item	2217	1
@@ -17271,7 +17271,7 @@ set_value	4
 not_remove	2225	
 end		
 		
-#영롱한 천룡지궁		
+#Anka Yayı +7
 section		
 npc	20478	
 item	2377	1
@@ -17314,7 +17314,7 @@ set_value	4
 not_remove	2379	
 end		
 		
-#영롱한 진천룡지궁		
+#Kyanit Yay+7
 section		
 npc	20478	
 item	2507	1
@@ -17357,7 +17357,7 @@ set_value	4
 not_remove	2509	
 end		
 		
-#영롱한 혼원검		
+#Kin Kılıcı+7
 section		
 npc	20478	
 item	3167	1
@@ -17400,7 +17400,7 @@ set_value	4
 not_remove	3169	
 end		
 		
-#영롱한 태양검		
+#Güneş Kılıcı +7
 section		
 npc	20478	
 item	3197	1
@@ -17443,7 +17443,7 @@ set_value	4
 not_remove	3199	
 end		
 		
-#영롱한 십이지극		
+#Zodyak Orağı+7
 section		
 npc	20478	
 item	3227	1
@@ -17486,7 +17486,7 @@ set_value	4
 not_remove	3229	
 end		
 		
-#영롱한 흑룡지검		
+#Kara ejderha bıçağı+7
 section		
 npc	20478	
 item	3237	1
@@ -17613,7 +17613,7 @@ set_value	4
 not_remove	3245	
 end		
 		
-#영롱한 진태양검		
+#Kyanit Bıçağı+7
 section		
 npc	20478	
 item	3507	1
@@ -17656,7 +17656,7 @@ set_value	4
 not_remove	3509	
 end		
 		
-#영롱한 진용마도		
+#Ruhsuz Bıçak+7
 section		
 npc	20478	
 item	4047	1
@@ -17699,7 +17699,7 @@ set_value	4
 not_remove	4049	
 end		
 		
-#영롱한 청죽령		
+#Orkide Çan+7
 section		
 npc	20478	
 item	5127	1
@@ -17742,7 +17742,7 @@ set_value	4
 not_remove	5129	
 end		
 		
-#영롱한 십이지령		
+#Zodyak Çanı+7
 section		
 npc	20478	
 item	5167	1
@@ -17785,7 +17785,7 @@ set_value	4
 not_remove	5169	
 end		
 		
-#영롱한 흑룡사령		
+#Kara ejderha çanı+7
 section		
 npc	20478	
 item	5177	1
@@ -17912,7 +17912,7 @@ set_value	4
 not_remove	5185	
 end		
 		
-#영롱한 진진천령		
+#Ejder Çenesi Çanı+7
 section		
 npc	20478	
 item	5337	1
@@ -17955,7 +17955,7 @@ set_value	4
 not_remove	5339	
 end		
 		
-#영롱한 용신령		
+#Ejderha Hayaleti Çanı +7
 section		
 npc	20478	
 item	5347	1
@@ -17998,7 +17998,7 @@ set_value	4
 not_remove	5349	
 end		
 		
-#영롱한 진용신령		
+#Kyanit Çanı+7
 section		
 npc	20478	
 item	5507	1
@@ -18041,7 +18041,7 @@ set_value	4
 not_remove	5509	
 end		
 		
-#영롱한 적철수		
+#Parlak Kızıl Demir El
 section		
 npc	20478	
 item	6077	1
@@ -18084,7 +18084,7 @@ set_value	4
 not_remove	6079	
 end		
 		
-#영롱한 진녹맹아		
+#Parlak Gerçek Yeşil Filiz
 section		
 npc	20478	
 item	6087	1
@@ -18127,7 +18127,7 @@ set_value	4
 not_remove	6089	
 end		
 		
-#영롱한 패룡수		
+#Parlak Paeryong Eli
 section		
 npc	20478	
 item	6097	1
@@ -18170,7 +18170,7 @@ set_value	4
 not_remove	6099	
 end		
 		
-#영롱한 십이지수		
+#Parlak On İki Burç Eli
 section		
 npc	20478	
 item	6127	1
@@ -18213,7 +18213,7 @@ set_value	4
 not_remove	6129	
 end		
 		
-#영롱한 흑룡수		
+#Parlak Kara Ejder Eli
 section		
 npc	20478	
 item	6137	1
@@ -18340,7 +18340,7 @@ set_value	4
 not_remove	6145	
 end		
 		
-#영롱한 진패룡수		
+#Parlak Gerçek Paeryong Eli
 section		
 npc	20478	
 item	6507	1
@@ -18383,7 +18383,7 @@ set_value	4
 not_remove	6509	
 end		
 		
-#영롱한 진제마선		
+#İblisin Yelpazesi+7
 section		
 npc	20478	
 item	7197	1
@@ -18426,7 +18426,7 @@ set_value	4
 not_remove	7199	
 end		
 		
-#영롱한 십이지선		
+#Zodyak yelpazesi+7
 section		
 npc	20478	
 item	7307	1
@@ -18469,7 +18469,7 @@ set_value	4
 not_remove	7309	
 end		
 		
-#영롱한 흑룡마선		
+#Kara ejder. yelpazesi+7
 section		
 npc	20478	
 item	7317	1
@@ -18596,7 +18596,7 @@ set_value	4
 not_remove	7325	
 end		
 		
-#영롱한 무아지선		
+#Uyuyan Ejder Yelpazesi+7
 section		
 npc	20478	
 item	7377	1
@@ -18639,7 +18639,7 @@ set_value	4
 not_remove	7379	
 end		
 		
-#영롱한 진무아지선		
+#Kyanit Yelpaze+7
 section		
 npc	20478	
 item	7507	1
@@ -18682,7 +18682,7 @@ set_value	4
 not_remove	7509	
 end		
 		
-#영롱한 뱀룡도		
+#Yılan kılıcı+7
 section		
 npc	20478	
 item	367	1
@@ -18809,7 +18809,7 @@ set_value	4
 not_remove	375	
 end		
 		
-#영롱한 뱀룡마검		
+#Yılan bıçağı+7
 section		
 npc	20478	
 item	387	1
@@ -18936,7 +18936,7 @@ set_value	4
 not_remove	395	
 end		
 		
-#영롱한 뱀룡대거		
+#Yılan hançeri+7
 section		
 npc	20478	
 item	1217	1
@@ -19063,7 +19063,7 @@ set_value	4
 not_remove	1225	
 end		
 		
-#영롱한 뱀룡각궁		
+#Yılan yayı+7
 section		
 npc	20478	
 item	2237	1
@@ -19190,7 +19190,7 @@ set_value	4
 not_remove	2245	
 end		
 		
-#영롱한 뱀룡지검		
+#Yılan büyük kılıcı+7
 section		
 npc	20478	
 item	3257	1
@@ -19317,7 +19317,7 @@ set_value	4
 not_remove	3265	
 end		
 		
-#영롱한 뱀룡사령		
+#Yılan çanı+7
 section		
 npc	20478	
 item	5207	1
@@ -19444,7 +19444,7 @@ set_value	4
 not_remove	5215	
 end		
 		
-#영롱한 뱀룡수		
+#Parlak Yılan Ejder Eli
 section		
 npc	20478	
 item	6157	1
@@ -19571,7 +19571,7 @@ set_value	4
 not_remove	6165	
 end		
 		
-#영롱한 뱀룡마선		
+#Yılan yelpazesi+7
 section		
 npc	20478	
 item	7337	1
@@ -19698,7 +19698,7 @@ set_value	4
 not_remove	7345	
 end		
 
-#찬란한 서모검		
+#Zehir Kılıcı+7
 section		
 npc	20479	
 item	187	1
@@ -19744,7 +19744,7 @@ set_value	5
 not_remove	189	
 end		
 		
-#찬란한 사자검		
+#Aslan Kılıcı+7
 section		
 npc	20479	
 item	197	1
@@ -19790,7 +19790,7 @@ set_value	5
 not_remove	199	
 end		
 		
-#찬란한 진퇴마도		
+#Keskin Pala+7
 section		
 npc	20479	
 item	207	1
@@ -19836,7 +19836,7 @@ set_value	5
 not_remove	209	
 end		
 		
-#찬란한 진무쌍검		
+#Triton Kılıcı+7
 section		
 npc	20479	
 item	277	1
@@ -19882,7 +19882,7 @@ set_value	5
 not_remove	279	
 end		
 		
-#찬란한 진귀아검		
+#Kutsal Kılıç+7
 section		
 npc	20479	
 item	287	1
@@ -19928,7 +19928,7 @@ set_value	5
 not_remove	289	
 end		
 		
-#찬란한 십이지도		
+#Zodyak Bıçak+7
 section		
 npc	20479	
 item	307	1
@@ -19974,7 +19974,7 @@ set_value	5
 not_remove	309	
 end		
 		
-#찬란한 십이지칼		
+#Zodyak Kılıç+7
 section		
 npc	20479	
 item	317	1
@@ -20020,7 +20020,7 @@ set_value	5
 not_remove	319	
 end		
 		
-#찬란한 흑룡도		
+#Kara ejderha kılıcı+7
 section		
 npc	20479	
 item	327	1
@@ -20156,7 +20156,7 @@ set_value	5
 not_remove	335	
 end		
 		
-#찬란한 흑룡마검		
+#Kara ejderha jileti+7
 section		
 npc	20479	
 item	347	1
@@ -20292,7 +20292,7 @@ set_value	5
 not_remove	355	
 end		
 		
-#찬란한 용신지검		
+#Runik Kılıç +7
 section		
 npc	20479	
 item	467	1
@@ -20338,7 +20338,7 @@ set_value	5
 not_remove	469	
 end		
 		
-#찬란한 파멸지검		
+#Ejderha Dişi Kılıcı +7
 section		
 npc	20479	
 item	477	1
@@ -20384,7 +20384,7 @@ set_value	5
 not_remove	479	
 end		
 		
-#찬란한 진파멸지검		
+#Kyanit Kılıcı+7
 section		
 npc	20479	
 item	507	1
@@ -20430,7 +20430,7 @@ set_value	5
 not_remove	509	
 end		
 		
-#찬란한 마인검		
+#Şeytan Kanadı Çakram+7
 section		
 npc	20479	
 item	1137	1
@@ -20476,7 +20476,7 @@ set_value	5
 not_remove	1139	
 end		
 		
-#찬란한 십이지단도		
+#Zodyak Hançeri+7
 section		
 npc	20479	
 item	1187	1
@@ -20522,7 +20522,7 @@ set_value	5
 not_remove	1189	
 end		
 		
-#찬란한 흑룡대거		
+#Kara ejderha hançeri+7
 section		
 npc	20479	
 item	1197	1
@@ -20658,7 +20658,7 @@ set_value	5
 not_remove	1205	
 end		
 		
-#찬란한 오행도		
+#Beş Element Kılıcı +7
 section		
 npc	20479	
 item	1347	1
@@ -20704,7 +20704,7 @@ set_value	5
 not_remove	1349	
 end		
 		
-#찬란한 진오행도		
+#Kyanit Hançer+7
 section		
 npc	20479	
 item	1507	1
@@ -20750,7 +20750,7 @@ set_value	5
 not_remove	1509	
 end		
 		
-#찬란한 진황룡대궁		
+#Büyük Şeytan Yayı+7
 section		
 npc	20479	
 item	2167	1
@@ -20796,7 +20796,7 @@ set_value	5
 not_remove	2169	
 end		
 		
-#찬란한 철패신궁		
+#Havalı Çelik Yay+7
 section		
 npc	20479	
 item	2177	1
@@ -20842,7 +20842,7 @@ set_value	5
 not_remove	2179	
 end		
 		
-#찬란한 십이지궁		
+#Zodyak Yay+7
 section		
 npc	20479	
 item	2207	1
@@ -20888,7 +20888,7 @@ set_value	5
 not_remove	2209	
 end		
 		
-#찬란한 흑룡각궁		
+#Kara ejderha yayı+7
 section		
 npc	20479	
 item	2217	1
@@ -21024,7 +21024,7 @@ set_value	5
 not_remove	2225	
 end		
 		
-#찬란한 천룡지궁		
+#Anka Yayı +7
 section		
 npc	20479	
 item	2377	1
@@ -21070,7 +21070,7 @@ set_value	5
 not_remove	2379	
 end		
 		
-#찬란한 진천룡지궁		
+#Kyanit Yay+7
 section		
 npc	20479	
 item	2507	1
@@ -21116,7 +21116,7 @@ set_value	5
 not_remove	2509	
 end		
 		
-#찬란한 혼원검		
+#Kin Kılıcı+7
 section		
 npc	20479	
 item	3167	1
@@ -21162,7 +21162,7 @@ set_value	5
 not_remove	3169	
 end		
 		
-#찬란한 태양검		
+#Güneş Kılıcı +7
 section		
 npc	20479	
 item	3197	1
@@ -21208,7 +21208,7 @@ set_value	5
 not_remove	3199	
 end		
 		
-#찬란한 십이지극		
+#Zodyak Orağı+7
 section		
 npc	20479	
 item	3227	1
@@ -21254,7 +21254,7 @@ set_value	5
 not_remove	3229	
 end		
 		
-#찬란한 흑룡지검		
+#Kara ejderha bıçağı+7
 section		
 npc	20479	
 item	3237	1
@@ -21390,7 +21390,7 @@ set_value	5
 not_remove	3245	
 end		
 		
-#찬란한 진태양검		
+#Kyanit Bıçağı+7
 section		
 npc	20479	
 item	3507	1
@@ -21436,7 +21436,7 @@ set_value	5
 not_remove	3509	
 end		
 		
-#찬란한 진용마도		
+#Ruhsuz Bıçak+7
 section		
 npc	20479	
 item	4047	1
@@ -21482,7 +21482,7 @@ set_value	5
 not_remove	4049	
 end		
 		
-#찬란한 청죽령		
+#Orkide Çan+7
 section		
 npc	20479	
 item	5127	1
@@ -21528,7 +21528,7 @@ set_value	5
 not_remove	5129	
 end		
 		
-#찬란한 십이지령		
+#Zodyak Çanı+7
 section		
 npc	20479	
 item	5167	1
@@ -21574,7 +21574,7 @@ set_value	5
 not_remove	5169	
 end		
 		
-#찬란한 흑룡사령		
+#Kara ejderha çanı+7
 section		
 npc	20479	
 item	5177	1
@@ -21710,7 +21710,7 @@ set_value	5
 not_remove	5185	
 end		
 		
-#찬란한 진진천령		
+#Ejder Çenesi Çanı+7
 section		
 npc	20479	
 item	5337	1
@@ -21756,7 +21756,7 @@ set_value	5
 not_remove	5339	
 end		
 		
-#찬란한 용신령		
+#Ejderha Hayaleti Çanı +7
 section		
 npc	20479	
 item	5347	1
@@ -21802,7 +21802,7 @@ set_value	5
 not_remove	5349	
 end		
 		
-#찬란한 진용신령		
+#Kyanit Çanı+7
 section		
 npc	20479	
 item	5507	1
@@ -21848,7 +21848,7 @@ set_value	5
 not_remove	5509	
 end		
 		
-#찬란한 적철수		
+#Işıltılı Kızıl Demir El
 section		
 npc	20479	
 item	6077	1
@@ -21894,7 +21894,7 @@ set_value	5
 not_remove	6079	
 end		
 		
-#찬란한 진녹맹아		
+#Işıltılı Gerçek Yeşil Filiz
 section		
 npc	20479	
 item	6087	1
@@ -21940,7 +21940,7 @@ set_value	5
 not_remove	6089	
 end		
 		
-#찬란한 패룡수		
+#Işıltılı Paeryong Eli
 section		
 npc	20479	
 item	6097	1
@@ -21986,7 +21986,7 @@ set_value	5
 not_remove	6099	
 end		
 		
-#찬란한 십이지수		
+#Işıltılı On İki Burç Eli
 section		
 npc	20479	
 item	6127	1
@@ -22032,7 +22032,7 @@ set_value	5
 not_remove	6129	
 end		
 		
-#찬란한 흑룡수		
+#Işıltılı Kara Ejder Eli
 section		
 npc	20479	
 item	6137	1
@@ -22168,7 +22168,7 @@ set_value	5
 not_remove	6145	
 end		
 		
-#찬란한 진패룡수		
+#Işıltılı Gerçek Paeryong Eli
 section		
 npc	20479	
 item	6507	1
@@ -22214,7 +22214,7 @@ set_value	5
 not_remove	6509	
 end		
 		
-#찬란한 진제마선		
+#İblisin Yelpazesi+7
 section		
 npc	20479	
 item	7197	1
@@ -22260,7 +22260,7 @@ set_value	5
 not_remove	7199	
 end		
 		
-#찬란한 십이지선		
+#Zodyak yelpazesi+7
 section		
 npc	20479	
 item	7307	1
@@ -22306,7 +22306,7 @@ set_value	5
 not_remove	7309	
 end		
 		
-#찬란한 흑룡마선		
+#Kara ejder. yelpazesi+7
 section		
 npc	20479	
 item	7317	1
@@ -22442,7 +22442,7 @@ set_value	5
 not_remove	7325	
 end		
 		
-#찬란한 무아지선		
+#Uyuyan Ejder Yelpazesi+7
 section		
 npc	20479	
 item	7377	1
@@ -22488,7 +22488,7 @@ set_value	5
 not_remove	7379	
 end		
 		
-#찬란한 진무아지선		
+#Kyanit Yelpaze+7
 section		
 npc	20479	
 item	7507	1
@@ -22534,7 +22534,7 @@ set_value	5
 not_remove	7509	
 end		
 		
-#찬란한 뱀룡도		
+#Yılan kılıcı+7
 section		
 npc	20479	
 item	367	1
@@ -22670,7 +22670,7 @@ set_value	5
 not_remove	375	
 end		
 		
-#찬란한 뱀룡마검		
+#Yılan bıçağı+7
 section		
 npc	20479	
 item	387	1
@@ -22806,7 +22806,7 @@ set_value	5
 not_remove	395	
 end		
 		
-#찬란한 뱀룡대거		
+#Yılan hançeri+7
 section		
 npc	20479	
 item	1217	1
@@ -22942,7 +22942,7 @@ set_value	5
 not_remove	1225	
 end		
 		
-#찬란한 뱀룡각궁		
+#Yılan yayı+7
 section		
 npc	20479	
 item	2237	1
@@ -23078,7 +23078,7 @@ set_value	5
 not_remove	2245	
 end		
 		
-#찬란한 뱀룡지검		
+#Yılan büyük kılıcı+7
 section		
 npc	20479	
 item	3257	1
@@ -23214,7 +23214,7 @@ set_value	5
 not_remove	3265	
 end		
 		
-#찬란한 뱀룡사령		
+#Yılan çanı+7
 section		
 npc	20479	
 item	5207	1
@@ -23350,7 +23350,7 @@ set_value	5
 not_remove	5215	
 end		
 		
-#찬란한 뱀룡수		
+#Işıltılı Yılan Ejder Eli
 section		
 npc	20479	
 item	6157	1
@@ -23486,7 +23486,7 @@ set_value	5
 not_remove	6165	
 end		
 		
-#찬란한 뱀룡마선		
+#Yılan yelpazesi+7
 section		
 npc	20479	
 item	7337	1
@@ -23622,7 +23622,7 @@ set_value	5
 not_remove	7345	
 end		
 
-#고귀한 진청갑
+#Mavi plaka zırhı+7
 section
 npc	20475
 item	12017	1
@@ -23665,7 +23665,7 @@ set_value	1
 not_remove	12019
 end
 
-#고귀한 진천
+#Mavi Ejderha Suiti +7
 section
 npc	20475
 item	12027	1
@@ -23708,7 +23708,7 @@ set_value	1
 not_remove	12029
 end
 
-#고귀한 진마갑
+#Aura Taş Zırhı +7
 section
 npc	20475
 item	12037	1
@@ -23751,7 +23751,7 @@ set_value	1
 not_remove	12039
 end
 
-#고귀한 진룡의
+#Ejderha Elbisesi +7
 section
 npc	20475
 item	12047	1
@@ -23794,7 +23794,7 @@ set_value	1
 not_remove	12049
 end
 
-#고귀한 신비갑
+#Kyanit Zırh+7
 section
 npc	20475
 item	12057	1
@@ -23837,7 +23837,7 @@ set_value	1
 not_remove	12059
 end
 
-#고귀한 신풍
+#Kyanit Giysi+7
 section
 npc	20475
 item	12067	1
@@ -23880,7 +23880,7 @@ set_value	1
 not_remove	12069
 end
 
-#고귀한 신뇌갑
+#Kyanit Plaka Zırhı+7
 section
 npc	20475
 item	12077	1
@@ -23923,7 +23923,7 @@ set_value	1
 not_remove	12079
 end
 
-#고귀한 신성의
+#Kyanit Kıyafet+7
 section
 npc	20475
 item	12087	1
@@ -23966,7 +23966,7 @@ set_value	1
 not_remove	12089
 end
 
-#고귀한 신운갑
+#Asil Tanrı Şansı Zırhı
 section
 npc	20475
 item	12097	1
@@ -24009,7 +24009,7 @@ set_value	1
 not_remove	12099
 end
 
-#고귀한 십이지호갑
+#Zodyak Zırhı+7
 section
 npc	20475
 item	19297	1
@@ -24052,7 +24052,7 @@ set_value	1
 not_remove	19299
 end
 
-#고귀한 십이지건
+#Zodyak Kıyafeti+7
 section
 npc	20475
 item	19497	1
@@ -24095,7 +24095,7 @@ set_value	1
 not_remove	19499
 end
 
-#고귀한 십이지마갑
+#Zodyak Plaka Zırh+7
 section
 npc	20475
 item	19697	1
@@ -24138,7 +24138,7 @@ set_value	1
 not_remove	19699
 end
 
-#고귀한 십이지상의
+#Zodyak kıyafeti+7
 section
 npc	20475
 item	19897	1
@@ -24181,7 +24181,7 @@ set_value	1
 not_remove	19899
 end
 
-#고귀한 태을갑
+#Şeytan Boynuzu Zırhı +7
 section
 npc	20475
 item	20007	1
@@ -24224,7 +24224,7 @@ set_value	1
 not_remove	20009
 end
 
-#고귀한 영보
+#Ejder Süvari Giysisi +7
 section
 npc	20475
 item	20257	1
@@ -24267,7 +24267,7 @@ set_value	1
 not_remove	20259
 end
 
-#고귀한 현천갑
+#Kemik Plaka Zırh +7
 section
 npc	20475
 item	20507	1
@@ -24310,7 +24310,7 @@ set_value	1
 not_remove	20509
 end
 
-#고귀한 삼관의
+#Altın Giysi +7
 section
 npc	20475
 item	20757	1
@@ -24353,7 +24353,7 @@ set_value	1
 not_remove	20759
 end
 
-#고귀한 청호갑
+#Kutup Işığı Zırhı+7
 section
 npc	20475
 item	20767	1
@@ -24396,7 +24396,7 @@ set_value	1
 not_remove	20769
 end
 
-#고귀한 청건
+#Suikast Kıyafeti+7
 section
 npc	20475
 item	20777	1
@@ -24439,7 +24439,7 @@ set_value	1
 not_remove	20779
 end
 
-#고귀한 청마갑
+#Şeytan Pençesi Zırhı+7
 section
 npc	20475
 item	20787	1
@@ -24482,7 +24482,7 @@ set_value	1
 not_remove	20789
 end
 
-#고귀한 청상의
+#İnanç Kıyafeti+7
 section
 npc	20475
 item	20797	1
@@ -24525,7 +24525,7 @@ set_value	1
 not_remove	20799
 end
 
-#고귀한 청해갑
+#Asil Mavi Deniz Zırhı
 section
 npc	20475
 item	20807	1
@@ -24568,7 +24568,7 @@ set_value	1
 not_remove	20809
 end
 
-#고귀한 적룡갑
+#Magma Koru Zırhı+7
 section
 npc	20475
 item	20817	1
@@ -24611,7 +24611,7 @@ set_value	1
 not_remove	20819
 end
 
-#고귀한 적현
+#Kanlı Ay Kıyafeti+7
 section
 npc	20475
 item	20827	1
@@ -24654,7 +24654,7 @@ set_value	1
 not_remove	20829
 end
 
-#고귀한 적상갑
+#Cehennem Koşucu Zırhı+7
 section
 npc	20475
 item	20837	1
@@ -24697,7 +24697,7 @@ set_value	1
 not_remove	20839
 end
 
-#고귀한 적선의
+#Ateş Kıyafeti+7
 section
 npc	20475
 item	20847	1
@@ -24740,7 +24740,7 @@ set_value	1
 not_remove	20849
 end
 
-#고귀한 적천갑
+#Asil Kızıl Gök Zırhı
 section
 npc	20475
 item	20857	1
@@ -24783,7 +24783,7 @@ set_value	1
 not_remove	20859
 end
 
-#고귀한 백호갑
+#Balina Kemiği Zırhı+7
 section
 npc	20475
 item	20867	1
@@ -24826,7 +24826,7 @@ set_value	1
 not_remove	20869
 end
 
-#고귀한 백건
+#Dönüşüm Kıyafeti+7
 section
 npc	20475
 item	20877	1
@@ -24869,7 +24869,7 @@ set_value	1
 not_remove	20879
 end
 
-#고귀한 백마갑
+#Yanıltıcı Işık Zırhı+7
 section
 npc	20475
 item	20887	1
@@ -24912,7 +24912,7 @@ set_value	1
 not_remove	20889
 end
 
-#고귀한 백상의
+#Ahenk Kıyafeti+7
 section
 npc	20475
 item	20897	1
@@ -24955,7 +24955,7 @@ set_value	1
 not_remove	20899
 end
 
-#고귀한 백현갑
+#Asil Beyaz Bilge Zırhı
 section
 npc	20475
 item	20907	1
@@ -24998,7 +24998,7 @@ set_value	1
 not_remove	20909
 end
 
-#고귀한 흑룡갑
+#Kül Yağmuru Zırhı+7
 section
 npc	20475
 item	20917	1
@@ -25041,7 +25041,7 @@ set_value	1
 not_remove	20919
 end
 
-#고귀한 흑현
+#Ölüm Gecesi Kıyafeti+7
 section
 npc	20475
 item	20927	1
@@ -25084,7 +25084,7 @@ set_value	1
 not_remove	20929
 end
 
-#고귀한 흑상갑
+#Kara Ateş Zırhı+7
 section
 npc	20475
 item	20937	1
@@ -25127,7 +25127,7 @@ set_value	1
 not_remove	20939
 end
 
-#고귀한 흑선
+#Ay Kıyafeti+7
 section
 npc	20475
 item	20947	1
@@ -25170,7 +25170,7 @@ set_value	1
 not_remove	20949
 end
 
-#고귀한 흑천갑
+#Asil Kara Gök Zırhı
 section
 npc	20475
 item	20957	1
@@ -25213,7 +25213,7 @@ set_value	1
 not_remove	20959
 end
 
-#고귀한 진녹갑
+#Asil Gerçek Yeşil Zırh
 section
 npc	20475
 item	21087	1
@@ -25256,7 +25256,7 @@ set_value	1
 not_remove	21089
 end
 
-#고귀한 위천갑
+#Asil Üstün Gök Zırhı
 section
 npc	20475
 item	21097	1
@@ -25299,7 +25299,7 @@ set_value	1
 not_remove	21099
 end
 
-#고귀한 십이지해갑
+#Asil On İki Burç Deniz Zırhı
 section
 npc	20475
 item	21207	1
@@ -25342,7 +25342,7 @@ set_value	1
 not_remove	21209
 end
 
-#고귀한 흑룡포
+#Kara ejderha zırhı+7
 section
 npc	20475
 item	21217	1
@@ -25469,7 +25469,7 @@ set_value	1
 not_remove	21225
 end
 
-#고귀한 풍룡포
+#Rüzgar ejderha. zırhı+7
 section
 npc	20475
 item	21237	1
@@ -25596,7 +25596,7 @@ set_value	1
 not_remove	21245
 end
 
-#고귀한 마룡포
+#Büyü ejderhası zırhı+7
 section
 npc	20475
 item	21257	1
@@ -25723,7 +25723,7 @@ set_value	1
 not_remove	21265
 end
 
-#고귀한 신룡포
+#Tanrılar ejder. zırhı+7
 section
 npc	20475
 item	21277	1
@@ -25850,7 +25850,7 @@ set_value	1
 not_remove	21285
 end
 
-#고귀한 천룡포
+#Asil Gök Ejderi Topu
 section
 npc	20475
 item	21297	1
@@ -25977,7 +25977,7 @@ set_value	1
 not_remove	21305
 end
 
-#고귀한 뱀룡포
+#Yılan mantosu+7
 section
 npc	20475
 item	21317	1
@@ -26104,7 +26104,7 @@ set_value	1
 not_remove	21325
 end
 
-#고귀한 뱀단포
+#Yılan yeleği+7
 section
 npc	20475
 item	21337	1
@@ -26231,7 +26231,7 @@ set_value	1
 not_remove	21345
 end
 
-#고귀한 뱀마룡포
+#Kötü yılan mantosu+7
 section
 npc	20475
 item	21357	1
@@ -26358,7 +26358,7 @@ set_value	1
 not_remove	21365
 end
 
-#고귀한 뱀신룡포
+#Saf yılan mantosu+7
 section
 npc	20475
 item	21377	1
@@ -26485,7 +26485,7 @@ set_value	1
 not_remove	21385
 end
 
-#고귀한 뱀천룡포
+#Asil Yılan Gök Ejderi Topu
 section
 npc	20475
 item	21397	1
@@ -26612,7 +26612,7 @@ set_value	1
 not_remove	21405
 end
 
-#숭고한 진청갑		
+#Mavi plaka zırhı+7
 section		
 npc	20476	
 item	12017	1
@@ -26655,7 +26655,7 @@ set_value	2
 not_remove	12019	
 end		
 		
-#숭고한 진천		
+#Mavi Ejderha Suiti +7
 section		
 npc	20476	
 item	12027	1
@@ -26698,7 +26698,7 @@ set_value	2
 not_remove	12029	
 end		
 		
-#숭고한 진마갑		
+#Aura Taş Zırhı +7
 section		
 npc	20476	
 item	12037	1
@@ -26741,7 +26741,7 @@ set_value	2
 not_remove	12039	
 end		
 		
-#숭고한 진룡의		
+#Ejderha Elbisesi +7
 section		
 npc	20476	
 item	12047	1
@@ -26784,7 +26784,7 @@ set_value	2
 not_remove	12049	
 end		
 		
-#숭고한 신비갑		
+#Kyanit Zırh+7
 section		
 npc	20476	
 item	12057	1
@@ -26827,7 +26827,7 @@ set_value	2
 not_remove	12059	
 end		
 		
-#숭고한 신풍		
+#Kyanit Giysi+7
 section		
 npc	20476	
 item	12067	1
@@ -26870,7 +26870,7 @@ set_value	2
 not_remove	12069	
 end		
 		
-#숭고한 신뇌갑		
+#Kyanit Plaka Zırhı+7
 section		
 npc	20476	
 item	12077	1
@@ -26913,7 +26913,7 @@ set_value	2
 not_remove	12079	
 end		
 		
-#숭고한 신성의		
+#Kyanit Kıyafet+7
 section		
 npc	20476	
 item	12087	1
@@ -26956,7 +26956,7 @@ set_value	2
 not_remove	12089	
 end		
 		
-#숭고한 신운갑		
+#Yüce Tanrı Şansı Zırhı
 section		
 npc	20476	
 item	12097	1
@@ -26999,7 +26999,7 @@ set_value	2
 not_remove	12099	
 end		
 		
-#숭고한 십이지호갑		
+#Zodyak Zırhı+7
 section		
 npc	20476	
 item	19297	1
@@ -27042,7 +27042,7 @@ set_value	2
 not_remove	19299	
 end		
 		
-#숭고한 십이지건		
+#Zodyak Kıyafeti+7
 section		
 npc	20476	
 item	19497	1
@@ -27085,7 +27085,7 @@ set_value	2
 not_remove	19499	
 end		
 		
-#숭고한 십이지마갑		
+#Zodyak Plaka Zırh+7
 section		
 npc	20476	
 item	19697	1
@@ -27128,7 +27128,7 @@ set_value	2
 not_remove	19699	
 end		
 		
-#숭고한 십이지상의		
+#Zodyak kıyafeti+7
 section		
 npc	20476	
 item	19897	1
@@ -27171,7 +27171,7 @@ set_value	2
 not_remove	19899	
 end		
 		
-#숭고한 태을갑		
+#Şeytan Boynuzu Zırhı +7
 section		
 npc	20476	
 item	20007	1
@@ -27214,7 +27214,7 @@ set_value	2
 not_remove	20009	
 end		
 		
-#숭고한 영보		
+#Ejder Süvari Giysisi +7
 section		
 npc	20476	
 item	20257	1
@@ -27257,7 +27257,7 @@ set_value	2
 not_remove	20259	
 end		
 		
-#숭고한 현천갑		
+#Kemik Plaka Zırh +7
 section		
 npc	20476	
 item	20507	1
@@ -27300,7 +27300,7 @@ set_value	2
 not_remove	20509	
 end		
 		
-#숭고한 삼관의		
+#Altın Giysi +7
 section		
 npc	20476	
 item	20757	1
@@ -27343,7 +27343,7 @@ set_value	2
 not_remove	20759	
 end		
 		
-#숭고한 청호갑		
+#Kutup Işığı Zırhı+7
 section		
 npc	20476	
 item	20767	1
@@ -27386,7 +27386,7 @@ set_value	2
 not_remove	20769	
 end		
 		
-#숭고한 청건		
+#Suikast Kıyafeti+7
 section		
 npc	20476	
 item	20777	1
@@ -27429,7 +27429,7 @@ set_value	2
 not_remove	20779	
 end		
 		
-#숭고한 청마갑		
+#Şeytan Pençesi Zırhı+7
 section		
 npc	20476	
 item	20787	1
@@ -27472,7 +27472,7 @@ set_value	2
 not_remove	20789	
 end		
 		
-#숭고한 청상의		
+#İnanç Kıyafeti+7
 section		
 npc	20476	
 item	20797	1
@@ -27515,7 +27515,7 @@ set_value	2
 not_remove	20799	
 end		
 		
-#숭고한 청해갑		
+#Yüce Mavi Deniz Zırhı
 section		
 npc	20476	
 item	20807	1
@@ -27558,7 +27558,7 @@ set_value	2
 not_remove	20809	
 end		
 		
-#숭고한 적룡갑		
+#Magma Koru Zırhı+7
 section		
 npc	20476	
 item	20817	1
@@ -27601,7 +27601,7 @@ set_value	2
 not_remove	20819	
 end		
 		
-#숭고한 적현		
+#Kanlı Ay Kıyafeti+7
 section		
 npc	20476	
 item	20827	1
@@ -27644,7 +27644,7 @@ set_value	2
 not_remove	20829	
 end		
 		
-#숭고한 적상갑		
+#Cehennem Koşucu Zırhı+7
 section		
 npc	20476	
 item	20837	1
@@ -27687,7 +27687,7 @@ set_value	2
 not_remove	20839	
 end		
 		
-#숭고한 적선의		
+#Ateş Kıyafeti+7
 section		
 npc	20476	
 item	20847	1
@@ -27730,7 +27730,7 @@ set_value	2
 not_remove	20849	
 end		
 		
-#숭고한 적천갑		
+#Yüce Kızıl Gök Zırhı
 section		
 npc	20476	
 item	20857	1
@@ -27773,7 +27773,7 @@ set_value	2
 not_remove	20859	
 end		
 		
-#숭고한 백호갑		
+#Balina Kemiği Zırhı+7
 section		
 npc	20476	
 item	20867	1
@@ -27816,7 +27816,7 @@ set_value	2
 not_remove	20869	
 end		
 		
-#숭고한 백건		
+#Dönüşüm Kıyafeti+7
 section		
 npc	20476	
 item	20877	1
@@ -27859,7 +27859,7 @@ set_value	2
 not_remove	20879	
 end		
 		
-#숭고한 백마갑		
+#Yanıltıcı Işık Zırhı+7
 section		
 npc	20476	
 item	20887	1
@@ -27902,7 +27902,7 @@ set_value	2
 not_remove	20889	
 end		
 		
-#숭고한 백상의		
+#Ahenk Kıyafeti+7
 section		
 npc	20476	
 item	20897	1
@@ -27945,7 +27945,7 @@ set_value	2
 not_remove	20899	
 end		
 		
-#숭고한 백현갑		
+#Yüce Beyaz Bilge Zırhı
 section		
 npc	20476	
 item	20907	1
@@ -27988,7 +27988,7 @@ set_value	2
 not_remove	20909	
 end		
 		
-#숭고한 흑룡갑		
+#Kül Yağmuru Zırhı+7
 section		
 npc	20476	
 item	20917	1
@@ -28031,7 +28031,7 @@ set_value	2
 not_remove	20919	
 end		
 		
-#숭고한 흑현		
+#Ölüm Gecesi Kıyafeti+7
 section		
 npc	20476	
 item	20927	1
@@ -28074,7 +28074,7 @@ set_value	2
 not_remove	20929	
 end		
 		
-#숭고한 흑상갑		
+#Kara Ateş Zırhı+7
 section		
 npc	20476	
 item	20937	1
@@ -28117,7 +28117,7 @@ set_value	2
 not_remove	20939	
 end		
 		
-#숭고한 흑선		
+#Ay Kıyafeti+7
 section		
 npc	20476	
 item	20947	1
@@ -28160,7 +28160,7 @@ set_value	2
 not_remove	20949	
 end		
 		
-#숭고한 흑천갑		
+#Yüce Kara Gök Zırhı
 section		
 npc	20476	
 item	20957	1
@@ -28203,7 +28203,7 @@ set_value	2
 not_remove	20959	
 end		
 		
-#숭고한 진녹갑		
+#Yüce Gerçek Yeşil Zırh
 section		
 npc	20476	
 item	21087	1
@@ -28246,7 +28246,7 @@ set_value	2
 not_remove	21089	
 end		
 		
-#숭고한 위천갑		
+#Yüce Üstün Gök Zırhı
 section		
 npc	20476	
 item	21097	1
@@ -28289,7 +28289,7 @@ set_value	2
 not_remove	21099	
 end		
 		
-#숭고한 십이지해갑		
+#Yüce On İki Burç Deniz Zırhı
 section		
 npc	20476	
 item	21207	1
@@ -28332,7 +28332,7 @@ set_value	2
 not_remove	21209	
 end		
 		
-#숭고한 흑룡포		
+#Kara ejderha zırhı+7
 section		
 npc	20476	
 item	21217	1
@@ -28459,7 +28459,7 @@ set_value	2
 not_remove	21225	
 end		
 		
-#숭고한 풍룡포		
+#Rüzgar ejderha. zırhı+7
 section		
 npc	20476	
 item	21237	1
@@ -28586,7 +28586,7 @@ set_value	2
 not_remove	21245	
 end		
 		
-#숭고한 마룡포		
+#Büyü ejderhası zırhı+7
 section		
 npc	20476	
 item	21257	1
@@ -28713,7 +28713,7 @@ set_value	2
 not_remove	21265	
 end		
 		
-#숭고한 신룡포		
+#Tanrılar ejder. zırhı+7
 section		
 npc	20476	
 item	21277	1
@@ -28840,7 +28840,7 @@ set_value	2
 not_remove	21285	
 end		
 		
-#숭고한 천룡포		
+#Yüce Gök Ejderi Topu
 section		
 npc	20476	
 item	21297	1
@@ -28967,7 +28967,7 @@ set_value	2
 not_remove	21305	
 end		
 		
-#숭고한 뱀룡포		
+#Yılan mantosu+7
 section		
 npc	20476	
 item	21317	1
@@ -29094,7 +29094,7 @@ set_value	2
 not_remove	21325	
 end		
 		
-#숭고한 뱀단포		
+#Yılan yeleği+7
 section		
 npc	20476	
 item	21337	1
@@ -29221,7 +29221,7 @@ set_value	2
 not_remove	21345	
 end		
 		
-#숭고한 마룡포		
+#Kötü yılan mantosu+7
 section		
 npc	20476	
 item	21357	1
@@ -29348,7 +29348,7 @@ set_value	2
 not_remove	21365	
 end		
 		
-#숭고한 뱀신룡포		
+#Saf yılan mantosu+7
 section		
 npc	20476	
 item	21377	1
@@ -29475,7 +29475,7 @@ set_value	2
 not_remove	21385	
 end		
 		
-#숭고한 뱀천룡포		
+#Yüce Yılan Gök Ejderi Topu
 section		
 npc	20476	
 item	21397	1
@@ -29602,7 +29602,7 @@ set_value	2
 not_remove	21405	
 end		
 
-#거룩한 진청갑		
+#Mavi plaka zırhı+7
 section		
 npc	20477	
 item	12017	1
@@ -29645,7 +29645,7 @@ set_value	3
 not_remove	12019	
 end		
 		
-#거룩한 진천		
+#Mavi Ejderha Suiti +7
 section		
 npc	20477	
 item	12027	1
@@ -29688,7 +29688,7 @@ set_value	3
 not_remove	12029	
 end		
 		
-#거룩한 진마갑		
+#Aura Taş Zırhı +7
 section		
 npc	20477	
 item	12037	1
@@ -29731,7 +29731,7 @@ set_value	3
 not_remove	12039	
 end		
 		
-#거룩한 진룡의		
+#Ejderha Elbisesi +7
 section		
 npc	20477	
 item	12047	1
@@ -29774,7 +29774,7 @@ set_value	3
 not_remove	12049	
 end		
 		
-#거룩한 신비갑		
+#Kyanit Zırh+7
 section		
 npc	20477	
 item	12057	1
@@ -29817,7 +29817,7 @@ set_value	3
 not_remove	12059	
 end		
 		
-#거룩한 신풍		
+#Kyanit Giysi+7
 section		
 npc	20477	
 item	12067	1
@@ -29860,7 +29860,7 @@ set_value	3
 not_remove	12069	
 end		
 		
-#거룩한 신뇌갑		
+#Kyanit Plaka Zırhı+7
 section		
 npc	20477	
 item	12077	1
@@ -29903,7 +29903,7 @@ set_value	3
 not_remove	12079	
 end		
 		
-#거룩한 신성의		
+#Kyanit Kıyafet+7
 section		
 npc	20477	
 item	12087	1
@@ -29946,7 +29946,7 @@ set_value	3
 not_remove	12089	
 end		
 		
-#거룩한 신운갑		
+#Kutsal Tanrı Şansı Zırhı
 section		
 npc	20477	
 item	12097	1
@@ -29989,7 +29989,7 @@ set_value	3
 not_remove	12099	
 end		
 		
-#거룩한 십이지호갑		
+#Zodyak Zırhı+7
 section		
 npc	20477	
 item	19297	1
@@ -30032,7 +30032,7 @@ set_value	3
 not_remove	19299	
 end		
 		
-#거룩한 십이지건		
+#Zodyak Kıyafeti+7
 section		
 npc	20477	
 item	19497	1
@@ -30075,7 +30075,7 @@ set_value	3
 not_remove	19499	
 end		
 		
-#거룩한 십이지마갑		
+#Zodyak Plaka Zırh+7
 section		
 npc	20477	
 item	19697	1
@@ -30118,7 +30118,7 @@ set_value	3
 not_remove	19699	
 end		
 		
-#거룩한 십이지상의		
+#Zodyak kıyafeti+7
 section		
 npc	20477	
 item	19897	1
@@ -30161,7 +30161,7 @@ set_value	3
 not_remove	19899	
 end		
 		
-#거룩한 태을갑		
+#Şeytan Boynuzu Zırhı +7
 section		
 npc	20477	
 item	20007	1
@@ -30204,7 +30204,7 @@ set_value	3
 not_remove	20009	
 end		
 		
-#거룩한 영보		
+#Ejder Süvari Giysisi +7
 section		
 npc	20477	
 item	20257	1
@@ -30247,7 +30247,7 @@ set_value	3
 not_remove	20259	
 end		
 		
-#거룩한 현천갑		
+#Kemik Plaka Zırh +7
 section		
 npc	20477	
 item	20507	1
@@ -30290,7 +30290,7 @@ set_value	3
 not_remove	20509	
 end		
 		
-#거룩한 삼관의		
+#Altın Giysi +7
 section		
 npc	20477	
 item	20757	1
@@ -30333,7 +30333,7 @@ set_value	3
 not_remove	20759	
 end		
 		
-#거룩한 청호갑		
+#Kutup Işığı Zırhı+7
 section		
 npc	20477	
 item	20767	1
@@ -30376,7 +30376,7 @@ set_value	3
 not_remove	20769	
 end		
 		
-#거룩한 청건		
+#Suikast Kıyafeti+7
 section		
 npc	20477	
 item	20777	1
@@ -30419,7 +30419,7 @@ set_value	3
 not_remove	20779	
 end		
 		
-#거룩한 청마갑		
+#Şeytan Pençesi Zırhı+7
 section		
 npc	20477	
 item	20787	1
@@ -30462,7 +30462,7 @@ set_value	3
 not_remove	20789	
 end		
 		
-#거룩한 청상의		
+#İnanç Kıyafeti+7
 section		
 npc	20477	
 item	20797	1
@@ -30505,7 +30505,7 @@ set_value	3
 not_remove	20799	
 end		
 		
-#거룩한 청해갑		
+#Kutsal Mavi Deniz Zırhı
 section		
 npc	20477	
 item	20807	1
@@ -30548,7 +30548,7 @@ set_value	3
 not_remove	20809	
 end		
 		
-#거룩한 적룡갑		
+#Magma Koru Zırhı+7
 section		
 npc	20477	
 item	20817	1
@@ -30591,7 +30591,7 @@ set_value	3
 not_remove	20819	
 end		
 		
-#거룩한 적현		
+#Kanlı Ay Kıyafeti+7
 section		
 npc	20477	
 item	20827	1
@@ -30634,7 +30634,7 @@ set_value	3
 not_remove	20829	
 end		
 		
-#거룩한 적상갑		
+#Cehennem Koşucu Zırhı+7
 section		
 npc	20477	
 item	20837	1
@@ -30677,7 +30677,7 @@ set_value	3
 not_remove	20839	
 end		
 		
-#거룩한 적선의		
+#Ateş Kıyafeti+7
 section		
 npc	20477	
 item	20847	1
@@ -30720,7 +30720,7 @@ set_value	3
 not_remove	20849	
 end		
 		
-#거룩한 적천갑		
+#Kutsal Kızıl Gök Zırhı
 section		
 npc	20477	
 item	20857	1
@@ -30763,7 +30763,7 @@ set_value	3
 not_remove	20859	
 end		
 		
-#거룩한 백호갑		
+#Balina Kemiği Zırhı+7
 section		
 npc	20477	
 item	20867	1
@@ -30806,7 +30806,7 @@ set_value	3
 not_remove	20869	
 end		
 		
-#거룩한 백건		
+#Dönüşüm Kıyafeti+7
 section		
 npc	20477	
 item	20877	1
@@ -30849,7 +30849,7 @@ set_value	3
 not_remove	20879	
 end		
 		
-#거룩한 백마갑		
+#Yanıltıcı Işık Zırhı+7
 section		
 npc	20477	
 item	20887	1
@@ -30892,7 +30892,7 @@ set_value	3
 not_remove	20889	
 end		
 		
-#거룩한 백상의		
+#Ahenk Kıyafeti+7
 section		
 npc	20477	
 item	20897	1
@@ -30935,7 +30935,7 @@ set_value	3
 not_remove	20899	
 end		
 		
-#거룩한 백현갑		
+#Kutsal Beyaz Bilge Zırhı
 section		
 npc	20477	
 item	20907	1
@@ -30978,7 +30978,7 @@ set_value	3
 not_remove	20909	
 end		
 		
-#거룩한 흑룡갑		
+#Kül Yağmuru Zırhı+7
 section		
 npc	20477	
 item	20917	1
@@ -31021,7 +31021,7 @@ set_value	3
 not_remove	20919	
 end		
 		
-#거룩한 흑현		
+#Ölüm Gecesi Kıyafeti+7
 section		
 npc	20477	
 item	20927	1
@@ -31064,7 +31064,7 @@ set_value	3
 not_remove	20929	
 end		
 		
-#거룩한 흑상갑		
+#Kara Ateş Zırhı+7
 section		
 npc	20477	
 item	20937	1
@@ -31107,7 +31107,7 @@ set_value	3
 not_remove	20939	
 end		
 		
-#거룩한 흑선		
+#Ay Kıyafeti+7
 section		
 npc	20477	
 item	20947	1
@@ -31150,7 +31150,7 @@ set_value	3
 not_remove	20949	
 end		
 		
-#거룩한 흑천갑		
+#Kutsal Kara Gök Zırhı
 section		
 npc	20477	
 item	20957	1
@@ -31193,7 +31193,7 @@ set_value	3
 not_remove	20959	
 end		
 		
-#거룩한 진녹갑		
+#Kutsal Gerçek Yeşil Zırh
 section		
 npc	20477	
 item	21087	1
@@ -31236,7 +31236,7 @@ set_value	3
 not_remove	21089	
 end		
 		
-#거룩한 위천갑		
+#Kutsal Üstün Gök Zırhı
 section		
 npc	20477	
 item	21097	1
@@ -31279,7 +31279,7 @@ set_value	3
 not_remove	21099	
 end		
 		
-#거룩한 십이지해갑		
+#Kutsal On İki Burç Deniz Zırhı
 section		
 npc	20477	
 item	21207	1
@@ -31322,7 +31322,7 @@ set_value	3
 not_remove	21209	
 end		
 		
-#거룩한 흑룡포		
+#Kara ejderha zırhı+7
 section		
 npc	20477	
 item	21217	1
@@ -31449,7 +31449,7 @@ set_value	3
 not_remove	21225	
 end		
 		
-#거룩한 풍룡포		
+#Rüzgar ejderha. zırhı+7
 section		
 npc	20477	
 item	21237	1
@@ -31576,7 +31576,7 @@ set_value	3
 not_remove	21245	
 end		
 		
-#거룩한 마룡포		
+#Büyü ejderhası zırhı+7
 section		
 npc	20477	
 item	21257	1
@@ -31703,7 +31703,7 @@ set_value	3
 not_remove	21265	
 end		
 		
-#거룩한 신룡포		
+#Tanrılar ejder. zırhı+7
 section		
 npc	20477	
 item	21277	1
@@ -31830,7 +31830,7 @@ set_value	3
 not_remove	21285	
 end		
 		
-#거룩한 천룡포		
+#Kutsal Gök Ejderi Topu
 section		
 npc	20477	
 item	21297	1
@@ -31957,7 +31957,7 @@ set_value	3
 not_remove	21305	
 end		
 		
-#거룩한 뱀룡포		
+#Yılan mantosu+7
 section		
 npc	20477	
 item	21317	1
@@ -32084,7 +32084,7 @@ set_value	3
 not_remove	21325	
 end		
 		
-#거룩한 뱀단포		
+#Yılan yeleği+7
 section		
 npc	20477	
 item	21337	1
@@ -32211,7 +32211,7 @@ set_value	3
 not_remove	21345	
 end		
 		
-#거룩한 뱀마룡포		
+#Kötü yılan mantosu+7
 section		
 npc	20477	
 item	21357	1
@@ -32338,7 +32338,7 @@ set_value	3
 not_remove	21365	
 end		
 		
-#거룩한 뱀신룡포		
+#Saf yılan mantosu+7
 section		
 npc	20477	
 item	21377	1
@@ -32465,7 +32465,7 @@ set_value	3
 not_remove	21385	
 end		
 		
-#거룩한 뱀천룡포		
+#Kutsal Yılan Gök Ejderi Topu
 section		
 npc	20477	
 item	21397	1
@@ -32592,7 +32592,7 @@ set_value	3
 not_remove	21405	
 end		
 
-#영롱한 진청갑		
+#Mavi plaka zırhı+7
 section		
 npc	20478	
 item	12017	1
@@ -32635,7 +32635,7 @@ set_value	4
 not_remove	12019	
 end		
 		
-#영롱한 진천		
+#Mavi Ejderha Suiti +7
 section		
 npc	20478	
 item	12027	1
@@ -32678,7 +32678,7 @@ set_value	4
 not_remove	12029	
 end		
 		
-#영롱한 진마갑		
+#Aura Taş Zırhı +7
 section		
 npc	20478	
 item	12037	1
@@ -32721,7 +32721,7 @@ set_value	4
 not_remove	12039	
 end		
 		
-#영롱한 진룡의		
+#Ejderha Elbisesi +7
 section		
 npc	20478	
 item	12047	1
@@ -32764,7 +32764,7 @@ set_value	4
 not_remove	12049	
 end		
 		
-#영롱한 신비갑		
+#Kyanit Zırh+7
 section		
 npc	20478	
 item	12057	1
@@ -32807,7 +32807,7 @@ set_value	4
 not_remove	12059	
 end		
 		
-#영롱한 신풍		
+#Kyanit Giysi+7
 section		
 npc	20478	
 item	12067	1
@@ -32850,7 +32850,7 @@ set_value	4
 not_remove	12069	
 end		
 		
-#영롱한 신뇌갑		
+#Kyanit Plaka Zırhı+7
 section		
 npc	20478	
 item	12077	1
@@ -32893,7 +32893,7 @@ set_value	4
 not_remove	12079	
 end		
 		
-#영롱한 신성의		
+#Kyanit Kıyafet+7
 section		
 npc	20478	
 item	12087	1
@@ -32936,7 +32936,7 @@ set_value	4
 not_remove	12089	
 end		
 		
-#영롱한 신운갑		
+#Parlak Tanrı Şansı Zırhı
 section		
 npc	20478	
 item	12097	1
@@ -32979,7 +32979,7 @@ set_value	4
 not_remove	12099	
 end		
 		
-#영롱한 십이지호갑		
+#Zodyak Zırhı+7
 section		
 npc	20478	
 item	19297	1
@@ -33022,7 +33022,7 @@ set_value	4
 not_remove	19299	
 end		
 		
-#영롱한 십이지건		
+#Zodyak Kıyafeti+7
 section		
 npc	20478	
 item	19497	1
@@ -33065,7 +33065,7 @@ set_value	4
 not_remove	19499	
 end		
 		
-#영롱한 십이지마갑		
+#Zodyak Plaka Zırh+7
 section		
 npc	20478	
 item	19697	1
@@ -33108,7 +33108,7 @@ set_value	4
 not_remove	19699	
 end		
 		
-#영롱한 십이지상의		
+#Zodyak kıyafeti+7
 section		
 npc	20478	
 item	19897	1
@@ -33151,7 +33151,7 @@ set_value	4
 not_remove	19899	
 end		
 		
-#영롱한 태을갑		
+#Şeytan Boynuzu Zırhı +7
 section		
 npc	20478	
 item	20007	1
@@ -33194,7 +33194,7 @@ set_value	4
 not_remove	20009	
 end		
 		
-#영롱한 영보		
+#Ejder Süvari Giysisi +7
 section		
 npc	20478	
 item	20257	1
@@ -33237,7 +33237,7 @@ set_value	4
 not_remove	20259	
 end		
 		
-#영롱한 현천갑		
+#Kemik Plaka Zırh +7
 section		
 npc	20478	
 item	20507	1
@@ -33280,7 +33280,7 @@ set_value	4
 not_remove	20509	
 end		
 		
-#영롱한 삼관의		
+#Altın Giysi +7
 section		
 npc	20478	
 item	20757	1
@@ -33323,7 +33323,7 @@ set_value	4
 not_remove	20759	
 end		
 		
-#영롱한 청호갑		
+#Kutup Işığı Zırhı+7
 section		
 npc	20478	
 item	20767	1
@@ -33366,7 +33366,7 @@ set_value	4
 not_remove	20769	
 end		
 		
-#영롱한 청건		
+#Suikast Kıyafeti+7
 section		
 npc	20478	
 item	20777	1
@@ -33409,7 +33409,7 @@ set_value	4
 not_remove	20779	
 end		
 		
-#영롱한 청마갑		
+#Şeytan Pençesi Zırhı+7
 section		
 npc	20478	
 item	20787	1
@@ -33452,7 +33452,7 @@ set_value	4
 not_remove	20789	
 end		
 		
-#영롱한 청상의		
+#İnanç Kıyafeti+7
 section		
 npc	20478	
 item	20797	1
@@ -33495,7 +33495,7 @@ set_value	4
 not_remove	20799	
 end		
 		
-#영롱한 청해갑		
+#Parlak Mavi Deniz Zırhı
 section		
 npc	20478	
 item	20807	1
@@ -33538,7 +33538,7 @@ set_value	4
 not_remove	20809	
 end		
 		
-#영롱한 적룡갑		
+#Magma Koru Zırhı+7
 section		
 npc	20478	
 item	20817	1
@@ -33581,7 +33581,7 @@ set_value	4
 not_remove	20819	
 end		
 		
-#영롱한 적현		
+#Kanlı Ay Kıyafeti+7
 section		
 npc	20478	
 item	20827	1
@@ -33624,7 +33624,7 @@ set_value	4
 not_remove	20829	
 end		
 		
-#영롱한 적상갑		
+#Cehennem Koşucu Zırhı+7
 section		
 npc	20478	
 item	20837	1
@@ -33667,7 +33667,7 @@ set_value	4
 not_remove	20839	
 end		
 		
-#영롱한 적선의		
+#Ateş Kıyafeti+7
 section		
 npc	20478	
 item	20847	1
@@ -33710,7 +33710,7 @@ set_value	4
 not_remove	20849	
 end		
 		
-#영롱한 적천갑		
+#Parlak Kızıl Gök Zırhı
 section		
 npc	20478	
 item	20857	1
@@ -33753,7 +33753,7 @@ set_value	4
 not_remove	20859	
 end		
 		
-#영롱한 백호갑		
+#Balina Kemiği Zırhı+7
 section		
 npc	20478	
 item	20867	1
@@ -33796,7 +33796,7 @@ set_value	4
 not_remove	20869	
 end		
 		
-#영롱한 백건		
+#Dönüşüm Kıyafeti+7
 section		
 npc	20478	
 item	20877	1
@@ -33839,7 +33839,7 @@ set_value	4
 not_remove	20879	
 end		
 		
-#영롱한 백마갑		
+#Yanıltıcı Işık Zırhı+7
 section		
 npc	20478	
 item	20887	1
@@ -33882,7 +33882,7 @@ set_value	4
 not_remove	20889	
 end		
 		
-#영롱한 백상의		
+#Ahenk Kıyafeti+7
 section		
 npc	20478	
 item	20897	1
@@ -33925,7 +33925,7 @@ set_value	4
 not_remove	20899	
 end		
 		
-#영롱한 백현갑		
+#Parlak Beyaz Bilge Zırhı
 section		
 npc	20478	
 item	20907	1
@@ -33968,7 +33968,7 @@ set_value	4
 not_remove	20909	
 end		
 		
-#영롱한 흑룡갑		
+#Kül Yağmuru Zırhı+7
 section		
 npc	20478	
 item	20917	1
@@ -34011,7 +34011,7 @@ set_value	4
 not_remove	20919	
 end		
 		
-#영롱한 흑현		
+#Ölüm Gecesi Kıyafeti+7
 section		
 npc	20478	
 item	20927	1
@@ -34054,7 +34054,7 @@ set_value	4
 not_remove	20929	
 end		
 		
-#영롱한 흑상갑		
+#Kara Ateş Zırhı+7
 section		
 npc	20478	
 item	20937	1
@@ -34097,7 +34097,7 @@ set_value	4
 not_remove	20939	
 end		
 		
-#영롱한 흑선		
+#Ay Kıyafeti+7
 section		
 npc	20478	
 item	20947	1
@@ -34140,7 +34140,7 @@ set_value	4
 not_remove	20949	
 end		
 		
-#영롱한 흑천갑		
+#Parlak Kara Gök Zırhı
 section		
 npc	20478	
 item	20957	1
@@ -34183,7 +34183,7 @@ set_value	4
 not_remove	20959	
 end		
 		
-#영롱한 진녹갑		
+#Parlak Gerçek Yeşil Zırh
 section		
 npc	20478	
 item	21087	1
@@ -34226,7 +34226,7 @@ set_value	4
 not_remove	21089	
 end		
 		
-#영롱한 위천갑		
+#Parlak Üstün Gök Zırhı
 section		
 npc	20478	
 item	21097	1
@@ -34269,7 +34269,7 @@ set_value	4
 not_remove	21099	
 end		
 		
-#영롱한 십이지해갑		
+#Parlak On İki Burç Deniz Zırhı
 section		
 npc	20478	
 item	21207	1
@@ -34312,7 +34312,7 @@ set_value	4
 not_remove	21209	
 end		
 		
-#영롱한 흑룡포		
+#Kara ejderha zırhı+7
 section		
 npc	20478	
 item	21217	1
@@ -34439,7 +34439,7 @@ set_value	4
 not_remove	21225	
 end		
 		
-#영롱한 풍룡포		
+#Rüzgar ejderha. zırhı+7
 section		
 npc	20478	
 item	21237	1
@@ -34566,7 +34566,7 @@ set_value	4
 not_remove	21245	
 end		
 		
-#영롱한 마룡포		
+#Büyü ejderhası zırhı+7
 section		
 npc	20478	
 item	21257	1
@@ -34693,7 +34693,7 @@ set_value	4
 not_remove	21265	
 end		
 		
-#영롱한 신룡포		
+#Tanrılar ejder. zırhı+7
 section		
 npc	20478	
 item	21277	1
@@ -34820,7 +34820,7 @@ set_value	4
 not_remove	21285	
 end		
 		
-#영롱한 천룡포		
+#Parlak Gök Ejderi Topu
 section		
 npc	20478	
 item	21297	1
@@ -34947,7 +34947,7 @@ set_value	4
 not_remove	21305	
 end		
 		
-#영롱한 뱀룡포		
+#Yılan mantosu+7
 section		
 npc	20478	
 item	21317	1
@@ -35074,7 +35074,7 @@ set_value	4
 not_remove	21325	
 end		
 		
-#영롱한 뱀단포		
+#Yılan yeleği+7
 section		
 npc	20478	
 item	21337	1
@@ -35201,7 +35201,7 @@ set_value	4
 not_remove	21345	
 end		
 		
-#영롱한 뱀마룡포		
+#Kötü yılan mantosu+7
 section		
 npc	20478	
 item	21357	1
@@ -35328,7 +35328,7 @@ set_value	4
 not_remove	21365	
 end		
 		
-#영롱한 뱀신룡포		
+#Saf yılan mantosu+7
 section		
 npc	20478	
 item	21377	1
@@ -35455,7 +35455,7 @@ set_value	4
 not_remove	21385	
 end		
 		
-#영롱한 뱀천룡포		
+#Parlak Yılan Gök Ejderi Topu
 section		
 npc	20478	
 item	21397	1
@@ -35582,7 +35582,7 @@ set_value	4
 not_remove	21405	
 end		
 
-#찬란한 진청갑		
+#Mavi plaka zırhı+7
 section		
 npc	20479	
 item	12017	1
@@ -35628,7 +35628,7 @@ set_value	5
 not_remove	12019	
 end		
 		
-#찬란한 진천		
+#Mavi Ejderha Suiti +7
 section		
 npc	20479	
 item	12027	1
@@ -35674,7 +35674,7 @@ set_value	5
 not_remove	12029	
 end		
 		
-#찬란한 진마갑		
+#Aura Taş Zırhı +7
 section		
 npc	20479	
 item	12037	1
@@ -35720,7 +35720,7 @@ set_value	5
 not_remove	12039	
 end		
 		
-#찬란한 진룡의		
+#Ejderha Elbisesi +7
 section		
 npc	20479	
 item	12047	1
@@ -35766,7 +35766,7 @@ set_value	5
 not_remove	12049	
 end		
 		
-#찬란한 신비갑		
+#Kyanit Zırh+7
 section		
 npc	20479	
 item	12057	1
@@ -35812,7 +35812,7 @@ set_value	5
 not_remove	12059	
 end		
 		
-#찬란한 신풍		
+#Kyanit Giysi+7
 section		
 npc	20479	
 item	12067	1
@@ -35858,7 +35858,7 @@ set_value	5
 not_remove	12069	
 end		
 		
-#찬란한 신뇌갑		
+#Kyanit Plaka Zırhı+7
 section		
 npc	20479	
 item	12077	1
@@ -35904,7 +35904,7 @@ set_value	5
 not_remove	12079	
 end		
 		
-#찬란한 신성의		
+#Kyanit Kıyafet+7
 section		
 npc	20479	
 item	12087	1
@@ -35950,7 +35950,7 @@ set_value	5
 not_remove	12089	
 end		
 		
-#찬란한 신운갑		
+#Işıltılı Tanrı Şansı Zırhı
 section		
 npc	20479	
 item	12097	1
@@ -35996,7 +35996,7 @@ set_value	5
 not_remove	12099	
 end		
 		
-#찬란한 십이지호갑		
+#Zodyak Zırhı+7
 section		
 npc	20479	
 item	19297	1
@@ -36042,7 +36042,7 @@ set_value	5
 not_remove	19299	
 end		
 		
-#찬란한 십이지건		
+#Zodyak Kıyafeti+7
 section		
 npc	20479	
 item	19497	1
@@ -36088,7 +36088,7 @@ set_value	5
 not_remove	19499	
 end		
 		
-#찬란한 십이지마갑		
+#Zodyak Plaka Zırh+7
 section		
 npc	20479	
 item	19697	1
@@ -36134,7 +36134,7 @@ set_value	5
 not_remove	19699	
 end		
 		
-#찬란한 십이지상의		
+#Zodyak kıyafeti+7
 section		
 npc	20479	
 item	19897	1
@@ -36180,7 +36180,7 @@ set_value	5
 not_remove	19899	
 end		
 		
-#찬란한 태을갑		
+#Şeytan Boynuzu Zırhı +7
 section		
 npc	20479	
 item	20007	1
@@ -36226,7 +36226,7 @@ set_value	5
 not_remove	20009	
 end		
 		
-#찬란한 영보		
+#Ejder Süvari Giysisi +7
 section		
 npc	20479	
 item	20257	1
@@ -36272,7 +36272,7 @@ set_value	5
 not_remove	20259	
 end		
 		
-#찬란한 현천갑		
+#Kemik Plaka Zırh +7
 section		
 npc	20479	
 item	20507	1
@@ -36318,7 +36318,7 @@ set_value	5
 not_remove	20509	
 end		
 		
-#찬란한 삼관의		
+#Altın Giysi +7
 section		
 npc	20479	
 item	20757	1
@@ -36364,7 +36364,7 @@ set_value	5
 not_remove	20759	
 end		
 		
-#찬란한 청호갑		
+#Kutup Işığı Zırhı+7
 section		
 npc	20479	
 item	20767	1
@@ -36410,7 +36410,7 @@ set_value	5
 not_remove	20769	
 end		
 		
-#찬란한 청건		
+#Suikast Kıyafeti+7
 section		
 npc	20479	
 item	20777	1
@@ -36456,7 +36456,7 @@ set_value	5
 not_remove	20779	
 end		
 		
-#찬란한 청마갑		
+#Şeytan Pençesi Zırhı+7
 section		
 npc	20479	
 item	20787	1
@@ -36502,7 +36502,7 @@ set_value	5
 not_remove	20789	
 end		
 		
-#찬란한 청상의		
+#İnanç Kıyafeti+7
 section		
 npc	20479	
 item	20797	1
@@ -36548,7 +36548,7 @@ set_value	5
 not_remove	20799	
 end		
 		
-#찬란한 청해갑		
+#Işıltılı Mavi Deniz Zırhı
 section		
 npc	20479	
 item	20807	1
@@ -36594,7 +36594,7 @@ set_value	5
 not_remove	20809	
 end		
 		
-#찬란한 적룡갑		
+#Magma Koru Zırhı+7
 section		
 npc	20479	
 item	20817	1
@@ -36640,7 +36640,7 @@ set_value	5
 not_remove	20819	
 end		
 		
-#찬란한 적현		
+#Kanlı Ay Kıyafeti+7
 section		
 npc	20479	
 item	20827	1
@@ -36686,7 +36686,7 @@ set_value	5
 not_remove	20829	
 end		
 		
-#찬란한 적상갑		
+#Cehennem Koşucu Zırhı+7
 section		
 npc	20479	
 item	20837	1
@@ -36732,7 +36732,7 @@ set_value	5
 not_remove	20839	
 end		
 		
-#찬란한 적선의		
+#Ateş Kıyafeti+7
 section		
 npc	20479	
 item	20847	1
@@ -36778,7 +36778,7 @@ set_value	5
 not_remove	20849	
 end		
 		
-#찬란한 적천갑		
+#Işıltılı Kızıl Gök Zırhı
 section		
 npc	20479	
 item	20857	1
@@ -36824,7 +36824,7 @@ set_value	5
 not_remove	20859	
 end		
 		
-#찬란한 백호갑		
+#Balina Kemiği Zırhı+7
 section		
 npc	20479	
 item	20867	1
@@ -36870,7 +36870,7 @@ set_value	5
 not_remove	20869	
 end		
 		
-#찬란한 백건		
+#Dönüşüm Kıyafeti+7
 section		
 npc	20479	
 item	20877	1
@@ -36916,7 +36916,7 @@ set_value	5
 not_remove	20879	
 end		
 		
-#찬란한 백마갑		
+#Yanıltıcı Işık Zırhı+7
 section		
 npc	20479	
 item	20887	1
@@ -36962,7 +36962,7 @@ set_value	5
 not_remove	20889	
 end		
 		
-#찬란한 백상의		
+#Ahenk Kıyafeti+7
 section		
 npc	20479	
 item	20897	1
@@ -37008,7 +37008,7 @@ set_value	5
 not_remove	20899	
 end		
 		
-#찬란한 백현갑		
+#Işıltılı Beyaz Bilge Zırhı
 section		
 npc	20479	
 item	20907	1
@@ -37054,7 +37054,7 @@ set_value	5
 not_remove	20909	
 end		
 		
-#찬란한 흑룡갑		
+#Kül Yağmuru Zırhı+7
 section		
 npc	20479	
 item	20917	1
@@ -37100,7 +37100,7 @@ set_value	5
 not_remove	20919	
 end		
 		
-#찬란한 흑현		
+#Ölüm Gecesi Kıyafeti+7
 section		
 npc	20479	
 item	20927	1
@@ -37146,7 +37146,7 @@ set_value	5
 not_remove	20929	
 end		
 		
-#찬란한 흑상갑		
+#Kara Ateş Zırhı+7
 section		
 npc	20479	
 item	20937	1
@@ -37192,7 +37192,7 @@ set_value	5
 not_remove	20939	
 end		
 		
-#찬란한 흑선		
+#Ay Kıyafeti+7
 section		
 npc	20479	
 item	20947	1
@@ -37238,7 +37238,7 @@ set_value	5
 not_remove	20949	
 end		
 		
-#찬란한 흑천갑		
+#Işıltılı Kara Gök Zırhı
 section		
 npc	20479	
 item	20957	1
@@ -37284,7 +37284,7 @@ set_value	5
 not_remove	20959	
 end		
 		
-#찬란한 진녹갑		
+#Işıltılı Gerçek Yeşil Zırh
 section		
 npc	20479	
 item	21087	1
@@ -37330,7 +37330,7 @@ set_value	5
 not_remove	21089	
 end		
 		
-#찬란한 위천갑		
+#Işıltılı Üstün Gök Zırhı
 section		
 npc	20479	
 item	21097	1
@@ -37376,7 +37376,7 @@ set_value	5
 not_remove	21099	
 end		
 		
-#찬란한 십이지해갑		
+#Işıltılı On İki Burç Deniz Zırhı
 section		
 npc	20479	
 item	21207	1
@@ -37422,7 +37422,7 @@ set_value	5
 not_remove	21209	
 end		
 		
-#찬란한 흑룡포		
+#Kara ejderha zırhı+7
 section		
 npc	20479	
 item	21217	1
@@ -37558,7 +37558,7 @@ set_value	5
 not_remove	21225	
 end		
 		
-#찬란한 풍룡포		
+#Rüzgar ejderha. zırhı+7
 section		
 npc	20479	
 item	21237	1
@@ -37694,7 +37694,7 @@ set_value	5
 not_remove	21245	
 end		
 		
-#찬란한 마룡포		
+#Büyü ejderhası zırhı+7
 section		
 npc	20479	
 item	21257	1
@@ -37830,7 +37830,7 @@ set_value	5
 not_remove	21265	
 end		
 		
-#찬란한 신룡포		
+#Tanrılar ejder. zırhı+7
 section		
 npc	20479	
 item	21277	1
@@ -37966,7 +37966,7 @@ set_value	5
 not_remove	21285	
 end		
 		
-#찬란한 천룡포		
+#Işıltılı Gök Ejderi Topu
 section		
 npc	20479	
 item	21297	1
@@ -38102,7 +38102,7 @@ set_value	5
 not_remove	21305	
 end		
 		
-#찬란한 뱀룡포		
+#Yılan mantosu+7
 section		
 npc	20479	
 item	21317	1
@@ -38238,7 +38238,7 @@ set_value	5
 not_remove	21325	
 end		
 		
-#찬란한 뱀단포		
+#Yılan yeleği+7
 section		
 npc	20479	
 item	21337	1
@@ -38374,7 +38374,7 @@ set_value	5
 not_remove	21345	
 end		
 		
-#찬란한 뱀마룡포		
+#Kötü yılan mantosu+7
 section		
 npc	20479	
 item	21357	1
@@ -38510,7 +38510,7 @@ set_value	5
 not_remove	21365	
 end		
 		
-#찬란한 뱀신룡포		
+#Saf yılan mantosu+7
 section		
 npc	20479	
 item	21377	1
@@ -38646,7 +38646,7 @@ set_value	5
 not_remove	21385	
 end		
 		
-#찬란한 뱀천룡포		
+#Işıltılı Yılan Gök Ejderi Topu
 section		
 npc	20479	
 item	21397	1
@@ -38782,7 +38782,7 @@ set_value	5
 not_remove	21405	
 end		
 		
-#고귀한 투귀투구		
+#Usta Savaşçı Kaskı +7
 section		
 npc	20475	
 item	12287	1
@@ -38825,7 +38825,7 @@ set_value	1
 not_remove	12289
 end
 
-#고귀한 패주두건
+#Örümcek Kapşon +7
 section
 npc	20475
 item	12407	1
@@ -38868,7 +38868,7 @@ set_value	1
 not_remove	12409
 end
 
-#고귀한 수라80
+#Büyülü Kask +7
 section
 npc	20475
 item	12547	1
@@ -38911,7 +38911,7 @@ set_value	1
 not_remove	12549
 end
 
-#고귀한 무당80
+#Ruh Yongası Şapkası +7
 section
 npc	20475
 item	12687	1
@@ -38954,7 +38954,7 @@ set_value	1
 not_remove	12689
 end
 
-#고귀한 녹림투구
+#Asil Yeşil Orman Miğferi
 section
 npc	20475
 item	21547	1
@@ -38997,7 +38997,7 @@ set_value	1
 not_remove	21549
 end
 
-#고귀한 비늘투구
+#Ejderha Çeliği Kaskı +7
 section
 npc	20475
 item	12697	1
@@ -39040,7 +39040,7 @@ set_value	1
 not_remove	12699
 end
 
-#고귀한 용비두건
+#Ejderha Kapüşonu +7
 section
 npc	20475
 item	12707	1
@@ -39083,7 +39083,7 @@ set_value	1
 not_remove	12709
 end
 
-#고귀한 귀혼투구
+#Ejderha Zırhı Kaskı +7
 section
 npc	20475
 item	12717	1
@@ -39126,7 +39126,7 @@ set_value	1
 not_remove	12719
 end
 
-#고귀한 백제모
+#Ejderha Şapkası +7
 section
 npc	20475
 item	12727	1
@@ -39169,7 +39169,7 @@ set_value	1
 not_remove	12729
 end
 
-#고귀한 용수투구
+#Asil Ejder Su Miğferi
 section
 npc	20475
 item	21557	1
@@ -39212,7 +39212,7 @@ set_value	1
 not_remove	21559
 end
 
-#고귀한 비늘투구
+#Dragon Çelik Başlık+7
 section
 npc	20475
 item	12737	1
@@ -39255,7 +39255,7 @@ set_value	1
 not_remove	12739
 end
 
-#고귀한 용비두건
+#Dragon Kapüşonu+7
 section
 npc	20475
 item	12747	1
@@ -39298,7 +39298,7 @@ set_value	1
 not_remove	12749
 end
 
-#고귀한 귀혼투구
+#Dragon Zırhlı Başlık+7
 section
 npc	20475
 item	12757	1
@@ -39341,7 +39341,7 @@ set_value	1
 not_remove	12759
 end
 
-#고귀한 백제모
+#Dragon Şapkası+7
 section
 npc	20475
 item	12767	1
@@ -39384,7 +39384,7 @@ set_value	1
 not_remove	12769
 end
 
-#고귀한 용수투구
+#Asil Ejder Su Miğferi
 section
 npc	20475
 item	12777	1
@@ -39427,7 +39427,7 @@ set_value	1
 not_remove	12779
 end
 
-#고귀한 흑룡투구
+#Kara ejderha kaskı+7
 section
 npc	20475
 item	12787	1
@@ -39554,7 +39554,7 @@ set_value	1
 not_remove	12795
 end
 
-#고귀한 풍룡투구
+#Rüzgar ejderha. kaskı+7
 section
 npc	20475
 item	12807	1
@@ -39681,7 +39681,7 @@ set_value	1
 not_remove	12815
 end
 
-#고귀한 마룡투구
+#Büyü ejderhası kaskı+7
 section
 npc	20475
 item	12827	1
@@ -39808,7 +39808,7 @@ set_value	1
 not_remove	12835
 end
 
-#고귀한 신룡투구
+#Tanrılar ejder. kaskı+7
 section
 npc	20475
 item	12847	1
@@ -39935,7 +39935,7 @@ set_value	1
 not_remove	12855
 end
 
-#고귀한 천룡투구
+#Asil Gök Ejderi Miğferi
 section
 npc	20475
 item	12867	1
@@ -40062,7 +40062,7 @@ set_value	1
 not_remove	12875
 end
 
-#숭고한 투귀투구		
+#Usta Savaşçı Kaskı +7
 section		
 npc	20476	
 item	12287	1
@@ -40105,7 +40105,7 @@ set_value	2
 not_remove	12289	
 end		
 		
-#숭고한 패주두건		
+#Örümcek Kapşon +7
 section		
 npc	20476	
 item	12407	1
@@ -40148,7 +40148,7 @@ set_value	2
 not_remove	12409	
 end		
 		
-#숭고한 수라80		
+#Büyülü Kask +7
 section		
 npc	20476	
 item	12547	1
@@ -40191,7 +40191,7 @@ set_value	2
 not_remove	12549	
 end		
 		
-#숭고한 무당80		
+#Ruh Yongası Şapkası +7
 section		
 npc	20476	
 item	12687	1
@@ -40234,7 +40234,7 @@ set_value	2
 not_remove	12689	
 end		
 		
-#숭고한 녹림투구		
+#Yüce Yeşil Orman Miğferi
 section		
 npc	20476	
 item	21547	1
@@ -40277,7 +40277,7 @@ set_value	2
 not_remove	21549	
 end		
 		
-#숭고한 비늘투구		
+#Ejderha Çeliği Kaskı +7
 section		
 npc	20476	
 item	12697	1
@@ -40320,7 +40320,7 @@ set_value	2
 not_remove	12699	
 end		
 		
-#숭고한 용비두건		
+#Ejderha Kapüşonu +7
 section		
 npc	20476	
 item	12707	1
@@ -40363,7 +40363,7 @@ set_value	2
 not_remove	12709	
 end		
 		
-#숭고한 귀혼투구		
+#Ejderha Zırhı Kaskı +7
 section		
 npc	20476	
 item	12717	1
@@ -40406,7 +40406,7 @@ set_value	2
 not_remove	12719	
 end		
 		
-#숭고한 백제모		
+#Ejderha Şapkası +7
 section		
 npc	20476	
 item	12727	1
@@ -40449,7 +40449,7 @@ set_value	2
 not_remove	12729	
 end		
 		
-#숭고한 용수투구		
+#Yüce Ejder Su Miğferi
 section		
 npc	20476	
 item	21557	1
@@ -40492,7 +40492,7 @@ set_value	2
 not_remove	21559	
 end		
 		
-#숭고한 비늘투구		
+#Dragon Çelik Başlık+7
 section		
 npc	20476	
 item	12737	1
@@ -40535,7 +40535,7 @@ set_value	2
 not_remove	12739	
 end		
 		
-#숭고한 용비두건		
+#Dragon Kapüşonu+7
 section		
 npc	20476	
 item	12747	1
@@ -40578,7 +40578,7 @@ set_value	2
 not_remove	12749	
 end		
 		
-#숭고한 귀혼투구		
+#Dragon Zırhlı Başlık+7
 section		
 npc	20476	
 item	12757	1
@@ -40621,7 +40621,7 @@ set_value	2
 not_remove	12759	
 end		
 		
-#숭고한 백제모		
+#Dragon Şapkası+7
 section		
 npc	20476	
 item	12767	1
@@ -40664,7 +40664,7 @@ set_value	2
 not_remove	12769	
 end		
 		
-#숭고한 용수투구		
+#Yüce Ejder Su Miğferi
 section		
 npc	20476	
 item	12777	1
@@ -40707,7 +40707,7 @@ set_value	2
 not_remove	12779	
 end		
 		
-#숭고한 흑룡투구		
+#Kara ejderha kaskı+7
 section		
 npc	20476	
 item	12787	1
@@ -40834,7 +40834,7 @@ set_value	2
 not_remove	12795	
 end		
 		
-#숭고한 풍룡투구		
+#Rüzgar ejderha. kaskı+7
 section		
 npc	20476	
 item	12807	1
@@ -40961,7 +40961,7 @@ set_value	2
 not_remove	12815	
 end		
 		
-#숭고한 마룡투구		
+#Büyü ejderhası kaskı+7
 section		
 npc	20476	
 item	12827	1
@@ -41088,7 +41088,7 @@ set_value	2
 not_remove	12835	
 end		
 		
-#숭고한 신룡투구		
+#Tanrılar ejder. kaskı+7
 section		
 npc	20476	
 item	12847	1
@@ -41215,7 +41215,7 @@ set_value	2
 not_remove	12855	
 end		
 		
-#숭고한 천룡투구		
+#Yüce Gök Ejderi Miğferi
 section		
 npc	20476	
 item	12867	1
@@ -41342,7 +41342,7 @@ set_value	2
 not_remove	12875	
 end		
 
-#거룩한 투귀투구		
+#Usta Savaşçı Kaskı +7
 section		
 npc	20477	
 item	12287	1
@@ -41385,7 +41385,7 @@ set_value	3
 not_remove	12289	
 end		
 		
-#거룩한 패주두건		
+#Örümcek Kapşon +7
 section		
 npc	20477	
 item	12407	1
@@ -41428,7 +41428,7 @@ set_value	3
 not_remove	12409	
 end		
 		
-#거룩한 수라80		
+#Büyülü Kask +7
 section		
 npc	20477	
 item	12547	1
@@ -41471,7 +41471,7 @@ set_value	3
 not_remove	12549	
 end		
 		
-#거룩한 무당80		
+#Ruh Yongası Şapkası +7
 section		
 npc	20477	
 item	12687	1
@@ -41514,7 +41514,7 @@ set_value	3
 not_remove	12689	
 end		
 		
-#거룩한 녹림투구		
+#Kutsal Yeşil Orman Miğferi
 section		
 npc	20477	
 item	21547	1
@@ -41557,7 +41557,7 @@ set_value	3
 not_remove	21549	
 end		
 		
-#거룩한 비늘투구		
+#Ejderha Çeliği Kaskı +7
 section		
 npc	20477	
 item	12697	1
@@ -41600,7 +41600,7 @@ set_value	3
 not_remove	12699	
 end		
 		
-#거룩한 용비두건		
+#Ejderha Kapüşonu +7
 section		
 npc	20477	
 item	12707	1
@@ -41643,7 +41643,7 @@ set_value	3
 not_remove	12709	
 end		
 		
-#거룩한 귀혼투구		
+#Ejderha Zırhı Kaskı +7
 section		
 npc	20477	
 item	12717	1
@@ -41686,7 +41686,7 @@ set_value	3
 not_remove	12719	
 end		
 		
-#거룩한 백제모		
+#Ejderha Şapkası +7
 section		
 npc	20477	
 item	12727	1
@@ -41729,7 +41729,7 @@ set_value	3
 not_remove	12729	
 end		
 		
-#거룩한 용수투구		
+#Kutsal Ejder Su Miğferi
 section		
 npc	20477	
 item	21557	1
@@ -41772,7 +41772,7 @@ set_value	3
 not_remove	21559	
 end		
 		
-#거룩한 비늘투구		
+#Dragon Çelik Başlık+7
 section		
 npc	20477	
 item	12737	1
@@ -41815,7 +41815,7 @@ set_value	3
 not_remove	12739	
 end		
 		
-#거룩한 용비두건		
+#Dragon Kapüşonu+7
 section		
 npc	20477	
 item	12747	1
@@ -41858,7 +41858,7 @@ set_value	3
 not_remove	12749	
 end		
 		
-#거룩한 귀혼투구		
+#Dragon Zırhlı Başlık+7
 section		
 npc	20477	
 item	12757	1
@@ -41901,7 +41901,7 @@ set_value	3
 not_remove	12759	
 end		
 		
-#거룩한 백제모		
+#Dragon Şapkası+7
 section		
 npc	20477	
 item	12767	1
@@ -41944,7 +41944,7 @@ set_value	3
 not_remove	12769	
 end		
 		
-#거룩한 용수투구		
+#Kutsal Ejder Su Miğferi
 section		
 npc	20477	
 item	12777	1
@@ -41987,7 +41987,7 @@ set_value	3
 not_remove	12779	
 end		
 		
-#거룩한 흑룡투구		
+#Kara ejderha kaskı+7
 section		
 npc	20477	
 item	12787	1
@@ -42114,7 +42114,7 @@ set_value	3
 not_remove	12795	
 end		
 		
-#거룩한 풍룡투구		
+#Rüzgar ejderha. kaskı+7
 section		
 npc	20477	
 item	12807	1
@@ -42241,7 +42241,7 @@ set_value	3
 not_remove	12815	
 end		
 		
-#거룩한 마룡투구		
+#Büyü ejderhası kaskı+7
 section		
 npc	20477	
 item	12827	1
@@ -42368,7 +42368,7 @@ set_value	3
 not_remove	12835	
 end		
 		
-#거룩한 신룡투구		
+#Tanrılar ejder. kaskı+7
 section		
 npc	20477	
 item	12847	1
@@ -42495,7 +42495,7 @@ set_value	3
 not_remove	12855	
 end		
 		
-#거룩한 천룡투구		
+#Kutsal Gök Ejderi Miğferi
 section		
 npc	20477	
 item	12867	1
@@ -42622,7 +42622,7 @@ set_value	3
 not_remove	12875	
 end		
 
-#영롱한 투귀투구		
+#Usta Savaşçı Kaskı +7
 section		
 npc	20478	
 item	12287	1
@@ -42665,7 +42665,7 @@ set_value	4
 not_remove	12289	
 end		
 		
-#영롱한 패주두건		
+#Örümcek Kapşon +7
 section		
 npc	20478	
 item	12407	1
@@ -42708,7 +42708,7 @@ set_value	4
 not_remove	12409	
 end		
 		
-#영롱한 수라80		
+#Büyülü Kask +7
 section		
 npc	20478	
 item	12547	1
@@ -42751,7 +42751,7 @@ set_value	4
 not_remove	12549	
 end		
 		
-#영롱한 무당80		
+#Ruh Yongası Şapkası +7
 section		
 npc	20478	
 item	12687	1
@@ -42794,7 +42794,7 @@ set_value	4
 not_remove	12689	
 end		
 		
-#영롱한 녹림투구		
+#Parlak Yeşil Orman Miğferi
 section		
 npc	20478	
 item	21547	1
@@ -42837,7 +42837,7 @@ set_value	4
 not_remove	21549	
 end		
 		
-#영롱한 비늘투구		
+#Ejderha Çeliği Kaskı +7
 section		
 npc	20478	
 item	12697	1
@@ -42880,7 +42880,7 @@ set_value	4
 not_remove	12699	
 end		
 		
-#영롱한 용비두건		
+#Ejderha Kapüşonu +7
 section		
 npc	20478	
 item	12707	1
@@ -42923,7 +42923,7 @@ set_value	4
 not_remove	12709	
 end		
 		
-#영롱한 귀혼투구		
+#Ejderha Zırhı Kaskı +7
 section		
 npc	20478	
 item	12717	1
@@ -42966,7 +42966,7 @@ set_value	4
 not_remove	12719	
 end		
 		
-#영롱한 백제모		
+#Ejderha Şapkası +7
 section		
 npc	20478	
 item	12727	1
@@ -43009,7 +43009,7 @@ set_value	4
 not_remove	12729	
 end		
 		
-#영롱한 용수투구		
+#Parlak Ejder Su Miğferi
 section		
 npc	20478	
 item	21557	1
@@ -43052,7 +43052,7 @@ set_value	4
 not_remove	21559	
 end		
 		
-#영롱한 비늘투구		
+#Dragon Çelik Başlık+7
 section		
 npc	20478	
 item	12737	1
@@ -43095,7 +43095,7 @@ set_value	4
 not_remove	12739	
 end		
 		
-#영롱한 용비두건		
+#Dragon Kapüşonu+7
 section		
 npc	20478	
 item	12747	1
@@ -43138,7 +43138,7 @@ set_value	4
 not_remove	12749	
 end		
 		
-#영롱한 귀혼투구		
+#Dragon Zırhlı Başlık+7
 section		
 npc	20478	
 item	12757	1
@@ -43181,7 +43181,7 @@ set_value	4
 not_remove	12759	
 end		
 		
-#영롱한 백제모		
+#Dragon Şapkası+7
 section		
 npc	20478	
 item	12767	1
@@ -43224,7 +43224,7 @@ set_value	4
 not_remove	12769	
 end		
 		
-#영롱한 용수투구		
+#Parlak Ejder Su Miğferi
 section		
 npc	20478	
 item	12777	1
@@ -43267,7 +43267,7 @@ set_value	4
 not_remove	12779	
 end		
 		
-#영롱한 흑룡투구		
+#Kara ejderha kaskı+7
 section		
 npc	20478	
 item	12787	1
@@ -43394,7 +43394,7 @@ set_value	4
 not_remove	12795	
 end		
 		
-#영롱한 풍룡투구		
+#Rüzgar ejderha. kaskı+7
 section		
 npc	20478	
 item	12807	1
@@ -43521,7 +43521,7 @@ set_value	4
 not_remove	12815	
 end		
 		
-#영롱한 마룡투구		
+#Büyü ejderhası kaskı+7
 section		
 npc	20478	
 item	12827	1
@@ -43648,7 +43648,7 @@ set_value	4
 not_remove	12835	
 end		
 		
-#영롱한 신룡투구		
+#Tanrılar ejder. kaskı+7
 section		
 npc	20478	
 item	12847	1
@@ -43775,7 +43775,7 @@ set_value	4
 not_remove	12855	
 end		
 		
-#영롱한 천룡투구		
+#Parlak Gök Ejderi Miğferi
 section		
 npc	20478	
 item	12867	1
@@ -43902,7 +43902,7 @@ set_value	4
 not_remove	12875	
 end		
 
-#찬란한 투귀투구		
+#Usta Savaşçı Kaskı +7
 section		
 npc	20479	
 item	12287	1
@@ -43948,7 +43948,7 @@ set_value	5
 not_remove	12289	
 end		
 		
-#찬란한 패주두건		
+#Örümcek Kapşon +7
 section		
 npc	20479	
 item	12407	1
@@ -43994,7 +43994,7 @@ set_value	5
 not_remove	12409	
 end		
 		
-#찬란한 수라80		
+#Büyülü Kask +7
 section		
 npc	20479	
 item	12547	1
@@ -44040,7 +44040,7 @@ set_value	5
 not_remove	12549	
 end		
 		
-#찬란한 무당80		
+#Ruh Yongası Şapkası +7
 section		
 npc	20479	
 item	12687	1
@@ -44086,7 +44086,7 @@ set_value	5
 not_remove	12689	
 end		
 		
-#찬란한 녹림투구		
+#Işıltılı Yeşil Orman Miğferi
 section		
 npc	20479	
 item	21547	1
@@ -44132,7 +44132,7 @@ set_value	5
 not_remove	21549	
 end		
 		
-#찬란한 비늘투구		
+#Ejderha Çeliği Kaskı +7
 section		
 npc	20479	
 item	12697	1
@@ -44178,7 +44178,7 @@ set_value	5
 not_remove	12699	
 end		
 		
-#찬란한 용비두건		
+#Ejderha Kapüşonu +7
 section		
 npc	20479	
 item	12707	1
@@ -44224,7 +44224,7 @@ set_value	5
 not_remove	12709	
 end		
 		
-#찬란한 귀혼투구		
+#Ejderha Zırhı Kaskı +7
 section		
 npc	20479	
 item	12717	1
@@ -44270,7 +44270,7 @@ set_value	5
 not_remove	12719	
 end		
 		
-#찬란한 백제모		
+#Ejderha Şapkası +7
 section		
 npc	20479	
 item	12727	1
@@ -44316,7 +44316,7 @@ set_value	5
 not_remove	12729	
 end		
 		
-#찬란한 용수투구		
+#Işıltılı Ejder Su Miğferi
 section		
 npc	20479	
 item	21557	1
@@ -44362,7 +44362,7 @@ set_value	5
 not_remove	21559	
 end		
 		
-#찬란한 비늘투구		
+#Dragon Çelik Başlık+7
 section		
 npc	20479	
 item	12737	1
@@ -44408,7 +44408,7 @@ set_value	5
 not_remove	12739	
 end		
 		
-#찬란한 용비두건		
+#Dragon Kapüşonu+7
 section		
 npc	20479	
 item	12747	1
@@ -44454,7 +44454,7 @@ set_value	5
 not_remove	12749	
 end		
 		
-#찬란한 귀혼투구		
+#Dragon Zırhlı Başlık+7
 section		
 npc	20479	
 item	12757	1
@@ -44500,7 +44500,7 @@ set_value	5
 not_remove	12759	
 end		
 		
-#찬란한 백제모		
+#Dragon Şapkası+7
 section		
 npc	20479	
 item	12767	1
@@ -44546,7 +44546,7 @@ set_value	5
 not_remove	12769	
 end		
 		
-#찬란한 용수투구		
+#Işıltılı Ejder Su Miğferi
 section		
 npc	20479	
 item	12777	1
@@ -44592,7 +44592,7 @@ set_value	5
 not_remove	12779	
 end		
 		
-#찬란한 흑룡투구		
+#Kara ejderha kaskı+7
 section		
 npc	20479	
 item	12787	1
@@ -44728,7 +44728,7 @@ set_value	5
 not_remove	12795	
 end		
 		
-#찬란한 풍룡투구		
+#Rüzgar ejderha. kaskı+7
 section		
 npc	20479	
 item	12807	1
@@ -44864,7 +44864,7 @@ set_value	5
 not_remove	12815	
 end		
 		
-#찬란한 마룡투구		
+#Büyü ejderhası kaskı+7
 section		
 npc	20479	
 item	12827	1
@@ -45000,7 +45000,7 @@ set_value	5
 not_remove	12835	
 end		
 		
-#찬란한 신룡투구		
+#Tanrılar ejder. kaskı+7
 section		
 npc	20479	
 item	12847	1
@@ -45136,7 +45136,7 @@ set_value	5
 not_remove	12855	
 end		
 		
-#찬란한 천룡투구		
+#Işıltılı Gök Ejderi Miğferi
 section		
 npc	20479	
 item	12867	1
@@ -45272,7 +45272,7 @@ set_value	5
 not_remove	12875	
 end		
 
-#화염정령
+#Ateş elementeri kutusu
 section
 npc	20433
 item	39117	2
@@ -45283,7 +45283,7 @@ category	PET
 percent	100
 end
 
-#냉기정령
+#Buz elementeri kutusu
 section
 npc	20433
 item	39117	2
@@ -45294,7 +45294,7 @@ category	PET
 percent	100
 end
 
-#전기정령
+#Şimşek elementeri kutusu
 section
 npc	20433
 item	39117	2
@@ -45305,7 +45305,7 @@ category	PET
 percent	100
 end
 
-#바람정령
+#Rüzgar elementeri kutusu
 section
 npc	20433
 item	39117	2
@@ -45316,7 +45316,7 @@ category	PET
 percent	100
 end
 
-#대지정령
+#Toprak elementeri kutusu
 section
 npc	20433
 item	39117	2
@@ -45327,7 +45327,7 @@ category	PET
 percent	100
 end
 
-#어둠정령
+#Karanlık element. kutusu
 section
 npc	20433
 item	39117	2
@@ -45338,7 +45338,7 @@ category	PET
 percent	100
 end
 
-#힘의장갑
+#Güç Eldiveni
 section
 npc	20823
 item	31247	10
@@ -45352,7 +45352,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#항력의장갑
+#Direnç Eldiveni
 section
 npc	20823
 item	31248	10
@@ -45366,7 +45366,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#신체의장갑
+#Beden Eldiveni
 section
 npc	20823
 item	31249	10
@@ -45380,7 +45380,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#금속복대
+#Titan kemer+0
 section
 npc	20823
 item	30666	30
@@ -45394,7 +45394,7 @@ category	BELT
 percent	30
 end
 
-#지성의장갑
+#Zeka Eldiveni
 section
 npc	20823
 item	31250	10
@@ -45408,7 +45408,7 @@ category	ARMOR_GLOVE
 percent	75
 end
 
-#힘의장갑
+#Güç Eldiveni
 section
 npc	20828
 item	31247	10
@@ -45422,7 +45422,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#항력의장갑
+#Direnç Eldiveni
 section
 npc	20828
 item	31248	10
@@ -45436,7 +45436,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#신체의장갑
+#Beden Eldiveni
 section
 npc	20828
 item	31249	10
@@ -45450,7 +45450,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#지성의장갑
+#Zeka Eldiveni
 section
 npc	20828
 item	31250	10
@@ -45464,7 +45464,7 @@ category	ARMOR_GLOVE
 percent	80
 end
 
-#철팔찌
+#Sis jediti bilekliği+0
 section
 npc	20823
 item	50664	10
@@ -45476,7 +45476,7 @@ category	ACCESSORY
 percent	30
 end
 
-#철귀걸이
+#Sis jediti küpesi+0
 section
 npc	20823
 item	50664	10
@@ -45488,7 +45488,7 @@ category	ACCESSORY
 percent	30
 end
 
-#철목걸이
+#Sis jediti kolyesi+0
 section
 npc	20823
 item	50664	10
@@ -45500,7 +45500,7 @@ category	ACCESSORY
 percent	30
 end
 
-#황철팔찌
+#Güneş jediti bilekliği+0
 section
 npc	20823
 item	50661	10
@@ -45513,7 +45513,7 @@ category	ACCESSORY
 percent	30
 end
 
-#황철귀걸이
+#Güneş jediti küpesi+0
 section
 npc	20823
 item	50661	10
@@ -45526,7 +45526,7 @@ category	ACCESSORY
 percent	30
 end
 
-#황철목걸이
+#Güneş jediti kolyesi+0
 section
 npc	20823
 item	50661	10
@@ -45539,7 +45539,7 @@ category	ACCESSORY
 percent	30
 end
 
-#흑수정팔찌
+#Gece jediti bilekliği+0
 section
 npc	20823
 item	50662	10
@@ -45552,7 +45552,7 @@ category	ACCESSORY
 percent	30
 end
 
-#흑수정귀걸이
+#Gece jediti küpesi+0
 section
 npc	20823
 item	50662	10
@@ -45565,7 +45565,7 @@ category	ACCESSORY
 percent	30
 end
 
-#흑수정목걸이
+#Gece jediti kolyesi+0
 section
 npc	20823
 item	50662	10
@@ -45578,7 +45578,7 @@ category	ACCESSORY
 percent	30
 end
 
-#연수정팔찌
+#Duman jediti bilekliği+0
 section
 npc	20823
 item	50663	10
@@ -45591,7 +45591,7 @@ category	ACCESSORY
 percent	30
 end
 
-#연수정귀걸이
+#Duman jediti küpesi+0
 section
 npc	20823
 item	50663	10
@@ -45604,7 +45604,7 @@ category	ACCESSORY
 percent	30
 end
 
-#연수정목걸이
+#Duman jediti kolyesi+0
 section
 npc	20823
 item	50663	10
@@ -45617,7 +45617,7 @@ category	ACCESSORY
 percent	30
 end
 
-#성마석
+#Şeytanların güç taşı+0
 section
 npc	20823
 item	28046	1
@@ -45628,7 +45628,7 @@ category	ETC
 percent	30
 end
 
-#성마석
+#Şeytanların güç taşı+1
 section
 npc	20823
 item	28146	1
@@ -45639,7 +45639,7 @@ category	ETC
 percent	30
 end
 
-#성마석
+#Şeytanların güç taşı+2
 section
 npc	20823
 item	28246	1
@@ -45650,7 +45650,7 @@ category	ETC
 percent	30
 end
 
-#성마석
+#Şeytanların güç taşı+3
 section
 npc	20823
 item	28346	1
@@ -45661,7 +45661,7 @@ category	ETC
 percent	30
 end
 
-#성마석
+#Şeytanların güç taşı+4
 section
 npc	20823
 item	28446	1
@@ -45672,7 +45672,7 @@ category	ETC
 percent	30
 end
 
-#8차무사갑옷
+#8. Aşama Savaşçı Zırhı
 section
 npc	20807
 item	21326	1
@@ -45687,7 +45687,7 @@ category	ARMOR
 percent	50
 end
 
-#8차자객갑옷
+#8. Aşama Suikastçı Zırhı
 section
 npc	20807
 item	21346	1
@@ -45702,7 +45702,7 @@ category	ARMOR
 percent	50
 end
 
-#8차수라갑옷
+#8. Aşama Sura Zırhı
 section
 npc	20807
 item	21366	1
@@ -45717,7 +45717,7 @@ category	ARMOR
 percent	50
 end
 
-#8차무당갑옷
+#8. Aşama Şaman Zırhı
 section
 npc	20807
 item	21386	1
@@ -45732,7 +45732,7 @@ category	ARMOR
 percent	50
 end
 
-#8차수인갑옷
+#8. Aşama Kurt İnsan Zırhı
 section
 npc	20807
 item	21406	1
@@ -45747,7 +45747,7 @@ category	ARMOR
 percent	50
 end
 
-#8차한손검
+#8. Aşama Tek El Kılıcı
 section
 npc	20807
 item	376	1
@@ -45762,7 +45762,7 @@ category	WEAPON
 percent	50
 end
 
-#8차양손검
+#8. Aşama Çift El Kılıcı
 section
 npc	20807
 item	3266	1
@@ -45777,7 +45777,7 @@ category	WEAPON
 percent	50
 end
 
-#8차수라검
+#8. Aşama Sura Kılıcı
 section
 npc	20807
 item	396	1
@@ -45792,7 +45792,7 @@ category	WEAPON
 percent	50
 end
 
-#8차단검
+#8. Aşama Hançer
 section
 npc	20807
 item	1226	1
@@ -45807,7 +45807,7 @@ category	WEAPON
 percent	50
 end
 
-#8차각궁
+#8. Aşama Boynuz Yayı
 section
 npc	20807
 item	2246	1
@@ -45822,7 +45822,7 @@ category	WEAPON
 percent	50
 end
 
-#8차부채
+#8. Aşama Yelpaze
 section
 npc	20807
 item	7346	1
@@ -45837,7 +45837,7 @@ category	WEAPON
 percent	50
 end
 
-#8차방울
+#8. Aşama Çan
 section
 npc	20807
 item	5216	1
@@ -45852,7 +45852,7 @@ category	WEAPON
 percent	50
 end
 
-#8차수인무기
+#8. Aşama Kurt İnsan Silahı
 section
 npc	20807
 item	6166	1
@@ -45867,7 +45867,7 @@ category	WEAPON
 percent	50
 end
 
-#뱀가루
+#Yılan tozu
 section
 npc	20807
 item	31257	30
@@ -45877,7 +45877,7 @@ category	ETC
 percent	100
 end
 
-#뱀가루
+#Yılan tozu
 section
 npc	20807
 item	31258	30
@@ -45887,7 +45887,7 @@ category	ETC
 percent	100
 end
 
-#2차힘의장갑
+#2. Aşama Güç Eldiveni
 section
 npc	20823
 item	23000	1
@@ -46008,7 +46008,7 @@ category	ARMOR_GLOVE
 percent	100
 end
 
-#2차항력의장갑
+#2. Aşama Direnç Eldiveni
 section
 npc	20823
 item	23010	1
@@ -46130,7 +46130,7 @@ category	ARMOR_GLOVE
 percent	100
 end
 
-#2차신체의장갑
+#2. Aşama Beden Eldiveni
 section
 npc	20823
 item	23020	1
@@ -46251,7 +46251,7 @@ category	ARMOR_GLOVE
 percent	100
 end
 
-#2차지성의장갑
+#2. Aşama Zeka Eldiveni
 section
 npc	20823
 item	23030	1
@@ -46624,7 +46624,7 @@ category	ETC
 percent	90
 end
 
-#노리개결정체
+#Tılsım özü
 section
 npc	20850
 item	81000	1
@@ -46638,7 +46638,7 @@ category	ETC
 percent	90
 end
 
-#신비노리개
+#Gizemli tılsım+0
 section
 npc	20850
 item	31270	1
@@ -46650,7 +46650,7 @@ category	ACCESSORY
 percent	100
 end
 
-#염왕각패
+#Lanetlenme Kalkanı+0
 section
 npc	20433
 item	30661	30
@@ -46664,7 +46664,7 @@ category	ARMOR
 percent	100
 end
 
-#염파석
+#Asmodeus'un Taş Kalbi
 section
 npc	20433
 item	30659	5
@@ -46676,7 +46676,7 @@ category	ETC
 percent	50
 end
 
-#극락조소환패
+#Kurtuluş Ankası
 section
 npc	20433
 item	30662	10
@@ -46687,7 +46687,7 @@ category	PET
 percent	30
 end
 
-#철가인(벨트)_별2
+#2* Kemer-Demirci runiği
 section
 npc	20017
 item	79605	2
@@ -46699,7 +46699,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(벨트)_별3
+#3* Kemer-Demirci runiği
 section
 npc	20017
 item	79606	2
@@ -46711,7 +46711,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(벨트)_별4
+#4* Kemer-Demirci runiği
 section
 npc	20017
 item	79607	2
@@ -46723,7 +46723,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(벨트)_별5
+#5* Kemer-Demirci runiği
 section
 npc	20017
 item	79608	2
@@ -46735,7 +46735,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(무기)_별2
+#2* Silah-Demirci runiği
 section
 npc	20017
 item	79610	2
@@ -46747,7 +46747,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(무기)_별3
+#3* Silah-Demirci runiği
 section
 npc	20017
 item	79611	2
@@ -46759,7 +46759,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(무기)_별4
+#4* Silah-Demirci runiği
 section
 npc	20017
 item	79612	2
@@ -46771,7 +46771,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(무기)_별5
+#5* Silah-Demirci runiği
 section
 npc	20017
 item	79613	2
@@ -46783,7 +46783,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(갑옷)_별2
+#2* Zırh-Demirci runiği
 section
 npc	20017
 item	79615	2
@@ -46795,7 +46795,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(갑옷)_별3
+#3* Zırh-Demirci runiği
 section
 npc	20017
 item	79616	2
@@ -46807,7 +46807,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(갑옷)_별4
+#4* Zırh-Demirci runiği
 section
 npc	20017
 item	79617	2
@@ -46819,7 +46819,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(갑옷)_별5
+#5* Zırh-Demirci runiği
 section
 npc	20017
 item	79618	2
@@ -46831,7 +46831,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(기타)_별2
+#2* Diğer Demirci runiği
 section
 npc	20017
 item	79620	2
@@ -46843,7 +46843,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(기타)_별3
+#3* Diğer Demirci runiği
 section
 npc	20017
 item	79621	2
@@ -46855,7 +46855,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(기타)_별4
+#4* Diğer Demirci runiği
 section
 npc	20017
 item	79622	2
@@ -46867,7 +46867,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(기타)_별5
+#5* Diğer Demirci runiği
 section
 npc	20017
 item	79623	2
@@ -46879,7 +46879,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(엑세서리)_별2
+#2* Aksesuar Demirci ru.
 section
 npc	20017
 item	79625	2
@@ -46891,7 +46891,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(엑세서리)_별3
+#3* Aksesuar Demirci ru.
 section
 npc	20017
 item	79626	2
@@ -46903,7 +46903,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(엑세서리)_별4
+#4* Aksesuar Demirci ru.
 section
 npc	20017
 item	79627	2
@@ -46915,7 +46915,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(엑세서리)_별5
+#5* Aksesuar Demirci ru.
 section
 npc	20017
 item	79628	2
@@ -46927,7 +46927,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(스킬북)_별2
+#2* Beceri K. Demirci ru.
 section
 npc	20017
 item	79630	2
@@ -46939,7 +46939,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(스킬북)_별3
+#3* Beceri K. Demirci ru.
 section
 npc	20017
 item	79631	2
@@ -46951,7 +46951,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(스킬북)_별4
+#4* Beceri K. Demirci ru.
 section
 npc	20017
 item	79632	2
@@ -46963,7 +46963,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(스킬북)_별5
+#5* Beceri K. Demirci ru.
 section
 npc	20017
 item	79633	2
@@ -46975,7 +46975,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(세트무기)_별2
+#2* Set Silah Demirci ru.
 section
 npc	20017
 item	79635	2
@@ -46987,7 +46987,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트무기)_별3
+#3* Set Silah Demirci ru.
 section
 npc	20017
 item	79636	2
@@ -46999,7 +46999,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트무기)_별4
+#4* Set Silah Demirci ru.
 section
 npc	20017
 item	79637	2
@@ -47011,7 +47011,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트무기)_별5
+#5* Set Silah Demirci ru.
 section
 npc	20017
 item	79638	2
@@ -47023,7 +47023,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트헬멧)_별2
+#2* Set Başlık Demirci r.
 section
 npc	20017
 item	79640	2
@@ -47035,7 +47035,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트헬멧)_별3
+#3* Set Başlık Demirci r.
 section
 npc	20017
 item	79641	2
@@ -47047,7 +47047,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트헬멧)_별4
+#4* Set Başlık Demirci r.
 section
 npc	20017
 item	79642	2
@@ -47059,7 +47059,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트헬멧)_별5
+#5* Set Başlık Demirci r.
 section
 npc	20017
 item	79643	2
@@ -47071,7 +47071,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트갑옷)_별2
+#2* Set Zırh Demirci r.
 section
 npc	20017
 item	79645	2
@@ -47083,7 +47083,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(세트갑옷)_별3
+#3* Set Zırh Demirci r.
 section
 npc	20017
 item	79646	2
@@ -47095,7 +47095,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(세트갑옷)_별4
+#4* Set Zırh Demirci r.
 section
 npc	20017
 item	79647	2
@@ -47107,7 +47107,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(세트갑옷)_별5
+#5* Set Zırh Demirci r.
 section
 npc	20017
 item	79648	2
@@ -47119,7 +47119,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(장갑)_별2
+#2* Eldiven Demirci ru.
 section
 npc	20017
 item	79650	2
@@ -47131,7 +47131,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(장갑)_별3
+#3* Eldiven Demirci ru.
 section
 npc	20017
 item	79651	2
@@ -47143,7 +47143,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(장갑)_별4
+#4* Eldiven Demirci ru.
 section
 npc	20017
 item	79652	2
@@ -47155,7 +47155,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(장갑)_별5
+#5* Eldiven Demirci ru.
 section
 npc	20017
 item	79653	2
@@ -47167,7 +47167,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(펫)_별2
+#2* Pet Demirci runiği
 section
 npc	20017
 item	79655	2
@@ -47179,7 +47179,7 @@ subcategory	11
 percent	40
 end
 
-#철가인(펫)_별3
+#3* Pet Demirci runiği
 section
 npc	20017
 item	79656	2
@@ -47191,7 +47191,7 @@ subcategory	11
 percent	40
 end
 
-#철가인(펫)_별4
+#4* Pet Demirci runiği
 section
 npc	20017
 item	79657	2
@@ -47203,7 +47203,7 @@ subcategory	11
 percent	40
 end
 
-#철가인(펫)_별5
+#5* Pet Demirci runiği
 section
 npc	20017
 item	79658	2

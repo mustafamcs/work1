@@ -14,7 +14,7 @@ window = {
 
 	"children" :
 	(
-		# 기력
+		# energy
 		{
 			"name" : "EnergyGauge_Board",
 			"type" : "image",

@@ -18,7 +18,7 @@ window = {
 	[
 		{
 			"name" : "board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 
 			"x" : 0,
 			"y" : 0,
@@ -30,7 +30,7 @@ window = {
 			[
 				{
 					"name" : "help_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 17,
@@ -43,7 +43,7 @@ window = {
 				},
 				{
 					"name" : "mall_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 57,
@@ -58,7 +58,7 @@ window = {
 
 				{
 					"name" : "system_option_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 87,
@@ -71,7 +71,7 @@ window = {
 				},
 				{
 					"name" : "game_option_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 117,
@@ -84,7 +84,7 @@ window = {
 				},
 				{
 					"name" : "change_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 147,
@@ -97,7 +97,7 @@ window = {
 				},
 				{
 					"name" : "logout_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 177,
@@ -110,7 +110,7 @@ window = {
 				},
 				{
 					"name" : "exit_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 207,
@@ -123,7 +123,7 @@ window = {
 				},
 				{
 					"name" : "cancel_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 237,
@@ -146,7 +146,7 @@ if app.ENABLE_MOVE_CHANNEL:
 	ElementAddBefore(MAIN_BOARD["children"], "logout_button",
 				{
 					"name" : "movechannel_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : -1,

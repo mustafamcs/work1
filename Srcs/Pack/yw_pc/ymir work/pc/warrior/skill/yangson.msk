@@ -3,18 +3,18 @@ ScriptType		SkillDataScript
 Type			PASSIVE
 IconFileName	"skill/warrior/yangson.sub"
 
-949Name			"¾ç¼Õ°Ë ´Ù·ç±â"
-949Description	"¾ç¼Õ°ËÀ» ´õ¿í °­·ÂÈ÷ ´Ù·ê ¼ö ÀÖ´Â ´É·Â"
+949Name			"unused"
+949Description	"unused"
 MaxLevel		"30"
 
 List 949AffectData
 {
-	"ÆÄ±«·Â +%.0f"	"SkillPoint"	""
+	"unused"	"SkillPoint"	""
 }
 
-936Name			"ÎäÆ÷ÕÆÎÕ"
-936Description		"ÄÜ¸ü¼ÓÊìÁ·ÔËÓÃÖØĞÍµ¶"
+936Name			"unused"
+936Description		"unused"
 List 936AffectData
 {
-	"ÆÆ»µÁ¦ +%.0f"	"SkillPoint"	""
+	"unused"	"SkillPoint"	""
 }

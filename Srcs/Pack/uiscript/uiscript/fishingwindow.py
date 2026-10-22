@@ -14,20 +14,20 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"type" : "board_with_titlebar",
+			"tip" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
 			"width" : 150,
 			"height" : 195,
-			"title" : "낚시",
+			"title" : "Balıkçılık",
 
 			"children" :
 			(
 
 				{
 					"name" : "FishingBox1",
-					"type" : "box",
+					"tip" : "box",
 
 					"x" : 9,
 					"y" : 31,
@@ -39,7 +39,7 @@ window = {
 
 				{
 					"name" : "FishingBox2",
-					"type" : "box",
+					"tip" : "box",
 
 					"x" : 10,
 					"y" : 32,
@@ -51,7 +51,7 @@ window = {
 
 				{
 					"name" : "Water",
-					"type" : "ani_image",
+					"tip" : "ani_image",
 
 					"x" : 0,
 					"y" : 33,
@@ -77,17 +77,17 @@ window = {
 
 						{
 							"name" : "FishName",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 10,
 							"y" : 10,
 
-							"text" : "물고기 이름",
+							"text" : "Balık Adı",
 						},
 
 						{
 							"name" : "Float_Wait",
-							"type" : "ani_image",
+							"tip" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -115,7 +115,7 @@ window = {
 
 						{
 							"name" : "Float_Throw",
-							"type" : "ani_image",
+							"tip" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -146,7 +146,7 @@ window = {
 
 						{
 							"name" : "Float_React",
-							"type" : "ani_image",
+							"tip" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -177,7 +177,7 @@ window = {
 
 						{
 							"name" : "Float_Catch",
-							"type" : "ani_image",
+							"tip" : "ani_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -210,12 +210,12 @@ window = {
 
 				{
 					"name" : "FishingButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 0,
 					"y" : 30,
 
-					"text" : "낚시",
+					"text" : "Balıkçılık",
 					"horizontal_align" : "center",
 					"vertical_align" : "bottom",
 

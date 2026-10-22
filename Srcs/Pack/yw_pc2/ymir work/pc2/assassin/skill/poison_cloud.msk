@@ -4,16 +4,16 @@ Type			HIGH
 Attribute		"ATTACK_SKILL" "NEED_TARGET"
 Range			350
 
-949Name			"µ∂±∏∏ß"
-949Description	"¡÷¿ßø° µ∂¿∏∑Œ ±∏∏ß¿ª ∏∏µÈæÓ ¿˚¿ª ¡ﬂµ∂ Ω√≈≤¥Ÿ"
-949Requirement	"µ∂πŸ∏£±‚" 5
+949Name			"unused"
+949Description	"unused"
+949Requirement	"unused" 5
 
 IconFileName	"skill/assassin/poison_cloud.sub"
 MotionIndex		13
 
 List 949AffectData
 {
-	"%.1f πË¿« ≈∏∞›"	"1 + SkillPoint / 4"	""
+	"unused"	"1 + SkillPoint / 4"	""
 }
 
 List RequireStatData
@@ -26,10 +26,10 @@ LevelUpPoint		"5"
 CoolTimeFormula		"40 - SkillPoint"
 NeedSPFormula		"50"
 
-936Name			"∂æ‘∆"
-936Description	" π”√∂æ“©‘⁄µ–»Àµƒ÷‹Œß–Œ≥…∂æ‘∆£¨‘Ï≥…µ–»À…À∫¶"
-936Requirement	"∂æ»–" 5
+936Name			"unused"
+936Description	"unused"
+936Requirement	"unused" 5
 List 936AffectData
 {
-	"%.1f ±∂µƒ¥Úª˜"	"1 + SkillPoint / 4"	""
+	"unused"	"1 + SkillPoint / 4"	""
 }

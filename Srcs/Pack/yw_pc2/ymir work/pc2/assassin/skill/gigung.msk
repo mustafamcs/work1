@@ -13,33 +13,33 @@ IconFileName		"skill/assassin/gigung.sub"
 Type			ACTIVE
 MaxLevel		"20"
 
-949Name			"µ¶±â±Ã"
-949Description	"È­»ì¿¡ °­·ÂÇÑ µ¶À» ¸ð¾Æ ½ð´Ù"
+949Name			"unused"
+949Description	"unused"
 
 List 949ConditionData
 {
-	"Àå°Å¸® °ø°Ý"
-	"´ë»ó ÁÖº¯ °ø°Ý"
-	"´ë»ó ³¯¸®±â"
-	"Áö¼Ó µ¶ °ø°Ý"
+	"unused"
+	"unused"
+	"unused"
+	"unused"
 }
 
 List 949AffectData
 {
-	"°ø°Ý·Â %.0f-%.0f" "minatk + (1.2*minatk + 100 + dex*6 + str*2)*k" "maxatk + (1.2*maxatk + 200 + dex*6 + str*2)*k"
-	"Áßµ¶ È®·ü %.0f%%" "80*k"
-	"Áßµ¶ ½Ã°£ %.0fÃÊ" "15+30*k"
+	"unused" "minatk + (1.2*minatk + 100 + dex*6 + str*2)*k" "maxatk + (1.2*maxatk + 200 + dex*6 + str*2)*k"
+	"unused" "80*k"
+	"unused" "15+30*k"
 }
 
-936Name			"Á¦¼ý"
-936Description		"¹á´©ÁËÇ¿´óÁ¦Á¿µÄ¼ý"
+936Name			"unused"
+936Description		"unused"
 
 List 936ConditionData
 {
-	"¸öÌå¹¥»÷"
+	"unused"
 }
 
 List 936AffectData
 {
-	"ÆÆ»µÁ¦£©: %.2f±¶"	"(SkillPoint * 5 + 100) / 100" ""
+	"unused"	"(SkillPoint * 5 + 100) / 100" ""
 }

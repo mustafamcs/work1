@@ -18,7 +18,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 		(
 			{
 				"name" : "board",
-				"type" : "board",
+				"tip" : "board",
 				"style" : ("attach",),
 
 				"x" : 0,
@@ -32,7 +32,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					## Equipment Slot
 					{
 						"name" : "Equipment_Base",
-						"type" : "expanded_image",
+						"tip" : "expanded_image",
 
 						"x" : 0,
 						"y" : 0,
@@ -41,42 +41,42 @@ if app.ENABLE_DS_GRADE_MYTH:
 
 					},
 					{
-						"name" : "Inventory_Tab_01", "type" : "radio_button",
+						"name" : "Inventory_Tab_01", "tip" : "radio_button",
 						"x" : 16, "y" : 331,
 						"default_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_01_1.tga",
 						"over_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_01_2.tga",
 						"down_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_01_3.tga",
 					},
 					{
-						"name" : "Inventory_Tab_02", "type" : "radio_button",
+						"name" : "Inventory_Tab_02", "tip" : "radio_button",
 						"x" : 59, "y" : 331,
 						"default_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_02_1.tga",
 						"over_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_02_2.tga",
 						"down_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_02_3.tga",
 					},
 					{
-						"name" : "Inventory_Tab_03", "type" : "radio_button",
+						"name" : "Inventory_Tab_03", "tip" : "radio_button",
 						"x" : 102, "y" : 331,
 						"default_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_03_1.tga",
 						"over_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_03_2.tga",
 						"down_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_03_3.tga",
 					},
 					{
-						"name" : "Inventory_Tab_04", "type" : "radio_button",
+						"name" : "Inventory_Tab_04", "tip" : "radio_button",
 						"x" : 145, "y" : 331,
 						"default_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_04_1.tga",
 						"over_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_04_2.tga",
 						"down_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_04_3.tga",
 					},
 					{
-						"name" : "Inventory_Tab_05", "type" : "radio_button",
+						"name" : "Inventory_Tab_05", "tip" : "radio_button",
 						"x" : 188, "y" : 331,
 						"default_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_05_1.tga",
 						"over_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_05_2.tga",
 						"down_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_05_3.tga",
 					},
 					{
-						"name" : "Inventory_Tab_06", "type" : "radio_button",
+						"name" : "Inventory_Tab_06", "tip" : "radio_button",
 						"x" : 231, "y" : 331,
 						"default_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_06_1.tga",
 						"over_image"	: "d:/ymir work/ui/dragonsoul/btn_soul_06_2.tga",
@@ -86,7 +86,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					## Item Slot
 					{
 						"name" : "ItemSlot",
-						"type" : "grid_table",
+						"tip" : "grid_table",
 
 						"x" : 15,
 						"y" : 355,
@@ -101,7 +101,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					},
 					{
 						"name" : "EquipmentSlot",
-						"type" : "slot",
+						"tip" : "slot",
 
 						"x" : 0,
 						"y" : 0,
@@ -120,7 +120,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					},
 					{
 						"name" : "deck1",
-						"type" : "toggle_button",
+						"tip" : "toggle_button",
 
 						"x" : 21,
 						"y" : 230,
@@ -131,7 +131,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					},
 					{
 						"name" : "deck2",
-						"type" : "toggle_button",
+						"tip" : "toggle_button",
 
 						"x" : 234,
 						"y" : 230,
@@ -143,7 +143,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					## Title
 					{
 						"name" : "TitleBar",
-						"type" : "titlebar",
+						"tip" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 8,
@@ -154,13 +154,13 @@ if app.ENABLE_DS_GRADE_MYTH:
 
 						"children" :
 						(
-							{ "name":"TitleName", "type":"text", "x":130, "y":3, "text":uiScriptLocale.DRAGONSOUL_TITLE, "text_horizontal_align":"center" },
+							{ "name":"TitleName", "tip":"text", "x":130, "y":3, "text":uiScriptLocale.DRAGONSOUL_TITLE, "text_horizontal_align":"center" },
 						),
 					},
 					## Tab Area
 					{
 						"name" : "TabControl",
-						"type" : "window",
+						"tip" : "window",
 
 						"x" : 10,
 						"y" : 279,
@@ -173,7 +173,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							## Tab
 							{
 								"name" : "Tab_01",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -185,7 +185,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_02",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -197,7 +197,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_03",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -209,7 +209,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_04",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -221,7 +221,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_05",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -233,7 +233,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_06",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -246,7 +246,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							## RadioButton
 							{
 								"name" : "Tab_Button_01",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 2,
 								"y" : 2,
@@ -256,7 +256,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_Button_02",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 42,
 								"y" : 2,
@@ -266,7 +266,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_Button_03",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 82,
 								"y" : 2,
@@ -276,7 +276,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_Button_04",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 122,
 								"y" : 2,
@@ -286,7 +286,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_Button_05",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 162,
 								"y" : 2,
@@ -296,7 +296,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 							},
 							{
 								"name" : "Tab_Button_06",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 202,
 								"y" : 2,
@@ -308,7 +308,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					},
 					{
 						"name" : "tab_text_area",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 18,
 						"y" : 315,
@@ -318,7 +318,7 @@ if app.ENABLE_DS_GRADE_MYTH:
 					},
 					{
 						"name" : "activate",
-						"type" : "toggle_button",
+						"tip" : "toggle_button",
 
 						"x" : 217,
 						"y" : 492,
@@ -351,7 +351,7 @@ else:
 		(
 			{
 				"name" : "board",
-				"type" : "board",
+				"tip" : "board",
 				"style" : ("attach",),
 
 				"x" : 0,
@@ -365,7 +365,7 @@ else:
 					## Equipment Slot
 					{
 						"name" : "Equipment_Base",
-						"type" : "expanded_image",
+						"tip" : "expanded_image",
 
 						"x" : 0,
 						"y" : 0,
@@ -375,7 +375,7 @@ else:
 					},
 					{
 						"name" : "Inventory_Tab_01",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 16,
 						"y" : 332,
@@ -388,7 +388,7 @@ else:
 						(
 							{
 								"name" : "Inventory_Tab_01_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -402,7 +402,7 @@ else:
 					},
 					{
 						"name" : "Inventory_Tab_02",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 67,
 						"y" : 332,
@@ -415,7 +415,7 @@ else:
 						(
 							{
 								"name" : "Inventory_Tab_02_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -429,7 +429,7 @@ else:
 					},
 					{
 						"name" : "Inventory_Tab_03",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 118,
 						"y" : 332,
@@ -442,7 +442,7 @@ else:
 						(
 							{
 								"name" : "Inventory_Tab_03_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -456,7 +456,7 @@ else:
 					},
 					{
 						"name" : "Inventory_Tab_04",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 169,
 						"y" : 332,
@@ -469,7 +469,7 @@ else:
 						(
 							{
 								"name" : "Inventory_Tab_04_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -483,7 +483,7 @@ else:
 					},
 					{
 						"name" : "Inventory_Tab_05",
-						"type" : "radio_button",
+						"tip" : "radio_button",
 
 						"x" : 220,
 						"y" : 332,
@@ -496,7 +496,7 @@ else:
 						(
 							{
 								"name" : "Inventory_Tab_05_Print",
-								"type" : "text",
+								"tip" : "text",
 
 								"x" : 0,
 								"y" : 0,
@@ -512,7 +512,7 @@ else:
 					## Item Slot
 					{
 						"name" : "ItemSlot",
-						"type" : "grid_table",
+						"tip" : "grid_table",
 
 						"x" : 15,
 						"y" : 355,
@@ -527,7 +527,7 @@ else:
 					},
 					{
 						"name" : "EquipmentSlot",
-						"type" : "slot",
+						"tip" : "slot",
 
 						"x" : 0,
 						"y" : 0,
@@ -546,7 +546,7 @@ else:
 					},
 					{
 						"name" : "deck1",
-						"type" : "toggle_button",
+						"tip" : "toggle_button",
 
 						"x" : 21,
 						"y" : 230,
@@ -557,7 +557,7 @@ else:
 					},
 					{
 						"name" : "deck2",
-						"type" : "toggle_button",
+						"tip" : "toggle_button",
 
 						"x" : 234,
 						"y" : 230,
@@ -569,7 +569,7 @@ else:
 					## Title
 					{
 						"name" : "TitleBar",
-						"type" : "titlebar",
+						"tip" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 8,
@@ -580,13 +580,13 @@ else:
 
 						"children" :
 						(
-							{ "name":"TitleName", "type":"text", "x":130, "y":3, "text":uiScriptLocale.DRAGONSOUL_TITLE, "text_horizontal_align":"center" },
+							{ "name":"TitleName", "tip":"text", "x":130, "y":3, "text":uiScriptLocale.DRAGONSOUL_TITLE, "text_horizontal_align":"center" },
 						),
 					},
 					## Tab Area
 					{
 						"name" : "TabControl",
-						"type" : "window",
+						"tip" : "window",
 
 						"x" : 10,
 						"y" : 279,
@@ -599,7 +599,7 @@ else:
 							## Tab
 							{
 								"name" : "Tab_01",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -611,7 +611,7 @@ else:
 							},
 							{
 								"name" : "Tab_02",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -623,7 +623,7 @@ else:
 							},
 							{
 								"name" : "Tab_03",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -635,7 +635,7 @@ else:
 							},
 							{
 								"name" : "Tab_04",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -647,7 +647,7 @@ else:
 							},
 							{
 								"name" : "Tab_05",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -659,7 +659,7 @@ else:
 							},
 							{
 								"name" : "Tab_06",
-								"type" : "expanded_image",
+								"tip" : "expanded_image",
 
 								"x" : 0,
 								"y" : 0,
@@ -672,7 +672,7 @@ else:
 							## RadioButton
 							{
 								"name" : "Tab_Button_01",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 2,
 								"y" : 2,
@@ -682,7 +682,7 @@ else:
 							},
 							{
 								"name" : "Tab_Button_02",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 42,
 								"y" : 2,
@@ -692,7 +692,7 @@ else:
 							},
 							{
 								"name" : "Tab_Button_03",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 82,
 								"y" : 2,
@@ -702,7 +702,7 @@ else:
 							},
 							{
 								"name" : "Tab_Button_04",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 122,
 								"y" : 2,
@@ -712,7 +712,7 @@ else:
 							},
 							{
 								"name" : "Tab_Button_05",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 162,
 								"y" : 2,
@@ -722,7 +722,7 @@ else:
 							},
 							{
 								"name" : "Tab_Button_06",
-								"type" : "radio_button",
+								"tip" : "radio_button",
 
 								"x" : 202,
 								"y" : 2,
@@ -734,7 +734,7 @@ else:
 					},
 					{
 						"name" : "tab_text_area",
-						"type" : "text",
+						"tip" : "text",
 
 						"x" : 18,
 						"y" : 315,
@@ -744,7 +744,7 @@ else:
 					},
 					{
 						"name" : "activate",
-						"type" : "toggle_button",
+						"tip" : "toggle_button",
 
 						"x" : 217,
 						"y" : 492,

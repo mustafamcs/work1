@@ -13,26 +13,26 @@ IconFileName		"skill/assassin/gungsin.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name			"궁신탄영"
-949Description	"빠르게 적에게 접근하여 치명타를 입힌다"
+949Name			"unused"
+949Description	"unused"
 List 949ConditionData
 {
-	"순간 이동 공격"
-	"은형법 보너스"
+	"unused"
+	"unused"
 }
 List 949AffectData
 {
-	"공격력 %.0f-%.0f" "(minatk + (1.6* minatk + 200 + dex*7 + str*7)*k)" "(maxatk + (1.6* maxatk + 300 + dex*7 + str*7)*k)"
+	"unused" "(minatk + (1.6* minatk + 200 + dex*7 + str*7)*k)" "(maxatk + (1.6* maxatk + 300 + dex*7 + str*7)*k)"
 }
 
-936Name			"宅緞"
-936Description	"祺醵옜쐤둔훙못貸鈴츱댔샌"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"순간 이동 공격"
-	"은형법 사용중 타격치 증가"
+	"unused"
+	"unused"
 }
 List 936AffectData
 {
-	"타격치 %.0f-%.0f" "MinATK + (2.5*MinATK + 600)*SkillPoint" "MaxATK + (2.5*MaxATK + 600)*SkillPoint"
+	"unused" "MinATK + (2.5*MinATK + 600)*SkillPoint" "MaxATK + (2.5*MaxATK + 600)*SkillPoint"
 }

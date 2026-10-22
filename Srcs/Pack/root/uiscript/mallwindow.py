@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -39,14 +39,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.MALL_TITLE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.MALL_TITLE, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Button
 				{
 					"name" : "ExitButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 0,
 					"y" : 37,

@@ -18,7 +18,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -32,7 +32,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -43,14 +43,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_PAGE_BUTTON_TOOLTIP_2, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":uiScriptLocale.INVENTORY_PAGE_BUTTON_TOOLTIP_2, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Equipment Slot
 				{
 					"name" : "Equipment_Base",
-					"type" : "image",
+					"tip" : "image",
 
 					"x" : 10,
 					"y" : 33,
@@ -62,7 +62,7 @@ window = {
 
 						{
 							"name" : "EquipmentSlot",
-							"type" : "slot",
+							"tip" : "slot",
 
 							"x" : 3,
 							"y" : 3,
@@ -87,7 +87,7 @@ window = {
 
 						{
 							"name" : "Equipment_Tab_01",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 86,
 							"y" : 161,
@@ -100,7 +100,7 @@ window = {
 							(
 								{
 									"name" : "Equipment_Tab_01_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -113,7 +113,7 @@ window = {
 						},
 						{
 							"name" : "Equipment_Tab_02",
-							"type" : "radio_button",
+							"tip" : "radio_button",
 
 							"x" : 86 + 32,
 							"y" : 161,
@@ -126,7 +126,7 @@ window = {
 							(
 								{
 									"name" : "Equipment_Tab_02_Print",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 0,
@@ -143,7 +143,7 @@ window = {
 
 				{
 					"name" : "Inventory_Tab_01",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 10,
 					"y" : 33 + 191,
@@ -157,7 +157,7 @@ window = {
 					(
 						{
 							"name" : "Inventory_Tab_01_Print",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -170,7 +170,7 @@ window = {
 				},
 				{
 					"name" : "Inventory_Tab_02",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 10 + 78,
 					"y" : 33 + 191,
@@ -184,7 +184,7 @@ window = {
 					(
 						{
 							"name" : "Inventory_Tab_02_Print",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 0,
 							"y" : 0,
@@ -199,7 +199,7 @@ window = {
 				## Item Slot
 				{
 					"name" : "ItemSlot",
-					"type" : "grid_table",
+					"tip" : "grid_table",
 
 					"x" : 8,
 					"y" : 246,
@@ -216,7 +216,7 @@ window = {
 				## Print
 				{
 					"name":"Money_Slot",
-					"type":"button",
+					"tip":"button",
 
 					"x":8,
 					"y":28,
@@ -232,7 +232,7 @@ window = {
 					(
 						{
 							"name":"Money_Icon",
-							"type":"image",
+							"tip":"image",
 
 							"x":-18,
 							"y":20,
@@ -242,7 +242,7 @@ window = {
 
 						{
 							"name" : "Money",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 3,
 							"y" : 3,

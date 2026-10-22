@@ -50,7 +50,7 @@ THINBOARD_CIRCLE_RIGHT_WIDTH = 180
 THINBOARD_CIRCLE_RIGHT_HEIGHT = 270
 ###################
 
-##대괄호 양식도 완전히 똑같아야됨!##
+## bracket format must be exactly the same! ##
 window = {
 	"name" : "New_CreateCharacterWindow",
 	"x" : 0, "y" : 0, "width" : SCREEN_WIDTH, "height" : SCREEN_HEIGHT,

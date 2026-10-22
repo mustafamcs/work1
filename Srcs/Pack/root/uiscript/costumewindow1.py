@@ -20,7 +20,7 @@ if app.ENABLE_WEAPON_COSTUME_SYSTEM:
 		(
 			{
 				"name" : "board",
-				"type" : "board",
+				"tip" : "board",
 				"style" : ("attach",),
 
 				"x" : 0,
@@ -34,7 +34,7 @@ if app.ENABLE_WEAPON_COSTUME_SYSTEM:
 					## Title
 					{
 						"name" : "TitleBar",
-						"type" : "titlebar",
+						"tip" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 6,
@@ -45,14 +45,14 @@ if app.ENABLE_WEAPON_COSTUME_SYSTEM:
 
 						"children" :
 						(
-							{ "name":"TitleName", "type":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
+							{ "name":"TitleName", "tip":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
 						),
 					},
 
 					## Equipment Slot
 					{
 						"name" : "Costume_Base",
-						"type" : "image",
+						"tip" : "image",
 
 						"x" : 13,
 						"y" : 38,
@@ -64,7 +64,7 @@ if app.ENABLE_WEAPON_COSTUME_SYSTEM:
 
 							{
 								"name" : "CostumeSlot",
-								"type" : "slot",
+								"tip" : "slot",
 
 								"x" : 3,
 								"y" : 3,
@@ -103,7 +103,7 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 		    (
 			    {
 				    "name" : "board",
-				    "type" : "board",
+				    "tip" : "board",
 				    "style" : ("attach",),
 
 				    "x" : 0,
@@ -117,7 +117,7 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 					    ## Title
 					    {
 						    "name" : "TitleBar",
-						    "type" : "titlebar",
+						    "tip" : "titlebar",
 						    "style" : ("attach",),
 
 						    "x" : 6,
@@ -128,14 +128,14 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 
 						    "children" :
 						    (
-							    { "name":"TitleName", "type":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
+							    { "name":"TitleName", "tip":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
 						    ),
 					    },
 
 					    ## Equipment Slot
 					    {
 						    "name" : "Costume_Base",
-						    "type" : "image",
+						    "tip" : "image",
 
 						    "x" : 13,
 						    "y" : 38,
@@ -147,7 +147,7 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 
 							    {
 								    "name" : "CostumeSlot",
-								    "type" : "slot",
+								    "tip" : "slot",
 
 								    "x" : 3,
 								    "y" : 3,
@@ -185,7 +185,7 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 		    (
 			    {
 				    "name" : "board",
-				    "type" : "board",
+				    "tip" : "board",
 				    "style" : ("attach",),
 
 				    "x" : 0,
@@ -199,7 +199,7 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 					    ## Title
 					    {
 						    "name" : "TitleBar",
-						    "type" : "titlebar",
+						    "tip" : "titlebar",
 						    "style" : ("attach",),
 
 						    "x" : 6,
@@ -210,14 +210,14 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 
 						    "children" :
 						    (
-							    { "name":"TitleName", "type":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
+							    { "name":"TitleName", "tip":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
 						    ),
 					    },
 
 					    ## Equipment Slot
 					    {
 						    "name" : "Costume_Base",
-						    "type" : "image",
+						    "tip" : "image",
 
 						    "x" : 13,
 						    "y" : 38,
@@ -229,7 +229,7 @@ elif app.ENABLE_MOUNT_COSTUME_SYSTEM:
 
 							    {
 								    "name" : "CostumeSlot",
-								    "type" : "slot",
+								    "tip" : "slot",
 
 								    "x" : 3,
 								    "y" : 3,
@@ -266,7 +266,7 @@ else:
 		(
 			{
 				"name" : "board",
-				"type" : "board",
+				"tip" : "board",
 				"style" : ("attach",),
 
 				"x" : 0,
@@ -280,7 +280,7 @@ else:
 					## Title
 					{
 						"name" : "TitleBar",
-						"type" : "titlebar",
+						"tip" : "titlebar",
 						"style" : ("attach",),
 
 						"x" : 6,
@@ -291,14 +291,14 @@ else:
 
 						"children" :
 						(
-							{ "name":"TitleName", "type":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
+							{ "name":"TitleName", "tip":"text", "x":60, "y":3, "text":uiScriptLocale.COSTUME_WINDOW_TITLE, "text_horizontal_align":"center" },
 						),
 					},
 
 					## Equipment Slot
 					{
 						"name" : "Costume_Base",
-						"type" : "image",
+						"tip" : "image",
 
 						"x" : 13,
 						"y" : 38,
@@ -310,7 +310,7 @@ else:
 
 							{
 								"name" : "CostumeSlot",
-								"type" : "slot",
+								"tip" : "slot",
 
 								"x" : 3,
 								"y" : 3,

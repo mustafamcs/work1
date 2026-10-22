@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board_with_titlebar",
+			"tip" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -30,7 +30,7 @@ window = {
 				## Money Slot
 				{
 					"name" : "money_slot",
-					"type" : "image",
+					"tip" : "image",
 
 					"x" : 20,
 					"y" : 34,
@@ -41,7 +41,7 @@ window = {
 					(
 						{
 							"name" : "money_value",
-							"type" : "editline",
+							"tip" : "editline",
 
 							"x" : 3,
 							"y" : 2,
@@ -56,7 +56,7 @@ window = {
 						},
 						{
 							"name" : "max_value",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 63,
 							"y" : 3,
@@ -69,7 +69,7 @@ window = {
 				## Button
 				{
 					"name" : "accept_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 170/2 - 61 - 5,
 					"y" : 58,
@@ -82,7 +82,7 @@ window = {
 				},
 				{
 					"name" : "cancel_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 170/2 + 5,
 					"y" : 58,

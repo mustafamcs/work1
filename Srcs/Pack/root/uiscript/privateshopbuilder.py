@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -29,7 +29,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -40,18 +40,18 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":84, "y":4, "text":uiScriptLocale.PRIVATE_SHOP_TITLE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":84, "y":4, "text":uiScriptLocale.PRIVATE_SHOP_TITLE, "text_horizontal_align":"center" },
 					),
 				},
 
 				## Name_Static
 				#{
-				#	"name" : "Name_Static", "type" : "text", "x" : 15, "y" : 35 + 3, "text" : uiScriptLocale.PRIVATE_SHOP_NAME,
+				#	"name" : "Name_Static", "tip" : "text", "x" : 15, "y" : 35 + 3, "text" : uiScriptLocale.PRIVATE_SHOP_NAME,
 				#},
 				## Name
 				{
 					"name" : "NameSlot",
-					"type" : "slotbar",
+					"tip" : "slotbar",
 					"x" : 13,
 					"y" : 35,
 					"width" : 90 + 67,
@@ -61,7 +61,7 @@ window = {
 					(
 						{
 							"name" : "NameLine",
-							"type" : "text",
+							"tip" : "text",
 							"x" : 3,
 							"y" : 3,
 							"width" : 157,
@@ -75,7 +75,7 @@ window = {
 				## Item Slot
 				{
 					"name" : "ItemSlot",
-					"type" : "grid_table",
+					"tip" : "grid_table",
 
 					"x" : 12,
 					"y" : 34 + 26,
@@ -92,7 +92,7 @@ window = {
 				## Ok
 				{
 					"name" : "OkButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 21,
 					"y" : 295 + 26,
@@ -110,7 +110,7 @@ window = {
 				## Close
 				{
 					"name" : "CloseButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 104,
 					"y" : 295 + 26,

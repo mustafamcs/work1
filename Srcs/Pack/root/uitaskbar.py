@@ -1080,15 +1080,15 @@ class TaskBar(ui.ScriptWindow):
 		self.mouseModeButtonList[dir].Hide()
 
 		btn = 0
-		type = self.NONE
+		tip = self.NONE
 		func = self.NONE
 		tooltip_text = ""
 
 		if self.MOUSE_BUTTON_LEFT == dir:
-			type = player.MBT_LEFT
+			tip = player.MBT_LEFT
 
 		elif self.MOUSE_BUTTON_RIGHT == dir:
-			type = player.MBT_RIGHT
+			tip = player.MBT_RIGHT
 
 		if self.EVENT_MOVE == event:
 			btn = self.mouseModeButtonList[dir].GetChild("button_move")
@@ -1122,7 +1122,7 @@ class TaskBar(ui.ScriptWindow):
 			self.curMouseModeButton[dir].SetDownVisual(btn.GetDownVisualFileName())
 			self.curMouseModeButton[dir].Show()
 
-		player.SetMouseFunc(type, func)
+		player.SetMouseFunc(tip, func)
 
 	def OnChangeCurrentSkill(self, skillSlotNumber):
 		self.curSkillButton.SetSkill(skillSlotNumber)

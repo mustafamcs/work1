@@ -18,7 +18,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 
 			"x" : 0,
 			"y" : 0,
@@ -30,7 +30,7 @@ window = {
 			(
 				{
 					"name" : "help_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 17,
@@ -43,7 +43,7 @@ window = {
 				},
 				{
 					"name" : "version",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 0,
 					"y" : 47,
@@ -54,7 +54,7 @@ window = {
 				},
 				{
 					"name" : "mall_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 57 + VERSION_ADD_Y,
@@ -69,7 +69,7 @@ window = {
 
 				{
 					"name" : "system_option_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 87 + VERSION_ADD_Y,
@@ -82,7 +82,7 @@ window = {
 				},
 				{
 					"name" : "game_option_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 117 + VERSION_ADD_Y,
@@ -95,7 +95,7 @@ window = {
 				},
 				{
 					"name" : "change_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 147 + VERSION_ADD_Y,
@@ -108,7 +108,7 @@ window = {
 				},
 				{
 					"name" : "logout_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 207 - 30 + VERSION_ADD_Y,
@@ -121,7 +121,7 @@ window = {
 				},
 				#{
 				#	"name" : "movechannel_button",
-				#	"type" : "button",
+				#	"tip" : "button",
 
 				#	"x" : 10,
 				#	"y" : 177 + VERSION_ADD_Y,
@@ -134,7 +134,7 @@ window = {
 				#},
 				{
 					"name" : "exit_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 247 - 30 + VERSION_ADD_Y,
@@ -147,7 +147,7 @@ window = {
 				},
 				{
 					"name" : "cancel_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 277 - 30 + VERSION_ADD_Y,

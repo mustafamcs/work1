@@ -40,10 +40,10 @@ class ShopDecoTitle(ui.Window):
 	T = 2
 	B = 3
 
-	def __init__(self, type, layer = "UI"):
+	def __init__(self, tip, layer = "UI"):
 		ui.Window.__init__(self, layer)
 		
-		CornerFileNames, LineFileNames = self.__GetFilePath(type)
+		CornerFileNames, LineFileNames = self.__GetFilePath(tip)
 		
 		if CornerFileNames == None or LineFileNames == None :
 			return
@@ -73,9 +73,9 @@ class ShopDecoTitle(ui.Window):
 	def __del__(self):
 		ui.Window.__del__(self)
 		
-	def __GetFilePath(self, type):		
-		CornerFileNames = [ DECO_SHOP_TITLE_LIST[type][1]+"_"+dir+".tga" for dir in ["left_top","left_bottom","right_top","right_bottom"] ]
-		LineFileNames = [ DECO_SHOP_TITLE_LIST[type][1]+"_"+dir+".tga" for dir in ["left","right","top","bottom"] ]
+	def __GetFilePath(self, tip):		
+		CornerFileNames = [ DECO_SHOP_TITLE_LIST[tip][1]+"_"+dir+".tga" for dir in ["left_top","left_bottom","right_top","right_bottom"] ]
+		LineFileNames = [ DECO_SHOP_TITLE_LIST[tip][1]+"_"+dir+".tga" for dir in ["left","right","top","bottom"] ]
 		
 		return CornerFileNames, LineFileNames
 

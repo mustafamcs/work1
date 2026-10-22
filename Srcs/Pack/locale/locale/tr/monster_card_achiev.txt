@@ -1,14 +1,14 @@
-﻿# achiev_vnum ì? ê³ ì? ê°? ì¤?ë³µ ë ì?? ì??ì?.
-# rank ë?? 5ë¶?í?° ë?¤ë¡? ê°¯ì??ë¥¼ì?? rank_count (2 ë©´ 4,5) (3ì´ë©´ 3,4,5) (5ë©´ 1,2,3,4,5)
-# rank ê°? ì??ì?´ë? ê°?ì? 0 ì?¼ë¡? ì?명??í??ì??í?¨.
-# rank_bonus ì?? rank_count ê°¯ì??ë?? ê°?ì??ì?쇳?¨ ê°?ì´ 0 ì´ë©´ ì¹´ì?댄?¸ ì??í?¨.
-# typy 0 = í??ë??, 1 = ë?ì ?
-# ìµ?ë?? ê°?ì?? monster 8, rank_bonus 5, apply_type 2
+# rank ve rank_bonus değerleri 0 ise kart bonus uygulanmaz.
+# rank ve rank_bonus değerleri 0 ise kart bonus uygulanmaz.
+# rank ve rank_bonus değerleri 0 ise kart bonus uygulanmaz.
+# rank ve rank_bonus değerleri 0 ise kart bonus uygulanmaz.
+# rank ve rank_bonus değerleri 0 ise kart bonusu uygulanmaz.
+# rank ve rank_bonus değerleri 0 ise kart bonus uygulanmaz.
 
 Group info
 {
 	achiev_vnum 1
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 
 	Group monster
@@ -26,7 +26,7 @@ Group info
 		5	40
 	}
 
-	Group apply_type
+	Group apply_tip
 	{
 		1	54
 	}
@@ -35,7 +35,7 @@ Group info
 Group info
 {
 	achiev_vnum 2
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 
 	Group monster
@@ -54,7 +54,7 @@ Group info
 		5	50
 	}
 
-	Group apply_type
+	Group apply_tip
 	{
 		1	54
 	}
@@ -63,7 +63,7 @@ Group info
 Group info
 {
 	achiev_vnum 3
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 
 	Group monster
@@ -83,7 +83,7 @@ Group info
 		5	25
 	}
 
-	Group apply_type
+	Group apply_tip
 	{
 		1	18
 	}
@@ -92,7 +92,7 @@ Group info
 Group info
 {
 	achiev_vnum 4
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 
 	Group monster
@@ -111,7 +111,7 @@ Group info
 		5	100
 	}
 
-	Group apply_type
+	Group apply_tip
 	{
 		1	53
 	}
@@ -120,7 +120,7 @@ Group info
 Group info
 {
 	achiev_vnum 5
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 
 	Group monster
@@ -139,7 +139,7 @@ Group info
 		5	200
 	}
 
-	Group apply_type
+	Group apply_tip
 	{
 		1	1
 	}
@@ -148,7 +148,7 @@ Group info
 Group info
 {
 	achiev_vnum 6
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 	Group monster
 	{
@@ -167,7 +167,7 @@ Group info
 		4	9
 		5	12
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	8
 	}
@@ -176,7 +176,7 @@ Group info
 Group info
 {
 	achiev_vnum 7
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 	Group monster
 	{
@@ -191,7 +191,7 @@ Group info
 		4	200
 		5	300
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	1
 	}
@@ -200,7 +200,7 @@ Group info
 Group info
 {
 	achiev_vnum 8
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 	Group monster
 	{
@@ -217,7 +217,7 @@ Group info
 		4	100
 		5	125
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	53
 	}
@@ -226,7 +226,7 @@ Group info
 Group info
 {
 	achiev_vnum 9
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 	Group monster
 	{
@@ -242,7 +242,7 @@ Group info
 		4	12
 		5	15
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	7
 	}
@@ -251,7 +251,7 @@ Group info
 Group info
 {
 	achiev_vnum 10
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 5
 	Group monster
 	{
@@ -266,7 +266,7 @@ Group info
 		4	320
 		5	400
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	2
 	}
@@ -275,7 +275,7 @@ Group info
 Group info
 {
 	achiev_vnum 11
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 2
 
 	Group monster
@@ -291,7 +291,7 @@ Group info
 		4	1
 		5	2
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	4
 	}
@@ -300,7 +300,7 @@ Group info
 Group info
 {
 	achiev_vnum 12
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 2
 
 	Group monster
@@ -316,7 +316,7 @@ Group info
 		4	1
 		5	2
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	5
 	}
@@ -325,7 +325,7 @@ Group info
 Group info
 {
 	achiev_vnum 13
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 2
 
 	Group monster
@@ -342,7 +342,7 @@ Group info
 		4	1
 		5	2
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	3
 	}
@@ -351,7 +351,7 @@ Group info
 Group info
 {
 	achiev_vnum 14
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 2
 
 	Group monster
@@ -369,7 +369,7 @@ Group info
 		4	1
 		5	2
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	6
 	}
@@ -378,7 +378,7 @@ Group info
 Group info
 {
 	achiev_vnum 15
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -395,7 +395,7 @@ Group info
 		4	1
 		5	3
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	28
 	}
@@ -404,7 +404,7 @@ Group info
 Group info
 {
 	achiev_vnum 16
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -423,7 +423,7 @@ Group info
 		4	1
 		5	3
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	86
 	}
@@ -432,7 +432,7 @@ Group info
 Group info
 {
 	achiev_vnum 17
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -449,7 +449,7 @@ Group info
 		4	1
 		5	3
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	47
 	}
@@ -458,7 +458,7 @@ Group info
 Group info
 {
 	achiev_vnum 18
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -475,7 +475,7 @@ Group info
 		4	1
 		5	3
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	63
 	}
@@ -484,7 +484,7 @@ Group info
 Group info
 {
 	achiev_vnum 19
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -502,7 +502,7 @@ Group info
 		4	1
 		5	2
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	3
 	}
@@ -511,7 +511,7 @@ Group info
 Group info
 {
 	achiev_vnum 20
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -528,7 +528,7 @@ Group info
 		4	1
 		5	3
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	70
 	}
@@ -537,7 +537,7 @@ Group info
 Group info
 {
 	achiev_vnum 21
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -555,7 +555,7 @@ Group info
 		4	1
 		5	3
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	69
 	}
@@ -564,7 +564,7 @@ Group info
 Group info
 {
 	achiev_vnum 22
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -580,7 +580,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	99
 	}
@@ -589,7 +589,7 @@ Group info
 Group info
 {
 	achiev_vnum 23
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -605,7 +605,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	100
 	}
@@ -614,7 +614,7 @@ Group info
 Group info
 {
 	achiev_vnum 24
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -630,7 +630,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	101
 	}
@@ -639,7 +639,7 @@ Group info
 Group info
 {
 	achiev_vnum 25
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -655,7 +655,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	102
 	}
@@ -664,7 +664,7 @@ Group info
 Group info
 {
 	achiev_vnum 26
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -680,7 +680,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	103
 	}
@@ -689,7 +689,7 @@ Group info
 Group info
 {
 	achiev_vnum 27
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -705,7 +705,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	104
 	}
@@ -714,7 +714,7 @@ Group info
 Group info
 {
 	achiev_vnum 28
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 3
 
 	Group monster
@@ -731,7 +731,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	241
 	}
@@ -740,7 +740,7 @@ Group info
 Group info
 {
 	achiev_vnum 29
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 3
 
 	Group monster
@@ -756,7 +756,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	242
 	}
@@ -765,7 +765,7 @@ Group info
 Group info
 {
 	achiev_vnum 30
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 2
 
 	Group monster
@@ -781,7 +781,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	243
 	}
@@ -790,7 +790,7 @@ Group info
 Group info
 {
 	achiev_vnum 31
-	achiev_type 0
+	achiev_tip 0
 	achiev_rank_count 3
 
 	Group monster
@@ -806,7 +806,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	240
 	}
@@ -815,7 +815,7 @@ Group info
 Group info
 {
 	achiev_vnum 32
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 3
 
 	Group monster
@@ -832,7 +832,7 @@ Group info
 		4	3
 		5	10
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	27
 	}
@@ -841,7 +841,7 @@ Group info
 Group info
 {
 	achiev_vnum 33
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -856,7 +856,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	239
 	}
@@ -865,7 +865,7 @@ Group info
 Group info
 {
 	achiev_vnum 34
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -880,7 +880,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	35
 	}
@@ -889,7 +889,7 @@ Group info
 Group info
 {
 	achiev_vnum 35
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -904,7 +904,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	87
 	}
@@ -913,7 +913,7 @@ Group info
 Group info
 {
 	achiev_vnum 36
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -928,7 +928,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	36
 	}
@@ -937,7 +937,7 @@ Group info
 Group info
 {
 	achiev_vnum 37
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -952,7 +952,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	38
 	}
@@ -961,7 +961,7 @@ Group info
 Group info
 {
 	achiev_vnum 38
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -976,7 +976,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	88
 	}
@@ -985,7 +985,7 @@ Group info
 Group info
 {
 	achiev_vnum 39
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 2
 
 	Group monster
@@ -1000,7 +1000,7 @@ Group info
 		4	2
 		5	5
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	89
 	}
@@ -1009,7 +1009,7 @@ Group info
 Group info
 {
 	achiev_vnum 40
-	achiev_type 1
+	achiev_tip 1
 	achiev_rank_count 3
 
 	Group monster
@@ -1026,7 +1026,7 @@ Group info
 		4	175
 		5	250
 	}
-	Group apply_type
+	Group apply_tip
 	{
 		1	53
 	}

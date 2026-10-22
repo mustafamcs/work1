@@ -1,9 +1,9 @@
-# achiev_vnum 은 고유값 중복 될수 없음.
-# rank 는 5부터 뒤로 갯수를셈 rank_count (2 면 4,5) (3이면 3,4,5) (5면 1,2,3,4,5)
-# rank 가 없어도 값을 0 으로 세팅필요함.
-# rank_bonus 와 rank_count 갯수는 같아야함 값이 0 이면 카운트 안함.
-# typy 0 = 필드, 1 = 던전
-# 최대 개수 monster 8, rank_bonus 5, apply_type 2
+# achiev_vnum must be unique, no duplicates.
+# rank counts back from 5 as rank_count (2 => 4,5) (3 => 3,4,5) (5 => 1,2,3,4,5)
+# even without rank the value must be set to 0.
+# rank_bonus and rank_count counts must match; a 0 value is not counted.
+# type 0 = field, 1 = dungeon
+# max count: monster 8, rank_bonus 5, apply_type 2
 
 Group info
 {

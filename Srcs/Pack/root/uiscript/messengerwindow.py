@@ -19,7 +19,7 @@ window = {
 
 		{
 			"name" : "board",
-			"type" : "board_with_titlebar",
+			"tip" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -31,7 +31,7 @@ window = {
 
 		{
 			"name" : "ScrollBar",
-			"type" : "scrollbar",
+			"tip" : "scrollbar",
 
 			"x" : 27,
 			"y" : 40,
@@ -41,7 +41,7 @@ window = {
 
 		{
 			"name" : "AddFriendButton",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : BUTTON_START_X_POS + BUTTON_X_STEP*0,
 			"y" : 30,
@@ -58,7 +58,7 @@ window = {
 		},
 		{
 			"name" : "WhisperButton",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : BUTTON_START_X_POS + BUTTON_X_STEP*1,
 			"y" : 30,
@@ -75,7 +75,7 @@ window = {
 		},
 		{
 			"name" : "RemoveButton",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : BUTTON_START_X_POS + BUTTON_X_STEP*3,
 			"y" : 30,
@@ -92,7 +92,7 @@ window = {
 		},
 		{
 			"name" : "GuildButton",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : BUTTON_START_X_POS + BUTTON_X_STEP*4,
 			"y" : 30,

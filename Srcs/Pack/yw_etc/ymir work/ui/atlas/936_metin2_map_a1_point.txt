@@ -1,12 +1,12 @@
-//num	type	x	y	?????
-//type : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
+//num	tip	x	y	?????
+//tip : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
 //---------------------------------------------------------------------------------------------------
 0	NPC	59600	55700	"ÎäÆ÷µêÀÏ°å"
 1	NPC	59600	60500	"·ÀÓùµêÀÏ°å"
 2	NPC	67800	56500	"ÔÓ»õµêÀÏ°å"
-3	NPC	67400	60700	"꾑욋일훙"
-4	NPC	63300	62200	"ÉñÃØÀÏÈË"
-5	WARP	40500	7300	"쉭쥬리"
+3	NPC	67400	60700	"Seopyeong Restoran Sahibi"
+4	NPC	63300	62200	"Yaşlı Kadın"
+5	WARP	40500	7300	"Jayang"
 6	NPC	35400	32700	"Óæ·ò"
 7	NPC	32500	40500	"Óæ·ò"
 8	NPC	25100	87400	"Óæ·ò"

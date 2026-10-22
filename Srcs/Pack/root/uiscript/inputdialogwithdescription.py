@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"type" : "board_with_titlebar",
+			"tip" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -31,7 +31,7 @@ window = {
 				## Text
 				{
 					"name" : "Description",
-					"type" : "text",
+					"tip" : "text",
 					"text" : "",
 					"horizontal_align" : "center",
 					"text_horizontal_align" : "center",
@@ -42,7 +42,7 @@ window = {
 				## Input Slot
 				{
 					"name" : "InputSlot",
-					"type" : "slotbar",
+					"tip" : "slotbar",
 
 					"x" : 0,
 					"y" : 51,
@@ -54,7 +54,7 @@ window = {
 					(
 						{
 							"name" : "InputValue",
-							"type" : "editline",
+							"tip" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -70,7 +70,7 @@ window = {
 				## Button
 				{
 					"name" : "AcceptButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : - 61 - 5 + 30,
 					"y" : 74,
@@ -84,7 +84,7 @@ window = {
 				},
 				{
 					"name" : "CancelButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 5 + 30,
 					"y" : 74,

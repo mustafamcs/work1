@@ -20,7 +20,7 @@ window = {
 		## Board
 		{
 			"name" : "BackGround",
-			"type" : "expanded_image",
+			"tip" : "expanded_image",
 
 			"x" : 0,
 			"y" : 42,
@@ -33,7 +33,7 @@ window = {
 		## Alpha
 		{
 			"name" : "Alpha",
-			"type" : "expanded_image",
+			"tip" : "expanded_image",
 
 			"x" : 0,
 			"y" : 0,
@@ -47,7 +47,7 @@ window = {
 		## Top & Bottom Line
 		{
 			"name" : "Top_Line",
-			"type" : "expanded_image",
+			"tip" : "expanded_image",
 
 			"x" : 0,
 			"y" : 0,
@@ -58,7 +58,7 @@ window = {
 		},
 		{
 			"name" : "Bottom_Line",
-			"type" : "expanded_image",
+			"tip" : "expanded_image",
 
 			"x" : 0,
 			"y" : SCREEN_HEIGHT - 42,
@@ -71,7 +71,7 @@ window = {
 		## Title
 		{
 			"name" : "Title",
-			"type" : "expanded_image",
+			"tip" : "expanded_image",
 
 			"x" : SCREEN_WIDTH * (410 - 346/2) / 800,
 			"y" : SCREEN_HEIGHT * (114 - 136/2) / 600,
@@ -84,7 +84,7 @@ window = {
 		## Atlas
 		{
 			"name" : "Atlas",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : ATALS_X,
 			"y" : ATALS_Y,
@@ -96,7 +96,7 @@ window = {
 				## Empire Image
 				{
 					"name" : "EmpireArea_A",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 43,
 					"y" : 201,
@@ -105,7 +105,7 @@ window = {
 				},
 				{
 					"name" : "EmpireArea_B",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 17,
 					"y" : 16,
@@ -114,7 +114,7 @@ window = {
 				},
 				{
 					"name" : "EmpireArea_C",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 314,
 					"y" : 33,
@@ -125,7 +125,7 @@ window = {
 				## Empire Flag
 				{
 					"name" : "EmpireAreaFlag_A",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 167,
 					"y" : 235,
@@ -134,7 +134,7 @@ window = {
 				},
 				{
 					"name" : "EmpireAreaFlag_B",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 70,
 					"y" : 42,
@@ -143,7 +143,7 @@ window = {
 				},
 				{
 					"name" : "EmpireAreaFlag_C",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 
 					"x" : 357,
 					"y" : 78,
@@ -156,7 +156,7 @@ window = {
 		## Buttons
 		{
 			"name" : "left_button",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : ATALS_X + 160,
 			"y" : ATALS_Y + 340,
@@ -167,7 +167,7 @@ window = {
 		},
 		{
 			"name" : "right_button",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : ATALS_X + 160 + 130,
 			"y" : ATALS_Y + 340,
@@ -180,7 +180,7 @@ window = {
 		## Character Board
 		{
 			"name" : "empire_board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 
 			"x" : SCREEN_WIDTH * (40) / 800,
 			"y" : SCREEN_HEIGHT * (211) / 600,
@@ -193,7 +193,7 @@ window = {
 				## Bar
 				{
 					"name" : "flag_board",
-					"type" : "bar",
+					"tip" : "bar",
 
 					"x" : 24,
 					"y" : 17,
@@ -205,7 +205,7 @@ window = {
 						## Empire Flag
 						{
 							"name" : "EmpireFlag_A",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -216,7 +216,7 @@ window = {
 						},
 						{
 							"name" : "EmpireFlag_B",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -227,7 +227,7 @@ window = {
 						},
 						{
 							"name" : "EmpireFlag_C",
-							"type" : "expanded_image",
+							"tip" : "expanded_image",
 
 							"x" : 0,
 							"y" : 0,
@@ -241,7 +241,7 @@ window = {
 				},
 				{
 					"name" : "text_board",
-					"type" : "bar",
+					"tip" : "bar",
 
 					"x" : 10,
 					"y" : 146,
@@ -253,7 +253,7 @@ window = {
 					(
 						{
 							"name" : "prev_text_button",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 95,
 							"y" : 95,
@@ -266,7 +266,7 @@ window = {
 						},
 						{
 							"name" : "next_text_button",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 140,
 							"y" : 95,
@@ -279,7 +279,7 @@ window = {
 						},
 						{
 							"name" : "right_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 189-1,
 							"y" : -1,
@@ -291,7 +291,7 @@ window = {
 						},
 						{
 							"name" : "bottom_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 0,
 							"y" : 122-1,
@@ -303,7 +303,7 @@ window = {
 						},
 						{
 							"name" : "left_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 0,
 							"y" : 0,
@@ -315,7 +315,7 @@ window = {
 						},
 						{
 							"name" : "top_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 0,
 							"y" : 0,
@@ -331,7 +331,7 @@ window = {
 				## Buttons
 				{
 					"name" : "select_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 14,
 					"y" : 277,
@@ -344,7 +344,7 @@ window = {
 				},
 				{
 					"name" : "exit_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 105,
 					"y" : 277,

@@ -18,7 +18,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -32,7 +32,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -43,7 +43,7 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":50, "y":3, "text":uiScriptLocale.SYSTEM_MALL, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":50, "y":3, "text":uiScriptLocale.SYSTEM_MALL, "text_horizontal_align":"center" },
 					),
 				},
 			),

@@ -1,7 +1,7 @@
-//num	type	x	y	?????
-//type : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
+//num	tip	x	y	?????
+//tip : "OPC", "OPCPVP", "OPCPVPSELF", "NPC", "MONSTER", "WARP", "WAYPOINT"
 //---------------------------------------------------------------------------------------------------
 0	WARP	74600	143800	"Ò×Ë®ÏØ"
-1	WARP	141200	14200	"Ñ©º®É½"
-2		 WARP	134700	138300	"ÑÖÄ§»ğ뒈"
+1	WARP	141200	14200	"Seohan Dağı"
+2		 WARP	134700	138300	"Alev Toprakları"
 

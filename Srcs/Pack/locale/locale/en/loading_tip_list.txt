@@ -1,8 +1,8 @@
-#Group Normal은 맨 처음에 위치해야 합니다.
-#Group 이름은 아무거나 상관없습니다.
-#없는 tip_vnum일 경우 아무것도 표기되지 않습니다.
-#없는 map_index일 경우 맨 처음 Group(현재 - Group Normal)해당하는 tip_vnum이 사용됩니다.
-#map_index의 값을 비워 놓을 경우 Group NormalÀÇ tip_vnumÀ» 사용합니다.
+#Group Normal must be placed first.
+#the Group name can be anything.
+#nothing is shown for unknown tip_vnum.
+#for unknown map_index the tip_vnum of the first Group (currently Group Normal) is used.
+# If map_index is left empty, Group Normal tip_vnum is used.
 Group Normal
 {
 	list tip_vnum

@@ -12,35 +12,35 @@ IconFileName		"skill/assassin/sangong.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name		"»ê°øºĞ"
-949Description	"ÁÖÀ§¿¡ µ¶À¸·Î ±¸¸§À» ¸¸µé¾î ÀûÀ» Áßµ¶ ½ÃÅ²´Ù"
+949Name		"unused"
+949Description	"unused"
 
 List 949ConditionData
 {
-	"Àå°Å¸® °ø°İ"
-	"´ë»ó ÁÖº¯ ¹üÀ§ °ø°İ"
-	"Áö¼Ó µ¶ °ø°İ"
+	"unused"
+	"unused"
+	"unused"
 }
 
 List 949AffectData
 {
-	"°ø°İ·Â %.0f-%.0f" "lv*2+(minatk + str*3 + dex*18)*k" "lv*2+(maxatk + str*3 + dex*18)*k"
-	"Áßµ¶ È®·ü %.0f%%" "40*k" ""
-	"Áßµ¶ ½Ã°£ %.0fÃÊ" "5+25*k" ""
+	"unused" "lv*2+(minatk + str*3 + dex*18)*k" "lv*2+(maxatk + str*3 + dex*18)*k"
+	"unused" "40*k" ""
+	"unused" "5+25*k" ""
 }
 
-936Name			"¶¾ÔÆ"
-936Description	"Ê¹ÓÃ¶¾Ò©ÔÚµĞÈËµÄÖÜÎ§ĞÎ³É¶¾ÔÆ£¬Ôì³ÉµĞÈËÉËº¦"
+936Name			"unused"
+936Description	"unused"
 
 
 List 936ConditionData
 {
-	"Àå°Å¸® °ø°İ"
-	"´ë»ó ÁÖº¯ ¹üÀ§ °ø°İ"
-	"µ¶ °ø°İ"
+	"unused"
+	"unused"
+	"unused"
 }
 
 List 936AffectData
 {
-	"%.1f ±¶µÄ´ò»÷"	"1 + SkillPoint / 4"	""
+	"unused"	"1 + SkillPoint / 4"	""
 }

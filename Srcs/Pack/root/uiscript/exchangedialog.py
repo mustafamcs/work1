@@ -17,7 +17,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -31,7 +31,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -42,14 +42,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":133, "y":3, "text":uiScriptLocale.EXCHANGE_TITLE, "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":133, "y":3, "text":uiScriptLocale.EXCHANGE_TITLE, "text_horizontal_align":"center" },
 					),
 				},
 
 				## MiddleBar
 				{
 					"name" : "Middle_Bar",
-					"type" : "image",
+					"tip" : "image",
 
 					"x" : 139,
 					"y" : 31,
@@ -60,7 +60,7 @@ window = {
 				## Owner
 				{
 					"name" : "Owner",
-					"type" : "window",
+					"tip" : "window",
 
 					"x" : 144,
 					"y" : 33,
@@ -72,7 +72,7 @@ window = {
 					(
 						{
 							"name" : "Owner_Slot",
-							"type" : "grid_table",
+							"tip" : "grid_table",
 
 							"start_index" : 0,
 
@@ -90,7 +90,7 @@ window = {
 						},
 						{
 							"name" : "Owner_Money",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 0,
 							"y" : 102,
@@ -105,7 +105,7 @@ window = {
 							(
 								{
 									"name" : "Owner_Money_Value",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 59,
 									"y" : 2,
@@ -118,7 +118,7 @@ window = {
 						},
 						{
 							"name" : "Owner_Accept_Light",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 62,
 							"y" : 101,
@@ -129,7 +129,7 @@ window = {
 						},
 						{
 							"name" : "Owner_Accept_Button",
-							"type" : "toggle_button",
+							"tip" : "toggle_button",
 
 							"x" : 85,
 							"y" : 101,
@@ -146,7 +146,7 @@ window = {
 				## Target
 				{
 					"name" : "Target",
-					"type" : "window",
+					"tip" : "window",
 
 					"x" : 10,
 					"y" : 33,
@@ -158,7 +158,7 @@ window = {
 					(
 						{
 							"name" : "Target_Slot",
-							"type" : "grid_table",
+							"tip" : "grid_table",
 
 							"start_index" : 0,
 
@@ -176,7 +176,7 @@ window = {
 						},
 						{
 							"name" : "Target_Money",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 0,
 							"y" : 102,
@@ -187,7 +187,7 @@ window = {
 							(
 								{
 									"name" : "Target_Money_Value",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 59,
 									"y" : 2,
@@ -200,7 +200,7 @@ window = {
 						},
 						{
 							"name" : "Target_Accept_Light",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 62,
 							"y" : 101,

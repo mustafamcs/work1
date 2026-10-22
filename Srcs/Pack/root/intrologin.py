@@ -1011,8 +1011,8 @@ class LoginWindow(ui.ScriptWindow):
 			self.language_popup.Open()
 
 	if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-		def __EventAnonymous(self, event_type, arg):
-			if "mouse_click" == event_type :
+		def __EventAnonymous(self, event_tip, arg):
+			if "mouse_click" == event_tip :
 				systemSetting.SetAnonymousCountryMode(not systemSetting.GetAnonymousCountryMode())
 				self.RefreshAnonymousMode()
 

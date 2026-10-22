@@ -276,12 +276,12 @@ class CMouseController(ui.NoWindow):
 				return self.GetAttachedItemCount()
 		return 0
 
-	def AttachMoney(self, owner, type, count):
+	def AttachMoney(self, owner, tip, count):
 		self.LastAttachedSlotNumber = self.AttachedSlotNumber
 
 		self.AttachedFlag = True
 		self.AttachedOwner = owner
-		self.AttachedType = type
+		self.AttachedType = tip
 		self.AttachedSlotNumber = -1
 		self.AttachedItemIndex = player.ITEM_MONEY
 		self.AttachedCount = count
@@ -401,16 +401,16 @@ class CMouseController(ui.NoWindow):
 						self.curCursorImage.SetPosition(self.x + self.cursorPosX, self.y + self.cursorPosY)
 						self.curCursorImage.Render()
 
-	def SetCallBack(self, type, event=lambda *arg:None):
-		self.callbackDict[type] = event
+	def SetCallBack(self, tip, event=lambda *arg:None):
+		self.callbackDict[tip] = event
 
-	def RunCallBack(self, type, *arg):
+	def RunCallBack(self, tip, *arg):
 
-		if not self.callbackDict.has_key(type):
+		if not self.callbackDict.has_key(tip):
 			self.DeattachObject()
 			return
 
-		self.callbackDict[type]()
+		self.callbackDict[tip]()
 
 	def ClearCallBack(self):
 		self.callbackDict = {}

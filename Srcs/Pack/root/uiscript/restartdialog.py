@@ -16,7 +16,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 
 			"x" : 0,
 			"y" : 0,
@@ -33,7 +33,7 @@ window = {
 			(
 				{
 					"name" : "restart_here_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 17,
@@ -46,7 +46,7 @@ window = {
 				},
 				{
 					"name" : "restart_town_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 10,
 					"y" : 47,

@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "button_move_and_attack",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : 0,
 			"y" : 0,
@@ -30,7 +30,7 @@ window = {
 		},
 		{
 			"name" : "button_auto_attack",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : 0,
 			"y" : 32,
@@ -45,7 +45,7 @@ window = {
 		},
 		{
 			"name" : "button_camera",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : 0,
 			"y" : 64,

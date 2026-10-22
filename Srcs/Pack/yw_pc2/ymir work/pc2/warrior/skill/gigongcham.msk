@@ -13,24 +13,24 @@ MaxLevel		"30"
 
 IconFileName		"skill/warrior/gigongcham.sub"
 
-949Name			"기공참"
-949Description	"전방의 적을 공격한다"
+949Name			"unused"
+949Description	"unused"
 List 949ConditionData
 {
-	"전방 범위 공격"
+	"unused"
 }
 List 949AffectData
 {
-	"공격력 %.0f-%.0f" "2.3*MinATK + (MinATK*4 + 4*STR + CON)*SkillPoint" "2.3*MaxATK + (MaxATK*4 + 4*STR + CON)*SkillPoint"
+	"unused" "2.3*MinATK + (MinATK*4 + 4*STR + CON)*SkillPoint" "2.3*MaxATK + (MaxATK*4 + 4*STR + CON)*SkillPoint"
 }
 
-936Name			"旗루鸞"
-936Description	"묑샌품렘돨둔훙"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"전방 범위 공격"
+	"unused"
 }
 List 936AffectData
 {
-	"공격력 %.0f-%.0f" "100 + 3*MinATK + (MinATK + 400)*SkillPoint" "100 + 3*MaxATK + (MaxATK + 400)*SkillPoint"
+	"unused" "100 + 3*MinATK + (MinATK + 400)*SkillPoint" "100 + 3*MaxATK + (MaxATK + 400)*SkillPoint"
 }

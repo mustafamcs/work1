@@ -21,7 +21,7 @@ window = {
 
 		{
 			"name" : "Board",
-			"type" : "board_with_titlebar",
+			"tip" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -36,7 +36,7 @@ window = {
 
 				{
 					"name" : "BuildingCategoryTitle",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 15 + 50,
 					"y" : 33,
@@ -46,7 +46,7 @@ window = {
 				},
 				{
 					"name" : "BuildingCategoryBar",
-					"type" : "slotbar",
+					"tip" : "slotbar",
 
 					"x" : 15,
 					"y" : 50,
@@ -58,7 +58,7 @@ window = {
 					(
 						{
 							"name" : "CategoryList",
-							"type" : "listbox",
+							"tip" : "listbox",
 
 							"x" : 0,
 							"y" : 1,
@@ -71,16 +71,16 @@ window = {
 
 				{
 					"name" : "BuildingPriceTitle",
-					"type" : "text", "x" : 30, "y" : 143, "text" : uiScriptLocale.GUILD_BUILDING_PRICE,
+					"tip" : "text", "x" : 30, "y" : 143, "text" : uiScriptLocale.GUILD_BUILDING_PRICE,
 					"text_horizontal_align" : "center",
 					"children" :
 					(
 						{
 							"name":"BuildingPriceSlot",
-							"type":"slotbar", "x":25, "y":-4, "width":60, "height":17,
+							"tip":"slotbar", "x":25, "y":-4, "width":60, "height":17,
 							"children" :
 							(
-								{ "name" : "BuildingPriceValue", "type" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
+								{ "name" : "BuildingPriceValue", "tip" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
 							),
 						},
 					),
@@ -88,16 +88,16 @@ window = {
 
 				{
 					"name" : "BuildingMaterialStoneTitle",
-					"type" : "text", "x" : 30, "y" : 163, "text" : uiScriptLocale.GUILD_BUILDING_STONE,
+					"tip" : "text", "x" : 30, "y" : 163, "text" : uiScriptLocale.GUILD_BUILDING_STONE,
 					"text_horizontal_align" : "center",
 					"children" :
 					(
 						{
 							"name":"BuildingMaterialStoneSlot",
-							"type":"slotbar", "x":25, "y":-4, "width":60, "height":17,
+							"tip":"slotbar", "x":25, "y":-4, "width":60, "height":17,
 							"children" :
 							(
-								{ "name" : "BuildingMaterialStoneValue", "type" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
+								{ "name" : "BuildingMaterialStoneValue", "tip" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
 							),
 						},
 					),
@@ -105,16 +105,16 @@ window = {
 
 				{
 					"name" : "BuildingMaterialLogTitle",
-					"type" : "text", "x" : 30, "y" : 183, "text" : uiScriptLocale.GUILD_BUILDING_LOG,
+					"tip" : "text", "x" : 30, "y" : 183, "text" : uiScriptLocale.GUILD_BUILDING_LOG,
 					"text_horizontal_align" : "center",
 					"children" :
 					(
 						{
 							"name":"BuildingMaterialLogSlot",
-							"type":"slotbar", "x":25, "y":-4, "width":60, "height":17,
+							"tip":"slotbar", "x":25, "y":-4, "width":60, "height":17,
 							"children" :
 							(
-								{ "name" : "BuildingMaterialLogValue", "type" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
+								{ "name" : "BuildingMaterialLogValue", "tip" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
 							),
 						},
 					),
@@ -122,16 +122,16 @@ window = {
 
 				{
 					"name" : "BuildingMaterialPlywoodTitle",
-					"type" : "text", "x" : 30, "y" : 203, "text" : uiScriptLocale.GUILD_BUILDING_PLY,
+					"tip" : "text", "x" : 30, "y" : 203, "text" : uiScriptLocale.GUILD_BUILDING_PLY,
 					"text_horizontal_align" : "center",
 					"children" :
 					(
 						{
 							"name":"BuildingMaterialPlywoodSlot",
-							"type":"slotbar", "x":25, "y":-4, "width":60, "height":17,
+							"tip":"slotbar", "x":25, "y":-4, "width":60, "height":17,
 							"children" :
 							(
-								{ "name" : "BuildingMaterialPlywoodValue", "type" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
+								{ "name" : "BuildingMaterialPlywoodValue", "tip" : "text", "x" : 0, "y" : 1, "all_align" : "center", "text" : "50000000", },
 							),
 						},
 					),
@@ -139,7 +139,7 @@ window = {
 
 				{
 					"name" : "temp_window",
-					"type" : "window",
+					"tip" : "window",
 					"style" : ("not_pick",),
 
 					"x" : TEMP_X,
@@ -153,7 +153,7 @@ window = {
 						### START_TEMP
 						{
 							"name" : "BuildingListTitle",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 15 + 60,
 							"y" : 33,
@@ -164,7 +164,7 @@ window = {
 
 						{
 							"name" : "BuildingListBar",
-							"type" : "slotbar",
+							"tip" : "slotbar",
 
 							"x" : 15,
 							"y" : 50,
@@ -176,7 +176,7 @@ window = {
 							(
 								{
 									"name" : "BuildingList",
-									"type" : "listbox",
+									"tip" : "listbox",
 
 									"x" : 0,
 									"y" : 1,
@@ -186,7 +186,7 @@ window = {
 								},
 								{
 									"name" : "ListScrollBar",
-									"type" : "scrollbar",
+									"tip" : "scrollbar",
 
 									"x" : 15,
 									"y" : 2,
@@ -198,7 +198,7 @@ window = {
 
 						{
 							"name" : "BuildingPositionTitle",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 250,
 							"y" : 33,
@@ -208,39 +208,39 @@ window = {
 						},
 						{
 							"name" : "PositionButton",
-							"type" : "radio_button", "x" : 280, "y" : 50, "text" : uiScriptLocale.GUILD_BUILDING_CHANGE,
+							"tip" : "radio_button", "x" : 280, "y" : 50, "text" : uiScriptLocale.GUILD_BUILDING_CHANGE,
 							"default_image" : ROOT_PATH + "Big_Button_01.sub",
 							"over_image" : ROOT_PATH + "Big_Button_02.sub",
 							"down_image" : ROOT_PATH + "Big_Button_03.sub",
 						},
 						{
 							"name" : "BuildingPositionXTitle",
-							"type" : "text", "x" : 150, "y" : 53, "text" : "X",
+							"tip" : "text", "x" : 150, "y" : 53, "text" : "X",
 							"text_horizontal_align" : "center",
 							"children" :
 							(
 								{
 									"name":"BuildingPositionXSlot",
-									"type":"image", "x":23, "y":-3, "image":MIDDLE_VALUE_FILE,
+									"tip":"image", "x":23, "y":-3, "image":MIDDLE_VALUE_FILE,
 									"children" :
 									(
-										{ "name" : "BuildingPositionXValue", "type" : "text", "x" : 0, "y" : 0, "all_align" : "center", "text" : "999", },
+										{ "name" : "BuildingPositionXValue", "tip" : "text", "x" : 0, "y" : 0, "all_align" : "center", "text" : "999", },
 									),
 								},
 							),
 						},
 						{
 							"name" : "BuildingPositionY",
-							"type" : "text", "x" : 150, "y" : 73, "text" : "Y",
+							"tip" : "text", "x" : 150, "y" : 73, "text" : "Y",
 							"text_horizontal_align" : "center",
 							"children" :
 							(
 								{
 									"name":"BuildingPositionYSlot",
-									"type":"image", "x":23, "y":-3, "image":MIDDLE_VALUE_FILE,
+									"tip":"image", "x":23, "y":-3, "image":MIDDLE_VALUE_FILE,
 									"children" :
 									(
-										{ "name" : "BuildingPositionYValue", "type" : "text", "x" : 0, "y" : 0, "all_align" : "center", "text" : "999", },
+										{ "name" : "BuildingPositionYValue", "tip" : "text", "x" : 0, "y" : 0, "all_align" : "center", "text" : "999", },
 									),
 								},
 							),
@@ -248,7 +248,7 @@ window = {
 
 						{
 							"name" : "BuildingRotationTitle",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 250,
 							"y" : 95,
@@ -258,38 +258,38 @@ window = {
 						},
 						{
 							"name" : "BuildingRotationXTitle",
-							"type" : "text", "x" : 150, "y" : 115, "text" : "X",
+							"tip" : "text", "x" : 150, "y" : 115, "text" : "X",
 							"text_horizontal_align" : "center",
 						},
 						{
 							"name" : "BuildingRotationX",
-							"type" : "sliderbar",
+							"tip" : "sliderbar",
 							"x" : 158, "y" : 115,
 						},
 						{
 							"name" : "BuildingRotationYTitle",
-							"type" : "text", "x" : 150, "y" : 135, "text" : "Y",
+							"tip" : "text", "x" : 150, "y" : 135, "text" : "Y",
 							"text_horizontal_align" : "center",
 						},
 						{
 							"name" : "BuildingRotationY",
-							"type" : "sliderbar",
+							"tip" : "sliderbar",
 							"x" : 158, "y" : 135,
 						},
 						{
 							"name" : "BuildingRotationZTitle",
-							"type" : "text", "x" : 150, "y" : 155, "text" : "Z",
+							"tip" : "text", "x" : 150, "y" : 155, "text" : "Z",
 							"text_horizontal_align" : "center",
 						},
 						{
 							"name" : "BuildingRotationZ",
-							"type" : "sliderbar",
+							"tip" : "sliderbar",
 							"x" : 158, "y" : 155,
 						},
 
 						{
 							"name" : "PreviewButton",
-							"type" : "toggle_button",
+							"tip" : "toggle_button",
 
 							"x" : 200,
 							"y" : 60,
@@ -304,7 +304,7 @@ window = {
 
 						{
 							"name" : "AcceptButton",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 200,
 							"y" : 35,
@@ -318,7 +318,7 @@ window = {
 						},
 						{
 							"name" : "CancelButton",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 245,
 							"y" : 35,

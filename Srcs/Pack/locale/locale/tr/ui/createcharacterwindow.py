@@ -22,14 +22,14 @@ window = {
 	(
 		## Board
 		{
-			"name" : "BackGround", "type" : "expanded_image", "x" : 0, "y" : 0,
+			"name" : "BackGround", "tip" : "expanded_image", "x" : 0, "y" : 0,
 			"x_scale" : float(SCREEN_WIDTH) / 1024.0, "y_scale" : float(SCREEN_HEIGHT) / 768.0,
 			"image" : "locale/tr/ui/select.sub",
 		},
 		## Name
 		{
 			"name" : "name_warrior",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -38,7 +38,7 @@ window = {
 		},
 		{
 			"name" : "name_assassin",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -47,7 +47,7 @@ window = {
 		},
 		{
 			"name" : "name_sura",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -56,7 +56,7 @@ window = {
 		},
 		{
 			"name" : "name_shaman",
-			"type" : "image",
+			"tip" : "image",
 
 			"x" : BOARD_X - 27,
 			"y" : BOARD_Y - 174 + 25,
@@ -67,7 +67,7 @@ window = {
 		## Character Board
 		{
 			"name" : "character_board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 
 			"x" : BOARD_X,
 			"y" : BOARD_Y,
@@ -79,7 +79,7 @@ window = {
 			(
 				{
 					"name" : "text_board",
-					"type" : "bar",
+					"tip" : "bar",
 
 					"x" : 8,
 					"y" : 10,
@@ -91,7 +91,7 @@ window = {
 					(
 						{
 							"name" : "prev_button",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 95,
 							"y" : 95,
@@ -104,7 +104,7 @@ window = {
 						},
 						{
 							"name" : "next_button",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 140,
 							"y" : 95,
@@ -117,7 +117,7 @@ window = {
 						},
 						{
 							"name" : "right_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 189-1,
 							"y" : -1,
@@ -129,7 +129,7 @@ window = {
 						},
 						{
 							"name" : "bottom_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 0,
 							"y" : 122-1,
@@ -141,7 +141,7 @@ window = {
 						},
 						{
 							"name" : "left_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 0,
 							"y" : 0,
@@ -153,7 +153,7 @@ window = {
 						},
 						{
 							"name" : "top_line",
-							"type" : "line",
+							"tip" : "line",
 
 							"x" : 0,
 							"y" : 0,
@@ -167,7 +167,7 @@ window = {
 				},
 				{
 					"name" : "hth",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 15,
 					"y" : 138,
@@ -178,7 +178,7 @@ window = {
 					(
 						{
 							"name" : "hth_gauge",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -188,7 +188,7 @@ window = {
 						},
 						{
 							"name" : "hth_slot",
-							"type" : "slotbar",
+							"tip" : "slotbar",
 
 							"x" : 137 + PLUS_BUTTON_WIDTH,
 							"y" : -1,
@@ -199,7 +199,7 @@ window = {
 							(
 								{
 									"name" : "hth_value",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 1,
@@ -213,7 +213,7 @@ window = {
 				},
 				{
 					"name" : "int",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 15,
 					"y" : 157,
@@ -224,7 +224,7 @@ window = {
 					(
 						{
 							"name" : "int_gauge",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -234,7 +234,7 @@ window = {
 						},
 						{
 							"name" : "int_slot",
-							"type" : "slotbar",
+							"tip" : "slotbar",
 
 							"x" : 137 + PLUS_BUTTON_WIDTH,
 							"y" : -1,
@@ -245,7 +245,7 @@ window = {
 							(
 								{
 									"name" : "int_value",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 1,
@@ -259,7 +259,7 @@ window = {
 				},
 				{
 					"name" : "str",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 15,
 					"y" : 176,
@@ -270,7 +270,7 @@ window = {
 					(
 						{
 							"name" : "str_gauge",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -280,7 +280,7 @@ window = {
 						},
 						{
 							"name" : "str_slot",
-							"type" : "slotbar",
+							"tip" : "slotbar",
 
 							"x" : 137 + PLUS_BUTTON_WIDTH,
 							"y" : -1,
@@ -291,7 +291,7 @@ window = {
 							(
 								{
 									"name" : "str_value",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 1,
@@ -305,7 +305,7 @@ window = {
 				},
 				{
 					"name" : "dex",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 15,
 					"y" : 195,
@@ -316,7 +316,7 @@ window = {
 					(
 						{
 							"name" : "dex_gauge",
-							"type" : "gauge",
+							"tip" : "gauge",
 
 							"x" : 30,
 							"y" : 4,
@@ -326,7 +326,7 @@ window = {
 						},
 						{
 							"name" : "dex_slot",
-							"type" : "slotbar",
+							"tip" : "slotbar",
 
 							"x" : 137 + PLUS_BUTTON_WIDTH,
 							"y" : -1,
@@ -337,7 +337,7 @@ window = {
 							(
 								{
 									"name" : "dex_value",
-									"type" : "text",
+									"tip" : "text",
 
 									"x" : 0,
 									"y" : 1,
@@ -352,7 +352,7 @@ window = {
 
 				{
 					"name" : "hth_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 184,
 					"y" : 139,
@@ -363,7 +363,7 @@ window = {
 				},
 				{
 					"name" : "int_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 184,
 					"y" : 158,
@@ -374,7 +374,7 @@ window = {
 				},
 				{
 					"name" : "str_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 184,
 					"y" : 177,
@@ -385,7 +385,7 @@ window = {
 				},
 				{
 					"name" : "dex_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 184,
 					"y" : 196,
@@ -398,7 +398,7 @@ window = {
 
 				{
 					"name" : "character_name",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 43,
 					"y" : 218,
@@ -411,7 +411,7 @@ window = {
 					(
 						{
 							"name" : "character_name_slot",
-							"type" : "image",
+							"tip" : "image",
 
 							"x" : 40 - 1,
 							"y" : -2,
@@ -420,7 +420,7 @@ window = {
 						},
 						{
 							"name" : "character_name_value",
-							"type" : "editline",
+							"tip" : "editline",
 
 							"x" : 40 - 1 + 3,
 							"y" : 0,
@@ -435,7 +435,7 @@ window = {
 
 				{
 					"name" : "character_gender",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 43,
 					"y" : 247,
@@ -446,7 +446,7 @@ window = {
 				},
 				{
 					"name" : "gender_button_01",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 79,
 					"y" : 247,
@@ -459,7 +459,7 @@ window = {
 				},
 				{
 					"name" : "gender_button_02",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 139,
 					"y" : 247,
@@ -473,7 +473,7 @@ window = {
 
 				{
 					"name" : "character_shape",
-					"type" : "text",
+					"tip" : "text",
 
 					"x" : 43,
 					"y" : 270,
@@ -484,7 +484,7 @@ window = {
 				},
 				{
 					"name" : "shape_button_01",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 79,
 					"y" : 239 + TEMPORARY_HEIGHT,
@@ -497,7 +497,7 @@ window = {
 				},
 				{
 					"name" : "shape_button_02",
-					"type" : "radio_button",
+					"tip" : "radio_button",
 
 					"x" : 139,
 					"y" : 239 + TEMPORARY_HEIGHT,
@@ -511,7 +511,7 @@ window = {
 
 				{
 					"name" : "create_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 11,
 					"y" : 265 + TEMPORARY_HEIGHT,
@@ -524,7 +524,7 @@ window = {
 				},
 				{
 					"name" : "cancel_button",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 109,
 					"y" : 265 + TEMPORARY_HEIGHT,
@@ -541,7 +541,7 @@ window = {
 		## Buttons
 		{
 			"name" : "left_button",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : SCREEN_WIDTH * (450 - 22*3) / 800,
 			"y" : SCREEN_HEIGHT * (505) / 600,
@@ -552,7 +552,7 @@ window = {
 		},
 		{
 			"name" : "right_button",
-			"type" : "button",
+			"tip" : "button",
 
 			"x" : SCREEN_WIDTH * (580 - 22) / 800,
 			"y" : SCREEN_HEIGHT * (505) / 600,

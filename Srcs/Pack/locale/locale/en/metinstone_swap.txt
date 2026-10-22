@@ -1,6 +1,6 @@
-# Group metinstone_range 설명
-# range				: 변경할 메틴석 범위 번호입니다. 그룹 metinstone_range에 같은 range가 있으면 안됩니다. range값이 256을 넘어갈 경우 프로그래머에게 말씀해주세요 (코드 수정 필요)
-# Group range_vnum	: 범위에 해당 될 메틴석 vnum 들을 추가해주세요.
+# Group metinstone_range description
+# range				: range number of metin stone to change. Same range must not exist in metinstone_range group. If range exceeds 256, ask a programmer (code change needed)
+# Group range_vnum	: add the metin stone vnums for the range.
 Group metinstone_range
 {
 	range	1
@@ -88,14 +88,14 @@ Group metinstone_range
 	}
 }
 
-# Group metinstone_swap 설명
-# event_flag_value		: 메틴석 외형 변경 이벤트 플래그 값
-# range_number			: 변경할 메틴석 vnum 범위 번호. ( 위에 있는 Group metinstone_swap_range 의 range 번호 )
-# swap_vnum				: 외형 변경 mob vnum 값
-# can_use_mob_color		: 다른 외형으로 변경될 때 mob_proto의 몹 색상을 허용하는지 여부 (false : 허용하지않음, true : 허용함)
-# : 메틴석 외형 변경 이벤트 플래그값일 때, 메틴석 vnum이 외형 변경될 범위에 있으면 외형을 swap_vnum으로 변경합니다.
+# Group metinstone_swap description
+# event_flag_value		: metin stone appearance change event flag value
+# range_number			: metin stone vnum range number to change (the range number of the metinstone_swap_range group above)
+# swap_vnum				: appearance change mob vnum
+# can_use_mob_color		: whether to allow mob_proto mob color on appearance change (false: deny, true: allow)
+# : while the metin stone appearance event flag is set, a vnum in range gets swap_vnum appearance.
 
-# 윷놀이, 잭오랜턴
+# Yut Nori, Jack O'Lantern
 Group metinstone_swap
 {
 	event_flag_value	1
@@ -107,7 +107,7 @@ Group metinstone_swap
 	}
 }
 
-# 라마단 이벤트
+# Ramadan event
 Group metinstone_swap
 {
 	event_flag_value	2
@@ -119,7 +119,7 @@ Group metinstone_swap
 	}
 }
 
-# 여름 이벤트
+# Summer event
 Group metinstone_swap
 {
 	event_flag_value	3
@@ -131,7 +131,7 @@ Group metinstone_swap
 	}
 }
 
-# 발렌타인 이벤트
+# Valentine event
 Group metinstone_swap
 {
 	event_flag_value	4
@@ -143,7 +143,7 @@ Group metinstone_swap
 	}
 }
 
-# 뉴월드컵 축구공
+# New World Cup football
 Group metinstone_swap
 {
 	event_flag_value	5

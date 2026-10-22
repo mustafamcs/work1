@@ -1,6 +1,6 @@
-﻿# type 0 : solo						
-# type 1 : party						
-##group	index	vnum	type	출현지역	mapid	
+﻿# tip 0 : tek						
+# tip 1 : party						
+##grup	index	vnum	tip	çıkış bölgesi	harita_no	
 1	1	151	0	1	21	41
 1	2	153	0	1	21	41
 1	3	152	0	1	21	41

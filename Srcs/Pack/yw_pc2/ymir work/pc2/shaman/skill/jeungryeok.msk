@@ -12,32 +12,32 @@ IconFileName		"skill/shaman/jeungryeok.sub"
 Type			LOW
 MaxLevel		"30"
 
-949Name			"Áõ·Â¼ú"
-949Description		"µ½°íÀÚ ÇÏ´Â ÀÚÀÇ ÈûÀ» ´õ¿í °­ÇÏ°Ô ÇÑ´Ù"
+949Name			"unused"
+949Description		"unused"
 
 List 949ConditionData
 {
-	"±âº» °ø°İ·Â »ó½Â"
-	"µ¿·á¿¡°Ô »ç¿ë °¡´É"
+	"unused"
+	"unused"
 }
 
 List 949AffectData
 {
-	"°ø°İ·Â : +%.1f" "5+(iq*0.2 + 15)*k" ""
+	"unused" "5+(iq*0.2 + 15)*k" ""
 }
 
-936Name				"ÌìÅ­"
-936Description			"·ßÅ­µÄÌìÉñ¸øÓèÕ½Ê¿Ç¿´óµÄÎïÀí¹¥»÷ÓëÄ§·¨¹¥»÷Á¦"
+936Name				"unused"
+936Description			"unused"
 
 List 936ConditionData
 {
-	"¹°¸® °ø°İ·Â »ó½Â"
-	"µ¿·á¿¡°Ô »ç¿ë °¡´É"
+	"unused"
+	"unused"
 }
 
 List 936AffectData
 {
-	"¹¥»÷Á¦: +%.0f" "(SkillPoint / 2) * (INT + 75) / 75" ""
-	"Ä§·¨¹¥»÷ : +%.0f" "(SkillPoint / 2) * (INT + 75) / 75" ""
-	"³ÖĞøÊ±¼ä : %.0fÃë" "5 * 60 * (5 + JeungJi) / 5" ""
+	"unused" "(SkillPoint / 2) * (INT + 75) / 75" ""
+	"unused" "(SkillPoint / 2) * (INT + 75) / 75" ""
+	"unused" "5 * 60 * (5 + JeungJi) / 5" ""
 }

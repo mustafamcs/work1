@@ -16,7 +16,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "thinboard",
+			"tip" : "thinboard",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -30,7 +30,7 @@ window = {
 				## Title
 				{
 					"name" : "name_slot",
-					"type" : "image",
+					"tip" : "image",
 					"style" : ("attach",),
 
 					"x" : 10,
@@ -42,7 +42,7 @@ window = {
 					(
 						{
 							"name" : "titlename",
-							"type" : "text",
+							"tip" : "text",
 
 							"x" : 3,
 							"y" : 3,
@@ -51,7 +51,7 @@ window = {
 						},
 						{
 							"name" : "titlename_edit",
-							"type" : "editline",
+							"tip" : "editline",
 
 							"x" : 3,
 							"y" : 3,
@@ -68,7 +68,7 @@ window = {
 
 				{
 					"name" : "gamemastermark",
-					"type" : "expanded_image",
+					"tip" : "expanded_image",
 					"style" : ("attach",),
 
 					"x" : 206,
@@ -83,7 +83,7 @@ window = {
 				## Button
 				{
 					"name" : "ignorebutton",
-					"type" : "toggle_button",
+					"tip" : "toggle_button",
 
 					"x" : 145,
 					"y" : 10,
@@ -96,7 +96,7 @@ window = {
 				},
 				{
 					"name" : "reportviolentwhisperbutton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 145,
 					"y" : 10,
@@ -109,7 +109,7 @@ window = {
 				},
 				{
 					"name" : "acceptbutton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 145,
 					"y" : 10,
@@ -122,7 +122,7 @@ window = {
 				},
 				{
 					"name" : "minimizebutton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 280 - 41,
 					"y" : 12,
@@ -135,7 +135,7 @@ window = {
 				},
 				{
 					"name" : "closebutton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 280 - 24,
 					"y" : 12,
@@ -150,7 +150,7 @@ window = {
 				## ScrollBar
 				{
 					"name" : "scrollbar",
-					"type" : "thin_scrollbar",
+					"tip" : "thin_scrollbar",
 
 					"x" : 280 - 25,
 					"y" : 35,
@@ -161,7 +161,7 @@ window = {
 				## Edit Bar
 				{
 					"name" : "editbar",
-					"type" : "bar",
+					"tip" : "bar",
 
 					"x" : 10,
 					"y" : 200 - 60,
@@ -175,7 +175,7 @@ window = {
 					(
 						{
 							"name" : "chatline",
-							"type" : "editline",
+							"tip" : "editline",
 
 							"x" : 5,
 							"y" : 5,
@@ -190,7 +190,7 @@ window = {
 						},
 						{
 							"name" : "sendbutton",
-							"type" : "button",
+							"tip" : "button",
 
 							"x" : 280 - 80,
 							"y" : 10,

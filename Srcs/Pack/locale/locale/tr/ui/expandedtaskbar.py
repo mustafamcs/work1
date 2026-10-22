@@ -18,7 +18,7 @@ window = {
 	[
 		{
 			"name" : "ExpanedTaskBar_Board",
-			"type" : "window",
+			"tip" : "window",
 			"style" : ("ltr", ),
 
 			"x" : 0,
@@ -31,7 +31,7 @@ window = {
 			[
 				{
 					"name" : "DragonSoulButton",
-					"type" : "button",
+					"tip" : "button",
 					"style" : ("ltr", ),
 
 					"x" : 0,
@@ -56,7 +56,7 @@ window["children"][0]["width"] = window["children"][0]["width"] + 37
 window["children"][0]["children"] = window["children"][0]["children"] + [
 				{
 					"name" : "AutoButton",
-					"type" : "button",
+					"tip" : "button",
 					"style" : ("ltr", ),
 
 					"x" : 38,
@@ -78,7 +78,7 @@ window["children"][0]["width"] = window["children"][0]["width"] + 37
 window["children"][0]["children"] = window["children"][0]["children"] + [
 				{
 					"name" : "PetInfoButton",
-					"type" : "button",
+					"tip" : "button",
 					"style" : ("ltr", ),
 
 					"x" : 74,
@@ -99,7 +99,7 @@ window["children"][0]["width"] = window["children"][0]["width"] + 37
 window["children"][0]["children"] = window["children"][0]["children"] + [
 				{
 					"name" : "MonsterCardWindow",
-					"type" : "button",
+					"tip" : "button",
 					"style" : ("ltr", ),
 
 					"x" : 110,
@@ -120,7 +120,7 @@ window["children"][0]["width"] = window["children"][0]["width"] + 37
 window["children"][0]["children"] = window["children"][0]["children"] + [
 				{
 					"name" : "PartyMatchButton",
-					"type" : "button",
+					"tip" : "button",
 					"style" : ("ltr", ),
 
 					"x" : 146,
@@ -142,7 +142,7 @@ if app.ENABLE_DRAGON_GATE:
 	window["children"][0]["children"] = window["children"][0]["children"] + [
 	{
 		"name" : "DragonGateButton",
-		"type" : "button",
+		"tip" : "button",
 		"style" : ("ltr", ),
 
 		"x" : 182,
@@ -164,7 +164,7 @@ if app.ENABLE_MERCENARY_SYSTEM:
 	window["children"][0]["children"] = window["children"][0]["children"] + [
 	{
 		"name" : "MercenaryButton",
-		"type" : "button",
+		"tip" : "button",
 		"style" : ("ltr", ),
 
 		"x" : 218,
@@ -186,7 +186,7 @@ if app.ENABLE_SUNGMAHEE_GATE:
 	window["children"][0]["children"] = window["children"][0]["children"] + [
 	{
 		"name" : "SungmaheeGateAchievButton",
-		"type" : "button",
+		"tip" : "button",
 		"style" : ("ltr", ),
 
 		"x" : 254,

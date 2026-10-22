@@ -2,7 +2,7 @@ class Sandbox(object):
 	# DO NOT REMOVE ANY ENTRY OF WHITE LIST
 	# THIS ENTIES ARE USED FOR Sandbox.
 	# 	(If sys.modules['__main__'] is changed, you can see the hell.)
-	WHITE_LIST = ['__builtin__', 'types', __name__, '__main__', 'sys']
+	WHITE_LIST = ['__builtin__', 'tips', __name__, '__main__', 'sys']
 	def __init__(self, prevent_imported_modules = False, allowed_modules = [], prevented_modules = [], allowed_paths = []):
 		self.prevent_imported_modules = prevent_imported_modules
 		self.allowed_modules = allowed_modules
@@ -35,9 +35,9 @@ class Sandbox(object):
 
 		# set current imported modules None
 		if self.prevent_imported_modules:
-			import types
+			import tips
 			for k, v in old_modules.items():
-				if type(v) == types.ModuleType:
+				if tip(v) == tips.ModuleType:
 					if not (k in self.WHITE_LIST or k in self.allowed_modules):
 						sys.modules[k] = None
 

@@ -467,17 +467,17 @@ class CubeWindow(ui.ScriptWindow):
 		if self.isUsable:
 			self.isUsable = False
 
-			print "큐브 닫기"
+			print "Küpü kapat"
 			net.SendChatPacket("/cube close")
 
 		self.Close()
 
 	def __OnAcceptButtonClick(self):
 		if len(self.cubeItemInfo) == 0:
-			"빈 큐브"
+			"Boş Küp"
 			return
 
-		print "큐브 제작 시작"
+		print "Küp üretimi başladı"
 		#for invenPos in self.cubeItemInfo.values():
 		#	net.SendChatPacket("/cube add " + str(invenPos))
 		net.SendChatPacket("/cube make")

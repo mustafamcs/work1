@@ -744,8 +744,8 @@ class ItemToolTip(ToolTip):
 
 			self.ShowToolTip()
 
-	def SetInventoryItem(self, slotIndex, window_type = player.INVENTORY):
-		itemVnum = player.GetItemIndex(window_type, slotIndex)
+	def SetInventoryItem(self, slotIndex, window_tip = player.INVENTORY):
+		itemVnum = player.GetItemIndex(window_tip, slotIndex)
 		if 0 == itemVnum:
 			return
 
@@ -753,12 +753,12 @@ class ItemToolTip(ToolTip):
 		if shop.IsOpen():
 			if not shop.IsPrivateShop():
 				item.SelectItem(itemVnum)
-				self.AppendSellingPrice(player.GetISellItemPrice(window_type, slotIndex))
+				self.AppendSellingPrice(player.GetISellItemPrice(window_tip, slotIndex))
 
-		metinSlot = [player.GetItemMetinSocket(window_type, slotIndex, i) for i in xrange(player.METIN_SOCKET_MAX_NUM)]
-		attrSlot = [player.GetItemAttribute(window_type, slotIndex, i) for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM)]
+		metinSlot = [player.GetItemMetinSocket(window_tip, slotIndex, i) for i in xrange(player.METIN_SOCKET_MAX_NUM)]
+		attrSlot = [player.GetItemAttribute(window_tip, slotIndex, i) for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM)]
 
-		self.AddItemData(itemVnum, metinSlot, attrSlot, 0, 0, window_type, slotIndex)
+		self.AddItemData(itemVnum, metinSlot, attrSlot, 0, 0, window_tip, slotIndex)
 
 		if app.ENABLE_IKASHOP_RENEWAL:
 			if app.EXTEND_IKASHOP_ULTIMATE:
@@ -973,19 +973,19 @@ class ItemToolTip(ToolTip):
 	def __AppendAttributeInformation(self, attrSlot, itemAbsChance = 0):
 		if 0 != attrSlot:
 			for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM):
-				type = attrSlot[i][0]
+				tip = attrSlot[i][0]
 				value = attrSlot[i][1]
 
 				if 0 == value:
 					continue
 
-				affectString = self.__GetAffectString(type, value)
+				affectString = self.__GetAffectString(tip, value)
 				if app.ENABLE_ACCE_COSTUME_SYSTEM:
 					if item.GetItemType() == item.ITEM_TYPE_COSTUME:
 						if item.GetItemSubType() == item.COSTUME_TYPE_ACCE:
 							if itemAbsChance != 0:
 								value = self.CalcAcceValue(value, itemAbsChance)
-								affectString = self.__GetAffectString(type, value)
+								affectString = self.__GetAffectString(tip, value)
 
 				if affectString:
 					affectColor = self.__GetAttributeColor(i, value)
@@ -1058,8 +1058,8 @@ class ItemToolTip(ToolTip):
 			return False
 
 		for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM):
-			type = attrSlot[i][0]
-			if 0 != type:
+			tip = attrSlot[i][0]
+			if 0 != tip:
 				return True
 
 		return False
@@ -1083,7 +1083,7 @@ class ItemToolTip(ToolTip):
 		self.AppendDescription(itemDesc, 26)
 		self.AppendDescription(itemSummary, 26, self.CONDITION_COLOR)
 
-	def AddItemData(self, itemVnum, metinSlot, attrSlot = 0, flags = 0, unbindTime = 0, window_type = player.INVENTORY, slotIndex = -1):
+	def AddItemData(self, itemVnum, metinSlot, attrSlot = 0, flags = 0, unbindTime = 0, window_tip = player.INVENTORY, slotIndex = -1):
 		self.itemVnum = itemVnum
 		item.SelectItem(itemVnum)
 		itemType = item.GetItemType()
@@ -1096,8 +1096,8 @@ class ItemToolTip(ToolTip):
 					name += " "
 					name += localeInfo.NumberToMoneyString(metinSlot[0])
 			self.SetTitle(name)
-			self.__AppendSealInformation(window_type, slotIndex) ## cyh itemseal 2013 11 11
-			self.AdditionalTips(window_type, itemVnum, metinSlot, slotIndex)
+			self.__AppendSealInformation(window_tip, slotIndex) ## cyh itemseal 2013 11 11
+			self.AdditionalTips(window_tip, itemVnum, metinSlot, slotIndex)
 			self.ShowToolTip()
 			return
 
@@ -1515,18 +1515,18 @@ class ItemToolTip(ToolTip):
 				self.AppendTimerBasedOnWearLastTime(metinSlot)
 				#dbg.TraceError("1) REAL_TIME flag On ")
 
-		self.__AppendSealInformation(window_type, slotIndex) ## cyh itemseal 2013 11 11
+		self.__AppendSealInformation(window_tip, slotIndex) ## cyh itemseal 2013 11 11
 
-		self.AdditionalTips(window_type, itemVnum, metinSlot, slotIndex)
+		self.AdditionalTips(window_tip, itemVnum, metinSlot, slotIndex)
 		self.ShowToolTip()
 
-	def AdditionalTips(self, window_type, itemVnum, metinSlot, slotIndex):
+	def AdditionalTips(self, window_tip, itemVnum, metinSlot, slotIndex):
 		item.SelectItem(itemVnum)
 		itemType = item.GetItemType()
 		itemSubType = item.GetItemSubType()
 
-		if app.ENABLE_EMOJI_SYSTEM and item.IsFlag(item.ITEM_FLAG_STACKABLE) and window_type in (player.INVENTORY,):
-			if player.GetItemCount(window_type, slotIndex) > 1:
+		if app.ENABLE_EMOJI_SYSTEM and item.IsFlag(item.ITEM_FLAG_STACKABLE) and window_tip in (player.INVENTORY,):
+			if player.GetItemCount(window_tip, slotIndex) > 1:
 				self.AppendTextLine(localeInfo.TOOLTIP_TIPS_SPLIT_ITEM.format(Emoji("icon\emoji\key_shift.png"), Emoji("icon\emoji\key_lclick.png")))
 
 		if chr.IsGameMaster(0):
@@ -1612,14 +1612,14 @@ class ItemToolTip(ToolTip):
 
 		maxWidth = self.toolTipWidth
 		for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM):
-			type = attrSlot[i][0]
+			tip = attrSlot[i][0]
 			value = attrSlot[i][1]
-			if self.ATTRIBUTE_NEED_WIDTH.has_key(type):
+			if self.ATTRIBUTE_NEED_WIDTH.has_key(tip):
 				if value > 0:
-					maxWidth = max(self.ATTRIBUTE_NEED_WIDTH[type], maxWidth)
+					maxWidth = max(self.ATTRIBUTE_NEED_WIDTH[tip], maxWidth)
 
 					# ATTR_CHANGE_TOOLTIP_WIDTH
-					#self.toolTipWidth = max(self.ATTRIBUTE_NEED_WIDTH[type], self.toolTipWidth)
+					#self.toolTipWidth = max(self.ATTRIBUTE_NEED_WIDTH[tip], self.toolTipWidth)
 					#self.ResizeToolTip()
 					# END_OF_ATTR_CHANGE_TOOLTIP_WIDTH
 
@@ -1701,11 +1701,11 @@ class ItemToolTip(ToolTip):
 			"""
 
 	## cyh itemseal 2013 11 11
-	def __AppendSealInformation(self, window_type, slotIndex):
+	def __AppendSealInformation(self, window_tip, slotIndex):
 		if not app.ENABLE_SOULBIND_SYSTEM:
 			return
 
-		itemSealDate = player.GetItemSealDate(window_type, slotIndex)
+		itemSealDate = player.GetItemSealDate(window_tip, slotIndex)
 		if itemSealDate == item.GetDefaultSealDate():
 			return
 
@@ -1715,7 +1715,7 @@ class ItemToolTip(ToolTip):
 
 		elif itemSealDate > 0:
 			self.AppendSpace(5)
-			hours, minutes = player.GetItemUnSealLeftTime(window_type, slotIndex)
+			hours, minutes = player.GetItemUnSealLeftTime(window_tip, slotIndex)
 			self.AppendTextLine(localeInfo.TOOLTIP_UNSEAL_LEFT_TIME % (hours, minutes), self.NEGATIVE_COLOR)
 
 	def __GetAffectString(self, affectType, affectValue):
@@ -2166,15 +2166,15 @@ class ItemToolTip(ToolTip):
 		self.AppendMallItemLastTime(endTime)
 
 	if app.ENABLE_ACCE_COSTUME_SYSTEM:
-		def SetAcceResultItem(self, slotIndex, window_type = player.INVENTORY):
+		def SetAcceResultItem(self, slotIndex, window_tip = player.INVENTORY):
 			(itemVnum, MinAbs, MaxAbs) = acce.GetResultItem()
 			if not itemVnum:
 				return
 
 			self.ClearToolTip()
 
-			metinSlot	= [player.GetItemMetinSocket(window_type, slotIndex, i)		for i in xrange(player.METIN_SOCKET_MAX_NUM)	]
-			attrSlot	= [player.GetItemAttribute(window_type, slotIndex, i)		for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM)	]
+			metinSlot	= [player.GetItemMetinSocket(window_tip, slotIndex, i)		for i in xrange(player.METIN_SOCKET_MAX_NUM)	]
+			attrSlot	= [player.GetItemAttribute(window_tip, slotIndex, i)		for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM)	]
 
 			item.SelectItem(itemVnum)
 			itemType = item.GetItemType()
@@ -2245,9 +2245,9 @@ class ItemToolTip(ToolTip):
 			self.AppendWearableInformation()
 			self.ShowToolTip()
 
-		def SetAcceResultAbsItem(self, slotIndex1, slotIndex2, window_type = player.INVENTORY):
-			itemVnumAcce = player.GetItemIndex(window_type, slotIndex1)
-			itemVnumTarget = player.GetItemIndex(window_type, slotIndex2)
+		def SetAcceResultAbsItem(self, slotIndex1, slotIndex2, window_tip = player.INVENTORY):
+			itemVnumAcce = player.GetItemIndex(window_tip, slotIndex1)
+			itemVnumTarget = player.GetItemIndex(window_tip, slotIndex2)
 			if not itemVnumAcce or not itemVnumTarget:
 				return
 
@@ -2259,8 +2259,8 @@ class ItemToolTip(ToolTip):
 			if itemType != item.ITEM_TYPE_COSTUME and itemSubType != item.COSTUME_TYPE_ACCE:
 				return
 
-			metinSlot = [player.GetItemMetinSocket(window_type, slotIndex1, i) for i in xrange(player.METIN_SOCKET_MAX_NUM)]
-			attrSlot = [player.GetItemAttribute(window_type, slotIndex2, i) for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM)]
+			metinSlot = [player.GetItemMetinSocket(window_tip, slotIndex1, i) for i in xrange(player.METIN_SOCKET_MAX_NUM)]
+			attrSlot = [player.GetItemAttribute(window_tip, slotIndex2, i) for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM)]
 
 			itemDesc = item.GetItemDescription()
 			self.__AdjustMaxWidth(attrSlot, itemDesc)
@@ -2316,13 +2316,13 @@ class ItemToolTip(ToolTip):
 			## ATTR
 			item.SelectItem(itemAbsorbedVnum)
 			for i in xrange(player.ATTRIBUTE_SLOT_MAX_NUM):
-				type = attrSlot[i][0]
+				tip = attrSlot[i][0]
 				value = attrSlot[i][1]
 				if not value:
 					continue
 
 				affectValue = self.CalcAcceValue(value, metinSlot[acce.ABSORPTION_SOCKET])
-				affectString = self.__GetAffectString(type, affectValue)
+				affectString = self.__GetAffectString(tip, affectValue)
 				if (not app.USE_ACCE_ABSORB_WITH_NO_NEGATIVE_BONUS and affectString and affectValue != 0)\
 						or (app.USE_ACCE_ABSORB_WITH_NO_NEGATIVE_BONUS and affectString and affectValue > 0):
 					affectColor = self.__GetAttributeColor(i, affectValue)
@@ -2753,16 +2753,16 @@ class SkillToolTip(ToolTip):
 		affectDataCount = skill.GetNewAffectDataCount(skillIndex)
 		if affectDataCount > 0:
 			for i in xrange(affectDataCount):
-				type, minValue, maxValue = skill.GetNewAffectData(skillIndex, i, skillPercentage)
+				tip, minValue, maxValue = skill.GetNewAffectData(skillIndex, i, skillPercentage)
 
-				if not self.AFFECT_NAME_DICT.has_key(type):
+				if not self.AFFECT_NAME_DICT.has_key(tip):
 					continue
 
 				minValue = int(minValue)
 				maxValue = int(maxValue)
-				affectText = self.AFFECT_NAME_DICT[type]
+				affectText = self.AFFECT_NAME_DICT[tip]
 
-				if "HP" == type:
+				if "HP" == tip:
 					if minValue < 0 and maxValue < 0:
 						minValue *= -1
 						maxValue *= -1
@@ -2773,7 +2773,7 @@ class SkillToolTip(ToolTip):
 				affectText += str(minValue)
 				if minValue != maxValue:
 					affectText += " - " + str(maxValue)
-				affectText += self.AFFECT_APPEND_TEXT_DICT.get(type, "")
+				affectText += self.AFFECT_APPEND_TEXT_DICT.get(tip, "")
 
 				#import debugInfo
 				#if debugInfo.IsDebugMode():
@@ -2834,16 +2834,16 @@ class SkillToolTip(ToolTip):
 		if requireStatCount > 0:
 
 			for i in xrange(requireStatCount):
-				type, level = skill.GetSkillRequireStatData(skillIndex, i)
-				if self.POINT_NAME_DICT.has_key(type):
+				tip, level = skill.GetSkillRequireStatData(skillIndex, i)
+				if self.POINT_NAME_DICT.has_key(tip):
 
 					if not isAppendHorizontalLine:
 						isAppendHorizontalLine = True
 						self.AppendHorizontalLine()
 
-					name = self.POINT_NAME_DICT[type]
+					name = self.POINT_NAME_DICT[tip]
 					color = self.CANNOT_LEVEL_UP_COLOR
-					if player.GetStatus(type) >= level:
+					if player.GetStatus(tip) >= level:
 						color = self.CAN_LEVEL_UP_COLOR
 					self.AppendTextLine(localeInfo.TOOLTIP_REQUIREMENT_STAT_LEVEL % (name, level), color)
 

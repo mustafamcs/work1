@@ -14,7 +14,7 @@ window = {
 	(
 		{
 			"name" : "Board",
-			"type" : "board_with_titlebar",
+			"tip" : "board_with_titlebar",
 
 			"x" : 0,
 			"y" : 0,
@@ -28,7 +28,7 @@ window = {
 			(
 				{
 					"name":"EquipmentBaseImage",
-					"type":"image",
+					"tip":"image",
 					"style" : ("attach",),
 
 					"x" : 0,
@@ -43,7 +43,7 @@ window = {
 
 						{
 							"name" : "EquipmentSlot",
-							"type" : "slot",
+							"tip" : "slot",
 
 							"x" : 3,
 							"y" : 3,

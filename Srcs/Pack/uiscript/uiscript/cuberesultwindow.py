@@ -15,7 +15,7 @@ window = {
 	(
 		{
 			"name" : "board",
-			"type" : "board",
+			"tip" : "board",
 			"style" : ("attach",),
 
 			"x" : 0,
@@ -29,7 +29,7 @@ window = {
 				## Title
 				{
 					"name" : "TitleBar",
-					"type" : "titlebar",
+					"tip" : "titlebar",
 					"style" : ("attach",),
 
 					"x" : 8,
@@ -40,14 +40,14 @@ window = {
 
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":77, "y":3, "text":"합성 결과", "text_horizontal_align":"center" },
+						{ "name":"TitleName", "tip":"text", "x":77, "y":3, "text":"Birleştirme Sonucu", "text_horizontal_align":"center" },
 					),
 				},
 
 				## Cube Slot
 				{
 					"name" : "CubeSlot",
-					"type" : "grid_table",
+					"tip" : "grid_table",
 
 					"x" : 176/2 - 32,
 					"y" : 40 - 2,
@@ -64,7 +64,7 @@ window = {
 				## Text
 				{
 					"name":"label",
-					"type":"text",
+					"tip":"text",
 
 					"x":0,
 					"y":60,
@@ -72,14 +72,14 @@ window = {
 					"vertical_align" : "bottom",
 					"horizontal_align" : "center",
 
-					"text":"합성에 성공 했습니다",
+					"text":"Birleştirme başarılı",
 					"text_horizontal_align":"center",
 				},
 
 				## Button
 				{
 					"name" : "CloseButton",
-					"type" : "button",
+					"tip" : "button",
 
 					"x" : 0,
 					"y" : 35,

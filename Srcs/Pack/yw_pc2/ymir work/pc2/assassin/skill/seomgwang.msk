@@ -3,8 +3,8 @@ ScriptType		SkillDataScript
 Type			SUPPORT
 Attribute		"STANDING_SKILL"
 
-949Name			"级堡藕"
-949Description	"碍仿茄 蝴阑 惯窍绰 备浇阑 磐哆妨 利狼 矫具甫 碍呕茄促"
+949Name			"unused"
+949Description	"unused"
 
 IconFileName	"skill/assassin/seomgwang.sub"
 MotionIndex		11
@@ -19,5 +19,5 @@ LevelUpPoint		"10"
 CoolTimeFormula		"200"
 NeedSPFormula		"200"
 
-936Name			"盲目"
-936Description	"发出强烈的光芒，使敌人暂时失去视觉"
+936Name			"unused"
+936Description	"unused"

@@ -388,7 +388,7 @@ class Console(object):
 			self.Print("Background loading: %d" % (bResultBoolean))
 
 	def SetTerrainRenderSort(self, arg):
-		"Terrain rendering type"
+		"Terrain rendering tip"
 		try:
 			background.SetRenderSort(self.bgSortDict[arg]);
 		except KeyError:
@@ -505,8 +505,8 @@ class Console(object):
 		"Set Force Sight Range"
 		app.SetSightRange(int(range))
 
-	def SetComboType(self, type):
-		chr.testSetComboType(int(type))
+	def SetComboType(self, tip):
+		chr.testSetComboType(int(tip))
 
 	def SetSkillGroupFake(self, index):
 		net.SetSkillGroupFake(int(index))
@@ -867,7 +867,7 @@ class ConsoleWindow(ui.Window):
 
 		self.AddFunction("setsight", Console.SetSight)
 
-		self.AddFunction("setcombotype", Console.SetComboType)
+		self.AddFunction("setcombotip", Console.SetComboType)
 		self.AddFunction("setsk_fake", Console.SetSkillGroupFake)
 
 		self.AddFunction("trans", Console.SetEmpireLanguageMode)

@@ -13,31 +13,31 @@ Type			MIDDLE
 MaxLevel		"30"
 
 
-949Name			"付券拜"
-949Description		"绢狄狼 扁甫 带廉 利俊霸 乔秦甫 涝腮促"
+949Name			"unused"
+949Description		"unused"
 
 List 949ConditionData
 {
-	"厘芭府 傍拜"
-	"措惑 林函 傍拜"
+	"unused"
+	"unused"
 }
 
 List 949AffectData
 {
-	"付过傍拜仿 %.0f-%.0f" "120 + 6*lv + (5 * con + 5 * dex + 40*iq + 12*minmtk)*ar*k" "120 + 6*lv + (5 * con + 5 * dex + 40*iq + 12*maxmtk)*ar*k"
+	"unused" "120 + 6*lv + (5 * con + 5 * dex + 40*iq + 12*minmtk)*ar*k" "120 + 6*lv + (5 * con + 5 * dex + 40*iq + 12*maxmtk)*ar*k"
 }
 
-936Name			"魂灭"
-936Description		"吸取地狱怨气，对敌人造成伤害"
+936Name			"unused"
+936Description		"unused"
 
 List 936ConditionData
 {
-	"群体攻击"
-	"随智力提升，造成的伤害也将加强"
+	"unused"
+	"unused"
 }
 
 List 936AffectData
 {
-	"破坏力: %.0f"	"(INT * 2 + 30) * (10 + SkillPoint) / 10" ""
+	"unused"	"(INT * 2 + 30) * (10 + SkillPoint) / 10" ""
 }
 

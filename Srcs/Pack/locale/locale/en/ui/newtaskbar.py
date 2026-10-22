@@ -305,7 +305,7 @@ window = {
 			"down_image" : ROOT + "TaskBar/Mouse_Button_Move_03.sub",
 		},
 		## ENABLE_GEM_SYSTEM
-		## 나라별로 따로 있는 파일이기 때문에 굳이 디파인으로 걸러서 작업 안함.
+		## separate file per country, no need to filter with define.
 		{
 			"name" : "ExpandMoneyButton",
 			"type" : "button",

@@ -12,28 +12,28 @@ IconFileName		"skill/assassin/charyun.sub"
 Type			ACTIVE
 MaxLevel		"30"
 
-949Name			"Â÷·û»ì"
-949Description	"ºü¸£°Ô È¸ÀüÇÏ¸ç Àü¹æÀÇ ÀûÀ» º¥´Ù"
+949Name			"unused"
+949Description	"unused"
 List 949ConditionData
 {
-	"Å»Ãâ ¹üÀ§ °ø°İ"
-	"Áö¼Ó µ¶ °ø°İ"
+	"unused"
+	"unused"
 }
 List 949AffectData
 {
-	"°ø°İ·Â %.0f-%.0f" "2*minatk + (0.5*minatk + dex*9 + str*7)*k" "2*maxatk + (0.5*maxatk + dex*9 + str*7)*k"
-	"Áßµ¶ È®·ü %.0f%%" "1 + 4*k" ""
+	"unused" "2*minatk + (0.5*minatk + dex*9 + str*7)*k" "2*maxatk + (0.5*maxatk + dex*9 + str*7)*k"
+	"unused" "1 + 4*k" ""
 }
 
-936Name			"Ç¬À¤Ğı"
-936Description	"Ç¬À¤µ¹ÖÃ£¬ÉíĞÎÄæ×ª£¬²úÉú¾Ş´óµÄÉËº¦Á¦"
+936Name			"unused"
+936Description	"unused"
 List 936ConditionData
 {
-	"Å»Ãâ ¹üÀ§ °ø°İ"
-	"ÀÏÁ¤ È®·ü·Î Áßµ¶"
+	"unused"
+	"unused"
 }
 List 936AffectData
 {
-	"Å¸°İÄ¡ %.0f-%.0f" "MinATK + (0.3*MinATK + 300)*SkillPoint" "MaxATK + (0.3*MaxATK + 300)*SkillPoint"
-	"Áßµ¶·ü %.0f%%" "1 + 4*SkillPoint" ""
+	"unused" "MinATK + (0.3*MinATK + 300)*SkillPoint" "MaxATK + (0.3*MaxATK + 300)*SkillPoint"
+	"unused" "1 + 4*SkillPoint" ""
 }
