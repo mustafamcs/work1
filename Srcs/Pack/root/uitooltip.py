@@ -1067,7 +1067,7 @@ class ItemToolTip(ToolTip):
 	def AddRefineItemData(self, itemVnum, metinSlot, attrSlot = 0):
 		for i in xrange(player.METIN_SOCKET_MAX_NUM):
 			metinSlotData=metinSlot[i]
-			if self.GetMetinItemIndex(metinSlotData) == constInfo.ERROR_METIN_STONE:
+			if self.GetMetinItemIndex(metinSlotData) == app.ERROR_METIN_STONE:
 				metinSlot[i]=player.METIN_SOCKET_TYPE_SILVER
 
 		self.AddItemData(itemVnum, metinSlot, attrSlot)
@@ -1831,9 +1831,9 @@ class ItemToolTip(ToolTip):
 			self.AppendTextLine(timeString)
 
 	def GetPriceColor(self, price):
-		if price>=constInfo.HIGH_PRICE:
+		if price>=app.HIGH_PRICE:
 			return self.HIGH_PRICE_COLOR
-		if price>=constInfo.MIDDLE_PRICE:
+		if price>=app.MIDDLE_PRICE:
 			return self.MIDDLE_PRICE_COLOR
 		else:
 			return self.LOW_PRICE_COLOR
@@ -1855,7 +1855,7 @@ class ItemToolTip(ToolTip):
 			self.AppendSpace(5)
 
 	def AppendMetinInformation(self):
-		if constInfo.ENABLE_FULLSTONE_DETAILS:
+		if app.ENABLE_FULLSTONE_DETAILS:
 			for i in xrange(item.ITEM_APPLY_MAX_NUM):
 				(affectType, affectValue) = item.GetAffect(i)
 				affectString = self.__GetAffectString(affectType, affectValue)
@@ -2060,7 +2060,7 @@ class ItemToolTip(ToolTip):
 
 			if custumAffectString:
 				affectTextLine.SetText(custumAffectString)
-			elif itemIndex!=constInfo.ERROR_METIN_STONE:
+			elif itemIndex!=app.ERROR_METIN_STONE:
 				affectType, affectValue = item.GetAffect(0)
 				affectString = self.__GetAffectString(affectType, affectValue)
 				if affectString:
@@ -2070,7 +2070,7 @@ class ItemToolTip(ToolTip):
 
 			self.childrenList.append(affectTextLine)
 
-			if constInfo.ENABLE_FULLSTONE_DETAILS and (not custumAffectString2) and (itemIndex!=constInfo.ERROR_METIN_STONE):
+			if app.ENABLE_FULLSTONE_DETAILS and (not custumAffectString2) and (itemIndex!=app.ERROR_METIN_STONE):
 				custumAffectString2 = self.__GetAffectString(*item.GetAffect(1))
 
 			if custumAffectString2:
@@ -2086,7 +2086,7 @@ class ItemToolTip(ToolTip):
 				self.childrenList.append(affectTextLine)
 				self.toolTipHeight += 16 + 2
 
-			if constInfo.ENABLE_FULLSTONE_DETAILS and (not custumAffectString3) and (itemIndex!=constInfo.ERROR_METIN_STONE):
+			if app.ENABLE_FULLSTONE_DETAILS and (not custumAffectString3) and (itemIndex!=app.ERROR_METIN_STONE):
 				custumAffectString3 = self.__GetAffectString(*item.GetAffect(2))
 
 			if custumAffectString3:

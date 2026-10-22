@@ -306,7 +306,7 @@ class MainStream(ui.NoWindow):
 	## Login
 	def Connect(self):
 		import constInfo
-		if constInfo.KEEP_ACCOUNT_CONNETION_ENABLE:
+		if app.KEEP_ACCOUNT_CONNETION_ENABLE:
 			net.ConnectToAccountServer(self.addr, self.port, self.account_addr, self.account_port)
 		else:
 			net.ConnectTCP(self.addr, self.port)

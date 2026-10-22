@@ -17,13 +17,13 @@ import serverCommandParser
 import ime
 import uiScriptLocale
 
-LOGIN_DELAY_SEC = 0.0
-SKIP_LOGIN_PHASE = constInfo.SKIP_LOGIN_PHASE
-SKIP_LOGIN_PHASE_SUPPORT_CHANNEL = constInfo.SKIP_LOGIN_PHASE_SUPPORT_CHANNEL
-FULL_BACK_IMAGE = constInfo.FULL_BACK_IMAGE
+LOGIN_DELAY_SEC = app.LOGIN_DELAY_SEC
+SKIP_LOGIN_PHASE = app.SKIP_LOGIN_PHASE
+SKIP_LOGIN_PHASE_SUPPORT_CHANNEL = app.SKIP_LOGIN_PHASE_SUPPORT_CHANNEL
+FULL_BACK_IMAGE = app.FULL_BACK_IMAGE
 
-VIRTUAL_KEYBOARD_NUM_KEYS = 46
-VIRTUAL_KEYBOARD_RAND_KEY = constInfo.VIRTUAL_KEYBOARD_RAND_KEY
+VIRTUAL_KEYBOARD_NUM_KEYS = app.VIRTUAL_KEYBOARD_NUM_KEYS
+VIRTUAL_KEYBOARD_RAND_KEY = app.VIRTUAL_KEYBOARD_RAND_KEY
 
 def Suffle(src):
 	if VIRTUAL_KEYBOARD_RAND_KEY:
@@ -234,7 +234,7 @@ class LoginWindow(ui.ScriptWindow):
 			if self.isStartError:
 				self.connectBoard.Hide()
 				self.loginBoard.Hide()
-				if constInfo.ENABLE_SAVE_ACCOUNT:
+				if app.ENABLE_SAVE_ACCOUNT:
 					self.saveAccountBoard.Hide()
 				self.serverBoard.Hide()
 				self.PopupNotifyMessage(localeInfo.LOGIN_CONNECT_FAILURE, self.__ExitGame)
@@ -284,7 +284,7 @@ class LoginWindow(ui.ScriptWindow):
 
 		self.connectBoard = None
 		self.loginBoard = None
-		if constInfo.ENABLE_SAVE_ACCOUNT:
+		if app.ENABLE_SAVE_ACCOUNT:
 			self.saveAccountBoard = None
 		self.idEditLine = None
 		self.pwdEditLine = None
@@ -374,7 +374,7 @@ class LoginWindow(ui.ScriptWindow):
 			self.idEditLine.SetFocus()
 
 	def SetPasswordEditLineFocus(self):
-		if constInfo.ENABLE_CLEAN_DATA_IF_FAIL_LOGIN:
+		if app.ENABLE_CLEAN_DATA_IF_FAIL_LOGIN:
 			if self.idEditLine != None:
 				self.idEditLine.SetText("")
 				self.idEditLine.SetFocus()
@@ -453,7 +453,7 @@ class LoginWindow(ui.ScriptWindow):
 		self.SetPasswordEditLineFocus()
 		net.Disconnect()
 
-	if constInfo.ENABLE_SAVE_ACCOUNT:
+	if app.ENABLE_SAVE_ACCOUNT:
 		def SAB_LoadAccountData(self):
 			if constInfo.SAB.storeType == constInfo.SAB.ST_CACHE:
 				return
@@ -745,7 +745,7 @@ class LoginWindow(ui.ScriptWindow):
 			self.loginButton			= GetObject("LoginButton")
 			self.loginExitButton		= GetObject("LoginExitButton")
 
-			if constInfo.ENABLE_SAVE_ACCOUNT:
+			if app.ENABLE_SAVE_ACCOUNT:
 				self.__CreateSaveAccountBoard()
 
 			self.virtualKeyboard		= self.GetChild2("VirtualKeyboard")
@@ -935,7 +935,7 @@ class LoginWindow(ui.ScriptWindow):
 
 	def Connect(self, id, pwd):
 
-		if constInfo.SEQUENCE_PACKET_ENABLE:
+		if app.SEQUENCE_PACKET_ENABLE:
 			net.SetPacketSequenceMode()
 
 		if IsLoginDelay():
@@ -1187,7 +1187,7 @@ class LoginWindow(ui.ScriptWindow):
 
 		self.serverList.SelectItem(serverIndex)
 
-		if constInfo.ENABLE_RANDOM_CHANNEL_SEL:
+		if app.ENABLE_RANDOM_CHANNEL_SEL:
 			self.channelList.SelectItem(app.GetRandom(0, self.channelList.GetItemCount()))
 		else:
 			if channelIndex >= 0:
@@ -1197,7 +1197,7 @@ class LoginWindow(ui.ScriptWindow):
 		self.serverBoard.Show()
 		self.connectBoard.Hide()
 		self.loginBoard.Hide()
-		if constInfo.ENABLE_SAVE_ACCOUNT:
+		if app.ENABLE_SAVE_ACCOUNT:
 			self.saveAccountBoard.Hide()
 
 		self.KillInputFocus() #@fixme019
@@ -1231,12 +1231,12 @@ class LoginWindow(ui.ScriptWindow):
 			self.Connect(self.id, self.pwd)
 			self.connectBoard.Hide()
 			self.loginBoard.Hide()
-			if constInfo.ENABLE_SAVE_ACCOUNT:
+			if app.ENABLE_SAVE_ACCOUNT:
 				self.saveAccountBoard.Hide()
 		elif not self.stream.isAutoLogin:
 			self.connectBoard.Show()
 			self.loginBoard.Show()
-			if constInfo.ENABLE_SAVE_ACCOUNT:
+			if app.ENABLE_SAVE_ACCOUNT:
 				self.saveAccountBoard.Show()
 
 		## if users have the login infomation, then don't initialize.2005.9 haho
@@ -1492,7 +1492,7 @@ class LoginWindow(ui.ScriptWindow):
 		self.Connect(id, pwd)
 
 	def OnKeyDown(self, key):
-		if constInfo.ENABLE_SAVE_ACCOUNT:
+		if app.ENABLE_SAVE_ACCOUNT:
 			for idx in xrange(constInfo.SAB.slotCount):
 				if app.DIK_F1+idx == key and self.SAB_GetAccountData(idx):
 					self.SAB_Click_Access(idx)

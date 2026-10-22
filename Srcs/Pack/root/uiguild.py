@@ -14,15 +14,14 @@ import uiUploadMark
 import uiCommon
 import uiToolTip
 import playerSettingModule
-import constInfo
 import background
 import miniMap
 import chr
 import uiScriptLocale
 from _weakref import proxy
 
-DISABLE_GUILD_SKILL = constInfo.DISABLE_GUILD_SKILL
-DISABLE_DECLARE_WAR = constInfo.DISABLE_DECLARE_WAR
+DISABLE_GUILD_SKILL = app.DISABLE_GUILD_SKILL
+DISABLE_DECLARE_WAR = app.DISABLE_DECLARE_WAR
 
 def NumberToMoneyString(n):
 	return localeInfo.NumberToMoneyString(n)
@@ -111,7 +110,7 @@ class DeclareGuildWarDialog(ui.ScriptWindow):
 			import exception
 			exception.Abort("DeclareGuildWarWindow.__CreateDialog - BindObject")
 
-		if constInfo.GUILD_WAR_TYPE_SELECT_ENABLE==0:
+		if app.GUILD_WAR_TYPE_SELECT_ENABLE==0:
 			gameType.Hide()
 
 		self.typeButtonList[0].SAFE_SetEvent(self.__OnClickTypeButtonNormal)
@@ -286,7 +285,7 @@ class AcceptGuildWarDialog(ui.ScriptWindow):
 			import exception
 			exception.Abort("DeclareGuildWarWindow.__CreateDialog - BindObject")
 
-		if constInfo.GUILD_WAR_TYPE_SELECT_ENABLE==0:
+		if app.GUILD_WAR_TYPE_SELECT_ENABLE==0:
 			gameType.Hide()
 
 		self.typeButtonList[0].SAFE_SetEvent(self.__OnClickTypeButtonNormal)
@@ -1874,7 +1873,7 @@ class GuildWindow(ui.ScriptWindow):
 
 	def __OnOpenHealGSPQuestionDialog(self, healGSP):
 
-		money = healGSP * constInfo.GUILD_MONEY_PER_GSP
+		money = healGSP * app.GUILD_MONEY_PER_GSP
 
 		questionDialog = uiCommon.QuestionDialog()
 		questionDialog.SetText(localeInfo.GUILD_DO_YOU_HEAL_GSP % (money, healGSP))

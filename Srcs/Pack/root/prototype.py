@@ -6,12 +6,11 @@ import systemSetting
 import mouseModule
 import networkModule
 import uiCandidate
-import constInfo
 import musicInfo
 import stringCommander
 import ui
 
-if constInfo.ENABLE_PASTE_FEATURE:
+if app.ENABLE_PASTE_FEATURE:
 	ui.EnablePaste(True)
 
 def RunApp():
@@ -19,9 +18,9 @@ def RunApp():
 
 	musicInfo.LoadLastPlayFieldMusic()
 
-	app.SetHairColorEnable(constInfo.HAIR_COLOR_ENABLE)
-	app.SetArmorSpecularEnable(constInfo.ARMOR_SPECULAR_ENABLE)
-	app.SetWeaponSpecularEnable(constInfo.WEAPON_SPECULAR_ENABLE)
+	app.SetHairColorEnable(app.HAIR_COLOR_ENABLE)
+	app.SetArmorSpecularEnable(app.ARMOR_SPECULAR_ENABLE)
+	app.SetWeaponSpecularEnable(app.WEAPON_SPECULAR_ENABLE)
 
 	app.SetMouseHandler(mouseModule.mouseController)
 	wndMgr.SetMouseHandler(mouseModule.mouseController)

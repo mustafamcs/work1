@@ -5,7 +5,6 @@ import uiToolTip
 import net
 import localeInfo
 import uiScriptLocale
-import constInfo
 import mouseModule
 import app
 

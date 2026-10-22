@@ -4,7 +4,6 @@ import net
 import snd
 import app
 import mouseModule
-import constInfo
 
 class WebWindow(ui.ScriptWindow):
 	def __init__(self):
@@ -18,7 +17,7 @@ class WebWindow(ui.ScriptWindow):
 	def LoadWindow(self):
 		try:
 			pyScrLoader = ui.PythonScriptLoader()
-			if constInfo.IN_GAME_SHOP_ENABLE:
+			if app.IN_GAME_SHOP_ENABLE:
 				pyScrLoader.LoadScriptFile(self, uiScriptLocale.LOCALE_UISCRIPT_PATH + "WebWindow.py")
 			else:
 				pyScrLoader.LoadScriptFile(self, "UIScript/WebWindow.py")

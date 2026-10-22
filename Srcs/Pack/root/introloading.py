@@ -10,7 +10,6 @@ import wndMgr
 import localeInfo
 import chrmgr
 import colorInfo
-import constInfo
 
 import playerSettingModule
 import stringCommander

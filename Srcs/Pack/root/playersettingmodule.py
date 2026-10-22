@@ -5,7 +5,6 @@ import net
 import item
 import player
 import effect
-import constInfo
 import localeInfo
 import emotion
 
@@ -50,7 +49,7 @@ GUILD_SKILL_MAGICUP = chr.MOTION_SKILL+106
 PASSIVE_GUILD_SKILL_INDEX_LIST = ( 151, )
 ACTIVE_GUILD_SKILL_INDEX_LIST = ( 152, 153, 154, 155, 156, 157, )
 
-NEW_678TH_SKILL_ENABLE = constInfo.NEW_678TH_SKILL_ENABLE
+NEW_678TH_SKILL_ENABLE = app.NEW_678TH_SKILL_ENABLE
 SKILL_INDEX_DICT = []
 
 def DefineSkillIndexDict():
@@ -1142,7 +1141,7 @@ def __LoadGameShamanEx(race, path):
 	#chrmgr.RegisterCacheMotionData(chr.MOTION_MODE_GENERAL, chr.MOTION_SKILL+10,	"budong.msa")
 
 	START_INDEX = 0
-	if constInfo.ENABLE_NEW_LEVELSKILL_SYSTEM:
+	if app.ENABLE_NEW_LEVELSKILL_SYSTEM:
 		SHAMY_LIST = (1, 2, 3, 4)
 	else:
 		SHAMY_LIST = (1, 2, 3)

@@ -184,7 +184,7 @@
 
 //////////////////////////////////////////////////////////////////////////
 // ### Pack/Python Ayarlari ###
-// Bu blok constinfo.py'ye tools/define_sync.py ile senkronlanir.
+// Buradaki tum tanimlar derleme sirasinda app.X olarak python'a aktarilir.
 // Aktif: #define X / #define X <deger>   Kapali: // #define X
 
 // #define ENABLE_NEW_LEVELSKILL_SYSTEM    // 5 (B,M,G,P,F) beceri .mse yukler
@@ -217,9 +217,47 @@
 // #define SKIP_LOGIN_PHASE_SUPPORT_CHANNEL
 // #define FULL_BACK_IMAGE                 // login tam ekran arkaplan
 #define VIRTUAL_KEYBOARD_RAND_KEY         // sanal klavye karisik tus
+#define LOGIN_DELAY_SEC 0.0f              // login gecikme suresi
+#define VIRTUAL_KEYBOARD_NUM_KEYS 46      // sanal klavye tus sayisi
 // #define SHOW_ONLY_ACTIVE_SKILL          // sadece aktif beceriler
 #define HIDE_SUPPORT_SKILL_POINT          // destek beceri puani gizle
 // #define SYSTEM_MENU_FOR_PORTAL          // sistem menusu portal
+
+// --- Degerli ayarlar (python'a aynen aktarilir; kapatmak icin silme, degeri degistir) ---
+#define IN_GAME_SHOP_ENABLE 1
+#define CONSOLE_ENABLE 0
+#define PVPMODE_ENABLE 1
+#define PVPMODE_TEST_ENABLE 0
+#define PVPMODE_ACCELKEY_ENABLE 1
+#define PVPMODE_ACCELKEY_DELAY 0.5f
+#define PVPMODE_PROTECTED_LEVEL 15
+#define FOG_LEVEL0 4800.0f
+#define FOG_LEVEL1 9600.0f
+#define FOG_LEVEL2 12800.0f
+#define CAMERA_MAX_DISTANCE_SHORT 2500.0f
+#define CAMERA_MAX_DISTANCE_LONG 3500.0f
+#define CHRNAME_COLOR_INDEX 0
+#define ENVIRONMENT_NIGHT "d:/ymir work/environment/moonlight04.msenv"
+#define HIGH_PRICE 500000
+#define MIDDLE_PRICE 50000
+#define ERROR_METIN_STONE 28960
+#define SUB2_LOADING_ENABLE 1
+#define EXPANDED_COMBO_ENABLE 1
+#define CONVERT_EMPIRE_LANGUAGE_ENABLE 0
+#define USE_ITEM_WEAPON_TABLE_ATTACK_BONUS 0
+#define ADD_DEF_BONUS_ENABLE 0
+#define LOGIN_COUNT_LIMIT_ENABLE 0
+#define USE_SKILL_EFFECT_UPGRADE_ENABLE 1
+#define VIEW_OTHER_EMPIRE_PLAYER_TARGET_BOARD 1
+#define GUILD_MONEY_PER_GSP 100
+#define GUILD_WAR_TYPE_SELECT_ENABLE 1
+#define TWO_HANDED_WEAPON_ATT_SPEED_DECREASE_VALUE 10
+#define DEFAULT_HAIR_COLOR_ENABLE 1       // HAIR_COLOR_ENABLE C++ global ile cakisiyor - py'ya HAIR_COLOR_ENABLE olarak aktarilir
+#define ARMOR_SPECULAR_ENABLE 1
+#define WEAPON_SPECULAR_ENABLE 1
+#define SEQUENCE_PACKET_ENABLE 1
+#define KEEP_ACCOUNT_CONNETION_ENABLE 1
+#define MINIMAP_POSITIONINFO_ENABLE 1
 
 // ### Hic Tanimlanmamis Kapali Ozellikler (envanter) ###
 // #define ENABLE_678TH_SKILL                         // Client/UserInterface/PythonApplicationModule.cpp
@@ -241,6 +279,12 @@
 // #define ENABLE_SOULBIND_SYSTEM                     // Client/GameLib/ItemData.h, Client/UserInterface/PythonApplicationModule.cpp, Server/game/src/ikarus_shop_manager.cpp
 // #define ENABLE_UI_CIRCLE                           // Client/UserInterface/PythonApplicationModule.cpp
 // #define ENABLE_UI_MOVING                           // Client/UserInterface/PythonApplicationModule.cpp
+// #define ENABLE_DRAGON_GATE                         // Pack/locale ui scriptleri (app.X sorgusu)
+// #define ENABLE_MERCENARY_SYSTEM                    // Pack/locale ui scriptleri (app.X sorgusu)
+// #define ENABLE_SUNGMAHEE_GATE                      // Pack/locale ui scriptleri (app.X sorgusu)
+// #define ENABLE_ADDITIONAL_EQUIPMENT_PAGE           // Pack/locale ui scriptleri (app.X sorgusu)
+// #define ENABLE_SERVER_SELECT_RENEWAL               // Pack/locale ui scriptleri (app.X sorgusu)
+// #define ENABLE_PREMIUM_PRIVATE_SHOP                // Pack/locale ui scriptleri (app.X sorgusu)
 // #define LOCALE_SERVICE_GLOBAL                      // Client/UserInterface/Locale.cpp
 // #define LOCALE_SERVICE_JAPAN                       // Client/UserInterface/StdAfx.h
 // #define LOCALE_SERVICE_STAGE_DEVELOPMENT           // Client/UserInterface/PythonApplicationModule.cpp

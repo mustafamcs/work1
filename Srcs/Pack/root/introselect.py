@@ -28,12 +28,11 @@ import consoleModule
 import interfaceModule
 import uiTaskBar
 import uiInventory
-import constInfo
 ###################################
 
-LEAVE_BUTTON_FOR_POTAL = constInfo.LEAVE_BUTTON_FOR_POTAL
-NOT_NEED_DELETE_CODE = constInfo.NOT_NEED_DELETE_CODE
-ENABLE_ENGNUM_DELETE_CODE = constInfo.ENABLE_ENGNUM_DELETE_CODE
+LEAVE_BUTTON_FOR_POTAL = app.LEAVE_BUTTON_FOR_POTAL
+NOT_NEED_DELETE_CODE = app.NOT_NEED_DELETE_CODE
+ENABLE_ENGNUM_DELETE_CODE = app.ENABLE_ENGNUM_DELETE_CODE
 
 ###################################
 
@@ -740,7 +739,7 @@ class SelectCharacterWindow(ui.Window):
 		if -1 != self.startIndex:
 
 			## Temporary
-			if app.GetTime() - self.startReservingTime > constInfo.SELECT_CHAR_NO_DELAY:
+			if app.GetTime() - self.startReservingTime > app.SELECT_CHAR_NO_DELAY:
 				if False == self.openLoadingFlag:
 					chrSlot=self.stream.GetCharacterSlot()
 					net.DirectEnter(chrSlot)

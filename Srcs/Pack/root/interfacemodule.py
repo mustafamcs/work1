@@ -1,7 +1,6 @@
 ##
 ## Interface
 ##
-import constInfo
 import systemSetting
 import wndMgr
 import chat
@@ -299,7 +298,7 @@ class Interface(object):
 		self.bigBoard.Hide()
 
 	def __MakeWebWindow(self):
-		if constInfo.IN_GAME_SHOP_ENABLE:
+		if app.IN_GAME_SHOP_ENABLE:
 			import uiWeb
 			self.wndWeb = uiWeb.WebWindow()
 			self.wndWeb.LoadWindow()

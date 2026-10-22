@@ -1,5 +1,6 @@
-import _weakref
-from constInfo import ENABLE_CMDCHAT_VARIADIC_ARGS
+import app
+
+from app import ENABLE_CMDCHAT_VARIADIC_ARGS
 
 class CallBackFunction:
 	class __noarg_call__:

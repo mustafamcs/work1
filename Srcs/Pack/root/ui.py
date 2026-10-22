@@ -10,9 +10,8 @@ import dbg
 # MARK_BUG_FIX
 import guild
 # END_OF_MARK_BUG_FIX
-import constInfo
 import sys
-from constInfo import ENABLE_RECURSIVE_UI_DESTROY
+from app import ENABLE_RECURSIVE_UI_DESTROY
 from _weakref import proxy
 
 if ENABLE_RECURSIVE_UI_DESTROY:
@@ -1592,7 +1591,7 @@ class Button(Window):
 
 		self.ButtonText.SetText(text)
 
-	if constInfo.EXTRA_UI_FEATURE:
+	if app.EXTRA_UI_FEATURE:
 		def GetText(self):
 			if not self.ButtonText:
 				return ""

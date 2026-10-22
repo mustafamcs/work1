@@ -1,7 +1,6 @@
 import net
 import background
 import stringCommander
-import constInfo
 
 class ServerCommandParser(object):
 

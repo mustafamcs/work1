@@ -5,7 +5,6 @@ import net
 import guild
 import messenger
 import localeInfo
-import constInfo
 import uiToolTip
 import uiGameOption
 

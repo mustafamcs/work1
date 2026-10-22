@@ -1903,6 +1903,451 @@ void initapp()
 #else
 	PyModule_AddIntConstant(poModule, "ENABLE_IKASHOP_RENEWAL", 0);
 #endif
+
+	// ### Pack/Python Ayarlari - Locale_inc.h ile senkron (elle tutulan blok)
+	#ifdef ENABLE_NEW_LEVELSKILL_SYSTEM
+		PyModule_AddIntConstant(poModule, "ENABLE_NEW_LEVELSKILL_SYSTEM", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_NEW_LEVELSKILL_SYSTEM", 0);
+	#endif
+	#ifdef ENABLE_RANDOM_CHANNEL_SEL
+		PyModule_AddIntConstant(poModule, "ENABLE_RANDOM_CHANNEL_SEL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_RANDOM_CHANNEL_SEL", 0);
+	#endif
+	#ifdef ENABLE_CLEAN_DATA_IF_FAIL_LOGIN
+		PyModule_AddIntConstant(poModule, "ENABLE_CLEAN_DATA_IF_FAIL_LOGIN", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_CLEAN_DATA_IF_FAIL_LOGIN", 0);
+	#endif
+	#ifdef ENABLE_PASTE_FEATURE
+		PyModule_AddIntConstant(poModule, "ENABLE_PASTE_FEATURE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_PASTE_FEATURE", 0);
+	#endif
+	#ifdef ENABLE_FULLSTONE_DETAILS
+		PyModule_AddIntConstant(poModule, "ENABLE_FULLSTONE_DETAILS", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_FULLSTONE_DETAILS", 0);
+	#endif
+	#ifdef ENABLE_REFINE_PCT
+		PyModule_AddIntConstant(poModule, "ENABLE_REFINE_PCT", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_REFINE_PCT", 0);
+	#endif
+	#ifdef EXTRA_UI_FEATURE
+		PyModule_AddIntConstant(poModule, "EXTRA_UI_FEATURE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "EXTRA_UI_FEATURE", 0);
+	#endif
+	#ifdef NEW_678TH_SKILL_ENABLE
+		PyModule_AddIntConstant(poModule, "NEW_678TH_SKILL_ENABLE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "NEW_678TH_SKILL_ENABLE", 0);
+	#endif
+	#ifdef SELECT_CHAR_NO_DELAY
+		PyModule_AddObject(poModule, "SELECT_CHAR_NO_DELAY", PyFloat_FromDouble(SELECT_CHAR_NO_DELAY));
+	#else
+		PyModule_AddObject(poModule, "SELECT_CHAR_NO_DELAY", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef ENABLE_ACTIVE_PET_SEAL_EFFECT
+		PyModule_AddIntConstant(poModule, "ENABLE_ACTIVE_PET_SEAL_EFFECT", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_ACTIVE_PET_SEAL_EFFECT", 0);
+	#endif
+	#ifdef ENABLE_RECURSIVE_UI_DESTROY
+		PyModule_AddIntConstant(poModule, "ENABLE_RECURSIVE_UI_DESTROY", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_RECURSIVE_UI_DESTROY", 0);
+	#endif
+	#ifdef ENABLE_CMDCHAT_VARIADIC_ARGS
+		PyModule_AddIntConstant(poModule, "ENABLE_CMDCHAT_VARIADIC_ARGS", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_CMDCHAT_VARIADIC_ARGS", 0);
+	#endif
+	#ifdef ENABLE_SELF_STACK_SCROLLS
+		PyModule_AddIntConstant(poModule, "ENABLE_SELF_STACK_SCROLLS", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_SELF_STACK_SCROLLS", 0);
+	#endif
+	#ifdef ENABLE_SAVE_ACCOUNT
+		PyModule_AddIntConstant(poModule, "ENABLE_SAVE_ACCOUNT", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_SAVE_ACCOUNT", 0);
+	#endif
+	#ifdef ENABLE_ENGNUM_DELETE_CODE
+		PyModule_AddIntConstant(poModule, "ENABLE_ENGNUM_DELETE_CODE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_ENGNUM_DELETE_CODE", 0);
+	#endif
+	#ifdef ENABLE_CHAT_COMMAND
+		PyModule_AddIntConstant(poModule, "ENABLE_CHAT_COMMAND", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_CHAT_COMMAND", 0);
+	#endif
+	#ifdef ENABLE_LAST_SENTENCE_STACK
+		PyModule_AddIntConstant(poModule, "ENABLE_LAST_SENTENCE_STACK", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_LAST_SENTENCE_STACK", 0);
+	#endif
+	#ifdef ENABLE_INSULT_CHECK
+		PyModule_AddIntConstant(poModule, "ENABLE_INSULT_CHECK", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_INSULT_CHECK", 0);
+	#endif
+	#ifdef DISABLE_GUILD_SKILL
+		PyModule_AddIntConstant(poModule, "DISABLE_GUILD_SKILL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "DISABLE_GUILD_SKILL", 0);
+	#endif
+	#ifdef DISABLE_DECLARE_WAR
+		PyModule_AddIntConstant(poModule, "DISABLE_DECLARE_WAR", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "DISABLE_DECLARE_WAR", 0);
+	#endif
+	#ifdef ENABLE_HELP_MULTIPAGE
+		PyModule_AddIntConstant(poModule, "ENABLE_HELP_MULTIPAGE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_HELP_MULTIPAGE", 0);
+	#endif
+	#ifdef ENABLE_DEFAULT_UI_BOARD
+		PyModule_AddIntConstant(poModule, "ENABLE_DEFAULT_UI_BOARD", ENABLE_DEFAULT_UI_BOARD);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_DEFAULT_UI_BOARD", 0);
+	#endif
+	#ifdef ITEM_MALL_BUTTON_ENABLE
+		PyModule_AddIntConstant(poModule, "ITEM_MALL_BUTTON_ENABLE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ITEM_MALL_BUTTON_ENABLE", 0);
+	#endif
+	#ifdef LEAVE_BUTTON_FOR_POTAL
+		PyModule_AddIntConstant(poModule, "LEAVE_BUTTON_FOR_POTAL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LEAVE_BUTTON_FOR_POTAL", 0);
+	#endif
+	#ifdef NOT_NEED_DELETE_CODE
+		PyModule_AddIntConstant(poModule, "NOT_NEED_DELETE_CODE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "NOT_NEED_DELETE_CODE", 0);
+	#endif
+	#ifdef SCREENSHOT_CWDSAVE
+		PyModule_AddIntConstant(poModule, "SCREENSHOT_CWDSAVE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "SCREENSHOT_CWDSAVE", 0);
+	#endif
+	#ifdef SKIP_LOGIN_PHASE
+		PyModule_AddIntConstant(poModule, "SKIP_LOGIN_PHASE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "SKIP_LOGIN_PHASE", 0);
+	#endif
+	#ifdef SKIP_LOGIN_PHASE_SUPPORT_CHANNEL
+		PyModule_AddIntConstant(poModule, "SKIP_LOGIN_PHASE_SUPPORT_CHANNEL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "SKIP_LOGIN_PHASE_SUPPORT_CHANNEL", 0);
+	#endif
+	#ifdef FULL_BACK_IMAGE
+		PyModule_AddIntConstant(poModule, "FULL_BACK_IMAGE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "FULL_BACK_IMAGE", 0);
+	#endif
+	#ifdef VIRTUAL_KEYBOARD_RAND_KEY
+		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_RAND_KEY", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_RAND_KEY", 0);
+	#endif
+	#ifdef SHOW_ONLY_ACTIVE_SKILL
+		PyModule_AddIntConstant(poModule, "SHOW_ONLY_ACTIVE_SKILL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "SHOW_ONLY_ACTIVE_SKILL", 0);
+	#endif
+	#ifdef HIDE_SUPPORT_SKILL_POINT
+		PyModule_AddIntConstant(poModule, "HIDE_SUPPORT_SKILL_POINT", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "HIDE_SUPPORT_SKILL_POINT", 0);
+	#endif
+	#ifdef SYSTEM_MENU_FOR_PORTAL
+		PyModule_AddIntConstant(poModule, "SYSTEM_MENU_FOR_PORTAL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "SYSTEM_MENU_FOR_PORTAL", 0);
+	#endif
+	#ifdef IN_GAME_SHOP_ENABLE
+		PyModule_AddIntConstant(poModule, "IN_GAME_SHOP_ENABLE", IN_GAME_SHOP_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "IN_GAME_SHOP_ENABLE", 0);
+	#endif
+	#ifdef CONSOLE_ENABLE
+		PyModule_AddIntConstant(poModule, "CONSOLE_ENABLE", CONSOLE_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "CONSOLE_ENABLE", 0);
+	#endif
+	#ifdef PVPMODE_ENABLE
+		PyModule_AddIntConstant(poModule, "PVPMODE_ENABLE", PVPMODE_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "PVPMODE_ENABLE", 0);
+	#endif
+	#ifdef PVPMODE_TEST_ENABLE
+		PyModule_AddIntConstant(poModule, "PVPMODE_TEST_ENABLE", PVPMODE_TEST_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "PVPMODE_TEST_ENABLE", 0);
+	#endif
+	#ifdef PVPMODE_ACCELKEY_ENABLE
+		PyModule_AddIntConstant(poModule, "PVPMODE_ACCELKEY_ENABLE", PVPMODE_ACCELKEY_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "PVPMODE_ACCELKEY_ENABLE", 0);
+	#endif
+	#ifdef PVPMODE_ACCELKEY_DELAY
+		PyModule_AddObject(poModule, "PVPMODE_ACCELKEY_DELAY", PyFloat_FromDouble(PVPMODE_ACCELKEY_DELAY));
+	#else
+		PyModule_AddObject(poModule, "PVPMODE_ACCELKEY_DELAY", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef PVPMODE_PROTECTED_LEVEL
+		PyModule_AddIntConstant(poModule, "PVPMODE_PROTECTED_LEVEL", PVPMODE_PROTECTED_LEVEL);
+	#else
+		PyModule_AddIntConstant(poModule, "PVPMODE_PROTECTED_LEVEL", 0);
+	#endif
+	#ifdef FOG_LEVEL0
+		PyModule_AddObject(poModule, "FOG_LEVEL0", PyFloat_FromDouble(FOG_LEVEL0));
+	#else
+		PyModule_AddObject(poModule, "FOG_LEVEL0", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef FOG_LEVEL1
+		PyModule_AddObject(poModule, "FOG_LEVEL1", PyFloat_FromDouble(FOG_LEVEL1));
+	#else
+		PyModule_AddObject(poModule, "FOG_LEVEL1", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef FOG_LEVEL2
+		PyModule_AddObject(poModule, "FOG_LEVEL2", PyFloat_FromDouble(FOG_LEVEL2));
+	#else
+		PyModule_AddObject(poModule, "FOG_LEVEL2", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef CAMERA_MAX_DISTANCE_SHORT
+		PyModule_AddObject(poModule, "CAMERA_MAX_DISTANCE_SHORT", PyFloat_FromDouble(CAMERA_MAX_DISTANCE_SHORT));
+	#else
+		PyModule_AddObject(poModule, "CAMERA_MAX_DISTANCE_SHORT", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef CAMERA_MAX_DISTANCE_LONG
+		PyModule_AddObject(poModule, "CAMERA_MAX_DISTANCE_LONG", PyFloat_FromDouble(CAMERA_MAX_DISTANCE_LONG));
+	#else
+		PyModule_AddObject(poModule, "CAMERA_MAX_DISTANCE_LONG", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef CHRNAME_COLOR_INDEX
+		PyModule_AddIntConstant(poModule, "CHRNAME_COLOR_INDEX", CHRNAME_COLOR_INDEX);
+	#else
+		PyModule_AddIntConstant(poModule, "CHRNAME_COLOR_INDEX", 0);
+	#endif
+	#ifdef ENVIRONMENT_NIGHT
+		PyModule_AddObject(poModule, "ENVIRONMENT_NIGHT", PyString_FromString(ENVIRONMENT_NIGHT));
+	#endif
+	#ifdef LOGIN_DELAY_SEC
+		PyModule_AddObject(poModule, "LOGIN_DELAY_SEC", PyFloat_FromDouble(LOGIN_DELAY_SEC));
+	#else
+		PyModule_AddObject(poModule, "LOGIN_DELAY_SEC", PyFloat_FromDouble(0.0));
+	#endif
+	#ifdef VIRTUAL_KEYBOARD_NUM_KEYS
+		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_NUM_KEYS", VIRTUAL_KEYBOARD_NUM_KEYS);
+	#else
+		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_NUM_KEYS", 0);
+	#endif
+	#ifdef ENABLE_DRAGON_GATE
+		PyModule_AddIntConstant(poModule, "ENABLE_DRAGON_GATE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_DRAGON_GATE", 0);
+	#endif
+	#ifdef ENABLE_MERCENARY_SYSTEM
+		PyModule_AddIntConstant(poModule, "ENABLE_MERCENARY_SYSTEM", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_MERCENARY_SYSTEM", 0);
+	#endif
+	#ifdef ENABLE_SUNGMAHEE_GATE
+		PyModule_AddIntConstant(poModule, "ENABLE_SUNGMAHEE_GATE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_SUNGMAHEE_GATE", 0);
+	#endif
+	#ifdef ENABLE_ADDITIONAL_EQUIPMENT_PAGE
+		PyModule_AddIntConstant(poModule, "ENABLE_ADDITIONAL_EQUIPMENT_PAGE", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_ADDITIONAL_EQUIPMENT_PAGE", 0);
+	#endif
+	#ifdef ENABLE_SERVER_SELECT_RENEWAL
+		PyModule_AddIntConstant(poModule, "ENABLE_SERVER_SELECT_RENEWAL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_SERVER_SELECT_RENEWAL", 0);
+	#endif
+	#ifdef ENABLE_PREMIUM_PRIVATE_SHOP
+		PyModule_AddIntConstant(poModule, "ENABLE_PREMIUM_PRIVATE_SHOP", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_PREMIUM_PRIVATE_SHOP", 0);
+	#endif
+	#ifdef HIGH_PRICE
+		PyModule_AddIntConstant(poModule, "HIGH_PRICE", HIGH_PRICE);
+	#else
+		PyModule_AddIntConstant(poModule, "HIGH_PRICE", 0);
+	#endif
+	#ifdef MIDDLE_PRICE
+		PyModule_AddIntConstant(poModule, "MIDDLE_PRICE", MIDDLE_PRICE);
+	#else
+		PyModule_AddIntConstant(poModule, "MIDDLE_PRICE", 0);
+	#endif
+	#ifdef ERROR_METIN_STONE
+		PyModule_AddIntConstant(poModule, "ERROR_METIN_STONE", ERROR_METIN_STONE);
+	#else
+		PyModule_AddIntConstant(poModule, "ERROR_METIN_STONE", 0);
+	#endif
+	#ifdef SUB2_LOADING_ENABLE
+		PyModule_AddIntConstant(poModule, "SUB2_LOADING_ENABLE", SUB2_LOADING_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "SUB2_LOADING_ENABLE", 0);
+	#endif
+	#ifdef EXPANDED_COMBO_ENABLE
+		PyModule_AddIntConstant(poModule, "EXPANDED_COMBO_ENABLE", EXPANDED_COMBO_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "EXPANDED_COMBO_ENABLE", 0);
+	#endif
+	#ifdef CONVERT_EMPIRE_LANGUAGE_ENABLE
+		PyModule_AddIntConstant(poModule, "CONVERT_EMPIRE_LANGUAGE_ENABLE", CONVERT_EMPIRE_LANGUAGE_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "CONVERT_EMPIRE_LANGUAGE_ENABLE", 0);
+	#endif
+	#ifdef USE_ITEM_WEAPON_TABLE_ATTACK_BONUS
+		PyModule_AddIntConstant(poModule, "USE_ITEM_WEAPON_TABLE_ATTACK_BONUS", USE_ITEM_WEAPON_TABLE_ATTACK_BONUS);
+	#else
+		PyModule_AddIntConstant(poModule, "USE_ITEM_WEAPON_TABLE_ATTACK_BONUS", 0);
+	#endif
+	#ifdef ADD_DEF_BONUS_ENABLE
+		PyModule_AddIntConstant(poModule, "ADD_DEF_BONUS_ENABLE", ADD_DEF_BONUS_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "ADD_DEF_BONUS_ENABLE", 0);
+	#endif
+	#ifdef LOGIN_COUNT_LIMIT_ENABLE
+		PyModule_AddIntConstant(poModule, "LOGIN_COUNT_LIMIT_ENABLE", LOGIN_COUNT_LIMIT_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "LOGIN_COUNT_LIMIT_ENABLE", 0);
+	#endif
+	#ifdef USE_SKILL_EFFECT_UPGRADE_ENABLE
+		PyModule_AddIntConstant(poModule, "USE_SKILL_EFFECT_UPGRADE_ENABLE", USE_SKILL_EFFECT_UPGRADE_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "USE_SKILL_EFFECT_UPGRADE_ENABLE", 0);
+	#endif
+	#ifdef VIEW_OTHER_EMPIRE_PLAYER_TARGET_BOARD
+		PyModule_AddIntConstant(poModule, "VIEW_OTHER_EMPIRE_PLAYER_TARGET_BOARD", VIEW_OTHER_EMPIRE_PLAYER_TARGET_BOARD);
+	#else
+		PyModule_AddIntConstant(poModule, "VIEW_OTHER_EMPIRE_PLAYER_TARGET_BOARD", 0);
+	#endif
+	#ifdef GUILD_MONEY_PER_GSP
+		PyModule_AddIntConstant(poModule, "GUILD_MONEY_PER_GSP", GUILD_MONEY_PER_GSP);
+	#else
+		PyModule_AddIntConstant(poModule, "GUILD_MONEY_PER_GSP", 0);
+	#endif
+	#ifdef GUILD_WAR_TYPE_SELECT_ENABLE
+		PyModule_AddIntConstant(poModule, "GUILD_WAR_TYPE_SELECT_ENABLE", GUILD_WAR_TYPE_SELECT_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "GUILD_WAR_TYPE_SELECT_ENABLE", 0);
+	#endif
+	#ifdef TWO_HANDED_WEAPON_ATT_SPEED_DECREASE_VALUE
+		PyModule_AddIntConstant(poModule, "TWO_HANDED_WEAPON_ATT_SPEED_DECREASE_VALUE", TWO_HANDED_WEAPON_ATT_SPEED_DECREASE_VALUE);
+	#else
+		PyModule_AddIntConstant(poModule, "TWO_HANDED_WEAPON_ATT_SPEED_DECREASE_VALUE", 0);
+	#endif
+	#ifdef DEFAULT_HAIR_COLOR_ENABLE
+		PyModule_AddIntConstant(poModule, "HAIR_COLOR_ENABLE", DEFAULT_HAIR_COLOR_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "HAIR_COLOR_ENABLE", 0);
+	#endif
+	#ifdef ARMOR_SPECULAR_ENABLE
+		PyModule_AddIntConstant(poModule, "ARMOR_SPECULAR_ENABLE", ARMOR_SPECULAR_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "ARMOR_SPECULAR_ENABLE", 0);
+	#endif
+	#ifdef WEAPON_SPECULAR_ENABLE
+		PyModule_AddIntConstant(poModule, "WEAPON_SPECULAR_ENABLE", WEAPON_SPECULAR_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "WEAPON_SPECULAR_ENABLE", 0);
+	#endif
+	#ifdef SEQUENCE_PACKET_ENABLE
+		PyModule_AddIntConstant(poModule, "SEQUENCE_PACKET_ENABLE", SEQUENCE_PACKET_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "SEQUENCE_PACKET_ENABLE", 0);
+	#endif
+	#ifdef KEEP_ACCOUNT_CONNETION_ENABLE
+		PyModule_AddIntConstant(poModule, "KEEP_ACCOUNT_CONNETION_ENABLE", KEEP_ACCOUNT_CONNETION_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "KEEP_ACCOUNT_CONNETION_ENABLE", 0);
+	#endif
+	#ifdef MINIMAP_POSITIONINFO_ENABLE
+		PyModule_AddIntConstant(poModule, "MINIMAP_POSITIONINFO_ENABLE", MINIMAP_POSITIONINFO_ENABLE);
+	#else
+		PyModule_AddIntConstant(poModule, "MINIMAP_POSITIONINFO_ENABLE", 0);
+	#endif
+	#ifdef ENABLE_AURA_COSTUME_SYSTEM
+		PyModule_AddIntConstant(poModule, "ENABLE_AURA_COSTUME_SYSTEM", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_AURA_COSTUME_SYSTEM", 0);
+	#endif
+	#ifdef ENABLE_CHANGELOOK_SYSTEM
+		PyModule_AddIntConstant(poModule, "ENABLE_CHANGELOOK_SYSTEM", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_CHANGELOOK_SYSTEM", 0);
+	#endif
+	#ifdef ENABLE_DISCORD_JOIN_URL
+		PyModule_AddIntConstant(poModule, "ENABLE_DISCORD_JOIN_URL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_DISCORD_JOIN_URL", 0);
+	#endif
+	#ifdef ENABLE_ITEM_COUNT_LIMIT_SYSTEM
+		PyModule_AddIntConstant(poModule, "ENABLE_ITEM_COUNT_LIMIT_SYSTEM", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_ITEM_COUNT_LIMIT_SYSTEM", 0);
+	#endif
+	#ifdef ENABLE_PLAYER_CHECKAFFECT
+		PyModule_AddIntConstant(poModule, "ENABLE_PLAYER_CHECKAFFECT", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_PLAYER_CHECKAFFECT", 0);
+	#endif
+	#ifdef ENABLE_SEALBIND_SYSTEM
+		PyModule_AddIntConstant(poModule, "ENABLE_SEALBIND_SYSTEM", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "ENABLE_SEALBIND_SYSTEM", 0);
+	#endif
+	#ifdef LOCALE_SERVICE_GLOBAL
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_GLOBAL", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_GLOBAL", 0);
+	#endif
+	#ifdef LOCALE_SERVICE_JAPAN
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_JAPAN", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_JAPAN", 0);
+	#endif
+	#ifdef LOCALE_SERVICE_STAGE_DEVELOPMENT
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_DEVELOPMENT", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_DEVELOPMENT", 0);
+	#endif
+	#ifdef LOCALE_SERVICE_STAGE_TEST
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_TEST", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_TEST", 0);
+	#endif
+	#ifdef LOCALE_SERVICE_VIETNAM_MILD
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_VIETNAM_MILD", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_VIETNAM_MILD", 0);
+	#endif
+	#ifdef LOCALE_SERVICE_WE_JAPAN
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_WE_JAPAN", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_WE_JAPAN", 0);
+	#endif
+	#ifdef LOCALE_SERVICE_YMIR
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_YMIR", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_YMIR", 0);
+	#endif
+	#ifdef USE_RELATIVE_PATH
+		PyModule_AddIntConstant(poModule, "USE_RELATIVE_PATH", 1);
+	#else
+		PyModule_AddIntConstant(poModule, "USE_RELATIVE_PATH", 0);
+	#endif
 }
 
 

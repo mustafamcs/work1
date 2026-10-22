@@ -28,7 +28,7 @@ if app.ENABLE_IKASHOP_RENEWAL:
 	
 from _weakref import proxy
 
-ITEM_MALL_BUTTON_ENABLE = constInfo.ITEM_MALL_BUTTON_ENABLE
+ITEM_MALL_BUTTON_ENABLE = app.ITEM_MALL_BUTTON_ENABLE
 
 ITEM_FLAG_APPLICABLE = 1 << 14
 
@@ -640,7 +640,7 @@ class InventoryWindow(ui.ScriptWindow):
 				if not slotNumber in self.liHighlightedItems:
 					self.wndItem.DeactivateSlot(i)
 
-			if constInfo.ENABLE_ACTIVE_PET_SEAL_EFFECT and constInfo.IS_PET_SEAL(itemVnum):
+			if app.ENABLE_ACTIVE_PET_SEAL_EFFECT and constInfo.IS_PET_SEAL(itemVnum):
 				metinSocket = [player.GetItemMetinSocket(slotNumber, j) for j in xrange(player.METIN_SOCKET_MAX_NUM)]
 				isActivated = 0 != metinSocket[2]
 				if isActivated:
@@ -856,7 +856,7 @@ class InventoryWindow(ui.ScriptWindow):
 			self.__SendUseItemToItemPacket(srcItemSlotPos, dstItemSlotPos)
 
 		elif item.IsRefineScroll(srcItemVID):
-			if constInfo.ENABLE_SELF_STACK_SCROLLS and player.GetItemIndex(srcItemSlotPos) == player.GetItemIndex(dstItemSlotPos):
+			if app.ENABLE_SELF_STACK_SCROLLS and player.GetItemIndex(srcItemSlotPos) == player.GetItemIndex(dstItemSlotPos):
 				self.__SendMoveItemPacket(srcItemSlotPos, dstItemSlotPos,0)
 			else:
 				self.RefineItem(srcItemSlotPos, dstItemSlotPos)
@@ -877,7 +877,7 @@ class InventoryWindow(ui.ScriptWindow):
 		elif item.GetUseType(srcItemVID) in self.USE_TYPE_TUPLE:
 			self.__SendUseItemToItemPacket(srcItemSlotPos, dstItemSlotPos)
 
-		elif constInfo.ENABLE_SELF_STACK_SCROLLS and srcItemVID in (71052,71051,71084,71085):
+		elif app.ENABLE_SELF_STACK_SCROLLS and srcItemVID in (71052,71051,71084,71085):
 			self.__SendUseItemToItemPacket(srcItemSlotPos, dstItemSlotPos)
 
 		else:
@@ -1051,7 +1051,7 @@ class InventoryWindow(ui.ScriptWindow):
 			return True
 		elif (player.GetItemFlags(srcSlotPos) & ITEM_FLAG_APPLICABLE) == ITEM_FLAG_APPLICABLE:
 			return True
-		elif constInfo.ENABLE_SELF_STACK_SCROLLS and srcItemVNum in (71052,71051,71084,71085):
+		elif app.ENABLE_SELF_STACK_SCROLLS and srcItemVNum in (71052,71051,71084,71085):
 			return True
 		else:
 			if item.GetUseType(srcItemVNum) in self.USE_TYPE_TUPLE:
@@ -1066,7 +1066,7 @@ class InventoryWindow(ui.ScriptWindow):
 		if item.IsRefineScroll(srcItemVNum):
 			if player.REFINE_OK == player.CanRefine(srcItemVNum, dstSlotPos):
 				return True
-			elif constInfo.ENABLE_SELF_STACK_SCROLLS and player.GetItemIndex(dstSlotPos) == srcItemVNum:
+			elif app.ENABLE_SELF_STACK_SCROLLS and player.GetItemIndex(dstSlotPos) == srcItemVNum:
 				return True
 		elif item.IsMetin(srcItemVNum):
 			if player.ATTACH_METIN_OK == player.CanAttachMetin(srcItemVNum, dstSlotPos):
@@ -1081,7 +1081,7 @@ class InventoryWindow(ui.ScriptWindow):
 		elif (player.GetItemFlags(srcSlotPos) & ITEM_FLAG_APPLICABLE) == ITEM_FLAG_APPLICABLE:
 			return True
 
-		elif constInfo.ENABLE_SELF_STACK_SCROLLS and srcItemVNum in (71052,71051,71084,71085):
+		elif app.ENABLE_SELF_STACK_SCROLLS and srcItemVNum in (71052,71051,71084,71085):
 			return True
 
 		else:
@@ -1133,7 +1133,7 @@ class InventoryWindow(ui.ScriptWindow):
 			return False
 
 		for i in xrange(player.METIN_SOCKET_MAX_NUM):
-			if player.GetItemMetinSocket(dstSlotPos, i) == constInfo.ERROR_METIN_STONE:
+			if player.GetItemMetinSocket(dstSlotPos, i) == app.ERROR_METIN_STONE:
 				return True
 
 		return False
@@ -1353,7 +1353,7 @@ class InventoryWindow(ui.ScriptWindow):
 
 		dstItemVNum = player.GetItemIndex(dstSlotPos)
 		srcItemVNum = player.GetItemIndex(srcSlotPos)
-		if constInfo.ENABLE_SELF_STACK_SCROLLS and dstItemVNum == srcItemVNum:
+		if app.ENABLE_SELF_STACK_SCROLLS and dstItemVNum == srcItemVNum:
 			self.__SendMoveItemPacket(srcSlotPos, dstSlotPos, 0)
 		else:
 			net.SendItemUseToItemPacket(srcSlotPos, dstSlotPos)

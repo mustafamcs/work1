@@ -7,11 +7,10 @@ import uiSystemOption
 import uiGameOption
 import uiScriptLocale
 import networkModule
-import constInfo
 import localeInfo
 import uiMoveChannel
 
-SYSTEM_MENU_FOR_PORTAL = constInfo.SYSTEM_MENU_FOR_PORTAL
+SYSTEM_MENU_FOR_PORTAL = app.SYSTEM_MENU_FOR_PORTAL
 
 ###################################################################################################
 ## System
@@ -51,7 +50,7 @@ class SystemDialog(ui.ScriptWindow):
 		self.GetChild("help_button").SAFE_SetEvent(self.__ClickHelpButton)
 		self.GetChild("cancel_button").SAFE_SetEvent(self.Close)
 
-		if constInfo.IN_GAME_SHOP_ENABLE:
+		if app.IN_GAME_SHOP_ENABLE:
 			self.GetChild("mall_button").SAFE_SetEvent(self.__ClickInGameShopButton)
 
 		if app.ENABLE_MOVE_CHANNEL:

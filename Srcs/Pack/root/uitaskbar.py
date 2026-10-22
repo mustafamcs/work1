@@ -410,7 +410,7 @@ class TaskBar(ui.ScriptWindow):
 		try:
 			pyScrLoader = ui.PythonScriptLoader()
 
-			if constInfo.IN_GAME_SHOP_ENABLE:
+			if app.IN_GAME_SHOP_ENABLE:
 				pyScrLoader.LoadScriptFile(self, uiScriptLocale.LOCALE_UISCRIPT_PATH + "TaskBar.py")
 			else:
 				pyScrLoader.LoadScriptFile(self, "UIScript/TaskBar.py")
@@ -510,13 +510,13 @@ class TaskBar(ui.ScriptWindow):
 		self.toggleButtonDict = toggleButtonDict
 		self.expGauge = expGauge
 
-		if constInfo.IN_GAME_SHOP_ENABLE:
+		if app.IN_GAME_SHOP_ENABLE:
 			self.rampageGauge1  = self.GetChild("RampageGauge")
 			self.rampageGauge1.OnMouseOverIn = ui.__mem_func__(self.__RampageGauge_OverIn)
 			self.rampageGauge2 = self.GetChild("RampageGauge2")
 			self.rampageGauge2.OnMouseOverOut = ui.__mem_func__(self.__RampageGauge_OverOut)
 			self.rampageGauge2.OnMouseLeftButtonUp = ui.__mem_func__(self.__RampageGauge_Click)
-			print "[DEBUG]: constInfo.IN_GAME_SHOP_ENABLE / self.rampageGauge1",constInfo.IN_GAME_SHOP_ENABLE, self.rampageGauge1
+			print "[DEBUG]: app.IN_GAME_SHOP_ENABLE / self.rampageGauge1",app.IN_GAME_SHOP_ENABLE, self.rampageGauge1
 			self.__RampageGauge_OverOut()
 
 		self.hpGauge = self.GetChild("HPGauge")

@@ -295,9 +295,9 @@ class OptionDialog(ui.ScriptWindow):
 			self.RefreshShowMobInfo()
 
 	def __CheckPvPProtectedLevelPlayer(self):
-		if player.GetStatus(player.LEVEL)<constInfo.PVPMODE_PROTECTED_LEVEL:
+		if player.GetStatus(player.LEVEL)<app.PVPMODE_PROTECTED_LEVEL:
 			self.__SetPeacePKMode()
-			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.OPTION_PVPMODE_PROTECT % (constInfo.PVPMODE_PROTECTED_LEVEL))
+			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.OPTION_PVPMODE_PROTECT % (app.PVPMODE_PROTECTED_LEVEL))
 			return 1
 
 		return 0
@@ -320,7 +320,7 @@ class OptionDialog(ui.ScriptWindow):
 
 		self.__RefreshPVPButtonList()
 
-		if constInfo.PVPMODE_ENABLE:
+		if app.PVPMODE_ENABLE:
 			net.SendChatPacket("/pkmode 0", chat.CHAT_TYPE_TALKING)
 		else:
 			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.OPTION_PVPMODE_NOT_SUPPORT)
@@ -331,7 +331,7 @@ class OptionDialog(ui.ScriptWindow):
 
 		self.__RefreshPVPButtonList()
 
-		if constInfo.PVPMODE_ENABLE:
+		if app.PVPMODE_ENABLE:
 			net.SendChatPacket("/pkmode 1", chat.CHAT_TYPE_TALKING)
 		else:
 			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.OPTION_PVPMODE_NOT_SUPPORT)
@@ -342,7 +342,7 @@ class OptionDialog(ui.ScriptWindow):
 
 		self.__RefreshPVPButtonList()
 
-		if constInfo.PVPMODE_ENABLE:
+		if app.PVPMODE_ENABLE:
 			net.SendChatPacket("/pkmode 2", chat.CHAT_TYPE_TALKING)
 		else:
 			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.OPTION_PVPMODE_NOT_SUPPORT)
@@ -357,7 +357,7 @@ class OptionDialog(ui.ScriptWindow):
 			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.OPTION_PVPMODE_CANNOT_SET_GUILD_MODE)
 			return
 
-		if constInfo.PVPMODE_ENABLE:
+		if app.PVPMODE_ENABLE:
 			net.SendChatPacket("/pkmode 4", chat.CHAT_TYPE_TALKING)
 		else:
 			chat.AppendChat(chat.CHAT_TYPE_INFO, localeInfo.OPTION_PVPMODE_NOT_SUPPORT)

@@ -7,7 +7,6 @@ import localeInfo
 import net
 import app
 import colorInfo
-import constInfo
 import background
 import chr
 from constInfo import TextColor
@@ -350,7 +349,7 @@ class MiniMap(ui.ScriptWindow):
 			import exception
 			exception.Abort("MiniMap.LoadWindow.Bind")
 
-		if constInfo.MINIMAP_POSITIONINFO_ENABLE==0:
+		if app.MINIMAP_POSITIONINFO_ENABLE==0:
 			self.positionInfo.Hide()
 
 		self.serverInfo.SetText(net.GetServerInfo())

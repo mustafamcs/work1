@@ -7,7 +7,6 @@ import uiToolTip
 import mouseModule
 import localeInfo
 import uiCommon
-import constInfo
 
 class RefineDialog(ui.ScriptWindow):
 
@@ -46,7 +45,7 @@ class RefineDialog(ui.ScriptWindow):
 			import exception
 			exception.Abort("RefineDialog.__LoadScript.BindObject")
 
-		if constInfo.ENABLE_REFINE_PCT:
+		if app.ENABLE_REFINE_PCT:
 			self.successPercentage.Show()
 		else:
 			self.successPercentage.Hide()
@@ -222,7 +221,7 @@ class RefineDialogNew(ui.ScriptWindow):
 			import exception
 			exception.Abort("RefineDialog.__LoadScript.BindObject")
 
-		if constInfo.ENABLE_REFINE_PCT:
+		if app.ENABLE_REFINE_PCT:
 			self.successPercentage.Show()
 		else:
 			self.successPercentage.Hide()

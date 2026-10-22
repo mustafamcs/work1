@@ -52,7 +52,7 @@ import stringCommander
 from _weakref import proxy
 
 # SCREENSHOT_CWDSAVE
-SCREENSHOT_CWDSAVE = constInfo.SCREENSHOT_CWDSAVE
+SCREENSHOT_CWDSAVE = app.SCREENSHOT_CWDSAVE
 SCREENSHOT_DIR = None
 
 cameraDistance = 1550.0
@@ -154,9 +154,9 @@ class GameWindow(ui.ScriptWindow):
 		import event
 		event.SetLeftTimeString(localeInfo.UI_LEFT_TIME)
 
-		textTail.EnablePKTitle(constInfo.PVPMODE_ENABLE)
+		textTail.EnablePKTitle(app.PVPMODE_ENABLE)
 
-		if constInfo.PVPMODE_TEST_ENABLE:
+		if app.PVPMODE_TEST_ENABLE:
 			self.testPKMode = ui.TextLine()
 			self.testPKMode.SetFontName(localeInfo.UI_DEF_FONT)
 			self.testPKMode.SetPosition(0, 15)
@@ -410,7 +410,7 @@ class GameWindow(ui.ScriptWindow):
 		onClickKeyDict[app.DIK_LCONTROL] = lambda: self.HideMouseImage()
 		onClickKeyDict[app.DIK_LSHIFT] = lambda: self.__SetQuickSlotMode()
 
-		#if constInfo.PVPMODE_ACCELKEY_ENABLE:
+		#if app.PVPMODE_ACCELKEY_ENABLE:
 		#	onClickKeyDict[app.DIK_B] = lambda: self.ChangePKMode()
 
 		self.onClickKeyDict=onClickKeyDict
@@ -430,7 +430,7 @@ class GameWindow(ui.ScriptWindow):
 		if app.IsPressed(app.DIK_LCONTROL) or app.IsPressed(app.DIK_RCONTROL):
 			return
 		else:
-			if constInfo.PVPMODE_ACCELKEY_ENABLE:
+			if app.PVPMODE_ACCELKEY_ENABLE:
 				self.ChangePKMode()
 
 
@@ -582,12 +582,12 @@ class GameWindow(ui.ScriptWindow):
 		if not app.IsPressed(app.DIK_LCONTROL):
 			return
 
-		if player.GetStatus(player.LEVEL)<constInfo.PVPMODE_PROTECTED_LEVEL:
-			self.__NotifyError(localeInfo.OPTION_PVPMODE_PROTECT % (constInfo.PVPMODE_PROTECTED_LEVEL))
+		if player.GetStatus(player.LEVEL)<app.PVPMODE_PROTECTED_LEVEL:
+			self.__NotifyError(localeInfo.OPTION_PVPMODE_PROTECT % (app.PVPMODE_PROTECTED_LEVEL))
 			return
 
 		curTime = app.GetTime()
-		if curTime - self.lastPKModeSendedTime < constInfo.PVPMODE_ACCELKEY_DELAY:
+		if curTime - self.lastPKModeSendedTime < app.PVPMODE_ACCELKEY_DELAY:
 			return
 
 		self.lastPKModeSendedTime = curTime
@@ -616,7 +616,7 @@ class GameWindow(ui.ScriptWindow):
 		except KeyError:
 			print "BİLİNMEYEN PVPMode[%d]" % (player.GetPKMode())
 
-		if constInfo.PVPMODE_TEST_ENABLE:
+		if app.PVPMODE_TEST_ENABLE:
 			curPKMode = player.GetPKMode()
 			alignment, grade = chr.testGetPKData()
 			self.pkModeNameDict = { 0 : "PEACE", 1 : "REVENGE", 2 : "FREE", 3 : "PROTECT", }
@@ -2059,7 +2059,7 @@ class GameWindow(ui.ScriptWindow):
 		self.interface.CloseRestartDialog()
 
 	def __Console_Enable(self):
-		constInfo.CONSOLE_ENABLE = True
+		app.CONSOLE_ENABLE = True
 		self.consoleEnable = True
 		app.EnableSpecialCameraMode()
 		ui.EnablePaste(True)
@@ -2083,7 +2083,7 @@ class GameWindow(ui.ScriptWindow):
 			if not self.__IsXMasMap():
 				return
 
-			background.RegisterEnvironmentData(1, constInfo.ENVIRONMENT_NIGHT)
+			background.RegisterEnvironmentData(1, app.ENVIRONMENT_NIGHT)
 			background.SetEnvironmentData(1)
 
 	def __DayMode_Update(self, mode):
@@ -2101,7 +2101,7 @@ class GameWindow(ui.ScriptWindow):
 		self.curtain.FadeIn()
 
 	def __DayMode_OnCompleteChangeToDark(self):
-		background.RegisterEnvironmentData(1, constInfo.ENVIRONMENT_NIGHT)
+		background.RegisterEnvironmentData(1, app.ENVIRONMENT_NIGHT)
 		background.SetEnvironmentData(1)
 		self.curtain.FadeIn()
 
@@ -2162,7 +2162,7 @@ class GameWindow(ui.ScriptWindow):
 		app.EnableTestServerFlag()
 
 	def __InGameShop_Show(self, url):
-		if constInfo.IN_GAME_SHOP_ENABLE:
+		if app.IN_GAME_SHOP_ENABLE:
 			self.interface.OpenWebWindow(url)
 
 	# WEDDING

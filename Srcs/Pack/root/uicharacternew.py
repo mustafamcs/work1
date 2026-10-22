@@ -14,13 +14,12 @@ import playerSettingModule
 import quest
 import localeInfo
 import uiToolTip
-import constInfo
 import emotion
 import uiCharacterDetails
 
-SHOW_ONLY_ACTIVE_SKILL = constInfo.SHOW_ONLY_ACTIVE_SKILL
+SHOW_ONLY_ACTIVE_SKILL = app.SHOW_ONLY_ACTIVE_SKILL
 SHOW_LIMIT_SUPPORT_SKILL_LIST = [121, 122, 123, 124, 126, 127, 129, 128, 131, 137, 138, 139, 140]
-HIDE_SUPPORT_SKILL_POINT = constInfo.HIDE_SUPPORT_SKILL_POINT
+HIDE_SUPPORT_SKILL_POINT = app.HIDE_SUPPORT_SKILL_POINT
 
 ENABLE_CONQUEROR_UI = app.ENABLE_CONQUEROR_UI
 
@@ -731,7 +730,7 @@ class CharacterWindow(ui.ScriptWindow):
 
 	def __GetTotalDefText(self):
 		defValue=player.GetStatus(player.DEF_GRADE)
-		if constInfo.ADD_DEF_BONUS_ENABLE:
+		if app.ADD_DEF_BONUS_ENABLE:
 			defValue+=player.GetStatus(player.DEF_BONUS)
 		return "%d" % (defValue)
 
