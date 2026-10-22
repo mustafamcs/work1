@@ -66,6 +66,8 @@ _yedek/
 **/.pre_qc/
 __pycache__/
 *.pyc
+# client/lib icindeki .pyc'ler gomulu Python 2.7 stdlib'i - izlenmeli
+!client/lib/**/*.pyc
 *.py~
 *~
 *.bak
