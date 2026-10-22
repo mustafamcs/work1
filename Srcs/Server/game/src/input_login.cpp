@@ -31,7 +31,6 @@
 
 #ifdef ENABLE_WOLFMAN_CHARACTER
 
-// #define USE_LYCAN_CREATE_POSITION
 #ifdef USE_LYCAN_CREATE_POSITION
 
 DWORD g_lycan_create_position[4][2] =

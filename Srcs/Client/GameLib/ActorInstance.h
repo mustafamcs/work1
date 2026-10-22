@@ -10,7 +10,6 @@
 #include "Interface.h"
 //#include "../eterGrnLib/ThingInstance.h"
 #include "GameLibDefines.h"
-#define ENABLE_HAIR_SPECULAR
 
 class CItemData;
 class CWeaponTrace;

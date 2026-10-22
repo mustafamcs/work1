@@ -52,7 +52,7 @@ import stringCommander
 from _weakref import proxy
 
 # SCREENSHOT_CWDSAVE
-SCREENSHOT_CWDSAVE = True
+SCREENSHOT_CWDSAVE = constInfo.SCREENSHOT_CWDSAVE
 SCREENSHOT_DIR = None
 
 cameraDistance = 1550.0

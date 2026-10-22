@@ -11,7 +11,7 @@ import constInfo
 import localeInfo
 import uiMoveChannel
 
-SYSTEM_MENU_FOR_PORTAL = False
+SYSTEM_MENU_FOR_PORTAL = constInfo.SYSTEM_MENU_FOR_PORTAL
 
 ###################################################################################################
 ## System

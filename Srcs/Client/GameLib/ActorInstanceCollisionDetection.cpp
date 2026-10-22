@@ -546,12 +546,6 @@ BOOL CActorInstance::TestPhysicsBlendingCollision(CActorInstance & rVictim)
 	return FALSE;
 }
 
-#define ENABLE_NPC_WITHOUT_COLLISIONS
-#ifndef ENABLE_NPC_WITHOUT_COLLISIONS
-#define ENABLE_PETS_WITHOUT_COLLISIONS
-#define ENABLE_SHOPS_WITHOUT_COLLISIONS
-#define ENABLE_MOUNTS_WITHOUT_COLLISIONS
-#endif
 BOOL CActorInstance::TestActorCollision(CActorInstance & rVictim)
 {
 	if (rVictim.IsDead())

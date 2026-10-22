@@ -41,8 +41,6 @@
 
 const int ITEM_BROKEN_METIN_VNUM = 28960;
 
-// #define ENABLE_LOCALECHECK_CHANGENAME
-// #define ENABLE_PC_OPENSHOP
 
 #ifdef ENABLE_PC_OPENSHOP
 #include "shop.h"

@@ -31,9 +31,9 @@ import uiInventory
 import constInfo
 ###################################
 
-LEAVE_BUTTON_FOR_POTAL = False
-NOT_NEED_DELETE_CODE = False
-ENABLE_ENGNUM_DELETE_CODE = True
+LEAVE_BUTTON_FOR_POTAL = constInfo.LEAVE_BUTTON_FOR_POTAL
+NOT_NEED_DELETE_CODE = constInfo.NOT_NEED_DELETE_CODE
+ENABLE_ENGNUM_DELETE_CODE = constInfo.ENABLE_ENGNUM_DELETE_CODE
 
 ###################################
 

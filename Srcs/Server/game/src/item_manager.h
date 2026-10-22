@@ -1,11 +1,12 @@
 #ifndef __INC_ITEM_MANAGER__
 #define __INC_ITEM_MANAGER__
 
+#include "../../common/CommonDefines.h"
+
 #ifdef M2_USE_POOL
 #include "pool.h"
 #endif
 
-#define ENABLE_ITEM_PROTO_MAP
 class CSpecialAttrGroup
 {
 public:

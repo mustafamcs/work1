@@ -104,7 +104,6 @@ void CClientManager::Destroy()
 	}
 }
 
-#define ENABLE_DEFAULT_PRIV
 #ifdef ENABLE_DEFAULT_PRIV
 static bool bCleanOldPriv = true;
 static bool __InitializeDefaultPriv()
@@ -3001,7 +3000,6 @@ void UsageLog()
 	g_dwUsageMax = g_dwUsageAvg = 0;
 }
 
-#define ENABLE_ITEMAWARD_REFRESH
 int CClientManager::Process()
 {
 	int pulses;

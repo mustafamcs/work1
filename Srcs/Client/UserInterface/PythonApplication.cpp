@@ -836,9 +836,6 @@ void CPythonApplication::Loop()
 	}
 }
 
-#define ENABLE_LOAD_ITEM_LIST_FROM_ROOT
-#define ENABLE_LOAD_ITEM_SCALE_FROM_ROOT
-#define ENABLE_LOAD_SKILL_TABLE_FROM_ROOT
 bool LoadLocaleData(const char* localePath)
 {
 #if defined(__BL_MULTI_LANGUAGE__)

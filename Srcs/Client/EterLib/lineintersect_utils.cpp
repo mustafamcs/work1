@@ -15,7 +15,6 @@
 //#define CHECK_ANSWERS
 
 // uncomment the following line to use Cramer's rule instead of Gaussian elimination
-//#define USE_CRAMERS_RULE
 
 #define FMAX(a,b) ((a) > (b) ? (a) : (b))
 #define FMIN(a,b) ((a) > (b) ? (b) : (a))

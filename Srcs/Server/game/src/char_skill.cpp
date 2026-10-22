@@ -23,8 +23,6 @@
 #include "questmanager.h"
 #include "../../common/CommonDefines.h"
 
-#define ENABLE_FORCE2MASTERSKILL
-// #define ENABLE_NULLIFYAFFECT_LIMIT
 
 static const DWORD s_adwSubSkillVnums[] =
 {
@@ -393,7 +391,6 @@ static bool FN_should_check_exp(LPCHARACTER ch)
 	return ch->GetLevel() < gPlayerMaxLevel;
 }
 
-// #define ENABLE_MASTER_SKILLBOOK_NO_STEPS
 bool CHARACTER::LearnSkillByBook(DWORD dwSkillVnum, BYTE bProb)
 {
 	const CSkillProto* pkSk = CSkillManager::instance().Get(dwSkillVnum);

@@ -33,7 +33,6 @@
 #include <iostream>
 #include <fstream>
 
-#define ENABLE_CRC32_CHECK
 
 void CMakePackLog::SetFileName(const char* c_szFileName)
 {

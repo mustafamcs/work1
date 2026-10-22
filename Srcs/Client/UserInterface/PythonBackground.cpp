@@ -230,7 +230,6 @@ CPythonBackground::~CPythonBackground()
 	Tracen("CPythonBackground Clear");
 }
 
-#define ENABLE_ATLASINFO_FROM_ROOT
 void CPythonBackground::Initialize()
 {
 #ifdef ENABLE_ATLASINFO_FROM_ROOT

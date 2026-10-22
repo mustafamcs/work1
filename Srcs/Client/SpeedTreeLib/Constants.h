@@ -26,7 +26,6 @@
 //#include "../Common Source/Filename.h"
 
 // used to isolate SpeedGrass usage
-#define USE_SPEEDGRASS
 
 // paths
 //const CFilename c_strTreePath = "../data/TheValley/Trees/";

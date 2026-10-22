@@ -17,7 +17,6 @@
 #include "log.h"
 #include "questmanager.h"
 
-#define ENABLE_GUILD_COMMENT_ANTIFLOOD
 #ifdef ENABLE_GUILD_COMMENT_ANTIFLOOD
 #include "../../common/PulseManager.h"
 #endif

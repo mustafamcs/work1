@@ -1122,7 +1122,6 @@ DWORD CPythonPlayer::GetPlayTime()
 	return m_dwPlayTime;
 }
 
-#define ENABLE_NO_PICKUP_LIMIT
 void CPythonPlayer::SendClickItemPacket(DWORD dwIID)
 {
 	if (IsObserverMode())

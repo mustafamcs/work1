@@ -29,7 +29,6 @@ struct THorseStat
 
 extern THorseStat c_aHorseStat[HORSE_MAX_LEVEL+1];
 
-// #define ENABLE_INFINITE_HORSE_HEALTH_STAMINA
 class CHorseRider
 {
 	public:

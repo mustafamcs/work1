@@ -146,7 +146,6 @@ void CItemData::__LoadFiles()
 	}
 }
 
-#define ENABLE_LOAD_ALTER_ITEMICON
 void CItemData::__SetIconImage(const char * c_szFileName)
 {
 	if (!CResourceManager::Instance().IsFileExist(c_szFileName))

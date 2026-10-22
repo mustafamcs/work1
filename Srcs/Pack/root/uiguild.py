@@ -21,8 +21,8 @@ import chr
 import uiScriptLocale
 from _weakref import proxy
 
-DISABLE_GUILD_SKILL = False
-DISABLE_DECLARE_WAR = False
+DISABLE_GUILD_SKILL = constInfo.DISABLE_GUILD_SKILL
+DISABLE_DECLARE_WAR = constInfo.DISABLE_DECLARE_WAR
 
 def NumberToMoneyString(n):
 	return localeInfo.NumberToMoneyString(n)

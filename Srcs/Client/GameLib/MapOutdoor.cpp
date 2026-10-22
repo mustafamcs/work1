@@ -8,7 +8,6 @@
 #include "TerrainPatch.h"
 #include "AreaTerrain.h"
 
-//#define USE_LEVEL
 // unsigned int uiNumSplat;
 
 struct FGetObjectHeight
@@ -66,7 +65,6 @@ struct FGetPickingPoint
 	}
 };
 
-// #define ENABLE_FOG_LOAD
 CMapOutdoor::CMapOutdoor()
 {
 #ifdef ENABLE_FOG_LOAD

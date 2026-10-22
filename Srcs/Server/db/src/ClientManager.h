@@ -25,7 +25,6 @@
 
 // PROTO_FROM_DB=1: proto sahibi SQL (common.item_proto/mob_proto okunur).
 // PROTO_FROM_DB=0 + MIRROR2DB=1: txt/json kaynak olur, boot'ta tabloya yansıtılır.
-#define ENABLE_PROTO_FROM_DB
 
 #ifdef ENABLE_IKASHOP_RENEWAL
 inline std::optional<rapidjson::Document> str_to_json(const char* str) {

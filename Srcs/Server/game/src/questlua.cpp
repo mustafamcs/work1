@@ -716,7 +716,6 @@ namespace quest
 			}
 		}
 
-#define ENABLE_TRANSLATE_LUA
 #ifdef ENABLE_TRANSLATE_LUA
 		{
 			char translateFileName[256];

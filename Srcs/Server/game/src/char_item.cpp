@@ -57,10 +57,6 @@
 #	endif
 #endif
 
-#define ENABLE_EFFECT_EXTRAPOT
-#define ENABLE_BOOKS_STACKFIX
-#define ENABLE_ITEM_RARE_ATTR_LEVEL_PCT
-#define ENABLE_UNIQUE_ITEM_AUTOSPLIT
 
 enum {ITEM_BROKEN_METIN_VNUM = 28960};
 
@@ -1625,8 +1621,6 @@ int CalculateConsumeSP(LPCHARACTER lpChar)
 	return needSP;
 }
 
-// #define ENABLE_FIREWORK_STUN
-#define ENABLE_ADDSTONE_FAILURE
 bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 {
 	if (!item->IsProfileUsable())

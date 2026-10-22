@@ -44,11 +44,6 @@
 
 #include "input.h"
 
-#define ENABLE_CHAT_COLOR_SYSTEM
-#define ENABLE_CHAT_LOGGING
-#define ENABLE_CHAT_SPAMLIMIT
-#define ENABLE_WHISPER_CHAT_SPAMLIMIT
-#define ENABLE_CHECK_GHOSTMODE
 
 #ifdef ENABLE_CHAT_LOGGING
 static char	__escape_string[1024];
@@ -1566,7 +1561,6 @@ void CInputMain::Move(LPCHARACTER ch, const char * data)
 	//};
 
 	{
-		// #define ENABLE_TP_SPEED_CHECK
 		#ifdef ENABLE_TP_SPEED_CHECK
 		const float fDist = DISTANCE_SQRT((ch->GetX() - pinfo->lX) / 100, (ch->GetY() - pinfo->lY) / 100);
 		if (((false == ch->IsRiding() && fDist > 25) || fDist > 60) && OXEVENT_MAP_INDEX != ch->GetMapIndex()) // @fixme106 (changed 40 to 60)

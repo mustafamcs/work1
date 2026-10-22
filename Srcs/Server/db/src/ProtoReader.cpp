@@ -12,7 +12,6 @@
 
 using namespace std;
 
-#define ENABLE_NUMERIC_FIELD
 #ifdef ENABLE_NUMERIC_FIELD
 bool _IsNumericString(const std::string& trimInputString)
 {

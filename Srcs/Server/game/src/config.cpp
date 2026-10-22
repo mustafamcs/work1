@@ -220,7 +220,6 @@ static void FN_log_adminpage()
 	sys_log(1, "ADMIN_PAGE_PASSWORD = (ayarli)");
 }
 
-#define ENABLE_AUTODETECT_INTERNAL_IP
 bool GetIPInfo()
 {
 #ifndef __WIN32__
@@ -1333,7 +1332,6 @@ static bool __LoadGeneralConfigFile(const char* configName)
 	return true;
 	}
 
-#define ENABLE_CMD_PLAYER
 static bool __LoadDefaultCMDFile(const char* cmdName)
 	{
 	FILE	*fp;
@@ -1395,7 +1393,6 @@ static bool __LoadDefaultCMDFile(const char* cmdName)
 	return false;
 }
 
-#define ENABLE_EXPTABLE_FROMDB
 #ifdef ENABLE_EXPTABLE_FROMDB
 static bool __LoadExpTableFromDB(void)
 {
@@ -1424,8 +1421,6 @@ static bool __LoadExpTableFromDB(void)
 }
 #endif
 
-// #define ENABLE_GENERAL_CMD
-// #define ENABLE_GENERAL_CONFIG
 void config_init(const string& st_localeServiceName)
 {
 	// LOCALE_SERVICE

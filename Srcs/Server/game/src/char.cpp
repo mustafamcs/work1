@@ -916,7 +916,6 @@ void CHARACTER::RestartAtSamePos()
 	}
 }
 
-// #define ENABLE_SHOWNPCLEVEL
 void CHARACTER::EncodeInsertPacket(LPENTITY entity)
 {
 	LPDESC d;
@@ -1813,8 +1812,6 @@ void CHARACTER::SetEmpire(BYTE bEmpire)
 	m_bEmpire = bEmpire;
 }
 
-#define ENABLE_GM_FLAG_IF_TEST_SERVER
-#define ENABLE_GM_FLAG_FOR_LOW_WIZARD
 void CHARACTER::SetPlayerProto(const TPlayerTable * t)
 {
 	if (!GetDesc() || !*GetDesc()->GetHostName())
@@ -5454,7 +5451,6 @@ bool CHARACTER::WarpSet(long x, long y, long lPrivateMapIndex)
 	return true;
 }
 
-#define ENABLE_GOHOME_IF_MAP_NOT_ALLOWED
 void CHARACTER::WarpEnd()
 {
 	if (test_server)
@@ -6455,7 +6451,6 @@ void CHARACTER::EnterMount()
 		EnterHorse();
 }
 
-// #define ENABLE_MOUNT_ENTITY_REFRESH
 void CHARACTER::MountVnum(DWORD vnum)
 {
 	if (m_dwMountVnum == vnum)

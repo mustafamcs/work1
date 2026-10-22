@@ -1,9 +1,10 @@
-import app
+import constInfo
+
 import ui
 import localeInfo
 import uiScriptLocale
 
-ENABLE_HELP_MULTIPAGE = 0
+ENABLE_HELP_MULTIPAGE = constInfo.ENABLE_HELP_MULTIPAGE
 
 class HelpWindow(ui.ScriptWindow):
 	def __init__(self):

@@ -73,9 +73,6 @@ bool __IS_TEST_SERVER_MODE__=false;
 // #include "PythonuiscriptlibManager.cpp"
 #endif
 
-#define ENABLE_PYLIB_CHECK
-#define ENABLE_MILES_CHECK
-// #define ENABLE_DAEMONPROTECTION
 
 #ifdef ENABLE_DAEMONPROTECTION
 #define DPDLL_FILENAME	"dpdll.dll"

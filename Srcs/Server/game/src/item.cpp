@@ -959,7 +959,6 @@ bool CItem::IsEquipable() const
 	return false;
 }
 
-#define ENABLE_IMMUNE_FIX
 // return false on error state
 bool CItem::EquipTo(LPCHARACTER ch, BYTE bWearCell)
 {

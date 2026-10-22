@@ -1064,7 +1064,6 @@ EVENTFUNC(reload_spam_event)
 	return PASSES_PER_SEC(g_uiSpamReloadCycle);
 }
 
-// #define ENABLE_SPAMDB_REFRESH
 void LoadSpamDB()
 {
 	AccountDB::instance().ReturnQuery(QID_SPAM_DB, 0, NULL, "SELECT word, score FROM spam_db WHERE type='SPAM'");

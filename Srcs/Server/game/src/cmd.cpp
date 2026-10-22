@@ -6,7 +6,6 @@
 #include "log.h"
 #include "desc.h"
 #include "../../common/PulseManager.h"
-// #define ENABLE_BLOCK_CMD_SHORTCUT
 
 ACMD(do_user_horse_ride);
 ACMD(do_user_horse_back);

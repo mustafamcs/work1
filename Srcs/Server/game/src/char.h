@@ -22,9 +22,6 @@
 #include <unordered_set>
 #endif
 
-// #define ENABLE_ANTI_CMD_FLOOD
-#define ENABLE_OPEN_SHOP_WITH_ARMOR
-#define ENABLE_SKILL_COOLDOWN_CHECK
 
 enum eMountType {MOUNT_TYPE_NONE=0, MOUNT_TYPE_NORMAL=1, MOUNT_TYPE_COMBAT=2, MOUNT_TYPE_MILITARY=3};
 eMountType GetMountLevelByVnum(DWORD dwMountVnum, bool IsNew);

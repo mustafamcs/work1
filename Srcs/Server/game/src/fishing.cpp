@@ -27,7 +27,6 @@
 #include "unique_item.h"
 #endif
 
-#define ENABLE_FISHINGROD_RENEWAL
 namespace fishing
 {
 	enum

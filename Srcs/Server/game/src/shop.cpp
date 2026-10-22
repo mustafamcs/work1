@@ -19,7 +19,6 @@
 #include "mob_manager.h"
 #include "locale_service.h"
 
-//#define ENABLE_SHOP_BLACKLIST
 /* ------------------------------------------------------------------------------------ */
 CShop::CShop()
 	: m_dwVnum(0), m_dwNPCVnum(0), m_pkPC(NULL)

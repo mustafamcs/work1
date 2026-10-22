@@ -377,7 +377,6 @@ void CHARACTER::ApplyMobAttribute(const TMobTable* table)
 #endif
 }
 
-// #define ENABLE_IMMUNE_PERC
 bool CHARACTER::IsImmune(DWORD dwImmuneFlag)
 {
 	// 1 stun, 2 slow, 4 fall = 7 all == X

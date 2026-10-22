@@ -1,6 +1,8 @@
 #ifndef _DEBUG_ALLOCATOR_H_
 #define _DEBUG_ALLOCATOR_H_
 
+#include "../../common/CommonDefines.h"
+
 #include <cstdlib>
 #include <new>
 

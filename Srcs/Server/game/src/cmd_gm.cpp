@@ -821,7 +821,6 @@ ACMD(do_purge)
 		sys_err("PURGE_ERROR.NULL_SECTREE(haritaIndeksi=%d, konum=(%d, %d)", ch->GetMapIndex(), ch->GetX(), ch->GetY());
 }
 
-#define ENABLE_CMD_IPURGE_EX
 ACMD(do_item_purge)
 {
 	ch->ComputePoints(); //@fixme300
@@ -2584,7 +2583,6 @@ ACMD(do_getqf)
 		pPC->SendFlagList(ch);
 }
 
-#define ENABLE_SET_STATE_WITH_TARGET
 ACMD(do_set_state)
 {
 	char arg1[256];
@@ -3711,7 +3709,6 @@ ACMD(do_duel)
 	}
 }
 
-#define ENABLE_STATPLUS_NOLIMIT
 ACMD(do_stat_plus_amount)
 {
 	char szPoint[256];

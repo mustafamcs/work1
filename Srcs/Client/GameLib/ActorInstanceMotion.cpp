@@ -286,7 +286,6 @@ bool CActorInstance::InterceptLoopMotion(DWORD dwMotion, float fBlendTime)
 	return InterceptMotion(MOTION_TYPE_LOOP, dwMotion, fBlendTime);
 }
 
-#define ENABLE_WALK_RUN_ANI_ALTERNATIVE
 void CActorInstance::SetLoopMotion(DWORD dwMotion, float fBlendTime, float fSpeedRatio)
 {
 	if (!m_pkCurRaceData)

@@ -14,7 +14,6 @@
 
 #include "utils.h"
 
-// #define ENABLE_ACCOUNT_W_SPECIALCHARS
 bool FN_IS_VALID_LOGIN_STRING(const char *str)
 {
 	const char*	tmp;

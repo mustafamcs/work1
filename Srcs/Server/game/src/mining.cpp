@@ -9,7 +9,6 @@
 #include "log.h"
 #include "skill.h"
 
-#define ENABLE_PICKAXE_RENEWAL
 namespace mining
 {
 	enum

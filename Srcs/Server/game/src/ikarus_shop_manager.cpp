@@ -36,7 +36,6 @@ DerivedType DerivedFromBase(const BaseType& base) {
 }
 
 
-// #define ENABLE_IKASHOP_GM_PROTECTION
 static bool CheckGMLevel(LPCHARACTER ch) 
 {
 	return

@@ -338,7 +338,6 @@ void CInputDB::ChangeName(LPDESC d, const char * data)
 		}
 }
 
-#define ENABLE_GOHOME_IF_MAP_NOT_EXIST
 void CInputDB::PlayerLoad(LPDESC d, const char * data)
 {
 	TPlayerTable * pTab = (TPlayerTable *) data;

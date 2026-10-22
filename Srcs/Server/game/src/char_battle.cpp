@@ -38,9 +38,6 @@
 #include "BlueDragon.h"
 #include "DragonLair.h"
 
-#define ENABLE_EFFECT_PENETRATE
-#define ENABLE_NEWEXP_CALCULATION
-// #define ENABLE_NO_DAMAGE_QUEST_RUNNING
 
 static DWORD __GetPartyExpNP(const DWORD level)
 {

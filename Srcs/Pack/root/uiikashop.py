@@ -1,5 +1,6 @@
 # cpython modules
-import app
+import constInfo
+
 import player
 import item
 import net
@@ -26,7 +27,7 @@ MOVE_SHOP_ENTITY_COST = 100000
 SLOT_SIZE = 32
 MIN_OFFER_PCT = 30 # private offer min % of selling price
 
-ENABLE_DEFAULT_UI_BOARD = 1
+ENABLE_DEFAULT_UI_BOARD = constInfo.ENABLE_DEFAULT_UI_BOARD
 
 def debug(fmt, *args):
 	if args:

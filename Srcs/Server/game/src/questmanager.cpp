@@ -539,7 +539,6 @@ namespace quest
 			sys_err("QUEST no such pc id : %d", pc);
 	}
 
-#define ENABLE_PARTYKILL
 	void CQuestManager::Kill(unsigned int pc, unsigned int npc)
 	{
 		//m_CurrentNPCRace = npc;

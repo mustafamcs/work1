@@ -398,7 +398,6 @@ class CGuild
 #endif
 };
 
-// #define ENABLE_NEWGUILDMAKE
 
 #ifdef ENABLE_D_NJGUILD
 #include "char.h"

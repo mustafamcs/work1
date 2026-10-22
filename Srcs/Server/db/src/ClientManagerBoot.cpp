@@ -1278,7 +1278,6 @@ bool CClientManager::MirrorItemTableIntoDB()
 #define VERIFY_IFIELD(x,y) if (data[x]!=NULL && data[x][0]!='\0') str_to_number(y, data[x]);
 #define VERIFY_SFIELD(x,y) if (data[x]!=NULL && data[x][0]!='\0') strlcpy(y, data[x], sizeof(y));
 
-#define ENABLE_AUTODETECT_VNUMRANGE
 
 namespace MProto
 {

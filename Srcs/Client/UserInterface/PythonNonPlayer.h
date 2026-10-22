@@ -1,6 +1,6 @@
 #pragma once
-// #define ENABLE_NEW_MOB_PROTO_STRUCT_20141125	// bleeding resistance 2014/11/25
-// #define ENABLE_NEW_MOB_PROTO_STRUCT_20151020	// claw resistance 2015/10/20
+
+#include "Locale_inc.h"
 
 class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 {

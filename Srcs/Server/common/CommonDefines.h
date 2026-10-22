@@ -118,6 +118,144 @@ enum eCommonDefines {
 #define ENABLE_LARGE_DYNAMIC_PACKETS
 #define ENABLE_IKASHOP_ENTITIES
 
+
+//////////////////////////////////////////////////////////////////////////
+// ### Daginik Dosyalardan Toplanan Ayarlar ###
+// <Server/db/src/ClientManager.cpp>
+#define ENABLE_DEFAULT_PRIV
+// <Server/db/src/ClientManager.cpp>
+#define ENABLE_ITEMAWARD_REFRESH
+// <Server/db/src/ClientManager.h>
+#define ENABLE_PROTO_FROM_DB
+// <Server/db/src/ClientManagerBoot.cpp>
+#ifdef ENABLE_PROTO_FROM_DB
+#define ENABLE_AUTODETECT_VNUMRANGE
+#endif
+// <Server/db/src/ProtoReader.cpp>
+#define ENABLE_NUMERIC_FIELD
+// <Server/game/src/char.cpp>
+// #define ENABLE_SHOWNPCLEVEL
+// <Server/game/src/char.cpp>
+#define ENABLE_GM_FLAG_IF_TEST_SERVER
+// <Server/game/src/char.cpp>
+#define ENABLE_GM_FLAG_FOR_LOW_WIZARD
+// <Server/game/src/char.cpp>
+#define ENABLE_GOHOME_IF_MAP_NOT_ALLOWED
+// <Server/game/src/char.cpp>
+// #define ENABLE_MOUNT_ENTITY_REFRESH
+// <Server/game/src/char.h>
+// #define ENABLE_ANTI_CMD_FLOOD
+// <Server/game/src/char.h>
+#define ENABLE_OPEN_SHOP_WITH_ARMOR
+// <Server/game/src/char.h>
+#define ENABLE_SKILL_COOLDOWN_CHECK
+// <Server/game/src/char_battle.cpp>
+#define ENABLE_EFFECT_PENETRATE
+// <Server/game/src/char_battle.cpp>
+#define ENABLE_NEWEXP_CALCULATION
+// <Server/game/src/char_battle.cpp>
+// #define ENABLE_NO_DAMAGE_QUEST_RUNNING
+// <Server/game/src/char_item.cpp>
+#define ENABLE_EFFECT_EXTRAPOT
+// <Server/game/src/char_item.cpp>
+#define ENABLE_BOOKS_STACKFIX
+// <Server/game/src/char_item.cpp>
+#define ENABLE_ITEM_RARE_ATTR_LEVEL_PCT
+// <Server/game/src/char_item.cpp>
+#define ENABLE_UNIQUE_ITEM_AUTOSPLIT
+// <Server/game/src/char_item.cpp>
+// #define ENABLE_FIREWORK_STUN
+// <Server/game/src/char_item.cpp>
+#define ENABLE_ADDSTONE_FAILURE
+// <Server/game/src/char_resist.cpp>
+// #define ENABLE_IMMUNE_PERC
+// <Server/game/src/char_skill.cpp>
+#define ENABLE_FORCE2MASTERSKILL
+// <Server/game/src/char_skill.cpp>
+// #define ENABLE_NULLIFYAFFECT_LIMIT
+// <Server/game/src/char_skill.cpp>
+// #define ENABLE_MASTER_SKILLBOOK_NO_STEPS
+// <Server/game/src/cmd.cpp>
+// #define ENABLE_BLOCK_CMD_SHORTCUT
+// <Server/game/src/cmd_gm.cpp>
+#define ENABLE_CMD_IPURGE_EX
+// <Server/game/src/cmd_gm.cpp>
+#define ENABLE_SET_STATE_WITH_TARGET
+// <Server/game/src/cmd_gm.cpp>
+#define ENABLE_STATPLUS_NOLIMIT
+// <Server/game/src/config.cpp>
+#define ENABLE_AUTODETECT_INTERNAL_IP
+// <Server/game/src/config.cpp>
+#define ENABLE_CMD_PLAYER
+// <Server/game/src/config.cpp>
+#define ENABLE_EXPTABLE_FROMDB
+// <Server/game/src/config.cpp>
+// #define ENABLE_GENERAL_CMD
+// <Server/game/src/config.cpp>
+// #define ENABLE_GENERAL_CONFIG
+// <Server/game/src/db.cpp>
+// #define ENABLE_SPAMDB_REFRESH
+// <Server/game/src/debug_allocator.h>
+// #define DEBUG_ALLOC                  // debug allocator/DebugPtr sistemi (acinca USE_DEBUG_PTR otomatik gelir)
+// <Server/game/src/fishing.cpp>
+#define ENABLE_FISHINGROD_RENEWAL
+// <Server/game/src/guild.cpp>
+#define ENABLE_GUILD_COMMENT_ANTIFLOOD
+// <Server/game/src/guild.h>
+// #define ENABLE_NEWGUILDMAKE
+// <Server/game/src/horse_rider.h>
+// #define ENABLE_INFINITE_HORSE_HEALTH_STAMINA
+// <Server/game/src/ikarus_shop_manager.cpp>
+// #define ENABLE_IKASHOP_GM_PROTECTION
+// <Server/game/src/input_auth.cpp>
+// #define ENABLE_ACCOUNT_W_SPECIALCHARS
+// <Server/game/src/input_db.cpp>
+#define ENABLE_GOHOME_IF_MAP_NOT_EXIST
+// <Server/game/src/input_login.cpp>
+// #define USE_LYCAN_CREATE_POSITION
+// <Server/game/src/input_main.cpp>
+#define ENABLE_CHAT_COLOR_SYSTEM
+// <Server/game/src/input_main.cpp>
+#define ENABLE_CHAT_LOGGING
+// <Server/game/src/input_main.cpp>
+#define ENABLE_CHAT_SPAMLIMIT
+// <Server/game/src/input_main.cpp>
+#define ENABLE_WHISPER_CHAT_SPAMLIMIT
+// <Server/game/src/input_main.cpp>
+#define ENABLE_CHECK_GHOSTMODE
+// <Server/game/src/input_main.cpp>
+		// #define ENABLE_TP_SPEED_CHECK
+// <Server/game/src/item.cpp>
+#define ENABLE_IMMUNE_FIX
+// <Server/game/src/item_manager.h>
+#define ENABLE_ITEM_PROTO_MAP
+// <Server/game/src/limit_time.h>
+//#define ENABLE_LIMIT_TIME
+// <Server/game/src/mining.cpp>
+#define ENABLE_PICKAXE_RENEWAL
+// <Server/game/src/questlua.cpp>
+#define ENABLE_TRANSLATE_LUA
+// <Server/game/src/questlua_pc.cpp>
+// #define ENABLE_LOCALECHECK_CHANGENAME
+// <Server/game/src/questlua_pc.cpp>
+// #define ENABLE_PC_OPENSHOP
+// <Server/game/src/questmanager.cpp>
+#define ENABLE_PARTYKILL
+// <Server/game/src/shop.cpp>
+//#define ENABLE_SHOP_BLACKLIST
+
+// ### Hic Tanimlanmamis Kapali Ozellikler (envanter) ###
+// #define ENABLE_ACCE_SYSTEM                         // Server/game/src/ikarus_shop_manager.cpp
+// #define ENABLE_CHANGELOOK_SYSTEM                   // Client/UserInterface/PythonIkarusShop.h, Server/db/src/ClientManagerIkarusShop.cpp, Server/db/src/IkarusShopCache.cpp
+// #define ENABLE_GOOGLE_TEST                         // Server/game/src/main.cpp
+// #define ENABLE_HACK_TELEPORT_LOG                   // Server/game/src/input_main.cpp
+// #define ENABLE_IKASHOP_LOGS                        // Server/db/src/ClientManager.h, Server/db/src/ClientManagerIkarusShop.cpp, Server/db/src/IkarusShopCache.cpp
+// #define ENABLE_ITEM_COUNT_LIMIT_SYSTEM             // Client/UserInterface/Packet.h, Server/game/src/packet.h
+// #define ENABLE_MONARCH_MOB_CMD_MAP_CHECK           // Server/game/src/cmd_general.cpp
+// #define ENABLE_OFFLINESHOP_DEBUG                   // Server/db/src/ClientManagerIkarusShop.cpp
+// #define ENABLE_SASH_SYSTEM                         // Server/game/src/ikarus_shop_manager.cpp
+// #define ENABLE_SOULBIND_SYSTEM                     // Client/GameLib/ItemData.h, Client/UserInterface/PythonApplicationModule.cpp, Server/game/src/ikarus_shop_manager.cpp
+// #define USE_STACKTRACE                             // Server/game/src/main.cpp
 #endif
 
 

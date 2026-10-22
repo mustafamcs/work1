@@ -25,7 +25,6 @@ BOOL USE_ARMOR_SPECULAR=FALSE;
 BOOL RIDE_HORSE_ENABLE=TRUE;
 const float c_fDefaultRotationSpeed = 1200.0f;
 const float c_fDefaultHorseRotationSpeed = 300.0f;
-#define ENABLE_NO_MOUNT_CHECK
 
 bool IsWall(unsigned race)
 {
@@ -2823,9 +2822,6 @@ void CInstanceBase::__ClearArmorRefineEffect()
 	}
 }
 
-// #define ENABLE_SIMPLE_REFINED_EFFECT_CHECK
-// #define USE_WEAPON_COSTUME_WITH_EFFECT
-// #define USE_BODY_COSTUME_WITH_EFFECT
 UINT CInstanceBase::__GetRefinedEffect(CItemData* pItem)
 {
 #ifdef ENABLE_SIMPLE_REFINED_EFFECT_CHECK
