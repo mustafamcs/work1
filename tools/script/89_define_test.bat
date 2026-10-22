@@ -2,6 +2,11 @@
 title work1 - define kapali derleme testi
 call "%~dp0_ayar.bat"
 
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem Kullanim:
 rem   89_define_test.bat --off      Controls.h'daki tum define'leri kapatir
 rem   89_define_test.bat --restore  Controls.h'i geri yukler

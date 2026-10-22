@@ -2,7 +2,11 @@
 title work1 - istemci baslat
 call "%~dp0_ayar.bat"
 
-rem istemci baslatmak admin gerektirmez
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 
 if exist "%CLIENTDIR%\metin2client.exe" (
   start "metin2" /D "%CLIENTDIR%" metin2client.exe

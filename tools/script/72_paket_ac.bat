@@ -2,9 +2,13 @@
 title work1 - paket ac (dogrulama)
 call "%~dp0_ayar.bat"
 
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
+  exit /b
+)
 rem Kullanim: 72_paket_ac.bat <paket_adi>
 rem client\pack\<ad>.eix/epk dosyasini tools\script\unpacked\<ad>\ altina acar.
-rem Sadece okuma yapar, admin gerektirmez.
 
 if "%~1"=="" ( echo Kullanim: %~n0 ^<paket_adi^> & exit /b 1 )
 if not exist "%PACKDIR%\%~1.epk" ( echo [HATA] %PACKDIR%\%~1.epk yok & exit /b 1 )
