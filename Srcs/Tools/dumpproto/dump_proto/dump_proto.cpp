@@ -9,18 +9,33 @@ CItemData::TItemTable * m_pItemTable = NULL;
 int m_iItemTableSize = 0;
 
 
+// strncpy that never splits a UTF-8 multi-byte sequence
+static void strncpy_utf8(char* dst, const char* src, size_t dstsize)
+{
+	size_t maxlen = dstsize - 1;
+	size_t n = strnlen(src, maxlen);
+	if (n == maxlen && (src[n] & 0xC0) == 0x80)
+	{
+		while (n > 0 && (src[n] & 0xC0) == 0x80)
+			--n;
+	}
+	memcpy(dst, src, n);
+	dst[n] = 0;
+}
+
+
 bool Set_Proto_Mob_Table(CPythonNonPlayer::TMobTable *mobTable, cCsvTable &csvTable, std::map<int,const char*> &nameMap)
 {
 	int col = 0;
 
 	mobTable->dwVnum               = atoi(csvTable.AsStringByIndex(col++));
-	strncpy(mobTable->szName, csvTable.AsStringByIndex(col++), CHARACTER_NAME_MAX_LEN);
+	strncpy_utf8(mobTable->szName, csvTable.AsStringByIndex(col++), sizeof(mobTable->szName));
 	auto it = nameMap.find(mobTable->dwVnum);
 	if (it != nameMap.end()) {
 		const char * localeName = it->second;
-		strncpy(mobTable->szLocaleName, localeName, sizeof (mobTable->szLocaleName));
+		strncpy_utf8(mobTable->szLocaleName, localeName, sizeof (mobTable->szLocaleName));
 	} else {
-		strncpy(mobTable->szLocaleName, mobTable->szName, sizeof (mobTable->szLocaleName));
+		strncpy_utf8(mobTable->szLocaleName, mobTable->szName, sizeof (mobTable->szLocaleName));
 	}
 	//4. RANK
 	int rankValue = get_Mob_Rank_Value(csvTable.AsStringByIndex(col++));
@@ -494,13 +509,13 @@ bool Set_Proto_Item_Table(CItemData::TItemTable *itemTable, cCsvTable &csvTable,
 
 	int col = 1;
 
-	strncpy(itemTable->szName, csvTable.AsStringByIndex(col++), CItemData::ITEM_NAME_MAX_LEN);
+	strncpy_utf8(itemTable->szName, csvTable.AsStringByIndex(col++), sizeof(itemTable->szName));
 	auto it = nameMap.find(itemTable->dwVnum);
 	if (it != nameMap.end()) {
 		const char * localeName = it->second;
-		strncpy(itemTable->szLocaleName, localeName, sizeof(itemTable->szLocaleName));
+		strncpy_utf8(itemTable->szLocaleName, localeName, sizeof(itemTable->szLocaleName));
 	} else {
-		strncpy(itemTable->szLocaleName, itemTable->szName, sizeof(itemTable->szLocaleName));
+		strncpy_utf8(itemTable->szLocaleName, itemTable->szName, sizeof(itemTable->szLocaleName));
 	}
 	itemTable->bType = get_Item_Type_Value(csvTable.AsStringByIndex(col++));
 	itemTable->bSubType = get_Item_SubType_Value(itemTable->bType, csvTable.AsStringByIndex(col++));
@@ -902,6 +917,8 @@ const option::Descriptor usage[] = // don't use TAB in here!
 
 int main(int argc, char ** argv)
 {
+	CLZO cLZO;
+
 	argc-=(argc>0); argv+=(argc>0); // skip program name argv[0] if present
 	option::Stats  stats(usage, argc, argv);
 	std::vector<option::Option> options(stats.options_max);

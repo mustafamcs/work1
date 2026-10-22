@@ -344,8 +344,7 @@ CLZO::CLZO() : m_pWorkMem(NULL)
 {
 	if (lzo_init() != LZO_E_OK)
 	{
-		fprintf(stderr, "LZO: cannot initialize\n");
-		return;
+		fprintf(stderr, "LZO: cannot initialize (continuing anyway)\n");
 	}
 
 #if defined( LZO1X_999_MEM_COMPRESS )
