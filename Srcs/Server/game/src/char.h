@@ -63,18 +63,12 @@ enum
 	MAIN_RACE_ASSASSIN_M,
 	MAIN_RACE_SURA_W,
 	MAIN_RACE_SHAMAN_M,
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	MAIN_RACE_WOLFMAN_M,
-#endif
 	MAIN_RACE_MAX_NUM,
 };
 
 enum
 {
 	POISON_LENGTH = 30,
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	BLEEDING_LENGTH = 30,
-#endif
 	STAMINA_PER_STEP = 1,
 	SAFEBOX_PAGE_SIZE = 9,
 	AI_CHANGE_ATTACK_POISITION_TIME_NEAR = 10000,
@@ -120,9 +114,6 @@ enum EDamageType
 	DAMAGE_TYPE_MAGIC,
 	DAMAGE_TYPE_POISON,
 	DAMAGE_TYPE_SPECIAL,
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	DAMAGE_TYPE_BLEEDING,
-#endif
 };
 
 enum DamageFlag
@@ -133,9 +124,6 @@ enum DamageFlag
 	DAMAGE_BLOCK	= (1 << 3),
 	DAMAGE_PENETRATE= (1 << 4),
 	DAMAGE_CRITICAL = (1 << 5),
-#if defined(ENABLE_WOLFMAN_CHARACTER) && !defined(USE_MOB_BLEEDING_AS_POISON)
-	DAMAGE_BLEEDING	= (1 << 6),
-#endif
 };
 
 enum EPointTypes
@@ -318,14 +306,6 @@ enum EPointTypes
 	POINT_RESIST_CRITICAL = 136,
 	POINT_RESIST_PENETRATE = 137,
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	POINT_BLEEDING_REDUCE = 138,
-	POINT_BLEEDING_PCT = 139,
-
-	POINT_ATTBONUS_WOLFMAN = 140,
-	POINT_RESIST_WOLFMAN = 141,
-	POINT_RESIST_CLAW = 142,
-#endif
 
 #ifdef ENABLE_ACCE_COSTUME_SYSTEM
 	POINT_ACCEDRAIN_RATE = 143,
@@ -355,9 +335,6 @@ enum EPointTypes
 	POINT_ATTBONUS_BELL			= 158, //unk
 	POINT_ATTBONUS_FAN			= 159, //unk
 	POINT_ATTBONUS_BOW			= 160, //unk
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	POINT_ATTBONUS_CLAW			= 161, //unk
-#endif
 
 	POINT_MAX,
 };
@@ -1389,10 +1366,6 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 
 		void				AttackedByPoison(LPCHARACTER pkAttacker);
 		void				RemovePoison();
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		void				AttackedByBleeding(LPCHARACTER pkAttacker);
-		void				RemoveBleeding();
-#endif
 		void				AttackedByFire(LPCHARACTER pkAttacker, int amount, int count);
 		void				RemoveFire();
 
@@ -1845,9 +1818,6 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 		LPEVENT				m_pkFishingEvent;
 		LPEVENT				m_pkAffectEvent;
 		LPEVENT				m_pkPoisonEvent;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		LPEVENT				m_pkBleedingEvent;
-#endif
 		LPEVENT				m_pkFireEvent;
 		LPEVENT				m_pkWarpNPCEvent;
 		//DELAYED_WARP
@@ -1864,9 +1834,6 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 		bool IsWarping() const { return m_pkWarpEvent ? true : false; }
 
 		bool				m_bHasPoisoned;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		bool				m_bHasBled;
-#endif
 
 		const CMob *		m_pkMobData;
 		CMobInstance *		m_pkMobInst;

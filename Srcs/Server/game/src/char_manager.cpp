@@ -882,12 +882,6 @@ bool CHARACTER_MANAGER::GetCharactersByRaceNum(DWORD dwRaceNum, CharacterVectorI
 #define FIND_JOB_SHAMAN_1	(1 << 13)
 #define FIND_JOB_SHAMAN_2	(1 << 14)
 #define FIND_JOB_SHAMAN		(FIND_JOB_SHAMAN_0 | FIND_JOB_SHAMAN_1 | FIND_JOB_SHAMAN_2)
-#ifdef ENABLE_WOLFMAN_CHARACTER
-#define FIND_JOB_WOLFMAN_0	(1 << 15)
-#define FIND_JOB_WOLFMAN_1	(1 << 16)
-#define FIND_JOB_WOLFMAN_2	(1 << 17)
-#define FIND_JOB_WOLFMAN		(FIND_JOB_WOLFMAN_0 | FIND_JOB_WOLFMAN_1 | FIND_JOB_WOLFMAN_2)
-#endif
 
 //
 // (job+1)*3+(skill_group)

@@ -2447,9 +2447,6 @@ void initPlayer()
 	PyModule_AddIntConstant(poModule, "MAIN_RACE_ASSASSIN_M", MAIN_RACE_ASSASSIN_M);
 	PyModule_AddIntConstant(poModule, "MAIN_RACE_SURA_W", MAIN_RACE_SURA_W);
 	PyModule_AddIntConstant(poModule, "MAIN_RACE_SHAMAN_M", MAIN_RACE_SHAMAN_M);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	PyModule_AddIntConstant(poModule, "MAIN_RACE_WOLFMAN_M", MAIN_RACE_WOLFMAN_M);
-#endif
 	PyModule_AddIntConstant(poModule, "MAIN_RACE_MAX_NUM",MAIN_RACE_MAX_NUM);
 
 	PyModule_AddIntConstant(poModule, "ENERGY",		POINT_ENERGY);

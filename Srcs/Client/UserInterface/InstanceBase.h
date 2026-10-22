@@ -125,11 +125,6 @@ class CInstanceBase
 			AFFECT_PREMIUM_SILVER,
 			AFFECT_PREMIUM_GOLD,
 			AFFECT_RAMADAN_RING,
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			AFFECT_BLEEDING,				// 42
-			AFFECT_RED_POSSESSION,			// 43
-			AFFECT_BLUE_POSSESSION,			// 44
-#endif
 
 			AFFECT_NUM = 64,
 
@@ -318,15 +313,6 @@ class CInstanceBase
 			EFFECT_BODYARMOR_SPECIAL3,	// 5-1
 #endif
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			EFFECT_CLAW_REFINED7,		//22
-			EFFECT_CLAW_REFINED8,		//23
-			EFFECT_CLAW_REFINED9,		//24
-
-			EFFECT_CLAW_REFINED7_LEFT,	//25
-			EFFECT_CLAW_REFINED8_LEFT,	//26
-			EFFECT_CLAW_REFINED9_LEFT,	//27
-#endif
 
 			EFFECT_REFINED_NUM,
 		};
@@ -1173,10 +1159,6 @@ class CInstanceBase
 
 inline int RaceToJob(int race)
 {
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	if (race==8)
-		return 4;
-#endif
 	const int JOB_NUM = 4;
 	return race % JOB_NUM;
 }
@@ -1189,9 +1171,6 @@ inline int RaceToSex(int race)
 		case 2:
 		case 5:
 		case 7:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case 8:
-#endif
 			return 1;
 		case 1:
 		case 3:

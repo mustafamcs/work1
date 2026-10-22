@@ -107,10 +107,6 @@ bool CActorInstance::__IsLeftHandWeapon(DWORD type)
 		return true;
 	else if (CItemData::WEAPON_BOW == type)
 		return true;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	else if (CItemData::WEAPON_CLAW == type)
-		return true;
-#endif
 	else
 		return false;
 }
@@ -121,10 +117,6 @@ bool CActorInstance::__IsRightHandWeapon(DWORD type)
 		return true;
 	else if (CItemData::WEAPON_BOW == type)
 		return false;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	else if (CItemData::WEAPON_CLAW == type)
-		return true;
-#endif
 	else
 		return true;
 }
@@ -178,26 +170,15 @@ BOOL CActorInstance::GetAttachingBoneName(DWORD dwPartIndex, const char ** c_psz
 	return m_pkCurRaceData->GetAttachingBoneName(dwPartIndex, c_pszBoneName);
 }
 
-#define AUTODETECT_LYCAN_RODNPICK_BONE
 void CActorInstance::AttachWeapon(DWORD dwParentPartIndex, DWORD dwPartIndex, CItemData * pItemData)
 {
 //	assert(m_pkCurRaceData);
 	if (!pItemData)
 		return;
 
-#if defined(ENABLE_WOLFMAN_CHARACTER) && defined(AUTODETECT_LYCAN_RODNPICK_BONE)
-	const char * szBoneName;
-	if ((GetRace()==8) && (pItemData->GetType()==CItemData::ITEM_TYPE_ROD || pItemData->GetType()==CItemData::ITEM_TYPE_PICK))
-	{
-		szBoneName = "equip_right";
-	}
-	else if (!GetAttachingBoneName(dwPartIndex, &szBoneName))
-		return;
-#else
 	const char * szBoneName;
 	if (!GetAttachingBoneName(dwPartIndex, &szBoneName))
 		return;
-#endif
 
 	if (CRaceData::PART_WEAPON_LEFT == dwPartIndex)
 	{

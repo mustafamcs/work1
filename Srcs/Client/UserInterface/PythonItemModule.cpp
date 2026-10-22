@@ -612,19 +612,11 @@ int GetApplyPoint(int iApply)
 		{ POINT_RESIST_CRITICAL,		},   // APPLY_ANTI_CRITICAL_PCT,	90
 		{ POINT_RESIST_PENETRATE,		},   // APPLY_ANTI_PENETRATE_PCT,	91
 
-	#ifdef ENABLE_WOLFMAN_CHARACTER
-		{ POINT_BLEEDING_REDUCE,		},	// APPLY_BLEEDING_REDUCE, 		92
-		{ POINT_BLEEDING_PCT,			},	// APPLY_BLEEDING_PCT, 			93
-		{ POINT_ATTBONUS_WOLFMAN,		},
-		{ POINT_RESIST_WOLFMAN,			},
-		{ POINT_RESIST_CLAW,			},
-	#else
-		{ POINT_NONE,					},	// APPLY_BLEEDING_REDUCE, 		92
-		{ POINT_NONE,					},	// APPLY_BLEEDING_PCT, 			93
+		{ POINT_NONE,					},	// 92
+		{ POINT_NONE,					},	// 93
 		{ POINT_NONE,					},
 		{ POINT_NONE,					},
 		{ POINT_NONE,					},
-	#endif
 
 	#ifdef ENABLE_ACCE_COSTUME_SYSTEM
 		{ POINT_ACCEDRAIN_RATE,			},	// APPLY_ACCEDRAIN_RATE,		97
@@ -654,11 +646,7 @@ int GetApplyPoint(int iApply)
 		{ POINT_ATTBONUS_BELL,			},	// APPLY_ATTBONUS_BELL,111
 		{ POINT_ATTBONUS_FAN,			},	// APPLY_ATTBONUS_FAN,112
 		{ POINT_ATTBONUS_BOW,			},	// APPLY_ATTBONUS_BOW,113
-	#ifdef ENABLE_WOLFMAN_CHARACTER
-		{ POINT_ATTBONUS_CLAW,			},	// APPLY_ATTBONUS_CLAW,114
-	#else
-		{ POINT_NONE,					},	// APPLY_ATTBONUS_CLAW,114
-	#endif
+		{ POINT_NONE,					},	// 114
 
 		{ POINT_RESIST_HUMAN,			},	// APPLY_RESIST_HUMAN,115
 		{ POINT_RESIST_MOUNT_FALL,		},	// APPLY_RESIST_MOUNT_FALL,116
@@ -863,9 +851,6 @@ void initItem()
 	PyModule_AddIntConstant(poModule, "WEAPON_FAN",					CItemData::WEAPON_FAN);
 	PyModule_AddIntConstant(poModule, "WEAPON_ARROW",				CItemData::WEAPON_ARROW);
 	PyModule_AddIntConstant(poModule, "WEAPON_MOUNT_SPEAR",			CItemData::WEAPON_MOUNT_SPEAR);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	PyModule_AddIntConstant(poModule, "WEAPON_CLAW",				CItemData::WEAPON_CLAW);
-#endif
 #ifdef ENABLE_QUIVER_SYSTEM
 	PyModule_AddIntConstant(poModule, "WEAPON_QUIVER",				CItemData::WEAPON_QUIVER);
 #endif
@@ -919,9 +904,6 @@ void initItem()
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_ASSASSIN",		CItemData::ITEM_ANTIFLAG_ASSASSIN);
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_SURA",			CItemData::ITEM_ANTIFLAG_SURA);
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_SHAMAN",		CItemData::ITEM_ANTIFLAG_SHAMAN);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_WOLFMAN",		CItemData::ITEM_ANTIFLAG_WOLFMAN);
-#endif
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_GET",			CItemData::ITEM_ANTIFLAG_GET);
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_DROP",			CItemData::ITEM_ANTIFLAG_DROP);
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_SELL",			CItemData::ITEM_ANTIFLAG_SELL);
@@ -969,9 +951,6 @@ void initItem()
 	PyModule_AddIntConstant(poModule, "ANTIFLAG_STACK",				CItemData::ITEM_ANTIFLAG_STACK);
 	PyModule_AddIntConstant(poModule, "ANTIFLAG_MYSHOP",			CItemData::ITEM_ANTIFLAG_MYSHOP);
 	PyModule_AddIntConstant(poModule, "ANTIFLAG_SAFEBOX",			CItemData::ITEM_ANTIFLAG_SAFEBOX);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	PyModule_AddIntConstant(poModule, "ANTIFLAG_WOLFMAN",			CItemData::ITEM_ANTIFLAG_WOLFMAN);
-#endif
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_CHANGELOOK",	CItemData::ITEM_ANTIFLAG_CHANGELOOK);
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_REINFORCE",	CItemData::ITEM_ANTIFLAG_REINFORCE);
 	PyModule_AddIntConstant(poModule, "ITEM_ANTIFLAG_ENCHANT",		CItemData::ITEM_ANTIFLAG_ENCHANT);
@@ -1111,13 +1090,6 @@ void initItem()
 	PyModule_AddIntConstant(poModule, "APPLY_RESIST_DARK",	CItemData::APPLY_RESIST_DARK );
 	PyModule_AddIntConstant(poModule, "APPLY_ANTI_CRITICAL_PCT",	CItemData::APPLY_ANTI_CRITICAL_PCT );
 	PyModule_AddIntConstant(poModule, "APPLY_ANTI_PENETRATE_PCT",	CItemData::APPLY_ANTI_PENETRATE_PCT );
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	PyModule_AddIntConstant(poModule, "APPLY_BLEEDING_PCT",	CItemData::APPLY_BLEEDING_PCT );
-	PyModule_AddIntConstant(poModule, "APPLY_BLEEDING_REDUCE",	CItemData::APPLY_BLEEDING_REDUCE );
-	PyModule_AddIntConstant(poModule, "APPLY_ATTBONUS_WOLFMAN",	CItemData::APPLY_ATT_BONUS_TO_WOLFMAN );
-	PyModule_AddIntConstant(poModule, "APPLY_RESIST_WOLFMAN",	CItemData::APPLY_RESIST_WOLFMAN );
-	PyModule_AddIntConstant(poModule, "APPLY_RESIST_CLAW",	CItemData::APPLY_RESIST_CLAW );
-#endif
 
 #ifdef ENABLE_ACCE_COSTUME_SYSTEM
 	PyModule_AddIntConstant(poModule, "APPLY_ACCEDRAIN_RATE",			CItemData::APPLY_ACCEDRAIN_RATE);
@@ -1142,9 +1114,6 @@ void initItem()
 	PyModule_AddIntConstant(poModule, "APPLY_ATTBONUS_BELL", CItemData::APPLY_ATTBONUS_BELL);
 	PyModule_AddIntConstant(poModule, "APPLY_ATTBONUS_FAN", CItemData::APPLY_ATTBONUS_FAN);
 	PyModule_AddIntConstant(poModule, "APPLY_ATTBONUS_BOW", CItemData::APPLY_ATTBONUS_BOW);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	PyModule_AddIntConstant(poModule, "APPLY_ATTBONUS_CLAW", CItemData::APPLY_ATTBONUS_CLAW);
-#endif
 	PyModule_AddIntConstant(poModule, "APPLY_RESIST_HUMAN", CItemData::APPLY_RESIST_HUMAN);
 	PyModule_AddIntConstant(poModule, "APPLY_RESIST_MOUNT_FALL", CItemData::APPLY_RESIST_MOUNT_FALL);
 	PyModule_AddIntConstant(poModule, "APPLY_MOUNT", CItemData::APPLY_MOUNT);

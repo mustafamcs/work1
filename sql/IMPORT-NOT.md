@@ -45,7 +45,7 @@ Eski sunucu dump'lari; plan disi eski DB adlarini kullanir — DUZENLEMEYIN.
 | srv1_log.sql | srv1_log | log |
 | srv1_hotbackup.sql | srv1_hotbackup | hotbackup (bos dump) |
 
-`CREATE DATABASE`/tablo adlari `srv1_*` oneklidir; iceri alacaksaniz once `srv1_` oneklerini kaldirin ya da satir verilerini (`INSERT INTO`) hedef DB'lere el ile tasi yin. `srv1_player.sql` icindeki `item_proto` (11k satir), `mob_proto` (2.8k), `shop` (33), `skill_proto` (97), `item_attr` (53), `item_attr_rare` (20) satirlari yukaridaki "icerik satirlari" ihtiyacini karsilar. Dikkat: dump `latin1` ve `cheque`/`glove`/`item_attr_wolfman` icerir — plan disi kolonlari (`cheque`, `glove`, wolfman attr) tasimayin.
+`CREATE DATABASE`/tablo adlari `srv1_*` oneklidir; iceri alacaksaniz once `srv1_` oneklerini kaldirin ya da satir verilerini (`INSERT INTO`) hedef DB'lere el ile tasi yin. `srv1_player.sql` icindeki `item_proto` (11k satir), `mob_proto` (2.8k), `shop` (33), `skill_proto` (97), `item_attr` (53), `item_attr_rare` (20) satirlari yukaridaki "icerik satirlari" ihtiyacini karsilar. Dikkat: dump `latin1` ve `cheque`/`glove` kolonlari icerir — plan disi kolonlari tasimayin. (Wolfman/lycan verileri ve `item_attr_wolfman` tablosu bu dumptan temizlendi.)
 
 ## Panel kullanici yetkileri
 

@@ -576,10 +576,6 @@ class CActorInstance : public IActorInstance, public IFlyTargetableObject
 		void ProcessMotionEventSound(const CRaceMotionData::TMotionEventData * c_pData);
 		void ProcessMotionEventFly(const CRaceMotionData::TMotionEventData * c_pData);
 		void ProcessMotionEventWarp(const CRaceMotionData::TMotionEventData * c_pData);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		void ProcessMotionEventUnk11(DWORD dwcurFrame, int iIndex, const CRaceMotionData::TMotionEventData * c_pData);
-		void ProcessMotionEventUnk12(DWORD dwcurFrame, int iIndex, const CRaceMotionData::TMotionEventData * c_pData);
-#endif
 
 		void AddMovement(float fx, float fy, float fz);
 

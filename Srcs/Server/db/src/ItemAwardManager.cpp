@@ -428,9 +428,6 @@ void ItemAwardManager::CheckItemSkillBook(TItemAward & rkItemAward, const std::v
 			const auto bSkillType = pkSkillTable->bType;
 
 			if ((JOB_WARRIOR + 1 <= bSkillType && bSkillType <= JOB_SHAMAN + 1)
-				#ifdef ENABLE_WOLFMAN_CHARACTER
-				|| bSkillType == 7
-				#endif
 			)
 				continue;
 

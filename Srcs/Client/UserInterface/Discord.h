@@ -101,10 +101,6 @@ namespace Discord
 		case NRaceData::JOB_SHAMAN + 4:
 			RaceName = "Shaman";
 			break;
-#if defined(ENABLE_WOLFMAN_CHARACTER)
-		case NRaceData::JOB_WOLFMAN + 4:
-			RaceName = "Lycan";
-#endif
 		}
 		return { RaceImage , RaceName };
 	}

@@ -29,35 +29,6 @@
 #include "MarkManager.h"
 #include "../../../Controls.h"
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-
-#ifdef USE_LYCAN_CREATE_POSITION
-
-DWORD g_lycan_create_position[4][2] =
-{
-	{		0,		0 },
-	{ 768000+38300, 896000+35500 },
-	{ 819200+38300, 896000+35500 },
-	{ 870400+38300, 896000+35500 },
-};
-
-inline DWORD LYCAN_CREATE_START_X(BYTE e, BYTE job)
-{
-	if (1 <= e && e <= 3)
-		return (job==JOB_WOLFMAN)?g_lycan_create_position[e][0]:g_create_position[e][0];
-	return 0;
-}
-
-inline DWORD LYCAN_CREATE_START_Y(BYTE e, BYTE job)
-{
-	if (1 <= e && e <= 3)
-		return (job==JOB_WOLFMAN)?g_lycan_create_position[e][1]:g_create_position[e][1];
-	return 0;
-}
-
-#endif
-
-#endif
 #ifdef ENABLE_IKASHOP_RENEWAL
 #include "ikarus_shop.h"
 #include "ikarus_shop_manager.h"
@@ -339,13 +310,8 @@ bool NewPlayerTable(TPlayerTable * table,
 	table->sp = JobInitialPoints[job].max_sp + table->iq * JobInitialPoints[job].sp_per_iq;
 	table->stamina = JobInitialPoints[job].max_stamina;
 
-#if defined(ENABLE_WOLFMAN_CHARACTER) && defined(USE_LYCAN_CREATE_POSITION)
-	table->x 	= LYCAN_CREATE_START_X(bEmpire, job) + number(-300, 300);
-	table->y 	= LYCAN_CREATE_START_Y(bEmpire, job) + number(-300, 300);
-#else
 	table->x 	= CREATE_START_X(bEmpire) + number(-300, 300);
 	table->y 	= CREATE_START_Y(bEmpire) + number(-300, 300);
-#endif
 	table->z	= 0;
 	table->dir	= 0;
 	table->playtime = 0;
@@ -415,11 +381,6 @@ bool RaceToJob(unsigned race, unsigned* ret_job)
 		case MAIN_RACE_SHAMAN_W:
 			*ret_job = JOB_SHAMAN;
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case MAIN_RACE_WOLFMAN_M:
-			*ret_job = JOB_WOLFMAN;
-			break;
-#endif
 		default:
 			return false;
 			break;
@@ -463,13 +424,8 @@ bool NewPlayerTable2(TPlayerTable * table, const char * name, BYTE race, BYTE sh
 	table->sp		= JobInitialPoints[job].max_sp + table->iq * JobInitialPoints[job].sp_per_iq;
 	table->stamina	= JobInitialPoints[job].max_stamina;
 
-#if defined(ENABLE_WOLFMAN_CHARACTER) && defined(USE_LYCAN_CREATE_POSITION)
-	table->x 		= LYCAN_CREATE_START_X(bEmpire, job) + number(-300, 300);
-	table->y 		= LYCAN_CREATE_START_Y(bEmpire, job) + number(-300, 300);
-#else
 	table->x		= CREATE_START_X(bEmpire) + number(-300, 300);
 	table->y		= CREATE_START_Y(bEmpire) + number(-300, 300);
-#endif
 	table->z		= 0;
 	table->dir		= 0;
 	table->playtime = 0;
@@ -514,14 +470,6 @@ void CInputLogin::CharacterCreate(LPDESC d, const char * data)
 		return;
 	}
 
-#if defined(ENABLE_WOLFMAN_CHARACTER) && defined(DISABLE_WOLFMAN_ON_CREATE)
-    if (pinfo->job == MAIN_RACE_WOLFMAN_M)
-	{
-        sys_err("Wolfman karakter oluşturma devre dışı. account_id: %d, giriş: %s", d->GetAccountTable().id, pinfo->name);
-        d->Packet(packFailure);
-        return;
-    }
-#endif
 
 	const TAccountTable & c_rAccountTable = d->GetAccountTable();
 

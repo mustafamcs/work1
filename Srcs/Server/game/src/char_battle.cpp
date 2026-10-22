@@ -2067,15 +2067,6 @@ bool CHARACTER::Damage(LPCHARACTER pAttacker, int dam, EDamageType type) // retu
 			dam = GetHP() - 1;
 		}
 	}
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	else if (type == DAMAGE_TYPE_BLEEDING)
-	{
-		if (GetHP() - dam <= 0)
-		{
-			dam = GetHP();
-		}
-	}
-#endif
 	// ------------------------
 
 	// -----------------------
@@ -2111,13 +2102,6 @@ bool CHARACTER::Damage(LPCHARACTER pAttacker, int dam, EDamageType type) // retu
 
 		if (type == DAMAGE_TYPE_POISON)
 			damageFlag = DAMAGE_POISON;
-#if defined(ENABLE_WOLFMAN_CHARACTER) && !defined(USE_MOB_BLEEDING_AS_POISON)
-		else if (type == DAMAGE_TYPE_BLEEDING)
-			damageFlag = DAMAGE_BLEEDING;
-#elif defined(ENABLE_WOLFMAN_CHARACTER) && defined(USE_MOB_BLEEDING_AS_POISON)
-		else if (type == DAMAGE_TYPE_BLEEDING)
-			damageFlag = DAMAGE_POISON;
-#endif
 		else
 			damageFlag = DAMAGE_NORMAL;
 

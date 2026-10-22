@@ -137,9 +137,6 @@ class CPythonSkill : public CSingleton<CPythonSkill>
 			SKILL_NEED_WEAPON_FAN				= (1 << CItemData::WEAPON_FAN),
 			SKILL_NEED_WEAPON_ARROW				= (1 << CItemData::WEAPON_ARROW),
 			SKILL_NEED_WEAPON_MOUNT_SPEAR		= (1 << CItemData::WEAPON_MOUNT_SPEAR),
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			SKILL_NEED_WEAPON_CLAW				= (1 << CItemData::WEAPON_CLAW),
-#endif
 			SKILL_NEED_WEAPON_EMPTY_HAND		= (1 << CItemData::WEAPON_NONE),
 		};
 

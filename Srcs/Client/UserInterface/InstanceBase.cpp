@@ -2854,12 +2854,6 @@ UINT CInstanceBase::__GetRefinedEffect(CItemData* pItem)
 		case CItemData::WEAPON_BOW:
 			m_swordRefineEffectRight = EFFECT_REFINED+EFFECT_BOW_REFINED7+refine-7;
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CItemData::WEAPON_CLAW:
-			m_swordRefineEffectRight = EFFECT_REFINED + EFFECT_CLAW_REFINED7 + refine - 7;
-			m_swordRefineEffectLeft = EFFECT_REFINED + EFFECT_CLAW_REFINED7_LEFT + refine - 7;
-			break;
-#endif
 		default:
 			m_swordRefineEffectRight = EFFECT_REFINED+EFFECT_SWORD_REFINED7+refine-7;
 		}
@@ -2877,9 +2871,6 @@ UINT CInstanceBase::__GetRefinedEffect(CItemData* pItem)
 
 			if (
 				(12010 <= vnum && vnum <= 12049)
-				#ifdef ENABLE_WOLFMAN_CHARACTER
-				|| (21080 <= vnum && vnum <= 21089)
-				#endif
 			)
 			{
 				__AttachEffect(EFFECT_REFINED+EFFECT_BODYARMOR_SPECIAL);
@@ -2925,12 +2916,6 @@ UINT CInstanceBase::__GetRefinedEffect(CItemData* pItem)
 				case CItemData::WEAPON_BOW:
 					m_swordRefineEffectRight = EFFECT_REFINED+EFFECT_BOW_REFINED9;
 					break;
-				#ifdef ENABLE_WOLFMAN_CHARACTER
-				case CItemData::WEAPON_CLAW:
-					m_swordRefineEffectRight = EFFECT_REFINED + EFFECT_SMALLSWORD_REFINED9;
-					m_swordRefineEffectLeft = EFFECT_REFINED + EFFECT_SMALLSWORD_REFINED9_LEFT;
-					break;
-				#endif
 				default:
 					m_swordRefineEffectRight = EFFECT_REFINED+EFFECT_SWORD_REFINED9;
 			}
@@ -3147,11 +3132,6 @@ void CInstanceBase::RefreshState(DWORD dwMotIndex, bool isLoop)
 			case CItemData::WEAPON_BOW:
 				SetMotionMode(CRaceMotionData::MODE_HORSE_BOW); // Only Shaman
 				break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case CItemData::WEAPON_CLAW:
-				SetMotionMode(CRaceMotionData::MODE_HORSE_CLAW); // Only Wolfman
-				break;
-#endif
 			default:
 				SetMotionMode(CRaceMotionData::MODE_HORSE);
 				break;
@@ -3184,11 +3164,6 @@ void CInstanceBase::RefreshState(DWORD dwMotIndex, bool isLoop)
 			case CItemData::WEAPON_BELL:
 				SetMotionMode(CRaceMotionData::MODE_BELL); // Only Shaman
 				break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case CItemData::WEAPON_CLAW:
-				SetMotionMode(CRaceMotionData::MODE_CLAW); // Only Wolfman
-				break;
-#endif
 #ifdef ENABLE_QUIVER_SYSTEM
 			case CItemData::WEAPON_QUIVER:
 #endif

@@ -290,14 +290,6 @@ int CalcDamBonus(LPCHARACTER pkAttacker, LPCHARACTER pkVictim, int iDam)
 				iDam = iDam * SumBreakBonus(pkAttacker, pkVictim, POINT_ATTBONUS_FAN, POINT_RESIST_FAN) / 100;
 				break;
 
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			case WEAPON_CLAW:
-				iDam = iDam * SumBreakBonus(pkAttacker, pkVictim, POINT_ATTBONUS_CLAW, POINT_RESIST_CLAW) / 100;
-				#if defined(ENABLE_WOLFMAN_CHARACTER) && defined(USE_ITEM_CLAW_AS_DAGGER)
-				iDam = iDam * SumBreakBonus(pkAttacker, pkVictim, POINT_ATTBONUS_DAGGER, POINT_RESIST_DAGGER) / 100;
-				#endif
-				break;
-			#endif
 		}
 	}
 	return iDam;
@@ -369,11 +361,6 @@ int CalcAttBonus(LPCHARACTER pkAttacker, LPCHARACTER pkVictim, int iAtk)
 			case JOB_SHAMAN:
 				iAtk += (iAtk * pkAttacker->GetPoint(POINT_ATTBONUS_SHAMAN)) / 100;
 				break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case JOB_WOLFMAN:
-				iAtk += (iAtk * pkAttacker->GetPoint(POINT_ATTBONUS_WOLFMAN)) / 100;
-				break;
-#endif
 		}
 	}
 
@@ -397,11 +384,6 @@ int CalcAttBonus(LPCHARACTER pkAttacker, LPCHARACTER pkVictim, int iAtk)
 				iAtk -= (iAtk * pkVictim->GetPoint(POINT_RESIST_SHAMAN)) / 100;
 				break;
 
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			case JOB_WOLFMAN:
-				iAtk -= (iAtk * pkVictim->GetPoint(POINT_RESIST_WOLFMAN)) / 100;
-				break;
-			#endif
 		}
 	}
 
@@ -480,9 +462,6 @@ int CalcMeleeDamage(LPCHARACTER pkAttacker, LPCHARACTER pkVictim, bool bIgnoreDe
 			case WEAPON_BELL:
 			case WEAPON_FAN:
 			case WEAPON_MOUNT_SPEAR:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case WEAPON_CLAW:
-#endif
 				break;
 
 			case WEAPON_BOW:
@@ -714,13 +693,6 @@ void NormalAttackAffect(LPCHARACTER pkAttacker, LPCHARACTER pkVictim)
 		if (number(1, 100) <= pkAttacker->GetPoint(POINT_POISON_PCT))
 			pkVictim->AttackedByPoison(pkAttacker);
 	}
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	if (pkAttacker->GetPoint(POINT_BLEEDING_PCT) && !pkVictim->IsAffectFlag(AFF_BLEEDING))
-	{
-		if (number(1, 100) <= pkAttacker->GetPoint(POINT_BLEEDING_PCT))
-			pkVictim->AttackedByBleeding(pkAttacker);
-	}
-#endif
 	int iStunDuration = 2;
 	if (pkAttacker->IsPC() && !pkVictim->IsPC())
 		iStunDuration = 4;
@@ -774,10 +746,6 @@ DWORD GET_ATTACK_SPEED(LPCHARACTER ch)
 
 	if (item && item->GetSubType() == WEAPON_DAGGER)
 		real_speed /= 2;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	else if (item && item->GetSubType() == WEAPON_CLAW)
-		real_speed /= 2;
-#endif
 
 	return real_speed;
 }

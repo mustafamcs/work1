@@ -1553,18 +1553,6 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "PLAYER_PER_ACCOUNT",	PLAYER_PER_ACCOUNT4);
 #endif
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	PyModule_AddIntConstant(poModule, "ENABLE_WOLFMAN_CHARACTER",	1);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_WOLFMAN_CHARACTER",	0);
-#endif
-
-#ifdef DISABLE_WOLFMAN_ON_CREATE
-	PyModule_AddIntConstant(poModule, "DISABLE_WOLFMAN_ON_CREATE",	1);
-#else
-	PyModule_AddIntConstant(poModule, "DISABLE_WOLFMAN_ON_CREATE",	0);
-#endif
-
 #ifdef ENABLE_QUIVER_SYSTEM
 	PyModule_AddIntConstant(poModule, "ENABLE_QUIVER_SYSTEM",	1);
 #else

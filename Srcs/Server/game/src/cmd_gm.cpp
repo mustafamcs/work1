@@ -1013,24 +1013,15 @@ ACMD(do_state)
 
 	ch->ChatPacket(CHAT_TYPE_INFO, "RESISTANCES:");
 	ch->ChatPacket(CHAT_TYPE_INFO, "   WARR:%3d%% ASAS:%3d%% SURA:%3d%% SHAM:%3d%%"
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			" WOLF:%3d%%"
-			#endif
 			" HUMAN:%3d%%"
 			,
 			tch->GetPoint(POINT_RESIST_WARRIOR),
 			tch->GetPoint(POINT_RESIST_ASSASSIN),
 			tch->GetPoint(POINT_RESIST_SURA),
 			tch->GetPoint(POINT_RESIST_SHAMAN),
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			tch->GetPoint(POINT_RESIST_WOLFMAN),
-			#endif
 			tch->GetPoint(POINT_RESIST_HUMAN)
 	);
 	ch->ChatPacket(CHAT_TYPE_INFO, "   SWORD:%3d%% THSWORD:%3d%% DAGGER:%3d%% BELL:%3d%% FAN:%3d%% BOW:%3d%%"
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			" CLAW:%3d%%"
-			#endif
 			,
 			tch->GetPoint(POINT_RESIST_SWORD),
 			tch->GetPoint(POINT_RESIST_TWOHAND),
@@ -1038,9 +1029,6 @@ ACMD(do_state)
 			tch->GetPoint(POINT_RESIST_BELL),
 			tch->GetPoint(POINT_RESIST_FAN),
 			tch->GetPoint(POINT_RESIST_BOW)
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			,tch->GetPoint(POINT_RESIST_CLAW)
-			#endif
 	);
 
 	ch->ChatPacket(CHAT_TYPE_INFO, "   ELEC:%3d%% FIRE:%3d%% ICE:%3d%% WIND:%3d%% EARTH:%3d%% DARK:%3d%%",
@@ -1111,23 +1099,14 @@ ACMD(do_state)
 			tch->GetPoint(POINT_ATTBONUS_MONSTER));
 
 	ch->ChatPacket(CHAT_TYPE_INFO, "   WARR:%3d%% ASSA:%3d%% SURA:%3d%% SHAM:%3d%%"
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			" WOLF:%3d%%"
-			#endif
 			,
 			tch->GetPoint(POINT_ATTBONUS_WARRIOR),
 			tch->GetPoint(POINT_ATTBONUS_ASSASSIN),
 			tch->GetPoint(POINT_ATTBONUS_SURA),
 			tch->GetPoint(POINT_ATTBONUS_SHAMAN)
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			,tch->GetPoint(POINT_ATTBONUS_WOLFMAN)
-			#endif
 	);
 
 	ch->ChatPacket(CHAT_TYPE_INFO, "   SWORD:%3d%% THSWORD:%3d%% DAGGER:%3d%% BELL:%3d%% FAN:%3d%% BOW:%3d%%"
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			" CLAW:%3d%%"
-			#endif
 			,
 			tch->GetPoint(POINT_ATTBONUS_SWORD),
 			tch->GetPoint(POINT_ATTBONUS_TWOHAND),
@@ -1135,9 +1114,6 @@ ACMD(do_state)
 			tch->GetPoint(POINT_ATTBONUS_BELL),
 			tch->GetPoint(POINT_ATTBONUS_FAN),
 			tch->GetPoint(POINT_ATTBONUS_BOW)
-			#ifdef ENABLE_WOLFMAN_CHARACTER
-			,tch->GetPoint(POINT_ATTBONUS_CLAW)
-			#endif
 	);
 
 	ch->ChatPacket(CHAT_TYPE_INFO, "IMMUNE:");
@@ -1525,30 +1501,6 @@ ACMD(do_poison)
 	tch->AttackedByPoison(NULL);
 }
 #endif
-#ifdef ENABLE_WOLFMAN_CHARACTER
-ACMD(do_bleeding)
-{
-	char arg1[256];
-	one_argument(argument, arg1, sizeof(arg1));
-
-	if (!*arg1)
-	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "örn) /bleeding <oyuncu adı>");
-		return;
-	}
-
-	LPDESC	d = DESC_MANAGER::instance().FindByCharacterName(arg1);
-	LPCHARACTER tch = d ? d->GetCharacter() : NULL;
-
-	if (!tch)
-	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "%s: no such a player", arg1);
-		return;
-	}
-
-	tch->AttackedByBleeding(NULL);
-}
-#endif
 
 #define MISC    0
 #define BINARY  1
@@ -1570,11 +1522,7 @@ const struct set_struct
 	const char * help;
 } set_fields[] = {
 	{ "gold",		NUMBER,	NULL	},
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	{ "race",		NUMBER,	"0. Warrior, 1. Ninja, 2. Sura, 3. Shaman, 4. Lycan"		},
-#else
 	{ "race",		NUMBER,	"0. Warrior, 1. Ninja, 2. Sura, 3. Shaman"		},
-#endif
 	{ "sex",		NUMBER,	"0. Male, 1. Female"	},
 	{ "job",		NUMBER,	"0. None, 1. First, 2. Second"	},
 	{ "exp",		NUMBER, nullptr},
@@ -1670,11 +1618,6 @@ ACMD(do_set)
 					case JOB_SHAMAN:
 						dwRace = (mySex==SEX_MALE)?MAIN_RACE_SHAMAN_M:MAIN_RACE_SHAMAN_W;
 						break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-					case JOB_WOLFMAN:
-						dwRace = (mySex==SEX_MALE)?MAIN_RACE_WOLFMAN_M:MAIN_RACE_WOLFMAN_M;
-						break;
-#endif
 				}
 				if (dwRace!=tch->GetRaceNum())
 				{
@@ -4502,36 +4445,6 @@ ACMD (do_item_full_set)
 				M2_DESTROY_ITEM(item);
 		}
 		break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	case JOB_WOLFMAN:
-		{
-			item = ITEM_MANAGER::instance().CreateItem(21049);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-			item = ITEM_MANAGER::instance().CreateItem(13049);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-			item = ITEM_MANAGER::instance().CreateItem(15189);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-			item = ITEM_MANAGER::instance().CreateItem(6049);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-			item = ITEM_MANAGER::instance().CreateItem(21559);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-			item = ITEM_MANAGER::instance().CreateItem(14109);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-			item = ITEM_MANAGER::instance().CreateItem(17209);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-			item = ITEM_MANAGER::instance().CreateItem(16209);
-			if (!item || !item->EquipTo(ch, item->FindEquipCell(ch)))
-				M2_DESTROY_ITEM(item);
-		}
-		break;
-#endif
 	}
 	ch->ComputePoints(); //@fixme300
 }
@@ -4547,9 +4460,6 @@ ACMD (do_attr_full_set)
 	case JOB_ASSASSIN:
 	case JOB_SURA:
 	case JOB_SHAMAN:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	case JOB_WOLFMAN:
-#endif
 		{
 			item = ch->GetWear(WEAR_HEAD);
 			if (item != NULL)

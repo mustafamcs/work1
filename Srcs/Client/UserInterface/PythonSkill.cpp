@@ -313,10 +313,8 @@ bool CPythonSkill::RegisterSkillDesc(const char * c_szFileName)
 
 		std::string strJobEarly = TokenVector[DESC_TOKEN_TYPE_JOB];
 		stl_lowers(strJobEarly);
-#ifndef ENABLE_WOLFMAN_CHARACTER
-		if (strJobEarly == "wolfman" || strJobEarly == "78skill")
+		if (strJobEarly == "78skill")
 			continue;
-#endif
 
 		m_SkillDataMap.emplace(iSkillIndex, TSkillData());
 		TSkillData & rSkillData = m_SkillDataMap[iSkillIndex];
@@ -396,10 +394,6 @@ bool CPythonSkill::RegisterSkillDesc(const char * c_szFileName)
 			for (CTokenVector::iterator it = WeaponTokenVector.begin(); it != WeaponTokenVector.end(); ++it)
 			{
 				std::string & rstrToken = *it;
-#ifndef ENABLE_WOLFMAN_CHARACTER
-				if (rstrToken == "CLAW")
-					continue;
-#endif
 				std::map<std::string, DWORD>::iterator it2 = m_SkillNeedWeaponIndexMap.find(rstrToken);
 				if (m_SkillNeedWeaponIndexMap.end() == it2)
 				{
@@ -925,10 +919,6 @@ CPythonSkill::CPythonSkill()
 	m_SkillTypeIndexMap.emplace("sura", SKILL_TYPE_ACTIVE);
 	m_SkillTypeIndexMap.emplace("shaman", SKILL_TYPE_ACTIVE);
 	m_SkillTypeIndexMap.emplace("passive", SKILL_TYPE_ACTIVE);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	m_SkillTypeIndexMap.emplace("78skill", SKILL_TYPE_ACTIVE);
-	m_SkillTypeIndexMap.emplace("wolfman", SKILL_TYPE_ACTIVE);
-#endif
 	m_SkillTypeIndexMap.emplace("mount_upgrade", SKILL_TYPE_ACTIVE);
 
 	m_SkillAttributeIndexMap.emplace("NEED_POISON_BOTTLE", SKILL_ATTRIBUTE_NEED_POISON_BOTTLE);
@@ -967,9 +957,6 @@ CPythonSkill::CPythonSkill()
 	m_SkillNeedWeaponIndexMap.emplace("ARROW", SKILL_NEED_WEAPON_ARROW);
 	m_SkillNeedWeaponIndexMap.emplace("EMPTY_HAND", SKILL_NEED_WEAPON_EMPTY_HAND);
 	m_SkillNeedWeaponIndexMap.emplace("MOUNT_SPEAR", SKILL_NEED_WEAPON_MOUNT_SPEAR);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	m_SkillNeedWeaponIndexMap.emplace("CLAW", SKILL_NEED_WEAPON_CLAW);
-#endif
 
 	m_SkillWeaponTypeIndexMap.emplace("SWORD", CItemData::WEAPON_SWORD);
 	m_SkillWeaponTypeIndexMap.emplace("DAGGER", CItemData::WEAPON_DAGGER);
@@ -980,9 +967,6 @@ CPythonSkill::CPythonSkill()
 	m_SkillWeaponTypeIndexMap.emplace("FAN", CItemData::WEAPON_FAN);
 	m_SkillWeaponTypeIndexMap.emplace("ARROW", CItemData::WEAPON_ARROW);
 	m_SkillWeaponTypeIndexMap.emplace("MOUNT_SPEAR", CItemData::WEAPON_MOUNT_SPEAR);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	m_SkillWeaponTypeIndexMap.emplace("CLAW", CItemData::WEAPON_CLAW);
-#endif
 #ifdef ENABLE_QUIVER_SYSTEM
 	m_SkillWeaponTypeIndexMap.emplace("QUIVER", CItemData::WEAPON_QUIVER);
 #endif
@@ -1062,10 +1046,6 @@ CPythonSkill::CPythonSkill()
 	m_PathNameMap.emplace("SURA", "sura");
 	m_PathNameMap.emplace("SHAMAN", "shaman");
 	m_PathNameMap.emplace("PASSIVE", "passive");
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	m_PathNameMap.emplace("78SKILL", "78skill");
-	m_PathNameMap.emplace("WOLFMAN", "wolfman");
-#endif
 	m_PathNameMap.emplace("SUPPORT", "common/support");
 	m_PathNameMap.emplace("GUILD", "common/guild");
 	m_PathNameMap.emplace("HORSE", "common/horse");

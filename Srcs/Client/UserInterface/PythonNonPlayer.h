@@ -249,7 +249,7 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 				MOB_RESIST_MAGIC,
 				MOB_RESIST_WIND,
 				MOB_RESIST_POISON,
-				MOB_RESIST_BLEEDING,//r3
+				MOB_RESIST_UNUSED1,//r3
 				MOB_RESISTS_MAX_NUM
 			};
 
@@ -320,13 +320,13 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 				MOB_RESIST_BELL,
 				MOB_RESIST_FAN,
 				MOB_RESIST_BOW,
-				MOB_RESIST_CLAW,//r4
+				MOB_RESIST_UNUSED2,//r4
 				MOB_RESIST_FIRE,
 				MOB_RESIST_ELECT,
 				MOB_RESIST_MAGIC,
 				MOB_RESIST_WIND,
 				MOB_RESIST_POISON,
-				MOB_RESIST_BLEEDING,//r3
+				MOB_RESIST_UNUSED1,//r3
 				MOB_RESISTS_MAX_NUM
 			};
 
@@ -400,13 +400,13 @@ class CPythonNonPlayer : public CSingleton<CPythonNonPlayer>
 				MOB_RESIST_BELL,
 				MOB_RESIST_FAN,
 				MOB_RESIST_BOW,
-				MOB_RESIST_CLAW,//r4
+				MOB_RESIST_UNUSED2,//r4
 				MOB_RESIST_FIRE,
 				MOB_RESIST_ELECT,
 				MOB_RESIST_MAGIC,
 				MOB_RESIST_WIND,
 				MOB_RESIST_POISON,
-				MOB_RESIST_BLEEDING,//r3
+				MOB_RESIST_UNUSED1,//r3
 				MOB_RESISTS_MAX_NUM
 			};
 

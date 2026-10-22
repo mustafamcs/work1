@@ -40,9 +40,6 @@ class CSpecialItemGroup
 			DRAIN_HP,
 			POISON,
 			MOB_GROUP,
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			BLEEDING,
-#endif
 		};
 
 		enum ESIGType { NORMAL, PCT, QUEST, SPECIAL };

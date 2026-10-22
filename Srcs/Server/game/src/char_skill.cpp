@@ -245,11 +245,6 @@ bool CHARACTER::IsLearnableSkill(DWORD dwSkillVnum) const
 
 	if (pkSkill->dwType - 1 == GetJob())
 		return true;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-
-	if (7 == pkSkill->dwType && JOB_WOLFMAN == GetJob())
-		return true;
-#endif
 	if (6 == pkSkill->dwType)
 	{
 		if (SKILL_7_A_ANTI_TANHWAN <= dwSkillVnum && dwSkillVnum <= SKILL_7_D_ANTI_YONGBI)
@@ -610,9 +605,6 @@ bool CHARACTER::SkillLevelDown(DWORD dwVnum)
 		case 3:
 		case 4:
 		case 6:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case 7:
-#endif
 			idx = POINT_SKILL;
 			break;
 		case 5:
@@ -727,9 +719,6 @@ void CHARACTER::SkillLevelUp(DWORD dwVnum, BYTE bMethod)
 			case 3:
 			case 4:
 			case 6:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case 7:
-#endif
 				idx = POINT_SKILL;
 				break;
 
@@ -1182,19 +1171,6 @@ struct FuncSplashDamage
 
 			iAmount = (int) (iAmount * adjust);
 		}
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		else if (m_pkSk->dwVnum == SKILL_GONGDAB)
-		{
-			float adjust = 1.0;
-
-			if (m_pkChr->GetWear(WEAR_WEAPON) && m_pkChr->GetWear(WEAR_WEAPON)->GetSubType() == WEAPON_CLAW)
-			{
-				adjust = 1.35f;
-			}
-
-			iAmount = (int)(iAmount * adjust);
-		}
-#endif
 		////////////////////////////////////////////////////////////////////////////////
 		//sys_log(0, "name: %s skill: %s amount %d to %s", m_pkChr->GetName(), m_pkSk->szName, iAmount, pkChrVictim->GetName());
 
@@ -1342,11 +1318,7 @@ struct FuncSplashDamage
 					}
 				}
 			}
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			if (IS_SET(m_pkSk->dwFlag, SKILL_FLAG_SLOW | SKILL_FLAG_STUN | SKILL_FLAG_FIRE_CONT | SKILL_FLAG_POISON | SKILL_FLAG_BLEEDING))
-#else
 			if (IS_SET(m_pkSk->dwFlag, SKILL_FLAG_SLOW | SKILL_FLAG_STUN | SKILL_FLAG_FIRE_CONT | SKILL_FLAG_POISON))
-#endif
 			{
 				int iPct = (int) m_pkSk->kPointPoly2.Eval();
 				int iDur = (int) m_pkSk->kDurationPoly2.Eval();
@@ -1384,13 +1356,6 @@ struct FuncSplashDamage
 					if (number(1, 100) <= iPct)
 						pkChrVictim->AttackedByPoison(m_pkChr);
 				}
-#ifdef ENABLE_WOLFMAN_CHARACTER
-				else if (IS_SET(m_pkSk->dwFlag, SKILL_FLAG_BLEEDING))
-				{
-					if (number(1, 100) <= iPct)
-						pkChrVictim->AttackedByBleeding(m_pkChr);
-				}
-#endif
 			}
 
 			if (IS_SET(m_pkSk->dwFlag, SKILL_FLAG_CRUSH | SKILL_FLAG_CRUSH_LONG) &&
@@ -2934,11 +2899,7 @@ void CHARACTER::ResetMobSkillCooltime()
 bool CHARACTER::IsUsableSkillMotion(DWORD dwMotionIndex) const
 {
 	DWORD selfJobGroup = (GetJob()+1) * 10 + GetSkillGroup();
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	const DWORD SKILL_NUM = 176;
-#else
 	const DWORD SKILL_NUM = 158;
-#endif
 	static DWORD s_anSkill2JobGroup[SKILL_NUM] = {
 		0, // common_skill 0
 		11, // job_skill 1
@@ -3098,53 +3059,20 @@ bool CHARACTER::IsUsableSkillMotion(DWORD dwMotionIndex) const
 		0, // job_skill 155
 		0, // job_skill 156
 		0, // job_skill 157
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		0, // empty(reserved) 158
-		0, // empty(reserved) 159
-		0, // empty(reserved) 160
-		0, // empty(reserved) 161
-		0, // empty(reserved) 162
-		0, // empty(reserved) 163
-		0, // empty(reserved) 164
-		0, // empty(reserved) 165
-		0, // empty(reserved) 166
-		0, // empty(reserved) 167
-		0, // empty(reserved) 168
-		0, // empty(reserved) 169
-		51, // job_skill(WOLFMAN SKILL) 170
-		51, // job_skill(WOLFMAN SKILL) 171
-		51, // job_skill(WOLFMAN SKILL) 172
-		51, // job_skill(WOLFMAN SKILL) 173
-		51, // job_skill(WOLFMAN SKILL) 174
-		51, // job_skill(WOLFMAN SKILL) 175
-#endif
 	}; // s_anSkill2JobGroup
 
 	const DWORD MOTION_MAX_NUM 	= 124;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	const DWORD SKILL_LIST_MAX_COUNT	= 6;
-#else
 	const DWORD SKILL_LIST_MAX_COUNT	= 5;
-#endif
 	static DWORD s_anMotion2SkillVnumList[MOTION_MAX_NUM][SKILL_LIST_MAX_COUNT] =
 	{
 		{   0,		0,			0,			0,			0		}, //  0
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		{   5,		1,			31,			61,			91,	170		}, //  1
-		{   5,		2,			32,			62,			92,	171		}, //  2
-		{   5,		3,			33,			63,			93,	172		}, //  3
-		{   5,		4,			34,			64,			94,	173		}, //  4
-		{   5,		5,			35,			65,			95,	174		}, //  5
-		{   5,		6,			36,			66,			96,	175		}, //  6
-#else
 		{   4,		1,			31,			61,			91		}, //  1
 		{   4,		2,			32,			62,			92		}, //  2
 		{   4,		3,			33,			63,			93		}, //  3
 		{   4,		4,			34,			64,			94		}, //  4
 		{   4,		5,			35,			65,			95		}, //  5
 		{   4,		6,			36,			66,			96		}, //  6
-#endif
 		{   0,		0,			0,			0,			0		}, //  7
 		{   0,		0,			0,			0,			0		}, //  8
 
@@ -3168,21 +3096,12 @@ bool CHARACTER::IsUsableSkillMotion(DWORD dwMotionIndex) const
 		{   0,		0,			0,			0,			0		}, //  24
 		{   0,		0,			0,			0,			0		}, //  25
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		{   5,		1,			31,			61,			91,	170		}, //  26
-		{   5,		2,			32,			62,			92,	171		}, //  27
-		{   5,		3,			33,			63,			93,	172		}, //  28
-		{   5,		4,			34,			64,			94,	173		}, //  29
-		{   5,		5,			35,			65,			95,	174		}, //  30
-		{   5,		6,			36,			66,			96,	175		}, //  31
-#else
 		{   4,		1,			31,			61,			91		}, //  26
 		{   4,		2,			32,			62,			92		}, //  27
 		{   4,		3,			33,			63,			93		}, //  28
 		{   4,		4,			34,			64,			94		}, //  29
 		{   4,		5,			35,			65,			95		}, //  30
 		{   4,		6,			36,			66,			96		}, //  31
-#endif
 		{   0,		0,			0,			0,			0		}, //  32
 		{   0,		0,			0,			0,			0		}, //  33
 
@@ -3206,21 +3125,12 @@ bool CHARACTER::IsUsableSkillMotion(DWORD dwMotionIndex) const
 		{   0,		0,			0,			0,			0		}, //  49
 		{   0,		0,			0,			0,			0		}, //  50
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		{   5,		1,			31,			61,			91,	170		}, //  51
-		{   5,		2,			32,			62,			92,	171		}, //  52
-		{   5,		3,			33,			63,			93,	172		}, //  53
-		{   5,		4,			34,			64,			94,	173		}, //  54
-		{   5,		5,			35,			65,			95,	174		}, //  55
-		{   5,		6,			36,			66,			96,	175		}, //  56
-#else
 		{   4,		1,			31,			61,			91		}, //  51
 		{   4,		2,			32,			62,			92		}, //  52
 		{   4,		3,			33,			63,			93		}, //  53
 		{   4,		4,			34,			64,			94		}, //  54
 		{   4,		5,			35,			65,			95		}, //  55
 		{   4,		6,			36,			66,			96		}, //  56
-#endif
 		{   0,		0,			0,			0,			0		}, //  57
 		{   0,		0,			0,			0,			0		}, //  58
 
@@ -3244,21 +3154,12 @@ bool CHARACTER::IsUsableSkillMotion(DWORD dwMotionIndex) const
 		{   0,		0,			0,			0,			0		}, //  74
 		{   0,		0,			0,			0,			0		}, //  75
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		{   5,		1,			31,			61,			91,	170		}, //  76
-		{   5,		2,			32,			62,			92,	171		}, //  77
-		{   5,		3,			33,			63,			93,	172		}, //  78
-		{   5,		4,			34,			64,			94,	173		}, //  79
-		{   5,		5,			35,			65,			95,	174		}, //  80
-		{   5,		6,			36,			66,			96,	175		}, //  81
-#else
 		{   4,		1,			31,			61,			91		}, //  76
 		{   4,		2,			32,			62,			92		}, //  77
 		{   4,		3,			33,			63,			93		}, //  78
 		{   4,		4,			34,			64,			94		}, //  79
 		{   4,		5,			35,			65,			95		}, //  80
 		{   4,		6,			36,			66,			96		}, //  81
-#endif
 		{   0,		0,			0,			0,			0		}, //  82
 		{   0,		0,			0,			0,			0		}, //  83
 
@@ -3539,9 +3440,6 @@ static const DWORD SkillList[JOB_MAX_NUM][SKILL_GROUP_MAX_NUM][SKILL_COUNT] =
 	{ {	31,	32,	33,	34,	35,	36	}, {	46,	47,	48,	49,	50,	51	} },
 	{ {	61,	62,	63,	64,	65,	66	}, {	76,	77,	78,	79,	80,	81	} },
 	{ {	91,	92,	93,	94,	95,	96	}, {	106,107,108,109,110,111	} },
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	{ {	170,171,172,173,174,175	}, {	0,	0,	0,	0,	0,	0	} },
-#endif
 };
 
 const DWORD GetRandomSkillVnum(BYTE bJob)
@@ -3557,10 +3455,6 @@ const DWORD GetRandomSkillVnum(BYTE bJob)
 		// set skill
 		dwSkillVnum = SkillList[tmpJob][tmpSkillGroup][tmpSkillCount];
 
-#if defined(ENABLE_WOLFMAN_CHARACTER) && !defined(USE_WOLFMAN_BOOKS)
-		if (tmpJob==JOB_WOLFMAN)
-			continue;
-#endif
 
 		if (dwSkillVnum != 0 && NULL != CSkillManager::instance().Get(dwSkillVnum))
 			break;
@@ -3654,9 +3548,6 @@ bool CHARACTER::CheckSkillHitCount(const BYTE SkillID, const VID TargetVID)
 		{
 			case SKILL_SAMYEON:
 			case SKILL_CHARYUN:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case SKILL_CHAYEOL:
-#endif
 				MaxAttackCountPerTarget = 3;
 				break;
 

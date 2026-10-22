@@ -1824,9 +1824,6 @@ static const char* FN_point_string(int apply_number)
 		case POINT_HP_REGEN:	return LC_TEXT("Geri Kazanılan Enerji +%d");
 		case POINT_SP_REGEN:	return LC_TEXT("Geri Kazanılan SP +%d");
 		case POINT_POISON_PCT:	return LC_TEXT("Zehirli Saldırı %d");
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case POINT_BLEEDING_PCT:	return LC_TEXT("Zehirli Saldırı %d");
-#endif
 		case POINT_STUN_PCT:	return LC_TEXT("Star +%d");
 		case POINT_SLOW_PCT:	return LC_TEXT("Hız azalması +%d");
 		case POINT_CRITICAL_PCT:	return LC_TEXT("Kritik saldırı şansı %%%d");
@@ -1851,9 +1848,6 @@ static const char* FN_point_string(int apply_number)
 		case POINT_RESIST_BELL:		return LC_TEXT("Çan Savunması %%%d");
 		case POINT_RESIST_FAN:		return LC_TEXT("Yelpaze Savunması %%%d");
 		case POINT_RESIST_BOW:		return LC_TEXT("Uzak Dövüş Direnci %%%d");
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case POINT_RESIST_CLAW:		return LC_TEXT("Çift-El Savunması %%%d");
-#endif
 		case POINT_RESIST_FIRE:		return LC_TEXT("Ateşe dayanıklılık %%%d");
 		case POINT_RESIST_ELEC:		return LC_TEXT("Şimşek direnci %%%d");
 		case POINT_RESIST_MAGIC:	return LC_TEXT("Büyü Savunması %%%d");
@@ -1867,9 +1861,6 @@ static const char* FN_point_string(int apply_number)
 		case POINT_REFLECT_MELEE:	return LC_TEXT("Doğrudan Vuruş Yansıtma: %%%d");
 		case POINT_REFLECT_CURSE:	return LC_TEXT("Lanet Yansıtma: %%%d");
 		case POINT_POISON_REDUCE:	return LC_TEXT("Zehire karşı koyma %%%d");
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case POINT_BLEEDING_REDUCE:	return LC_TEXT("Zehire karşı koyma %%%d");
-#endif
 		case POINT_KILL_SP_RECOVER:	return LC_TEXT("Eğer kazanırsan SP %%%d artacak.");
 		case POINT_EXP_DOUBLE_BONUS:	return LC_TEXT("Eğer kazanırsan tecrübe %%%d artacak.");
 		case POINT_GOLD_DOUBLE_BONUS:	return LC_TEXT("Eğer kazanırsan Yang %%%d artacak.");
@@ -1885,9 +1876,6 @@ static const char* FN_point_string(int apply_number)
 		case POINT_ATTBONUS_ASSASSIN:	return LC_TEXT("Ninjalara karşı güçlü +%%%d");
 		case POINT_ATTBONUS_SURA:		return LC_TEXT("Suralara karşı güçlü +%%%d");
 		case POINT_ATTBONUS_SHAMAN:		return LC_TEXT("Şamanlara karşı güçlü +%%%d");
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case POINT_ATTBONUS_WOLFMAN:	return LC_TEXT("Şamanlara karşı güçlü +%%%d");
-#endif
 		case POINT_ATTBONUS_MONSTER:	return LC_TEXT("Canavarlara karşı güçlü +%%%d");
 		case POINT_MALL_ATTBONUS:		return LC_TEXT("Saldırı +%%%d");
 		case POINT_MALL_DEFBONUS:		return LC_TEXT("Savunma +%%%d");
@@ -1904,9 +1892,6 @@ static const char* FN_point_string(int apply_number)
 		case POINT_RESIST_ASSASSIN:	return LC_TEXT("Ninja ataklarında %%%d dayanıklılık");
 		case POINT_RESIST_SURA:		return LC_TEXT("Sura ataklarında %%%d dayanıklılık");
 		case POINT_RESIST_SHAMAN:	return LC_TEXT("Şaman ataklarında %%%d dayanıklılık");
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case POINT_RESIST_WOLFMAN:	return LC_TEXT("Şaman ataklarında %%%d dayanıklılık");
-#endif
 		default:					return "UNK_ID %d%%"; // @fixme180
 	}
 }

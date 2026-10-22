@@ -79,18 +79,6 @@ void CActorInstance::MotionEventProcess(DWORD dwcurFrame, int iIndex, const CRac
 			ProcessMotionEventWarp(c_pData);
 #endif
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CRaceMotionData::MOTION_EVENT_TYPE_UNK11:
-#ifndef WORLD_EDITOR
-			ProcessMotionEventUnk11(dwcurFrame, iIndex, c_pData);
-#endif
-			break;
-		case CRaceMotionData::MOTION_EVENT_TYPE_UNK12:
-#ifndef WORLD_EDITOR
-			ProcessMotionEventUnk12(dwcurFrame, iIndex, c_pData);
-#endif
-			break;
-#endif
 	}
 }
 
@@ -354,52 +342,4 @@ void CActorInstance::ProcessMotionEventWarp(const CRaceMotionData::TMotionEventD
 	}
 }
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-void CActorInstance::ProcessMotionEventUnk11(DWORD dwcurFrame, int iIndex, const CRaceMotionData::TMotionEventData * c_pData) // AniSpeed ON
-{
-	if (CRaceMotionData::MOTION_EVENT_TYPE_UNK11 != c_pData->iType)
-		return;
-
-	const CRaceMotionData::TMotionUnk11EventData * c_pUnk11TargetData = (const CRaceMotionData::TMotionUnk11EventData *)c_pData;
-
-	// workaround
-	{
-		static const float sc_fDistanceFromTarget = 270.0f;
-
-		if (m_kFlyTarget.IsValidTarget())
-		{
-			D3DXVECTOR3 v3MainPosition(m_x, m_y, m_z);
-			const D3DXVECTOR3 & c_rv3TargetPosition = __GetFlyTargetPosition();
-
-			D3DXVECTOR3 v3Distance = c_rv3TargetPosition - v3MainPosition;
-			D3DXVec3Normalize(&v3Distance, &v3Distance);
-			TPixelPosition DestPixelPosition = c_rv3TargetPosition - (v3Distance * (sc_fDistanceFromTarget+c_pUnk11TargetData->iAniSpeed));
-
-			IBackground& rkBG=GetBackground();
-			if (!rkBG.IsBlock(DestPixelPosition.x, -DestPixelPosition.y))
-				SetPixelPosition(DestPixelPosition);
-
-			LookAt(c_rv3TargetPosition.x, c_rv3TargetPosition.y);
-
-			__OnWarp();
-		}
-	}
-
-	return;
-}
-
-void CActorInstance::ProcessMotionEventUnk12(DWORD dwcurFrame, int iIndex, const CRaceMotionData::TMotionEventData * c_pData) // AniSpeed OFF
-{
-	if (CRaceMotionData::MOTION_EVENT_TYPE_UNK12 != c_pData->iType)
-		return;
-
-	const CRaceMotionData::TMotionUnk12EventData * c_pUnk12TargetData = (const CRaceMotionData::TMotionUnk12EventData *)c_pData;
-
-	// workaround
-	{
-	}
-
-	return;
-}
-#endif
 

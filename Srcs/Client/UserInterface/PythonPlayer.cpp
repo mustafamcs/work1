@@ -330,11 +330,6 @@ DWORD CPythonPlayer::__GetRaceStat()
 		case MAIN_RACE_SHAMAN_W:
 			return GetStatus(POINT_IQ);
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case MAIN_RACE_WOLFMAN_M:
-			return GetStatus(POINT_DX);
-			break;
-#endif
 	}
 	return GetStatus(POINT_ST);
 }
@@ -1666,10 +1661,6 @@ CPythonPlayer::CPythonPlayer(void)
 	m_kMap_dwAffectIndexToSkillIndex.emplace(int(CInstanceBase::AFFECT_MUYEONG), 78);
 	m_kMap_dwAffectIndexToSkillIndex.emplace(int(CInstanceBase::AFFECT_HEUKSIN), 79);
 
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	m_kMap_dwAffectIndexToSkillIndex.emplace(int(CInstanceBase::AFFECT_RED_POSSESSION), 174);
-	m_kMap_dwAffectIndexToSkillIndex.emplace(int(CInstanceBase::AFFECT_BLUE_POSSESSION), 175);
-#endif
 
 	m_ppyGameWindow = NULL;
 

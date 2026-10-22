@@ -2030,11 +2030,6 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 								case CSpecialItemGroup::POISON:
 									ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!"));
 									break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-								case CSpecialItemGroup::BLEEDING:
-									ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!"));
-									break;
-#endif
 								case CSpecialItemGroup::MOB_GROUP:
 									ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bak kutudan ne çıktı!"));
 									break;
@@ -2114,11 +2109,6 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 						case CSpecialItemGroup::POISON:
 							ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!"));
 							break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-						case CSpecialItemGroup::BLEEDING:
-							ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!"));
-							break;
-#endif
 						case CSpecialItemGroup::MOB_GROUP:
 							ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bak kutudan ne çıktı!"));
 							break;
@@ -3710,11 +3700,6 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 											case CSpecialItemGroup::POISON:
 												ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!"));
 												break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-											case CSpecialItemGroup::BLEEDING:
-												ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!"));
-												break;
-#endif
 											case CSpecialItemGroup::MOB_GROUP:
 												ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Bak kutudan ne çıktı!"));
 												break;
@@ -4118,11 +4103,6 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 						{
 							switch (item->GetVnum())
 							{
-#ifdef ENABLE_WOLFMAN_CHARACTER
-								case 27124: // Bandage
-									RemoveBleeding();
-									break;
-#endif
 								case 27874: // Grilled Perch
 								default:
 									RemoveBadAffect();
@@ -7332,14 +7312,6 @@ bool CHARACTER::GiveItemFromSpecialItemGroup(DWORD dwGroupNum, std::vector<DWORD
 					bSuccess = true;
 				}
 				break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case CSpecialItemGroup::BLEEDING:
-				{
-					AttackedByBleeding(NULL);
-					bSuccess = true;
-				}
-				break;
-#endif
 			case CSpecialItemGroup::MOB_GROUP:
 				{
 					int sx = GetX() - number(300, 500);
@@ -7407,10 +7379,6 @@ bool CHARACTER::ItemProcess_Hair(LPITEM item, int iDestCell)
 		case JOB_SHAMAN :
 			hair -= 69750;
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case JOB_WOLFMAN:
-			break;
-#endif
 		default :
 			return false;
 			break;
@@ -7740,12 +7708,6 @@ bool CHARACTER::CanEquipNow(const LPITEM item, const TItemPos& srcCell, const TI
 			if (item->GetAntiFlag() & ITEM_ANTIFLAG_SURA)
 				return false;
 			break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case JOB_WOLFMAN:
-			if (item->GetAntiFlag() & ITEM_ANTIFLAG_WOLFMAN)
-				return false;
-			break;
-#endif
 	}
 
 	for (int i = 0; i < ITEM_LIMIT_MAX_NUM; ++i)

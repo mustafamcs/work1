@@ -523,30 +523,18 @@ BOOL CActorInstance::isLock()
 		case CRaceMotionData::NAME_KISS_WITH_ASSASSIN:
 		case CRaceMotionData::NAME_KISS_WITH_SURA:
 		case CRaceMotionData::NAME_KISS_WITH_SHAMAN:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CRaceMotionData::NAME_KISS_WITH_WOLFMAN:
-#endif
 		case CRaceMotionData::NAME_FRENCH_KISS_WITH_WARRIOR:
 		case CRaceMotionData::NAME_FRENCH_KISS_WITH_ASSASSIN:
 		case CRaceMotionData::NAME_FRENCH_KISS_WITH_SURA:
 		case CRaceMotionData::NAME_FRENCH_KISS_WITH_SHAMAN:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CRaceMotionData::NAME_FRENCH_KISS_WITH_WOLFMAN:
-#endif
 		case CRaceMotionData::NAME_SLAP_HIT_WITH_WARRIOR:
 		case CRaceMotionData::NAME_SLAP_HIT_WITH_ASSASSIN:
 		case CRaceMotionData::NAME_SLAP_HIT_WITH_SURA:
 		case CRaceMotionData::NAME_SLAP_HIT_WITH_SHAMAN:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CRaceMotionData::NAME_SLAP_HIT_WITH_WOLFMAN:
-#endif
 		case CRaceMotionData::NAME_SLAP_HURT_WITH_WARRIOR:
 		case CRaceMotionData::NAME_SLAP_HURT_WITH_ASSASSIN:
 		case CRaceMotionData::NAME_SLAP_HURT_WITH_SURA:
 		case CRaceMotionData::NAME_SLAP_HURT_WITH_SHAMAN:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CRaceMotionData::NAME_SLAP_HURT_WITH_WOLFMAN:
-#endif
 			return TRUE;
 			break;
 	}
@@ -829,10 +817,6 @@ bool CActorInstance::__IsNeedFlyTargetMotion()
 		const CRaceMotionData::TMotionEventData * c_pData;
 		if (!m_pkCurRaceMotionData->GetMotionEventDataPointer(i, &c_pData))
 			continue;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		if (c_pData->iType == CRaceMotionData::MOTION_EVENT_TYPE_UNK11)
-			return true;
-#endif
 		if (c_pData->iType == CRaceMotionData::MOTION_EVENT_TYPE_WARP)
 			return true;
 

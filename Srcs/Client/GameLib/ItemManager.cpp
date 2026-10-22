@@ -429,9 +429,6 @@ bool CItemManager::LoadItemScale(const char* szItemScale)
 		if (!strcmp(c_rstrJob.c_str(), "JOB_ASSASSIN")) bJob = NRaceData::JOB_ASSASSIN;
 		if (!strcmp(c_rstrJob.c_str(), "JOB_SURA")) bJob = NRaceData::JOB_SURA;
 		if (!strcmp(c_rstrJob.c_str(), "JOB_SHAMAN")) bJob = NRaceData::JOB_SHAMAN;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		if (!strcmp(c_rstrJob.c_str(), "JOB_WOLFMAN")) bJob = NRaceData::JOB_WOLFMAN;
-#endif
 		BYTE bSex = c_rstrSex[0] == 'M';
 
 		float fScaleX = atof(c_rstrScaleX.c_str()) * 0.01f;

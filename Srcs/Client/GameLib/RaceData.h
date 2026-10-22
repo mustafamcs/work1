@@ -37,9 +37,6 @@ class CRaceData
 			RACE_ASSASSIN_M,
 			RACE_SURA_W,
 			RACE_SHAMAN_M,
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			RACE_WOLFMAN_M,
-#endif
 			RACE_MAX_NUM,
 		};
 

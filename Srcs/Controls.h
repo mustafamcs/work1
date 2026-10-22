@@ -76,18 +76,6 @@
 // #define USE_OPENID
 #define DISABLE_STOP_RIDING_WHEN_DIE //	olunce at/binek dusmez
 //#define ENABLE_LIMIT_TIME
-
-//#define ENABLE_WOLFMAN_CHARACTER
-//#ifdef ENABLE_WOLFMAN_CHARACTER
-// #define DISABLE_WOLFMAN_ON_CREATE
-//#define USE_MOB_BLEEDING_AS_POISON
-//#define USE_MOB_CLAW_AS_DAGGER
-// #define USE_ITEM_BLEEDING_AS_POISON
-// #define USE_ITEM_CLAW_AS_DAGGER
-//#define USE_WOLFMAN_STONES
-//#define USE_WOLFMAN_BOOKS
-//#endif
-// #define USE_LYCAN_CREATE_POSITION
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////

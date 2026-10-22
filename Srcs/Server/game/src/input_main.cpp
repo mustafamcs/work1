@@ -1456,10 +1456,6 @@ bool CheckComboHack(LPCHARACTER ch, BYTE bArg, DWORD dwTime, bool CheckSpeedHack
 				 ch->GetWear(WEAR_WEAPON) &&
 				 ch->GetWear(WEAR_WEAPON)->GetSubType() == WEAPON_DAGGER)
 			ch->SetValidComboInterval(300);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		else if (bArg == 21 && idx == 2 && ch->GetComboSequence() == 5 && ch->GetJob() == JOB_WOLFMAN && ch->GetWear(WEAR_WEAPON) && ch->GetWear(WEAR_WEAPON)->GetSubType() == WEAPON_CLAW)
-			ch->SetValidComboInterval(300);
-#endif
 		else if (ComboSequenceBySkillLevel[idx][ch->GetComboSequence()] != bArg)
 		{
 			HackScalar = 1;

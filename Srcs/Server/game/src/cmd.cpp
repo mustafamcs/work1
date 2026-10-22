@@ -267,9 +267,6 @@ ACMD(do_force_logout);
 ACMD(do_poison);
 ACMD(do_rewarp);
 #endif
-#ifdef ENABLE_WOLFMAN_CHARACTER
-ACMD(do_bleeding);
-#endif
 #ifdef ENABLE_MOVE_CHANNEL
 ACMD(DoChangeChannel);
 #endif
@@ -576,9 +573,6 @@ struct command_info cmd_info[] =
 #endif
 #ifdef ENABLE_IKASHOP_RENEWAL
 	{ "offshop_force_close_shop", do_offshop_force_close_shop, 0,  POS_DEAD, GM_IMPLEMENTOR },
-#endif
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	{ "bleeding",			do_bleeding,				0,			POS_DEAD,	GM_IMPLEMENTOR	},
 #endif
 #ifdef ENABLE_MOVE_CHANNEL
 	{ "change_channel",		DoChangeChannel,			0,			POS_DEAD,	GM_PLAYER	},

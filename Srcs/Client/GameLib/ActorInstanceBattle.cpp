@@ -418,16 +418,10 @@ BOOL CActorInstance::IsActEmotion()
 		case CRaceMotionData::NAME_FRENCH_KISS_START+1:
 		case CRaceMotionData::NAME_FRENCH_KISS_START+2:
 		case CRaceMotionData::NAME_FRENCH_KISS_START+3:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CRaceMotionData::NAME_FRENCH_KISS_START+4:
-#endif
 		case CRaceMotionData::NAME_KISS_START+0:
 		case CRaceMotionData::NAME_KISS_START+1:
 		case CRaceMotionData::NAME_KISS_START+2:
 		case CRaceMotionData::NAME_KISS_START+3:
-#ifdef ENABLE_WOLFMAN_CHARACTER
-		case CRaceMotionData::NAME_KISS_START+4:
-#endif
 			return TRUE;
 			break;
 	}

@@ -721,10 +721,6 @@ void CHARACTER::RemoveSkillAffect()
 	RemoveAffect(SKILL_KWAESOK);
 	RemoveAffect(SKILL_JEUNGRYEOK);
 	RemoveAffect(SKILL_GICHEON);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	RemoveAffect(SKILL_JEOKRANG);
-	RemoveAffect(SKILL_CHEONGRANG);
-#endif
 }
 
 void CHARACTER::RemoveGoodAffect()
@@ -765,11 +761,6 @@ bool CHARACTER::IsGoodAffect(BYTE bAffectType) const
 		case (SKILL_KWAESOK):
 		case (SKILL_JEUNGRYEOK):
 		case (SKILL_GICHEON):
-#ifdef ENABLE_WOLFMAN_CHARACTER
-
-		case (SKILL_JEOKRANG):
-		case (SKILL_CHEONGRANG):
-#endif
 			return true;
 	}
 	return false;
@@ -779,9 +770,6 @@ void CHARACTER::RemoveBadAffect()
 {
 	sys_log(0, "RemoveBadAffect %s", GetName());
 	RemovePoison();
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	RemoveBleeding();
-#endif
 	RemoveFire();
 
 	RemoveAffect(AFFECT_STUN);

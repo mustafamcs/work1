@@ -147,10 +147,6 @@ bool MatchFilterType(const ikashop::TShopItem& info, const ikashop::TFilterInfo&
 				return table->bSubType == WEAPON_BELL;
 			case ikashop::SEARCH_SHOP_SUBTYPE_WEAPON_FAN:
 				return table->bSubType == WEAPON_FAN;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case ikashop::SEARCH_SHOP_SUBTYPE_WEAPON_CLAW:
-				return table->bSubType == WEAPON_CLAW;
-#endif
 		}
 		return false;
 	};
@@ -170,10 +166,6 @@ bool MatchFilterType(const ikashop::TShopItem& info, const ikashop::TFilterInfo&
 				return !IS_SET(table->dwAntiFlags, ITEM_ANTIFLAG_ASSASSIN);
 			case ikashop::SEARCH_SHOP_SUBTYPE_ARMOR_SHAMAN:
 				return !IS_SET(table->dwAntiFlags, ITEM_ANTIFLAG_SHAMAN);
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case ikashop::SEARCH_SHOP_SUBTYPE_ARMOR_WOLFMAN:
-				return !IS_SET(table->dwAntiFlags, ITEM_ANTIFLAG_WOLFMAN);
-#endif
 		}
 		return false;
 	};

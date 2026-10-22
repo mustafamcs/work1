@@ -17,9 +17,9 @@
 130	SUPPORT	Binicilik			Ata binme yeteneği.					CANNOT_LEVEL_UP|PASSIVE		riding										
 131	SUPPORT	At Çağırma			At çağırma.							summon										
 132	SUPPORT	Otomatik olarak saldır			İşaretli bir rakibe saldırır					CANNOT_LEVEL_UP|TOGGLE		autoattack										
-137	HORSE	At Üzerinde Savaş			At üzerinde düşmana saldır. (sev. 50 itibariyle)	Binicilik Becerisi				ATTACK_SKILL|HORSE_SKILL|MOVING_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|FAN|BELL|CLAW	wildattack	121	1								
+137	HORSE	At Üzerinde Savaş			At üzerinde düşmana saldır. (sev. 50 itibariyle)	Binicilik Becerisi				ATTACK_SKILL|HORSE_SKILL|MOVING_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|FAN|BELL	wildattack	121	1								
 138	HORSE	At çiftesi			Yakındaki tüm düşmanlara saldır. (Sv.52 itib.)	Binicilik Becerisi				ATTACK_SKILL|HORSE_SKILL|SEARCH_TARGET|CHARGE_ATTACK		charge	122	1								
-139	HORSE	Güç Dalgası			Tüm düşmanlara at üzerinden saldır.	Binicilik Becerisi				ATTACK_SKILL|HORSE_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|BOW|FAN|BELL|CLAW	splash	123	1								
+139	HORSE	Güç Dalgası			Tüm düşmanlara at üzerinden saldır.	Binicilik Becerisi				ATTACK_SKILL|HORSE_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|BOW|FAN|BELL	splash	123	1								
 140	HORSE	Ok Sağanağı			Düşmanlara at üzerinden ok at.	Binicilik Becerisi				ATTACK_SKILL|FAN_RANGE|NEED_TARGET|HORSE_SKILL|WEAPON_LIMITATION	BOW	wildattack	121	1	5							
 151	GUILD	Ejderha Gözleri			Maksimum Ejderha hayaletini arttırır.					PASSIVE		yongan					Maks. Ejderha hayaleti yükseltimi +%.0f	k * 1400				
 152	GUILD	Ejderha Tanrısı Kanı			Belli bir süre boyunca maks. HP artışı sağlar.	Sadece Lonca Savaşında				ONLY_FOR_GUILD_WAR		gaho	101	1			Maka. HP +%.0f%%	k * 20				
@@ -43,7 +43,6 @@
 226	PASSIVE	Ateşli Ok Misillemesi			Ateşli ok hasarı düşer	Ateşli oka karşı dayanıklılık				PASSIVE		p_hwajo					Ateşli oka karşı savunma +%%%.1f	24*k				
 227	PASSIVE	Karanlık Vuruş Misillemesi			Karanlık vuruş hasarı düşer	Karanlık vuruşa karşı dayanıklılık				PASSIVE		p_maryeong					Karanlık vuruşa karşı savunma +%%%.1f	24*k				
 228	PASSIVE	Şimşek Çağırma Misillemesi			Şimşek çağırma hasarı düşer	Şimşek çağırmaya karşı dayanıklılık				PASSIVE		p_byeorak					Şimşek çağırmaya karşı savunma +%%%.1f	24*k				
-229	PASSIVE	Kurt Nefesi Misillemesi			Kurt nefesi hasarı düşer	Kurt nefesine karşı dayanıklılık				PASSIVE		p_salpoong					Kurt nefesine karşı savunma +%%%.1f	24*k				
 236	PASSIVE	Kılıç Çevirme Güçlendirmesi			Kılıç çevirmenin saldırı gücü artar	Kılıç çevirme güçlendirmesi				PASSIVE		pp_palbang					Güçlendirme +%%%.1f	16*k				
 237	PASSIVE	Suikast Güçlendirmesi			Suikastin saldırı gücü artar	Suikast güçlendirmesi				PASSIVE		pp_amseup					Güçlendirme +%%%.1f	16*k				
 238	PASSIVE	Parmak Darbesi Güçlendirmesi			Parmak darbesinin saldırı gücü artar	Parmak darbesi güçlendirmesi				PASSIVE		pp_swaeryeong					Güçlendirme +%%%.1f	16*k				
@@ -52,7 +51,6 @@
 241	PASSIVE	Ateşli Ok Güçlendirmesi			Ateşli okun saldırı gücü artar	Ateşli ok güçlendirmesi				PASSIVE		pp_hwajo					Güçlendirme +%%%.1f	16*k				
 242	PASSIVE	Karanlık Vuruş Güçlendirmesi			Karanlık vuruşun saldırı gücü artar	Karanlık vuruş güçlendirmesi				PASSIVE		pp_maryeong					Güçlendirme +%%%.1f	16*k				
 243	PASSIVE	Şimşek Çağırma Güçlendirmesi			Şimşek çağırmanın saldırı gücü artar	Şimşek çağırma güçlendirmesi				PASSIVE		pp_byeorak					Güçlendirme +%%%.1f	16*k				
-244	PASSIVE	Kurt Nefesi Güçlendirmesi			Kurt nefesinin saldırı gücü artar	Kurt nefesinin güçlendirmesi				PASSIVE		pp_salpoong					Güçlendirme +%%%.1f	16*k				
 3	WARRIOR	Öfke	Korkunç öfke	Çılgınlık	Sadece saldırıya konsantre oluyorsun.	Pozitif etki	Saldırı hızını artırır	Hareket hızını artırır	Hasar duyarlılığnı artırır	STANDING_SKILL		jeongwi	3	4			Saldırı hızı +%.0f%%	50 * SkillPoint		Hareket hızı: +%.0f%%	20 * SkillPoint	
 31	ASSASSIN	Suikast	Gizli saldırı	Gizli suikast	Düşmanına suikast düzenle.	Fiziki yakın dövüş saldırısı	Arkadan vuruşlarda saldırı değeri artar	DEX ve STR ile güçlenir		ATTACK_SKILL|MELEE_ATTACK|NEED_TARGET|WEAPON_LIMITATION|IGNORE_BLOCK	DAGGER|DOUBLE_SWORD|SWORD	amseup	1	4			Saldırı değeri %.0f-%.0f	minatk + (1.2 * minatk + 500 + dex*12)*k	maxatk + (1.2 * maxatk + 700 + dex*12)*k			
 32	ASSASSIN	Hızlı saldırı	Warp saldırısı	Ölüm saldırısı	Düşmana hızlıca yaklaş ve ölümcül bir saldırı başlat.	Fiziki uzun menzilli saldırı	Işınlama saldırısı		DEX ve STR ile güçlenir	ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION|IGNORE_BLOCK	DAGGER|DOUBLE_SWORD|SWORD	gungsin	2	4			Saldırı değeri %.0f-%.0f	(minatk + (1.6* minatk + 200 + dex*7 + str*7)*k)	(maxatk + (1.6* maxatk + 300 + dex*7 + str*7)*k)			

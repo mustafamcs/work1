@@ -3023,11 +3023,6 @@ teleport_area:
 			case JOB_SHAMAN:
 				dwRace = (mySex==SEX_MALE)?MAIN_RACE_SHAMAN_M:MAIN_RACE_SHAMAN_W;
 				break;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			case JOB_WOLFMAN:
-				dwRace = (mySex==SEX_MALE)?MAIN_RACE_WOLFMAN_M:MAIN_RACE_WOLFMAN_M;
-				break;
-#endif
 		}
 		if (dwRace!=ch->GetRaceNum())
 		{
@@ -3109,14 +3104,6 @@ teleport_area:
 		lua_pushboolean(L, ch->IsAffectFlag(AFF_POISON));
 		return 1;
 	}
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	ALUA(pc_if_bleeding)
-	{
-		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-		lua_pushboolean(L, ch->IsAffectFlag(AFF_BLEEDING));
-		return 1;
-	}
-#endif
 	ALUA(pc_if_slow)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
@@ -3157,17 +3144,6 @@ teleport_area:
 			ch->RemoveAffect(AFFECT_POISON);
 		return 0;
 	}
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	ALUA(pc_sf_bleeding)
-	{
-		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
-		if(lua_toboolean(L, 1))
-			ch->AddAffect(AFFECT_BLEEDING, 0, 0, AFF_BLEEDING, 30+1, 0, 1, 0);
-		else
-			ch->RemoveAffect(AFFECT_BLEEDING);
-		return 0;
-	}
-#endif
 	ALUA(pc_sf_slow)
 	{
 		LPCHARACTER ch = CQuestManager::instance().GetCurrentCharacterPtr();
@@ -3682,7 +3658,7 @@ teleport_area:
 			{ "get_killee_drop_pct",	pc_get_killee_drop_pct	},
 
 #ifdef ENABLE_NEWSTUFF
-			//pc.set_race0(race=[0. Warrior, 1. Ninja, 2. Sura, 3. Shaman, 4. Lycan])
+			//pc.set_race0(race=[0. Warrior, 1. Ninja, 2. Sura, 3. Shaman])
 			{ "set_race0",			pc_set_race0			},
 			{ "set_race",			pc_set_race0			},	// alias
 			//if pc.delf("game_option", "block_cocks") then syschat("now you are unsafe") end
@@ -3709,18 +3685,12 @@ teleport_area:
 			{ "is_flag_fire",			pc_if_fire			},
 			{ "is_flag_invisible",		pc_if_invisible		},
 			{ "is_flag_poison",			pc_if_poison		},
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			{ "is_flag_bleeding",		pc_if_bleeding		},
-#endif
 			{ "is_flag_slow",			pc_if_slow			},
 			{ "is_flag_stun",			pc_if_stun			},
 			//set_flags (bool) [return nothing]
 			{ "set_flag_fire",			pc_sf_fire			},
 			{ "set_flag_invisible",		pc_sf_invisible		},
 			{ "set_flag_poison",		pc_sf_poison		},
-#ifdef ENABLE_WOLFMAN_CHARACTER
-			{ "set_flag_bleeding",		pc_sf_bleeding		},
-#endif
 			{ "set_flag_slow",			pc_sf_slow			},
 			{ "set_flag_stun",			pc_sf_stun			},
 			//pc.set_flag_kill(char_name) [return nothing]
