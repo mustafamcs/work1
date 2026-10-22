@@ -88,3 +88,11 @@ MSBuild v143. `Srcs\Server\server.sln` + `Srcs\Metin2.sln`; ayrıca `Srcs\Server
 ## Git
 
 - Dal `main`, origin `https://github.com/mustafamcs/work1.git`. Çalışma ağacı bu turda çok değişti (yüzlerce dosya). Commit/push yapılmadı.
+
+## 2026-10-22 syserr temizligi
+
+- `tools\script\95_data_duzelt.bat` + `data_duzelt.py`: package/ dizinleri (auth, core1, ch99), mob_proto'da kullanilan ~45 eksik canavar klasorunu donor kopyasiyla olusturdu, tum motlist.txt'lerdeki eksik .msa referanslarini esledi/dusurdu, metinstone* RUN satirlari kaldirildi, `item.window` enum'a canlida PET eklendi (schema.sql ile esit).
+- `msl\file_ptr.h::read` NUL-dolgu bug'i duzeltildi (text-mode CRLF->LF farki; map/index '' satiri hatasinin kok nedeniydi).
+- `IkarusShopCache.cpp` safebox INSERT'i `ENABLE_CHEQUE_SYSTEM`'e baglandi (cheque kapali — sorgu artik kolon yazmiyor).
+- db+game ayni kaynaktan derlenip dagitildi (20:56); Bilinmeyen-baslik/efsun-tablo-boyut/window-truncate desync hatalari bitti.
+- Restart (20:57) sonrasi tum syserr'ler temiz: auth/db/core1/ch99'da 0 yeni hata.

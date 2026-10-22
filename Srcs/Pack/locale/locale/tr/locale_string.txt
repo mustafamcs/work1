@@ -1835,3 +1835,12 @@
 1993	Bir eşya seçerken lonca deposuna erişemez veya ticaret yapamazsın.
 1994	Karşındaki kişinin başka bir penceresi açıkken bu mümkün değil.
 1995	Bir eşya seçerken bunu kullanamazsın.
+548	%s arkadaşlık isteğinizi reddetti.
+1960	Şu anda takas yapamazsın. Açık pencereleri kapat.
+2001	Başka bir pencere açıkken ticaret yapamazsın.
+2002	Lütfen bir süre bekle.
+2003	NPC'den çok uzaktasın.
+2004	Kuşanılmış eşyayı satamazsın.
+2005	Yang limitini aşacağı için eşyayı satamazsın.
+2006	Satış tutarından %%%d vergi kesildi.
+2007	Eşyan %d Yang'a satıldı.

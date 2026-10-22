@@ -1284,7 +1284,11 @@ namespace ikashop
 
 	std::string CreateSafeboxCacheInsertSafeboxValutesQuery(DWORD dwOwnerID)
 	{
+#ifdef ENABLE_CHEQUE_SYSTEM
 		return fmt::format("INSERT INTO `ikashop_safebox` (`owner`,`gold`,`cheque`) VALUES({} , 0,0);", dwOwnerID);
+#else
+		return fmt::format("INSERT INTO `ikashop_safebox` (`owner`,`gold`) VALUES({} , 0);", dwOwnerID);
+#endif
 	}
 
 	std::string CreateSafeboxCacheLoadValutesQuery(DWORD dwOwnerID)

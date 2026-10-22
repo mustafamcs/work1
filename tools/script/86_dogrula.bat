@@ -2,11 +2,7 @@
 title work1 - butunluk dogrulama
 call "%~dp0_ayar.bat"
 
-net session >nul 2>&1
-if %errorlevel% neq 0 (
-  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
-  exit /b
-)
+rem sadece okuma/port kontrolu yaptigi icin admin gerektirmez
 setlocal enabledelayedexpansion
 set /a ERR=0
 

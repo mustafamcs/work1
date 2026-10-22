@@ -59,6 +59,7 @@ server/logs/
 # Loglar
 *.log
 tools/script/log/
+tools/script/unpacked/
 client/logs/
 
 # Geçici / yedek artıkları

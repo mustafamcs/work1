@@ -248,7 +248,8 @@ public:
 		if (n == 0) // 0 implies reading the whole remaining file
 			n = this->remain_size();
 		std::vector<char> buf(n);
-		std::fread(buf.data(), 1, buf.size(), m_ptr_);
+		const auto read_ = std::fread(buf.data(), 1, buf.size(), m_ptr_);
+		buf.resize(read_); // text modda CRLF->LF donusumuyle daha az byte okunur; kalan NUL dolguyu at
 		return buf;
 	}
 

@@ -2,11 +2,7 @@
 title work1 - git commit + push
 call "%~dp0_ayar.bat"
 
-net session >nul 2>&1
-if %errorlevel% neq 0 (
-  cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
-  exit /b
-)
+rem git islemleri admin gerektirmez
 rem Kullanim: 91_git_kaydet.bat "commit mesaji"
 rem Tum degisiklikleri ekler, verilen mesajla commit'ler, main'e pushlar.
 
@@ -14,7 +10,7 @@ if "%~1"=="" ( echo Kullanim: %~n0 "commit mesaji" & exit /b 1 )
 cd /d "%KOK%"
 
 git status --short >nul 2>&1
-for /f %%N in ('git status --porcelain ^| find /c /v ""') do set ADET=%%N
+for /f %%N in ('git status --porcelain ^| %SystemRoot%\System32\find.exe /c /v ""') do set ADET=%%N
 if "%ADET%"=="0" ( echo [OK] commitlenecek degisiklik yok & exit /b 0 )
 
 git add -A
