@@ -1,16 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # olu_define_tara.py — Controls.h icindeki TUM define'leri (aktif + kapali)
-# tarar ve her birinin repo icinde (Controls.h disinda) kullanilip
-# kullanilmadigini raporlar. Boylece "olu/eski bayrak"lar bulunur.
+# tarar ve her birinin repo icinde (Controls.h disinda) NASIL kullanildigini
+# baglamina gore siniflandirir:
+#   KOD   : #if/#ifdef/#ifndef/#elif/defined() iceren gercek kosul satirlari
+#   APP   : PyModule_AddIntConstant / app.X export blogu
+#   PY    : .py dosyasinda app.X / dogrudan isim kullanimi (yorum haric)
+#   YORUM : // veya # ile baslayan yorum satirlari, docstring, txt/md/bat
+#   DIGER : yukaridakilere girmeyen duz metin eslesmeleri
+#
+# Boylece "kod dahil silinebilir" adaylari bulunur:
+#   - hic dis referansi olmayanlar (OLU)
+#   - sadece yorum/doc'ta gecenler (yorumlu iz)
+#   - sadece app export + py okunanlar (py-pack bayragi; C++ kodu yok)
 #
 # Kullanim:
-#   python olu_define_tara.py            # tam rapor
-#   python olu_define_tara.py --dead     # sadece olu bayraklari listele
+#   python olu_define_tara.py            # tam rapor (detaylar log'a)
+#   python olu_define_tara.py --dead     # sadece silinebilir adaylari listele
 #
-# Not: "Pack/Python Ayarlari" bolumundeki define'ler app.X olarak python'a
-# aktarilir; kullanim sayiminda PythonApplicationModule.cpp ve .py dosyalari
-# da taranir — bu yuzden onlar "olu" sayilmaz.
+# Rapor her zaman tools/script/log/olu_define_tara.txt dosyasina yazilir.
 
 import io, os, re, sys
 
@@ -37,8 +45,13 @@ SKIP_EXT = {
 }
 MAX_FILE_MB = 8
 
+RE_CPP_IF = re.compile(r'^\s*#\s*(if|ifdef|ifndef|elif)\b|defined\s*\(')
+RE_CPP_COMMENT = re.compile(r'^\s*(//|/\*|\*)')
+RE_PY_COMMENT = re.compile(r'^\s*#')
+RE_APP_EXPORT = re.compile(r'PyModule_AddIntConstant')
+
 def parse_controls():
-    """Controls.h -> [(ad, durum, bolum)] ; durum: 'AKTIF' | 'KAPALI'"""
+    """Controls.h -> [(ad, durum, bolum)] ; durum: 'AKTIF' | 'KAPALI' | 'ENUM'"""
     out, section = [], ''
     lines = io.open(HDR, encoding='utf-8').read().splitlines()
     in_enum = False
@@ -86,43 +99,70 @@ def collect_files():
                 continue
             yield fp
 
+def classify_line(ext, line, name):
+    """Tek satirdaki eslesmenin baglam sinifi."""
+    if ext in ('.cpp', '.c', '.h', '.hpp', '.cc', '.cxx'):
+        if RE_APP_EXPORT.search(line):
+            return 'APP'
+        if RE_CPP_IF.search(line):
+            return 'KOD'
+        if RE_CPP_COMMENT.match(line):
+            return 'YORUM'
+        return 'KOD'   # cpp ici duz kullanim
+    if ext == '.py':
+        if RE_PY_COMMENT.match(line):
+            return 'YORUM'
+        return 'PY'
+    # bat/txt/md/lua/vcxproj vb. -> belge niteliginde
+    return 'YORUM'
+
 def main():
     defs = parse_controls()
     names = [d[0] for d in defs]
     uniq = set(names)
-    # uzun isim once — ayni anda tek regex ile ara
     pat = re.compile(r'(?<![A-Za-z0-9_])(' +
                      '|'.join(re.escape(n) for n in sorted(uniq, key=len, reverse=True)) +
                      r')(?![A-Za-z0-9_])')
 
-    hits = {n: {'count': 0, 'files': []} for n in uniq}
+    # ad -> {baglam -> adet, 'files' -> [ilk dosyalar]}
+    hits = {n: {'KOD': 0, 'APP': 0, 'PY': 0, 'YORUM': 0, 'files': []} for n in uniq}
     scanned = 0
     for fp in collect_files():
         try:
-            data = io.open(fp, 'r', encoding='utf-8', errors='ignore').read()
+            lines = io.open(fp, 'r', encoding='utf-8', errors='ignore').read().splitlines()
         except (IOError, OSError):
             continue
         scanned += 1
-        found = set()
-        for mm in pat.finditer(data):
-            n = mm.group(1)
-            hits[n]['count'] += 1
-            found.add(n)
-        rel = os.path.relpath(fp, ROOT)
-        for n in found:
-            if len(hits[n]['files']) < 6:
+        ext = os.path.splitext(fp)[1].lower()
+        try:
+            rel = os.path.relpath(fp, ROOT)
+        except ValueError:  # aygit/junction yollari (\\.\nul vb.) atla
+            continue
+        file_hits = set()
+        for ln in lines:
+            for mm in pat.finditer(ln):
+                n = mm.group(1)
+                ctx = classify_line(ext, ln, n)
+                hits[n][ctx] += 1
+                file_hits.add(n)
+        for n in file_hits:
+            if len(hits[n]['files']) < 8:
                 hits[n]['files'].append(rel)
 
-    dead, only_hdr, alive = [], [], []
+    def total(h):
+        return h['KOD'] + h['APP'] + h['PY'] + h['YORUM']
+
+    dead, comment_only, py_only, alive = [], [], [], []
     for name, durum, section in defs:
         h = hits[name]
-        if h['count'] == 0:
+        if total(h) == 0:
             dead.append((name, durum, section))
-        elif all(f.endswith('Controls.h') for f in h['files']) and h['count'] <= len(h['files']):
-            # sadece Controls.h icinde (ornegin baska define'in ifndef'i)
-            only_hdr.append((name, durum, section, h['files']))
+        elif h['KOD'] == 0 and h['APP'] == 0 and h['PY'] == 0:
+            comment_only.append((name, durum, section, h['files']))
+        elif h['KOD'] == 0:
+            py_only.append((name, durum, section, h['APP'], h['PY'], h['files']))
         else:
-            alive.append((name, durum, section, h['count'], h['files']))
+            alive.append((name, durum, section, h))
 
     out = []
     def w(s=''):
@@ -131,25 +171,36 @@ def main():
 
     w('Taranan dosya: %d   Define sayisi: %d' % (scanned, len(defs)))
     w('')
-    w('=' * 70)
+    w('=' * 74)
     w('OLU BAYRAKLAR (Controls.h disinda hic gecmiyor): %d' % len(dead))
-    w('=' * 70)
+    w('=' * 74)
     for name, durum, section in dead:
         w('  [%-6s] %-50s (%s)' % (durum, name, section))
     w('')
-    w('=' * 70)
-    w('SADECE Controls.h ICINDE REFERANSLI: %d' % len(only_hdr))
-    w('=' * 70)
-    for name, durum, section, files in only_hdr:
+    w('=' * 74)
+    w('SADECE YORUM/BELGEDE GECENLER (kodda yok): %d' % len(comment_only))
+    w('=' * 74)
+    for name, durum, section, files in comment_only:
         w('  [%-6s] %-50s (%s)' % (durum, name, section))
+        for f in files:
+            w('        -> %s' % f)
     w('')
-    w('=' * 70)
-    w('KULLANILAN DEFINE\'LER: %d' % len(alive))
-    w('=' * 70)
-    for name, durum, section, cnt, files in alive:
-        w('  [%-6s] %-50s %4d eslesme  (%s)' % (durum, name, cnt, section))
+    w('=' * 74)
+    w('C++ KODU OLMAYANLAR (sadece app.X export / py kullanimi): %d' % len(py_only))
+    w('=' * 74)
+    for name, durum, section, app_n, py_n, files in py_only:
+        w('  [%-6s] %-50s app=%d py=%d (%s)' % (durum, name, app_n, py_n, section))
+        for f in files:
+            w('        -> %s' % f)
+    w('')
+    w('=' * 74)
+    w('GERCEK KODDA KULLANILANLAR: %d' % len(alive))
+    w('=' * 74)
+    for name, durum, section, h in alive:
+        w('  [%-6s] %-46s kod=%-4d app=%-3d py=%-4d yorum=%-4d (%s)'
+          % (durum, name, h['KOD'], h['APP'], h['PY'], h['YORUM'], section))
         if '--dead' not in sys.argv:
-            for f in files:
+            for f in h['files']:
                 w('        -> %s' % f)
 
     if not os.path.isdir(LOGDIR):
