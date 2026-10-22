@@ -1,8 +1,0 @@
-"Özellik başarıyla eklendi";
-"The attribute has been successfully added";
-
-"Bu eşya ile daha fazla özellik eklenemez";
-"No more attributes can be added on this item";
-
-"Değiştirilecek özellik yok";
-"There are no attributes to change";
