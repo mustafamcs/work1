@@ -72,6 +72,8 @@
 		// #define ENABLE_TP_SPEED_CHECK
 // #define ENABLE_ACCOUNT_W_SPECIALCHARS
 // #define ENABLE_LOCALECHECK_CHANGENAME
+// #define ENABLE_PLAYER_CHECKAFFECT
+// #define USE_OPENID
 #define DISABLE_STOP_RIDING_WHEN_DIE //	olunce at/binek dusmez
 //#define ENABLE_LIMIT_TIME
 
@@ -133,6 +135,10 @@
 	// #define USE_ITEM_AWARD_CHECK_ATTRIBUTES // item_attr lvl1-5 min-max limiti asimini engeller
 #endif
 #define ENABLE_NO_PICKUP_LIMIT
+// #define ENABLE_ITEM_COUNT_LIMIT_SYSTEM
+// #define ENABLE_MONSTER_CARD
+// #define ENABLE_SEALBIND_SYSTEM
+// #define ENABLE_SOULBIND_SYSTEM
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -146,6 +152,10 @@
 #ifdef ENABLE_ACCE_COSTUME_SYSTEM
 // #define USE_ACCE_ABSORB_WITH_NO_NEGATIVE_BONUS // sadece pozitif bonus absorbe
 #endif
+// #define ENABLE_ACCE_SYSTEM                  // eski acce sistemi
+// #define ENABLE_SASH_SYSTEM
+// #define ENABLE_AURA_COSTUME_SYSTEM
+// #define ENABLE_CHANGELOOK_SYSTEM
 #define ENABLE_LVL115_ARMOR_EFFECT
 #define ENABLE_HAIR_SPECULAR
 // #define USE_WEAPON_COSTUME_WITH_EFFECT
@@ -169,6 +179,7 @@
 #define PET_SEAL_ACTIVE_SOCKET_IDX 2
 #define USE_PET_SEAL_ON_LOGIN
 #endif
+// #define ENABLE_GROWTH_PET_SYSTEM
 #define ENABLE_NO_MOUNT_CHECK
 // #define ENABLE_MOUNT_ENTITY_REFRESH
 // #define ENABLE_INFINITE_HORSE_HEALTH_STAMINA
@@ -180,14 +191,18 @@
 #define ENABLE_FULL_YANG // client tarafi
 #define ENABLE_CHECK_SELL_PRICE
 // #define ENABLE_NO_SELL_PRICE_DIVIDED_BY_5
+// #define ENABLE_GOLD_FIELD_AS_SELL_PRICE
 #define ENABLE_OPEN_SHOP_WITH_ARMOR
 #define ENABLE_NEWSTUFF
 
+// --- Ikarus Shop (offline dukkan) ---
 #define ENABLE_IKASHOP_RENEWAL
 #define EXTEND_IKASHOP_PRO
 #define EXTEND_IKASHOP_ULTIMATE
 #define ENABLE_IKASHOP_ENTITIES
 // #define ENABLE_IKASHOP_GM_PROTECTION
+// #define ENABLE_IKASHOP_LOGS
+// #define ENABLE_OFFLINESHOP_DEBUG
 // #define ENABLE_PC_OPENSHOP
 //#define ENABLE_SHOP_BLACKLIST
 
@@ -228,6 +243,7 @@
 #ifdef ENABLE_NEW_EVENT_STRUCT
 #define USE_NEW_EVENT_TEXT_AUTO_Y
 #endif
+// #define ENABLE_MONARCH_MOB_CMD_MAP_CHECK
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -255,12 +271,21 @@ enum eCommonDefines {
 //////////////////////////////////////////////////////////////////////////
 // ### Istemci Arayuz ve Gorsel ###
 #define ENABLE_DISCORD_RPC
+// #define ENABLE_DISCORD_JOIN_URL
 #define ENABLE_EMOJI_SYSTEM
 #define ENABLE_MOUSEWHEEL_EVENT
 #define ENABLE_MINIMAP_WHITEMARK_CIRCLE
 #define ENABLE_MINIMAP_TELEPORT_CLICK // gm minimap tikla-isinlan
 #define ENABLE_INGAME_CONSOLE
 #define ENABLE_CONQUEROR_UI
+// #define ENABLE_CONQUEROR_LEVEL
+// #define ENABLE_UI_CIRCLE
+// #define ENABLE_UI_MOVING
+// #define ENABLE_ENVIRONMENT_EFFECT_OPTION
+// #define ENABLE_PREMIUM_LOOT_FILTER
+// #define __BL_OFFICIAL_LOOT_FILTER__
+// #define __BL_CLIP_MASK__
+// #define __BL_MOUSE_WHEEL_TOP_WINDOW__
 #define ENABLE_4TH_AFF_SKILL_DESC
 #define ENABLE_TEXT_LEVEL_REFRESH
 #define ENABLE_GF_ATLAS_MARK_INFO
@@ -291,6 +316,7 @@ enum eCommonDefines {
 //#define USE_CRAMERS_RULE
 // #define USE_SPEEDGRASS   // Constants.h hicbir yerde include edilmiyor - orijinalde kapaliydi
 // #define ENABLE_SIMPLE_REFINED_EFFECT_CHECK
+// #define USE_RELATIVE_PATH
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -298,6 +324,7 @@ enum eCommonDefines {
 #define ENABLE_PYLIB_CHECK
 #define ENABLE_MILES_CHECK
 // #define ENABLE_DAEMONPROTECTION
+// #define ENABLE_HACK_TELEPORT_LOG
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -312,6 +339,8 @@ enum eCommonDefines {
 // #define DEBUG_ALLOC                  // debug allocator/DebugPtr sistemi (acinca USE_DEBUG_PTR otomatik gelir)
 // #define ENABLE_SYSLOG_PACKET_SENT // debug purposes
 // #define ENABLE_PRINT_RECV_PACKET_DEBUG // gelen paketleri yazdir
+// #define ENABLE_GOOGLE_TEST
+// #define USE_STACKTRACE
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -327,6 +356,7 @@ enum eCommonDefines {
 // #define ENABLE_REFINE_PCT               // refine diyalogunda basari yuzdesi
 #define EXTRA_UI_FEATURE                  // ekstra ui ozellikleri
 #define NEW_678TH_SKILL_ENABLE            // 6. savasci/ninja becerileri
+// #define ENABLE_678TH_SKILL
 #define SELECT_CHAR_NO_DELAY 0.5          // karakter secim bekleme suresi
 #define ENABLE_ACTIVE_PET_SEAL_EFFECT     // pet muhru aktif efekti
 // #define ENABLE_RECURSIVE_UI_DESTROY     // ui bilesenlerini zorla temizle
@@ -340,6 +370,7 @@ enum eCommonDefines {
 // #define DISABLE_GUILD_SKILL             // lonca becerisi kapali
 // #define DISABLE_DECLARE_WAR             // savas ilani kapali
 // #define ENABLE_HELP_MULTIPAGE           // yardim cok sayfali
+// #define ENABLE_HELP_RENEWAL
 #define ENABLE_DEFAULT_UI_BOARD 1         // ikarus shop varsayilan board
 #define ITEM_MALL_BUTTON_ENABLE           // envanter item mall butonu
 // #define LEAVE_BUTTON_FOR_POTAL          // portaldan ayrilma butonu
@@ -354,6 +385,14 @@ enum eCommonDefines {
 // #define SHOW_ONLY_ACTIVE_SKILL          // sadece aktif beceriler
 #define HIDE_SUPPORT_SKILL_POINT          // destek beceri puani gizle
 // #define SYSTEM_MENU_FOR_PORTAL          // sistem menusu portal
+// #define ENABLE_DRAGON_GATE              // pack ui scriptleri (app.X sorgusu)
+// #define ENABLE_MERCENARY_SYSTEM
+// #define ENABLE_SUNGMAHEE_GATE
+// #define ENABLE_ADDITIONAL_EQUIPMENT_PAGE
+// #define ENABLE_SERVER_SELECT_RENEWAL
+// #define ENABLE_PREMIUM_PRIVATE_SHOP
+// #define ENABLE_AUTO_L2R
+// #define ENABLE_AUTO_SYSTEM
 
 // --- Degerli ayarlar (python'a aynen aktarilir; kapatmak icin silme, degeri degistir) ---
 #define IN_GAME_SHOP_ENABLE 1
@@ -390,46 +429,5 @@ enum eCommonDefines {
 #define SEQUENCE_PACKET_ENABLE 1
 #define KEEP_ACCOUNT_CONNETION_ENABLE 1
 #define MINIMAP_POSITIONINFO_ENABLE 1
-
-//////////////////////////////////////////////////////////////////////////
-// ### Kapali Ozellikler ###
-// #define ENABLE_678TH_SKILL
-// #define ENABLE_ACCE_SYSTEM
-// #define ENABLE_AURA_COSTUME_SYSTEM
-// #define ENABLE_AUTO_L2R
-// #define ENABLE_AUTO_SYSTEM
-// #define ENABLE_CHANGELOOK_SYSTEM
-// #define ENABLE_CONQUEROR_LEVEL
-// #define ENABLE_DISCORD_JOIN_URL
-// #define ENABLE_ENVIRONMENT_EFFECT_OPTION
-// #define ENABLE_GOLD_FIELD_AS_SELL_PRICE
-// #define ENABLE_GOOGLE_TEST
-// #define ENABLE_GROWTH_PET_SYSTEM
-// #define ENABLE_HACK_TELEPORT_LOG
-// #define ENABLE_HELP_RENEWAL
-// #define ENABLE_IKASHOP_LOGS
-// #define ENABLE_ITEM_COUNT_LIMIT_SYSTEM
-// #define ENABLE_MONARCH_MOB_CMD_MAP_CHECK
-// #define ENABLE_MONSTER_CARD
-// #define ENABLE_OFFLINESHOP_DEBUG
-// #define ENABLE_PLAYER_CHECKAFFECT
-// #define ENABLE_PREMIUM_LOOT_FILTER
-// #define ENABLE_SASH_SYSTEM
-// #define ENABLE_SEALBIND_SYSTEM
-// #define ENABLE_SOULBIND_SYSTEM
-// #define ENABLE_UI_CIRCLE
-// #define ENABLE_UI_MOVING
-// #define USE_STACKTRACE
-// #define ENABLE_DRAGON_GATE
-// #define ENABLE_MERCENARY_SYSTEM
-// #define ENABLE_SUNGMAHEE_GATE
-// #define ENABLE_ADDITIONAL_EQUIPMENT_PAGE
-// #define ENABLE_SERVER_SELECT_RENEWAL
-// #define ENABLE_PREMIUM_PRIVATE_SHOP
-// #define USE_OPENID
-// #define USE_RELATIVE_PATH
-// #define __BL_CLIP_MASK__
-// #define __BL_MOUSE_WHEEL_TOP_WINDOW__
-// #define __BL_OFFICIAL_LOOT_FILTER__
 
 #endif // __INC_METIN2_CONTROLS_H__
