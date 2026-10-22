@@ -13,7 +13,7 @@ taskkill /IM qc.exe /F >nul 2>&1
 echo == 2/4 out dizini siliniyor ==
 if exist "%KOK%\out" rd /s /q "%KOK%\out"
 
-echo == 3/4 tum cozum derleniyor (Release|Win32) ==
+echo == 3/4 tum cozum derleniyor ^(Release^|Win32^) ==
 "%MSBUILD%" "%SLN_CLIENT%" /t:Rebuild /p:Configuration=Release /p:Platform=Win32 /m /nologo /v:m
 if errorlevel 1 ( echo [HATA] derleme basarisiz & exit /b 1 )
 
