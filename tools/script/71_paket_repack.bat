@@ -15,7 +15,7 @@ taskkill /IM metin2client.exe /F >nul 2>&1
 tasklist /FI "IMAGENAME eq metin2client.exe" 2>nul | %SystemRoot%\System32\find.exe /I "metin2client.exe" >nul
 if %errorlevel% equ 0 (
   net session >nul 2>&1
-  if %errorlevel% neq 0 (
+  if errorlevel 1 (
     cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
     exit /b
   )
