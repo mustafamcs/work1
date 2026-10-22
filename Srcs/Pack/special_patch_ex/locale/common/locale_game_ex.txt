@@ -1,8 +1,8 @@
-ACCE_REFINE_COST	Absorption price: %d
-ACCE_ABSORB_CHANCE	Absorption rate: %d%%
-ACCE_ABSORB_CHANCE2	Absorption rate: %d%% ~ %d%%
-ACCE_DO_YOU_CLEAN	Do you want to remove all available bonuses?
-ACCE_FAILURE_CLEAN	No bonuses can be taken away.
+ACCE_REFINE_COST	Emilim bedeli: %d
+ACCE_ABSORB_CHANCE	Emilim oranı: %d%%
+ACCE_ABSORB_CHANCE2	Emilim oranı: %d%% ~ %d%%
+ACCE_DO_YOU_CLEAN	Mevcut tüm bonusları kaldırmak istiyor musun?
+ACCE_FAILURE_CLEAN	Kaldırılabilecek bonus yok.
 UI_BOLD_FONT	Tahoma:12b
 UI_BOLD_FONT_LARGE	Tahoma:14b
 UI_BOLD_FONT_SMALL	Tahoma:9b
@@ -18,6 +18,4 @@ UI_STRIKE_FONT_SMALL	Tahoma:9s
 UI_UNDER_FONT	Tahoma:12u
 UI_UNDER_FONT_LARGE	Tahoma:14u
 UI_UNDER_FONT_SMALL	Tahoma:9u
-TOOLTIP_TIPS_SPLIT_ITEM	{} + {} Split Item
-DO_YOU_SELL_ITEM1	Do you want to sell %s for %s Yang?
-DO_YOU_SELL_ITEM2	Do you want to sell %s (%s lots) for %s Yang?
+TOOLTIP_TIPS_SPLIT_ITEM	{} + {} Eşyayı Ayır
