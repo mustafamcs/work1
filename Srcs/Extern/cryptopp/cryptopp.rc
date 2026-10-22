@@ -18,7 +18,7 @@
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 #ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
-#pragma code_page(1252)
+#pragma code_page(65001)
 #endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
@@ -45,13 +45,13 @@ BEGIN
         BEGIN
             VALUE "Comments", "Free crypto library, more information available at www.cryptopp.com"
             VALUE "CompanyName", "Wei Dai"
-            VALUE "FileDescription", "Crypto++® Library DLL"
+            VALUE "FileDescription", "Crypto++Â® Library DLL"
             VALUE "FileVersion", "7, 0, 0, 0"
             VALUE "InternalName", "cryptopp"
-            VALUE "LegalCopyright", "Copyright© 1995-2018 by Wei Dai"
-            VALUE "LegalTrademarks", "Crypto++®"
+            VALUE "LegalCopyright", "CopyrightÂ© 1995-2018 by Wei Dai"
+            VALUE "LegalTrademarks", "Crypto++Â®"
             VALUE "OriginalFilename", "cryptopp.dll"
-            VALUE "ProductName", "Crypto++® Library"
+            VALUE "ProductName", "Crypto++Â® Library"
             VALUE "ProductVersion", "7, 0, 0, 0"
         END
     END
