@@ -1,4 +1,6 @@
 # 07: metin dosyaları UTF-8 ve LF. Depo txt, quest ve CONFIG için LF zorlar.
+*.bat text eol=crlf
+*.vbs text eol=crlf
 *.txt text eol=lf
 *.quest text eol=lf
 *.lua text eol=lf
