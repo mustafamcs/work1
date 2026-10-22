@@ -87,12 +87,13 @@ int CHARACTER::ChangeEmpire(BYTE empire)
 	}
 
 	{
-		snprintf(szQuery, sizeof(szQuery), "UPDATE player_index%s SET empire=%u WHERE pid1=%u OR pid2=%u OR pid3=%u OR pid4=%u"
-				#ifdef ENABLE_PLAYER_PER_ACCOUNT5
-				" OR pid5=%u"
-				#endif
-				" AND empire=%u",
+		#ifdef ENABLE_PLAYER_PER_ACCOUNT5
+		snprintf(szQuery, sizeof(szQuery), "UPDATE player_index%s SET empire=%u WHERE pid1=%u OR pid2=%u OR pid3=%u OR pid4=%u OR pid5=%u AND empire=%u",
 				get_table_postfix(), empire, GetPlayerID(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetEmpire());
+		#else
+		snprintf(szQuery, sizeof(szQuery), "UPDATE player_index%s SET empire=%u WHERE pid1=%u OR pid2=%u OR pid3=%u OR pid4=%u AND empire=%u",
+				get_table_postfix(), empire, GetPlayerID(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetEmpire());
+		#endif
 
 		auto msg(DBManager::instance().DirectQuery(szQuery));
 		if (msg->Get()->uiAffectedRows > 0)
@@ -160,12 +161,13 @@ DWORD CHARACTER::GetAID() const
 {
 	char szQuery[1024+1];
 	DWORD dwAID = 0;
-	snprintf(szQuery, sizeof(szQuery), "SELECT id FROM player_index%s WHERE pid1=%u OR pid2=%u OR pid3=%u OR pid4=%u"
-			#ifdef ENABLE_PLAYER_PER_ACCOUNT5
-			" OR pid5=%u"
-			#endif
-			" AND empire=%u",
+	#ifdef ENABLE_PLAYER_PER_ACCOUNT5
+	snprintf(szQuery, sizeof(szQuery), "SELECT id FROM player_index%s WHERE pid1=%u OR pid2=%u OR pid3=%u OR pid4=%u OR pid5=%u AND empire=%u",
 			get_table_postfix(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetEmpire());
+	#else
+	snprintf(szQuery, sizeof(szQuery), "SELECT id FROM player_index%s WHERE pid1=%u OR pid2=%u OR pid3=%u OR pid4=%u AND empire=%u",
+			get_table_postfix(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetPlayerID(), GetEmpire());
+	#endif
 
 	auto pMsg = DBManager::instance().DirectQuery(szQuery);
 	if (pMsg != NULL)

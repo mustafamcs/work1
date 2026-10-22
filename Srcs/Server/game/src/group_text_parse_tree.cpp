@@ -1,9 +1,10 @@
 #include "stdafx.h"
 #include "../../common/stl.h"
+#include "../../common/JsonTable.h"
 #include "group_text_parse_tree.h"
 
 CGroupTextParseTreeLoader::CGroupTextParseTreeLoader()
-	: m_pRootGroupNode(NULL), m_dwcurLineIndex(0)
+	: m_pRootGroupNode(NULL), m_dwcurLineIndex(0), m_bJson(false)
 {
 }
 
@@ -24,21 +25,33 @@ bool CGroupTextParseTreeLoader::Load(const char * c_szFileName)
 
 	m_dwcurLineIndex = 0;
 
-	FILE* fp = fopen(c_szFileName, "rb");
+	const std::string jsonPath = jsontable::JsonPathFor(c_szFileName);
+	m_bJson = false;
 
-	if (NULL == fp)
-		return false;
+	if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()))
+	{
+		if (!jsontable::LoadRows(jsonPath.c_str(), m_jsonRows))
+			return false;
+		m_bJson = true;
+	}
+	else
+	{
+		FILE* fp = fopen(c_szFileName, "rb");
 
-	fseek(fp, 0L, SEEK_END);
-	const size_t fileSize = ftell(fp);
-	fseek(fp, 0, SEEK_SET);
+		if (NULL == fp)
+			return false;
 
-	char * pData = M2_NEW char[fileSize];
-	fread(pData, fileSize, 1, fp);
-	fclose(fp);
+		fseek(fp, 0L, SEEK_END);
+		const size_t fileSize = ftell(fp);
+		fseek(fp, 0, SEEK_SET);
 
-	m_fileLoader.Bind(fileSize, pData);
-	M2_DELETE_ARRAY(pData);
+		char * pData = M2_NEW char[fileSize];
+		fread(pData, fileSize, 1, fp);
+		fclose(fp);
+
+		m_fileLoader.Bind(fileSize, pData);
+		M2_DELETE_ARRAY(pData);
+	}
 
 	if (NULL != m_pRootGroupNode)
 	{
@@ -57,9 +70,16 @@ bool CGroupTextParseTreeLoader::Load(const char * c_szFileName)
 bool CGroupTextParseTreeLoader::LoadGroup(CGroupNode * pGroupNode)
 {
 	TTokenVector stTokenVector;
-	for (; m_dwcurLineIndex < m_fileLoader.GetLineCount(); ++m_dwcurLineIndex)
+	const DWORD dwLineCount = m_bJson ? (DWORD)m_jsonRows.size() : m_fileLoader.GetLineCount();
+	for (; m_dwcurLineIndex < dwLineCount; ++m_dwcurLineIndex)
 	{
-		if (!m_fileLoader.SplitLine(m_dwcurLineIndex, &stTokenVector))
+		if (m_bJson)
+		{
+			stTokenVector.assign(m_jsonRows[m_dwcurLineIndex].begin(), m_jsonRows[m_dwcurLineIndex].end());
+			if (stTokenVector.empty())
+				continue;
+		}
+		else if (!m_fileLoader.SplitLine(m_dwcurLineIndex, &stTokenVector))
 			continue;
 
 		stl_lowers(stTokenVector[0]);

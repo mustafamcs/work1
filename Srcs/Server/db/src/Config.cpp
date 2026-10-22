@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Config.h"
+#include "../../common/JsonTable.h"
 
 CConfig::CConfig()
 {
@@ -95,6 +96,18 @@ bool CConfig::GetLine(FILE* fp, char*dest)
 
 bool CConfig::LoadFile(const char* filename)
 {
+	const std::string jsonPath = jsontable::JsonPathFor(filename);
+	if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()))
+	{
+		std::vector<std::vector<std::string> > rows;
+		if (!jsontable::LoadRows(jsonPath.c_str(), rows))
+			return false;
+		for (size_t i = 0; i < rows.size(); ++i)
+			if (rows[i].size() >= 2)
+				m_valueMap.emplace(rows[i][0], rows[i][1]);
+		return true;
+	}
+
 	char 	szTmp[256];
 	char 	comment[256];
 

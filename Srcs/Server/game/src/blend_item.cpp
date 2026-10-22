@@ -4,6 +4,7 @@
 #include "locale_service.h"
 #include "item.h"
 #include "blend_item.h"
+#include "../../common/JsonTable.h"
 
 #define DO_ALL_BLEND_INFO(iter)	for (iter=s_blend_info.begin(); iter!=s_blend_info.end(); ++iter)
 
@@ -44,7 +45,7 @@ bool	Blend_Item_init()
 
 bool	Blend_Item_load(char *file)
 {
-	FILE	*fp;
+	jsontable::CLineReader	reader;
 	char	one_line[256];
 	const char	*delim = " \t\r\n";
 	char	*v;
@@ -54,10 +55,10 @@ bool	Blend_Item_load(char *file)
 	if (0==file || 0==file[0])
 		return false;
 
-	if ((fp = fopen(file, "r"))==0)
+	if (!reader.Open(file))
 		return false;
 
-	while (fgets(one_line, 256, fp))
+	while (reader.Gets(one_line, sizeof(one_line)))
 	{
 		if (one_line[0]=='#')
 			continue;
@@ -78,7 +79,6 @@ bool	Blend_Item_load(char *file)
 
 			if (NULL==v)
 			{
-				fclose(fp);
 				return false;
 			}
 
@@ -90,7 +90,6 @@ bool	Blend_Item_load(char *file)
 
 			if (NULL==v)
 			{
-				fclose(fp);
 				return false;
 			}
 
@@ -104,7 +103,6 @@ bool	Blend_Item_load(char *file)
 
 				if (NULL==v)
 				{
-					fclose(fp);
 					return false;
 				}
 
@@ -119,7 +117,6 @@ bool	Blend_Item_load(char *file)
 
 				if (NULL==v)
 				{
-					fclose(fp);
 					return false;
 				}
 
@@ -131,8 +128,6 @@ bool	Blend_Item_load(char *file)
 			s_blend_info.emplace_back(blend_item_info);
 		}
 	}
-
-	fclose(fp);
 
 	return true;
 }

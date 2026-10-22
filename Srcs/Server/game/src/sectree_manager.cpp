@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "../../common/JsonTable.h"
 #include <sstream>
 #include <unordered_set>
 #include "../../libgame/include/targa.h"
@@ -164,9 +165,9 @@ int SECTREE_MANAGER::LoadSettingFile(long lMapIndex, const char * c_pszSettingFi
 {
 	memset(&r_setting, 0, sizeof(TMapSetting));
 
-	FILE * fp = fopen(c_pszSettingFileName, "r");
+	jsontable::CLineReader reader;
 
-	if (!fp)
+	if (!reader.Open(c_pszSettingFileName))
 	{
 		sys_err("dosya açılamıyor: %s", c_pszSettingFileName);
 		return 0;
@@ -175,7 +176,7 @@ int SECTREE_MANAGER::LoadSettingFile(long lMapIndex, const char * c_pszSettingFi
 	char buf[256], cmd[256];
 	int iWidth = 0, iHeight = 0;
 
-	while (fgets(buf, 256, fp))
+	while (reader.Gets(buf, sizeof(buf)))
 	{
 		sscanf(buf, " %s ", cmd);
 
@@ -192,8 +193,6 @@ int SECTREE_MANAGER::LoadSettingFile(long lMapIndex, const char * c_pszSettingFi
 			sscanf(buf, " %s %d ", cmd, &r_setting.iCellScale);
 		}
 	}
-
-	fclose(fp);
 
 	if ((iWidth == 0 && iHeight == 0) || r_setting.iCellScale == 0)
 	{
@@ -249,18 +248,18 @@ LPSECTREE_MAP SECTREE_MANAGER::BuildSectreeFromSetting(TMapSetting & r_setting)
 
 void SECTREE_MANAGER::LoadDungeon(int iIndex, const char * c_pszFileName)
 {
-	FILE* fp = fopen(c_pszFileName, "r");
+	jsontable::CLineReader reader;
 
-	if (!fp)
+	if (!reader.Open(c_pszFileName))
 		return;
 
 	int count = 0; // for debug
 
-	while (!feof(fp))
+	while (true)
 	{
 		char buf[1024];
 
-		if (NULL == fgets(buf, 1024, fp))
+		if (!reader.Gets(buf, sizeof(buf)))
 			break;
 
 		if ((buf[0] == '#') || ((buf[0] == '/') && (buf[1] == '/')))
@@ -287,32 +286,57 @@ void SECTREE_MANAGER::LoadDungeon(int iIndex, const char * c_pszFileName)
 		count++;
 	}
 
-	fclose(fp);
-
 	sys_log(0, "Zindan Konumu Yükleme [%3d]%s sayı %d", iIndex, c_pszFileName, count);
 }
 
 bool SECTREE_MANAGER::LoadMapRegion(const char * c_pszFileName, TMapSetting & r_setting, const char * c_pszMapName)
 {
-	FILE * fp = fopen(c_pszFileName, "r");
+	jsontable::CLineReader reader;
 
 	if ( test_server )
 		sys_log( 0, "[LoadMapRegion] file(%s)", c_pszFileName );
 
-	if (!fp)
+	if (!reader.Open(c_pszFileName))
 		return false;
 
 	int iX=0, iY=0;
 	PIXEL_POSITION pos[3] = { {0,0,0}, {0,0,0}, {0,0,0} };
+	int iEmpirePositionCount = 0;
 
-	fscanf(fp, " %d %d ", &iX, &iY);
-
-	int iEmpirePositionCount = fscanf(fp, " %d %d %d %d %d %d ",
-			&pos[0].x, &pos[0].y,
-			&pos[1].x, &pos[1].y,
-			&pos[2].x, &pos[2].y);
-
-	fclose(fp);
+	if (reader.IsJson())
+	{
+		const std::vector<std::vector<std::string> >& rows = reader.Rows();
+		std::vector<int> nums;
+		for (size_t r = 0; r < rows.size(); ++r)
+			for (size_t c = 0; c < rows[r].size(); ++c)
+				nums.push_back(atoi(rows[r][c].c_str()));
+		if (nums.size() >= 2)
+		{
+			iX = nums[0]; iY = nums[1];
+			for (size_t k = 2; k < nums.size() && iEmpirePositionCount < 6; ++k, ++iEmpirePositionCount)
+			{
+				switch (iEmpirePositionCount)
+				{
+					case 0: pos[0].x = nums[k]; break;
+					case 1: pos[0].y = nums[k]; break;
+					case 2: pos[1].x = nums[k]; break;
+					case 3: pos[1].y = nums[k]; break;
+					case 4: pos[2].x = nums[k]; break;
+					case 5: pos[2].y = nums[k]; break;
+				}
+			}
+		}
+	}
+	else
+	{
+		FILE * fp = fopen(c_pszFileName, "r");
+		fscanf(fp, " %d %d ", &iX, &iY);
+		iEmpirePositionCount = fscanf(fp, " %d %d %d %d %d %d ",
+				&pos[0].x, &pos[0].y,
+				&pos[1].x, &pos[1].y,
+				&pos[2].x, &pos[2].y);
+		fclose(fp);
+	}
 
 	if( iEmpirePositionCount == 6 )
 	{

@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "../../common/JsonTable.h"
 #include "config.h"
 #include "char.h"
 #include "char_manager.h"
@@ -86,7 +87,55 @@ static void next_line(FILE *fp)
 			return;
 }
 
-static bool read_line(FILE *fp, LPREGEN regen)
+struct SRegenTokenStream
+{
+	FILE* fp;
+	std::vector<std::string> tokens;
+	size_t pos;
+
+	SRegenTokenStream() : fp(NULL), pos(0) {}
+
+	bool open(const char* filename)
+	{
+		const std::string jsonPath = jsontable::JsonPathFor(filename);
+		if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()))
+		{
+			std::vector<std::vector<std::string> > rows;
+			if (!jsontable::LoadRows(jsonPath.c_str(), rows))
+				return false;
+			for (size_t i = 0; i < rows.size(); ++i)
+				for (size_t j = 0; j < rows[i].size(); ++j)
+					tokens.push_back(rows[i][j]);
+			return true;
+		}
+
+		fp = fopen(filename, "rt");
+		return (fp != NULL);
+	}
+
+	void close()
+	{
+		if (fp)
+		{
+			fclose(fp);
+			fp = NULL;
+		}
+	}
+
+	bool get_word(char* buf)
+	{
+		if (!fp)
+		{
+			if (pos >= tokens.size())
+				return false;
+			strlcpy(buf, tokens[pos++].c_str(), 256);
+			return true;
+		}
+		return ::get_word(fp, buf);
+	}
+};
+
+static bool read_line(SRegenTokenStream& ts, LPREGEN regen)
 {
 	char szTmp[256];
 
@@ -94,11 +143,12 @@ static bool read_line(FILE *fp, LPREGEN regen)
 	int tmpTime;
 	DWORD i;
 
-	while (get_word(fp, szTmp))
+	while (ts.get_word(szTmp))
 	{
 		if (!strncmp(szTmp, "//", 2))
 		{
-			next_line(fp);
+			if (ts.fp)
+				next_line(ts.fp);
 			continue;
 		}
 
@@ -413,9 +463,9 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 		return true;
 
 	LPREGEN regen = NULL;
-	FILE* fp = fopen(filename, "rt");
+	SRegenTokenStream ts;
 
-	if (NULL == fp)
+	if (!ts.open(filename))
 	{
 		sys_err("SİSTEM: regen_do: %s: dosya bulunamadı", filename);
 		return false;
@@ -425,7 +475,7 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 	{
 		REGEN tmp{};
 
-		if (!read_line(fp, &tmp))
+		if (!read_line(ts, &tmp))
 			break;
 
 		if (tmp.type == REGEN_TYPE_MOB ||
@@ -500,7 +550,7 @@ bool regen_do(const char* filename, long lMapIndex, int base_x, int base_y, LPDU
 		}
 	}
 
-	fclose(fp);
+	ts.close();
 	return true;
 }
 
@@ -510,9 +560,9 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 		return true;
 
 	LPREGEN regen = NULL;
-	FILE * fp = fopen(filename, "rt");
+	SRegenTokenStream ts;
 
-	if (NULL == fp)
+	if (!ts.open(filename))
 	{
 		sys_err("SİSTEM: regen_do: %s: dosya bulunamadı", filename);
 		return false;
@@ -522,7 +572,7 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 	{
 		REGEN tmp{};
 
-		if (!read_line(fp, &tmp))
+		if (!read_line(ts, &tmp))
 			break;
 
 		if (tmp.type == REGEN_TYPE_MOB ||
@@ -572,7 +622,7 @@ bool regen_load_in_file(const char* filename, long lMapIndex, int base_x, int ba
 		}
 	}
 
-	fclose(fp);
+	ts.close();
 	return true;
 }
 
@@ -601,9 +651,9 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 		return true;
 
 	LPREGEN regen = NULL;
-	FILE* fp = fopen(filename, "rt");
+	SRegenTokenStream ts;
 
-	if (NULL == fp)
+	if (!ts.open(filename))
 	{
 		sys_log(0, "SİSTEM: regen_load: %s: dosya bulunamadı", filename);
 		return false;
@@ -613,7 +663,7 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 	{
 		REGEN tmp{};
 
-		if (!read_line(fp, &tmp))
+		if (!read_line(ts, &tmp))
 			break;
 
 		if (tmp.type == REGEN_TYPE_MOB ||
@@ -701,7 +751,7 @@ bool regen_load(const char* filename, long lMapIndex, int base_x, int base_y)
 		}
 	}
 
-	fclose(fp);
+	ts.close();
 	return true;
 }
 

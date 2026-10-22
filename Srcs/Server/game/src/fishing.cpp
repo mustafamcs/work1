@@ -1,5 +1,6 @@
 //#define __FISHING_MAIN__
 #include "stdafx.h"
+#include "../../common/JsonTable.h"
 #include "constants.h"
 #include "fishing.h"
 #include "locale_service.h"
@@ -119,13 +120,13 @@ void Initialize()
 	char szFishingFileName[FILE_NAME_LEN+1];
 	snprintf(szFishingFileName, sizeof(szFishingFileName),
 			"%s/fishing.txt", LocaleService_GetBasePath().c_str());
-	FILE * fp = fopen(szFishingFileName, "r");
+	jsontable::CLineReader reader;
 	// END_OF_LOCALE_SERVICE
 
 	if (*fish_info_bak[0].name)
 		SendLog("Reloading fish table.");
 
-	if (!fp)
+	if (!reader.Open(szFishingFileName))
 	{
 		SendLog("error! cannot open fishing.txt");
 
@@ -142,13 +143,14 @@ void Initialize()
 	char buf[512];
 	int idx = 0;
 
-	while (fgets(buf, 512, fp))
+	while (reader.Gets(buf, sizeof(buf)))
 	{
 		if (*buf == '#')
 			continue;
 
 		char * p = strrchr(buf, '\n');
-		*p = '\0';
+		if (p)
+			*p = '\0';
 
 		const char * start = buf;
 		const char * tab = strchr(start, '\t');
@@ -219,8 +221,6 @@ void Initialize()
 		if (idx == MAX_FISH)
 			break;
 	}
-
-	fclose(fp);
 
 	for (int i = 0; i < MAX_FISH; ++i)
 	{

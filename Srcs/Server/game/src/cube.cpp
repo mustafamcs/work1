@@ -11,6 +11,7 @@
 #include "item_manager.h"
 
 #include <sstream>
+#include "../../common/JsonTable.h"
 
 #define RETURN_IF_CUBE_IS_NOT_OPENED(ch) if (!(ch)->IsCubeOpen()) return
 
@@ -344,7 +345,7 @@ void Cube_init()
 
 bool Cube_load (const char *file)
 {
-	FILE	*fp;
+	jsontable::CLineReader	reader;
 	char	one_line[256];
 	int		value1, value2;
 	const char	*delim = " \t\r\n";
@@ -355,10 +356,10 @@ bool Cube_load (const char *file)
 	if (0 == file || 0 == file[0])
 		return false;
 
-	if ((fp = fopen(file, "r")) == 0)
+	if (!reader.Open(file))
 		return false;
 
-	while (fgets(one_line, 256, fp))
+	while (reader.Gets(one_line, sizeof(one_line)))
 	{
 		value1 = value2 = 0;
 
@@ -420,7 +421,6 @@ bool Cube_load (const char *file)
 		}
 	}
 
-	fclose(fp);
 	return true;
 }
 

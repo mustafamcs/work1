@@ -1,6 +1,7 @@
 #define _castle_cpp_
 
 #include "stdafx.h"
+#include "../../common/JsonTable.h"
 #include "constants.h"
 #include "config.h"
 #include "char_manager.h"
@@ -406,7 +407,7 @@ static bool FN_is_castle_map(int map_index)
 
 bool castle_boot()
 {
-	FILE	*fp;
+	jsontable::CLineReader	reader;
 	char	one_line[256];
 	const char	*delim			= " \t\r\n";
 	char	*v;
@@ -417,10 +418,10 @@ bool castle_boot()
 
 	const char	*castle_file = "castle_data.txt";
 
-	if ((fp = fopen(castle_file, "r")) == 0)
+	if (!reader.Open(castle_file))
 		return false;
 
-	while (fgets(one_line, 256, fp))
+	while (reader.Gets(one_line, sizeof(one_line)))
 	{
 		int value = 0;
 
@@ -445,7 +446,6 @@ bool castle_boot()
 			}
 			else
 			{
-				fclose(fp);
 				sys_err("yanlış imparatorluk numarası null");
 				return false;
 			}
@@ -485,8 +485,6 @@ bool castle_boot()
 		}
 	}
 
-	fclose(fp);
-
 	return true;
 }
 
@@ -506,19 +504,36 @@ void castle_save()
 		return;
 	}
 
+	std::vector<std::vector<std::string> > jsonRows;
+
 	// write castle data
 	DO_ALL_EMPIRE(empire)
 	{
 		fprintf(fp, "section\n");
+		jsonRows.push_back(std::vector<std::string>(1, "section"));
 
 		// write empire
 		fprintf(fp, "\tempire %d\n", empire);
+		{
+			char b[32];
+			snprintf(b, sizeof(b), "%d", empire);
+			std::vector<std::string> r;
+			r.push_back("empire");
+			r.push_back(b);
+			jsonRows.push_back(r);
+		}
 
 		// write frog
 		fprintf(fp, "\tfrog ");
-		for (int i = 0; i < MAX_CASTLE_FROG; ++i)
 		{
-			fprintf(fp, " %d", GET_FROG(empire, i) ? 1 : 0);
+			std::vector<std::string> r;
+			r.push_back("frog");
+			for (int i = 0; i < MAX_CASTLE_FROG; ++i)
+			{
+				fprintf(fp, " %d", GET_FROG(empire, i) ? 1 : 0);
+				r.push_back(GET_FROG(empire, i) ? "1" : "0");
+			}
+			jsonRows.push_back(r);
 		}
 		fprintf(fp, "\n");
 
@@ -526,16 +541,27 @@ void castle_save()
 		for (int region_index = 0; region_index < MAX_CASTLE_GUARD_REGION; ++region_index)
 		{
 			fprintf(fp, "\tguard ");
+			std::vector<std::string> r;
+			r.push_back("guard");
 			for (int guard_index = 0; guard_index < MAX_CASTLE_GUARD_PER_REGION; ++guard_index)
 			{
 				fprintf(fp, " %u", GET_GUARD_GROUP(empire, region_index, guard_index));
+				char b[32];
+				snprintf(b, sizeof(b), "%u", GET_GUARD_GROUP(empire, region_index, guard_index));
+				r.push_back(b);
 			}
+			jsonRows.push_back(r);
 			fprintf(fp, "\n");
 		}
 		fprintf(fp, "end\n");
+		jsonRows.push_back(std::vector<std::string>(1, "end"));
 	}
 
 	fclose(fp);
+
+	const std::string jsonPath = jsontable::JsonPathFor(castle_file);
+	if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()))
+		jsontable::WriteRows(jsonPath.c_str(), jsonRows);
 }
 
 int castle_siege(int empire, int tower_count)

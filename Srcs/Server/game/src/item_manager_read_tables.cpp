@@ -13,6 +13,7 @@
 #include "unique_item.h"
 #include "safebox.h"
 #include "blend_item.h"
+#include "../../common/JsonTable.h"
 #include "locale_service.h"
 #include "item.h"
 #include "item_manager.h"
@@ -23,9 +24,9 @@ std::vector<CItemDropInfo> g_vec_pkCommonDropItem[MOB_RANK_MAX_NUM];
 
 bool ITEM_MANAGER::ReadCommonDropItemFile(const char * c_pszFileName)
 {
-	FILE * fp = fopen(c_pszFileName, "r");
+	jsontable::CLineReader reader;
 
-	if (!fp)
+	if (!reader.Open(c_pszFileName))
 	{
 		sys_err("%s açılamıyor", c_pszFileName);
 		return false;
@@ -35,7 +36,7 @@ bool ITEM_MANAGER::ReadCommonDropItemFile(const char * c_pszFileName)
 
 	int lines = 0;
 
-	while (fgets(buf, 1024, fp))
+	while (reader.Gets(buf, sizeof(buf)))
 	{
 		++lines;
 
@@ -80,7 +81,6 @@ bool ITEM_MANAGER::ReadCommonDropItemFile(const char * c_pszFileName)
 				&& !ITEM_MANAGER::instance().GetVnumByOriginalName(d[i].szItemName, dwItemVnum))
 			{
 				sys_err("No such an item (name: %s)", d[i].szItemName);
-				fclose(fp);
 				return false;
 			}
 
@@ -90,8 +90,6 @@ bool ITEM_MANAGER::ReadCommonDropItemFile(const char * c_pszFileName)
 			g_vec_pkCommonDropItem[i].emplace_back(CItemDropInfo(d[i].iLvStart, d[i].iLvEnd, dwPct, dwItemVnum));
 		}
 	}
-
-	fclose(fp);
 
 	for (int i = 0; i < MOB_RANK_MAX_NUM; ++i)
 	{
@@ -455,9 +453,9 @@ bool ITEM_MANAGER::ConvSpecialDropItemFile()
 
 bool ITEM_MANAGER::ReadEtcDropItemFile(const char * c_pszFileName)
 {
-	FILE * fp = fopen(c_pszFileName, "r");
+	jsontable::CLineReader reader;
 
-	if (!fp)
+	if (!reader.Open(c_pszFileName))
 	{
 		sys_err("%s açılamıyor", c_pszFileName);
 		return false;
@@ -467,7 +465,7 @@ bool ITEM_MANAGER::ReadEtcDropItemFile(const char * c_pszFileName)
 
 	int lines = 0;
 
-	while (fgets(buf, 512, fp))
+	while (reader.Gets(buf, sizeof(buf)))
 	{
 		++lines;
 
@@ -495,7 +493,6 @@ bool ITEM_MANAGER::ReadEtcDropItemFile(const char * c_pszFileName)
 			&& !ITEM_MANAGER::instance().GetVnumByOriginalName(szItemName, dwItemVnum))
 		{
 			sys_err("No such an item (name: %s)", szItemName);
-			fclose(fp);
 			return false;
 		}
 
@@ -503,7 +500,6 @@ bool ITEM_MANAGER::ReadEtcDropItemFile(const char * c_pszFileName)
 		sys_log(0, "ETC_DROP_ITEM: %s prob %f", szItemName, fProb);
 	}
 
-	fclose(fp);
 	return true;
 }
 
@@ -905,18 +901,30 @@ bool ITEM_MANAGER::ReadDropItemGroup(const char * c_pszFileName)
 
 bool ITEM_MANAGER::ReadItemVnumMaskTable(const char * c_pszFileName)
 {
-	FILE *fp = fopen(c_pszFileName, "r");
-	if (!fp)
-	{
+	jsontable::CLineReader reader;
+
+	if (!reader.Open(c_pszFileName))
 		return false;
+
+	if (reader.IsJson())
+	{
+		const std::vector<std::vector<std::string> >& rows = reader.Rows();
+		for (size_t i = 0; i < rows.size(); ++i)
+		{
+			if (rows[i].size() < 2)
+				continue;
+			m_map_new_to_ori.emplace((unsigned)atoi(rows[i][1].c_str()), (unsigned)atoi(rows[i][0].c_str()));
+		}
+		return true;
 	}
 
-	int ori_vnum, new_vnum;
-	while (fscanf(fp, "%u %u", &ori_vnum, &new_vnum) != EOF)
+	char buf[256];
+	while (reader.Gets(buf, sizeof(buf)))
 	{
-		m_map_new_to_ori.emplace(new_vnum, ori_vnum);
+		int ori_vnum, new_vnum;
+		if (sscanf(buf, "%u %u", &ori_vnum, &new_vnum) == 2)
+			m_map_new_to_ori.emplace(new_vnum, ori_vnum);
 	}
-	fclose(fp);
 	return true;
 }
 

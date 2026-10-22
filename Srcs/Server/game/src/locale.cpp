@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "locale_service.h"
+#include "../../common/JsonTable.h"
 
 typedef std::map< std::string, std::string > LocaleStringMapType;
 
@@ -132,8 +133,32 @@ ENCODE:
 
 #define NUM_LOCALES 2
 
+static bool locale_init_json(const char* filename)
+{
+	const std::string jsonPath = jsontable::JsonPathFor(filename);
+	if (jsonPath.empty() || !jsontable::FileExists(jsonPath.c_str()))
+		return false;
+
+	std::vector<std::vector<std::string> > rows;
+	if (!jsontable::LoadRows(jsonPath.c_str(), rows))
+		return false;
+
+	for (size_t i = 0; i < rows.size(); ++i)
+	{
+		if (rows[i].size() >= 2)
+		{
+			const char* strings[2] = { rows[i][0].c_str(), rows[i][1].c_str() };
+			locale_add(strings);
+		}
+	}
+	return true;
+}
+
 void locale_init(const char *filename)
 {
+	if (locale_init_json(filename))
+		return;
+
 	FILE        *fp = fopen(filename, "rb");
 	char        *buf;
 

@@ -1,7 +1,9 @@
 #include "stdafx.h"
 #include "CsvReader.h"
+#include "../../common/JsonTable.h"
 #include <fstream>
 #include <algorithm>
+#include <cstdio>
 
 #ifndef Assert
     #include <assert.h>
@@ -88,10 +90,31 @@ size_t cCsvAlias::operator [] (const char* name) const
 
 ////////////////////////////////////////////////////////////////////////////////
 
+bool cCsvFile::LoadJson(const char* fileName)
+{
+    std::vector<std::vector<std::string> > rows;
+    if (!jsontable::LoadRows(fileName, rows))
+        return false;
+
+    Destroy();
+    for (size_t i = 0; i < rows.size(); ++i)
+    {
+        cCsvRow* row = new cCsvRow();
+        for (size_t j = 0; j < rows[i].size(); ++j)
+            row->emplace_back(rows[i][j]);
+        m_Rows.emplace_back(row);
+    }
+    return true;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 bool cCsvFile::Load(const char* fileName, const char seperator, const char quote)
 {
     Assert(seperator != quote);
+
+    const std::string jsonPath = jsontable::JsonPathFor(fileName);
+    if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()) && LoadJson(jsonPath.c_str()))
+        return true;
 
     std::ifstream file(fileName, std::ios::in);
     if (!file) return false;

@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "../../common/JsonTable.h"
 #include "config.h"
 
 #include "threeway_war.h"
@@ -138,9 +139,9 @@ bool CThreeWayWar::LoadSetting(const char* szFileName)
 	char szPath[1024];
 	snprintf( szPath, sizeof(szPath), "%s/%s", LocaleService_GetBasePath().c_str(), szFileName);
 
-	FILE* pf = fopen( szPath, "r" );
+	jsontable::CLineReader reader;
 
-	if (NULL == pf)
+	if (!reader.Open(szPath))
 	{
 		sys_err("[INIT_FORKED] Dosya açılamıyor (%s)", szPath );
 		return false;
@@ -150,7 +151,7 @@ bool CThreeWayWar::LoadSetting(const char* szFileName)
 	char szSungziName[128];
 	char szPassName[3][128];
 
-	while( NULL != fgets(szLine, 256, pf) )
+	while( reader.Gets(szLine, sizeof(szLine)) )
 	{
 		if (0 == strncmp(szLine, "sungzi:", 7))
 		{
@@ -192,8 +193,6 @@ bool CThreeWayWar::LoadSetting(const char* szFileName)
 			MapIndexSet_.emplace(passinfo.m_iForkedPass[2]);
 		}
 	}
-
-	fclose(pf);
 
 	return true;
 }

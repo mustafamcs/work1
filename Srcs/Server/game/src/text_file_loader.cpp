@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "../../common/stl.h"
+#include "../../common/JsonTable.h"
 #include "text_file_loader.h"
 
 CDynamicPool<CTextFileLoader::TGroupNode> CTextFileLoader::ms_groupNodePool;
@@ -10,7 +11,7 @@ void CTextFileLoader::DestroySystem()
 }
 
 CTextFileLoader::CTextFileLoader()
-	: m_dwcurLineIndex(0), mc_pData(NULL)
+	: m_dwcurLineIndex(0), mc_pData(NULL), m_bJson(false)
 {
 	SetTop();
 
@@ -33,32 +34,61 @@ bool CTextFileLoader::Load(const char * c_szFileName)
 
 	m_dwcurLineIndex = 0;
 
-	FILE* fp = fopen(c_szFileName, "rb");
+	const std::string jsonPath = jsontable::JsonPathFor(c_szFileName);
+	m_bJson = false;
 
-	if (NULL == fp)
-		return false;
+	if (!jsonPath.empty() && jsontable::FileExists(jsonPath.c_str()))
+	{
+		if (!jsontable::LoadRows(jsonPath.c_str(), m_jsonRows))
+			return false;
+		m_bJson = true;
+	}
+	else
+	{
+		FILE* fp = fopen(c_szFileName, "rb");
 
-	fseek(fp, 0L, SEEK_END);
-	const size_t fileSize = ftell(fp);
-	fseek(fp, 0, SEEK_SET);
+		if (NULL == fp)
+			return false;
 
-	char * pData = M2_NEW char[fileSize];
-	fread(pData, fileSize, 1, fp);
-	fclose(fp);
+		fseek(fp, 0L, SEEK_END);
+		const size_t fileSize = ftell(fp);
+		fseek(fp, 0, SEEK_SET);
 
-	m_fileLoader.Bind(fileSize, pData);
-	M2_DELETE_ARRAY(pData);
+		char * pData = M2_NEW char[fileSize];
+		fread(pData, fileSize, 1, fp);
+		fclose(fp);
+
+		m_fileLoader.Bind(fileSize, pData);
+		M2_DELETE_ARRAY(pData);
+	}
 
 	LoadGroup(&m_globalNode);
 	return true;
 }
 
+bool CTextFileLoader::GetTokens(DWORD dwLine, TTokenVector* pTokenVector)
+{
+	if (m_bJson)
+	{
+		if (dwLine >= m_jsonRows.size())
+			return false;
+		pTokenVector->assign(m_jsonRows[dwLine].begin(), m_jsonRows[dwLine].end());
+		return !pTokenVector->empty();
+	}
+	return m_fileLoader.SplitLine(dwLine, pTokenVector);
+}
+
+DWORD CTextFileLoader::GetLineCount()
+{
+	return m_bJson ? (DWORD)m_jsonRows.size() : m_fileLoader.GetLineCount();
+}
+
 bool CTextFileLoader::LoadGroup(TGroupNode * pGroupNode)
 {
 	TTokenVector stTokenVector;
-	for (; m_dwcurLineIndex < m_fileLoader.GetLineCount(); ++m_dwcurLineIndex)
+	for (; m_dwcurLineIndex < GetLineCount(); ++m_dwcurLineIndex)
 	{
-		if (!m_fileLoader.SplitLine(m_dwcurLineIndex, &stTokenVector))
+		if (!GetTokens(m_dwcurLineIndex, &stTokenVector))
 			continue;
 
 		stl_lowers(stTokenVector[0]);
@@ -107,9 +137,9 @@ bool CTextFileLoader::LoadGroup(TGroupNode * pGroupNode)
 			stTokenVector.clear();
 
 			++m_dwcurLineIndex;
-			for (; m_dwcurLineIndex < m_fileLoader.GetLineCount(); ++m_dwcurLineIndex)
+			for (; m_dwcurLineIndex < GetLineCount(); ++m_dwcurLineIndex)
 			{
-				if (!m_fileLoader.SplitLine(m_dwcurLineIndex, &stSubTokenVector))
+				if (!GetTokens(m_dwcurLineIndex, &stSubTokenVector))
 					continue;
 
 				if ('{' == stSubTokenVector[0][0])

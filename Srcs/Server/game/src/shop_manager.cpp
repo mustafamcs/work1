@@ -1,5 +1,6 @@
 ﻿#include "stdafx.h"
 #include "../../libgame/include/grid.h"
+#include "../../common/JsonTable.h"
 #include "constants.h"
 #include "utils.h"
 #include "config.h"
@@ -491,8 +492,13 @@ bool CShopManager::ReadShopTableEx(const char* stFileName)
 {
 	FILE* fp = fopen(stFileName, "rb");
 	if (NULL == fp)
-		return true;
-	fclose(fp);
+	{
+		const std::string jsonPath = jsontable::JsonPathFor(stFileName);
+		if (jsonPath.empty() || !jsontable::FileExists(jsonPath.c_str()))
+			return true;
+	}
+	else
+		fclose(fp);
 
 	CGroupTextParseTreeLoader loader;
 	if (!loader.Load(stFileName))

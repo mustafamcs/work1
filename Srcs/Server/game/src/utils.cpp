@@ -51,7 +51,7 @@ std::string mysql5_password(const std::string& input)
     // Uppercase and prepend '*'
     std::string password = "*" + encoded2;
     for (char& c : password) {
-        c = std::toupper(c);
+        c = (char)std::toupper((unsigned char)c);
     }
 
     return password;

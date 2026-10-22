@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "../../common/JsonTable.h"
 #include <fstream>
 #include "constants.h"
 #include "buffer_manager.h"
@@ -102,38 +103,62 @@ namespace quest
 		m_iCurrentSkin = QUEST_SKIN_NORMAL;
 
 		{
-			ifstream inf((g_stQuestDir + "/questnpc.txt").c_str());
+			const std::string npcFile = g_stQuestDir + "/questnpc.txt";
+			const std::string npcJson = jsontable::JsonPathFor(npcFile.c_str());
+			ifstream inf(npcFile.c_str());
 			int line = 0;
 
-			if (!inf.is_open())
+			std::vector<std::vector<std::string> > jsonRows;
+			const bool bJson = !npcJson.empty() && jsontable::FileExists(npcJson.c_str()) && jsontable::LoadRows(npcJson.c_str(), jsonRows);
+
+			if (!bJson && !inf.is_open())
 				sys_err( "GÖREV 'questnpc.txt' açılamıyor");
 			else
 				sys_log(0, "GÖREV 'questnpc.txt' açılabilir (%s)", g_stQuestDir.c_str() );
 
+			size_t jsonIdx = 0;
 			while (1)
 			{
 				unsigned int vnum;
-
-				inf >> vnum;
-
-				line++;
-
-				if (inf.fail())
-					break;
-
 				string s;
-				getline(inf, s);
-				unsigned int li = 0, ri = s.size()-1;
-				while (li < s.size() && isspace(s[li])) li++;
-				while (ri > 0 && isspace(s[ri])) ri--;
 
-				if (ri < li)
+				if (bJson)
 				{
-					sys_err("GÖREV questnpc.txt:%d:npc isim hatası",line);
-					continue;
+					if (jsonIdx >= jsonRows.size())
+						break;
+					const std::vector<std::string>& row = jsonRows[jsonIdx++];
+					if (row.empty())
+						continue;
+					vnum = (unsigned int)atoi(row[0].c_str());
+					for (size_t k = 1; k < row.size(); ++k)
+					{
+						if (k > 1)
+							s += ' ';
+						s += row[k];
+					}
 				}
+				else
+				{
+					inf >> vnum;
 
-				s = s.substr(li, ri-li+1);
+					line++;
+
+					if (inf.fail())
+						break;
+
+					getline(inf, s);
+					unsigned int li = 0, ri = s.size()-1;
+					while (li < s.size() && isspace(s[li])) li++;
+					while (ri > 0 && isspace(s[ri])) ri--;
+
+					if (ri < li)
+					{
+						sys_err("GÖREV questnpc.txt:%d:npc isim hatası",line);
+						continue;
+					}
+
+					s = s.substr(li, ri-li+1);
+				}
 
 				int	n = 0;
 				str_to_number(n, s.c_str());
@@ -222,15 +247,21 @@ namespace quest
 
 	int CQuestManager::ReadQuestCategoryFile(WORD q_index)
 	{
-		ifstream inf((g_stQuestDir + "/questcategory.txt").c_str());
+		const std::string catFile = g_stQuestDir + "/questcategory.txt";
+		const std::string catJson = jsontable::JsonPathFor(catFile.c_str());
+		ifstream inf(catFile.c_str());
 		int line = 0;
 		int c_qi = 99;
 
-		if (!inf.is_open())
+		std::vector<std::vector<std::string> > jsonRows;
+		const bool bJson = !catJson.empty() && jsontable::FileExists(catJson.c_str()) && jsontable::LoadRows(catJson.c_str(), jsonRows);
+
+		if (!bJson && !inf.is_open())
 			sys_err( "GÖREV 'questcategory.txt' açılamıyor");
 		else
 			sys_log(0, "GÖREV 'questcategory.txt' açılabilir (%s)", g_stQuestDir.c_str() );
 
+		size_t jsonIdx = 0;
 		while (1)
 		{
 			string qn = CQuestManager::instance().GetQuestNameByIndex(q_index);
@@ -247,26 +278,45 @@ namespace quest
 			//	SYSTEM_QUEST,	//5
 			//};
 
-			inf >> category_num;
-
-			line++;
-
-			if (inf.fail())
-				break;
-
 			string s;
-			getline(inf, s);
-			unsigned int li = 0, ri = s.size()-1;
-			while (li < s.size() && isspace(s[li])) li++;
-			while (ri > 0 && isspace(s[ri])) ri--;
 
-			if (ri < li)
+			if (bJson)
 			{
-				sys_err("GÖREV questcategory.txt:%d:npc isim hatası",line);
-				continue;
+				if (jsonIdx >= jsonRows.size())
+					break;
+				const std::vector<std::string>& row = jsonRows[jsonIdx++];
+				if (row.empty())
+					continue;
+				category_num = (unsigned int)atoi(row[0].c_str());
+				for (size_t k = 1; k < row.size(); ++k)
+				{
+					if (k > 1)
+						s += ' ';
+					s += row[k];
+				}
 			}
+			else
+			{
+				inf >> category_num;
 
-			s = s.substr(li, ri-li+1);
+				line++;
+
+				if (inf.fail())
+					break;
+
+				getline(inf, s);
+				unsigned int li = 0, ri = s.size()-1;
+				while (li < s.size() && isspace(s[li])) li++;
+				while (ri > 0 && isspace(s[ri])) ri--;
+
+				if (ri < li)
+				{
+					sys_err("GÖREV questcategory.txt:%d:npc isim hatası",line);
+					continue;
+				}
+
+				s = s.substr(li, ri-li+1);
+			}
 
 			int	n = 0;
 			str_to_number(n, s.c_str());

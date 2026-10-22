@@ -91,6 +91,8 @@ private:
 	CGroupNode *				m_pRootGroupNode;
 	std::string					m_strFileName;
 	DWORD						m_dwcurLineIndex;
+	bool						m_bJson;
+	std::vector<std::vector<std::string> >	m_jsonRows;
 
 	CMemoryTextFileLoader		m_fileLoader;
 };

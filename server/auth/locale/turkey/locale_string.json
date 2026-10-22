@@ -1,0 +1,3190 @@
+[
+ [
+  "İsim başarıyla değiştirildi. Bağlantınız kesilecek.",
+  "[LS;1955]"
+ ],
+ [
+  "Daha fazla Yang alamazsın.",
+  "[LS;1956;%s;%d]"
+ ],
+ [
+  "SungMa hazine sandığı - kalan ödül değişikliği: %d",
+  "[LS;1957]"
+ ],
+ [
+  "SungMa sandığı - Değerli bir eşya almak için aç.",
+  "[LS;1958]"
+ ],
+ [
+  "Bu hareket için gereken: %s",
+  "[LS;1027;%s]"
+ ],
+ [
+  "Soru.",
+  "[LS;958]"
+ ],
+ [
+  "Kısa süre sonra köye ışınlanacaksınız.",
+  "[LS;1]"
+ ],
+ [
+  "Bu eşya mevcut değil.",
+  "[LS;2]"
+ ],
+ [
+  "Kutu patladı! HP seviyen düştü.",
+  "[LS;3]"
+ ],
+ [
+  "Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!",
+  "[LS;13]"
+ ],
+ [
+  "%s : %d adet kazandın.",
+  "[LS;24;%s;%d]"
+ ],
+ [
+  "Kutuda %s var.",
+  "[LS;35;%s]"
+ ],
+ [
+  "Bu anahtar kilide uygun görünmüyor.",
+  "[LS;46]"
+ ],
+ [
+  "Hiç bir şey kazanamadın.",
+  "[LS;56]"
+ ],
+ [
+  "Bu eşyayı kullanmak için yeterli Yang a sahip değilsin.",
+  "[LS;67]"
+ ],
+ [
+  "Bu eşyayı kullanmak için yeterli Yang a sahip değilsin.",
+  "[LS;67]"
+ ],
+ [
+  "Beceri seviyeni düşürdün.",
+  "[LS;78]"
+ ],
+ [
+  "Beceri seviyeni düşüremezsin.",
+  "[LS;88]"
+ ],
+ [
+  "Bu etki zaten çalışıyor.",
+  "[LS;99]"
+ ],
+ [
+  "Bu nesne sadece internet cafede kullanılabilir.",
+  "[LS;111]"
+ ],
+ [
+  "Bu limitin üzerinde.",
+  "[LS;122]"
+ ],
+ [
+  "Ne yazıkki envanterinde yeterince yer yok.",
+  "[LS;128]"
+ ],
+ [
+  "Tohum ya da ay pastası kullanıldı.",
+  "[LS;132]"
+ ],
+ [
+  "Evli değilsen nikah yüzüğü takamazsın.",
+  "[LS;143]"
+ ],
+ [
+  "Etkinlik Dedektörünü bu pozisyondayken kullanamazsın.",
+  "[LS;154]"
+ ],
+ [
+  "Nesne alınamıyor.",
+  "[LS;162]"
+ ],
+ [
+  "Etkinlik Dedektörü gizemli bir ışıkla birlikte yok oldu.",
+  "[LS;165]"
+ ],
+ [
+  "Etkinlik Dedektörü kayboldu.",
+  "[LS;176]"
+ ],
+ [
+  "Metin Taşı Dedektörü zindanda çalışmıyor.",
+  "[LS;187]"
+ ],
+ [
+  "Metin Taşı Dedektörü gizemli ışıkla birlikte kayboldu.",
+  "[LS;198]"
+ ],
+ [
+  "Al: %s - %d",
+  "[LS;204;%s;%d]"
+ ],
+ [
+  "Metin Taşı Dedektörü kayboldu.",
+  "[LS;209]"
+ ],
+ [
+  "İstiridyenin içinde sadece sıradan bir taş parçası var.",
+  "[LS;221]"
+ ],
+ [
+  "İstiridye kayboldu.",
+  "[LS;232]"
+ ],
+ [
+  "İstiridyenin içinde Beyaz bir inci var.",
+  "[LS;243]"
+ ],
+ [
+  "İstiridyenin içinde Mavi bir inci var.",
+  "[LS;253]"
+ ],
+ [
+  "İstiridyenin içinde kan kırmızı bir inci var.",
+  "[LS;264]"
+ ],
+ [
+  "Bu kitabı anlamak kolay değil.",
+  "[LS;274]"
+ ],
+ [
+  "Bu kitap sana yardım etmeyecek.",
+  "[LS;284]"
+ ],
+ [
+  "Bu kitabı anlaman için 30.Seviyede olman gerekiyor.",
+  "[LS;295]"
+ ],
+ [
+  "Bu kitabı anlaman için 50.Seviyede olman gerekiyor.",
+  "[LS;305]"
+ ],
+ [
+  "Daha fazla kombo geliştiremezsin.",
+  "[LS;316]"
+ ],
+ [
+  "%s Loncası %s Loncasının bayrağını ele geçirdi!",
+  "[LS;327;%s;%s]"
+ ],
+ [
+  "Bu dili zaten anlıyorsun.",
+  "[LS;328]"
+ ],
+ [
+  "Bu kitabı anlayabilmek için seviyeni yükseltmelisin.",
+  "[LS;350]"
+ ],
+ [
+  "Kitabın öğrenilmesi zor.",
+  "[LS;360]"
+ ],
+ [
+  "Bu kitapla daha fazla eğitim yapamazsın.",
+  "[LS;371]"
+ ],
+ [
+  "Vergi %%%d olarak ayarlandı.",
+  "[LS;375;%d]"
+ ],
+ [
+  "Binicilik Eğitimi almak için 50'inci seviyeye ulaşmış olman gerekiyor.",
+  "[LS;376]"
+ ],
+ [
+  "Kötü ruhların lanetinden Kötü Ruh Kovma Kağıdının yardımıyla kurtuldun.",
+  "[LS;377]"
+ ],
+ [
+  "Daha fazla Binicilik Rehberi okuyamazsın.",
+  "[LS;378]"
+ ],
+ [
+  "Binicilik Kılavuzu'nu okudun ve bir tane Binicilik Puanı kazandın.",
+  "[LS;379]"
+ ],
+ [
+  "Bu puanı Biniciliğini geliştirmek için kullanabilirsin!",
+  "[LS;380]"
+ ],
+ [
+  "%s loncasının bayrağı, %s tarafından çalındı.",
+  "[LS;381;%s;%s]"
+ ],
+ [
+  "Binicilik Rehberini anlamadın.",
+  "[LS;382]"
+ ],
+ [
+  "Zihnin açık. Şimdi iyi konsantre olabilirsin.",
+  "[LS;383]"
+ ],
+ [
+  "Sıralama %d puan yükseldi.",
+  "[LS;384;%d]"
+ ],
+ [
+  "Şu anki saç stilini beyazlatamaz veya boyayamazsın.",
+  "[LS;385]"
+ ],
+ [
+  "Saçını tekrar boyayabilmek için %d. seviyeye ulaşman gerekli.",
+  "[LS;386;%d]"
+ ],
+ [
+  "Bu eşya sadece karşı cins tarafından açılabilir.",
+  "[LS;387]"
+ ],
+ [
+  "Şu anki pozisyonunda bunu kullanamazsın.",
+  "[LS;388]"
+ ],
+ [
+  "Işınlanmaya hazırsın, bu nedenle geri dönüş kağıdını kullanamazsın.",
+  "[LS;389]"
+ ],
+ [
+  "Başlangıç yerine geri gönderiliyorsun.",
+  "[LS;390]"
+ ],
+ [
+  "%s%s zindanda kullanılamaz.",
+  "[LS;391;%s;%s]"
+ ],
+ [
+  "[Quest] Ödülünü aldın zaten.",
+  "[LS;392]"
+ ],
+ [
+  "the",
+  "[LS;393]"
+ ],
+ [
+  "the",
+  "[LS;393]"
+ ],
+ [
+  "Silinecek taş parçası kırıkları yok.",
+  "[LS;395]"
+ ],
+ [
+  "Bu eşyanın geliştirilmesini değiştiremezsin.",
+  "[LS;396]"
+ ],
+ [
+  "Değiştirebileceğin hiçbir geliştirme yok.",
+  "[LS;397]"
+ ],
+ [
+  "Bunu bir geliştirmeden en az %d dakika sonra yapabilirsin. (%d dakika kaldı)",
+  "[LS;398;%d;%d]"
+ ],
+ [
+  "Geliştirmeyi değiştirdin.",
+  "[LS;399]"
+ ],
+ [
+  "Geliştirme başarıyla eklendi.",
+  "[LS;400]"
+ ],
+ [
+  "Geliştirme eklenmedi.",
+  "[LS;401]"
+ ],
+ [
+  "Kutsama Küresini bu eşyaya başka bir bonus eklemek için kullanmalısın.",
+  "[LS;402]"
+ ],
+ [
+  "Bunu arenada kullanamazsın.",
+  "[LS;403]"
+ ],
+ [
+  "Bu eşya geliştirilemez. Maksimum bonus sayısına ulaşıldı.",
+  "[LS;404]"
+ ],
+ [
+  "Kutsama Küresini üzerinde zaten 4 bonus olan eşyalar için kullanabilirsiniz.",
+  "[LS;405]"
+ ],
+ [
+  "Slot başarıyla eklendi.",
+  "[LS;406]"
+ ],
+ [
+  "Slot eklenmedi.",
+  "[LS;407]"
+ ],
+ [
+  "Bu nesneye daha fazla slot eklenmiyor.",
+  "[LS;408]"
+ ],
+ [
+  "Bu nesneye slot eklenmiyor.",
+  "[LS;409]"
+ ],
+ [
+  "Silahlanma başarılı.",
+  "[LS;410]"
+ ],
+ [
+  "Silahlanma başarısız.",
+  "[LS;411]"
+ ],
+ [
+  "İlk önce bir slot eklemen gerekiyor. Bunu yapmak için bir elmas kullan.",
+  "[LS;412]"
+ ],
+ [
+  "Bu nesnede mücevher slotu yok.",
+  "[LS;413]"
+ ],
+ [
+  "Bunu Duygu Maskesi taktığında yapabilirsin.",
+  "[LS;414]"
+ ],
+ [
+  "Elmas kullanmak istiyorsan bir slot eklemen gerekiyor.",
+  "[LS;415]"
+ ],
+ [
+  "Bu nesneye daha fazla mücevher eklenemiyor.",
+  "[LS;416]"
+ ],
+ [
+  "Bu nesneler birleştirilerek kullanılmıyor.",
+  "[LS;417]"
+ ],
+ [
+  "Balık tutarken yemi değiştiremezsin.",
+  "[LS;418]"
+ ],
+ [
+  "Şu anki yemi %s ile değiştirdin.",
+  "[LS;419;%s]"
+ ],
+ [
+  "Çengele yem olarak %s taktın.",
+  "[LS;420;%s]"
+ ],
+ [
+  "İksir hazırlamak için tüm malzemelere sahip değilsin.",
+  "[LS;421]"
+ ],
+ [
+  "Yeterli malzemen yok (%s).",
+  "[LS;422;%s]"
+ ],
+ [
+  "Yeterince boş şişen yok.",
+  "[LS;423]"
+ ],
+ [
+  "İksir hazırlama işlemi başarısız.",
+  "[LS;424]"
+ ],
+ [
+  "Bunu sadece bayanlar yapabilir.",
+  "[LS;425]"
+ ],
+ [
+  "Aynı türden çok sayıda zihin taşı ekleyemezsin.",
+  "[LS;426]"
+ ],
+ [
+  "Bu zihin taşı böyle bir nesneye eklenemez.",
+  "[LS;427]"
+ ],
+ [
+  "Bu zihin taşını silaha takamazsın.",
+  "[LS;428]"
+ ],
+ [
+  "Zihin taşını başarıyla taktın.",
+  "[LS;429]"
+ ],
+ [
+  "Zihin taşı yerleştirirken kırıldı.",
+  "[LS;430]"
+ ],
+ [
+  "Boş yer yok.",
+  "[LS;431]"
+ ],
+ [
+  "Şu anda eşinize teleport olamazsınız.",
+  "[LS;432]"
+ ],
+ [
+  "Katılmış olduğun bir krallık savaşı devam ederken geri dönüş kağıdı kullanamazsın.",
+  "[LS;433]"
+ ],
+ [
+  "Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.",
+  "[LS;434;%d]"
+ ],
+ [
+  "Başka pencere açık olduğu sürece geri dönüş kağıdı kullanamazsın.",
+  "[LS;435]"
+ ],
+ [
+  "Kişi bulunamadı.",
+  "[LS;436]"
+ ],
+ [
+  "Ticaretten sonra %d saniye Parşömen kullanamazsın.",
+  "[LS;437;%d]"
+ ],
+ [
+  "Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.",
+  "[LS;438;%d]"
+ ],
+ [
+  "Mesafe çok yakın olduğu için geri dönüş kağıdı kullanamazsın.",
+  "[LS;439]"
+ ],
+ [
+  "Ticaretten sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.",
+  "[LS;440;%d]"
+ ],
+ [
+  "Başka bir pencere açıkken depo açamazsın.",
+  "[LS;441]"
+ ],
+ [
+  "Bu eşyayı düşüremezsin.",
+  "[LS;442]"
+ ],
+ [
+  "Düşürülen eşya 5 dakika içinde yok olacak.",
+  "[LS;443]"
+ ],
+ [
+  "%s eşyasını kazandın.",
+  "[LS;444;%s]"
+ ],
+ [
+  "Çok fazla eşya taşıyorsun.",
+  "[LS;445]"
+ ],
+ [
+  "%s şunu kazandı: %s.",
+  "[LS;446;%s;%s]"
+ ],
+ [
+  "Kısa süre sonra herkes köye ışınlanacak.",
+  "[LS;1]"
+ ],
+ [
+  "Çok yakınsın.",
+  "[LS;448]"
+ ],
+ [
+  "Eşya Ticareti:  %s, %s",
+  "[LS;449;%s;%s]"
+ ],
+ [
+  "Dönüşüm esnasında ekipmanını değiştiremezsin.",
+  "[LS;450]"
+ ],
+ [
+  "Eşya giyebilmek için hareketsiz olman gerekli.",
+  "[LS;451]"
+ ],
+ [
+  "Maymun Bitkisi yem olarak kullanılamaz. Ölmüş atları canlandırmak için kullanılır.",
+  "[LS;452]"
+ ],
+ [
+  "Ölü Atı besleyemezsin.",
+  "[LS;453]"
+ ],
+ [
+  "Atı otlarla beslediniz.",
+  "[LS;454]"
+ ],
+ [
+  "Atı besledin.",
+  "[LS;455]"
+ ],
+ [
+  "Bu saç şekli için seviyen çok düşük.",
+  "[LS;456]"
+ ],
+ [
+  "Zaten bu saç şekline sahipsin.",
+  "[LS;457]"
+ ],
+ [
+  "Dönüşmüş haldesin zaten.",
+  "[LS;458]"
+ ],
+ [
+  "Çok uzaksın.",
+  "[LS;459]"
+ ],
+ [
+  "Bu yanlış ticaret eşyası.",
+  "[LS;460]"
+ ],
+ [
+  "Kendinden daha yüksek seviyeli bir canavara dönüşemezsin.",
+  "[LS;461]"
+ ],
+ [
+  "Seviyen çok düşük olduğu için bu nesneyi kullanamıyorsun.",
+  "[LS;462]"
+ ],
+ [
+  "Bu nesneyi kullanmak için yeterli güce sahip değilsin.",
+  "[LS;463]"
+ ],
+ [
+  "Zekân çok düşük olduğu için bu nesneyi kullanamıyorsun.",
+  "[LS;464]"
+ ],
+ [
+  "Bu nesneyi kullanabilmek için yeterli çevikliğe sahip değilsin.",
+  "[LS;465]"
+ ],
+ [
+  "Bu nesneyi kullanmak için yeterli canlılığa sahip değilsin.",
+  "[LS;466]"
+ ],
+ [
+  "Evli olmadığın için bu eşyayı kullanamazsın.",
+  "[LS;467]"
+ ],
+ [
+  "2.kez bu eşyayı giyemezsin.",
+  "[LS;468]"
+ ],
+ [
+  "%sgirişinin silinmesine kalan süre : %d",
+  "[LS;469;%s;%d]"
+ ],
+ [
+  "Bu sadece diğer cinsiyetle birlikte yapılabilen bir aksiyon.",
+  "[LS;470]"
+ ],
+ [
+  "%s Mücevherinden bir değerli taş kayboldu.",
+  "[LS;471;%s]"
+ ],
+ [
+  "[Guild] Lonca adı hatalı.",
+  "[LS;472]"
+ ],
+ [
+  "[Guild] Bu Lonca adı zaten kullanılıyor.",
+  "[LS;473]"
+ ],
+ [
+  "[Guild] Lonca kuramazsın.",
+  "[LS;474]"
+ ],
+ [
+  "%s, %s loncasına karşı savaş ilan etti!",
+  "[LS;475;%s;%s]"
+ ],
+ [
+  "[Guild] %s Lonca savaşını reddetti.",
+  "[LS;476;%s]"
+ ],
+ [
+  "%s ile %s arasındaki lonca savaşı birkaç dakika içinde başlayacak!",
+  "[LS;477;%s;%s]"
+ ],
+ [
+  "%s ile %s arasında lonca savaşı başladı!",
+  "[LS;478;%s;%s]"
+ ],
+ [
+  "%s ile %s arasındaki lonca savaşı berabere sonuçlandı!",
+  "[LS;479;%s;%s]"
+ ],
+ [
+  "Lonca savaşında %s, %s loncasına karşı kazandı.",
+  "[LS;480;%s;%s]"
+ ],
+ [
+  "Bunun için eşinin onayı gerekli.",
+  "[LS;481]"
+ ],
+ [
+  "[Guild] Lonca savaşı iptal oldu.",
+  "[LS;482]"
+ ],
+ [
+  "%s ile %s arasındaki lonca savaşı iptal oldu!",
+  "[LS;483;%s;%s]"
+ ],
+ [
+  "Kapat",
+  "[LS;484]"
+ ],
+ [
+  "Hareket iptal edildi. Bir savaşa girdin.",
+  "[LS;485]"
+ ],
+ [
+  "Biri hesabınıza giriş yaptı. Bağlantınız kesilecek.",
+  "[LS;486]"
+ ],
+ [
+  "Ağaçtan gizemli bir ışık yayılıyor.",
+  "[LS;487]"
+ ],
+ [
+  "%d oyun süresi hesabınıza eklendi. (Ödeme Numarası %d)",
+  "[LS;488;%d;%d]"
+ ],
+ [
+  "Lonca savaşına izleyici olarak katılabilirsin.",
+  "[LS;489]"
+ ],
+ [
+  "Bir karakter seçerken <izlemeyi bitir> butonu görünür.",
+  "[LS;490]"
+ ],
+ [
+  "Burada düşman yok.",
+  "[LS;491]"
+ ],
+ [
+  "%s ile olan savaş başladı!",
+  "[LS;492;%s]"
+ ],
+ [
+  "Eğer düşman bulunamazsa Lonca Savaşı otomatik olarak biter.",
+  "[LS;493]"
+ ],
+ [
+  "Lonca Savaşı vaktinden önce bittiği için sonuç berabere sayılıyor.",
+  "[LS;494]"
+ ],
+ [
+  "İmparatorların Kutsaması nedeniyle enerji yansıtıldı.",
+  "[LS;495]"
+ ],
+ [
+  "%d saniye sonra İmparator Kutsamasını kullanabilirsin.",
+  "[LS;496;%d]"
+ ],
+ [
+  "%d saniye sonra İmparator Kutsamasını kullanabilirsin.",
+  "[LS;496;%d]"
+ ],
+ [
+  "Yetersiz vergi geliri : %d",
+  "[LS;497;%d]"
+ ],
+ [
+  "[TEST_ONLY]Vergi : %d",
+  "[LS;498;%d]"
+ ],
+ [
+  "Dönüşüm sırasında hata oluştu.",
+  "[LS;499]"
+ ],
+ [
+  "Dönüşümü tamamen öğrendin.",
+  "[LS;500]"
+ ],
+ [
+  "Lütfen önce atını çağır.",
+  "[LS;501]"
+ ],
+ [
+  "Atını gönderdin.",
+  "[LS;502]"
+ ],
+ [
+  "%s seni savaşa davet ediyor!",
+  "[LS;503;%s]"
+ ],
+ [
+  "Atından inmelisin.",
+  "[LS;504]"
+ ],
+ [
+  "Atının üzerinde otururken onu besleyemezsin.",
+  "[LS;505]"
+ ],
+ [
+  "Ata %s%s yedirdin.",
+  "[LS;506;%s;%s]"
+ ],
+ [
+  "%s gerekli.",
+  "[LS;507;%s]"
+ ],
+ [
+  "%d saniye sonra oyun kapanacak.",
+  "[LS;508;%d]"
+ ],
+ [
+  "Oyun %d saniye sonra kapanacak.",
+  "[LS;509;%d]"
+ ],
+ [
+  "%d saniye sonra oyun kapanacak.",
+  "[LS;510;%d]"
+ ],
+ [
+  "Çıkışınız iptal edildi.",
+  "[LS;511]"
+ ],
+ [
+  "Giriş ekranına dön. Lütfen bekleyin.",
+  "[LS;512]"
+ ],
+ [
+  "Serverla olan bağlantınız kesiliyor. Lütfen bekleyin.",
+  "[LS;513]"
+ ],
+ [
+  "%s savaşa davet ettiniz.",
+  "[LS;514;%s]"
+ ],
+ [
+  "Karakteri değiştirdiniz. Lütfen bekleyin.",
+  "[LS;515]"
+ ],
+ [
+  "Yeniden dirilme henüz mümkün değil. %d saniye bekle.",
+  "[LS;516;%d]"
+ ],
+ [
+  "Yeniden dirilme henüz mümkün değil. %d saniye bekle.",
+  "[LS;517;%d]"
+ ],
+ [
+  "Yeniden dirilme henüz mümkün değil. %d saniye bekle.",
+  "[LS;518;%d]"
+ ],
+ [
+  "Şehirde yeniden dirilme henüz mümkün değil. %d saniye bekle.",
+  "[LS;519;%d]"
+ ],
+ [
+  "Bekleme süresi doldu. Şehirde yeniden diriltileceksin.",
+  "[LS;520]"
+ ],
+ [
+  "Dönüşmüş durumda olduğunuz sürece statünüzü değiştiremezsiniz.",
+  "[LS;521]"
+ ],
+ [
+  "Oyuncu zaten dövüşüyor.",
+  "[LS;522]"
+ ],
+ [
+  "[Guild] Bu Loncaya ait değil.",
+  "[LS;523]"
+ ],
+ [
+  "[Guild] Lonca Becerilerinin Seviyesini değiştiremezsin.",
+  "[LS;524]"
+ ],
+ [
+  "Seçiminiz yanlış.",
+  "[LS;525]"
+ ],
+ [
+  "[Storages] Yanlış şifre girdin.",
+  "[LS;526]"
+ ],
+ [
+  "[Storages] Depo zaten açık.",
+  "[LS;527]"
+ ],
+ [
+  "[Storages] Yeniden depo açmak için 10 saniye beklemelisin.",
+  "[LS;528]"
+ ],
+ [
+  "[Storeroom] Depoya uzak olduğun için açamıyorsun.",
+  "[LS;529]"
+ ],
+ [
+  "[Group] Sunucu grup isteğini gerçekleştiremedi.",
+  "[LS;530]"
+ ],
+ [
+  "[Group] Zindandayken gruptan ayrılamazsın.",
+  "[LS;531]"
+ ],
+ [
+  "[Group] Gruptan ayrıldın.",
+  "[LS;532]"
+ ],
+ [
+  "[Guild] Loncanız zaten başka bir savaşa katılıyor.",
+  "[LS;533]"
+ ],
+ [
+  "[Guild] Lonca savaşı için kimse yetkilendirilmedi.",
+  "[LS;534]"
+ ],
+ [
+  "[Guild] Bu isimde bir Lonca bulunamadı.",
+  "[LS;535]"
+ ],
+ [
+  "Zaten bir aday var.",
+  "[LS;536]"
+ ],
+ [
+  "[Guild] Bu Lonca zaten bir savaşa katılıyor.",
+  "[LS;537]"
+ ],
+ [
+  "[Guild] Lonca savaşına katılmak için yeterli Yang yok.",
+  "[LS;538]"
+ ],
+ [
+  "[Guild] Bu Lonca, Lonca savaşı yapmak için yeterli Yang'a sahip değil.",
+  "[LS;539]"
+ ],
+ [
+  "[Guild] Bu Lonca zaten başka bir Lonca savaşı için kayıt edilmiş.",
+  "[LS;540]"
+ ],
+ [
+  "[Guild] Loncanız zaten başka bir savaşa katılıyor.",
+  "[LS;541]"
+ ],
+ [
+  "[Guild] Lonca savaşına en az %d oyuncu katılması gerekiyor.",
+  "[LS;543;%d]"
+ ],
+ [
+  "[Guild] Lonca bir savaşta yer almak için yeterli Sıralama Puanına sahip değil.",
+  "[LS;544]"
+ ],
+ [
+  "[Guild] Lonca, Lonca Savaşına katılabilmek için yeterli üyeye sahip değil.",
+  "[LS;545]"
+ ],
+ [
+  "Cep telefonu numarası kaydedebilmek için 20.Seviyeden yüksek olmalısın.",
+  "[LS;546]"
+ ],
+ [
+  "İmparator olmak için gerekli özelliklere sahip değilsin.",
+  "[LS;547]"
+ ],
+ [
+  "%s arkadaşlık isteğinizi reddetti.",
+  "[LS;548;%s]"
+ ],
+ [
+  "Daveti kabul edemezsin, zaten bir grubun var.",
+  "[LS;549]"
+ ],
+ [
+  "Bunu sadece İmparator kullanabilir.",
+  "[LS;550]"
+ ],
+ [
+  "Dinlenme Süresi yaklaşık %d saniye",
+  "[LS;551;%d]"
+ ],
+ [
+  "Vergi eksikliği. Mevcut Sermaye : %u Eksik Sermaye : %u",
+  "[LS;552;%u;%u]"
+ ],
+ [
+  "Sıra: warpto <character name>",
+  "[LS;553]"
+ ],
+ [
+  "Bilinmeyen bir oyuncuya nakledemezsiniz.",
+  "[LS;554]"
+ ],
+ [
+  "Oyuncu %d kanala ekleniyor. (Bulunulan kanal: %d)",
+  "[LS;555;%d;%d]"
+ ],
+ [
+  "%s yanına naklet.",
+  "[LS;556;%s]"
+ ],
+ [
+  "Bilinmeyen bir oyuncuyu arayamazsın.",
+  "[LS;557]"
+ ],
+ [
+  "[Guild] Lonca savaşı sırasında avlanma, Tecrübe Puanı kazandırmıyor.",
+  "[LS;558]"
+ ],
+ [
+  "İmparator kutsaması kullanıldığı zaman %s HP ve SP yeniden yüklenir.",
+  "[LS;559;%s]"
+ ],
+ [
+  "Benim İmparatorluk Bilgim",
+  "[LS;560]"
+ ],
+ [
+  "[%sHükümdar] : %s Yang Sahip olunan %lld",
+  "[LS;561;%s;%s;%lld]"
+ ],
+ [
+  "[%sHükümdar] : %s",
+  "[LS;562;%s;%s]"
+ ],
+ [
+  "İmparator Bilgisi",
+  "[LS;563]"
+ ],
+ [
+  "Bunu sadece bir İmparator kullanabilir.",
+  "[LS;564]"
+ ],
+ [
+  "1 - 50 arasında bir rakam seç.",
+  "[LS;565]"
+ ],
+ [
+  "Canavar çağrılamaz. Mob numarasını kontrol ediniz.",
+  "[LS;567]"
+ ],
+ [
+  "Hayat Puanları +%d",
+  "[LS;568;%d]"
+ ],
+ [
+  "Mana Puanı +%d",
+  "[LS;569;%d]"
+ ],
+ [
+  "İmparator Kutsaması aktif.",
+  "[LS;570]"
+ ],
+ [
+  "Dayanıklılık +%d",
+  "[LS;571;%d]"
+ ],
+ [
+  "Zeka +%d",
+  "[LS;572;%d]"
+ ],
+ [
+  "Güç +%d",
+  "[LS;573;%d]"
+ ],
+ [
+  "Çeviklik +%d",
+  "[LS;574;%d]"
+ ],
+ [
+  "Saldırı Hızı +%d",
+  "[LS;575;%d]"
+ ],
+ [
+  "Hareket Hızı %d",
+  "[LS;576;%d]"
+ ],
+ [
+  "Dinlenme Süresi -%d",
+  "[LS;577;%d]"
+ ],
+ [
+  "Geri Kazanılan Enerji +%d",
+  "[LS;578;%d]"
+ ],
+ [
+  "Geri Kazanılan SP +%d",
+  "[LS;579;%d]"
+ ],
+ [
+  "Zehirli Saldırı %d",
+  "[LS;580;%d]"
+ ],
+ [
+  "Star +%d",
+  "[LS;582;%d]"
+ ],
+ [
+  "Hız azalması +%d",
+  "[LS;583;%d]"
+ ],
+ [
+  "Kritik saldırı şansı %%%d",
+  "[LS;584;%d]"
+ ],
+ [
+  "Delici saldırı şansı %%%d",
+  "[LS;585;%d]"
+ ],
+ [
+  "Yaratıklara karşı oyuncunun saldırı gücü +%%%d",
+  "[LS;586;%d]"
+ ],
+ [
+  "Yaratıklara karşı Atın saldırı gücü +%%%d",
+  "[LS;587;%d]"
+ ],
+ [
+  "Wonggui karşısında saldırı artışı  +%%%d",
+  "[LS;588;%d]"
+ ],
+ [
+  "Milgyo karşısında saldırı artışı +%%%d",
+  "[LS;589;%d]"
+ ],
+ [
+  "Ölümsüzlere karşı saldırı artışı: +%%%d",
+  "[LS;590;%d]"
+ ],
+ [
+  "Şeytanlara karşı saldırı artışı: +%%%d",
+  "[LS;591;%d]"
+ ],
+ [
+  "İmparator Sa-Za-Hu sayesinde, oyuncu bu alanda %s 3 dakika için %%10 daha fazla saldırı gücü aldı.",
+  "[LS;592;%s]"
+ ],
+ [
+  "Saldırı sırasında %%%d enerji emildi.",
+  "[LS;593;%d]"
+ ],
+ [
+  "Saldırı sırasında %%%d SP emildi.",
+  "[LS;594;%d]"
+ ],
+ [
+  "%%%d oranında SP düşmandan çalma şansı.",
+  "[LS;595;%d]"
+ ],
+ [
+  "Oranında SP emiliyor %%%d.",
+  "[LS;596;%d]"
+ ],
+ [
+  "Yakın dövüş saldırısını engelleme şansı %%%d",
+  "[LS;597;%d]"
+ ],
+ [
+  "Uzak dövüş saldırısını engelleme şansı %%%d",
+  "[LS;598;%d]"
+ ],
+ [
+  "Kılıç Savunması %%%d",
+  "[LS;599;%d]"
+ ],
+ [
+  "Çift-El Savunması %%%d",
+  "[LS;600;%d]"
+ ],
+ [
+  "Çift-El Savunması %%%d",
+  "[LS;601;%d]"
+ ],
+ [
+  "Çan Savunması %%%d",
+  "[LS;602;%d]"
+ ],
+ [
+  "İmparator Geum-Gang-Gwon sayesinde, oyuncu %s 3 dakika süreyle %%10 daha fazla savunma aldı.",
+  "[LS;603;%s]"
+ ],
+ [
+  "Yelpaze Savunması %%%d",
+  "[LS;604;%d]"
+ ],
+ [
+  "Uzak Dövüş Direnci %%%d",
+  "[LS;605;%d]"
+ ],
+ [
+  "Ateşe dayanıklılık %%%d",
+  "[LS;606;%d]"
+ ],
+ [
+  "Şimşek direnci %%%d",
+  "[LS;607;%d]"
+ ],
+ [
+  "Büyü Savunması %%%d",
+  "[LS;608;%d]"
+ ],
+ [
+  "Rüzgara Dayanıklılık %%%d",
+  "[LS;609;%d]"
+ ],
+ [
+  "Doğrudan Vuruş Yansıtma: %%%d",
+  "[LS;610;%d]"
+ ],
+ [
+  "Lanet Yansıtma: %%%d",
+  "[LS;611;%d]"
+ ],
+ [
+  "Zehire karşı koyma %%%d",
+  "[LS;612;%d]"
+ ],
+ [
+  "Eğer kazanırsan SP %%%d artacak.",
+  "[LS;613;%d]"
+ ],
+ [
+  "Etkinlik başladı bile. (Flag: %d)",
+  "[LS;614;%d]"
+ ],
+ [
+  "Eğer kazanırsan tecrübe %%%d artacak.",
+  "[LS;615;%d]"
+ ],
+ [
+  "Eğer kazanırsan Yang %%%d artacak.",
+  "[LS;616;%d]"
+ ],
+ [
+  "Eğer kazanırsan ele geçirilen nesne %%%d artacak.",
+  "[LS;617;%d]"
+ ],
+ [
+  "İksir kullandığın zaman güç %%%d artacak.",
+  "[LS;618;%d]"
+ ],
+ [
+  "Kazandıktan sonra hayat puanın %%%d oranında artacak.",
+  "[LS;619;%d]"
+ ],
+ [
+  "Baş dönmesi yok %%%d",
+  "[LS;620;%d]"
+ ],
+ [
+  "Yavaşlama yok %%%d",
+  "[LS;621;%d]"
+ ],
+ [
+  "Düşmek yok %%%d",
+  "[LS;622;%d]"
+ ],
+ [
+  "Saldırı gücü + %d",
+  "[LS;623;%d]"
+ ],
+ [
+  "Zırh + %d",
+  "[LS;624;%d]"
+ ],
+ [
+  "OX Quiz metni yüklenemedi.",
+  "[LS;625]"
+ ],
+ [
+  "Büyülü Saldırı + %d",
+  "[LS;626;%d]"
+ ],
+ [
+  "Büyü Savunması + %d",
+  "[LS;627;%d]"
+ ],
+ [
+  "Max. Dayanıklılık + %d",
+  "[LS;628;%d]"
+ ],
+ [
+  "Savaşçılara karşı güçlü +%%%d",
+  "[LS;629;%d]"
+ ],
+ [
+  "Ninjalara karşı güçlü +%%%d",
+  "[LS;630;%d]"
+ ],
+ [
+  "Suralara karşı güçlü +%%%d",
+  "[LS;631;%d]"
+ ],
+ [
+  "Şamanlara karşı güçlü +%%%d",
+  "[LS;632;%d]"
+ ],
+ [
+  "Canavarlara karşı güçlü +%%%d",
+  "[LS;633;%d]"
+ ],
+ [
+  "Saldırı +%%%d",
+  "[LS;634;%d]"
+ ],
+ [
+  "Savunma +%%%d",
+  "[LS;635;%d]"
+ ],
+ [
+  "OX Quiz metni yüklendi.",
+  "[LS;636]"
+ ],
+ [
+  "Tecrübe %%%d",
+  "[LS;637;%d]"
+ ],
+ [
+  "Eşya düşürme oranı %.1f kat",
+  "Chance to find an Item %. 1f"
+ ],
+ [
+  "Yang düşürme oranı %.1f kat",
+  "Chance to find Yang %. 1f"
+ ],
+ [
+  "Enerji üst sınırı +%%%d",
+  "[LS;640;%d]"
+ ],
+ [
+  "Enerji üst sınırı +%%%d",
+  "[LS;641;%d]"
+ ],
+ [
+  "Beceri Hasarı %%%d",
+  "[LS;642;%d]"
+ ],
+ [
+  "Vuruş Hasarı %%%d",
+  "[LS;643;%d]"
+ ],
+ [
+  "Beceri hasarına dayanıklılık %%%d",
+  "[LS;644;%d]"
+ ],
+ [
+  "Vuruş direnci %%%d",
+  "[LS;645;%d]"
+ ],
+ [
+  "Savaşçı ataklarında %%%d dayanıklılık",
+  "[LS;646;%d]"
+ ],
+ [
+  "Metin2'ye Hoşgeldin.",
+  "[LS;647]"
+ ],
+ [
+  "Ninja ataklarında %%%d dayanıklılık",
+  "[LS;648;%d]"
+ ],
+ [
+  "Sura ataklarında %%%d dayanıklılık",
+  "[LS;649;%d]"
+ ],
+ [
+  "Şaman ataklarında %%%d dayanıklılık",
+  "[LS;650;%d]"
+ ],
+ [
+  "(Prosedür: %d y- %d m - %d d)",
+  "[LS;651;%d;%d;%d]"
+ ],
+ [
+  "Sohbetiniz engellendi.",
+  "[LS;652]"
+ ],
+ [
+  "Çağırmak için daha yüksek seviyede olman gerekiyor.",
+  "[LS;653]"
+ ],
+ [
+  "Çağırmak için en az %d. seviyede olman gerekiyor.",
+  "[LS;654;%d]"
+ ],
+ [
+  "Bu Grupta değilsin.",
+  "[LS;655]"
+ ],
+ [
+  "Loncaya katılamadın.",
+  "[LS;656]"
+ ],
+ [
+  "Oyuncu, arkadaş listene eklenmeyi reddetti.",
+  "[LS;657]"
+ ],
+ [
+  "OX Etkinlik başladı.",
+  "[LS;658]"
+ ],
+ [
+  "[Friends] Listene bir GM ekleyemezsin.",
+  "[LS;659]"
+ ],
+ [
+  "%s çevrimiçi değil.",
+  "[LS;660;%s]"
+ ],
+ [
+  "Ticaret yaptıktan %d saniye sonra dükkân açabilirsin.",
+  "[LS;661;%d]"
+ ],
+ [
+  "%d saniye içinde tekrar ticaret yapabilirsin.",
+  "[LS;662;%d]"
+ ],
+ [
+  "2 milyardan fazla Yang'ın var.Ticaret yapamazsın.",
+  "[LS;663]"
+ ],
+ [
+  "Başka bir pencere açıkken özel dükkan açamazsın.",
+  "[LS;664]"
+ ],
+ [
+  "Bu, 2 milyar Yang üst sınırını aşacağı için ticaret yapamazsın.",
+  "[LS;665]"
+ ],
+ [
+  "[Storages] Hareket mümkün değil.",
+  "[LS;666]"
+ ],
+ [
+  "[Storages] Eşya depolanamaz.",
+  "[LS;667]"
+ ],
+ [
+  "[Group] Davet edilen oyuncu çevrimiçi değil.",
+  "[LS;668]"
+ ],
+ [
+  "Uriel girmene izin verdi.",
+  "[LS;670]"
+ ],
+ [
+  "[Group] Bunu sadece Grup Lideri değiştirebilir.",
+  "[LS;671]"
+ ],
+ [
+  "[Group] Hedef grubunuzun üyesi değil.",
+  "[LS;672]"
+ ],
+ [
+  "[Group] Zindandayken oyuncu atamazsın.",
+  "[LS;673]"
+ ],
+ [
+  "[Group] Zindandayken oyuncu atamazsın.",
+  "[LS;673]"
+ ],
+ [
+  "[Group] Gruptan atıldın.",
+  "[LS;675]"
+ ],
+ [
+  "[Group] Zindandayken gruptan ayrılamazsın.",
+  "[LS;531]"
+ ],
+ [
+  "[Group] Grup üyelerini atamazsın.",
+  "[LS;677]"
+ ],
+ [
+  "[Guild] Lonca silindikten sonra, %d gün yeni Lonca kuramazsın.",
+  "[LS;678;%d]"
+ ],
+ [
+  "[Guild] Bir Loncadan ayrıldıktan sonra  %d gün yeni Lonca kuramazsın.",
+  "[LS;679;%d]"
+ ],
+ [
+  "Lonca ismi geçersiz.",
+  "[LS;680]"
+ ],
+ [
+  "Katılım için birçok oyuncu arıyoruz.",
+  "[LS;681]"
+ ],
+ [
+  "[Guild] [%s] Lonca kuruldu.",
+  "[LS;682;%s]"
+ ],
+ [
+  "[Guild] Lonca kurulamadı.",
+  "[LS;683]"
+ ],
+ [
+  "[Group] Grup Becerilerini sadece grup lideri kullanabilir.",
+  "[LS;684]"
+ ],
+ [
+  "[Group] Hedef bulunamadı.",
+  "[LS;685]"
+ ],
+ [
+  "[Guild] Yanlış Yang toplamı.",
+  "[LS;686]"
+ ],
+ [
+  "[Guild] Yeterli Yang yok.",
+  "[LS;687]"
+ ],
+ [
+  "[Guild] İstenen oyuncu bulunamadı.",
+  "[LS;688]"
+ ],
+ [
+  "[Guild] Oyuncu aynı Loncada değil.",
+  "[LS;689]"
+ ],
+ [
+  "[Guild] Lonca Üyelerini atamazsın.",
+  "[LS;690]"
+ ],
+ [
+  "[Guild] Lonca Üyesi %s Loncadan atıldı.",
+  "[LS;691;%s]"
+ ],
+ [
+  "OX Etkinlik henüz bitmedi. Hatalar oluştu. (Flag: %d)",
+  "[LS;692;%d]"
+ ],
+ [
+  "[Guild] Lonca üyesini attın.",
+  "[LS;693]"
+ ],
+ [
+  "[Guild] Rütbe ismini değiştiremezsin.",
+  "[LS;694]"
+ ],
+ [
+  "[Guild] Lonca Liderinin gücü değiştirilemez.",
+  "[LS;695]"
+ ],
+ [
+  "[Guild] Bu rütbe ismi geçersiz.",
+  "[LS;696]"
+ ],
+ [
+  "[Guild] Pozisyonunu değiştiremezsin.",
+  "[LS;697]"
+ ],
+ [
+  "[Guild] Lonca Liderinin yetkileri değiştirilemez.",
+  "[LS;698]"
+ ],
+ [
+  "[Guild] %u Tecrübe kullanıldı.",
+  "[LS;699;%u]"
+ ],
+ [
+  "[Guild] Tecrübe kullanımı başarısız oldu.",
+  "[LS;700]"
+ ],
+ [
+  "[Lonca] Lonca kasasında yeterli Yang yok.",
+  "[LS;701]"
+ ],
+ [
+  "[Guild] Ejderha hayaleti yüklenemedi.",
+  "[LS;702]"
+ ],
+ [
+  "Kısa süre içinde OX Etkinlik tekrar başlayacak.",
+  "[LS;703]"
+ ],
+ [
+  "[Guild] Duyuru yapamazsın.",
+  "[LS;704]"
+ ],
+ [
+  "[Guild] Pozisyonunu değiştiremezsin.",
+  "[LS;705]"
+ ],
+ [
+  "[Guild] Lonca liderinin rütbesi değiştirilemez.",
+  "[LS;706]"
+ ],
+ [
+  "[Guild] Kendini Lonca lideri yapamazsın.",
+  "[LS;707]"
+ ],
+ [
+  "[Guild] Lideri seçemezsin.",
+  "[LS;708]"
+ ],
+ [
+  "[Guild] Daha fazla Lider seçemezsin.",
+  "[LS;709]"
+ ],
+ [
+  "Bu nesneyle ticaret yapamazsın.",
+  "[LS;710]"
+ ],
+ [
+  "Yasadışı yazılım tespit edildi. Oyun kapatılacak.",
+  "[LS;711]"
+ ],
+ [
+  "2 milyardan fazla Yang sahibisiniz. Ticaret yapamazsınız.",
+  "[LS;712]"
+ ],
+ [
+  "Geçersiz Yang.",
+  "[LS;713]"
+ ],
+ [
+  "Geçerli etkinlik bir alanla kısıtlı.",
+  "[LS;714]"
+ ],
+ [
+  "Nesne Ruleti Başlat.",
+  "[LS;715]"
+ ],
+ [
+  "Yang Ruleti Başlat.",
+  "[LS;716]"
+ ],
+ [
+  "Oyuncu online. Lütfen fısıltı kullanın.",
+  "[LS;717]"
+ ],
+ [
+  "Cep telefonu numarası kayıtlı değil.",
+  "[LS;718]"
+ ],
+ [
+  "Yazılı mesaj yollayabilmek için en az 20.Seviye olman gerekli.",
+  "[LS;719]"
+ ],
+ [
+  "Yazılı mesaj yollamak için 2000 Yang gerekli.",
+  "[LS;720]"
+ ],
+ [
+  "Yazılı mesajınız yollandı.",
+  "[LS;721]"
+ ],
+ [
+  "Loncanın %s %s %%%d derecesine yükseldi!",
+  "[LS;722;%s;%s;%d]"
+ ],
+ [
+  "Loncanın %s %s tekrar normal.",
+  "[LS;723;%s;%s]"
+ ],
+ [
+  "%s: %s, %%%d oranında yükseldi!",
+  "[LS;724;%s;%s;%d]"
+ ],
+ [
+  "%s 's %s tekrar normal.",
+  "[LS;726;%s;%s]"
+ ],
+ [
+  "Madencilik Puanın maksimuma ulaştı. (%d)",
+  "[LS;727;%d]"
+ ],
+ [
+  "Madencilik Puanlarınız en üst Seviyeye ulaştı.",
+  "[LS;728]"
+ ],
+ [
+  "Kazmanı, oduncu Deokbae'nin yardımıyla geliştirebilirsin.",
+  "[LS;729]"
+ ],
+ [
+  "Madencilik Puanların arttı! (%d/%d)",
+  "[LS;730;%d;%d]"
+ ],
+ [
+  "Kazma olmadan madencilik yapamazsın.",
+  "[LS;731]"
+ ],
+ [
+  "Burada maden yok.",
+  "[LS;732]"
+ ],
+ [
+  "Madencilik başarılı.",
+  "[LS;733]"
+ ],
+ [
+  "Madencilik başarısız.",
+  "[LS;734]"
+ ],
+ [
+  "[Friends] %s arkadaş olarak eklendi.",
+  "[LS;735;%s]"
+ ],
+ [
+  "Kısa süre içinde oyuncu şehre ışınlanacak.",
+  "[LS;736]"
+ ],
+ [
+  "[Friends] %s listenden silindi.",
+  "[LS;737;%s]"
+ ],
+ [
+  "Kritik sunucu hatası. Sunucu otomatik olarak yeniden başlatılacak.",
+  "[LS;738]"
+ ],
+ [
+  "10 saniye içinde bağlantınız kesilecek.",
+  "[LS;739]"
+ ],
+ [
+  "5 dakika sonra tekrar bağlanabilirsiniz.",
+  "[LS;740]"
+ ],
+ [
+  "(%s) Lonca kuruldu. [Temporary]",
+  "[LS;741;%s]"
+ ],
+ [
+  "Bu lonca savaşta.",
+  "[LS;742]"
+ ],
+ [
+  "%s: Lonca bulunamadı.",
+  "[LS;743;%s]"
+ ],
+ [
+  "Belirtilen isim veya numarada lonca mevcut değil.",
+  "[LS;744]"
+ ],
+ [
+  "Bina mevcut değil.",
+  "[LS;745]"
+ ],
+ [
+  "Bu tip binalar sadece bir kez inşa edilebilir.",
+  "[LS;746]"
+ ],
+ [
+  "Önce OX Etkinlik haritasını kapat. (Flag: %d)",
+  "[LS;747;%d]"
+ ],
+ [
+  "İlk olarak temel binaları inşa etmelisin.",
+  "[LS;748]"
+ ],
+ [
+  "Yanlış fiyat nedeniyle bina inşa edilemedi.",
+  "[LS;749]"
+ ],
+ [
+  "Binayi inşa edebilmek için loncan yeterli Yang'a sahip değil.",
+  "[LS;750]"
+ ],
+ [
+  "Bu binayı inşa edebilmek için yeterli kaynağın yok.",
+  "[LS;751]"
+ ],
+ [
+  "Bu alana bir bina inşa edemezsin.",
+  "[LS;752]"
+ ],
+ [
+  "Karakter bulunamadı.",
+  "[LS;753]"
+ ],
+ [
+  "Düello iptal edilmedi.",
+  "[LS;754]"
+ ],
+ [
+  "Düello iptali başarılı.",
+  "[LS;755]"
+ ],
+ [
+  "Düello başarıyla başladı.",
+  "[LS;756]"
+ ],
+ [
+  "Düellonun başlamasıyla ilgili bir problem var.",
+  "[LS;757]"
+ ],
+ [
+  "Hata oluşmadı.",
+  "[LS;758]"
+ ],
+ [
+  "Burada savaşçı yok.",
+  "[LS;759]"
+ ],
+ [
+  "Statü Puanı kalmadı.",
+  "[LS;760]"
+ ],
+ [
+  "Kalan Statü puanları çok düşük.",
+  "[LS;761]"
+ ],
+ [
+  "Yanlış değer girdin.",
+  "[LS;762]"
+ ],
+ [
+  "Sıralama veya alt sıralama yanlış.",
+  "[LS;763]"
+ ],
+ [
+  "%d ve %d oyuncuları arasındaki anlaşma bozuldu.",
+  "[LS;764;%d;%d]"
+ ],
+ [
+  "%d Yang için rulet çevir.",
+  "[LS;765;%d]"
+ ],
+ [
+  "Nesne logları, sistem loglarının içine yerleştirildi.",
+  "[LS;766]"
+ ],
+ [
+  "Krallık Bilgileri",
+  "[LS;767]"
+ ],
+ [
+  "Haritadan kutsal alan bilgisini seç %d Giriş Yap %d %d %d",
+  "[LS;768;%d;%d;%d;%d]"
+ ],
+ [
+  "Bir hata oluştu.",
+  "[LS;769]"
+ ],
+ [
+  "%s öldürülen %d öldürülen mob %d öldürülen lider %d Kutsal alan numarası %d",
+  "[LS;770;%s;%d;%d;%d;%d]"
+ ],
+ [
+  "İmparatorluk savaşı hakkında bilgi",
+  "[LS;771]"
+ ],
+ [
+  "İsteğin yükleniyor. Anlayışın için teşekkür ederiz.",
+  "[LS;772]"
+ ],
+ [
+  "Başka bir pencere açıkken depo açamazsın.",
+  "[LS;773]"
+ ],
+ [
+  "[Storeroom] Depo şifresi değişti.",
+  "[LS;774]"
+ ],
+ [
+  "[Storages] Yanlış şifre girdin.",
+  "[LS;775]"
+ ],
+ [
+  "Oyun süreniz %d dakika içinde doluyor.",
+  "[LS;776;%d]"
+ ],
+ [
+  "Düzenli olarak oylanır.",
+  "[LS;777]"
+ ],
+ [
+  "Zaten oy vermiştin.",
+  "[LS;778]"
+ ],
+ [
+  "%s oyuncu zaten oylamada.",
+  "[LS;779;%s]"
+ ],
+ [
+  "OX Etkinlik bitti. Herhangi bir hata oluşmadı. (Flag: %d)",
+  "[LS;781;%d]"
+ ],
+ [
+  "Oylanamaz.",
+  "[LS;782]"
+ ],
+ [
+  "%s hala %u Yang sahibi.",
+  "[LS;783;%s;%u]"
+ ],
+ [
+  "%s hala %d Yang sahibi",
+  "[LS;784;%s;%d]"
+ ],
+ [
+  "Yeterli Yang'a sahip değilsin.",
+  "[LS;785]"
+ ],
+ [
+  "İmparator adayı olarak %s silindi.",
+  "[LS;786;%s]"
+ ],
+ [
+  "%s İmparator olmak için bir aday değil.",
+  "[LS;787;%s]"
+ ],
+ [
+  "%s İmparator adayı olarak gösterildi.",
+  "[LS;788;%s]"
+ ],
+ [
+  "%s İmparatorluğa aday olamaz.",
+  "[LS;789;%s]"
+ ],
+ [
+  "%s İmparatorluk görevini bıraktı.",
+  "[LS;790;%s]"
+ ],
+ [
+  "%s İmparatoru görevi bırakamaz.",
+  "[LS;791;%s]"
+ ],
+ [
+  "OX Etkinliğine daha fazla oyuncu katılamaz.",
+  "[LS;792]"
+ ],
+ [
+  "Shinsoo Krallığı",
+  "[LS;793]"
+ ],
+ [
+  "Chunjo Krallığı",
+  "[LS;794]"
+ ],
+ [
+  "Jinno Krallığı",
+  "[LS;795]"
+ ],
+ [
+  "Balıkçılık puanınız arttı! (%d/%d)",
+  "[LS;796;%d;%d]"
+ ],
+ [
+  "Maksimum Balıkçılık Puanı'na ulaştın.",
+  "[LS;797]"
+ ],
+ [
+  "Balıkçının yanına git ve onun yardımıyla oltanı geliştir!",
+  "[LS;798]"
+ ],
+ [
+  "Balık yemini kaybettin.",
+  "[LS;799]"
+ ],
+ [
+  "Bir balık yakaladın! (%s)",
+  "[LS;800;%s]"
+ ],
+ [
+  "Yakaladığınız balığın boyu %.2fcm",
+  "The length of the captured fish is %.2fcm."
+ ],
+ [
+  "Balıkçılık olayı 'Büyük Sudak Balığı'",
+  "[LS;802]"
+ ],
+ [
+  "OX Etkinlikteki diğer katılımcılar listelendi.",
+  "[LS;803]"
+ ],
+ [
+  "Balıkçılık olayı 'Sazan Balığı'",
+  "[LS;804]"
+ ],
+ [
+  "%s: %d",
+  "[LS;805;%s;%d]"
+ ],
+ [
+  "%d nın %d Yakaladın.",
+  "[LS;806;%d;%d]"
+ ],
+ [
+  "Balık derin suda kayboldu.",
+  "[LS;807]"
+ ],
+ [
+  "Balığın içinde bir istiridye var.",
+  "[LS;808]"
+ ],
+ [
+  "Balığın içinde bir solucan var.",
+  "[LS;809]"
+ ],
+ [
+  "Ateşte %s kızartıyorsun.",
+  "[LS;810;%s]"
+ ],
+ [
+  "Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.",
+  "[LS;811]"
+ ],
+ [
+  "Depona hatalı bir isim veremezsin.",
+  "[LS;812]"
+ ],
+ [
+  "Nesne Market eşyalarını özel markette satamazsın.",
+  "[LS;813]"
+ ],
+ [
+  "OX Etkinlikteki diğer katılımcılar listelenemedi.",
+  "[LS;814]"
+ ],
+ [
+  "Madencilik bitti.",
+  "[LS;815]"
+ ],
+ [
+  "Maden çıkarmak için bir kazmaya ihtiyacın var!",
+  "[LS;816]"
+ ],
+ [
+  "Lütfen bir olta seç.",
+  "[LS;817]"
+ ],
+ [
+  "Önce yemi çengele geçir.",
+  "[LS;818]"
+ ],
+ [
+  "Oltasız balığa gidemezsin.",
+  "[LS;819]"
+ ],
+ [
+  "[Group] İstekte bulunamazsın çünkü grup lideri çevrim içi değil.",
+  "[LS;820]"
+ ],
+ [
+  "[Group] Diğer Krallıktan olan oyuncularla grup oluşturamazsın.",
+  "[LS;821]"
+ ],
+ [
+  "[Group] Zindandayken oyuncu davet edemezsin.",
+  "[LS;822]"
+ ],
+ [
+  "[Group] İzleyici modundayken oyuncu davet edemezsin.",
+  "[LS;823]"
+ ],
+ [
+  "[Group] -30 ile +30 Seviye aralığında olan oyuncuları davet edebilirsin.",
+  "[LS;824]"
+ ],
+ [
+  "Diğer Katılımcıların sayısı : %d",
+  "[LS;825;%d]"
+ ],
+ [
+  "[Group] Bu oyuncuyu seviyesi çok düşük olduğu için davet edemezsin.",
+  "[LS;826]"
+ ],
+ [
+  "[Group] Bu oyuncuyu seviyesi çok yüksek olduğu için davet edemezsin.",
+  "[LS;827]"
+ ],
+ [
+  "[Group] Gruba daha fazla oyuncu davet edemezsin.",
+  "[LS;828]"
+ ],
+ [
+  "%s Grubuna katılmak istiyor musun?",
+  "[LS;829;%s]"
+ ],
+ [
+  "Oyuncu bu grupta değil.",
+  "[LS;830]"
+ ],
+ [
+  "[Group] Bu grup dolu olduğu için katılamazsın.",
+  "[LS;831]"
+ ],
+ [
+  "[Grup] Birini davet etmek için yetkin yok.",
+  "[LS;832]"
+ ],
+ [
+  "[Group] %s Grup davetini reddetti.",
+  "[LS;833;%s]"
+ ],
+ [
+  "[Group] %s zaten grupta.",
+  "[LS;834;%s]"
+ ],
+ [
+  "[Group] Zindandayken davet kabul edemezsin.",
+  "[LS;835]"
+ ],
+ [
+  "OX Etkinlik bitti.",
+  "[LS;836]"
+ ],
+ [
+  "OX Etkinlik bitti.",
+  "[LS;836]"
+ ],
+ [
+  "[Group] Daveti kabul edemezsin.",
+  "[LS;837]"
+ ],
+ [
+  "[Group] %s davetini reddetti.",
+  "[LS;838;%s]"
+ ],
+ [
+  "[Group] %s Grubunuza katıldı.",
+  "[LS;839;%s]"
+ ],
+ [
+  "[Group] %s Grubunuza katıldı.",
+  "[LS;840;%s]"
+ ],
+ [
+  "Şu anda özel depoyu kullanamazsın.",
+  "[LS;841]"
+ ],
+ [
+  "Bu oyuncu zaten başkasıyla ticaret yapıyor.",
+  "[LS;842]"
+ ],
+ [
+  "Metin2 Onay Numarası: %s",
+  "[LS;843;%s]"
+ ],
+ [
+  "Onay Numaranız doğru değil. Lütfen tekrar deneyin.",
+  "[LS;844]"
+ ],
+ [
+  "Cep telefonu numarası kayıtlı.",
+  "[LS;845]"
+ ],
+ [
+  "Bu oyuncuya ışınlanamazsın.",
+  "[LS;846]"
+ ],
+ [
+  "OX Ödül verildi. İsim: %d Değer: %d",
+  "[LS;847;%d;%d]"
+ ],
+ [
+  "Oyuncu çevrimdışı.",
+  "[LS;848]"
+ ],
+ [
+  "Oyuncu %d numaralı kanalda. (Sen %d numaralı kanaldasın.)",
+  "[LS;849;%d;%d]"
+ ],
+ [
+  "Depo açtıktan sonra %d saniye başka bir yere gidemezsin.",
+  "[LS;850;%d]"
+ ],
+ [
+  "Ticaretten sonra bir süre bir yere gidemezsin.",
+  "[LS;851]"
+ ],
+ [
+  "Ticaretten sonra %d saniye bir yere gidemezsin.",
+  "[LS;852;%d]"
+ ],
+ [
+  "Düello bitti çünkü savaşçınız gözden kayboldu.",
+  "[LS;853]"
+ ],
+ [
+  "Burada iksirler için herhangi bir sınırlama yok.",
+  "[LS;854]"
+ ],
+ [
+  "%d iksir kullanabilirsiniz.",
+  "[LS;855;%d]"
+ ],
+ [
+  "Savaş 10 saniye içerisinde başlayacak.",
+  "[LS;856]"
+ ],
+ [
+  "Düello başladı.",
+  "[LS;857]"
+ ],
+ [
+  "DOĞRU",
+  "[LS;858]"
+ ],
+ [
+  "Arenadaki bir problemden dolayı düello bitti.",
+  "[LS;859]"
+ ],
+ [
+  "Süre bittiği için düello sona erdi.",
+  "[LS;860]"
+ ],
+ [
+  "10 Saniye içerisinde şehre ışınlanmış olacaksınız.",
+  "[LS;861]"
+ ],
+ [
+  "Arena ile ilgili bir problem olduğu için düello sona erdi.",
+  "[LS;862]"
+ ],
+ [
+  "Savaşçınızla ilgili bir problem olduğu için düello sona erdi.",
+  "[LS;863]"
+ ],
+ [
+  "Savaşçınızla ilgili bir problem olduğu için düello sona erdi.",
+  "[LS;864]"
+ ],
+ [
+  "Düelloyu %s kazandı.",
+  "[LS;865;%s]"
+ ],
+ [
+  "%s kazandı.",
+  "[LS;866;%s]"
+ ],
+ [
+  "10 saniye içerisinde şehre ışınlanmış olacaksınız.",
+  "[LS;867]"
+ ],
+ [
+  "Bir sonraki raund 10 saniye içerisinde başlayacak.",
+  "[LS;868]"
+ ],
+ [
+  "YANLIŞ",
+  "[LS;869]"
+ ],
+ [
+  "Savaşçılar ayrıldı. Düello sona erdi.",
+  "[LS;870]"
+ ],
+ [
+  "Düşen nesne yüzdesi şu anda +%%%d",
+  "[LS;871;%d]"
+ ],
+ [
+  "Düşen Yang yüzdesi şu anda +%%%d",
+  "[LS;872;%d]"
+ ],
+ [
+  "Yang yağmurunun düşme oranı şu anda artı %%%d.",
+  "[LS;873;%d]"
+ ],
+ [
+  "Tecrübe puanı bonusu şu anda %%%d oranında arttırıldı.",
+  "[LS;874;%d]"
+ ],
+ [
+  "İstemci versiyonunuz hatalı. Lütfen normal sürümü yükleyin.",
+  "[LS;875]"
+ ],
+ [
+  "Başka bir pencere açıkken dükkanda ticaret yapamazsın.",
+  "[LS;876]"
+ ],
+ [
+  "Almak için depodan çok uzaksın.",
+  "[LS;877]"
+ ],
+ [
+  "Satmak için depodan çok uzaksın.",
+  "[LS;878]"
+ ],
+ [
+  "Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.",
+  "[LS;811]"
+ ],
+ [
+  "Toplam Quiz sayısı: %d",
+  "[LS;880;%d]"
+ ],
+ [
+  "Satış için %%%d vergi alınacak.",
+  "[LS;881;%d]"
+ ],
+ [
+  "Dönüşmüş durumdayken ata binemezsin.",
+  "[LS;882]"
+ ],
+ [
+  "Gelinlik veya Smokin giyerken ata binemezsin.",
+  "[LS;883]"
+ ],
+ [
+  "Atın yok.",
+  "[LS;884]"
+ ],
+ [
+  "Atın öldü.",
+  "[LS;885]"
+ ],
+ [
+  "Atının dayanıklılığı çok az.",
+  "[LS;886]"
+ ],
+ [
+  "At çağırma işlemi başarısız.",
+  "[LS;887]"
+ ],
+ [
+  "At",
+  "[LS;888]"
+ ],
+ [
+  "Düğün kısa süre sonra bitecek.",
+  "[LS;889]"
+ ],
+ [
+  "Otomatik olarak geçecek.",
+  "[LS;890]"
+ ],
+ [
+  "Savaş çoktan sona erdi.",
+  "[LS;891]"
+ ],
+ [
+  "Sonucu 10 saniye içinde alacaksın.",
+  "[LS;892]"
+ ],
+ [
+  "İzleme sırasında ticaret yapamazsın.",
+  "[LS;893]"
+ ],
+ [
+  "Pencereler açıkken başkaları ile ticaret yapamazsın.",
+  "[LS;894]"
+ ],
+ [
+  "Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.",
+  "[LS;895]"
+ ],
+ [
+  "Diğer oyuncu ticareti iptal etti.",
+  "[LS;896]"
+ ],
+ [
+  "Yeterli Yang veya envanter boş yer yok.",
+  "[LS;897]"
+ ],
+ [
+  "Diğer kişide yeterli Yang veya envanterinde boş yer yok.",
+  "[LS;898]"
+ ],
+ [
+  "Diğer kişinin envanterinde hiç boş yer yok.",
+  "[LS;899]"
+ ],
+ [
+  "%s ile olan ticaret başarıyla gerçekleşti.",
+  "[LS;900;%s]"
+ ],
+ [
+  "Ejderha Tanrının korumasında olduğun için tecrübe kaybetmedin.",
+  "[LS;901]"
+ ],
+ [
+  "Mevcut Puan Durumu: Shinsoo %d, Chunjo %d, Jinno %d",
+  "[LS;902;%d;%d;%d]"
+ ],
+ [
+  "Doğru cevap:",
+  "[LS;903]"
+ ],
+ [
+  "%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d",
+  "[LS;904;%s;%d;%d;%d;%d;%d;%d]"
+ ],
+ [
+  "Kutsal Yerin Şeytanı: [ENTER][ENTER]",
+  "[LS;905]"
+ ],
+ [
+  ", burada olmaya hakkın yok. 10 saniye içinde krallığına bağlı olanlar bu kutsal toprakları terk edecek.",
+  "[LS;906]"
+ ],
+ [
+  "%s Krallığı yenildi ve krallık savaşından çıktı.",
+  "[LS;907;%s]"
+ ],
+ [
+  "Krallık savaşındaki yaratıkların sayısı:",
+  "[LS;908]"
+ ],
+ [
+  "Eğer Kutsal Alanın Bekçisini öldürürsen, onun sahibi olacaksın.",
+  "[LS;909]"
+ ],
+ [
+  "Ejderha tanrısının korumasında olduğun için sıralama puanı kaybetmedin.",
+  "[LS;910]"
+ ],
+ [
+  "Ek olarak verilen zarar %d",
+  "[LS;911;%d]"
+ ],
+ [
+  "%s engelle! (%%%d)",
+  "[LS;912;%s;%d]"
+ ],
+ [
+  "%s kaç! (%%%d)",
+  "[LS;913;%s;%d]"
+ ],
+ [
+  "Evet (O)",
+  "[LS;914]"
+ ],
+ [
+  "%s[%d] Saldırı pozisyonu: %d %d",
+  "[LS;915;%s;%d;%d;%d]"
+ ],
+ [
+  "Lütfen düzenlemenin tam ismini giriniz.",
+  "[LS;916]"
+ ],
+ [
+  "Bunu at üzerinde yapamazsınız.",
+  "[LS;917]"
+ ],
+ [
+  "Bunu düşmüş haldeyken yapamazsın.",
+  "[LS;918]"
+ ],
+ [
+  "Rüyamda? Ne?",
+  "[LS;919]"
+ ],
+ [
+  "Önce kalk.",
+  "[LS;920]"
+ ],
+ [
+  "Bu düzenleme mevcut değil.",
+  "[LS;921]"
+ ],
+ [
+  "[Grup] Grup silindi.",
+  "[LS;922]"
+ ],
+ [
+  "[Grup] Hedefi çağıramazsın.",
+  "[LS;923]"
+ ],
+ [
+  "[Grup] Bulunduğun pozisyonda grup üyelerini çağıramazsın.",
+  "[LS;924]"
+ ],
+ [
+  "Hayır (X)",
+  "[LS;925]"
+ ],
+ [
+  "Grubun iyi bir ortak çalışma ortaya koyuyor, liderin yakınında bulunan grup üyeleri bir tecrübe bonusu kazanıyor.",
+  "[LS;926]"
+ ],
+ [
+  "Lider",
+  "[LS;927]"
+ ],
+ [
+  "Üye",
+  "[LS;928]"
+ ],
+ [
+  "[Guild] Sağlanan tecrübe kaybedilenden tecrübeden daha fazla.",
+  "[LS;929]"
+ ],
+ [
+  "[Guild] Mesaj silinemez.",
+  "[LS;930]"
+ ],
+ [
+  "[Guild] Yeterli Ejderha hayaleti yok. (%d, %d)",
+  "[LS;931;%d;%d]"
+ ],
+ [
+  "[Guild] Henüz Lonca Becerilerini kullanamazsın.",
+  "[LS;932]"
+ ],
+ [
+  "[Guild] %d becerisi (%d, %d) %u üzerine uygulandı.",
+  "[LS;933;%d;%d;%d;%u]"
+ ],
+ [
+  "[Guild]  Oyuncu şu an %d kanalında. (Bulunulan kanal: %d)",
+  "[LS;934;%d;%d]"
+ ],
+ [
+  "[Guild] Oyuncu çevrim dışı.",
+  "[LS;935]"
+ ],
+ [
+  "Yanlış cevap veren katılımcılar 5 saniye sonra silinecekler.",
+  "[LS;936]"
+ ],
+ [
+  "[Guild] Bu Lonca Becerisi sadece savaşlarda kullanılabilir.",
+  "[LS;937]"
+ ],
+ [
+  "[Guild] %u oranında Ejderha Hayaleti Puanı yüklendi.",
+  "[LS;938;%u]"
+ ],
+ [
+  "[Guild] Sadece Lonca lideri Yang çekebilir.",
+  "[LS;939]"
+ ],
+ [
+  "[Guild] Oyuncu Lonca davetini reddetti.",
+  "[LS;940]"
+ ],
+ [
+  "[Guild] Loncaya birini davet edemezsin.",
+  "[LS;941]"
+ ],
+ [
+  "[Guild] Diğer Krallıklardan olan oyuncuları Loncaya davet edemezsin.",
+  "[LS;942]"
+ ],
+ [
+  "[Lonca] Bu oyuncuyu %d gün sonra tekrar davet edebilirsin.",
+  "[LS;943;%d]"
+ ],
+ [
+  "[Guild] Düzenlemeden sonraki  %d gün içinde üyeleri davet edebilirsin.",
+  "[LS;944;%d]"
+ ],
+ [
+  "[Guild] Bu oyuncu zaten başka bir Loncaya üye.",
+  "[LS;945]"
+ ],
+ [
+  "[Guild] Lonca kapasitesi maximum seviyeye ulaştı.",
+  "[LS;946]"
+ ],
+ [
+  "Sonraki soru için hazır mısın?",
+  "[LS;947]"
+ ],
+ [
+  "Bu beceriyi geliştiremezsiniz.",
+  "[LS;948]"
+ ],
+ [
+  "Bu beceriyi geliştiremezsiniz.",
+  "[LS;948]"
+ ],
+ [
+  "Bu beceriyi Grand Master seviyesine geliştiremezsiniz.",
+  "[LS;949]"
+ ],
+ [
+  "Zaten bu beceride master konumundasın. Onu geliştiremezsin.",
+  "[LS;950]"
+ ],
+ [
+  "Becerin Grand Master seviyesi için yeterince yüksek değil.",
+  "[LS;951]"
+ ],
+ [
+  "Çalışmadı. Lanet olsun!",
+  "[LS;952]"
+ ],
+ [
+  "Eğitim başarısız. Lütfen sonra tekrar deneyin.",
+  "[LS;953]"
+ ],
+ [
+  "Bedenim güçle dolu!",
+  "[LS;954]"
+ ],
+ [
+  "Eğitim yavaş yavaş fayda ediyor...",
+  "[LS;955]"
+ ],
+ [
+  "Kitapla olan eğitimini başarıyla tamamladın.",
+  "[LS;956]"
+ ],
+ [
+  "Bu kadar tecrübesizken bunu okuyamazsın.",
+  "[LS;957]"
+ ],
+ [
+  "Pregunta.",
+  "[LS;958]"
+ ],
+ [
+  "Bu beceriyi kitap okuyarak geliştiremezsin.",
+  "[LS;959]"
+ ],
+ [
+  "Bu becerin kitap okuyarak geliştirebilmek için yeterli seviyede değil.",
+  "[LS;960]"
+ ],
+ [
+  "İlerleyebiliyorum ama henüz hepsini anlamış değilim.",
+  "[LS;961]"
+ ],
+ [
+  "Bu talimatları anlamak kolay değil. Biraz daha çalışmam gerekiyor.",
+  "[LS;962]"
+ ],
+ [
+  "Bu bölümü anladım. Yine de çok çalışmam gerekiyor.",
+  "[LS;963]"
+ ],
+ [
+  "Kitapla olan eğitimini başarıyla tamamladın.",
+  "[LS;964]"
+ ],
+ [
+  "Işınlama başarısız.",
+  "[LS;965]"
+ ],
+ [
+  "Burada at yok. Seyise sor.",
+  "[LS;966]"
+ ],
+ [
+  "Lütfen at çağırma nesnesini kullan.",
+  "[LS;967]"
+ ],
+ [
+  "%s FP Kullanımı: %d",
+  "[LS;968;%s;%d]"
+ ],
+ [
+  "Doğruysa O'ya git, yanlışsa X'e git.",
+  "[LS;969]"
+ ],
+ [
+  "İçim yanıyor fakat vücudumu sakinleştiriyor.",
+  "[LS;970]"
+ ],
+ [
+  "Yavaşça, fakat sürekli... Ara vermeksizin.",
+  "[LS;971]"
+ ],
+ [
+  "Evet, bu his mükemmel. Bedenim Chi ile dolu.",
+  "[LS;972]"
+ ],
+ [
+  "Okudum! Şimdi Chi tüm vücudumu kaplıyor.",
+  "[LS;973]"
+ ],
+ [
+  "Eğitim tamamlandı.",
+  "[LS;974]"
+ ],
+ [
+  "Kitabın son sayfasındayım. Eğitim neredeyse bitmek üzere!",
+  "[LS;975]"
+ ],
+ [
+  "Nerdeyse bitti! Sadece azıcık kaldı!",
+  "[LS;976]"
+ ],
+ [
+  "Aydınlandım! Neredeyse hepsini okudum!",
+  "[LS;977]"
+ ],
+ [
+  "Sadece birkaç sayfa kaldı, onları da okuduktan sonra hepsini okumuş oluyorum.",
+  "[LS;978]"
+ ],
+ [
+  "Yenilenmiş hissediyorum.",
+  "[LS;979]"
+ ],
+ [
+  "Doğru!",
+  "[LS;980]"
+ ],
+ [
+  "Şimdi anladım!",
+  "[LS;981]"
+ ],
+ [
+  "Tamam, konsantre kalmalıyım!",
+  "[LS;982]"
+ ],
+ [
+  "Aynı satırı tekrar okuyup duruyorum.",
+  "[LS;983]"
+ ],
+ [
+  "Daha fazla bir şey öğrenmek istemiyorum.",
+  "[LS;984]"
+ ],
+ [
+  "Bu yöntem düşündüğümden çok daha karışık.",
+  "[LS;985]"
+ ],
+ [
+  "Konsantre olamıyorum. Mola vermem gerekiyor.",
+  "[LS;986]"
+ ],
+ [
+  "Sohbetin, spam nedeniyle geçici olarak engellendi.",
+  "[LS;987]"
+ ],
+ [
+  "Sohbet blokunuz kaldırıldı.",
+  "[LS;988]"
+ ],
+ [
+  "İnşa penceresi zaten açık.",
+  "[LS;989]"
+ ],
+ [
+  "Başka bir Ticaret/Depo penceresi açıkken herhangi birşey inşa edemezsiniz.",
+  "[LS;990]"
+ ],
+ [
+  "Daha fazla geliştirme imkansız.",
+  "[LS;991]"
+ ],
+ [
+  "İnşa penceresi açık değil.",
+  "[LS;992]"
+ ],
+ [
+  "Doğru maddeye sahip değilsiniz.",
+  "[LS;993]"
+ ],
+ [
+  "[Guild] Lütfen daha sonra tekrar deneyin.",
+  "[LS;994]"
+ ],
+ [
+  "Bu yeteneği geliştirmek için %d Yetenek Kitabı daha okumalısınız.",
+  "[LS;995;%d]"
+ ],
+ [
+  "[Guild] Lütfen daha sonra tekrar deneyin.",
+  "[LS;994]"
+ ],
+ [
+  "Bu özelliği sadece kaledeyken kullanabilirsin.",
+  "[LS;997]"
+ ],
+ [
+  "TEST: Altın külçe krallığınızın kasasına geri ödendi.",
+  "[LS;998]"
+ ],
+ [
+  "TEST: Krallığınızın kasasında bulunan: %d",
+  "[LS;999;%d]"
+ ],
+ [
+  "TEST: Altın külçeyi krallığınızın kasasına gönderme yetkiniz yok.",
+  "[LS;1000]"
+ ],
+ [
+  "[Guild] Lonca %d puana ulaştı.",
+  "[LS;1001;%d]"
+ ],
+ [
+  "Bu eşya daha iyi hale gelemez.",
+  "[LS;1002]"
+ ],
+ [
+  "Ücretsiz silah geliştirmeleri ancak seviye 20'ye kadar olan silahlarda kullanılabilir.",
+  "[LS;1003]"
+ ],
+ [
+  "Gerekli özelliklere sahip olmadığın için bu eşyayı kullanamazsın.",
+  "[LS;1004]"
+ ],
+ [
+  "Doğru cinsiyette olmadığınız için bu eşyayı kullanamazsınız.",
+  "[LS;1005]"
+ ],
+ [
+  "Kullan: transfer <name>",
+  "[LS;1006]"
+ ],
+ [
+  "Bu özellik sadece İmparator tarafından kullanılabilir.",
+  "[LS;1007]"
+ ],
+ [
+  "Başka krallıktan olan oyuncuları birliğine dahil edemezsin.",
+  "[LS;1008]"
+ ],
+ [
+  "%s şuanda %d kanalında. (Kanalınız: %d)",
+  "[LS;1009;%s;%d;%d]"
+ ],
+ [
+  "%s oyuncuları iyileştirdin.",
+  "[LS;1010;%s]"
+ ],
+ [
+  "Bu isimde bir kullanıcı yok.",
+  "[LS;1011]"
+ ],
+ [
+  "Kendini birliğine ekleyemezsin.",
+  "[LS;1012]"
+ ],
+ [
+  "Seviyeniz eşyanın yükseltmeden sonraki seviyesinden düşük.",
+  "[LS;1013]"
+ ],
+ [
+  "Başka bir pencere açıkken yükseltme yapamazsın.",
+  "[LS;1014]"
+ ],
+ [
+  "%s İmparatoru %s oldu.",
+  "[LS;1015;%s;%s]"
+ ],
+ [
+  "Ateşleri yakmak için %s savaşları var.",
+  "[LS;1016;%s]"
+ ],
+ [
+  "%s başarıyla savundu.",
+  "[LS;1017;%s]"
+ ],
+ [
+  "%s ateşi yok ettiği için şu andan itibaren 30 dakika boyunca bir ödül alabilir.",
+  "[LS;1018;%s]"
+ ],
+ [
+  "30 dakika geçti. İşaret ateşi söndü.",
+  "30 minutes are over. The bonfires have disappeared."
+ ],
+ [
+  "%s de savaş yüzünden bir uyarı ateşi yakıldı.",
+  "[LS;1020;%s]"
+ ],
+ [
+  "%s ateşi yok etti.",
+  "[LS;1021;%s]"
+ ],
+ [
+  "%s kaleyi koruyamadığı için savaşı kaybetti.",
+  "[LS;1022;%s]"
+ ],
+ [
+  "%s ateşi yok etti.",
+  "[LS;1023;%s]"
+ ],
+ [
+  "Sadece zırhınızı çıkardığınızda bir dükkan açabilirsiniz.",
+  "[LS;1025]"
+ ],
+ [
+  "Sohbet bloklamanızın kalkmasına %d saat %d dakika %d saniye kaldı",
+  "[LS;1028;%d;%d;%d]"
+ ],
+ [
+  "Sohbet bloklamanızın kalkmasına %d saat %d saniye kaldı",
+  "[LS;1029;%d;%d]"
+ ],
+ [
+  "Sohbet bloklamanızın kalkmasına %d dakika %d saniye kaldı",
+  "[LS;1030;%d;%d]"
+ ],
+ [
+  "Yang yağmuru düşme oranı",
+  "[LS;1031]"
+ ],
+ [
+  "Yükseltme için yeterli malzeme yok.",
+  "[LS;1035]"
+ ],
+ [
+  "Tüm Krallıklar",
+  "[LS;1037]"
+ ],
+ [
+  "Eşya düşürme oran yüzdesi",
+  "[LS;1038]"
+ ],
+ [
+  "Yang düşürme oranı yüzdesi",
+  "[LS;1039]"
+ ],
+ [
+  "Deneyim yüzdesi",
+  "[LS;1040]"
+ ],
+ [
+  "Sohbet engelinizin kalkmasına %d saniye kaldı",
+  "[LS;1042;%d]"
+ ],
+ [
+  "At sürerken duygularınızı ifade edemezsiniz.",
+  "[LS;1043]"
+ ],
+ [
+  "At süren bir kişiye duygularınızı ifade edemezsiniz.",
+  "[LS;1044]"
+ ],
+ [
+  "[Lonca] Düşman lonca lideri çevrimdışı.",
+  "[LS;1048]"
+ ],
+ [
+  "[Lonca] Düşman lonca lideri çevrimdışı.",
+  "[LS;1048]"
+ ],
+ [
+  "[Lonca] Bu lonca şu anda savaşta.",
+  "[LS;1050]"
+ ],
+ [
+  "Zaten bir binektesin. Önce in.",
+  "[LS;1054]"
+ ],
+ [
+  "Bu role ile yükseltemezsiniz.",
+  "[LS;1056]"
+ ],
+ [
+  "Şeytan Kulesi görevi için sadece bir kez ödüllendirilebilirsiniz.",
+  "[LS;1067]"
+ ],
+ [
+  "Ejderha taşı başarıyla çıkarıldı.",
+  "[LS;1068]"
+ ],
+ [
+  "Bu nesne, arındırma paneli içerisinde sürüklenemez.",
+  "[LS;1069]"
+ ],
+ [
+  "Ejderha taşında kalan süreyi çıkarma işlemi başarılıydı.",
+  "[LS;1072]"
+ ],
+ [
+  "Kalan süreyi çıkarma işlemi başarısızdı.",
+  "[LS;1073]"
+ ],
+ [
+  "Ejderha taşı çıkarılamadı, ama şunu elde ettin: %s",
+  "[LS;1074;%s]"
+ ],
+ [
+  "Ejderha taşı çıkarılamadı.",
+  "[LS;1075]"
+ ],
+ [
+  "Bu nesneye saflık derecesini geliştirmek için ihtiyaç duyulmaz.",
+  "[LS;1076]"
+ ],
+ [
+  "Bu nesneye saflık derecesini geliştirmek için ihtiyaç duyulmaz.",
+  "[LS;1076]"
+ ],
+ [
+  "Bu eşya bu şekilde yükseltilemez.",
+  "[LS;1077]"
+ ],
+ [
+  "Bu eşya bu şekilde yükseltilemez.",
+  "[LS;1077]"
+ ],
+ [
+  "Saflık derecesini geliştirme işlemi başarılıydı.",
+  "[LS;1078]"
+ ],
+ [
+  "Arındırmayı bir sınıf daha yükseltme işlemi başarısızdı.",
+  "[LS;1079]"
+ ],
+ [
+  "Bu nesneye arındırmada ihtiyaç duyulmaz.",
+  "[LS;1080]"
+ ],
+ [
+  "Arındırmayı bir sınıf daha yükseltme işlemi başarılıydı.",
+  "[LS;1082]"
+ ],
+ [
+  "Saflık derecesini geliştirme işlemi başarısızdı.",
+  "[LS;1083]"
+ ],
+ [
+  "Ejderha taşını güçlendirmek için gerekli malzemeye sahip değilisn.",
+  "[LS;1084]"
+ ],
+ [
+  "Bu ejderha taşı güçlendirmek için kullanılamaz.",
+  "[LS;1085]"
+ ],
+ [
+  "Güçlendirme başarılıydı.",
+  "[LS;1087]"
+ ],
+ [
+  "Güçlendirme başarısız",
+  "[LS;1088]"
+ ],
+ [
+  "Üzerinde zaten bu türden bir ejderha taşı bulunuyor.",
+  "[LS;1090]"
+ ],
+ [
+  "Ejderha taşı çıkarılamaz.",
+  "[LS;1091]"
+ ],
+ [
+  "Böyle bir ejderha taşı kuşandın bile.",
+  "[LS;1092]"
+ ],
+ [
+  "Cor Draconis'i açmadan önce Ejderha Taşı görevi tamamlanmış olmalı ve Ejderha Taşı Simyası etkinleştirilmiş olmalı.",
+  "[LS;1094]"
+ ],
+ [
+  "Cor Draconis'i açmadan önce Ejderha Taşı görevi tamamlanmış olmalı ve Ejderha Taşı Simyası etkinleştirilmiş olmalı.",
+  "[LS;1094]"
+ ],
+ [
+  "Eşyaya ait envanter tamamen boş olmadığı sürece kemeri çıkaramazsın.",
+  "[LS;1095]"
+ ],
+ [
+  "Kutsama Kağıdı ve Büyülü Demir Madeni birleştirebilirsin.",
+  "[LS;1096]"
+ ],
+ [
+  "Bu eşyayı kemer envanterinde donanamazsın.",
+  "[LS;1097]"
+ ],
+ [
+  "Aynı geliştirme parşömenleri birleştirilemez.",
+  "[1106-tr]Aynı geliştirme parşömenleri birleştirilemez."
+ ],
+ [
+  "%d Yang yatırdın.",
+  "[LS;1107;%d]"
+ ],
+ [
+  "Çıkartılacak metin taşı yok.",
+  "[LS;1108]"
+ ],
+ [
+  "Bu yeri kaydedemezsin.",
+  "[LS;1119]"
+ ],
+ [
+  "Envanterde yeterli boşluk yok.",
+  "[LS;1130]"
+ ],
+ [
+  "Yabancı Krallıkta güvenli bir yere ışınlanamazsın.",
+  "[LS;1141]"
+ ],
+ [
+  "Yeterli HP yok.",
+  "[LS;1152]"
+ ],
+ [
+  "Bunu kullanmak için yeterli manaya sahip değilsin.",
+  "[LS;1162]"
+ ],
+ [
+  "%d saniye içinde hedefte olacaksın.",
+  "[LS;1172;%d]"
+ ],
+ [
+  "Seviyeniz eşyanın yükseltmeden sonraki seviyesinden düşük.",
+  "[LS;1013]"
+ ],
+ [
+  "Her 5 saniyede bir Ay Pastası kullanabilirsin.",
+  "[LS;1194]"
+ ],
+ [
+  "Bu eşyayı düelloda kullanamazsın.",
+  "[LS;1205]"
+ ],
+ [
+  "%d Yang kazandın.",
+  "[LS;1216;%d]"
+ ],
+ [
+  "Buraya kamp ateşi yakamazsın.",
+  "[LS;1217]"
+ ],
+ [
+  "Suyun altında kamp ateşi yakamazsın.",
+  "[LS;1228]"
+ ],
+ [
+  "Kapalı. Anahtarı aramalısın.",
+  "[LS;1237]"
+ ],
+ [
+  "Bu eşya bir anahtarla açılamaz.",
+  "[LS;1248]"
+ ],
+ [
+  "Doğru anahtar.",
+  "[LS;1258]"
+ ],
+ [
+  "%d Yang kazandın.",
+  "[LS;1269;%d]"
+ ],
+ [
+  "Kutudan gizemli bir ışık geliyor.",
+  "[LS;1279]"
+ ],
+ [
+  "%d Tecrübe Puanı kazandın.",
+  "[LS;1290;%d]"
+ ],
+ [
+  "Bak kutudan ne çıktı!",
+  "[LS;1299]"
+ ],
+ [
+  "[Lonca] Lonca seviyesi çok düşük.",
+  "[LS;1308]"
+ ],
+ [
+  "Eğer kutudan gelen kırmızı dumanı solursan, hızın artar!",
+  "[LS;1310]"
+ ],
+ [
+  "Düşürülen eşya %d dakika sonra kaybolacak.",
+  "[LS;1057;%d]"
+ ],
+ [
+  "Mümkün olan maksimum sayıda ruh topladın. Kan sunağına git ve ritüeli düzenle!",
+  "[LS;1959;%s;%d]"
+ ],
+ [
+  "You cannot exchange the won right now. Close some windows.",
+  "[LS;1960]"
+ ],
+ [
+  "You cannot exchange the won right now. Wait a moment.",
+  "[LS;1961]"
+ ],
+ [
+  "Invalid won exchange value parameter %d.",
+  "[LS;1962;%d]"
+ ],
+ [
+  "You don't have enough won for the exchange. Required %d, owned %d.",
+  "[LS;1963;%d;%d]"
+ ],
+ [
+  "You have too many yangs for the exchange. Reduce your yangs first.",
+  "[LS;1964]"
+ ],
+ [
+  "You don't have enough yangs for the exchange. Required %s, owned %d.",
+  "[LS;1965;%s;%d]"
+ ],
+ [
+  "You successfully sold %d won for %s yangs.",
+  "[LS;1966;%d;%s]"
+ ],
+ [
+  "You have too many won for the exchange. Reduce your won first.",
+  "[LS;1967]"
+ ],
+ [
+  "You successfully bought %d won for %s yangs.",
+  "[LS;1968;%d;%s]"
+ ],
+ [
+  "Invalid parameter for the won exchange. Reported.",
+  "[LS;1969]"
+ ],
+ [
+  "Olmadı!",
+  "[LS;1126]"
+ ],
+ [
+  "Oldu!",
+  "[LS;1127]"
+ ],
+ [
+  "Yeni emiş oranı: %%%d",
+  "[LS;1204;%d]"
+ ],
+ [
+  "You can combine just accees of same grade.",
+  "[LS;1125]"
+ ],
+ [
+  "*** Rolling for the following item: %16s ***",
+  "[LS;1201;%s]"
+ ],
+ [
+  "*** Rolling of %s: %16s ***",
+  "[LS;1203;%s;%s]"
+ ],
+ [
+  "*** -> %16s - Zar sonucu: %05d ***",
+  "[LS;1202;%s;%d]"
+ ],
+ [
+  "SHOP_TAX_INFO",
+  "Satis tutarindan %d%% vergi kesildi."
+ ],
+ [
+  "SHOP_CANNOT_TRADE_OTHER_WINDOW_OPEN",
+  "[LS;2001]"
+ ],
+ [
+  "SHOP_PLEASE_WAIT_MOMENT",
+  "[LS;2002]"
+ ],
+ [
+  "SHOP_TOO_FAR_FROM_NPC",
+  "[LS;2003]"
+ ],
+ [
+  "SHOP_CANNOT_SELL_EQUIPPED_ITEM",
+  "[LS;2004]"
+ ],
+ [
+  "SHOP_GOLD_OVERFLOW_CANNOT_SELL",
+  "[LS;2005]"
+ ],
+ [
+  "SHOP_TAX_INFO",
+  "[LS;2006;%d]"
+ ],
+ [
+  "SHOP_ITEM_SOLD_FOR_YANG",
+  "[LS;2007;%d]"
+ ],
+ [
+  "%s eşyasını kazandın.",
+  "[LS;220;%s]"
+ ],
+ [
+  "Serverla olan bağlantınız kesiliyor. Lütfen bekleyin.",
+  "[LS;513]"
+ ],
+ [
+  "%d saniye sonra oyun kapanacak.",
+  "[LS;508;%d]"
+ ],
+ [
+  "Karakteri değiştirdiniz. Lütfen bekleyin.",
+  "[LS;515]"
+ ],
+ [
+  "Çıkışınız iptal edildi.",
+  "[LS;511]"
+ ],
+ [
+  "Lütfen önce atını çağır.",
+  "[LS;501]"
+ ],
+ [
+  "Bu düzenleme mevcut değil.",
+  "Böyle bir komut yok."
+ ]
+]

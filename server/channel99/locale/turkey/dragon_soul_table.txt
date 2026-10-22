@@ -36,23 +36,23 @@
 # O ejder ruh tasina ait ozelligi bulur.
 # Ayrica burada yazili olmayan bir ejder ruh tasi asagidaki Grup taniminda varsa
 # Hata.
-Grup_VnumMapper
+Group VnumMapper
 {
 	# Baslangic vnum.
 	# Buraya yazilacak kisim yukarida aciklanan FE kismidir.
 	# FE yazilmali
 	#--#	DragonSoulName	Type
-	1	Beyaz_Ejder_Taşı	11
-	2	Ateş_Ejderi_Taşı	12
-	3	Rüzgar_Ejderi_Taşı	13
-	4	Demir_Ejderi_Taşı	14
-	5	Yıldırım_Ejderi_Taşı	15
-	6	Kara_Ejderi_Taşı	16
+	1	beyaz_ejder_taşı	11
+	2	ateş_ejderi_taşı	12
+	3	rüzgar_ejderi_taşı	13
+	4	demir_ejderi_taşı	14
+	5	yıldırım_ejderi_taşı	15
+	6	kara_ejderi_taşı	16
 }
 
-Grup_BasicApplys
+Group BasicApplys
 {
-	Grup_Beyaz_Ejder_Taşı
+	Group Beyaz_Ejder_Taşı
 	{
 	# 1'den itibaren sirayla atanir.
 		#--#	Apply_Type	Apply_value
@@ -61,34 +61,34 @@ Grup_BasicApplys
 		3	ENCHANT_ICE	10
 	}
 
-	Grup_Ateş_Ejderi_Taşı
+	Group Ateş_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value
 		1	STR	10
 		2	RESIST_FIRE	10
 		3	ENCHANT_FIRE	10
 	}
-	Grup_Rüzgar_Ejderi_Taşı
+	Group Rüzgar_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value
 		1	MAX_SP	500
 		2	RESIST_WIND	10
 		3	ENCHANT_WIND	10
 	}
-	Grup_Demir_Ejderi_Taşı
+	Group Demir_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value
 		1	DEX	10
 		2	RESIST_EARTH	10
 		3	ENCHANT_EARTH	10
 	}
-	Grup_Yıldırım_Ejderi_Taşı
+	Group Yıldırım_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value
 		1	MAX_HP	1500
 		2	RESIST_ELEC	10
 	}
-	Grup_Kara_Ejderi_Taşı
+	Group Kara_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value
 		1	CON	10
@@ -97,9 +97,9 @@ Grup_BasicApplys
 	}
 }
 
-Grup_AdditionalApplys
+Group AdditionalApplys
 {
-	Grup_Beyaz_Ejder_Taşı
+	Group Beyaz_Ejder_Taşı
 	{
 	# Ilk sutun sira ile ilgili degildir. Ozellikler tamamen olasiliga gore atanir.
 		#--#	Apply_Type	Apply_value	Prob
@@ -108,7 +108,7 @@ Grup_AdditionalApplys
 		3	SKILL_DAMAGE_BONUS	15	10
 		4	SKILL_DEFEND_BONUS	15	10
 	}
-	Grup_Ateş_Ejderi_Taşı
+	Group Ateş_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value	Prob
 		1	ATT_BONUS	300	10
@@ -116,7 +116,7 @@ Grup_AdditionalApplys
 		3	NORMAL_HIT_DAMAGE_BONUS	15	10
 		4	NORMAL_HIT_DEFEND_BONUS	15	10
 	}
-	Grup_Rüzgar_Ejderi_Taşı
+	Group Rüzgar_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value	Prob
 		1	MAX_HP	3000	10
@@ -125,7 +125,7 @@ Grup_AdditionalApplys
 		4	KILL_HP_RECOVER	5	10
 		5	MAX_HP_PCT	20	10
 	}
-	Grup_Demir_Ejderi_Taşı
+	Group Demir_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value	Prob
 		1	ATT_BONUS_TO_WARRIOR	15	10
@@ -137,7 +137,7 @@ Grup_AdditionalApplys
 		7	RESIST_SURA	15	10
 		8	RESIST_SHAMAN	15	10
 	}
-	Grup_Yıldırım_Ejderi_Taşı
+	Group Yıldırım_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value	Prob
 		1	MAX_SP	1500	10
@@ -146,7 +146,7 @@ Grup_AdditionalApplys
 		4	KILL_SP_RECOVER	5	10
 		5	MAX_SP_PCT	20	10
 	}
-	Grup_Kara_Ejderi_Taşı
+	Group Kara_Ejderi_Taşı
 	{
 		#--#	Apply_Type	Apply_value	Prob
 		1	BLOCK	10	10
@@ -162,9 +162,9 @@ Grup_AdditionalApplys
 # Belirli degeri olan ejder ruh tasi, Default uzerine yazar.
 # Seviyeye gore ozellik sayisi
 # Ancak basis, add_max 3'ten buyuk olmamali.
-Grup_ApplyNumSettings
+Group ApplyNumSettings
 {
-	Grup_Default
+	Group Default
 	{
 		#--#	GRADE_NORMAL	GRADE_BRILLIANT	GRADE_RARE	GRADE_ANCIENT	GRADE_LEGENDARY	GRADE_MYTH
 		basis	1	1	1	2	2	3
@@ -180,11 +180,11 @@ Grup_ApplyNumSettings
 
 # Ejder ruh tasi agirlik tablosu.
 # Bu tabloda deger 0 ise daha fazla gelistirme yapilamadigi kabul edilir.
-Grup_WeightTables
+Group WeightTables
 {
-	Grup_Default
+	Group Default
 	{
-		Grup_GRADE_NORMAL
+		Group GRADE_NORMAL
 		{
 	#		Aşama	Geliştirme
 			#--#	0	1	2	3	4	5	6
@@ -194,7 +194,7 @@ Grup_WeightTables
 			STEP_HIGH	4	5	6	7	0	0	0
 			STEP_HIGHEST	5	6	7	8	10	0	0
 		}
-		Grup_GRADE_BRILLIANT
+		Group GRADE_BRILLIANT
 		{
 			STEP_LOWEST	3	4	5	6	0	0	0
 			STEP_LOW	4	5	6	8	0	0	0
@@ -202,7 +202,7 @@ Grup_WeightTables
 			STEP_HIGH	6	8	10	12	15	0	0
 			STEP_HIGHEST	8	10	12	15	20	0	0
 		}
-		Grup_GRADE_RARE
+		Group GRADE_RARE
 		{
 			#--#	0	1	2	3	4	5	6
 			STEP_LOWEST	6	7	9	11	15	0	0
@@ -211,7 +211,7 @@ Grup_WeightTables
 			STEP_HIGH	11	15	20	25	30	0	0
 			STEP_HIGHEST	15	20	25	30	40	0	0
 		}
-		Grup_GRADE_ANCIENT
+		Group GRADE_ANCIENT
 		{
 			#--#	0	1	2	3	4	5	6
 			STEP_LOWEST	10	12	15	18	20	0	0
@@ -220,7 +220,7 @@ Grup_WeightTables
 			STEP_HIGH	18	20	25	35	40	0	0
 			STEP_HIGHEST	20	25	35	40	60	80	0
 		}
-		Grup_GRADE_LEGENDARY
+		Group GRADE_LEGENDARY
 		{
 			#--#	0	1	2	3	4	5	6
 			STEP_LOWEST	30	35	40	45	50	0	0
@@ -230,7 +230,7 @@ Grup_WeightTables
 			STEP_HIGHEST	50	55	65	75	90	105	120
 		}
 
-		Grup_GRADE_MYTH
+		Group GRADE_MYTH
 		{
 			#--#	0	1	2	3	4	5	6
 			STEP_LOWEST	35	40	45	50	55	0	0
@@ -252,9 +252,9 @@ Grup_WeightTables
 }
 
 # Gelistirme tablosu
-Grup_RefineGradeTables
+Group RefineGradeTables
 {
-	Grup_Default
+	Group Default
 	{
 		#--#	NEED_COUNT	FEE	GRADE_NORMAL	GRADE_BRILLIANT	GRADE_RARE	GRADE_ANCIENT	GRADE_LEGENDARY	GRADE_MYTH
 		GRADE_NORMAL	2	30000	50	50	0	0	0	0
@@ -265,9 +265,9 @@ Grup_RefineGradeTables
 	}
 }
 
-Grup_RefineStepTables
+Group RefineStepTables
 {
-	Grup_Default
+	Group Default
 	{
 		#--#	NEED_COUNT	FEE	STEP_LOWEST	STEP_LOW	STEP_MID	STEP_HIGH	STEP_HIGHEST
 		STEP_LOWEST	2	20000	50	50	0	0	0
@@ -277,9 +277,9 @@ Grup_RefineStepTables
 	}
 }
 
-Grup_RefineStrengthTables
+Group RefineStrengthTables
 {
-	Grup_Default
+	Group Default
 	{
 		# MATERIAL_DS_REFINE_NORMAL : GRADE_NORMAL gelistirme tasi
 		# MATERIAL_DS_REFINE_BLESSED : Kutsanmis gelistirme tasi
@@ -295,9 +295,9 @@ Grup_RefineStrengthTables
 # Ancak, special item group'ta vnum 10053 ile tanimli diger ejder ruhlarinda Value(0)'daki deger sarj miktaridir.
 # Ejder ruhu cikarma olasiligi tablosu
 # Sarj miktari 0 olmasi cikarma basarisizligi demektir.
-Grup_DragonHeartExtTables
+Group DragonHeartExtTables
 {
-	Grup_Default
+	Group Default
 	{
 		#--#	1	2	3	4	5
 	# Ejder ruhu sarj miktari (%)
@@ -316,9 +316,9 @@ Grup_DragonHeartExtTables
 # Ejder ruh tasi cikarma olasiligi tablosu.
 # Bunun da 1, 2. secenekleri var, birlestirilebilecek sekilde.
 # Cikarma olasiligi belirlenebilir, basarisizlik yan urunu de belirlenebilir. (0 ise verilmez)
-Grup_DragonSoulExtTables
+Group DragonSoulExtTables
 {
-	Grup_Default
+	Group Default
 	{
 				#Basarisizlik yan urunu
 		#--#	Prob	ByProduct

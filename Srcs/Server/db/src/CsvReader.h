@@ -160,6 +160,8 @@ public:
 
     bool Load(const char* fileName, const char seperator=',', const char quote='"');
 
+    bool LoadJson(const char* fileName);
+
     bool Save(const char* fileName, bool append=false, char seperator=',', char quote='"') const;
 
     void Destroy();

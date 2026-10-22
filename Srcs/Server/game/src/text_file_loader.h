@@ -62,11 +62,15 @@ class CTextFileLoader
 
 	protected:
 		bool LoadGroup(TGroupNode * pGroupNode);
+		bool GetTokens(DWORD dwLine, TTokenVector* pTokenVector);
+		DWORD GetLineCount();
 
 	protected:
 		std::string					m_strFileName;
 		DWORD						m_dwcurLineIndex;
 		const void *					mc_pData;
+		bool						m_bJson;
+		std::vector<std::vector<std::string> >	m_jsonRows;
 
 		CMemoryTextFileLoader				m_fileLoader;
 

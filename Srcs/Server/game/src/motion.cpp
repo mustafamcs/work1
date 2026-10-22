@@ -2,6 +2,7 @@
 #include "../../common/stl.h"
 #include "constants.h"
 #include "motion.h"
+#include "../../common/JsonTable.h"
 #include "text_file_loader.h"
 #include "mob_manager.h"
 #include "char.h"
@@ -42,12 +43,12 @@ static float MOB_GetNormalAttackDuration(TMobTable* mobTable)
 	char motlistPath[1024];
 	snprintf(motlistPath, sizeof(motlistPath), "data/monster/%s/motlist.txt", folder);
 
-	FILE * fp = fopen(motlistPath, "rt");
-	if (!fp)
+	jsontable::CLineReader reader;
+	if (!reader.Open(motlistPath))
 		return minDuration;
 
 	char line[1024];
-	while (fgets(line, sizeof(line), fp))
+	while (reader.Gets(line, sizeof(line)))
 	{
 		char mode[1024];
 		char type[1024];
@@ -64,7 +65,6 @@ static float MOB_GetNormalAttackDuration(TMobTable* mobTable)
 				minDuration = curDuration;
 		}
 	}
-	fclose(fp);
 
 	return minDuration;
 }
@@ -76,10 +76,10 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 	const char * folder = mobTable->szFolder;
 	snprintf(buf, sizeof(buf), "data/monster/%s/motlist.txt", folder);
 
-	FILE * fp = fopen(buf, "rt");
+	jsontable::CLineReader reader;
 	char * v[4];
 
-	if (fp != NULL)
+	if (reader.Open(buf))
 	{
 		const char* field = NULL;
 
@@ -95,12 +95,11 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 			case MOTION_SPECIAL_5			: field = "SPECIAL4"; break;
 
 			default:
-				fclose(fp);
 				sys_err("Motion: bu hareket için işlem yok(%d) vnum(%d)", motion, mobTable->dwVnum);
 				return NULL;
 		}
 
-		while (fgets(buf, 1024, fp))
+		while (reader.Gets(buf, sizeof(buf)))
 		{
 			v[0] = strtok(buf,  " \t\r\n");
 			v[1] = strtok(NULL, " \t\r\n");
@@ -109,8 +108,6 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 
 			if (NULL != v[0] && NULL != v[1] && NULL != v[2] && NULL != v[3] && !strcasecmp(v[1], field))
 			{
-				fclose(fp);
-
 				static std::string str;
 				str = "data/monster/";
 				str += folder;
@@ -120,8 +117,6 @@ static const char* GetMotionFileName(TMobTable* mobTable, EPublicMotion motion)
 				return str.c_str();
 			}
 		}
-
-		fclose(fp);
 	}
 	else
 	{
