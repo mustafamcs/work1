@@ -46687,7 +46687,7 @@ category	PET
 percent	30
 end
 
-#철가인(벨트)_º°2
+#철가인(벨트)_별2
 section
 npc	20017
 item	79605	2
@@ -46699,7 +46699,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(벨트)_º°3
+#철가인(벨트)_별3
 section
 npc	20017
 item	79606	2
@@ -46711,7 +46711,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(벨트)_º°4
+#철가인(벨트)_별4
 section
 npc	20017
 item	79607	2
@@ -46723,7 +46723,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(벨트)_º°5
+#철가인(벨트)_별5
 section
 npc	20017
 item	79608	2
@@ -46735,7 +46735,7 @@ subcategory	1
 percent	40
 end
 
-#철가인(무기)_º°2
+#철가인(무기)_별2
 section
 npc	20017
 item	79610	2
@@ -46747,7 +46747,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(무기)_º°3
+#철가인(무기)_별3
 section
 npc	20017
 item	79611	2
@@ -46759,7 +46759,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(무기)_º°4
+#철가인(무기)_별4
 section
 npc	20017
 item	79612	2
@@ -46771,7 +46771,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(무기)_º°5
+#철가인(무기)_별5
 section
 npc	20017
 item	79613	2
@@ -46783,7 +46783,7 @@ subcategory	2
 percent	40
 end
 
-#철가인(갑옷)_º°2
+#철가인(갑옷)_별2
 section
 npc	20017
 item	79615	2
@@ -46795,7 +46795,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(갑옷)_º°3
+#철가인(갑옷)_별3
 section
 npc	20017
 item	79616	2
@@ -46807,7 +46807,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(갑옷)_º°4
+#철가인(갑옷)_별4
 section
 npc	20017
 item	79617	2
@@ -46819,7 +46819,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(갑옷)_º°5
+#철가인(갑옷)_별5
 section
 npc	20017
 item	79618	2
@@ -46831,7 +46831,7 @@ subcategory	3
 percent	40
 end
 
-#철가인(기타)_º°2
+#철가인(기타)_별2
 section
 npc	20017
 item	79620	2
@@ -46843,7 +46843,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(기타)_º°3
+#철가인(기타)_별3
 section
 npc	20017
 item	79621	2
@@ -46855,7 +46855,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(기타)_º°4
+#철가인(기타)_별4
 section
 npc	20017
 item	79622	2
@@ -46867,7 +46867,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(기타)_º°5
+#철가인(기타)_별5
 section
 npc	20017
 item	79623	2
@@ -46879,7 +46879,7 @@ subcategory	4
 percent	40
 end
 
-#철가인(엑세서리)_º°2
+#철가인(엑세서리)_별2
 section
 npc	20017
 item	79625	2
@@ -46891,7 +46891,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(엑세서리)_º°3
+#철가인(엑세서리)_별3
 section
 npc	20017
 item	79626	2
@@ -46903,7 +46903,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(엑세서리)_º°4
+#철가인(엑세서리)_별4
 section
 npc	20017
 item	79627	2
@@ -46915,7 +46915,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(엑세서리)_º°5
+#철가인(엑세서리)_별5
 section
 npc	20017
 item	79628	2
@@ -46927,7 +46927,7 @@ subcategory	5
 percent	40
 end
 
-#철가인(스킬북)_º°2
+#철가인(스킬북)_별2
 section
 npc	20017
 item	79630	2
@@ -46939,7 +46939,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(스킬북)_º°3
+#철가인(스킬북)_별3
 section
 npc	20017
 item	79631	2
@@ -46951,7 +46951,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(스킬북)_º°4
+#철가인(스킬북)_별4
 section
 npc	20017
 item	79632	2
@@ -46963,7 +46963,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(스킬북)_º°5
+#철가인(스킬북)_별5
 section
 npc	20017
 item	79633	2
@@ -46975,7 +46975,7 @@ subcategory	6
 percent	40
 end
 
-#철가인(세트무기)_º°2
+#철가인(세트무기)_별2
 section
 npc	20017
 item	79635	2
@@ -46987,7 +46987,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트무기)_º°3
+#철가인(세트무기)_별3
 section
 npc	20017
 item	79636	2
@@ -46999,7 +46999,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트무기)_º°4
+#철가인(세트무기)_별4
 section
 npc	20017
 item	79637	2
@@ -47011,7 +47011,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트무기)_º°5
+#철가인(세트무기)_별5
 section
 npc	20017
 item	79638	2
@@ -47023,7 +47023,7 @@ subcategory	7
 percent	40
 end
 
-#철가인(세트헬멧)_º°2
+#철가인(세트헬멧)_별2
 section
 npc	20017
 item	79640	2
@@ -47035,7 +47035,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트헬멧)_º°3
+#철가인(세트헬멧)_별3
 section
 npc	20017
 item	79641	2
@@ -47047,7 +47047,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트헬멧)_º°4
+#철가인(세트헬멧)_별4
 section
 npc	20017
 item	79642	2
@@ -47059,7 +47059,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트헬멧)_º°5
+#철가인(세트헬멧)_별5
 section
 npc	20017
 item	79643	2
@@ -47071,7 +47071,7 @@ subcategory	8
 percent	40
 end
 
-#철가인(세트갑옷)_º°2
+#철가인(세트갑옷)_별2
 section
 npc	20017
 item	79645	2
@@ -47083,7 +47083,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(세트갑옷)_º°3
+#철가인(세트갑옷)_별3
 section
 npc	20017
 item	79646	2
@@ -47095,7 +47095,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(세트갑옷)_º°4
+#철가인(세트갑옷)_별4
 section
 npc	20017
 item	79647	2
@@ -47107,7 +47107,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(세트갑옷)_º°5
+#철가인(세트갑옷)_별5
 section
 npc	20017
 item	79648	2
@@ -47119,7 +47119,7 @@ subcategory	9
 percent	40
 end
 
-#철가인(장갑)_º°2
+#철가인(장갑)_별2
 section
 npc	20017
 item	79650	2
@@ -47131,7 +47131,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(장갑)_º°3
+#철가인(장갑)_별3
 section
 npc	20017
 item	79651	2
@@ -47143,7 +47143,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(장갑)_º°4
+#철가인(장갑)_별4
 section
 npc	20017
 item	79652	2
@@ -47155,7 +47155,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(장갑)_º°5
+#철가인(장갑)_별5
 section
 npc	20017
 item	79653	2
@@ -47167,7 +47167,7 @@ subcategory	10
 percent	40
 end
 
-#철가인(펫)_º°2
+#철가인(펫)_별2
 section
 npc	20017
 item	79655	2
@@ -47179,7 +47179,7 @@ subcategory	11
 percent	40
 end
 
-#철가인(펫)_º°3
+#철가인(펫)_별3
 section
 npc	20017
 item	79656	2
@@ -47191,7 +47191,7 @@ subcategory	11
 percent	40
 end
 
-#철가인(펫)_º°4
+#철가인(펫)_별4
 section
 npc	20017
 item	79657	2
@@ -47203,7 +47203,7 @@ subcategory	11
 percent	40
 end
 
-#철가인(펫)_º°5
+#철가인(펫)_별5
 section
 npc	20017
 item	79658	2

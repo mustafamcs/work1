@@ -1,5 +1,5 @@
 # Group metinstone_range 설명
-# range				: 변경할 메틴석 범위 번호입니다. 그룹 metinstone_range¿¡ 같은 range°¡ 있으면 안됩니다. range값이 256À» 넘어갈 경우 프로그래머에게 말씀해주세요 (코드 수정 필요)
+# range				: 변경할 메틴석 범위 번호입니다. 그룹 metinstone_range에 같은 range가 있으면 안됩니다. range값이 256을 넘어갈 경우 프로그래머에게 말씀해주세요 (코드 수정 필요)
 # Group range_vnum	: 범위에 해당 될 메틴석 vnum 들을 추가해주세요.
 Group metinstone_range
 {
@@ -92,8 +92,8 @@ Group metinstone_range
 # event_flag_value		: 메틴석 외형 변경 이벤트 플래그 값
 # range_number			: 변경할 메틴석 vnum 범위 번호. ( 위에 있는 Group metinstone_swap_range 의 range 번호 )
 # swap_vnum				: 외형 변경 mob vnum 값
-# can_use_mob_color		: 다른 외형으로 변경될 때 mob_protoÀÇ 몹 색상을 허용하는지 여부 (false : 허용하지않음, true : 허용함)
-# : 메틴석 외형 변경 이벤트 플래그값일 때, 메틴석 vnumÀÌ 외형 변경될 범위에 있으면 외형을 swap_vnum으로 변경합니다.
+# can_use_mob_color		: 다른 외형으로 변경될 때 mob_proto의 몹 색상을 허용하는지 여부 (false : 허용하지않음, true : 허용함)
+# : 메틴석 외형 변경 이벤트 플래그값일 때, 메틴석 vnum이 외형 변경될 범위에 있으면 외형을 swap_vnum으로 변경합니다.
 
 # 윷놀이, 잭오랜턴
 Group metinstone_swap

@@ -4,21 +4,21 @@
 # 큰 따옴표로 묶인 부분은 안 구분. 										
 # \" 이딴거 지원 안함.										
 										
-# 용혼석 Vnum¿¡ 대한 comment										
-# ITEM VNUMÀ» 10¸¸ 자리부터, FEDCBA라고 한다면										
+# 용혼석 Vnum에 대한 comment										
+# ITEM VNUM을 10만 자리부터, FEDCBA라고 한다면										
 # FE : 용혼석 종류.	D : 등급									
 # C : 단계			B : 강화							
 # A : 여벌의 번호들... 										
 # 이 체계에서 벗어나는 용혼석은 용서하지 않을 것이다.										
 # ok?										
-# 용혼석이 너무나도 많기 때문에 VnumÀÌ 중구난방이면,										
+# 용혼석이 너무나도 많기 때문에 Vnum이 중구난방이면,										
 #	Special item group에서 group으로 묶어서 처리하기도 힘들고-_-,									
 #	VnumHelper.h에서 처리하는 것도 힘들다. -_-									
 # 	Group 잡는데만 수천줄을 써야할 지도...									
-# Vnum¿¡ 체계를 잡아서 자릿수 기반으로 해야만 한다.										
+# Vnum에 체계를 잡아서 자릿수 기반으로 해야만 한다.										
 										
-# TableÀº "Group"과 "이름"으로 시작한다.										
-# Table 내부에 또 TableÀÌ 있을 수 있다.										
+# Table은 "Group"과 "이름"으로 시작한다.										
+# Table 내부에 또 Table이 있을 수 있다.										
 # 그렇다고 엉뚱한 테이블을 써놓는다고 서버가 인식하는 것은 아니다.										
 # 필요한 테이블은 다음과 같다.										
 # BaseVnums, BaseAttrs, AddtionalAttrs, AttrSettings, UpgradeTable, ImproveTable,										
@@ -32,15 +32,15 @@
 # 										
 										
 # 이건 vnum to 이름 mapping.										
-# 이걸로 특정 vnumÀÇ 용혼석이 어떤 종류의 용혼석인지(이름이 뭔지) 알아낸 후,										
+# 이걸로 특정 vnum의 용혼석이 어떤 종류의 용혼석인지(이름이 뭔지) 알아낸 후,										
 # 그 용혼석에 해당하는 속성을 찾는다.										
 # 또한 여기에 적혀있지 않은 용혼석이 밑에 Group 정의하는 부분에 있다면										
 # 에러.										
 Group VnumMapper										
 {										
 	# 시작 vnum.									
-	# 여기서 써야할 부분은 위에 설명한 FE¿¡ 해당하는 부분. 									
-	# FE¸¦ 써줄 것									
+	# 여기서 써야할 부분은 위에 설명한 FE에 해당하는 부분. 									
+	# FE를 써줄 것									
 	#--#	DragonSoulName	Type							
 	1	백룡석	11							
 	2	화룡석	12							
@@ -174,11 +174,11 @@ Group AdditionalApplys
 	}									
 }										
 										
-# 여기부터 Default¸¦ 둔다.										
+# 여기부터 Default를 둔다.										
 # Default 값을 모든 용혼석이 따르고, 										
-# 특정 값이 있는 용혼석은 Default¸¦ 바탕으로 그 값을 덮어쓴다.										
+# 특정 값이 있는 용혼석은 Default를 바탕으로 그 값을 덮어쓴다.										
 # 등급에 따른 속성수										
-# 단, basis, add_max´Â 3보다 크면 안된다.										
+# 단, basis, add_max는 3보다 크면 안된다.										
 Group ApplyNumSettings										
 {										
 	Group Default									
