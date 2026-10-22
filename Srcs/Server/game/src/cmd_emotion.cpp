@@ -23,30 +23,30 @@ struct emotion_type_s
 	long	flag;
 	float	extra_delay;
 } emotion_types[] = {
-	{ "Ű��",	"french_kiss",	NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		2.0f },
-	{ "�ǻ�",	"kiss",		NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		1.5f },
-	{ "����",	"slap",		NEED_PC | SELF_DISARM,				1.5f },
-	{ "�ڼ�",	"clap",		0,						1.0f },
-	{ "��",		"cheer1",	0,						1.0f },
-	{ "����",	"cheer2",	0,						1.0f },
+	{ "키스",	"french_kiss",	NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		2.0f },
+	{ "뽀뽀",	"kiss",		NEED_PC | OTHER_SEX_ONLY | BOTH_DISARM,		1.5f },
+	{ "따귀",	"slap",		NEED_PC | SELF_DISARM,				1.5f },
+	{ "박수",	"clap",		0,						1.0f },
+	{ "와",		"cheer1",	0,						1.0f },
+	{ "만세",	"cheer2",	0,						1.0f },
 
 	// DANCE
-	{ "����1",	"dance1",	0,						1.0f },
-	{ "����2",	"dance2",	0,						1.0f },
-	{ "����3",	"dance3",	0,						1.0f },
-	{ "����4",	"dance4",	0,						1.0f },
-	{ "����5",	"dance5",	0,						1.0f },
-	{ "����6",	"dance6",	0,						1.0f },
+	{ "댄스1",	"dance1",	0,						1.0f },
+	{ "댄스2",	"dance2",	0,						1.0f },
+	{ "댄스3",	"dance3",	0,						1.0f },
+	{ "댄스4",	"dance4",	0,						1.0f },
+	{ "댄스5",	"dance5",	0,						1.0f },
+	{ "댄스6",	"dance6",	0,						1.0f },
 	// END_OF_DANCE
-	{ "����",	"congratulation",	0,				1.0f	},
-	{ "�뼭",	"forgive",			0,				1.0f	},
-	{ "ȭ��",	"angry",			0,				1.0f	},
-	{ "��Ȥ",	"attractive",		0,				1.0f	},
-	{ "����",	"sad",				0,				1.0f	},
-	{ "���",	"shy",				0,				1.0f	},
-	{ "����",	"cheerup",			0,				1.0f	},
-	{ "����",	"banter",			0,				1.0f	},
-	{ "���",	"joy",				0,				1.0f	},
+	{ "축하",	"congratulation",	0,				1.0f	},
+	{ "용서",	"forgive",			0,				1.0f	},
+	{ "화남",	"angry",			0,				1.0f	},
+	{ "유혹",	"attractive",		0,				1.0f	},
+	{ "슬픔",	"sad",				0,				1.0f	},
+	{ "브끄",	"shy",				0,				1.0f	},
+	{ "응원",	"cheerup",			0,				1.0f	},
+	{ "질투",	"banter",			0,				1.0f	},
+	{ "기쁨",	"joy",				0,				1.0f	},
 	{ "\n",	"\n",		0,						0.0f },
 };
 
@@ -56,7 +56,7 @@ ACMD(do_emotion_allow)
 {
 	if ( ch->GetArena() )
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("����忡�� ����Ͻ� �� �����ϴ�."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련장에서 사용하실 수 없습니다."));
 		return;
 	}
 
@@ -99,7 +99,7 @@ ACMD(do_emotion)
 	{
 		if (ch->IsRiding())
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("���� ź ���¿��� ����ǥ���� �� �� �����ϴ�."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("말을 탄 상태에서 감정표현을 할 수 없습니다."));
 			return;
 		}
 	}
@@ -121,13 +121,13 @@ ACMD(do_emotion)
 
 	if (!CHARACTER_CanEmotion(*ch))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("������ ������ ����ÿ��� �� �� �ֽ��ϴ�."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("열정의 가면을 착용시에만 할 수 있습니다."));
 		return;
 	}
 
 	if (IS_SET(emotion_types[i].flag, WOMAN_ONLY) && SEX_MALE==GET_SEX(ch))
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("���ڸ� �� �� �ֽ��ϴ�."));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("여자만 할 수 있습니다."));
 		return;
 	}
 
@@ -143,7 +143,7 @@ ACMD(do_emotion)
 	{
 		if (!victim)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�׷� ����� �����ϴ�."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("그런 사람이 없습니다."));
 			return;
 		}
 	}
@@ -155,7 +155,7 @@ ACMD(do_emotion)
 
 		if (victim->IsRiding())
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("���� ź ���� ����ǥ���� �� �� �����ϴ�."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("말을 탄 상대와 감정표현을 할 수 없습니다."));
 			return;
 		}
 
@@ -163,13 +163,13 @@ ACMD(do_emotion)
 
 		if (distance < 10)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�ʹ� ������ �ֽ��ϴ�."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("너무 가까이 있습니다."));
 			return;
 		}
 
 		if (distance > 500)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�ʹ� �ָ� �ֽ��ϴ�"));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("너무 멀리 있습니다"));
 			return;
 		}
 
@@ -177,7 +177,7 @@ ACMD(do_emotion)
 		{
 			if (GET_SEX(ch)==GET_SEX(victim))
 			{
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�̼������� �� �� �ֽ��ϴ�."));
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이성간에만 할 수 있습니다."));
 				return;
 			}
 		}
@@ -194,13 +194,13 @@ ACMD(do_emotion)
 
 					if (0 == other || other != victim->GetPlayerID())
 					{
-						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�� �ൿ�� ��ȣ���� �Ͽ� ���� �մϴ�."));
+						ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이 행동은 상호동의 하에 가능 합니다."));
 						return;
 					}
 				}
 				else
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�� �ൿ�� ��ȣ���� �Ͽ� ���� �մϴ�."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이 행동은 상호동의 하에 가능 합니다."));
 					return;
 				}
 			}

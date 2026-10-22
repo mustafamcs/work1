@@ -297,7 +297,7 @@ bool CClientManager::Initialize()
 
 	LoadEventFlag();
 
-	if (g_stLocale == "big5" || g_stLocale == "sjis")
+	if (g_stLocale.length() && g_stLocale != "ascii")
 	    CDBManager::instance().QueryLocaleSet();
 
 	return true;

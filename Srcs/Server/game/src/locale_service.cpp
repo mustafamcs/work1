@@ -18,7 +18,7 @@ string g_stServiceName;
 string g_stServiceBasePath = ".";
 string g_stServiceMapPath = "data/map";
 
-string g_stLocale = "euckr";
+string g_stLocale = "utf8";
 string g_stLocaleFilename;
 
 BYTE PK_PROTECT_LEVEL = 30;
@@ -28,11 +28,62 @@ eLocalization 	g_eLocalType = LC_NOSET;
 
 int (*check_name) (const char * str) = NULL;
 int (*is_twobyte) (const char * str) = NULL;
+int check_name_independent(const char * str);
 bool LC_InitLocalization( const std::string& szLocal );
 
 int is_twobyte_euckr(const char * str)
 {
 	return ishan(*str);
+}
+
+// UTF-8: devam baytlari (0x80-0xBF) ASCII veya lead-byte araligina girmez.
+// Gecerli UTF-8 metinde bayt-bayt tarama ara-karakter eslesmesi uretemez,
+// bu yuzden "iki bayt" kavrami yoktur: her zaman 0 dondur.
+int is_twobyte_utf8(const char * str)
+{
+	return 0;
+}
+
+// UTF-8 isim kontrolu: ASCII harf/rakam + gecerli UTF-8 cok-bayt dizileri.
+// Turkce (ç ğ ı İ ö ş ü) ve diger alfabelerin harfleri kabul edilir;
+// bosluk, kontrol ve bozuk diziler reddedilir.
+int check_name_utf8(const char * str)
+{
+	const char*	tmp;
+
+	if (!str || !*str)
+		return 0;
+
+	if (strlen(str) < 2)
+		return 0;
+
+	for (tmp = str; *tmp; ++tmp)
+	{
+		unsigned char uc = (unsigned char) *tmp;
+
+		if (uc < 0x80)
+		{
+			if (isdigit(uc) || isalpha(uc))
+				continue;
+			return 0;
+		}
+
+		int cont = 0;
+		if (uc >= 0xC2 && uc <= 0xDF)		cont = 1;
+		else if (uc >= 0xE0 && uc <= 0xEF)	cont = 2;
+		else if (uc >= 0xF0 && uc <= 0xF4)	cont = 3;
+		else
+			return 0;
+
+		for (int i = 0; i < cont; ++i)
+		{
+			++tmp;
+			if (((unsigned char) *tmp & 0xC0) != 0x80)
+				return 0;
+		}
+	}
+
+	return check_name_independent(str);
 }
 
 int is_twobyte_gb2312(const char * str)
@@ -636,7 +687,8 @@ static void __LocaleService_Init_Turkey()
 
 	g_iUseLocale = TRUE;
 
-	check_name = check_name_alphabet;
+	check_name = check_name_utf8;
+	is_twobyte = is_twobyte_utf8;
 
 	PK_PROTECT_LEVEL = 15;
 }

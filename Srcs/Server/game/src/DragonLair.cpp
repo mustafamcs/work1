@@ -89,7 +89,7 @@ EVENTFUNC( DragonLair_Collapse_Event )
 	if (0 == pInfo->step)
 	{
 		char buf[512];
-		snprintf(buf, 512, LC_TEXT("�밡���� %d �ʸ��� �׾��ȿ�Ф�"), pInfo->pLair->GetEstimatedTime());
+		snprintf(buf, 512, LC_TEXT("용가리가 %d 초만에 죽어써효ㅠㅠ"), pInfo->pLair->GetEstimatedTime());
 		SendNoticeMap(buf, pInfo->InstanceMapIndex, true);
 
 		pInfo->step++;
@@ -136,7 +136,7 @@ DWORD CDragonLair::GetEstimatedTime() const
 
 void CDragonLair::OnDragonDead(LPCHARACTER pDragon)
 {
-	sys_log(0, "DragonLair: ������� �׾��ȿ");
+	sys_log(0, "DragonLair: 도라곤이 죽어써효");
 
 	LogManager::instance().DragonSlayLog(  GuildID_, pDragon->GetMobTable().dwVnum, StartTime_, get_global_time() );
 }

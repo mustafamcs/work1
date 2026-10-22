@@ -327,7 +327,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 	{
 		char szBuf[64 + 1];
 
-		snprintf(szBuf, sizeof(szBuf), LC_TEXT("���� ���ھ� �ż���:%d õ����:%d ���뱹:%d"),
+		snprintf(szBuf, sizeof(szBuf), LC_TEXT("현재 스코어 신수국:%d 천조국:%d 진노국:%d"),
 				GetKillScore(1), GetKillScore(2), GetKillScore(3));
 
 		SendNoticeMap(szBuf, GetSungziMapIndex(), false);
@@ -393,9 +393,9 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 		//----------------------
 		const std::string Nation(EMPIRE_NAME(bLoseEmpire));
 		const std::string Script(
-				LC_TEXT("������ ����: ���� ") +
+				LC_TEXT("성지의 마왕: 너희 ") +
 				Nation +
-				LC_TEXT("�༮���� �̰� ������ ���� �ڰ��� �Ҿ���. ��� �������� �������Ŷ�~~[ENTER][ENTER] 10�� �Ŀ� ��� ������ �̵��ϰ� �˴ϴ�. ") +
+				LC_TEXT("녀석들은 이곳 성지에 있을 자격을 잃었다. 모두 성지에서 물러나거라~~[ENTER][ENTER] 10초 후에 모두 마을로 이동하게 됩니다. ") +
 				"[ENTER][DONE]"
 				);
 
@@ -405,7 +405,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 
 		//----------------------
 		char szNotice[512+1];
-		snprintf(szNotice, sizeof(szNotice), LC_TEXT("��Ÿ� �������� %s ������ ������� Ż���� �Ͽ����ϴ�"), Nation.c_str());
+		snprintf(szNotice, sizeof(szNotice), LC_TEXT("삼거리 전투에서 %s 국가가 가장먼저 탈락을 하였습니다"), Nation.c_str());
 		BroadcastNotice(szNotice);
 
 		snprintf(szNotice, sizeof(szNotice), "First Step: %s exclusion", Nation.c_str());
@@ -483,7 +483,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 		//------------------------------
 		{
 			char szBuf[64 + 1];
-			snprintf(szBuf, sizeof(szBuf), LC_TEXT("���� ���ھ� �ż���:%d õ����:%d ���뱹:%d"),
+			snprintf(szBuf, sizeof(szBuf), LC_TEXT("현재 스코어 신수국:%d 천조국:%d 진노국:%d"),
 					GetKillScore(1), GetKillScore(2), GetKillScore(3));
 
 			SendNoticeMap(szBuf, GetSungziMapIndex(), false);
@@ -496,7 +496,7 @@ void CThreeWayWar::onDead(LPCHARACTER pChar, LPCHARACTER pkKiller)
 			const std::string EmpireName(EMPIRE_NAME(nVictoryEmpireIndex));
 			const std::string Script(
 					EmpireName +
-					LC_TEXT(". ���� ������ ��ȣ�ڸ� ��� �ȴٸ� ����� ������ ������ �ȴ�.[ENTER][ENTER] ") +
+					LC_TEXT(". 너희가 성지의 수호자를 잡게 된다면 너희는 성지의 주인이 된다.[ENTER][ENTER] ") +
 					"[ENTER][DONE]");
 
 			struct packet_script pack_script;

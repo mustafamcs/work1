@@ -171,6 +171,8 @@ bool CAsyncSQL::Setup(const char * c_pszHost, const char * c_pszUser, const char
 	if (c_pszLocale)
 	{
 		m_stLocale = c_pszLocale;
+		if (m_stLocale == "utf8")
+			m_stLocale = "utf8mb4";
 		sys_log(0, "AsyncSQL: locale %s", m_stLocale.c_str());
 	}
 
@@ -692,6 +694,8 @@ size_t CAsyncSQL::EscapeString(char* dst, size_t dstSize, const char *src, size_
 void CAsyncSQL2::SetLocale(const std::string & stLocale)
 {
 	m_stLocale = stLocale;
+	if (m_stLocale == "utf8")
+		m_stLocale = "utf8mb4";
 	QueryLocaleSet();
 }
 

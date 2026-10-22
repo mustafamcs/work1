@@ -276,8 +276,10 @@ static void read_string (LexState *LS, int del, SemInfo *seminfo) {
 	  unsigned char b_current = (unsigned char)LS->current;
 	  if (b_current & 0x80)
 	  {
+		  int nb = (b_current >= 0xf0) ? 4 : (b_current >= 0xe0) ? 3 : (b_current >= 0xa1) ? 2 : 1;
 		  save_and_next(LS, l);
-		  save_and_next(LS, l);
+		  while (--nb > 0)
+			  save_and_next(LS, l);
 	  }
 	  else
 	  {

@@ -38,22 +38,22 @@ const char *first_han(const BYTE *str)
 {
     unsigned char high, low;
     int len, i;
-    const char *p = "�׿�";
+    const char *p = "\xb1\xd7\xbf\xdc";
 
     static const char* wansung[] =
     {
-	"��", "��", "��", "��", "��",
-	"��", "��", "��", "��", "��",
-	"��", "��", "��", "��", "��",
-	"ī", "Ÿ", "��", "��", ""
+	"\xb0\xa1", "\xb1\xee", "\xb3\xaa", "\xb4\xd9", "\xb5\xfb",
+	"\xb6\xf3", "\xb8\xb6", "\xb9\xd9", "\xba\xfc", "\xbb\xe7",
+	"\xbd\xce", "\xbe\xc6", "\xc0\xda", "\xc2\xa5", "\xc2\xf7",
+	"\xc4\xab", "\xc5\xb8", "\xc6\xc4", "\xc7\xcf", ""
     };
 
     static const char* johab[] =
     {
-	"�a", "�a", "�a", "�a", "�a",
-	"�a", "�a", "�a", "�a", "�a",
-	"�a", "�a", "�a", "�a", "�a",
-	"�a", "?", "?", "?", ""
+	"\x88\x61", "\x8c\x61", "\x90\x61", "\x94\x61", "\x98\x61",
+	"\x9c\x61", "\xa0\x61", "\xa4\x61", "\xa8\x61", "\xac\x61",
+	"\xb0\x61", "\xb4\x61", "\xb8\x61", "\xbc\x61", "\xc0\x61",
+	"\xc4\x61", "\xc8\x61", "\xcc\x61", "\xd0\x61", ""
     };
 
     len = strlen((const char*) str);

@@ -391,12 +391,12 @@ namespace quest
 			{
 				if (dwVnums[i] == 1)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�� %d ���� ȹ���߽��ϴ�."), dwCounts[i]);
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("돈 %d 냥을 획득했습니다."), dwCounts[i]);
 				}
 				else if (dwVnums[i] == 2)
 				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�������� ���� �ź��� ���� ���ɴϴ�."));
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%d�� ����ġ�� ȹ���߽��ϴ�."), dwCounts[i]);
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("나무에서 부터 신비한 빛이 나옵니다."));
+					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%d의 경험치를 획득했습니다."), dwCounts[i]);
 				}
 			}
 		}
@@ -1906,16 +1906,16 @@ namespace quest
 				DWORD y;
 			} ws[TOWN_NUM] =
 			{
-				{"��������",	4743,	9548},
-				{"������",		3235,	9086},
-				{"�ھ���",		3531,	8829},
-				{"��������",	638,	1664},
-				{"�·��",		1745,	1909},
-				{"������",		1455,	2400},
-				{"������",	9599,	2692},
-				{"����",		8036,	2984},
-				{"�ڶ���",		8639,	2460},
-				{"���ѻ�",		4350,	2143},
+				{"영안읍성",	4743,	9548},
+				{"임지곡",		3235,	9086},
+				{"자양현",		3531,	8829},
+				{"조안읍성",	638,	1664},
+				{"승룡곡",		1745,	1909},
+				{"복정현",		1455,	2400},
+				{"평무읍성",	9599,	2692},
+				{"방산곡",		8036,	2984},
+				{"박라현",		8639,	2460},
+				{"서한산",		4350,	2143},
 			};
 			int idx  = (int)lua_tonumber(L, 1);
 
@@ -3397,7 +3397,7 @@ teleport_area:
 		//PREVENT_TRADE_WINDOW
 		if (ch->IsOpenSafebox() || ch->GetExchange() || ch->GetMyShop() || ch->IsCubeOpen())
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("�ٸ� �ŷ�â�� �������¿����� �����ŷ��� �Ҽ� �� �����ϴ�."));
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("다른 거래창이 열린상태에서는 상점거래를 할수 가 없습니다."));
 			return 0;
 		}
 		//END_PREVENT_TRADE_WINDOW

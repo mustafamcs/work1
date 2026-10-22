@@ -918,19 +918,19 @@ const SStoneDropInfo aStoneDrop[STONE_INFO_MAX_NUM] =
 
 const char * c_apszEmpireNames[EMPIRE_MAX_NUM] =
 {
-	"������",
-	"�ż���",
-	"õ����",
-	"���뱹"
+	"전제국",
+	"신수국",
+	"천조국",
+	"진노국"
 };
 
 const char * c_apszPrivNames[MAX_PRIV_NUM] =
 {
 	"",
-	"�������� ���� Ȯ��",
-	"���� ���� Ȯ��",
-	"�� ����� ���� Ȯ��",
-	"����ġ ����",
+	"아이템이 나올 확률",
+	"돈이 나올 확률",
+	"돈 대박이 나올 확률",
+	"경험치 배율",
 };
 
 const int aiPolymorphPowerByLevel[SKILL_MAX_LEVEL + 1] =

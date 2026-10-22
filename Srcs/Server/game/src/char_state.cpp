@@ -150,7 +150,7 @@ namespace
 								//pkChr->RemoveAffect(AFFECT_WAR_FLAG);
 
 								char buf[256];
-								snprintf(buf, sizeof(buf), LC_TEXT("%s ��尡 %s ����� ����� ���Ѿҽ��ϴ�!"), pMap->GetGuild(idx)->GetName(), pMap->GetGuild(idx_opp)->GetName());
+								snprintf(buf, sizeof(buf), LC_TEXT("%s 길드가 %s 길드의 깃발을 빼앗았습니다!"), pMap->GetGuild(idx)->GetName(), pMap->GetGuild(idx_opp)->GetName());
 								pMap->Notice(buf);
 							}
 						}
@@ -657,7 +657,7 @@ void CHARACTER::__StateIdle_Monster()
 		{
 			if (Follow(pkChrProtege, number(150, 400)))
 			{
-				MonsterLog("[IDLE] �����κ��� �ʹ� �ָ� ��������! �����Ѵ�.");
+				MonsterLog("[IDLE] 리더로부터 너무 멀리 떨어졌다! 복귀한다.");
 				return;
 			}
 		}
@@ -830,7 +830,7 @@ void CHARACTER::StateMove()
 	{
 		if (IsPC())
 		{
-			sys_log(1, "���� %s %d %d", GetName(), x, y);
+			sys_log(1, "도착 %s %d %d", GetName(), x, y);
 			GotoState(m_stateIdle);
 			StopStaminaConsume();
 		}
@@ -839,7 +839,7 @@ void CHARACTER::StateMove()
 			if (GetVictim() && !IsCoward())
 			{
 				if (!IsState(m_stateBattle))
-					MonsterLog("[BATTLE] ��ó�� ������ ���ݽ��� %s", GetVictim()->GetName());
+					MonsterLog("[BATTLE] 근처에 왔으니 공격시작 %s", GetVictim()->GetName());
 
 				GotoState(m_stateBattle);
 				m_dwStateDuration = 1;
@@ -847,7 +847,7 @@ void CHARACTER::StateMove()
 			else
 			{
 				if (!IsState(m_stateIdle))
-					MonsterLog("[IDLE] ����� ������ ����");
+					MonsterLog("[IDLE] 대상이 없으니 쉬자");
 
 				GotoState(m_stateIdle);
 
@@ -966,7 +966,7 @@ void CHARACTER::StateBattle()
 
 		if (bPct && pParty->CountMemberByVnum(GetSummonVnum()) < SUMMON_MONSTER_COUNT)
 		{
-			MonsterLog("���� ���� ��ȯ!");
+			MonsterLog("부하 몬스터 소환!");
 
 			int sx = GetX() - 300;
 			int sy = GetY() - 300;
@@ -989,7 +989,7 @@ void CHARACTER::StateBattle()
 
 	if (fDist >= 4000.0f)
 	{
-		MonsterLog("Ÿ���� �־ ����");
+		MonsterLog("타겟이 멀어서 포기");
 		SetVictim(NULL);
 
 		if (pkChrProtege)
@@ -1099,7 +1099,7 @@ void CHARACTER::StateFlag()
 
 	pMap->RemoveFlag(idx);
 
-	snprintf(buf, sizeof(buf), LC_TEXT("%s ����� ����� %s ���� ȹ���Ͽ����ϴ�."), pMap->GetGuild(idx)->GetName(), f.m_pkChrFind->GetName());
+	snprintf(buf, sizeof(buf), LC_TEXT("%s 길드의 깃발을 %s 님이 획득하였습니다."), pMap->GetGuild(idx)->GetName(), f.m_pkChrFind->GetName());
 	pMap->Notice(buf);
 }
 

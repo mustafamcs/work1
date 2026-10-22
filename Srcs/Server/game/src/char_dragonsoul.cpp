@@ -68,7 +68,7 @@ bool CHARACTER::DragonSoul_ActivateDeck(int deck_idx)
 
 	if (!DragonSoul_IsQualified())
 	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("��ȥ�� ���ڰ� Ȱ��ȭ���� �ʾҽ��ϴ�."));
+		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("용혼석 상자가 활성화되지 않았습니다."));
 		return false;
 	}
 
