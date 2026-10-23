@@ -598,12 +598,6 @@ PyObject * playerGetElk(PyObject* poSelf, PyObject* poArgs)
 	return PyLong_FromLongLong(CPythonPlayer::Instance().GetStatus(POINT_GOLD));
 }
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-PyObject* playerGetCheque(PyObject* poSelf, PyObject* poArgs)
-{
-	return Py_BuildValue("i", CPythonPlayer::Instance().GetStatus(POINT_CHEQUE));
-}
-#endif
 
 PyObject * playerGetGuildID(PyObject* poSelf, PyObject* poArgs)
 {
@@ -2272,9 +2266,6 @@ void initPlayer()
 		{ "SetStatus",					playerSetStatus,					METH_VARARGS },
 		{ "GetElk",						playerGetElk,						METH_VARARGS },
 		{ "GetMoney",					playerGetElk,						METH_VARARGS },
-#ifdef ENABLE_CHEQUE_SYSTEM
-		{ "GetCheque",					playerGetCheque,					METH_VARARGS },
-#endif
 		{ "GetGuildID",					playerGetGuildID,					METH_VARARGS },
 		{ "GetGuildName",				playerGetGuildName,					METH_VARARGS },
 		{ "GetAlignmentData",			playerGetAlignmentData,				METH_VARARGS },
@@ -2451,9 +2442,6 @@ void initPlayer()
 
 	PyModule_AddIntConstant(poModule, "ENERGY",		POINT_ENERGY);
 	PyModule_AddIntConstant(poModule, "ENERGY_END_TIME",		POINT_ENERGY_END_TIME);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	PyModule_AddIntConstant(poModule, "CHEQUE", POINT_CHEQUE);
-#endif
 
     PyModule_AddIntConstant(poModule, "SKILL_GRADE_NORMAL",			CPythonPlayer::SKILL_NORMAL);
     PyModule_AddIntConstant(poModule, "SKILL_GRADE_MASTER",			CPythonPlayer::SKILL_MASTER);
@@ -2511,9 +2499,6 @@ void initPlayer()
 	PyModule_AddIntConstant(poModule, "GROUND",								GROUND);
 
 	PyModule_AddIntConstant(poModule, "ITEM_MONEY",					-1);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	PyModule_AddIntConstant(poModule, "ITEM_CHEQUE",				-2);
-#endif
 
 	PyModule_AddIntConstant(poModule, "SKILL_SLOT_COUNT",			SKILL_MAX_NUM);
 

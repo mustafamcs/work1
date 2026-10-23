@@ -75,10 +75,6 @@ std::string StringToLower(const char* name, size_t len)
 bool IsGoodSalePrice(const ikashop::TPriceInfo price) {
 	if (price.yang >= GOLD_MAX || price.yang < 0)
 		return false;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	else if (price.cheque >= CHEQUE_MAX || price.cheque < 0)
-		return false;
-#endif
 	return true;
 }
 
@@ -858,11 +854,9 @@ namespace ikashop
 		// patch with warp check
 		ch->SetIkarusShopUseTime();
 
-#ifndef ENABLE_CHEQUE_SYSTEM
 		auto& itemPrice = shopItem->GetPrice();
 		if(price.yang == itemPrice.yang)
 			return true;
-#endif
 		SendShopEditItemDBPacket(shop->GetOwnerPID(), itemid, price);
 		return true;
 	}
@@ -1045,9 +1039,6 @@ namespace ikashop
 
 		const auto& price = item->GetPrice();
 		ch->PointChange(POINT_GOLD, -price.yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		ch->PointChange(POINT_CHEQUE, -price.cheque);
-#endif
 		return SendDBFeedback(true);
 	}
 
@@ -2661,13 +2652,8 @@ namespace ikashop
 		if (!CheckOfferPrice(offer.price, item->GetPrice()))
 			return false;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		if (offer.price.yang < 0 || offer.price.cheque < 0)
-			return false;
-#else
 		if (offer.price.yang < 0)
 			return false;
-#endif
 
 		if (offer.price.GetTotalYangAmount() <= 0)
 			return false;
@@ -2675,22 +2661,11 @@ namespace ikashop
 		if( (long long) ch->GetGold() < offer.price.yang)
 			return false;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		if (ch->GetCheque() < offer.price.cheque)
-			return false;
-#endif
 
 		ch->PointChange(POINT_GOLD, -offer.price.yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		ch->PointChange(POINT_CHEQUE, -offer.price.cheque);
-#endif
 		offer.accepted = false;
 		offer.notified = false;
 		offer.buyerid	= ch->GetPlayerID();
-#ifdef ENABLE_CHEQUE_SYSTEM
-		offer.price.yang = offer.price.GetTotalYangAmount();
-		offer.price.cheque = 0;
-#endif
 		str_to_cstring(offer.buyername, ch->GetName());
 
 		SendShopOfferNewDBPacket(offer, item);
@@ -2941,35 +2916,12 @@ namespace ikashop
 		const auto& ownedValute = safebox->GetValutes();
 		auto claimingValute = ownedValute;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		int64_t claimingYang = claimingValute.yang;
-		int64_t claimingCheque = 0;
-#endif
 
 		if(claimingValute.yang + static_cast<int64_t>(ch->GetGold()) >= GOLD_MAX)
 		{
-#ifdef ENABLE_CHEQUE_SYSTEM
-			// checking about yang & cheque overflow
-			const int64_t yangSpace = GOLD_MAX - ch->GetGold() - 1;
-			const int64_t chequeSpace = CHEQUE_MAX - ch->GetCheque() - 1;
-			
-			// getting claimable cheque
-			claimingCheque = std::min(chequeSpace, claimingValute.yang / YANG_PER_CHEQUE);
-			claimingYang = std::min(yangSpace, claimingValute.yang - claimingCheque*YANG_PER_CHEQUE);
-			
-			if(claimingCheque < 0)
-				return false;
-			if(claimingYang < 0)
-				return false;
-			if(claimingCheque == 0 && claimingYang == 0)
-				return false;
-
-			claimingValute.yang = claimingYang + claimingCheque * YANG_PER_CHEQUE;
-#else
 			claimingValute.yang = GOLD_MAX - ch->GetGold() - 1;
 			if(claimingValute.yang <= 0)
 				return false;
-#endif
 		}
 
 
@@ -2986,14 +2938,7 @@ namespace ikashop
 		ch->SetIkarusShopUseTime();
 		safebox->RefreshToOwner();
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		if (claimingYang != 0)
-			ch->PointChange(POINT_GOLD, claimingYang);
-		if (claimingCheque != 0)
-			ch->PointChange(POINT_CHEQUE, claimingCheque);
-#else
 		ch->PointChange(POINT_GOLD, claimingValute.yang);
-#endif
 		return true;
 	}
 
@@ -3250,10 +3195,6 @@ namespace ikashop
 		if(static_cast<long long>(ch->GetGold()) < price.yang)
 			return false;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		if (ch->GetCheque() < price.cheque)
-			return false;
-#endif
 
 		//checking about raise from best buyer
 		auto auction = ch->GetIkarusAuctionGuest();
@@ -3271,9 +3212,6 @@ namespace ikashop
 			return false;
 
 		ch->PointChange(POINT_GOLD,-price.yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		ch->PointChange(POINT_CHEQUE, -price.cheque);
-#endif
 
 		TAuctionOfferInfo offer;
 		offer.buyerid = ch->GetPlayerID();
@@ -3281,11 +3219,6 @@ namespace ikashop
 		offer.datetime = static_cast<int64_t>(std::time(nullptr));
 		offer.price = price;
 		offer.seenflag = false;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		// converting amount cheque in yang
-		offer.price.yang = offer.price.GetTotalYangAmount();
-		offer.price.cheque=0;
-#endif
 		str_to_cstring(offer.buyername, ch->GetName());
 
 		SendAuctionAddOfferDBPacket(offer);

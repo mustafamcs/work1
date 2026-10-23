@@ -16,9 +16,6 @@ class CShop
 		{
 			DWORD	vnum;
 			long long	price;
-#ifdef ENABLE_CHEQUE_SYSTEM
-			int		cheque = 0;
-#endif
 			BYTE	count;
 
 			LPITEM	pkItem;

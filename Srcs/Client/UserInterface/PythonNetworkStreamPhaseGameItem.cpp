@@ -532,9 +532,6 @@ bool CPythonNetworkStream::SendItemUseToItemPacket(TItemPos source_pos, TItemPos
 }
 
 bool CPythonNetworkStream::SendItemDropPacket(TItemPos pos, DWORD elk
-	#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	, DWORD cheque
-	#endif
 )
 {
 	if (!__CanActMainInstance())
@@ -544,9 +541,6 @@ bool CPythonNetworkStream::SendItemDropPacket(TItemPos pos, DWORD elk
 	itemDropPacket.header = HEADER_CG_ITEM_DROP;
 	itemDropPacket.pos = pos;
 	itemDropPacket.elk = elk;
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	itemDropPacket.cheque = cheque;
-#endif
 
 	if (!Send(itemDropPacket))
 	{
@@ -558,9 +552,6 @@ bool CPythonNetworkStream::SendItemDropPacket(TItemPos pos, DWORD elk
 }
 
 bool CPythonNetworkStream::SendItemDropPacketNew(TItemPos pos, DWORD elk, DWORD count
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	, DWORD cheque
-#endif
 )
 {
 	if (!__CanActMainInstance())
@@ -571,9 +562,6 @@ bool CPythonNetworkStream::SendItemDropPacketNew(TItemPos pos, DWORD elk, DWORD 
 	itemDropPacket.pos = pos;
 	itemDropPacket.gold = elk;
 	itemDropPacket.count = count;
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	itemDropPacket.cheque = cheque;
-#endif
 
 	if (!Send(itemDropPacket))
 	{

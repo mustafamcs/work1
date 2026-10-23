@@ -2286,22 +2286,6 @@ ACMD(do_dice)
 #endif
 }
 
-#if defined(ENABLE_CHEQUE_SYSTEM) && defined(ENABLE_WON_EXCHANGE_WINDOW)
-ACMD(do_won_exchange)
-{
-	char arg1[256];
-	char arg2[256];
-
-	two_arguments(argument, arg1, sizeof(arg1), arg2, sizeof(arg2));
-	if (!*arg1 || !*arg2)
-		return;
-
-	int won = 0;
-	str_to_number(won, arg2);
-
-	ch->WonExchange(arg1, won);
-}
-#endif
 
 #ifdef ENABLE_NEWSTUFF
 ACMD(do_click_safebox)

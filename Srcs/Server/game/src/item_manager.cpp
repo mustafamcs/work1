@@ -148,10 +148,6 @@ LPITEM ITEM_MANAGER::CreateItem(DWORD vnum, DWORD count, DWORD id, bool bTryMagi
 
 	if (item->GetType() == ITEM_ELK)
 		item->SetSkipSave(true);
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	else if (item->GetVnum() == CHEQUE_VNUM)
-		item->SetSkipSave(true);
-#endif
 
 	else if (!bIsNewItem)
 	{
@@ -224,10 +220,6 @@ LPITEM ITEM_MANAGER::CreateItem(DWORD vnum, DWORD count, DWORD id, bool bTryMagi
 
 	if (item->GetType() == ITEM_ELK)
 		;
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	else if (item->GetVnum() == CHEQUE_VNUM)
-		;
-#endif
 	else if (item->IsStackable())
 	{
 		count = MINMAX(1, count, g_bItemCountLimit);

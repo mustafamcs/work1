@@ -24,9 +24,6 @@ class CPythonExchange : public CSingleton<CPythonExchange>
 
 			BYTE					accept;
 			long long				elk;
-#ifdef ENABLE_CHEQUE_SYSTEM
-			DWORD					cheque;
-#endif
 		} TExchangeData;
 
 	public:
@@ -93,13 +90,6 @@ class CPythonExchange : public CSingleton<CPythonExchange>
 
 		bool			GetElkMode();
 		void			SetElkMode(bool value);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		void			SetChequeToTarget(DWORD cheque);
-		void			SetChequeToSelf(DWORD cheque);
-
-		DWORD			GetChequeFromTarget();
-		DWORD			GetChequeFromSelf();
-#endif
 
 	protected:
 		bool				m_isTrading;

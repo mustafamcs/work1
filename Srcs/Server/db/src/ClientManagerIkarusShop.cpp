@@ -167,14 +167,6 @@ bool CClientManager::InitializeIkarusShopShopItemsTable()
 		item.price.yang = *priceYang;
 
 		// fetching price cheque
-#ifdef ENABLE_CHEQUE_SYSTEM
-		auto priceCheque = jsonHelper::getValue<int>(json, "cheque");
-		if (!priceCheque) {
-			sys_err("DÜKKÂN EŞYASI %d ÜZERİNDE GEÇERSİZ JSON (sahip %d) ÇEK FİYATI ÇIKARILAMIYOR   json değeri (%s)", item.id, item.owner, jsonStr.c_str());
-			continue;
-		}
-		item.price.cheque = *priceCheque;
-#endif
 
 		// fetching expiration
 		auto expiration = jsonHelper::getValue<int64_t>(json, "expiration");
@@ -533,18 +525,12 @@ bool CClientManager::RecvIkarusShopLockBuyItem(CPeer* peer, const char* data)
 	if (m_offlineshopShopCache.LockSellItem(subpack.ownerid, subpack.itemid, subpack.seenprice)){
 #ifdef ENABLE_IKASHOP_LOGS
 		IkarusShopLog(subpack.guestid, subpack.itemid, "LOCK_ITEM_TO_BUY", subpack.ownerid, "", item->vnum, item->count, item->price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-			, item->price.cheque
-#endif
 		);
 #endif
 
 		SendIkarusShopBuyLockedItemPacket(peer, subpack.ownerid, subpack.guestid, subpack.itemid);
 #ifdef EXTEND_IKASHOP_PRO
 		std::string itemPrice = fmt::format("{}", item->price.yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		itemPrice += fmt::format("|{}", item->price.cheque);
-#endif
 		AppendIkarusShopNotification(
 			ikashop::ENotificationType::SELLER_SOLD_ITEM, subpack.ownerid, item->vnum, "", itemPrice);
 #endif
@@ -618,9 +604,6 @@ bool CClientManager::RecvIkarusShopBuyItemPacket(const char* data)
 #ifdef ENABLE_IKASHOP_LOGS
 	auto& item = it->second;
 	IkarusShopLog(subpack.guestid, subpack.itemid, "BUY_ITEM", subpack.ownerid, "", item->vnum, item->count, item->price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-		, item->price.cheque
-#endif
 	);
 #endif
 
@@ -639,9 +622,6 @@ bool CClientManager::RecvIkarusShopEditItemPacket(const char* data)
 #ifdef ENABLE_IKASHOP_LOGS
 		auto item = m_offlineshopShopCache.GetItem(subpack.ownerid, subpack.itemid);
 		IkarusShopLog(subpack.ownerid, subpack.itemid, "EDIT_PRICE", subpack.ownerid, "", item->vnum, item->count, item->price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-			, item->price.cheque
-#endif
 		);
 #endif
 	}
@@ -676,9 +656,6 @@ bool CClientManager::RecvIkarusShopRemoveItemPacket(CPeer* peer, const char* dat
 #ifdef ENABLE_IKASHOP_LOGS
 	auto item = it->second;
 	IkarusShopLog(subpack.ownerid, subpack.itemid, "REMOVE_ITEM", subpack.ownerid, "", item->vnum, item->count, item->price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-		, item->price.cheque
-#endif
 	);
 #endif
 
@@ -701,9 +678,6 @@ bool CClientManager::RecvIkarusShopAddItemPacket(const char* data)
 
 #ifdef ENABLE_IKASHOP_LOGS
 	IkarusShopLog(subpack.ownerid, item.id, "ADD_ITEM", subpack.ownerid, "", item.vnum, item.count, item.price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-		, item.price.cheque
-#endif
 	);
 #endif
 
@@ -734,9 +708,6 @@ bool CClientManager::RecvIkarusShopForceClose(CPeer* peer, const char* data)
 		RemoveOfferOnShopItem(subpack.ownerid, item->id);
 #ifdef ENABLE_IKASHOP_LOGS
 		IkarusShopLog(subpack.ownerid, item->id, "REMOVE_ITEM_CLOSE_SHOP", subpack.ownerid, "", item->vnum, item->count, item->price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-			, item->price.cheque
-#endif
 		);
 #endif
 		if (m_offlineshopShopCache.RemoveItem(subpack.ownerid, item->id))
@@ -797,9 +768,6 @@ bool CClientManager::RecvIkarusShopOfferCreate(const char* data)
 	{
 #ifdef ENABLE_IKASHOP_LOGS
 		IkarusShopLog(subpack.offer.buyerid, subpack.offer.itemid, "PRIVATE_OFFER_CREATE_AND_DELETED", subpack.offer.ownerid, "", subpack.vnum, subpack.count, subpack.offer.price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-			, subpack.offer.price.cheque
-#endif
 		);
 #endif
 
@@ -833,9 +801,6 @@ bool CClientManager::RecvIkarusShopOfferCreate(const char* data)
 
 #ifdef ENABLE_IKASHOP_LOGS
 		IkarusShopLog(info.buyerid, info.itemid, "PRIVATE_OFFER_CREATE", info.ownerid, "", item->vnum, item->count, info.price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-			, info.price.cheque
-#endif
 		);
 #endif
 		return true;
@@ -911,9 +876,6 @@ bool CClientManager::RecvIkarusShopOfferAccepted(const char* data)
 
 #ifdef ENABLE_IKASHOP_LOGS
 	IkarusShopLog(offerCache->buyerid, offerCache->itemid, "PRIVATE_OFFER_ACCEPTED", offerCache->ownerid, "", item->vnum, item->count, item->price.yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-		, item->price.cheque
-#endif
 	);
 #endif
 
@@ -949,9 +911,6 @@ bool CClientManager::RecvIkarusShopOfferCancel(const char* data)
 #endif
 #ifdef ENABLE_IKASHOP_LOGS
 		IkarusShopLog(offer->buyerid, offer->itemid, "PRIVATE_OFFER_CANCEL", offer->ownerid, "", item ? item->vnum : 0, item ? item->count : 0, item ? item->price.yang : 0
-#ifdef ENABLE_CHEQUE_SYSTEM
-			, item ? item->price.cheque : 0
-#endif
 		);
 #endif
 	}
@@ -2191,16 +2150,10 @@ void CClientManager::IkarusShopLog(DWORD who, DWORD itemid, std::string_view wha
 	//* making query
 	std::string query = "INSERT INTO `ikarusshop_log` (";
 	query += "`who`, `itemid`, `what`, `shop_owner`, `extra`, `vnum`, `count`, `yang`";
-#ifdef ENABLE_CHEQUE_SYSTEM
-	query += ", `cheque`";
-#endif
 	query += ") ";
 
 	query += fmt::format("VALUES({}, {}, '{}', {}, '{}', {}, {}, {}",
 		who, itemid, what, shopOwner, extra, vnum, count, yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	query += fmt::format(", {}", cheque);
-#endif
 	query += ");";
 
 	CDBManager::instance().AsyncQuery(query.c_str(), SQL_LOG);

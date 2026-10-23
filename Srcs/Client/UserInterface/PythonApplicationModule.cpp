@@ -1608,12 +1608,6 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "ENABLE_DICE_SYSTEM",	0);
 #endif
 
-#ifdef ENABLE_CHEQUE_SYSTEM //@force_add
-	PyModule_AddIntConstant(poModule, "ENABLE_CHEQUE_SYSTEM",	1);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_CHEQUE_SYSTEM",	0);
-#endif
-
 #ifdef ENABLE_EXTEND_INVEN_SYSTEM
 	PyModule_AddIntConstant(poModule, "ENABLE_EXTEND_INVEN_SYSTEM",	1);
 #else
@@ -1743,28 +1737,10 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "__BL_CLIP_MASK__", false);
 #endif
 
-#if defined(ENABLE_CONQUEROR_LEVEL)
-	PyModule_AddIntConstant(poModule, "ENABLE_CONQUEROR_LEVEL", true);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_CONQUEROR_LEVEL", false);
-#endif
-
-#if defined(ENABLE_CONQUEROR_UI)
-	PyModule_AddIntConstant(poModule, "ENABLE_CONQUEROR_UI", true);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_CONQUEROR_UI", false);
-#endif
-
 #ifdef ENABLE_DS_GRADE_MYTH
 	PyModule_AddIntConstant(poModule, "ENABLE_DS_GRADE_MYTH", 1);
 #else
 	PyModule_AddIntConstant(poModule, "ENABLE_DS_GRADE_MYTH", 0);
-#endif
-
-#ifdef DISABLE_CHEQUE_DROP
-	PyModule_AddIntConstant(poModule, "DISABLE_CHEQUE_DROP", 1);
-#else
-	PyModule_AddIntConstant(poModule, "DISABLE_CHEQUE_DROP", 0);
 #endif
 
 #ifdef ENABLE_WON_EXCHANGE_WINDOW

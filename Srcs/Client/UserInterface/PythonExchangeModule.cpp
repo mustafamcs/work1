@@ -163,17 +163,6 @@ PyObject * exchangeSetElkMode(PyObject * poTarget, PyObject * poArgs)
 	CPythonExchange::Instance().SetElkMode(elk_mode ? true : false);
 	return Py_BuildNone();
 }
-#ifdef ENABLE_CHEQUE_SYSTEM
-PyObject* exchangeGetChequeFromSelf(PyObject* poSelf, PyObject* poArgs)
-{
-	return Py_BuildValue("i", CPythonExchange::Instance().GetChequeFromSelf());
-}
-
-PyObject* exchangeGetChequeFromTarget(PyObject* poSelf, PyObject* poArgs)
-{
-	return Py_BuildValue("i", CPythonExchange::Instance().GetChequeFromTarget());
-}
-#endif
 
 void initTrade()
 {
@@ -210,10 +199,6 @@ void initTrade()
 
 		{"GetElkMode",					exchangeGetElkMode,					METH_VARARGS},
 		{"SetElkMode",					exchangeSetElkMode,					METH_VARARGS},
-#ifdef ENABLE_CHEQUE_SYSTEM
-		{"GetChequeFromSelf",			exchangeGetChequeFromSelf,			METH_VARARGS},
-		{"GetChequeFromTarget",			exchangeGetChequeFromTarget,		METH_VARARGS},
-#endif
 
 		{NULL, NULL},
 	};

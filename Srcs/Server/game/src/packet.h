@@ -658,9 +658,6 @@ typedef struct command_item_drop
 	BYTE 	header;
 	TItemPos 	Cell;
 	DWORD	gold;
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	DWORD	cheque;
-#endif
 } TPacketCGItemDrop;
 
 typedef struct command_item_drop2
@@ -668,9 +665,6 @@ typedef struct command_item_drop2
 	BYTE 	header;
 	TItemPos 	Cell;
 	DWORD	gold;
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	DWORD	cheque;
-#endif
 	BYTE	count;
 } TPacketCGItemDrop2;
 
@@ -747,9 +741,6 @@ enum
 	EXCHANGE_SUBHEADER_CG_ELK_ADD,	/* arg1 == amount of gold */
 	EXCHANGE_SUBHEADER_CG_ACCEPT,	/* arg1 == not used */
 	EXCHANGE_SUBHEADER_CG_CANCEL,	/* arg1 == not used */
-#ifdef ENABLE_CHEQUE_SYSTEM
-	EXCHANGE_SUBHEADER_CG_CHEQUE_ADD,
-#endif
 };
 
 typedef struct command_exchange
@@ -1195,19 +1186,12 @@ enum EPacketShopSubHeaders
 	SHOP_SUBHEADER_GC_SOLD_OUT,
 	SHOP_SUBHEADER_GC_START_EX,
 	SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_EX,
-#ifdef ENABLE_CHEQUE_SYSTEM
-	SHOP_SUBHEADER_GC_NOT_ENOUGH_CHEQUE,
-	SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_CHEQUE,
-#endif
 };
 
 struct packet_shop_item
 {
 	DWORD		vnum;
 	long long	price;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	DWORD		cheque;
-#endif
 	BYTE		count;
 	BYTE		display_pos;
 	long	alSockets[ITEM_SOCKET_MAX_NUM];
@@ -1273,10 +1257,6 @@ enum EPacketTradeSubHeaders
 	EXCHANGE_SUBHEADER_GC_END,		/* arg1 == not used */
 	EXCHANGE_SUBHEADER_GC_ALREADY,	/* arg1 == not used */
 	EXCHANGE_SUBHEADER_GC_LESS_GOLD,	/* arg1 == not used */
-#ifdef ENABLE_CHEQUE_SYSTEM
-	EXCHANGE_SUBHEADER_GC_CHEQUE_ADD,
-	EXCHANGE_SUBHEADER_GC_LESS_CHEQUE,
-#endif
 };
 
 struct packet_position

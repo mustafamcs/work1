@@ -67,10 +67,6 @@ namespace ikashop
 
 		if(m_info.price.yang > static_cast<long long>(ch->GetGold()))
 			return false;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		if(m_info.price.cheque > ch->GetCheque())
-			return false;
-#endif
 		return true;
 	}
 

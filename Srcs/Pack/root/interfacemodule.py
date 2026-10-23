@@ -7,10 +7,7 @@ import chat
 import app
 import player
 import uiTaskBar
-if app.ENABLE_CONQUEROR_UI:
-	import uicharacternew as uiCharacter
-else:
-	import uiCharacter
+import uiCharacter
 import uiInventory
 import uiDragonSoul
 import uiChat

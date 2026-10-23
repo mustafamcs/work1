@@ -129,9 +129,6 @@ CExchange::CExchange(LPCHARACTER pOwner)
 	}
 
 	m_lGold = 0;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	m_lCheque = 0;
-#endif
 
 	m_pOwner = pOwner;
 	pOwner->SetExchange(this);
@@ -275,33 +272,11 @@ bool CExchange::AddGold(long long gold)
 	exchange_packet(GetCompany()->GetOwner(), EXCHANGE_SUBHEADER_GC_GOLD_ADD, false, m_lGold, NPOS, 0);
 	return true;
 }
-#ifdef ENABLE_CHEQUE_SYSTEM
-bool CExchange::AddCheque(long cheque)
-{
-	if (cheque <= 0)
-		return false;
-	if (GetOwner()->GetCheque() < cheque)
-	{
-		exchange_packet(GetOwner(), EXCHANGE_SUBHEADER_GC_LESS_CHEQUE, 0, 0, NPOS, 0);
-		return false;
-	}
-	Accept(false);
-	GetCompany()->Accept(false);
-	m_lCheque = cheque;
-	exchange_packet(GetOwner(), EXCHANGE_SUBHEADER_GC_CHEQUE_ADD, true, m_lCheque, NPOS, 0);
-	exchange_packet(GetCompany()->GetOwner(), EXCHANGE_SUBHEADER_GC_CHEQUE_ADD, false, m_lCheque, NPOS, 0);
-	return true;
-}
-#endif
 
 bool CExchange::Check(int * piItemCount)
 {
 	if (GetOwner()->GetGold() < m_lGold)
 		return false;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	if (GetOwner()->GetCheque() < (int)m_lCheque)
-		return false;
-#endif
 
 	int item_count = 0;
 
@@ -529,13 +504,6 @@ bool CExchange::Done()
 			LogManager::instance().CharLog(GetOwner(), m_lGold, "EXCHANGE_GOLD_GIVE", exchange_buf);
 		}
 	}
-#ifdef ENABLE_CHEQUE_SYSTEM
-	if (m_lCheque)
-	{
-		GetOwner()->PointChange(POINT_CHEQUE, -m_lCheque, true);
-		victim->PointChange(POINT_CHEQUE, m_lCheque, true);
-	}
-#endif
 
 	m_pGrid->Clear();
 	return true;
@@ -614,19 +582,11 @@ bool CExchange::Accept(bool bAccept)
 		{
 			if (m_lGold)
 				GetOwner()->Save();
-#ifdef ENABLE_CHEQUE_SYSTEM
-			if (m_lCheque)
-				GetOwner()->Save();
-#endif
 
 			if (GetCompany()->Done())
 			{
 				if (GetCompany()->m_lGold)
 					victim->Save();
-#ifdef ENABLE_CHEQUE_SYSTEM
-				if (GetCompany()->m_lCheque)
-					victim->Save();
-#endif
 
 				// INTERNATIONAL_VERSION
 				GetOwner()->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s ile olan ticaret başarıyla gerçekleşti."), victim->GetName());

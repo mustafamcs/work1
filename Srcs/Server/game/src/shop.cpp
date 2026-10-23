@@ -155,9 +155,6 @@ void CShop::SetShopItems(TShopItemTable * pTable, BYTE bItemCount)
 
 		item.pkItem = pkItem;
 		item.itemid = 0;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		item.cheque = 0;
-#endif
 
 		if (item.pkItem)
 		{
@@ -165,9 +162,6 @@ void CShop::SetShopItems(TShopItemTable * pTable, BYTE bItemCount)
 			item.count = pkItem->GetCount();
 			item.price = pTable->price;
 			item.itemid	= pkItem->GetID();
-#ifdef ENABLE_CHEQUE_SYSTEM
-			item.cheque = pTable->cheque;
-#endif
 		}
 		else
 		{
@@ -210,24 +204,11 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 
 	SHOP_ITEM& r_item = m_itemVector[pos];
 
-#ifdef ENABLE_SHOP_USE_CHEQUE
-	if (r_item.price < 0)
-	{
-		LogManager::instance().HackLog("SHOP_BUY_GOLD_OVERFLOW", ch);
-		return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY;
-	}
-	else if (r_item.cheque < 0)
-	{
-		LogManager::instance().HackLog("SHOP_BUY_CHEQUE_OVERFLOW", ch);
-		return SHOP_SUBHEADER_GC_NOT_ENOUGH_CHEQUE;
-	}
-#else
 	if (r_item.price <= 0)
 	{
 		LogManager::instance().HackLog("SHOP_BUY_GOLD_OVERFLOW", ch);
 		return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY;
 	}
-#endif
 
 	LPITEM pkSelectedItem = ITEM_MANAGER::instance().Find(r_item.itemid);
 
@@ -254,36 +235,15 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 
 	long long dwPrice = r_item.price;
 
-#ifdef ENABLE_SHOP_USE_CHEQUE
-	DWORD dwCheque = r_item.cheque;
-#endif
 
 	//if (it->second)	// if other empire, price is triple
 	//	dwPrice *= 3;
 
-#ifdef ENABLE_SHOP_USE_CHEQUE
-	if ((long long)dwPrice > 0 && (int)dwCheque > 0) // Yang-Cheque
-	{
-		if (ch->GetGold() < (long long)dwPrice || ch->GetCheque() < (int)dwCheque)
-			return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_CHEQUE;
-	}
-	else if ((int)dwPrice > 0 && (int)dwCheque <= 0) // Yang
-	{
-		if (ch->GetGold() < (long long)dwPrice)
-			return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY;
-	}
-	else if ((long long)dwPrice <= 0 && (int)dwCheque > 0) // cheque
-	{
-		if (ch->GetCheque() < (int)dwCheque)
-			return SHOP_SUBHEADER_GC_NOT_ENOUGH_CHEQUE;
-	}
-#else
 	if (ch->GetGold() < (long long) dwPrice)
 	{
 		sys_log(1, "Shop::Buy : Yeterli para yok : %s sahip %d, fiyat %lld", ch->GetName(), ch->GetGold(), dwPrice);
 		return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY;
 	}
-#endif
 
 	LPITEM item;
 
@@ -325,9 +285,6 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 	}
 
 	ch->PointChange(POINT_GOLD, -dwPrice, false);
-#ifdef ENABLE_SHOP_USE_CHEQUE
-	ch->PointChange(POINT_CHEQUE, -dwCheque, false);
-#endif
 
 	DWORD dwTax = 0;
 	int iVal = 0;
@@ -384,9 +341,6 @@ long long CShop::Buy(LPCHARACTER ch, BYTE pos)
 		BroadcastUpdateItem(pos);
 
 		m_pkPC->PointChange(POINT_GOLD, dwPrice, false);
-#ifdef ENABLE_SHOP_USE_CHEQUE
-		m_pkPC->PointChange(POINT_CHEQUE, dwCheque, false);
-#endif
 		if (iVal > 0)
 			m_pkPC->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Satış için %%%d vergi alınacak."), iVal);
 
@@ -470,9 +424,6 @@ bool CShop::AddGuest(LPCHARACTER ch, DWORD owner_vid, bool bOtherEmpire)
 		}
 		else
 			pack2.items[i].price = item.price;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		pack2.items[i].cheque = item.cheque;
-#endif
 		// END_REMOVED_EMPIRE_PRICE_LIFT
 
 		pack2.items[i].count = item.count;
@@ -559,9 +510,6 @@ void CShop::BroadcastUpdateItem(BYTE pos)
 
 	pack2.item.price	= m_itemVector[pos].price;
 	pack2.item.count	= m_itemVector[pos].count;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	pack2.item.cheque = m_itemVector[pos].cheque;
-#endif
 
 	buf.write(&pack, sizeof(pack));
 	buf.write(&pack2, sizeof(pack2));

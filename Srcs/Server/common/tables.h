@@ -414,9 +414,6 @@ typedef struct SPlayerTable
 	short	skill_point;
 	short	sub_skill_point;
 	short	horse_skill_point;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	int		cheque;
-#endif
 
 	TPlayerSkill skills[SKILL_MAX_NUM];
 
@@ -561,9 +558,6 @@ typedef struct SShopItemTable
 
 	TItemPos	pos;
 	long long	price;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	DWORD		cheque;
-#endif
 	BYTE		display_pos;
 } TShopItemTable;
 
@@ -1391,9 +1385,6 @@ namespace ikashop
 	struct TPriceInfo
 	{
 		long long yang = 0;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		int cheque = 0;
-#endif
 		bool operator < (const TPriceInfo& rItem) const
 		{
 			return GetTotalYangAmount() < rItem.GetTotalYangAmount();
@@ -1401,9 +1392,6 @@ namespace ikashop
 
 		long long GetTotalYangAmount() const{
 			long long total = yang;
-#ifdef ENABLE_CHEQUE_SYSTEM
-			total += (long long) YANG_PER_CHEQUE * (long long) cheque;
-#endif
 			return total;
 		}
 	};

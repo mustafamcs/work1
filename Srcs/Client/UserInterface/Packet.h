@@ -568,9 +568,6 @@ typedef struct command_item_drop
 	BYTE  header;
 	TItemPos pos;
 	DWORD elk;
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	DWORD cheque;
-#endif
 } TPacketCGItemDrop;
 
 typedef struct command_item_drop2
@@ -578,9 +575,6 @@ typedef struct command_item_drop2
     BYTE        header;
     TItemPos	pos;
     DWORD       gold;
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	DWORD		cheque;
-#endif
     BYTE        count;
 } TPacketCGItemDrop2;
 
@@ -646,9 +640,6 @@ enum
 	EXCHANGE_SUBHEADER_CG_ELK_ADD,			// arg1 == amount of elk
 	EXCHANGE_SUBHEADER_CG_ACCEPT,			// arg1 == not used
 	EXCHANGE_SUBHEADER_CG_CANCEL,			// arg1 == not used
-#ifdef ENABLE_CHEQUE_SYSTEM
-	EXCHANGE_SUBHEADER_CG_CHEQUE_ADD,
-#endif
 };
 
 typedef struct command_exchange
@@ -951,9 +942,6 @@ typedef struct SShopItemTable
 
     TItemPos	pos;
 	long long	price;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	DWORD		cheque;
-#endif
     BYTE		display_pos;
 } TShopItemTable;
 
@@ -1628,9 +1616,6 @@ enum EPointTypes
 #ifdef ENABLE_MAGIC_REDUCTION_SYSTEM
 	POINT_RESIST_MAGIC_REDUCTION = 144,
 #endif
-#ifdef ENABLE_CHEQUE_SYSTEM
-	POINT_CHEQUE = 145,
-#endif
 
 	POINT_RESIST_MOUNT_FALL		= 146,
 	POINT_RESIST_HUMAN			= 147,
@@ -1819,10 +1804,6 @@ enum EPacketShopSubHeaders
 	SHOP_SUBHEADER_GC_SOLD_OUT,
 	SHOP_SUBHEADER_GC_START_EX,
 	SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_EX,
-#ifdef ENABLE_CHEQUE_SYSTEM
-	SHOP_SUBHEADER_GC_NOT_ENOUGH_CHEQUE,
-	SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_CHEQUE,
-#endif
 };
 
 typedef struct packet_shop
@@ -1854,10 +1835,6 @@ enum
     EXCHANGE_SUBHEADER_GC_END,				// arg1 == not used
     EXCHANGE_SUBHEADER_GC_ALREADY,			// arg1 == not used
     EXCHANGE_SUBHEADER_GC_LESS_ELK,			// arg1 == not used
-#ifdef ENABLE_CHEQUE_SYSTEM
-	EXCHANGE_SUBHEADER_GC_CHEQUE_ADD,
-	EXCHANGE_SUBHEADER_GC_LESS_CHEQUE,
-#endif
 };
 
 typedef struct packet_position
@@ -2802,14 +2779,8 @@ namespace ikashop
 	struct TPriceInfo
 	{
 		long long yang = 0;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		int cheque = 0;
-#endif
 		long long GetTotalYangAmount() const {
 			return yang
-#ifdef ENABLE_CHEQUE_SYSTEM
-				+ static_cast<long long>(cheque) * YANG_PER_CHEQUE
-#endif
 				;
 		}
 	};

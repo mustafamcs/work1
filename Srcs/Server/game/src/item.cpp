@@ -238,10 +238,6 @@ DWORD CItem::GetCount()
 {
 	if (GetType() == ITEM_ELK)
 		return MIN(m_dwCount, INT_MAX);
-	#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	else if (GetVnum() == CHEQUE_VNUM)
-		return MIN(m_dwCount, INT_MAX);
-	#endif
 	else
 	{
 		return MIN(m_dwCount, g_bItemCountLimit);
@@ -254,10 +250,6 @@ bool CItem::SetCount(DWORD count)
 	{
 		m_dwCount = MIN(count, INT_MAX);
 	}
-	#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	else if (GetVnum() == CHEQUE_VNUM)
-		m_dwCount = MIN(count, INT_MAX);
-	#endif
 	else
 	{
 		m_dwCount = MIN(count, g_bItemCountLimit);

@@ -772,18 +772,6 @@ PyObject* netSendGoldDropPacketNew(PyObject* poSelf, PyObject* poArgs)
 	return Py_BuildNone();
 }
 
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-PyObject* netSendChequeDropPacketNew(PyObject* poSelf, PyObject* poArgs)
-{
-	int Cheque;
-	if (!PyTuple_GetInteger(poArgs, 0, &Cheque))
-		return Py_BuildException();
-
-	CPythonNetworkStream& rkNetStream = CPythonNetworkStream::Instance();
-	rkNetStream.SendItemDropPacketNew(TItemPos(RESERVED_WINDOW, 0), 0, 0, (DWORD)Cheque);
-	return Py_BuildNone();
-}
-#endif
 
 PyObject* netSendItemMovePacket(PyObject* poSelf, PyObject* poArgs)
 {
@@ -932,18 +920,6 @@ PyObject* netSendExchangeElkAddPacket(PyObject* poSelf, PyObject* poArgs)
 	return Py_BuildNone();
 }
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-PyObject* netSendExchangeChequeAddPacket(PyObject* poSelf, PyObject* poArgs)
-{
-	int cheque;
-	if (!PyTuple_GetInteger(poArgs, 0, &cheque))
-		return Py_BuildException();
-
-	CPythonNetworkStream& rkNetStream = CPythonNetworkStream::Instance();
-	rkNetStream.SendExchangeChequeAddPacket(cheque);
-	return Py_BuildNone();
-}
-#endif
 
 PyObject* netSendExchangeItemAddPacket(PyObject* poSelf, PyObject* poArgs)
 {
@@ -1817,12 +1793,6 @@ void initnet()
 		// Log
 		{ "RegisterErrorLog",						netRegisterErrorLog,						METH_VARARGS },
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		{ "SendExchangeChequeAddPacket",			netSendExchangeChequeAddPacket,				METH_VARARGS },
-#endif
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-		{ "SendGoldChequePacketNew",				netSendChequeDropPacketNew,					METH_VARARGS },
-#endif
 		{ NULL,										NULL,										NULL },
 	};
 

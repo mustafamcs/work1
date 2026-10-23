@@ -1192,9 +1192,6 @@ namespace ikashop
 		// inserting values
 		auto& allocator = value.GetAllocator();
 		jsonHelper::insertValue(value, "yang", item.price.yang, allocator);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		jsonHelper::insertValue(value, "cheque", item.price.cheque, allocator);
-#endif
 		jsonHelper::insertValue(value, "expiration", static_cast<int>(item.expiration), allocator);
 		// making json string
 		rapidjson::StringBuffer buffer;
@@ -1284,11 +1281,7 @@ namespace ikashop
 
 	std::string CreateSafeboxCacheInsertSafeboxValutesQuery(DWORD dwOwnerID)
 	{
-#ifdef ENABLE_CHEQUE_SYSTEM
-		return fmt::format("INSERT INTO `ikashop_safebox` (`owner`,`gold`,`cheque`) VALUES({} , 0,0);", dwOwnerID);
-#else
 		return fmt::format("INSERT INTO `ikashop_safebox` (`owner`,`gold`) VALUES({} , 0);", dwOwnerID);
-#endif
 	}
 
 	std::string CreateSafeboxCacheLoadValutesQuery(DWORD dwOwnerID)

@@ -571,9 +571,6 @@ void CPythonIkarusShop::ShopGuestEditItem(DWORD itemid, const ikashop::TPriceInf
 {
 	ikashop::python::PythonSafeDict dict;
 	dict.set("price", price.yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	dict.set("cheque", price.cheque);
-#endif
 
 	CallOnSearchShopBoard("ShopGuestEditItem", Py_BuildValue("(iO)", itemid, dict.weakRef()));
 }
@@ -582,9 +579,6 @@ void CPythonIkarusShop::ShopOwnerEditItem(DWORD itemid, const ikashop::TPriceInf
 {
 	ikashop::python::PythonSafeDict dict;
 	dict.set("price", price.yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	dict.set("cheque", price.cheque);
-#endif
 
 	CallOnBusinessBoard("ShopOwnerEditItem", Py_BuildValue("(iO)", itemid, dict.weakRef()));
 }
@@ -927,9 +921,6 @@ void CPythonIkarusShop::LoadPriceHistory()
 			auto expiration = jsonHelper::getValue<int64_t>(member, "expiration");
 			auto price = jsonHelper::getValue<int64_t>(member, "price");
 			auto count = jsonHelper::getValue<int>(member, "count");
-#ifdef ENABLE_CHEQUE_SYSTEM
-			auto cheque = jsonHelper::getValue<int>(member, "cheque");
-#endif
 
 			// checking expiration
 			if(expiration < currentTime)
@@ -939,9 +930,6 @@ void CPythonIkarusShop::LoadPriceHistory()
 			registerPrice.expiration = expiration;
 			registerPrice.price = price;
 			registerPrice.count = static_cast<DWORD>(std::max(1, count));
-#ifdef ENABLE_CHEQUE_SYSTEM
-			registerPrice.cheque = cheque;
-#endif
 		}
 	};
 
@@ -970,9 +958,6 @@ void CPythonIkarusShop::SavePriceHistory()
 			jsonHelper::insertValue(member, "expiration", element.expiration, doc.GetAllocator());
 			jsonHelper::insertValue(member, "price", element.price, doc.GetAllocator());
 			jsonHelper::insertValue(member, "count", static_cast<int>(element.count), doc.GetAllocator());
-#ifdef ENABLE_CHEQUE_SYSTEM
-			jsonHelper::insertValue(member, "cheque", element.cheque, doc.GetAllocator());
-#endif
 			// pushing element inside the array
 			doc.PushBack(member, doc.GetAllocator());
 		}
@@ -1005,23 +990,14 @@ void CPythonIkarusShop::RegisterPriceHistory(DWORD vnum, DWORD count, DWORD hash
 	// calculating info
 	const auto expiration = static_cast<int64_t>(std::time(nullptr)) + PRICE_HISTORY_EXPIRATION;
 	const auto total = price.yang;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	const auto cheque = price.cheque;
-#endif
 	
 	// registering by vnum
 	m_priceByVnum[vnum] = {expiration, total, count
-#ifdef ENABLE_CHEQUE_SYSTEM
-	, cheque
-#endif
 	};
 	
 	// registering by hash
 	if(hash != 0)
 		m_priceByHash[hash] = {expiration, total, count
-#ifdef ENABLE_CHEQUE_SYSTEM
-	, cheque
-#endif
 	};
 
 	// moving data to file
@@ -1032,31 +1008,19 @@ std::optional<ikashop::TPriceInfo> CPythonIkarusShop::GetPriceHistory(DWORD vnum
 {
 	// converting yang amount to cheque + yang
 	static auto composePrice = [](auto price, auto registerCount, auto count
-#ifdef ENABLE_CHEQUE_SYSTEM
-		, auto cheque
-#endif
 		) -> ikashop::TPriceInfo {
 
 		// checking if count matches
 		if(registerCount == count)
 			return { price
-#ifdef ENABLE_CHEQUE_SYSTEM
-					, cheque
-#endif
 		};
 
 		// adjusting price using count
 		auto total = price;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		total += static_cast<long long>(cheque) * YANG_PER_CHEQUE;
-#endif
 
 		total *= count;
 		total /= registerCount;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		return { total % YANG_PER_CHEQUE, static_cast<int>(total / YANG_PER_CHEQUE)};
-#endif
 		return { total };
 	};
 
@@ -1066,9 +1030,6 @@ std::optional<ikashop::TPriceInfo> CPythonIkarusShop::GetPriceHistory(DWORD vnum
 		auto iter = m_priceByHash.find(hash);
 		if(iter != m_priceByHash.end())
 			return composePrice(iter->second.price, iter->second.count, count
-#ifdef ENABLE_CHEQUE_SYSTEM
-				, iter->second.cheque
-#endif
 			);
 	}
 
@@ -1076,9 +1037,6 @@ std::optional<ikashop::TPriceInfo> CPythonIkarusShop::GetPriceHistory(DWORD vnum
 	auto iter = m_priceByVnum.find(vnum);
 	if(iter != m_priceByVnum.end())
 		return composePrice(iter->second.price, iter->second.count, count
-#ifdef ENABLE_CHEQUE_SYSTEM
-			, iter->second.cheque
-#endif
 		);
 
 	// not found
@@ -1530,19 +1488,11 @@ PyObject* ikashopSendAddItem(PyObject* poSelf , PyObject* poArgs)
 	if(!PyTuple_GetLongLong(poArgs, 3, &yang))
 		return Py_BadArgument();
 
-#ifdef  ENABLE_CHEQUE_SYSTEM
-	int cheque = 0;
-	if(!PyTuple_GetInteger(poArgs, 4, &cheque))
-		return Py_BadArgument();
-#endif
 
 	ikashop::TShopItemInfo info;
 	info.pos = {window, slot};
 	info.price.yang = yang;
 	info.destpos = destpos;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	info.price.cheque = cheque;
-#endif
 
 	CPythonNetworkStream::instance().SendIkarusShopAddItem(info);
 	return Py_BuildNone();
@@ -1568,17 +1518,9 @@ PyObject* ikashopSendEditItem(PyObject* poSelf , PyObject* poArgs)
 	if(!PyTuple_GetLongLong(poArgs, 1, &yang))
 		return Py_BadArgument();
 
-#ifdef  ENABLE_CHEQUE_SYSTEM
-	int cheque = 0;
-	if(!PyTuple_GetInteger(poArgs, 2, &cheque))
-		return Py_BadArgument();
-#endif
 
 	ikashop::TPriceInfo price;
 	price.yang = yang;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	price.cheque = cheque;
-#endif
 
 	CPythonNetworkStream::instance().SendOfflineShopEditItem(itemid, price);
 	return Py_BuildNone();
@@ -1677,10 +1619,6 @@ PyObject* ikashopSendOfferCreate(PyObject* poSelf , PyObject* poArgs)
 	if (!PyTuple_GetLongLong(poArgs, 2, &offer.price.yang))
 		return Py_BadArgument();
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-	if(!PyTuple_GetInteger(poArgs, 3, &offer.price.cheque))
-		return Py_BadArgument();
-#endif
 
 	CPythonNetworkStream::instance().SendIkarusShopOfferCreate(offer);
 	return Py_BuildNone();
@@ -1788,10 +1726,6 @@ PyObject* ikashopSendAuctionAddOffer(PyObject* poSelf, PyObject* poArgs)
 	if(!PyTuple_GetLongLong(poArgs, 1, &price.yang))
 		return Py_BadArgument();
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-	if(!PyTuple_GetInteger(poArgs, 2, &price.cheque))
-		return Py_BadArgument();
-#endif
 
 	CPythonNetworkStream::instance().SendIkarusShopAuctionAddOffer(ownerid, price);
 	return Py_BuildNone();
@@ -2263,9 +2197,6 @@ PyObject* ikashopGetItemPriceCache(PyObject* poSelf, PyObject* poArgs)
 	// making return value
 	PythonSafeDict dict;
 	dict.set("value", price->yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	dict.set("cheque", price->cheque);
-#endif
 	return dict.incRef();
 }
 
@@ -2287,10 +2218,6 @@ PyObject* ikashopRegisterItemPriceCache(PyObject* poSelf, PyObject* poArgs)
 	ikashop::TPriceInfo price;
 	if (!PyTuple_GetLongLong(poArgs, 3, &price.yang))
 		return Py_BadArgument();
-#ifdef ENABLE_CHEQUE_SYSTEM
-	if (!PyTuple_GetInteger(poArgs, 4, &price.cheque))
-		return Py_BadArgument();
-#endif
 
 	CPythonIkarusShop::Instance().RegisterPriceHistory(vnum, count, hash, price);
 	return Py_BuildNone();
@@ -2496,9 +2423,6 @@ void initikashop()
 	PyModule_AddIntConstant(poModule, "SAFEBOX_GRID_WIDTH", ikashop::SAFEBOX_GRID_WIDTH);
 	PyModule_AddIntConstant(poModule, "SAFEBOX_GRID_HEIGHT", ikashop::SAFEBOX_GRID_HEIGHT);
 	PyModule_AddIntConstant(poModule, "SAFEBOX_PAGE_COUNT", ikashop::SAFEBOX_PAGE_COUNT);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	PyModule_AddIntConstant(poModule, "YANG_PER_CHEQUE", YANG_PER_CHEQUE);
-#endif
 #ifdef EXTEND_IKASHOP_ULTIMATE
 	PyModule_AddIntConstant(poModule, "OFFSHOP_LOCK_INDEX_INIT", CPythonIkarusShop::OFFSHOP_LOCK_INDEX_INIT);
 #endif

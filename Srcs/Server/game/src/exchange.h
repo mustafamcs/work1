@@ -19,9 +19,6 @@ class CExchange
 		void		Cancel();
 
 		bool		AddGold(long long lGold);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		bool		AddCheque(long Cheque);
-#endif
 		bool		AddItem(TItemPos item_pos, BYTE display_pos);
 		bool		RemoveItem(BYTE pos);
 
@@ -48,9 +45,6 @@ class CExchange
 
 		bool 		m_bAccept;
 		long long	m_lGold;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		DWORD		m_lCheque = 0;
-#endif
 
 		CGrid *		m_pGrid;
 };

@@ -1509,9 +1509,6 @@ ACMD(do_poison)
 namespace DoSetTypes{
 	typedef enum do_set_types_s {
 		GOLD, RACE, SEX, JOB, EXP, MAX_HP, MAX_SP, SKILL, ALIGNMENT, ALIGN
-		#ifdef ENABLE_CHEQUE_SYSTEM
-		, CHEQUE, WON
-		#endif
 	} do_set_types_t;
 }
 
@@ -1531,10 +1528,6 @@ const struct set_struct
 	{ "skill",		NUMBER, nullptr},
 	{ "alignment",	NUMBER, nullptr},
 	{ "align",		NUMBER, nullptr},
-#ifdef ENABLE_CHEQUE_SYSTEM
-	{ "cheque",		NUMBER,	nullptr	},
-	{ "won",		NUMBER,	nullptr	},
-#endif
 	{ "\n",			MISC, nullptr}
 };
 
@@ -1706,17 +1699,6 @@ ACMD(do_set)
 				tch->UpdateAlignment(amount - ch->GetRealAlignment());
 			}
 			break;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		case DoSetTypes::WON: // won
-		case DoSetTypes::CHEQUE: // cheque
-		{
-			int cheque = 0;
-			str_to_number(cheque, arg3);
-			tch->PointChange(POINT_CHEQUE, cheque, true);
-			tch->ChatPacket(CHAT_TYPE_INFO, "Cheque: ADD[%d] TOTAL[%d]", cheque, tch->GetCheque());
-		}
-		break;
-#endif
 	}
 
 	if (set_fields[i].type == NUMBER)

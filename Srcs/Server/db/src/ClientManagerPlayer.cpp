@@ -121,9 +121,6 @@ size_t CreatePlayerSaveQuery(char * pszQuery, size_t querySize, TPlayerTable * p
 			"horse_hp_droptime = %u, "
 			"horse_stamina = %d, "
 			"horse_skill_point = %d, "
-#ifdef ENABLE_CHEQUE_SYSTEM
-			"cheque = %d, "
-#endif
 			,
 		GetTablePostfix(),
 		pkTab->job,
@@ -168,9 +165,6 @@ size_t CreatePlayerSaveQuery(char * pszQuery, size_t querySize, TPlayerTable * p
 		pkTab->horse.dwHorseHealthDropTime,
 		pkTab->horse.sStamina,
 		pkTab->horse_skill_point
-#ifdef ENABLE_CHEQUE_SYSTEM
-		, pkTab->cheque
-#endif
 	);
 
 	static char text[8192 + 1];
@@ -379,9 +373,6 @@ void CClientManager::QUERY_PLAYER_LOAD(CPeer * peer, DWORD dwHandle, TPlayerLoad
 				#endif
 				"skill_level,quickslot,skill_group,alignment,horse_level,horse_riding,horse_hp,horse_hp_droptime,horse_stamina,"
 				"UNIX_TIMESTAMP(NOW())-UNIX_TIMESTAMP(last_play),horse_skill_point"
-#ifdef ENABLE_CHEQUE_SYSTEM
-				", cheque "
-#endif
 				" FROM player%s WHERE id=%d",
 				GetTablePostfix(), packet->player_id);
 
@@ -537,9 +528,6 @@ bool CreatePlayerTableFromRes(MYSQL_RES * res, TPlayerTable * pkTab)
 	str_to_number(pkTab->horse.sStamina, row[col++]);
 	str_to_number(pkTab->logoff_interval, row[col++]);
 	str_to_number(pkTab->horse_skill_point, row[col++]);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	str_to_number(pkTab->cheque, row[col++]);
-#endif
 
 	// reset sub_skill_point
 	{

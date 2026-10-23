@@ -270,9 +270,6 @@ ACMD(do_rewarp);
 #ifdef ENABLE_MOVE_CHANNEL
 ACMD(DoChangeChannel);
 #endif
-#if defined(ENABLE_CHEQUE_SYSTEM) && defined(ENABLE_WON_EXCHANGE_WINDOW)
-ACMD(do_won_exchange);
-#endif
 
 struct command_info cmd_info[] =
 {
@@ -576,9 +573,6 @@ struct command_info cmd_info[] =
 #endif
 #ifdef ENABLE_MOVE_CHANNEL
 	{ "change_channel",		DoChangeChannel,			0,			POS_DEAD,	GM_PLAYER	},
-#endif
-#if defined(ENABLE_CHEQUE_SYSTEM) && defined(ENABLE_WON_EXCHANGE_WINDOW)
-	{ "won_exchange",		do_won_exchange,			0,			POS_DEAD,	GM_PLAYER	},
 #endif
 #if defined(__BL_MULTI_LANGUAGE__)
 	{ "language_change",		do_cmd,			SCMD_LANGUAGE_CHANGE,		POS_DEAD,	GM_PLAYER	},

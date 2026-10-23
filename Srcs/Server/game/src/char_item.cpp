@@ -5612,49 +5612,6 @@ bool CHARACTER::DropGold(int gold)
 
 	return false;
 }
-#ifdef ENABLE_CHEQUE_SYSTEM
-bool CHARACTER::DropCheque(int cheque)
-{
-#ifdef DISABLE_CHEQUE_DROP
-	return false;
-#else
-	if (cheque <= 0 || cheque > GetCheque())
-		return false;
-	if (cheque >= CHEQUE_MAX)
-		return false;
-	if (!CanHandleItem())
-		return false;
-
-#ifdef ENABLE_NEWSTUFF
-	if (g_GoldDropTimeLimitValue && !PulseManager::Instance().IncreaseClock(GetPlayerID(), ePulse::BoxOpening, std::chrono::milliseconds(g_GoldDropTimeLimitValue)))
-	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Henüz altın bırakamazsın."));
-		return false;
-	}
-#endif
-
-	LPITEM item = ITEM_MANAGER::instance().CreateItem(CHEQUE_VNUM, cheque);
-	if (item)
-	{
-		PIXEL_POSITION pos = GetXYZ();
-		if (item->AddToGround(GetMapIndex(), pos))
-		{
-			PointChange(POINT_CHEQUE, -cheque, true);
-			LogManager::instance().CharLog(this, cheque, "DROP_CHEQUE", "");
-			#ifdef ENABLE_NEWSTUFF
-			item->StartDestroyEvent(g_aiItemDestroyTime[ITEM_DESTROY_TIME_DROPGOLD]);
-			#else
-			item->StartDestroyEvent();
-			#endif
-			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Düşürülen eşya %d dakika sonra kaybolacak."), 150/60);
-		}
-		Save();
-		return true;
-	}
-	return false;
-#endif
-}
-#endif
 
 bool CHARACTER::MoveItem(TItemPos Cell, TItemPos DestCell, BYTE count)
 {
@@ -5924,15 +5881,6 @@ void CHARACTER::GiveGold(long long iAmount)
 		}
 	}
 }
-#ifdef ENABLE_CHEQUE_SYSTEM
-void CHARACTER::GiveCheque(int iAmount)
-{
-	if (iAmount <= 0)
-		return;
-
-	PointChange(POINT_CHEQUE, iAmount, true);
-}
-#endif
 
 bool CHARACTER::PickupItem(DWORD dwVID)
 {
@@ -5968,17 +5916,6 @@ bool CHARACTER::PickupItem(DWORD dwVID)
 
 				Save();
 			}
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-			else if (item->GetVnum() == CHEQUE_VNUM)
-			{
-				if (item->GetCount() + GetCheque() > CHEQUE_MAX - 1)
-					return false;
-				GiveCheque(item->GetCount());
-				item->RemoveFromGround();
-				M2_DESTROY_ITEM(item);
-				Save();
-			}
-#endif
 
 			else
 			{

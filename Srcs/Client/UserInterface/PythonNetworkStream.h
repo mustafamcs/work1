@@ -155,14 +155,8 @@ class CPythonNetworkStream : public CNetworkStream, public CSingleton<CPythonNet
 		bool SendItemUsePacket(TItemPos pos);
 		bool SendItemUseToItemPacket(TItemPos source_pos, TItemPos target_pos);
 		bool SendItemDropPacket(TItemPos pos, DWORD elk
-			#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-			, DWORD cheque = 0
-			#endif
 		);
 		bool SendItemDropPacketNew(TItemPos pos, DWORD elk, DWORD count
-			#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-			, DWORD cheque = 0
-			#endif
 		);
 		bool SendItemMovePacket(TItemPos pos, TItemPos change_pos, BYTE num);
 		bool SendItemPickUpPacket(DWORD vid);
@@ -184,9 +178,6 @@ class CPythonNetworkStream : public CNetworkStream, public CSingleton<CPythonNet
 		bool SendExchangeItemAddPacket(TItemPos ItemPos, BYTE byDisplayPos);
 		bool SendExchangeElkAddPacket(long long elk);
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		bool SendExchangeChequeAddPacket(DWORD elk);
-#endif
 		bool SendExchangeItemDelPacket(BYTE pos);
 		bool SendExchangeAcceptPacket();
 		bool SendExchangeExitPacket();

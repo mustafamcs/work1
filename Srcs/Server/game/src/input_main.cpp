@@ -959,13 +959,6 @@ void CInputMain::ItemDrop(LPCHARACTER ch, const char * data)
 	if (!ch)
 		return;
 
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	if (pinfo->cheque > 0)
-	{
-		ch->DropCheque(pinfo->cheque);
-		return;
-	}
-#endif
 
 	if (pinfo->gold > 0)
 		ch->DropGold(pinfo->gold);
@@ -979,13 +972,6 @@ void CInputMain::ItemDrop2(LPCHARACTER ch, const char * data)
 	if (!ch)
 		return;
 
-#if defined(ENABLE_CHEQUE_SYSTEM) && !defined(DISABLE_CHEQUE_DROP)
-	if (pinfo->cheque > 0)
-	{
-		ch->DropCheque(pinfo->cheque);
-		return;
-	}
-#endif
 	if (pinfo->gold > 0)
 		ch->DropGold(pinfo->gold);
 	else
@@ -1334,29 +1320,6 @@ void CInputMain::Exchange(LPCHARACTER ch, const char * data)
 			}
 			break;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		case EXCHANGE_SUBHEADER_CG_CHEQUE_ADD:	// arg1 == amount of cheque
-			if (ch->GetExchange())
-			{
-				const int64_t nTotalCheque = static_cast<int64_t>(ch->GetExchange()->GetCompany()->GetOwner()->GetCheque()) + static_cast<int64_t>(pinfo->arg1);
-
-				if (CHEQUE_MAX <= nTotalCheque)
-				{
-					ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You can't trade because the other character exceeds 999 won."));
-
-					sys_err("[OVERFLOW_CHEQUE] CHEQUE_ADD (%u) id %u name %s ",
-						ch->GetExchange()->GetCompany()->GetOwner()->GetCheque(),
-						ch->GetExchange()->GetCompany()->GetOwner()->GetPlayerID(),
-						ch->GetExchange()->GetCompany()->GetOwner()->GetName());
-
-					return;
-				}
-
-				if (ch->GetExchange()->GetCompany()->GetAcceptStatus() != true)
-					ch->GetExchange()->AddCheque(pinfo->arg1);
-			}
-			break;
-#endif
 
 		case EXCHANGE_SUBHEADER_CG_ACCEPT:	// arg1 == not used
 			if (ch->GetExchange())

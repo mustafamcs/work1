@@ -108,16 +108,8 @@ void CPythonShop::ClearPrivateShopStock()
 }
 
 //void CPythonShop::AddPrivateShopItemStock(TItemPos ItemPos, BYTE dwDisplayPos, long long dwPrice)
-//	#ifdef ENABLE_CHEQUE_SYSTEM
-//	, DWORD dwCheque
-//	#endif
-//)
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-void CPythonShop::AddPrivateShopItemStock(TItemPos ItemPos, BYTE dwDisplayPos, long long dwPrice, DWORD dwCheque)
-#else
 void CPythonShop::AddPrivateShopItemStock(TItemPos ItemPos, BYTE dwDisplayPos, long long dwPrice)
-#endif
 
 {
 	DelPrivateShopItemStock(ItemPos);
@@ -129,9 +121,6 @@ void CPythonShop::AddPrivateShopItemStock(TItemPos ItemPos, BYTE dwDisplayPos, l
 	SellingItem.price = dwPrice;
 	SellingItem.display_pos = dwDisplayPos;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-	SellingItem.cheque = dwCheque;
-#endif
 
 	m_PrivateShopItemStock.emplace(ItemPos, SellingItem);
 }
@@ -155,17 +144,6 @@ long long CPythonShop::GetPrivateShopItemPrice(TItemPos ItemPos)
 	return rShopItemTable.price;
 }
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-int CPythonShop::GetPrivateShopItemCheque(TItemPos ItemPos)
-{
-	const auto itor = m_PrivateShopItemStock.find(ItemPos);
-	if (m_PrivateShopItemStock.end() == itor)
-		return 0;
-
-	const auto& rShopItemTable = itor->second;
-	return rShopItemTable.cheque;
-}
-#endif
 
 struct ItemStockSortFunc
 {
@@ -321,20 +299,6 @@ PyObject * shopGetItemPrice(PyObject * poSelf, PyObject * poArgs)
 	return Py_BuildValue("i", 0);
 }
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-PyObject* shopGetItemCheque(PyObject* poSelf, PyObject* poArgs)
-{
-	int iIndex;
-	if (!PyTuple_GetInteger(poArgs, 0, &iIndex))
-		return Py_BuildException();
-
-	const TShopItemData* c_pItemData;
-	if (CPythonShop::Instance().GetItemData(iIndex, &c_pItemData))
-		return Py_BuildValue("i", c_pItemData->cheque);
-
-	return Py_BuildValue("i", 0);
-}
-#endif
 
 PyObject * shopGetItemMetinSocket(PyObject * poSelf, PyObject * poArgs)
 {
@@ -391,16 +355,8 @@ PyObject * shopAddPrivateShopItemStock(PyObject * poSelf, PyObject * poArgs)
 	if (!PyTuple_GetLongLong(poArgs, 3, &iPrice))
 		return Py_BuildException();
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-	int iCheque;
-	if (!PyTuple_GetInteger(poArgs, 4, &iCheque))
-		return Py_BuildException();
-#endif
 
 	CPythonShop::Instance().AddPrivateShopItemStock(TItemPos(bItemWindowType, wItemSlotIndex), iDisplaySlotIndex, iPrice
-		#ifdef ENABLE_CHEQUE_SYSTEM
-		, iCheque
-		#endif
 	);
 	return Py_BuildNone();
 }
@@ -428,20 +384,6 @@ PyObject * shopGetPrivateShopItemPrice(PyObject * poSelf, PyObject * poArgs)
 	long long iValue = CPythonShop::Instance().GetPrivateShopItemPrice(TItemPos(bItemWindowType, wItemSlotIndex));
 	return Py_BuildValue("L", iValue);
 }
-#ifdef ENABLE_CHEQUE_SYSTEM
-PyObject* shopGetPrivateShopItemCheque(PyObject* poSelf, PyObject* poArgs)
-{
-	BYTE bItemWindowType;
-	if (!PyTuple_GetInteger(poArgs, 0, &bItemWindowType))
-		return Py_BuildException();
-	WORD wItemSlotIndex;
-	if (!PyTuple_GetInteger(poArgs, 1, &wItemSlotIndex))
-		return Py_BuildException();
-
-	int iValue = CPythonShop::Instance().GetPrivateShopItemCheque(TItemPos(bItemWindowType, wItemSlotIndex));
-	return Py_BuildValue("i", iValue);
-}
-#endif
 PyObject * shopBuildPrivateShop(PyObject * poSelf, PyObject * poArgs)
 {
 	char * szName;
@@ -500,10 +442,6 @@ void initshop()
 		{ "DelPrivateShopItemStock",	shopDelPrivateShopItemStock,	METH_VARARGS },
 		{ "GetPrivateShopItemPrice",	shopGetPrivateShopItemPrice,	METH_VARARGS },
 		{ "BuildPrivateShop",			shopBuildPrivateShop,			METH_VARARGS },
-#ifdef ENABLE_CHEQUE_SYSTEM
-		{ "GetItemCheque",				shopGetItemCheque,				METH_VARARGS },
-		{ "GetPrivateShopItemCheque",	shopGetPrivateShopItemCheque,	METH_VARARGS },
-#endif
 		{ NULL,							NULL,							NULL },
 	};
 	PyObject * poModule = Py_InitModule("shop", s_methods);

@@ -364,9 +364,6 @@ typedef struct packet_shop_item
 {
 	DWORD		vnum;
 	long long	price;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	DWORD		cheque;
-#endif
 	BYTE		count;
 	BYTE		display_pos;
 	long		alSockets[ITEM_SOCKET_SLOT_MAX_NUM];

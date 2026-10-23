@@ -270,9 +270,6 @@ namespace ikashop
 		inline PythonSafeDict ExtractPythonDictShopItem(const auto& info) {
 			auto itemDict = ExtractPythonDictPlayerItem(info);
 			itemDict.set("price", info.price.yang);
-#ifdef ENABLE_CHEQUE_SYSTEM
-			itemDict.set("cheque", info.price.cheque);
-#endif
 			return itemDict;
 		}
 
@@ -461,9 +458,6 @@ public:
 		int64_t expiration;
 		int64_t price;
 		DWORD count = 1;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		int cheque = 0;
-#endif
 	};
 #endif
 

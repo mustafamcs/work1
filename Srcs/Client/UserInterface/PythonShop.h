@@ -41,17 +41,10 @@ class CPythonShop : public CSingleton<CPythonShop>
 
 		void ClearPrivateShopStock();
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		void AddPrivateShopItemStock(TItemPos ItemPos, BYTE byDisplayPos, long long dwPrice, DWORD dwCheque);
-#else
 		void AddPrivateShopItemStock(TItemPos ItemPos, BYTE byDisplayPos, long long dwPrice);
-#endif
 
 		void DelPrivateShopItemStock(TItemPos ItemPos);
 		long long GetPrivateShopItemPrice(TItemPos ItemPos);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		int GetPrivateShopItemCheque(TItemPos ItemPos);
-#endif
 		void BuildPrivateShop(const char * c_szName);
 
 	protected:

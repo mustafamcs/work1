@@ -1592,13 +1592,6 @@ bool CPythonNetworkStream::RecvPointChange()
 			}
 		}
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		else if (POINT_CHEQUE == PointChange.Type)
-		{
-			if (PointChange.amount > 0)
-				PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "OnPickCheque", Py_BuildValue("(i)", PointChange.amount));
-		}
-#endif
 	}
 #ifdef ENABLE_TEXT_LEVEL_REFRESH
 	else
@@ -1840,15 +1833,6 @@ bool CPythonNetworkStream::RecvShopPacket()
 			PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "OnShopError", Py_BuildValue("(s)", "NOT_ENOUGH_MONEY_EX"));
 			break;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		case SHOP_SUBHEADER_GC_NOT_ENOUGH_CHEQUE:
-			PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "OnShopError", Py_BuildValue("(s)", "NOT_ENOUGH_CHEQUE"));
-			break;
-
-		case SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_CHEQUE:
-			PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "OnShopError", Py_BuildValue("(s)", "NOT_ENOUGH_MONEY_CHEQUE"));
-			break;
-#endif
 
 		case SHOP_SUBHEADER_GC_SOLDOUT:
 			PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "OnShopError", Py_BuildValue("(s)", "SOLDOUT"));
@@ -1949,16 +1933,6 @@ bool CPythonNetworkStream::RecvExchangePacket()
 			__RefreshExchangeWindow();
 			break;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		case EXCHANGE_SUBHEADER_GC_CHEQUE_ADD:
-			if (exchange_packet.is_me)
-				CPythonExchange::Instance().SetChequeToSelf(exchange_packet.arg1);
-			else
-				CPythonExchange::Instance().SetChequeToTarget(exchange_packet.arg1);
-
-			__RefreshExchangeWindow();
-			break;
-#endif
 
 		case EXCHANGE_SUBHEADER_GC_ACCEPT:
 			if (exchange_packet.is_me)
@@ -1986,11 +1960,6 @@ bool CPythonNetworkStream::RecvExchangePacket()
 			Tracef("trade_less_elk");
 			break;
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		case EXCHANGE_SUBHEADER_GC_LESS_CHEQUE:
-			Tracef("trade_less_cheque");
-			break;
-#endif
 	};
 
 	return true;
@@ -2222,27 +2191,6 @@ bool CPythonNetworkStream::SendExchangeElkAddPacket(long long elk)
 	return SendSequence();
 }
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-bool CPythonNetworkStream::SendExchangeChequeAddPacket(DWORD elk)
-{
-	if (!__CanActMainInstance())
-		return true;
-
-	TPacketCGExchange	packet;
-
-	packet.header = HEADER_CG_EXCHANGE;
-	packet.subheader = EXCHANGE_SUBHEADER_CG_CHEQUE_ADD;
-	packet.arg1 = elk;
-
-	if (!Send(sizeof(packet), &packet))
-	{
-		Tracef("send_trade_cheque_add_packet Error\n");
-		return false;
-	}
-
-	return SendSequence();
-}
-#endif
 
 bool CPythonNetworkStream::SendExchangeItemAddPacket(TItemPos ItemPos, BYTE byDisplayPos)
 {

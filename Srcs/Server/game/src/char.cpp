@@ -668,22 +668,13 @@ void CHARACTER::OpenMyShop(const char * c_pszSign, TShopItemTable * pTable, BYTE
 
 //	int64_t nTotalMoney = 0;
 	long long nTotalMoney = 0;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	int64_t nTotalCheque = 0;
-#endif
 
 	for (int n = 0; n < bItemCount; ++n)
 	{
 		nTotalMoney += static_cast<long long>((pTable+n)->price);
-#ifdef ENABLE_CHEQUE_SYSTEM
-		nTotalCheque += static_cast<int64_t>((pTable + n)->cheque);
-#endif
 	}
 
 	nTotalMoney += static_cast<long long>(GetGold());
-#ifdef ENABLE_CHEQUE_SYSTEM
-	nTotalCheque += static_cast<int64_t>(GetCheque());
-#endif
 
 //	if (GOLD_MAX <= nTotalMoney)
 //	{
@@ -700,14 +691,6 @@ void CHARACTER::OpenMyShop(const char * c_pszSign, TShopItemTable * pTable, BYTE
 	}
 	
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-	if (CHEQUE_MAX <= nTotalCheque)
-	{
-		sys_err("[OVERFLOW_CHEQUE] Overflow (CHEQUE_MAX) id %u name %s", GetPlayerID(), GetName());
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You can't create a shop with more than %d won."), CHEQUE_MAX - 1);
-		return;
-	}
-#endif
 
 	char szSign[SHOP_SIGN_MAX_LEN+1];
 	strlcpy(szSign, c_pszSign, sizeof(szSign));
@@ -1264,9 +1247,6 @@ void CHARACTER::CreatePlayerProto(TPlayerTable & tab)
 	tab.job			= m_points.job;
 	tab.part_base	= m_pointsInstant.bBasePart;
 	tab.skill_group	= m_points.skill_group;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	tab.cheque = GetCheque();
-#endif
 
 	DWORD dwPlayedTime = (get_dword_time() - m_dwPlayStartTime);
 
@@ -1686,9 +1666,6 @@ void CHARACTER::PointsPacket()
 
 	for (int i = POINT_ST; i < POINT_MAX_NUM; ++i)
 		pack.points[i] = GetPoint(i);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	pack.points[POINT_CHEQUE] = GetCheque();
-#endif
 
 	GetDesc()->Packet(pack);
 }
@@ -1864,9 +1841,6 @@ void CHARACTER::SetPlayerProto(const TPlayerTable * t)
 	m_bFrozen = (GetLevel() > ProfileLevelCap());
 	if (m_bFrozen)
 		ChatPacket(CHAT_TYPE_INFO, "Seviyen bu profilde donduruldu. Saldiri yapamazsin, ticaret ve pazar kullanamazsin, esya birakamazsin, exp ve yang kazanamazsin.");
-#ifdef ENABLE_CHEQUE_SYSTEM
-	SetCheque(t->cheque);
-#endif
 
 	SetMapIndex(t->lMapIndex);
 	SetXYZ(t->x, t->y, t->z);
@@ -2287,9 +2261,6 @@ void CHARACTER::ComputePoints()
 
 	const long lHPRecovery = GetPoint(POINT_HP_RECOVERY);
 	const long lSPRecovery = GetPoint(POINT_SP_RECOVERY);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	int iCheque = GetPoint(POINT_CHEQUE);
-#endif
 
 	memset(m_pointsInstant.points, 0, sizeof(m_pointsInstant.points));
 	BuffOnAttr_ClearAll();
@@ -2324,9 +2295,6 @@ void CHARACTER::ComputePoints()
 
 	SetPoint(POINT_HP_RECOVERY, lHPRecovery);
 	SetPoint(POINT_SP_RECOVERY, lSPRecovery);
-#ifdef ENABLE_CHEQUE_SYSTEM
-	SetPoint(POINT_CHEQUE, iCheque);
-#endif
 
 	int iMaxHP, iMaxSP;
 	int iMaxStamina;
@@ -3367,21 +3335,6 @@ void CHARACTER::PointChange(BYTE type, long long amount, bool bAmount, bool bBro
 			SetMaxStamina(GetMaxStamina() + amount);
 			val = GetMaxStamina();
 			break;
-#ifdef ENABLE_CHEQUE_SYSTEM
-		case POINT_CHEQUE:
-		{
-			const int64_t nTotalCheque = static_cast<int64_t>(GetCheque()) + static_cast<int64_t>(amount);
-			if (CHEQUE_MAX <= nTotalCheque)
-			{
-				sys_err("[OVERFLOW_CHEQUE] OriCheque %d AddedCheque %d id %u Name %s ", GetCheque(), amount, GetPlayerID(), GetName());
-				LogManager::instance().CharLog(this, GetCheque() + amount, "OVERFLOW_CHEQUE", "");
-				return;
-			}
-			SetCheque(GetCheque() + amount);
-			val = GetCheque();
-		}
-		break;
-#endif
 
 		case POINT_GOLD:
 			{
@@ -7373,66 +7326,6 @@ bool CHARACTER::IkarusShopFloodCheck(ShopActionWeight weight)
 }
 #endif
 
-#if defined(ENABLE_CHEQUE_SYSTEM) && defined(ENABLE_WON_EXCHANGE_WINDOW)
-bool CHARACTER::WonExchange(const std::string & option, int value)
-{
-	if (!CanWarp())
-	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You cannot exchange the won right now. Close some windows."));
-		return false;
-	}
-
-	if (value <= 0)
-	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Invalid won exchange value parameter %d."), value);
-		return false;
-	}
-
-	if (option == "sell")
-	{
-		const auto totalYang = static_cast<long long>(value) * YANG_PER_CHEQUE;
-		if (GetCheque() < value)
-		{
-			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You don't have enough won for the exchange. Required %d, owned %d."), value, GetCheque());
-			return false;
-		}
-		if (GetGold() + totalYang > GOLD_MAX)
-		{
-			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You have too many yangs for the exchange. Reduce your yangs first."));
-			return false;
-		}
-
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You successfully sold %d won for %lld yangs."), value, totalYang);
-		PointChange(POINT_GOLD, totalYang, true);
-		PointChange(POINT_CHEQUE, -value, true);
-	}
-	else if (option == "buy")
-	{
-		const auto totalYang = static_cast<long long>(value) * YANG_PER_CHEQUE;
-		if (GetGold() < totalYang)
-		{
-			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You don't have enough yangs for the exchange. Required %lld, owned %d."), totalYang, GetGold());
-			return false;
-		}
-		if (GetCheque() + value > CHEQUE_MAX)
-		{
-			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You have too many won for the exchange. Reduce your won first."));
-			return false;
-		}
-
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You successfully bought %d won for %lld yangs."), value, totalYang);
-		PointChange(POINT_GOLD, -totalYang, true);
-		PointChange(POINT_CHEQUE, value, true);
-	}
-	else
-	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Invalid parameter for the won exchange. Reported."));
-		return false;
-	}
-
-	return true;
-}
-#endif
 
 #ifdef ENABLE_ACCE_COSTUME_SYSTEM
 std::vector<LPITEM> CHARACTER::GetAcceMaterials()

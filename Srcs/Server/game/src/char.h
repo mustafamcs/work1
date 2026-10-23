@@ -314,9 +314,6 @@ enum EPointTypes
 	POINT_RESIST_MAGIC_REDUCTION = 144,
 #endif
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-	POINT_CHEQUE = 145,
-#endif
 
 	POINT_RESIST_MOUNT_FALL		= 146, //unk
 	POINT_RESIST_HUMAN			= 147,
@@ -413,9 +410,6 @@ typedef struct character_point
 	BYTE			level;
 	DWORD			exp;
 	long long		gold;
-#ifdef ENABLE_CHEQUE_SYSTEM
-	int				cheque;
-#endif
 
 	int				hp;
 	int				sp;
@@ -1271,12 +1265,6 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 		void			GiveGold(long long iAmount);
 		// End of Money
 
-#ifdef ENABLE_CHEQUE_SYSTEM
-		INT				GetCheque() const { return m_points.cheque; }
-		void			SetCheque(int cheque) { m_points.cheque = cheque; }
-		void			GiveCheque(INT iAmount);
-		bool			DropCheque(INT gold);
-#endif
 
 		////////////////////////////////////////////////////////////////////////////////////////
 		// Shop related
@@ -2145,10 +2133,6 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 		}
 	// @fixme188 END
 
-#if defined(ENABLE_CHEQUE_SYSTEM) && defined(ENABLE_WON_EXCHANGE_WINDOW)
-	public:
-		bool	WonExchange(const std::string & option, int value);
-#endif
 
 #ifdef ENABLE_ACCE_COSTUME_SYSTEM
 	protected:
