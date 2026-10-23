@@ -167,6 +167,15 @@ struct hash<DebugPtr<T> > {
 }} // namespace std::tr1
 #else
 } // namespace boost
+
+namespace std {
+template<typename T>
+struct hash<DebugPtr<T> > {
+	size_t operator()(const DebugPtr<T>& v) const {
+		return reinterpret_cast<size_t>(v.Get());
+	}
+};
+} // namespace std
 #endif
 
 #endif // DEBUG_ALLOC

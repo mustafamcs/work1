@@ -18,6 +18,7 @@ class CGraphicImageInstance
 		void Destroy();
 
 		void Render();
+		void Render(const RECT* pClipRect);
 
 		void SetDiffuseColor(float fr, float fg, float fb, float fa);
 		void SetPosition(float fx, float fy);

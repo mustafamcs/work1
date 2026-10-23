@@ -76,8 +76,8 @@ bool __IS_TEST_SERVER_MODE__=false;
 
 #ifdef ENABLE_DAEMONPROTECTION
 #define DPDLL_FILENAME	"dpdll.dll"
-#define DPDLL_CRC32		0x48104810
-#define DPDLL_FILESIZE	1234567+4
+#define DPDLL_CRC32		0x7D71BDA4
+#define DPDLL_FILESIZE	86528
 #endif
 
 extern bool SetDefaultCodePage(DWORD codePage);

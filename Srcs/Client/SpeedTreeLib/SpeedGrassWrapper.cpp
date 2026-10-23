@@ -25,12 +25,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <vector>
-//#include "../Common Source/extgl.h"
-//#include "SpeedGrassWrapper.h"
-//#include "Scene.h"
-//#include "../Common Source/nv_dds.h"
-//#include "../Common Source/Random.h"
-//#include "TextureLayers.h"
+#include "SpeedGrassWrapper.h"
+#include "Constants.h"
+#include "../EterLib/ResourceManager.h"
+
+inline float GetRandom(float fMin, float fMax)
+{
+    return fMin + (fMax - fMin) * (float(rand()) / float(RAND_MAX));
+}
+
+inline float VecInterpolate(float fStart, float fEnd, float fPercent)
+{
+    return fStart + (fEnd - fStart) * fPercent;
+}
 
 using namespace std;
 
@@ -140,8 +147,11 @@ float CSpeedGrassWrapper::Color(float fX, float fY, const float* pNormal, float*
 	const float c_fColorRandomness = 0.01f;	// controls how much the r, g, and b components can vary
 	const float c_TopLight = 0.75f;
 
-	float afLowColor[4] = { 0.0f }, afHighColor[4] = { 0.0f };
-	if (m_pMapOutdoor->GetBrushColor(fX, fY, afLowColor, afHighColor))
+	float afLowColor[4] = { 0.0f, 0.0f, 0.0f, 1.0f }, afHighColor[4] = { 0.0f };
+	// CMapOutdoor forward-declared; motor bu demo dosyasini kullanmadigi icin
+	// GameLib bagimliligi eklemeden arazi rengi alinamaz (notr renk doner).
+	// Baglarsaniz: if (m_pMapOutdoor->GetBrushColor(fX, fY, afLowColor, afHighColor))
+	if (false)
 	{
 		pBottomColor[0] = afLowColor[2];
 		pBottomColor[1] = afLowColor[1];
@@ -177,8 +187,9 @@ float CSpeedGrassWrapper::Color(float fX, float fY, const float* pNormal, float*
 float CSpeedGrassWrapper::Height(float fX, float fY, float* pNormal) const
 {
 	float fHeight = 0.0f;
-	float afPos[3] = { fX, fY, 0.0f };
-	fHeight = m_pMapOutdoor->GetHeight(afPos);
+	// CMapOutdoor forward-declared; motor bu demo dosyasini kullanmadigi icin
+	// GameLib bagimliligi eklemeden arazi yuksekligi 0 dondurulur.
+	// Baglarsaniz: float afPos[3] = { fX, fY, 0.0f }; fHeight = m_pMapOutdoor->GetHeight(afPos);
 
 	pNormal[0] = 0.0f;
 	pNormal[1] = 0.0f;

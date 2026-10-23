@@ -85,15 +85,108 @@
 #define ENABLE_GOTO_LAG_FIX				// isinlaninca ViewCleanup yalniz oyuncuda; moblarda gereksiz temizlik lag'i
 #define __ENABLE_STEALTH_FIX__			// gizliyken efektler gorunmez
 #define ENABLE_TEXT_LEVEL_REFRESH		// /advance sonrasi isim ustu seviye yazisi yenilenir
-// ENABLE_DAEMONPROTECTION kapali: dpdll.dll CRC/boyut yer tutucu, dosya yoksa istemci acilista kapanir
+#define ENABLE_DAEMONPROTECTION					// dpdll.dll watchdog (CRC/size UserInterface.cpp'de, build: 99_dpdll_build.bat)
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
-// ### Veritabani / Proto ###
-// #define ENABLE_PROTOSTRUCT_AUTODETECT
-// #define ENABLE_EXPTABLE_FROMDB
-// #define ENABLE_ITEMAWARD_REFRESH
-// #define ENABLE_DEFAULT_PRIV
+// ### Yapiyai Degistirmeyen — AKTIF ###
+// Yeni yuva/esya/sistem yok; veri kaynagi, bakim, log ve client arayuz/veri
+// okuma tercihleri. app.X olarak python'a da aktarilir.
+//
+// --- Veri kaynagi / bakim ---
+#define ENABLE_PROTOSTRUCT_AUTODETECT			// proto revizyonunu boyuttan algilar
+#define ENABLE_EXPTABLE_FROMDB				// exp egrisi DB'deki exp_table'dan okunur
+#define ENABLE_ITEMAWARD_REFRESH				// item_award 5 sn'de bir tazelenir
+#define ENABLE_DEFAULT_PRIV					// suresi dolan priv_settings satirlarini temizler
+//
+// --- Log / debug / GM araclari ---
+#define ENABLE_SHOWNPCLEVEL					// npc uzerinde seviye gosterir
+#define ENABLE_CMD_PLAYER					// /player GM komutu
+#define ENABLE_CMD_IPURGE_EX				// /ipurge GM komutu
+#define ENABLE_SYSLOG_PACKET_SENT				// giden paketleri syslog'a yazar
+#define ENABLE_PRINT_RECV_PACKET_DEBUG			// gelen paketleri yazdirir
+#define USE_STACKTRACE					// kritik hatada stack trace (Windows: CaptureStackBackTrace+SymFromAddr)
+#define DEBUG_ALLOC						// debug allocator + DebugPtr
+//
+// --- Bilgi goruntuleme ---
+#define ENABLE_TARGET_INFORMATION_SYSTEM			// mob drop/level bilgi penceresi
+#define WJ_SHOW_MOB_INFO					// mob uzerinde bilgi gosterimi
+#define ENABLE_SHOW_MOBAIFLAG					// mob ailag gosterimi
+#define ENABLE_SHOW_MOBLEVEL					// mob seviye gosterimi
+#define WJ_SHOW_MOB_INFO_EX					// genisletilmis mob bilgisi
+#define VIEW_OTHER_EMPIRE_PLAYER_TARGET_BOARD 1		// diger krallik oyuncularinda hedef tahtasi
+//
+// --- Client arayuz ---
+#define ENABLE_HIGHLIGHT_NEW_ITEM				// yeni dusen/takas esyasi vurgu
+#define ENABLE_MOUSEWHEEL_EVENT				// mouse wheel event destegi
+#define ENABLE_MINIMAP_WHITEMARK_CIRCLE			// minimap beyaz isaret dairesi
+#define ENABLE_MINIMAP_TELEPORT_CLICK				// gm minimap tikla-isinlan
+#define ENABLE_INGAME_CONSOLE					// oyun ici konsol
+#define ENABLE_DISCORD_RPC					// discord rich presence
+#define ENABLE_DISCORD_JOIN_URL					// discord join url
+#define ENABLE_EMOJI_SYSTEM					// sohbette emoji
+#define ENABLE_CHAT_COLOR_SYSTEM				// sohbet renk sistemi
+#define ENABLE_ENVIRONMENT_EFFECT_OPTION			// cevre efekti secenekleri
+#define SHOW_ONLY_ACTIVE_SKILL					// sadece aktif beceriler
+#define HIDE_SUPPORT_SKILL_POINT				// destek beceri puani gizle
+#define ENABLE_4TH_AFF_SKILL_DESC				// 4. etki beceri aciklamasi
+#define ENABLE_FULLSTONE_DETAILS				// tasin tum bonuslarini goster
+#define ENABLE_REFINE_PCT					// refine diyalogunda basari yuzdesi
+#define ENABLE_PASTE_FEATURE					// ctrl+v aktif
+#define ENABLE_ENGNUM_DELETE_CODE				// karakter silme kodu sayisal
+#define NOT_NEED_DELETE_CODE					// silme kodu gerekmesin
+#define ENABLE_CLEAN_DATA_IF_FAIL_LOGIN			// basarisiz giriste id/sifre silme
+#define ENABLE_CHAT_COMMAND					// sohbet komutlari
+#define ENABLE_LAST_SENTENCE_STACK				// son sohbet satiri stack
+#define ENABLE_INSULT_CHECK					// kufur kontrolu
+#define ENABLE_SELF_STACK_SCROLLS				// scroll kendinden stack
+#define ENABLE_RECURSIVE_UI_DESTROY				// ui bilesenlerini zorla temizle
+#define ENABLE_CMDCHAT_VARIADIC_ARGS				// cmdchat degisken arguman
+#define ITEM_MALL_BUTTON_ENABLE					// envanter item mall butonu
+#define LEAVE_BUTTON_FOR_POTAL					// portaldan ayrilma butonu
+#define SYSTEM_MENU_FOR_PORTAL					// sistem menusu portal
+#define ENABLE_DEFAULT_UI_BOARD 1				// varsayilan board
+#define ENABLE_RANDOM_CHANNEL_SEL				// istemci acilisinda rastgele kanal
+#define ENABLE_SERVER_SELECT_RENEWAL			// renewal sunucu secim modu (loginwindow.py ServerList/ChannelList'i her durumda olusturur)
+//
+// --- Render / dosya okuma ---
+#define WEAPON_SPECULAR_ENABLE 1				// silah specular
+#define DEFAULT_HAIR_COLOR_ENABLE 1				// HAIR_COLOR_ENABLE C++ global ile cakisiyor - py'ya HAIR_COLOR_ENABLE olarak aktarilir
+#define ENABLE_HAIR_SPECULAR					// sac specular
+#define ENVIRONMENT_NIGHT "d:/ymir work/environment/moonlight04.msenv"	// gece ortami
+#define FOG_LEVEL0 4800.0f					// sis seviye 0
+#define FOG_LEVEL1 9600.0f					// sis seviye 1
+#define FOG_LEVEL2 12800.0f					// sis seviye 2
+#define ENABLE_FOG_LOAD						// fog dosyasi yukleme
+#define USE_SPEEDGRASS						// speedtree grass render (SpeedGrassRT include duzeltildi)
+#define __BL_CLIP_MASK__					// clip mask render (CGraphicImageInstance::Render(const RECT*) eklendi)
+#define ENABLE_SKIN_EXTENDED					// genisletilmis skin
+#define ENABLE_WALK_RUN_ANI_ALTERNATIVE			// alternatif kosma animasyonu
+#define ENABLE_SIMPLE_REFINED_EFFECT_CHECK			// basit efekt kontrolu
+#define USE_RELATIVE_PATH						// goreceli dosya yollari
+#define USE_CRAMERS_RULE						// cramers rule matematik
+#define ENABLE_LOAD_ITEM_LIST_FROM_ROOT			// item_list'i root'tan oku
+#define ENABLE_LOAD_ITEM_SCALE_FROM_ROOT			// item_scale'i root'tan oku
+#define ENABLE_LOAD_SKILL_TABLE_FROM_ROOT			// skill_table'i root'tan oku
+#define ENABLE_LOAD_ALTER_ITEMICON				// itemicon'u root'tan oku
+#define ENABLE_ATLASINFO_FROM_ROOT				// atlasinfo'yu root'tan oku
+#define ENABLE_NPC_WITHOUT_COLLISIONS				// npc carpisma yok
+#define ENABLE_PETS_WITHOUT_COLLISIONS				// pet carpisma yok
+#define ENABLE_SHOPS_WITHOUT_COLLISIONS				// dukkan carpisma yok
+#define ENABLE_MOUNTS_WITHOUT_COLLISIONS			// binek carpisma yok
+//
+// --- Login / parametre ---
+#define SCREENSHOT_CWDSAVE					// ekran goruntusu cwd kaydet
+#define SKIP_LOGIN_PHASE					// loginInfo.xml varsa auto-login (intrologin loginInfo=False bugi duzeltildi)
+#define SKIP_LOGIN_PHASE_SUPPORT_CHANNEL			// skip-login kanal destegi
+#define FULL_BACK_IMAGE						// login tam ekran arkaplan
+#define SELECT_CHAR_NO_DELAY 0.5					// karakter secim bekleme suresi
+#define LOGIN_DELAY_SEC 0.0f					// login gecikme suresi
+#define SUB2_LOADING_ENABLE 1					// alt yukleme ekrani
+#define EXPANDED_COMBO_ENABLE 1					// genisletilmis combo
+#define CONVERT_EMPIRE_LANGUAGE_ENABLE 0			// krallik dili cevirisi
+#define MINIMAP_POSITIONINFO_ENABLE 1				// minimap konum bilgisi
+#define CHRNAME_COLOR_INDEX 0					// isim renk indeksi
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -149,7 +242,6 @@
 // #define ENABLE_UNIQUE_ITEM_AUTOSPLIT
 // #define ENABLE_ADDSTONE_FAILURE
 // #define ENABLE_FIREWORK_STUN
-// #define ENABLE_HIGHLIGHT_NEW_ITEM // yeni dusen/takas esyasi vurgu
 // #define ENABLE_EXTEND_ITEM_AWARD
 #ifdef ENABLE_EXTEND_ITEM_AWARD
 	// #define USE_ITEM_AWARD_CHECK_ATTRIBUTES // item_attr lvl1-5 min-max limiti asimini engeller
@@ -177,7 +269,6 @@
 // #define ENABLE_AURA_COSTUME_SYSTEM
 // #define ENABLE_CHANGELOOK_SYSTEM
 // #define ENABLE_LVL115_ARMOR_EFFECT
-// #define ENABLE_HAIR_SPECULAR
 // #define USE_WEAPON_COSTUME_WITH_EFFECT
 // #define USE_BODY_COSTUME_WITH_EFFECT
 //////////////////////////////////////////////////////////////////////////
@@ -266,65 +357,19 @@ enum eCommonDefines {
 // #define ENABLE_CMD_WARP_IN_DUNGEON
 // #define ENABLE_FISHINGROD_RENEWAL
 // #define ENABLE_PICKAXE_RENEWAL
-// #define ENABLE_TARGET_INFORMATION_SYSTEM // Mob drop info
-// #define WJ_SHOW_MOB_INFO
-#ifdef WJ_SHOW_MOB_INFO
-// #define ENABLE_SHOW_MOBAIFLAG
-// #define ENABLE_SHOW_MOBLEVEL
-// #define WJ_SHOW_MOB_INFO_EX
-#endif
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
 // ### Istemci Arayuz ve Gorsel ###
-// #define ENABLE_DISCORD_RPC
-// #define ENABLE_DISCORD_JOIN_URL
-// #define ENABLE_EMOJI_SYSTEM
-// #define ENABLE_MOUSEWHEEL_EVENT
-// #define ENABLE_MINIMAP_WHITEMARK_CIRCLE
-// #define ENABLE_MINIMAP_TELEPORT_CLICK // gm minimap tikla-isinlan
-// #define ENABLE_INGAME_CONSOLE
 // #define ENABLE_CONQUEROR_UI
 // #define ENABLE_CONQUEROR_LEVEL
-// #define ENABLE_ENVIRONMENT_EFFECT_OPTION
-// #define __BL_CLIP_MASK__
-// #define ENABLE_4TH_AFF_SKILL_DESC
-// #define ENABLE_ATLASINFO_FROM_ROOT
-//////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////
-// ### Paket/Dosya Okuma (client) ###
-// #define ENABLE_LOAD_ITEM_LIST_FROM_ROOT
-// #define ENABLE_LOAD_ITEM_SCALE_FROM_ROOT
-// #define ENABLE_LOAD_SKILL_TABLE_FROM_ROOT
-// #define ENABLE_LOAD_ALTER_ITEMICON
-// #define ENABLE_SKIN_EXTENDED
-// #define ENABLE_WALK_RUN_ANI_ALTERNATIVE
-// #define ENABLE_NPC_WITHOUT_COLLISIONS
-#ifndef ENABLE_NPC_WITHOUT_COLLISIONS
-// #define ENABLE_PETS_WITHOUT_COLLISIONS
-// #define ENABLE_SHOPS_WITHOUT_COLLISIONS
-// #define ENABLE_MOUNTS_WITHOUT_COLLISIONS
-#endif
-// #define ENABLE_FOG_LOAD
-//#define USE_CRAMERS_RULE
-// #define USE_SPEEDGRASS   // Constants.h hicbir yerde include edilmiyor - orijinalde kapaliydi
-// #define ENABLE_SIMPLE_REFINED_EFFECT_CHECK
-// #define USE_RELATIVE_PATH
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
 // ### GM ve Debug ###
-// #define ENABLE_CMD_PLAYER
-// #define ENABLE_CMD_IPURGE_EX
-// #define ENABLE_GENERAL_CMD
-// #define ENABLE_GENERAL_CONFIG
-// #define ENABLE_SHOWNPCLEVEL
-// #define DEBUG_ALLOC                  // debug allocator/DebugPtr sistemi (acinca USE_DEBUG_PTR otomatik gelir)
-// #define ENABLE_SYSLOG_PACKET_SENT // debug purposes
-// #define ENABLE_PRINT_RECV_PACKET_DEBUG // gelen paketleri yazdir
-// #define ENABLE_GOOGLE_TEST
-// #define USE_STACKTRACE
+#define ENABLE_GENERAL_CMD					// ek GENERAL_CMD dosyalari varsa yukler (yoksa no-op)
+#define ENABLE_GENERAL_CONFIG					// ek GENERAL_* config dosyalari varsa yukler (yoksa no-op)
+#define ENABLE_GOOGLE_TEST					// unittest modu (Windows'ta derleme-korumali, no-op)
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -333,44 +378,16 @@ enum eCommonDefines {
 // Aktif: #define X / #define X <deger>   Kapali: // #define X
 
 // #define ENABLE_NEW_LEVELSKILL_SYSTEM    // 5 (B,M,G,P,F) beceri .mse yukler
-// #define ENABLE_RANDOM_CHANNEL_SEL       // istemci acilisinda rastgele kanal
-// #define ENABLE_CLEAN_DATA_IF_FAIL_LOGIN // basarisiz giriste id/sifre silme
-// #define ENABLE_PASTE_FEATURE              // ctrl+v aktif
-// #define ENABLE_FULLSTONE_DETAILS          // tasin tum bonuslarini goster
-// #define ENABLE_REFINE_PCT               // refine diyalogunda basari yuzdesi
 // #define EXTRA_UI_FEATURE                  // ekstra ui ozellikleri
 // #define NEW_678TH_SKILL_ENABLE            // 6. savasci/ninja becerileri
-// #define SELECT_CHAR_NO_DELAY 0.5          // karakter secim bekleme suresi
 // #define ENABLE_ACTIVE_PET_SEAL_EFFECT     // pet muhru aktif efekti
-// #define ENABLE_RECURSIVE_UI_DESTROY     // ui bilesenlerini zorla temizle
-// #define ENABLE_CMDCHAT_VARIADIC_ARGS      // cmdchat degisken arguman
-// #define ENABLE_SELF_STACK_SCROLLS         // scroll kendinden stack
 #define ENABLE_SAVE_ACCOUNT               // hesap kaydetme
-// #define ENABLE_ENGNUM_DELETE_CODE         // karakter silme kodu sayisal
-// #define ENABLE_CHAT_COMMAND               // sohbet komutlari
-// #define ENABLE_LAST_SENTENCE_STACK        // son sohbet satiri stack
-// #define ENABLE_INSULT_CHECK               // kufur kontrolu
 // #define DISABLE_GUILD_SKILL             // lonca becerisi kapali
 // #define DISABLE_DECLARE_WAR             // savas ilani kapali
-// #define ENABLE_DEFAULT_UI_BOARD 1         // ikarus shop varsayilan board
-// #define ITEM_MALL_BUTTON_ENABLE           // envanter item mall butonu
-// #define LEAVE_BUTTON_FOR_POTAL          // portaldan ayrilma butonu
-// #define NOT_NEED_DELETE_CODE            // silme kodu gerekmesin
-// #define SCREENSHOT_CWDSAVE                // ekran goruntusu cwd kaydet
-// #define SKIP_LOGIN_PHASE                // login asamasini atla
-// #define SKIP_LOGIN_PHASE_SUPPORT_CHANNEL
-// #define FULL_BACK_IMAGE                 // login tam ekran arkaplan
-// #define VIRTUAL_KEYBOARD_RAND_KEY         // sanal klavye karisik tus
-// #define LOGIN_DELAY_SEC 0.0f              // login gecikme suresi
-// #define VIRTUAL_KEYBOARD_NUM_KEYS 46      // sanal klavye tus sayisi
-// #define SHOW_ONLY_ACTIVE_SKILL          // sadece aktif beceriler
-// #define HIDE_SUPPORT_SKILL_POINT          // destek beceri puani gizle
-// #define SYSTEM_MENU_FOR_PORTAL          // sistem menusu portal
 // #define ENABLE_DRAGON_GATE              // pack ui scriptleri (app.X sorgusu)
 // #define ENABLE_MERCENARY_SYSTEM
 // #define ENABLE_SUNGMAHEE_GATE
 // #define ENABLE_ADDITIONAL_EQUIPMENT_PAGE
-// #define ENABLE_SERVER_SELECT_RENEWAL
 // #define ENABLE_PREMIUM_PRIVATE_SHOP
 // #define ENABLE_AUTO_SYSTEM
 
@@ -382,27 +399,15 @@ enum eCommonDefines {
 // #define PVPMODE_ACCELKEY_ENABLE 1
 // #define PVPMODE_ACCELKEY_DELAY 0.5f
 // #define PVPMODE_PROTECTED_LEVEL 15
-// #define FOG_LEVEL0 4800.0f
-// #define FOG_LEVEL1 9600.0f
-// #define FOG_LEVEL2 12800.0f
-// #define CHRNAME_COLOR_INDEX 0
-// #define ENVIRONMENT_NIGHT "d:/ymir work/environment/moonlight04.msenv"
 // #define HIGH_PRICE 500000
 // #define MIDDLE_PRICE 50000
 // #define ERROR_METIN_STONE 28960
-// #define SUB2_LOADING_ENABLE 1
-// #define EXPANDED_COMBO_ENABLE 1
-// #define CONVERT_EMPIRE_LANGUAGE_ENABLE 0
 // #define USE_ITEM_WEAPON_TABLE_ATTACK_BONUS 0
 // #define ADD_DEF_BONUS_ENABLE 0
 // #define LOGIN_COUNT_LIMIT_ENABLE 0
 // #define USE_SKILL_EFFECT_UPGRADE_ENABLE 1
-// #define VIEW_OTHER_EMPIRE_PLAYER_TARGET_BOARD 1
 // #define GUILD_MONEY_PER_GSP 100
 // #define GUILD_WAR_TYPE_SELECT_ENABLE 1
 // #define TWO_HANDED_WEAPON_ATT_SPEED_DECREASE_VALUE 10
-// #define DEFAULT_HAIR_COLOR_ENABLE 1       // HAIR_COLOR_ENABLE C++ global ile cakisiyor - py'ya HAIR_COLOR_ENABLE olarak aktarilir
-// #define WEAPON_SPECULAR_ENABLE 1
-// #define MINIMAP_POSITIONINFO_ENABLE 1
 
 #endif // __INC_METIN2_CONTROLS_H__

@@ -21,11 +21,24 @@
 //		Web:   http://www.idvinc.com
 
 #include "StdAfx.h"
+#include "SpeedGrassRT.h"
 #include "BoundaryShapeManager.h"
+#include "Constants.h"
+#include <stdlib.h>
 
 namespace { char dummy; }; // solve warning lnk4221
 
 #ifdef USE_SPEEDGRASS
+
+inline float GetRandom(float fMin, float fMax)
+{
+    return fMin + (fMax - fMin) * (float(rand()) / float(RAND_MAX));
+}
+
+inline int GetRandom(int nMin, int nMax)
+{
+    return nMin + rand() % (nMax - nMin + 1);
+}
 
 inline float VecInterpolate(float fStart, float fEnd, float fPercent)
 {
@@ -318,7 +331,7 @@ void CSpeedGrassRT::Cull(void)
 		anFrustumCellsMax[0] = min(anFrustumCellsMax[0], m_nNumRegionCols - 1);
 		anFrustumCellsMax[1] = min(anFrustumCellsMax[1], m_nNumRegionRows - 1);
 
-		for (i = anFrustumCellsMin[0]; i <= anFrustumCellsMax[0]; ++i)
+		for (int i = anFrustumCellsMin[0]; i <= anFrustumCellsMax[0]; ++i)
 			for (int j = anFrustumCellsMin[1]; j <= anFrustumCellsMax[1]; ++j)
 			{
 				SRegion* pRegion = m_pRegions + GetRegionIndex(j, i);

@@ -1948,11 +1948,6 @@ void initapp()
 	#else
 		PyModule_AddIntConstant(poModule, "FULL_BACK_IMAGE", 0);
 	#endif
-	#ifdef VIRTUAL_KEYBOARD_RAND_KEY
-		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_RAND_KEY", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_RAND_KEY", 0);
-	#endif
 	#ifdef SHOW_ONLY_ACTIVE_SKILL
 		PyModule_AddIntConstant(poModule, "SHOW_ONLY_ACTIVE_SKILL", 1);
 	#else
@@ -2042,11 +2037,6 @@ void initapp()
 		PyModule_AddObject(poModule, "LOGIN_DELAY_SEC", PyFloat_FromDouble(LOGIN_DELAY_SEC));
 	#else
 		PyModule_AddObject(poModule, "LOGIN_DELAY_SEC", PyFloat_FromDouble(0.0));
-	#endif
-	#ifdef VIRTUAL_KEYBOARD_NUM_KEYS
-		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_NUM_KEYS", VIRTUAL_KEYBOARD_NUM_KEYS);
-	#else
-		PyModule_AddIntConstant(poModule, "VIRTUAL_KEYBOARD_NUM_KEYS", 0);
 	#endif
 	#ifdef ENABLE_DRAGON_GATE
 		PyModule_AddIntConstant(poModule, "ENABLE_DRAGON_GATE", 1);

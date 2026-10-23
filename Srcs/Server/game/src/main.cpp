@@ -77,7 +77,8 @@
 #endif
 
 #ifdef USE_STACKTRACE
-#include <execinfo.h>
+#include <dbghelp.h>
+#pragma comment(lib, "dbghelp.lib")
 #endif
 
 extern void WriteVersion();
@@ -137,19 +138,27 @@ void ContinueOnFatalError()
 {
 #ifdef USE_STACKTRACE
 	void* array[200];
-	std::size_t size;
-	char** symbols;
+	USHORT size = CaptureStackBackTrace(0, 200, array, NULL);
 
-	size = backtrace(array, 200);
-	symbols = backtrace_symbols(array, size);
+	HANDLE process = GetCurrentProcess();
+	SymInitialize(process, NULL, TRUE);
 
 	std::ostringstream oss;
 	oss << std::endl;
-	for (std::size_t i = 0; i < size; ++i) {
-		oss << "  Stack> " << symbols[i] << std::endl;
-	}
 
-	free(symbols);
+	char buffer[sizeof(SYMBOL_INFO) + MAX_SYM_NAME * sizeof(TCHAR)];
+	PSYMBOL_INFO pSymbol = (PSYMBOL_INFO)buffer;
+	pSymbol->SizeOfStruct = sizeof(SYMBOL_INFO);
+	pSymbol->MaxNameLen = MAX_SYM_NAME;
+
+	for (USHORT i = 0; i < size; ++i) {
+		DWORD64 address = (DWORD64)array[i];
+		DWORD64 displacement = 0;
+		if (SymFromAddr(process, address, &displacement, pSymbol))
+			oss << "  Stack> " << pSymbol->Name << " +0x" << std::hex << displacement << std::endl;
+		else
+			oss << "  Stack> 0x" << std::hex << address << std::endl;
+	}
 
 	sys_err("KritikHata %s", oss.str().c_str());
 #else

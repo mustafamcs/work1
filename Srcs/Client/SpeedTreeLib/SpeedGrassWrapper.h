@@ -21,10 +21,10 @@
 //		Web:   http://www.idvinc.com
 
 #pragma once
-//#include "SpeedGrassRT.h"
+#include "SpeedGrassRT.h"
+#include "../EterLib/GrpImageInstance.h"
 #ifdef USE_SPEEDGRASS
-//#include "../Common Source/IdvVertexBuffer.h"
-//#include <vector>
+#include <vector>
 
 // forward reference
 //class CScene;

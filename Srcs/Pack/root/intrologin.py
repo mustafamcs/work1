@@ -731,7 +731,7 @@ class LoginWindow(ui.ScriptWindow):
 		self.loginnedChannel = None
 		app.loggined = False
 
-		self.loginInfo = True
+		self.loginInfo = False
 
 		from xml.dom.minidom import parse
 		try:
@@ -775,6 +775,7 @@ class LoginWindow(ui.ScriptWindow):
 		except:
 			return
 
+		self.loginInfo = True
 		self.__SetServerInfo("%s, %s " % (server_name, channel_name))
 		id = getValue(logininfo, "id", "")
 		pwd = getValue(logininfo, "pwd", "")

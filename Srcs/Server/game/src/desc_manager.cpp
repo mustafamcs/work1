@@ -236,7 +236,7 @@ void DESC_MANAGER::DestroyLoginKey(const LPDESC d) const
 {
 	if (!d)
 		return;
-	DestroyLoginKey(d->GetAccountTable().login);
+	DestroyLoginKey(std::string_view(d->GetAccountTable().login));
 }
 
 void DESC_MANAGER::DestroyDesc(LPDESC d, bool bEraseFromSet)

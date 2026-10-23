@@ -303,8 +303,9 @@ window = {
 
 
 
-if not app.ENABLE_SERVER_SELECT_RENEWAL:
-	window["children"][4]["children"] = window["children"][4]["children"] + [
+# intrologin.py ServerList/ChannelList nesnelerine her durumda ihtiyac duyar;
+# renewal modda da olusturulmali (yoksa GetObject -> None -> liste bos kalir)
+window["children"][4]["children"] = window["children"][4]["children"] + [
 				## ListBox
 				{
 					"name" : "ServerList",
