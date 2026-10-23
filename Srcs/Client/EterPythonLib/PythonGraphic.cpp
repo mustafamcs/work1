@@ -3,8 +3,6 @@
 #include "../eterLib/JpegFile.h"
 #include "PythonGraphic.h"
 
-bool g_isScreenShotKey = false;
-
 void CPythonGraphic::Destroy()
 {
 }
@@ -154,16 +152,6 @@ void CPythonGraphic::SetGamma(float fGammaFactor)
 	ms_lpd3dDevice->SetGammaRamp(D3DSGR_NO_CALIBRATION, &NewRamp);
 }
 
-void GenScreenShotTag(const char* src, DWORD crc32, char* leaf, size_t leafLen)
-{
-	const char* p = src;
-	const char* n = p;
-	while (n = strchr(p, '\\'))
-		p = n + 1;
-
-	_snprintf(leaf, leafLen, "YMIR_METIN2:%s:0x%.8x", p, crc32);
-}
-
 bool CPythonGraphic::SaveJPEG(const char * pszFileName, LPBYTE pbyBuffer, UINT uWidth, UINT uHeight)
 {
 	return jpeg_save(pbyBuffer, uWidth, uHeight, 85, pszFileName) != 0;
@@ -303,84 +291,6 @@ bool CPythonGraphic::SaveScreenShot(const char * c_pszFileName)
 		return false;
 	}
 
-	if (g_isScreenShotKey)
-	{
-		FILE* srcFilePtr = fopen(c_pszFileName, "rb");
-		if (srcFilePtr)
-		{
-			fseek(srcFilePtr, 0, SEEK_END);
-			size_t fileSize = ftell(srcFilePtr);
-			fseek(srcFilePtr, 0, SEEK_SET);
-
-			char head[21];
-			size_t tailSize = fileSize - sizeof(head);
-			char* tail = (char*)malloc(tailSize);
-
-			fread(head, sizeof(head), 1, srcFilePtr);
-			fread(tail, tailSize, 1, srcFilePtr);
-			fclose(srcFilePtr);
-
-			char imgDesc[64];
-			GenScreenShotTag(c_pszFileName, GetCRC32(tail, tailSize), imgDesc, sizeof(imgDesc));
-
-			int imgDescLen = strlen(imgDesc) + 1;
-
-			unsigned char exifHeader[] = {
-				0xe1,
-				0, // blockLen[1],
-				0, // blockLen[0],
-				0x45,
-				0x78,
-				0x69,
-				0x66,
-				0x0,
-				0x0,
-				0x49,
-				0x49,
-				0x2a,
-				0x0,
-				0x8,
-				0x0,
-				0x0,
-				0x0,
-				0x1,
-				0x0,
-				0xe,
-				0x1,
-				0x2,
-				0x0,
-				imgDescLen, // textLen[0],
-				0, // textLen[1],
-				0, // textLen[2],
-				0, // textLen[3],
-				0x1a,
-				0x0,
-				0x0,
-				0x0,
-				0x0,
-				0x0,
-				0x0,
-				0x0,
-			};
-
-			exifHeader[2] = sizeof(exifHeader) + imgDescLen;
-
-			FILE* dstFilePtr = fopen(c_pszFileName, "wb");
-			//FILE* dstFilePtr = fopen("temp.jpg", "wb");
-			if (dstFilePtr)
-			{
-				fwrite(head, sizeof(head), 1, dstFilePtr);
-				fwrite(exifHeader, sizeof(exifHeader), 1, dstFilePtr);
-				fwrite(imgDesc, imgDescLen, 1, dstFilePtr);
-				fputc(0x00, dstFilePtr);
-				fputc(0xff, dstFilePtr);
-				fwrite(tail, tailSize, 1, dstFilePtr);
-				fclose(dstFilePtr);
-			}
-
-			free(tail);
-		}
-	}
 	return true;
 }
 

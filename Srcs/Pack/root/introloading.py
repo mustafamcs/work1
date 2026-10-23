@@ -23,7 +23,6 @@ import uiAttachMetin
 import uiPickMoney
 import uiChat
 import uiMessenger
-import uiHelp
 import uiWhisper
 import uiPointReset
 import uiShop

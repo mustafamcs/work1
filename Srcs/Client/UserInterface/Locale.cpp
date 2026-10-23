@@ -1,11 +1,6 @@
 #include "StdAfx.h"
 #include "Locale.h"
 #include "PythonApplication.h"
-#include "resource.h"
-#include "../eterBase/CRC32.h"
-#include "../eterpack/EterPackManager.h"
-#include "../eterLocale/Japanese.h"
-#include <windowsx.h>
 
 const char* LSS_YMIR		= "YMIR";
 const char* LSS_JAPAN		= "JAPAN";
@@ -206,30 +201,13 @@ bool LocaleService_IsCHEONMA()
 // END_OF_CHEONMA
 
 #if defined(LOCALE_SERVICE_EUROPE)
-#define _LSS_USE_LOCALE_CFG			1
-#define _LSS_SERVICE_NAME			LSS_EUROPE
-#endif
-
-#if defined(_LSS_USE_LOCALE_CFG)
-#if defined(_LSS_SERVICE_NAME)
-const char* LocaleService_GetName()				{ return _LSS_SERVICE_NAME;}
+const char* LocaleService_GetName()				{ return LSS_EUROPE; }
 #else
 const char* LocaleService_GetName()				{ return MULTI_LOCALE_SERVICE; }
 #endif
 unsigned int LocaleService_GetCodePage()		{ return MULTI_LOCALE_CODE; }
 const char*	LocaleService_GetLocaleName()		{ return MULTI_LOCALE_NAME; }
 const char*	LocaleService_GetLocalePath()		{ return MULTI_LOCALE_PATH; }
-#elif defined(_LSS_SERVICE_NAME)
-const char* LocaleService_GetName()				{ return _LSS_SERVICE_NAME;}
-unsigned int LocaleService_GetCodePage()		{ return _LSS_SERVICE_CODEPAGE; }
-const char*	LocaleService_GetLocaleName()		{ return _LSS_SERVICE_LOCALE_NAME; }
-const char*	LocaleService_GetLocalePath()		{ return _LSS_SERVICE_LOCALE_PATH; }
-#elif !defined(LOCALE_SERVICE_GLOBAL)
-const char* LocaleService_GetName()				{ return MULTI_LOCALE_SERVICE; }
-unsigned int LocaleService_GetCodePage()		{ return MULTI_LOCALE_CODE; }
-const char*	LocaleService_GetLocaleName()		{ return MULTI_LOCALE_NAME; }
-const char*	LocaleService_GetLocalePath()		{ return MULTI_LOCALE_PATH; }
-#endif
 
 void LocaleService_ForceSetLocale(const char* name, const char* localePath)
 {
@@ -242,119 +220,6 @@ void LocaleService_ForceSetLocale(const char* name, const char* localePath)
 		__SECURITY_KEY_STRING__ = "1234abcd5678efgh";
 }
 
-#if defined(LOCALE_SERVICE_GLOBAL)
-struct SLOCALEDATA
-{
-	const char* szServiceName;
-	const char* szLocaleName;
-	WORD		wCodePage;
-	const char*	szSecurityKey;
-} gs_stLocaleData[] = {
-	{ LSS_EUROPE,	"tr",			65001,	"1234abcd5678efgh"	},		// Turkey
-	{ NULL,			NULL,			0,		"testtesttesttest"	}
-};
-
-const char* LocaleService_GetName()
-{
-	return MULTI_LOCALE_SERVICE;
-}
-
-unsigned int LocaleService_GetCodePage()
-{
-	return MULTI_LOCALE_CODE;
-}
-
-const char*	LocaleService_GetLocaleName()
-{
-	return MULTI_LOCALE_NAME;
-}
-
-const char*	LocaleService_GetLocalePath()
-{
-	return MULTI_LOCALE_PATH;
-}
-
-static int gs_iLocale = -1;
-
-LRESULT CALLBACK SelectDlgProc( HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam )
-{
-	switch( uMsg ) {
-	case WM_INITDIALOG : {
-		char szLocalePath[256], szDisplayName[256];
-		for(int i=0; gs_stLocaleData[i].szServiceName; i++ ) {
-			sprintf(szLocalePath, "locale/%s/item_proto", gs_stLocaleData[i].szLocaleName);
-			if( CEterPackManager::Instance().isExist(szLocalePath)) {
-				sprintf(szDisplayName, "%s (%s, %d)", gs_stLocaleData[i].szLocaleName, gs_stLocaleData[i].szServiceName, gs_stLocaleData[i].wCodePage);
-				int iIndex = ListBox_AddString(GetDlgItem(hDlg, IDC_LOCALE_LIST), szDisplayName);
-				ListBox_SetItemData(GetDlgItem(hDlg, IDC_LOCALE_LIST), iIndex, i);
-			}
-		}
-		return TRUE;
-		}
-	case WM_COMMAND :
-		switch( LOWORD( wParam ) ) {
-		case IDC_LOCALE_LIST: {
-			int iSelected = ListBox_GetCurSel(GetDlgItem(hDlg, IDC_LOCALE_LIST));
-			switch(HIWORD(wParam)) {
-			case LBN_SELCHANGE :
-				gs_iLocale = ListBox_GetItemData(GetDlgItem(hDlg, IDC_LOCALE_LIST), iSelected);
-				break;
-			case LBN_DBLCLK :
-				gs_iLocale = ListBox_GetItemData(GetDlgItem(hDlg, IDC_LOCALE_LIST), iSelected);
-				::EndDialog(hDlg, 0);
-				break;
-			}
-			break;
-			}
-		case IDC_START: {
-			::EndDialog(hDlg, 0);
-			break;
-			}
-		case IDC_EXIT: {
-			gs_iLocale = -1;
-			::EndDialog(hDlg, 0);
-			break;
-			}
-		}
-		return FALSE;
-	}
-	return FALSE;
-}
-
-bool LocaleService_LoadGlobal(HINSTANCE hInstance)
-{
-	int nFoundLocales = 0;
-	char szLocalePath[256];
-
-	for(int i=0; gs_stLocaleData[i].szServiceName; i++ ) {
-		sprintf(szLocalePath, "locale/%s/item_proto", gs_stLocaleData[i].szLocaleName);
-		if( CEterPackManager::Instance().isExist(szLocalePath)) {
-			nFoundLocales++;
-			if(gs_iLocale == -1)
-				gs_iLocale = i;
-		}
-	}
-	if (gs_iLocale < 0)
-		return false;
-	if(nFoundLocales > 1)
-		::DialogBox(hInstance, MAKEINTRESOURCE(IDD_SELECT_LOCALE), NULL, (DLGPROC) SelectDlgProc);
-	if (gs_iLocale < 0)
-		return false;
-	strcpy(MULTI_LOCALE_SERVICE, gs_stLocaleData[gs_iLocale].szServiceName);
-	strcpy(MULTI_LOCALE_NAME, gs_stLocaleData[gs_iLocale].szLocaleName);
-	sprintf(MULTI_LOCALE_PATH, "locale/%s", gs_stLocaleData[gs_iLocale].szLocaleName);
-	MULTI_LOCALE_CODE = gs_stLocaleData[gs_iLocale].wCodePage;
-	if(gs_stLocaleData[gs_iLocale].szSecurityKey)
-		__SECURITY_KEY_STRING__ = gs_stLocaleData[gs_iLocale].szSecurityKey;
-	return true;
-}
-#else
-bool LocaleService_LoadGlobal(HINSTANCE hInstance)
-{
-	return false;
-}
-#endif
-
 bool LocaleService_IsYMIR()		{ return (stricmp( LocaleService_GetName(), LSS_YMIR ) == 0) || (stricmp( LocaleService_GetLocaleName(), "ymir" ) == 0);	}
 bool LocaleService_IsJAPAN()	{ return (stricmp( LocaleService_GetName(), LSS_JAPAN ) == 0) || (stricmp( LocaleService_GetLocaleName(), "japan" ) == 0);	}
 bool LocaleService_IsENGLISH()	{ return (stricmp( LocaleService_GetName(), LSS_ENGLISH ) == 0);	}
@@ -363,17 +228,6 @@ bool LocaleService_IsHONGKONG()	{ return (stricmp( LocaleService_GetName(), LSS_
 bool LocaleService_IsTAIWAN()	{ return (stricmp( LocaleService_GetName(), LSS_TAIWAN ) == 0);		}
 bool LocaleService_IsNEWCIBN()	{ return (stricmp( LocaleService_GetName(), LSS_NEWCIBN ) == 0);	}
 
-#if defined(LOCALE_SERVICE_WE_JAPAN)
-BOOL LocaleService_IsLeadByte( const char chByte )
-{
-	return ShiftJIS_IsLeadByte( chByte );
-}
-
-int LocaleService_StringCompareCI( LPCSTR szStringLeft, LPCSTR szStringRight, size_t sizeLength )
-{
-	return ShiftJIS_StringCompareCI( szStringLeft, szStringRight, sizeLength );
-}
-#else
 BOOL LocaleService_IsLeadByte( const char chByte )
 {
 	return (((unsigned char) chByte) & 0x80) != 0;
@@ -383,5 +237,4 @@ int LocaleService_StringCompareCI( LPCSTR szStringLeft, LPCSTR szStringRight, si
 {
 	return strnicmp( szStringLeft, szStringRight, sizeLength );
 }
-#endif
 

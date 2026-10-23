@@ -18,7 +18,6 @@ import uiMessenger
 import guild
 
 import ui
-import uiHelp
 import uiWhisper
 import uiPointReset
 import uiShop
@@ -184,7 +183,6 @@ class Interface(object):
 		wndGameButton.SetButtonEvent("STATUS", ui.__mem_func__(self.__OnClickStatusPlusButton))
 		wndGameButton.SetButtonEvent("SKILL", ui.__mem_func__(self.__OnClickSkillPlusButton))
 		wndGameButton.SetButtonEvent("QUEST", ui.__mem_func__(self.__OnClickQuestButton))
-		wndGameButton.SetButtonEvent("HELP", ui.__mem_func__(self.__OnClickHelpButton))
 		wndGameButton.SetButtonEvent("BUILD", ui.__mem_func__(self.__OnClickBuildButton))
 
 		self.wndGameButton = wndGameButton
@@ -259,7 +257,6 @@ class Interface(object):
 
 		self.dlgSystem = uiSystem.SystemDialog()
 		self.dlgSystem.LoadDialog()
-		self.dlgSystem.SetOpenHelpWindowEvent(ui.__mem_func__(self.OpenHelpWindow))
 		self.dlgSystem.BindInterface(self)
 		self.dlgSystem.Hide()
 
@@ -283,12 +280,6 @@ class Interface(object):
 
 		self.dlgRefineNew = uiRefine.RefineDialogNew()
 		self.dlgRefineNew.Hide()
-
-	def __MakeHelpWindow(self):
-		self.wndHelp = uiHelp.HelpWindow()
-		self.wndHelp.LoadDialog()
-		self.wndHelp.SetCloseEvent(ui.__mem_func__(self.CloseHelpWindow))
-		self.wndHelp.Hide()
 
 	def __MakeTipBoard(self):
 		self.tipBoard = uiTip.TipBoard()
@@ -344,7 +335,6 @@ class Interface(object):
 		self.__MakeUICurtain()
 		self.__MakeTaskBar()
 		self.__MakeGameButtonWindow()
-		self.__MakeHelpWindow()
 		self.__MakeTipBoard()
 		self.__MakeWebWindow()
 		self.__MakeCubeWindow()
@@ -477,9 +467,6 @@ class Interface(object):
 		if self.wndParty:
 			self.wndParty.Destroy()
 
-		if self.wndHelp:
-			self.wndHelp.Destroy()
-
 		if self.wndCube:
 			self.wndCube.Destroy()
 
@@ -579,7 +566,6 @@ class Interface(object):
 		del self.wndSafebox
 		del self.wndMall
 		del self.wndParty
-		del self.wndHelp
 		del self.wndCube
 		del self.wndCubeResult
 		del self.privateShopBuilder
@@ -1171,21 +1157,8 @@ class Interface(object):
 	def __OnClickQuestButton(self):
 		self.ToggleCharacterWindow("QUEST")
 
-	def __OnClickHelpButton(self):
-		player.SetPlayTime(1)
-		self.CheckGameButton()
-		self.OpenHelpWindow()
-
 	def __OnClickBuildButton(self):
 		self.BUILD_OpenWindow()
-
-	def OpenHelpWindow(self):
-		self.wndUICurtain.Show()
-		self.wndHelp.Open()
-
-	def CloseHelpWindow(self):
-		self.wndUICurtain.Hide()
-		self.wndHelp.Close()
 
 	def OpenWebWindow(self, url):
 		self.wndWeb.Open(url)

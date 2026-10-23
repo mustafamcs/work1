@@ -26,7 +26,6 @@ class GameButtonWindow(ui.ScriptWindow):
 				"STATUS" : self.GetChild("StatusPlusButton"),
 				"SKILL" : self.GetChild("SkillPlusButton"),
 				"QUEST" : self.GetChild("QuestButton"),
-				"HELP" : self.GetChild("HelpButton"),
 				"BUILD" : self.GetChild("BuildGuildBuilding"),
 				"EXIT_OBSERVER" : self.GetChild("ExitObserver"),
 			}
@@ -71,7 +70,6 @@ class GameButtonWindow(ui.ScriptWindow):
 
 		statusPlusButton=self.gameButtonDict["STATUS"]
 		skillPlusButton=self.gameButtonDict["SKILL"]
-		helpButton=self.gameButtonDict["HELP"]
 
 		if player.GetStatus(player.STAT) > 0:
 			statusPlusButton.Show()
@@ -82,11 +80,6 @@ class GameButtonWindow(ui.ScriptWindow):
 			skillPlusButton.Show()
 		else:
 			skillPlusButton.Hide()
-
-		if 0 == player.GetPlayTime():
-			helpButton.Show()
-		else:
-			helpButton.Hide()
 
 	def __IsSkillStat(self):
 		if player.GetStatus(player.SKILL_ACTIVE) > 0:

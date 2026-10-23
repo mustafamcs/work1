@@ -1114,33 +1114,6 @@ PyObject * appSetGuildMarkPath(PyObject * poSelf, PyObject * poArgs)
 	return Py_BuildNone();
 }
 
-PyObject* appIsDevStage(PyObject* poSelf, PyObject* poArgs)
-{
-	int nIsDevelopmentStage = 0;
-#if defined(LOCALE_SERVICE_STAGE_DEVELOPMENT)
-	nIsDevelopmentStage = 1;
-#endif
-	return Py_BuildValue("i", nIsDevelopmentStage);
-}
-
-PyObject* appIsTestStage(PyObject* poSelf, PyObject* poArgs)
-{
-	int nIsTestStage = 0;
-#if defined(LOCALE_SERVICE_STAGE_TEST)
-	nIsTestStage = 1;
-#endif
-	return Py_BuildValue("i", nIsTestStage);
-}
-
-PyObject* appIsLiveStage(PyObject* poSelf, PyObject* poArgs)
-{
-	int nIsLiveStage = 0;
-#if !defined(LOCALE_SERVICE_STAGE_TEST) && !defined(LOCALE_SERVICE_STAGE_DEVELOPMENT)
-	nIsLiveStage = 1;
-#endif
-	return Py_BuildValue("i", nIsLiveStage);
-}
-
 PyObject* appLogoOpen(PyObject* poSelf, PyObject* poArgs)
 {
 	char* szName;
@@ -1201,10 +1174,6 @@ void initapp()
 {
 	static PyMethodDef s_methods[] =
 	{
-		{ "IsDevStage",					appIsDevStage,					METH_VARARGS },
-		{ "IsTestStage",				appIsTestStage,					METH_VARARGS },
-		{ "IsLiveStage",				appIsLiveStage,					METH_VARARGS },
-
 		// TEXTTAIL_LIVINGTIME_CONTROL
 		{ "SetTextTailLivingTime",		appSetTextTailLivingTime,		METH_VARARGS },
 		// END_OF_TEXTTAIL_LIVINGTIME_CONTROL
@@ -1565,12 +1534,6 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "ENABLE_LEVEL_IN_TRADE",	0);
 #endif
 
-#ifdef ENABLE_678TH_SKILL
-	PyModule_AddIntConstant(poModule, "ENABLE_678TH_SKILL",	1);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_678TH_SKILL",	0);
-#endif
-
 #ifdef LOGIN_COUNT_DOWN_UI_MODIFY
 	PyModule_AddIntConstant(poModule, "LOGIN_COUNT_DOWN_UI_MODIFY",	1);
 #else
@@ -1631,12 +1594,6 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "ENABLE_MONSTER_CARD",	1);
 #else
 	PyModule_AddIntConstant(poModule, "ENABLE_MONSTER_CARD",	0);
-#endif
-
-#ifdef ENABLE_HELP_RENEWAL
-	PyModule_AddIntConstant(poModule, "ENABLE_HELP_RENEWAL",	1);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_HELP_RENEWAL",	0);
 #endif
 
 #ifdef ENABLE_MAGIC_REDUCTION_SYSTEM
@@ -1744,12 +1701,6 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "ENABLE_NO_SELL_PRICE_DIVIDED_BY_5",   0);
 #endif
 
-#ifdef ENABLE_GOLD_FIELD_AS_SELL_PRICE
-	PyModule_AddIntConstant(poModule, "ENABLE_GOLD_FIELD_AS_SELL_PRICE",   1);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_GOLD_FIELD_AS_SELL_PRICE",   0);
-#endif
-
 #ifdef ENABLE_PENDANT_SYSTEM
 	PyModule_AddIntConstant(poModule, "ENABLE_PENDANT_SYSTEM",   1);
 #else
@@ -1786,46 +1737,10 @@ void initapp()
 	PyModule_AddIntConstant(poModule, "WJ_SHOW_MOB_INFO_EX", 0);
 #endif
 
-#if defined(__BL_MOUSE_WHEEL_TOP_WINDOW__)
-	PyModule_AddIntConstant(poModule, "__BL_MOUSE_WHEEL_TOP_WINDOW__", true);
-#else
-	PyModule_AddIntConstant(poModule, "__BL_MOUSE_WHEEL_TOP_WINDOW__", false);
-#endif
-
-#ifdef ENABLE_UI_CIRCLE
-	PyModule_AddIntConstant(poModule, "ENABLE_UI_CIRCLE", true);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_UI_CIRCLE", false);
-#endif
-
-#ifdef ENABLE_UI_MOVING
-	PyModule_AddIntConstant(poModule, "ENABLE_UI_MOVING", true);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_UI_MOVING", false);
-#endif
-
 #if defined(__BL_CLIP_MASK__)
 	PyModule_AddIntConstant(poModule, "__BL_CLIP_MASK__", true);
 #else
 	PyModule_AddIntConstant(poModule, "__BL_CLIP_MASK__", false);
-#endif
-
-#ifdef ENABLE_AUTO_L2R
-	PyModule_AddIntConstant(poModule, "ENABLE_AUTO_L2R", true);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_AUTO_L2R", false);
-#endif
-
-#if defined(__BL_OFFICIAL_LOOT_FILTER__)
-	PyModule_AddIntConstant(poModule, "__BL_OFFICIAL_LOOT_FILTER__", true);
-#else
-	PyModule_AddIntConstant(poModule, "__BL_OFFICIAL_LOOT_FILTER__", false);
-#endif
-
-#if defined(ENABLE_PREMIUM_LOOT_FILTER)
-	PyModule_AddIntConstant(poModule, "ENABLE_PREMIUM_LOOT_FILTER", true);
-#else
-	PyModule_AddIntConstant(poModule, "ENABLE_PREMIUM_LOOT_FILTER", false);
 #endif
 
 #if defined(ENABLE_CONQUEROR_LEVEL)
@@ -1992,11 +1907,6 @@ void initapp()
 		PyModule_AddIntConstant(poModule, "DISABLE_DECLARE_WAR", 1);
 	#else
 		PyModule_AddIntConstant(poModule, "DISABLE_DECLARE_WAR", 0);
-	#endif
-	#ifdef ENABLE_HELP_MULTIPAGE
-		PyModule_AddIntConstant(poModule, "ENABLE_HELP_MULTIPAGE", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "ENABLE_HELP_MULTIPAGE", 0);
 	#endif
 	#ifdef ENABLE_DEFAULT_UI_BOARD
 		PyModule_AddIntConstant(poModule, "ENABLE_DEFAULT_UI_BOARD", ENABLE_DEFAULT_UI_BOARD);
@@ -2297,41 +2207,6 @@ void initapp()
 		PyModule_AddIntConstant(poModule, "ENABLE_SEALBIND_SYSTEM", 1);
 	#else
 		PyModule_AddIntConstant(poModule, "ENABLE_SEALBIND_SYSTEM", 0);
-	#endif
-	#ifdef LOCALE_SERVICE_GLOBAL
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_GLOBAL", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_GLOBAL", 0);
-	#endif
-	#ifdef LOCALE_SERVICE_JAPAN
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_JAPAN", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_JAPAN", 0);
-	#endif
-	#ifdef LOCALE_SERVICE_STAGE_DEVELOPMENT
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_DEVELOPMENT", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_DEVELOPMENT", 0);
-	#endif
-	#ifdef LOCALE_SERVICE_STAGE_TEST
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_TEST", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_STAGE_TEST", 0);
-	#endif
-	#ifdef LOCALE_SERVICE_VIETNAM_MILD
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_VIETNAM_MILD", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_VIETNAM_MILD", 0);
-	#endif
-	#ifdef LOCALE_SERVICE_WE_JAPAN
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_WE_JAPAN", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_WE_JAPAN", 0);
-	#endif
-	#ifdef LOCALE_SERVICE_YMIR
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_YMIR", 1);
-	#else
-		PyModule_AddIntConstant(poModule, "LOCALE_SERVICE_YMIR", 0);
 	#endif
 	#ifdef USE_RELATIVE_PATH
 		PyModule_AddIntConstant(poModule, "USE_RELATIVE_PATH", 1);

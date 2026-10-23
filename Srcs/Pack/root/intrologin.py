@@ -22,22 +22,6 @@ SKIP_LOGIN_PHASE = app.SKIP_LOGIN_PHASE
 SKIP_LOGIN_PHASE_SUPPORT_CHANNEL = app.SKIP_LOGIN_PHASE_SUPPORT_CHANNEL
 FULL_BACK_IMAGE = app.FULL_BACK_IMAGE
 
-VIRTUAL_KEYBOARD_NUM_KEYS = app.VIRTUAL_KEYBOARD_NUM_KEYS
-VIRTUAL_KEYBOARD_RAND_KEY = app.VIRTUAL_KEYBOARD_RAND_KEY
-
-def Suffle(src):
-	if VIRTUAL_KEYBOARD_RAND_KEY:
-		items = [item for item in src]
-
-		itemCount = len(items)
-		for oldPos in xrange(itemCount):
-			newPos = app.GetRandom(0, itemCount-1)
-			items[newPos], items[oldPos] = items[oldPos], items[newPos]
-
-		return "".join(items)
-	else:
-		return src
-
 def IsFullBackImage():
 	global FULL_BACK_IMAGE
 	return FULL_BACK_IMAGE
@@ -137,32 +121,18 @@ class LoginWindow(ui.ScriptWindow):
 		self.stream=stream
 		self.isNowCountDown=False
 		self.isStartError=False
+		self.channelBtnList = []
 
 		self.xServerBoard = 0
 		self.yServerBoard = 0
 
 		self.loadingImage = None
 
-		self.virtualKeyboard = None
-		self.virtualKeyboardMode = "ALPHABET"
-		self.virtualKeyboardIsUpper = False
-
 		# @fixme001 BEGIN (timeOutMsg and timeOutOk undefined)
 		self.timeOutMsg = False
 		self.timeOutOk = False
 		# @fixme001 END
 
-		if app.__BL_MULTI_LANGUAGE_PREMIUM__:
-			self.language_list = []
-			self.flag_button_list = []
-			self.language_board = None
-			self.language_popup = None
-			self.__LoadLocaleListFile()
-		if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-			self.anon_mode_board = None
-			self.anon_mode_text = None
-			self.anon_mode_checkbox_bg = None
-			self.anon_mode_checkbox = None
 
 	def __del__(self):
 		net.ClearPhaseWindow(net.PHASE_WINDOW_LOGIN, self)
@@ -246,20 +216,8 @@ class LoginWindow(ui.ScriptWindow):
 				self.__RefreshServerList()
 				self.__OpenServerBoard()
 		else:
-			connectingIP = self.stream.GetConnectAddr()
-			if connectingIP:
-				if app.USE_OPENID and not app.OPENID_TEST :
-					self.__RefreshServerList()
-					self.__OpenServerBoard()
-				else:
-					self.__OpenLoginBoard()
-					if IsFullBackImage():
-						self.GetChild("bg1").Hide()
-						self.GetChild("bg2").Show()
-
-			else:
-				self.__RefreshServerList()
-				self.__OpenServerBoard()
+			self.__RefreshServerList()
+			self.__OpenServerBoard()
 
 		app.ShowCursor()
 
@@ -292,42 +250,10 @@ class LoginWindow(ui.ScriptWindow):
 		self.connectingDialog = None
 		self.loadingImage = None
 
-		if app.__BL_MULTI_LANGUAGE_PREMIUM__:
-			self.language_list = []
-			self.flag_button_list = []
-			self.language_board = None
-			self.language_popup = None
-		if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-			self.anon_mode_board = None
-			self.anon_mode_text = None
-			self.anon_mode_checkbox_bg = None
-			self.anon_mode_checkbox = None
-
 		self.serverBoard				= None
 		self.serverList					= None
 		self.channelList				= None
-
-		self.VIRTUAL_KEY_ALPHABET_LOWERS = None
-		self.VIRTUAL_KEY_ALPHABET_UPPERS = None
-		self.VIRTUAL_KEY_SYMBOLS = None
-		self.VIRTUAL_KEY_NUMBERS = None
-
-		# VIRTUAL_KEYBOARD_BUG_FIX
-		if self.virtualKeyboard:
-			for keyIndex in xrange(0, VIRTUAL_KEYBOARD_NUM_KEYS+1):
-				key = self.GetChild2("key_%d" % keyIndex)
-				if key:
-					key.SetEvent(None)
-
-			self.GetChild("key_space").SetEvent(None)
-			self.GetChild("key_backspace").SetEvent(None)
-			self.GetChild("key_enter").SetEvent(None)
-			self.GetChild("key_shift").SetToggleDownEvent(None)
-			self.GetChild("key_shift").SetToggleUpEvent(None)
-			self.GetChild("key_at").SetToggleDownEvent(None)
-			self.GetChild("key_at").SetToggleUpEvent(None)
-
-			self.virtualKeyboard = None
+		self.channelBtnList				= None
 
 		self.KillFocus()
 		self.Hide()
@@ -499,36 +425,29 @@ class LoginWindow(ui.ScriptWindow):
 			constInfo.SAB.accData[slot] = data
 
 		def SAB_BtnRearrange(self):
-			def tooltipArrange(_btnObj):
-				_tMexTip = "Hesap ID: %s" % id
-				_btnObj.SetToolTipText(_tMexTip)
-				if _btnObj.ToolTipText:
-					_btnObj.ToolTipText.SetPackedFontColor(0xff66FFFF)
-			## def code
 			GetObject=self.GetChild
-			SetObject=self.InsertChild
-			## button names
 			btnNameSave = constInfo.SAB.btnName["Save"]
 			btnNameAccess = constInfo.SAB.btnName["Access"]
 			btnNameRemove = constInfo.SAB.btnName["Remove"]
-			## rearrange code
 			for idx in xrange(constInfo.SAB.slotCount):
 				_tSlot = self.SAB_GetAccountData(idx)
-				# button objects
 				btnObjSave = GetObject(btnNameSave % idx)
 				btnObjAccess = GetObject(btnNameAccess % idx)
 				btnObjRemove = GetObject(btnNameRemove % idx)
+				btnObjRemove.Hide()
 				if _tSlot:
 					(id, pwd) = _tSlot
 					btnObjSave.Hide()
 					btnObjAccess.Show()
-					btnObjRemove.Show()
-					btnObjAccess.SetText(uiScriptLocale.SAVE_ACCOUNT_CONNECT2.format(idx+1, id))
+					btnObjAccess.SetText(id)
+					btnObjAccess.SetTextColor(0xFFFFFFFF)
+					btnObjAccess.SetToolTipText(uiScriptLocale.SAVE_ACCOUNT_REMOVE_TIP)
 				else:
 					btnObjSave.Show()
+					btnObjSave.SetText(uiScriptLocale.SAVE_ACCOUNT_EMPTY)
+					btnObjSave.SetTextColor(0xFFB0B0B0)
+					btnObjSave.SetToolTipText(uiScriptLocale.SAVE_ACCOUNT_SAVE)
 					btnObjAccess.Hide()
-					btnObjRemove.Hide()
-			# done
 
 		def SAB_Click_Save(self, slot):
 			if slot >= constInfo.SAB.slotCount:
@@ -573,7 +492,6 @@ class LoginWindow(ui.ScriptWindow):
 				(id, pwd) = _tSlot
 				self.idEditLine.SetText(id)
 				self.pwdEditLine.SetText(pwd)
-				self.__OnClickSelectServerButton()
 				self.__OnClickLoginButton()
 
 		def SAB_Click_Remove(self, slot):
@@ -592,134 +510,123 @@ class LoginWindow(ui.ScriptWindow):
 			self.SAB_BtnRearrange()
 
 		def __CreateSaveAccountBoard(self):
-			### SAB INIT
 			self.SAB_LoadAccountData()
-			## def code
 			GetObject=self.GetChild
 			SetObject=self.InsertChild
-			## gui stuff
-			SCREEN_WIDTH = wndMgr.GetScreenWidth()
-			SCREEN_HEIGHT = wndMgr.GetScreenHeight()
-			## button space
-			SPACE_FOR_BUTTON = 25+1
-			ALL_BUTTON_SPACE = SPACE_FOR_BUTTON * constInfo.SAB.slotCount
-			## board stuff
-			BOARD_SIZE = (210+120, 28 + ALL_BUTTON_SPACE)
-			BOARD_POS = ((SCREEN_WIDTH - 208) / 2 + 210, (SCREEN_HEIGHT - 410) - (10*constInfo.SAB.slotCount))
-			## button stuff
+			# loginwindow.py ile ayni olcu: x=14, baslangic y=34, adim=28
+			BTN_X = 14
+			BTN_Y = 34
+			SPACE_FOR_BUTTON = 28
 			btnNameSave = constInfo.SAB.btnName["Save"]
 			btnNameAccess = constInfo.SAB.btnName["Access"]
 			btnNameRemove = constInfo.SAB.btnName["Remove"]
-			btnPath = "d:/ymir work/ui/public/%s_button_%02d.sub" # xsmall small middle large xlarge big
-			btnImage = {"default":1,"over":2,"down":3}
-			## SAB BOARD
+			btnImage = {"default":1, "over":2, "down":3}
+			_tmpBtnPath = "d:/ymir work/ui/public/xlarge_button_%02d.sub"
 			try:
-				## default init
-				_tmpName = "SaveAccountBoard"
-				SetObject(_tmpName, ui.ThinBoard())
-				#
-				_tmpObj = GetObject(_tmpName)
-				_tmpObj.SetParent(self)
-				## custom data
-				_tmpObj.SetSize(*BOARD_SIZE)
-				## default data
-				_tmpObj.SetPosition(*BOARD_POS)
-				_tmpObj.Show()
-				self.saveAccountBoard = _tmpObj
+				self.saveAccountBoard = GetObject("SaveAccountBoard")
 			except:
 				import exception; exception.Abort("__CreateSaveAccountBoard SAB BOARD")
-			### SAB TITLE
-			try:
-				## default init
-				_tmpName = "SaveAccountTitle"
-				SetObject(_tmpName, ui.TextLine())
-				_tmpObj = GetObject(_tmpName)
-				_tmpObj.SetParent(self.saveAccountBoard)
-				## custom data
-				_tmpObj.SetHorizontalAlignCenter()
-				_tmpObj.SetPackedFontColor(0xFFffbf00)
-				_tmpObj.SetOutline()
-				_tmpObj.SetText(uiScriptLocale.SAVE_ACCOUNT_TITLE)
-				## default data
-				_tmpObj.SetPosition(BOARD_SIZE[0]/2, 5)
-				_tmpObj.Show()
-			except:
-				import exception; exception.Abort("__CreateSaveAccountBoard SAB TITLE")
-			### SAB LINE
-			try:
-				## default init
-				_tmpName = "SaveAccountLine"
-				SetObject(_tmpName, ui.Line())
-				_tmpObj = GetObject(_tmpName)
-				_tmpObj.SetParent(self.saveAccountBoard)
-				## custom data
-				_tmpObj.SetColor(0xFF777777)
-				_tmpObj.SetSize(BOARD_SIZE[0]-10, 0)
-				## default data
-				_tmpObj.SetPosition(5, 20)
-				_tmpObj.Show()
-			except:
-				import exception; exception.Abort("__CreateSaveAccountBoard SAB LINE")
-			## SaveAccountButtons
 			for idx in xrange(constInfo.SAB.slotCount):
-				### SAB SAVE
 				try:
-					## default init
 					_tmpName = btnNameSave % (idx)
 					SetObject(_tmpName, ui.Button())
 					_tmpObj = GetObject(_tmpName)
 					_tmpObj.SetParent(self.saveAccountBoard)
-					## custom data
-					_tmpBtnPath = "d:/ymir work/ui/public/xlarge_button_%02d.sub" # xsmall small middle large xlarge big
 					_tmpObj.SetUpVisual(_tmpBtnPath % (btnImage["default"]))
 					_tmpObj.SetOverVisual(_tmpBtnPath % (btnImage["over"]))
 					_tmpObj.SetDownVisual(_tmpBtnPath % (btnImage["down"]))
-					_tmpObj.SetText(uiScriptLocale.SAVE_ACCOUNT_SAVE)
+					_tmpObj.SetText(uiScriptLocale.SAVE_ACCOUNT_EMPTY)
 					_tmpObj.SAFE_SetEvent(self.SAB_Click_Save, idx)
-					## default data
-					_tmpObj.SetPosition(15 + 60, 25 + (idx * SPACE_FOR_BUTTON))
+					_tmpObj.SetPosition(BTN_X, BTN_Y + (idx * SPACE_FOR_BUTTON))
 					_tmpObj.Hide()
 				except:
 					import exception; exception.Abort("__CreateSaveAccountBoard SAB SAVE")
-				### SAB ACCESS
 				try:
-					## default init
 					_tmpName = btnNameAccess % (idx)
 					SetObject(_tmpName, ui.Button())
 					_tmpObj = GetObject(_tmpName)
 					_tmpObj.SetParent(self.saveAccountBoard)
-					## custom data
-					_tmpBtnPath = "d:/ymir work/ui/public/xlarge_button_%02d.sub" # xsmall small middle large xlarge big
 					_tmpObj.SetUpVisual(_tmpBtnPath % (btnImage["default"]))
 					_tmpObj.SetOverVisual(_tmpBtnPath % (btnImage["over"]))
 					_tmpObj.SetDownVisual(_tmpBtnPath % (btnImage["down"]))
-					_tmpObj.SetText(uiScriptLocale.SAVE_ACCOUNT_CONNECT.format(idx+1))
 					_tmpObj.SAFE_SetEvent(self.SAB_Click_Access, idx)
-					## default data
-					_tmpObj.SetPosition(35, 25 + (idx * SPACE_FOR_BUTTON))
+					_tmpObj.OnMouseRightButtonDown = lambda slot=idx: self.SAB_Click_Remove(slot)
+					_tmpObj.SetPosition(BTN_X, BTN_Y + (idx * SPACE_FOR_BUTTON))
 					_tmpObj.Show()
 				except:
 					import exception; exception.Abort("__CreateSaveAccountBoard SAB ACCESS")
-				### SAB REMOVE
 				try:
-					## default init
 					_tmpName = btnNameRemove % (idx)
 					SetObject(_tmpName, ui.Button())
 					_tmpObj = GetObject(_tmpName)
 					_tmpObj.SetParent(self.saveAccountBoard)
-					## custom data
-					_tmpBtnPath = "d:/ymir work/ui/public/middle_button_%02d.sub" # xsmall small middle large xlarge big
 					_tmpObj.SetUpVisual(_tmpBtnPath % (btnImage["default"]))
 					_tmpObj.SetOverVisual(_tmpBtnPath % (btnImage["over"]))
 					_tmpObj.SetDownVisual(_tmpBtnPath % (btnImage["down"]))
-					_tmpObj.SetText(uiScriptLocale.SAVE_ACCOUNT_REMOVE)
 					_tmpObj.SAFE_SetEvent(self.SAB_Click_Remove, idx)
-					## default data
-					_tmpObj.SetPosition(35 + 190, 25 + (idx * SPACE_FOR_BUTTON))
-					_tmpObj.Show()
+					_tmpObj.SetPosition(BTN_X, BTN_Y + (idx * SPACE_FOR_BUTTON))
+					_tmpObj.Hide()
 				except:
 					import exception; exception.Abort("__CreateSaveAccountBoard SAB REMOVE")
 			self.SAB_BtnRearrange()
+
+	def __CreateChannelBar(self):
+		GetObject=self.GetChild
+		SetObject=self.InsertChild
+		for idx in xrange(8):
+			_tmpName = "LoginChannelButton_%02d" % idx
+			SetObject(_tmpName, ui.Button())
+			_tmpObj = GetObject(_tmpName)
+			_tmpObj.SetParent(self.serverBoard)
+			_tmpBtnPath = "d:/ymir work/ui/public/xlarge_button_%02d.sub"
+			_tmpObj.SetUpVisual(_tmpBtnPath % 1)
+			_tmpObj.SetOverVisual(_tmpBtnPath % 2)
+			_tmpObj.SetDownVisual(_tmpBtnPath % 3)
+			_tmpObj.SAFE_SetEvent(self.__OnClickChannelButton, idx)
+			_tmpObj.Hide()
+			self.channelBtnList.append(_tmpObj)
+
+	def __OnClickChannelButton(self, idx):
+		self.channelList.SelectItem(idx)
+		self.__RefreshChannelBarSel()
+		self.__ApplySelectedServer()
+
+	def __RefreshChannelBar(self):
+		regionID = self.__GetRegionID()
+		serverID = self.__GetServerID()
+
+		try:
+			channelDict = serverInfo.REGION_DICT[regionID][serverID]["channel"]
+		except:
+			channelDict = {}
+
+		# loginwindow.py ServerBoard icinde dikey liste
+		BTN_X = 14
+		BTN_Y = 34
+		BTN_STEP = 28
+
+		idx = 0
+		for channelID, channelDataDict in channelDict.items():
+			if idx >= len(self.channelBtnList):
+				break
+			btn = self.channelBtnList[idx]
+			btn.SetText(channelDataDict["name"])
+			btn.SetPosition(BTN_X, BTN_Y + idx * BTN_STEP)
+			btn.Show()
+			idx += 1
+
+		for j in xrange(idx, len(self.channelBtnList)):
+			self.channelBtnList[j].Hide()
+
+		self.__RefreshChannelBarSel()
+
+	def __RefreshChannelBarSel(self):
+		sel = self.channelList.selectedLine
+		for idx in xrange(len(self.channelBtnList)):
+			if idx == sel:
+				self.channelBtnList[idx].Down()
+			else:
+				self.channelBtnList[idx].SetUp()
 
 	def __LoadScript(self, fileName):
 		import dbg
@@ -748,97 +655,19 @@ class LoginWindow(ui.ScriptWindow):
 			if app.ENABLE_SAVE_ACCOUNT:
 				self.__CreateSaveAccountBoard()
 
-			self.virtualKeyboard		= self.GetChild2("VirtualKeyboard")
-
-			if app.__BL_MULTI_LANGUAGE_PREMIUM__:
-				self.language_board = ui.ThinBoard()
-				self.language_board.SetParent(self)
-				self.language_board.SetSize(wndMgr.GetScreenWidth(), 35)
-				self.language_board.SetPosition(0, 20)
-				self.language_board.Show()
-
-				step = wndMgr.GetScreenWidth() / len(self.language_list)
-				x = 0
-				for i, lang in enumerate(self.language_list):
-					img_path = "D:/ymir work/ui/intro/login/server_flag_{}.sub".format(lang["locale"])
-					btn = ui.Button()
-					btn.SetParent(self.language_board)
-					btn.SetPosition(x + 15, 10)
-					btn.SetUpVisual(img_path)
-					btn.SetOverVisual(img_path)
-					btn.SetDownVisual(img_path)
-					btn.SetToolTipText(lang["name"])
-					btn.SetEvent(ui.__mem_func__(self.__ClickLanguage), i)
-					btn.Show()
-					self.flag_button_list.append(btn)
-					x += step
-			if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-				self.anon_mode_board = ui.ThinBoard()
-				self.anon_mode_board.SetParent(self)
-				self.anon_mode_board.SetSize(160, 35)
-				self.anon_mode_board.SetPosition(0, 20 + self.language_board.GetHeight())
-				self.anon_mode_board.Show()
-
-				self.anon_mode_text = ui.TextLine()
-				self.anon_mode_text.SetParent(self.anon_mode_board)
-				if localeInfo.IsARABIC():
-					self.anon_mode_text.SetPosition(123, 7)
-				else:
-					self.anon_mode_text.SetPosition(15, 10)
-				self.anon_mode_text.SetFontName(localeInfo.UI_DEF_FONT_LARGE)
-				self.anon_mode_text.SetText(uiScriptLocale.LANGUAGE_ANONYMOUS_MODE)
-				self.anon_mode_text.Show()
-
-				self.anon_mode_checkbox_bg = ui.ImageBox()
-				self.anon_mode_checkbox_bg.SetParent(self.anon_mode_board)
-				if localeInfo.IsARABIC():
-					self.anon_mode_checkbox_bg.SetPosition(15, 9)
-				else:
-					self.anon_mode_checkbox_bg.SetPosition(123, 9)
-				self.anon_mode_checkbox_bg.LoadImage("d:/ymir work/ui/public/popup_notice_checkbox_bg.sub")
-				self.anon_mode_checkbox_bg.SetEvent(ui.__mem_func__(self.__EventAnonymous), "mouse_click", "")
-				self.anon_mode_checkbox_bg.Show()
-
-				self.anon_mode_checkbox = ui.ImageBox()
-				self.anon_mode_checkbox.SetParent(self.anon_mode_checkbox_bg)
-				self.anon_mode_checkbox.AddFlag("not_pick")
-				self.anon_mode_checkbox.SetPosition(0, 0)
-				self.anon_mode_checkbox.LoadImage("d:/ymir work/ui/public/popup_notice_checkbox.sub")
-
-				self.RefreshAnonymousMode()
-
-			if self.virtualKeyboard:
-				self.VIRTUAL_KEY_ALPHABET_UPPERS = Suffle(localeInfo.VIRTUAL_KEY_ALPHABET_UPPERS)
-				self.VIRTUAL_KEY_ALPHABET_LOWERS = "".join([localeInfo.VIRTUAL_KEY_ALPHABET_LOWERS[localeInfo.VIRTUAL_KEY_ALPHABET_UPPERS.index(e)] for e in self.VIRTUAL_KEY_ALPHABET_UPPERS])
-				if localeInfo.IsBRAZIL():
-					self.VIRTUAL_KEY_SYMBOLS_BR = Suffle(localeInfo.VIRTUAL_KEY_SYMBOLS_BR)
-				else:
-					self.VIRTUAL_KEY_SYMBOLS = Suffle(localeInfo.VIRTUAL_KEY_SYMBOLS)
-				self.VIRTUAL_KEY_NUMBERS = Suffle(localeInfo.VIRTUAL_KEY_NUMBERS)
-				self.__VirtualKeyboard_SetAlphabetMode()
-
-				self.GetChild("key_space").SetEvent(lambda : self.__VirtualKeyboard_PressKey(' '))
-				self.GetChild("key_backspace").SetEvent(lambda : self.__VirtualKeyboard_PressBackspace())
-				self.GetChild("key_enter").SetEvent(lambda : self.__VirtualKeyboard_PressReturn())
-				self.GetChild("key_shift").SetToggleDownEvent(lambda : self.__VirtualKeyboard_SetUpperMode())
-				self.GetChild("key_shift").SetToggleUpEvent(lambda : self.__VirtualKeyboard_SetLowerMode())
-				self.GetChild("key_at").SetToggleDownEvent(lambda : self.__VirtualKeyboard_SetSymbolMode())
-				self.GetChild("key_at").SetToggleUpEvent(lambda : self.__VirtualKeyboard_SetAlphabetMode())
-
 		except:
 			import exception
 			exception.Abort("LoginWindow.__LoadScript.BindObject")
 
-		if self.IS_TEST:
-			self.selectConnectButton.Hide()
-		else:
-			self.selectConnectButton.SetEvent(ui.__mem_func__(self.__OnClickSelectConnectButton))
+		self.selectConnectButton.SetEvent(ui.__mem_func__(self.__OnClickSelectConnectButton))
+		self.selectConnectButton.Hide()
 
 		self.serverBoard.OnKeyUp = ui.__mem_func__(self.__ServerBoard_OnKeyUp)
 		self.xServerBoard, self.yServerBoard = self.serverBoard.GetLocalPosition()
 
 		self.serverSelectButton.SetEvent(ui.__mem_func__(self.__OnClickSelectServerButton))
 		self.serverExitButton.SetEvent(ui.__mem_func__(self.__OnClickExitButton))
+		self.serverExitButton.Hide()
 
 		self.loginButton.SetEvent(ui.__mem_func__(self.__OnClickLoginButton))
 		self.loginExitButton.SetEvent(ui.__mem_func__(self.__OnClickExitButton))
@@ -851,87 +680,16 @@ class LoginWindow(ui.ScriptWindow):
 		self.pwdEditLine.SetReturnEvent(ui.__mem_func__(self.__OnClickLoginButton))
 		self.pwdEditLine.SetTabEvent(ui.__mem_func__(self.idEditLine.SetFocus))
 
+		self.serverList.Hide()
+		self.channelList.Hide()
+		self.serverSelectButton.Hide()
+		self.connectBoard.Hide()
+		self.__CreateChannelBar()
+
 		if IsFullBackImage():
 			self.GetChild("bg1").Show()
 			self.GetChild("bg2").Hide()
 		return 1
-
-	def __VirtualKeyboard_SetKeys(self, keyCodes):
-		uiDefFontBackup = localeInfo.UI_DEF_FONT
-		localeInfo.UI_DEF_FONT = localeInfo.UI_DEF_FONT_LARGE
-
-		keyIndex = 1
-		for keyCode in keyCodes:
-			key = self.GetChild2("key_%d" % keyIndex)
-			if key:
-				key.SetEvent(lambda x=keyCode: self.__VirtualKeyboard_PressKey(x))
-				key.SetText(keyCode)
-				key.ButtonText.SetFontColor(0, 0, 0)
-				keyIndex += 1
-
-		for keyIndex in xrange(keyIndex, VIRTUAL_KEYBOARD_NUM_KEYS+1):
-			key = self.GetChild2("key_%d" % keyIndex)
-			if key:
-				key.SetEvent(lambda x=' ': self.__VirtualKeyboard_PressKey(x))
-				key.SetText(' ')
-
-		localeInfo.UI_DEF_FONT = uiDefFontBackup
-
-	def __VirtualKeyboard_PressKey(self, code):
-		ime.PasteString(code)
-
-		#if self.virtualKeyboardMode == "ALPHABET" and self.virtualKeyboardIsUpper:
-		#	self.__VirtualKeyboard_SetLowerMode()
-
-	def __VirtualKeyboard_PressBackspace(self):
-		ime.PasteBackspace()
-
-	def __VirtualKeyboard_PressReturn(self):
-		ime.PasteReturn()
-
-	def __VirtualKeyboard_SetUpperMode(self):
-		self.virtualKeyboardIsUpper = True
-
-		if self.virtualKeyboardMode == "ALPHABET":
-			self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_ALPHABET_UPPERS)
-		elif self.virtualKeyboardMode == "NUMBER":
-			if localeInfo.IsBRAZIL():
-				self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_SYMBOLS_BR)
-			else:
-				self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_SYMBOLS)
-		else:
-			self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_NUMBERS)
-
-	def __VirtualKeyboard_SetLowerMode(self):
-		self.virtualKeyboardIsUpper = False
-
-		if self.virtualKeyboardMode == "ALPHABET":
-			self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_ALPHABET_LOWERS)
-		elif self.virtualKeyboardMode == "NUMBER":
-			self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_NUMBERS)
-		else:
-			if localeInfo.IsBRAZIL():
-				self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_SYMBOLS_BR)
-			else:
-				self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_SYMBOLS)
-
-	def __VirtualKeyboard_SetAlphabetMode(self):
-		self.virtualKeyboardIsUpper = False
-		self.virtualKeyboardMode = "ALPHABET"
-		self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_ALPHABET_LOWERS)
-
-	def __VirtualKeyboard_SetNumberMode(self):
-		self.virtualKeyboardIsUpper = False
-		self.virtualKeyboardMode = "NUMBER"
-		self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_NUMBERS)
-
-	def __VirtualKeyboard_SetSymbolMode(self):
-		self.virtualKeyboardIsUpper = False
-		self.virtualKeyboardMode = "SYMBOL"
-		if localeInfo.IsBRAZIL():
-			self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_SYMBOLS_BR)
-		else:
-			self.__VirtualKeyboard_SetKeys(self.VIRTUAL_KEY_SYMBOLS)
 
 	def Connect(self, id, pwd):
 
@@ -955,72 +713,6 @@ class LoginWindow(ui.ScriptWindow):
 
 	def __OnClickExitButton(self):
 		self.stream.SetPhaseWindow(0)
-
-	if app.__BL_MULTI_LANGUAGE_PREMIUM__:
-		def __LoadLocaleListFile(self):
-			try:
-				with open("locale_list.txt", "rt") as file:
-					lines = file.readlines()
-			except:
-				import dbg
-				dbg.LogBox("__LoadLocaleListFile hatası locale_list.txt")
-				app.Abort()
-
-			lineIndex = 1
-			for line in lines:
-				try:
-					tokens = line[:-1].split(" ")
-					if len(tokens) == 3:
-						name = tokens[0]
-						code_page = tokens[1]
-						locale = tokens[2]
-
-						if locale in uiScriptLocale.LOCALE_NAME_DICT:
-							name = uiScriptLocale.LOCALE_NAME_DICT[locale]
-
-						self.language_list.append({"name" : name, "code_page" : code_page, "locale" : locale})
-					else:
-						raise RuntimeError, "Bilinmeyen TokenSize"
-
-					lineIndex += 1
-				except:
-					import dbg
-					dbg.LogBox("%s: line(%d): %s" % ("locale_list.txt", lineIndex, line), "Error")
-					raise
-
-		def __SaveLoca(self, code_page, locale):
-			try:
-				with open("loca.cfg", "wt") as file:
-					file.write("{} {}".format(code_page, locale))
-			except:
-				import dbg
-				dbg.LogBox("__SaveLoca hatası")
-				app.Abort()
-
-		def __ClickLanguage(self, index):
-			if index >= len(self.language_list):
-				return
-
-			lang = self.language_list[index]
-			self.__SaveLoca(lang["code_page"], lang["locale"])
-			app.SetReloadLocale(lang["locale"] != app.GetLocaleName())
-
-			if not self.language_popup:
-				self.language_popup = uiCommon.PopupDialog()
-			self.language_popup.SetText(uiScriptLocale.LANGUAGE_WILL_CHANGE)
-			self.language_popup.Open()
-
-	if app.__BL_MULTI_LANGUAGE_ULTIMATE__:
-		def __EventAnonymous(self, event_type, arg):
-			if "mouse_click" == event_type :
-				systemSetting.SetAnonymousCountryMode(not systemSetting.GetAnonymousCountryMode())
-				self.RefreshAnonymousMode()
-
-		def RefreshAnonymousMode(self):
-			if systemSetting.GetAnonymousCountryMode():
-				self.anon_mode_checkbox.Show()
-			else:
-				self.anon_mode_checkbox.Hide()
 
 	def __SetServerInfo(self, name):
 		net.SetServerInfo(name.strip())
@@ -1185,6 +877,8 @@ class LoginWindow(ui.ScriptWindow):
 		serverIndex = self.__ServerIDToServerIndex(loadRegionID, loadServerID)
 		channelIndex = self.__ChannelIDToChannelIndex(loadChannelID)
 
+		if serverIndex < 0:
+			serverIndex = 0
 		self.serverList.SelectItem(serverIndex)
 
 		if app.ENABLE_RANDOM_CHANNEL_SEL:
@@ -1193,17 +887,18 @@ class LoginWindow(ui.ScriptWindow):
 			if channelIndex >= 0:
 				self.channelList.SelectItem(channelIndex)
 
+		if self.channelList.selectedLine < 0 and self.channelList.GetItemCount() > 0:
+			self.channelList.SelectItem(0)
+
 		self.serverBoard.SetPosition(self.xServerBoard, self.yServerBoard)
 		self.serverBoard.Show()
-		self.connectBoard.Hide()
-		self.loginBoard.Hide()
-		if app.ENABLE_SAVE_ACCOUNT:
-			self.saveAccountBoard.Hide()
+		if not app.loggined and not self.stream.isAutoLogin:
+			self.loginBoard.Show()
+			if app.ENABLE_SAVE_ACCOUNT:
+				self.saveAccountBoard.Show()
 
+		self.__RefreshChannelBarSel()
 		self.KillInputFocus() #@fixme019
-
-		if self.virtualKeyboard:
-			self.virtualKeyboard.Hide()
 
 		if app.loggined and not SKIP_LOGIN_PHASE_SUPPORT_CHANNEL:
 			self.serverList.SelectItem(self.loginnedServer-1)
@@ -1218,23 +913,17 @@ class LoginWindow(ui.ScriptWindow):
 
 	def __OpenLoginBoard(self):
 
-		self.serverExitButton.SetEvent(ui.__mem_func__(self.__OnClickExitServerButton))
-		self.serverExitButton.SetText(localeInfo.UI_CLOSE)
-
-		self.serverBoard.SetPosition(self.xServerBoard, wndMgr.GetScreenHeight())
-		self.serverBoard.Hide()
-
-		if self.virtualKeyboard:
-			self.virtualKeyboard.Show()
+		self.serverBoard.SetPosition(self.xServerBoard, self.yServerBoard)
+		self.serverBoard.Show()
 
 		if app.loggined:
 			self.Connect(self.id, self.pwd)
 			self.connectBoard.Hide()
 			self.loginBoard.Hide()
+			self.serverBoard.Hide()
 			if app.ENABLE_SAVE_ACCOUNT:
 				self.saveAccountBoard.Hide()
 		elif not self.stream.isAutoLogin:
-			self.connectBoard.Show()
 			self.loginBoard.Show()
 			if app.ENABLE_SAVE_ACCOUNT:
 				self.saveAccountBoard.Show()
@@ -1335,6 +1024,7 @@ class LoginWindow(ui.ScriptWindow):
 			self.channelList.InsertItem(channelID, " %s %s" % (channelName, channelState))
 
 		self.channelList.SelectItem(bakChannelID-1)
+		self.__RefreshChannelBar()
 
 	def __GetChannelName(self, regionID, selServerID, selChannelID):
 		try:
@@ -1363,15 +1053,6 @@ class LoginWindow(ui.ScriptWindow):
 			import exception
 			exception.Abort(localeInfo.CHANNEL_NOT_FIND_INFO)
 
-	def __OnClickExitServerButton(self):
-		print "sunucudan çık"
-		self.__OpenLoginBoard()
-
-		if IsFullBackImage():
-			self.GetChild("bg1").Hide()
-			self.GetChild("bg2").Show()
-
-
 	def __OnClickSelectRegionButton(self):
 		regionID = self.__GetRegionID()
 		serverID = self.__GetServerID()
@@ -1386,43 +1067,40 @@ class LoginWindow(ui.ScriptWindow):
 
 		self.__SaveChannelInfo()
 
-		self.serverExitButton.SetEvent(ui.__mem_func__(self.__OnClickExitServerButton))
-		self.serverExitButton.SetText(localeInfo.UI_CLOSE)
-
 		self.__RefreshServerList()
 		self.__OpenServerBoard()
 
 	def __OnClickSelectServerButton(self):
-		if IsFullBackImage():
-			self.GetChild("bg1").Hide()
-			self.GetChild("bg2").Show()
+		if self.__ApplySelectedServer():
+			self.__OpenLoginBoard()
 
+	def __ApplySelectedServer(self):
 		regionID = self.__GetRegionID()
 		serverID = self.__GetServerID()
 		channelID = self.__GetChannelID()
 
 		if (not serverInfo.REGION_DICT.has_key(regionID)):
 			self.PopupNotifyMessage(localeInfo.CHANNEL_SELECT_REGION)
-			return
+			return False
 
 		if (not serverInfo.REGION_DICT[regionID].has_key(serverID)):
 			self.PopupNotifyMessage(localeInfo.CHANNEL_SELECT_SERVER)
-			return
+			return False
 
 		try:
 			channelDict = serverInfo.REGION_DICT[regionID][serverID]["channel"]
 		except KeyError:
-			return
+			return False
 
 		try:
 			state = channelDict[channelID]["state"]
 		except KeyError:
 			self.PopupNotifyMessage(localeInfo.CHANNEL_SELECT_CHANNEL)
-			return
+			return False
 
 		if state == serverInfo.STATE_DICT[3]:
 			self.PopupNotifyMessage(localeInfo.CHANNEL_NOTIFY_FULL)
-			return
+			return False
 
 		self.__SaveChannelInfo()
 
@@ -1432,7 +1110,7 @@ class LoginWindow(ui.ScriptWindow):
 			addrKey = serverInfo.REGION_DICT[regionID][serverID]["channel"][channelID]["key"]
 
 		except:
-			print "HATA __OnClickSelectServerButton(%d, %d, %d)" % (regionID, serverID, channelID)
+			print "HATA __ApplySelectedServer(%d, %d, %d)" % (regionID, serverID, channelID)
 			serverName = localeInfo.CHANNEL_EMPTY_SERVER
 			channelName = localeInfo.CHANNEL_NORMAL % channelID
 
@@ -1443,7 +1121,7 @@ class LoginWindow(ui.ScriptWindow):
 			tcp_port = serverInfo.REGION_DICT[regionID][serverID]["channel"][channelID]["tcp_port"]
 		except:
 			import exception
-			exception.Abort("LoginWindow.__OnClickSelectServerButton")
+			exception.Abort("LoginWindow.__ApplySelectedServer")
 
 		try:
 			account_ip = serverInfo.REGION_AUTH_SERVER_DICT[regionID][serverID]["ip"]
@@ -1463,17 +1141,14 @@ class LoginWindow(ui.ScriptWindow):
 
 		except:
 			import exception
-			exception.Abort("LoginWindow.__OnClickSelectServerButton")
+			exception.Abort("LoginWindow.__ApplySelectedServer")
 
 
 		self.stream.SetConnectInfo(ip, tcp_port, account_ip, account_port)
-		self.__OpenLoginBoard()
+		return True
 
 
 	def __OnClickSelectConnectButton(self):
-		if IsFullBackImage():
-			self.GetChild("bg1").Show()
-			self.GetChild("bg2").Hide()
 		self.__RefreshServerList()
 		self.__OpenServerBoard()
 
@@ -1487,6 +1162,9 @@ class LoginWindow(ui.ScriptWindow):
 
 		if len(pwd)==0:
 			self.PopupNotifyMessage(localeInfo.LOGIN_INPUT_PASSWORD, self.SetPasswordEditLineFocus)
+			return
+
+		if not self.__ApplySelectedServer():
 			return
 
 		self.Connect(id, pwd)

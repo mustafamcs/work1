@@ -9,10 +9,10 @@ window = {
 	"style" : ("float",),
 
 	"x" : (SCREEN_WIDTH  - 200) /2,
-	"y" : (SCREEN_HEIGHT - (318 - 30)) /2,
+	"y" : (SCREEN_HEIGHT - (288 - 30)) /2,
 
 	"width" : 200,
-	"height" : 318 + VERSION_ADD_Y,
+	"height" : 288 + VERSION_ADD_Y,
 
 	"children" :
 	(
@@ -24,29 +24,16 @@ window = {
 			"y" : 0,
 
 			"width" : 200,
-			"height" : 318 - 30 + VERSION_ADD_Y,
+			"height" : 288 - 30 + VERSION_ADD_Y,
 
 			"children" :
 			(
-				{
-					"name" : "help_button",
-					"type" : "button",
-
-					"x" : 10,
-					"y" : 17,
-
-					"text" : uiScriptLocale.SYSTEM_HELP,
-
-					"default_image" : ROOT + "XLarge_Button_01.sub",
-					"over_image" : ROOT + "XLarge_Button_02.sub",
-					"down_image" : ROOT + "XLarge_Button_03.sub",
-				},
 				{
 					"name" : "version",
 					"type" : "text",
 
 					"x" : 0,
-					"y" : 47,
+					"y" : 17,
 
 					"text" : app.VERSION,
 					"horizontal_align" : "center",

@@ -8,6 +8,9 @@ if %errorlevel% neq 0 (
   exit /b
 )
 
+set "NSF=%TEMP%\work1_netstat.txt"
+netstat -ano > "%NSF%"
+
 set "PROFIL="
 for /f %%p in ('type "%KOK%\active_profile" 2^>nul') do set "PROFIL=%%p"
 echo aktif profil: %PROFIL%
@@ -18,9 +21,10 @@ call :durum auth       30001
 call :durum core1.1    30003
 call :durum ch99       30901
 echo ------------------------------------------
+del /f "%NSF%" >nul 2>&1
 exit /b 0
 
 :durum
-netstat -ano | findstr ":%~2 " | findstr LISTENING >nul
+findstr ":%~2 " "%NSF%" | findstr LISTENING >nul
 if %errorlevel%==0 ( echo   %~1 [:%~2] calisiyor ) else ( echo   %~1 [:%~2] KAPALI )
 exit /b 0

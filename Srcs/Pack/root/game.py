@@ -359,7 +359,6 @@ class GameWindow(ui.ScriptWindow):
 		onPressKeyDict[app.DIK_I]			= lambda : self.interface.ToggleInventoryWindow()
 		onPressKeyDict[app.DIK_O]			= lambda : self.interface.ToggleDragonSoulWindowWithNoInfo()
 		onPressKeyDict[app.DIK_M]			= lambda : self.interface.PressMKey()
-		#onPressKeyDict[app.DIK_H]			= lambda : self.interface.OpenHelpWindow()
 		onPressKeyDict[app.DIK_ADD]			= lambda : self.interface.MiniMapScaleUp()
 		onPressKeyDict[app.DIK_SUBTRACT]	= lambda : self.interface.MiniMapScaleDown()
 		onPressKeyDict[app.DIK_L]			= lambda : self.interface.ToggleChatLogWindow()
@@ -448,8 +447,6 @@ class GameWindow(ui.ScriptWindow):
 	def	__PressHKey(self):
 		if app.IsPressed(app.DIK_LCONTROL) or app.IsPressed(app.DIK_RCONTROL):
 			net.SendChatPacket("/user_horse_ride")
-		else:
-			self.interface.OpenHelpWindow()
 
 	def	__PressBKey(self):
 		if app.IsPressed(app.DIK_LCONTROL) or app.IsPressed(app.DIK_RCONTROL):

@@ -113,3 +113,4 @@ server/db/mob_names.txt
 server/**/mob_count
 # define_kapat_test yedegi (89_define_test.bat uretir)
 Srcs/Controls.h.on
+_crash_disasm.txt

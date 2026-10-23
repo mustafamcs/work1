@@ -124,8 +124,10 @@ def main():
                      '|'.join(re.escape(n) for n in sorted(uniq, key=len, reverse=True)) +
                      r')(?![A-Za-z0-9_])')
 
-    # ad -> {baglam -> adet, 'files' -> [ilk dosyalar]}
-    hits = {n: {'KOD': 0, 'APP': 0, 'PY': 0, 'YORUM': 0, 'files': []} for n in uniq}
+    # ad -> {baglam -> adet, 'files' -> [ilk dosyalar], 'kodfiles' -> set}
+    hits = {n: {'KOD': 0, 'APP': 0, 'PY': 0, 'YORUM': 0, 'files': [], 'kodfiles': set()}
+            for n in uniq}
+    APP_MODULE = os.path.join('Srcs', 'Client', 'UserInterface', 'PythonApplicationModule.cpp')
     scanned = 0
     for fp in collect_files():
         try:
@@ -144,6 +146,8 @@ def main():
                 n = mm.group(1)
                 ctx = classify_line(ext, ln, n)
                 hits[n][ctx] += 1
+                if ctx == 'KOD':
+                    hits[n]['kodfiles'].add(rel)
                 file_hits.add(n)
         for n in file_hits:
             if len(hits[n]['files']) < 8:
@@ -152,7 +156,7 @@ def main():
     def total(h):
         return h['KOD'] + h['APP'] + h['PY'] + h['YORUM']
 
-    dead, comment_only, py_only, alive = [], [], [], []
+    dead, comment_only, py_only, export_only, alive = [], [], [], [], []
     for name, durum, section in defs:
         h = hits[name]
         if total(h) == 0:
@@ -161,6 +165,8 @@ def main():
             comment_only.append((name, durum, section, h['files']))
         elif h['KOD'] == 0:
             py_only.append((name, durum, section, h['APP'], h['PY'], h['files']))
+        elif h['kodfiles'] <= {APP_MODULE}:
+            export_only.append((name, durum, section, h['APP'], h['PY'], h['files']))
         else:
             alive.append((name, durum, section, h))
 
@@ -189,6 +195,14 @@ def main():
     w('C++ KODU OLMAYANLAR (sadece app.X export / py kullanimi): %d' % len(py_only))
     w('=' * 74)
     for name, durum, section, app_n, py_n, files in py_only:
+        w('  [%-6s] %-50s app=%d py=%d (%s)' % (durum, name, app_n, py_n, section))
+        for f in files:
+            w('        -> %s' % f)
+    w('')
+    w('=' * 74)
+    w('SADECE app.X EXPORT STUB\'I OLANLAR (gercek C++ kodu yok): %d' % len(export_only))
+    w('=' * 74)
+    for name, durum, section, app_n, py_n, files in export_only:
         w('  [%-6s] %-50s app=%d py=%d (%s)' % (durum, name, app_n, py_n, section))
         for f in files:
             w('        -> %s' % f)

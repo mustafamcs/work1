@@ -285,7 +285,6 @@ FRAGMENT_COMB_TITLE	Beceri kitaplarını birleştir
 GAMEOPTION_TITLE	Seçenekler
 GAME_EXIT_OBSERVER	İzlemeyi Bitir
 GAME_GUILD_WAR_JOIN	Lonca savaşına katıl
-GAME_HELP	Yardım
 GAME_OPTION_GAME	Oyun Seçenekleri
 GAME_OPTION_GAME_HP_BAR	HP çubuğu
 GAME_OPTION_GAME_MONSTER_NAME	Canavar isimleri
@@ -555,49 +554,6 @@ GUILD_WAR_WIN_THREE	3
 GUILD_WATER	Su
 GUILD_WATER_STONE	Su Taşı
 GUILD_WITHDRAW	Geri Çek
-HELP_ATTACK	Tek seferli saldırıyı fareyi kullanarak etkinleştir.
-HELP_ATTACK_KEY	Saldır: sol fare tuşu veya boşluk tuşu ile
-HELP_AUTO_ATTACK	Otomatik saldırıyı fare kullanarak etkinleştirir.
-HELP_CAMERA	Kamera Yönetimi
-HELP_CHANGE_PK_MODE	Saldırı modunu değiştir: sol fare tuşu ayarını değiştir
-HELP_CHARACTER_BUTTON1	(Karakter Penceresi, Envanter Penceresi,
-HELP_CHARACTER_BUTTON2	Arkadaş Listesi ve Seçenekler)
-HELP_CHAT	İlgili grupla sohbet etmek için metninin önüne şunlardan birini yaz: !(Genel), #(Grup) veya %(Lonca).
-HELP_CLICK_OTHER_PLAYER	Başka bir oyuncuya sağla tıklayarak ticaret yapabilirsin, gruplar kurabilirsin ve onu düelloya davet edebilirsin.
-HELP_CONTROL_CAMERA_BY_MIDDLEBUTTON	Kamera görüntüsü ayarlama: orta fare tuşu ile
-HELP_CONTROL_CAMERA_BY_RIGHTBUTTON	Kamera görüntüsü ayarını değiştir: sağ veya sol fare tuşu ile
-HELP_EMOTINO	Tuş kombinasyonları <Ctrl> + <1~9> ile duygu simgeleri gösterebilirsin.
-HELP_EXP	Tecrübe
-HELP_FURY	Oyun Nesne Marketi
-HELP_GUILD_WINDOW	Lonca Penceresini aç: Alt + G tuşları ile
-HELP_HELP	Yardım göster: H ile
-HELP_HELP_KEY	Yardım bölümü standart ayarları gösterir.
-HELP_HP	Hayat Puanı (HP)
-HELP_KEYSETTING	Oyun seçeneklerinde kendi tuş kombinasyonlarını oluşturabilirsin.
-HELP_MESSENGER_WINDOW	Arkadaş listesini aç: Alt + M tuşları ile
-HELP_MINIMAP	Küçük haritayı gösterir.
-HELP_MINIMAP_QUEST	Küçük ve genel görünüm haritasında görevler yanıp sönerek görüntülenir.
-HELP_MOUSE_LEFT	Sol mouse tuşunun işlevi
-HELP_MOUSE_RIGHT	Sağ mouse tuşunun işlevi
-HELP_MOVE_KEY	Kumanda: W, S, A, D tuşları ve ok tuşları ile
-HELP_OFF_QUESTSCROLL	-<CTRL> + Q ile görev dizilerini açıp kapatabilirsin.
-HELP_OPEN_CHARACTER	Karakter Penceresini aç: C tuşu ile
-HELP_OPEN_CHAT	Sohbet Penceresini aç: Giriş tuşu ile
-HELP_OPEN_INVENTORY	Envanter Penceresini aç: I tuşu ile
-HELP_OPEN_LOG	Sohbet protokolünü (Log) aç: L tuşu ile
-HELP_OPEN_MINIMAP	Küçük Haritayı aç: Shift + M tuşları ile
-HELP_OPEN_QUEST	Görev Penceresini aç: N tuşu ile
-HELP_OPEN_SKILL	Beceri Penceresini aç: V tuşu ile
-HELP_OPEN_WHISPER	Fısıltı Penceresini aç: üst karakter + giriş tuşu ile
-HELP_OPEN_ZONEMAP	Genel Görünüm Haritası'nı aç: M tuşu ile
-HELP_PICK_ITEM	Nesneleri topla: ", Z veya sol fare tuşu ile
-HELP_QUICKSLOT	Hızlı Erişim Alanları
-HELP_SCREEN_CAPTURE	Ekran görüntüsünü kaydet: Yazdır veya Print tuşu ile ("Metin2\screenshot" dosyası altında kaydedilecek)
-HELP_SERVER	Sana sunucu ve kanalı gösterir.
-HELP_SHOW_ALL_NAME	İsimleri göster: Alt tuşu ile
-HELP_SKILL	Burada bir beceriyi sağ fare tuşuyla kullanabilirsin.
-HELP_SP	Mana Puanı (SP)
-HELP_SYSTEM_BUTTON	Sistem Tuşları
 ICECREAM_EVENT_TITL	Yaz Etkinliği
 INVENTORY_PAGE_BUTTON_TOOLTIP_1	1. Envanter
 INVENTORY_PAGE_BUTTON_TOOLTIP_2	2. Envanter
@@ -642,7 +598,6 @@ KEYCHANGE_EMOTION8	Duygu (fırtına)
 KEYCHANGE_EMOTION9	Duygu (özür)
 KEYCHANGE_ESC	Sistem
 KEYCHANGE_GUILD_WINDOW	Lonca
-KEYCHANGE_HELP_WINDOW	Yardım
 KEYCHANGE_IMPOSSIBLE_CHANGE	[CTRL], [ALT], [SHIFT] burada kullanılamaz!
 KEYCHANGE_INGAMEEVENT	ETKİNLİK
 KEYCHANGE_INTERFACE	Pencere
@@ -1387,7 +1342,6 @@ SYSTEMOPTION_TITLE	Sistem Seçenekleri
 SYSTEM_CANNOT_CONTROL_AND_ESCAPTE	Serbest bırak
 SYSTEM_CHANGE	Karakter Değişikliği
 SYSTEM_EXIT	Oyun Sonu
-SYSTEM_HELP	Yardım
 SYSTEM_LOGOUT	Çıkış
 SYSTEM_MALL	Nesne Market
 SYSTEM_MOVE_CHANNEL	Kanal değiştir
