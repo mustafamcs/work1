@@ -18,7 +18,7 @@ window = {
 
 			"x" : 341,
 			"y" : 20,
-			"scrollbar_tip" : "normal",
+			"scrollbar_type" : "normal",
 			"size" : 270,
 		},
 

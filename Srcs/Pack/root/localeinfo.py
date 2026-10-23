@@ -225,7 +225,7 @@ if app.__BL_MULTI_LANGUAGE__:
 					continue
 				# @fixme010 END
 
-				tokens = line[:-1].split("\t")
+				tokens = line.rstrip("\r").split("\t")
 				if len(tokens) == 2:
 					localeDict[tokens[0]] = tokens[1]
 				elif len(tokens) >= 3:
@@ -452,7 +452,7 @@ else:
 					continue
 				# @fixme010 END
 
-				tokens = line[:-1].split("\t")
+				tokens = line.rstrip("\r").split("\t")
 				if len(tokens) == 2:
 					localeDict[tokens[0]] = tokens[1]
 				elif len(tokens) >= 3:

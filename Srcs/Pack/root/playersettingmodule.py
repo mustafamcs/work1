@@ -1417,7 +1417,7 @@ if app.ENABLE_RACE_HEIGHT:
 			if (not line) or (line[0]=="#"):
 				continue
 
-			tokens = line[:-1].split("\t")
+			tokens = line.rstrip("\r").split("\t")
 			if len(tokens) == 0 or not tokens[0]:
 				continue
 

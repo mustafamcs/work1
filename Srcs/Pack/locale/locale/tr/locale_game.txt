@@ -4023,3 +4023,11 @@ TARGET_INFO_RACE_UNDEAD	Ölümsüz
 TARGET_INFO_RACE_WIND	Rüzgar
 TARGET_INFO_STONE_NAME	Hayalet Taşı
 TARGET_INFO_SUBRACE	Tür : %s
+ACCE_ABSORB_CHANCE	Emis orani: %s%%
+ACCE_ABSORB_CHANCE2	Emis orani: %s - %s%%
+ACCE_DO_YOU_CLEAN	Kombinasyonu sifirlamak istiyor musun?
+ACCE_FAILURE_CLEAN	Temizleme basarisiz oldu.
+ACCE_REFINE_COST	Maliyet: %s Yang
+LOGIN_FAILURE_TIMEOUT	Sunucuya baglanirken zaman asimi olustu.
+TOOLTIP_NEXT_SKILL_LEVEL_3	Sonraki seviye: %d
+TOOLTIP_TIPS_SPLIT_ITEM	{0} + {1} ile esyayi bol

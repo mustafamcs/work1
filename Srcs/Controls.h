@@ -103,7 +103,7 @@
 #define ENABLE_SHOWNPCLEVEL					// npc uzerinde seviye gosterir
 #define ENABLE_CMD_PLAYER					// /player GM komutu
 #define ENABLE_CMD_IPURGE_EX				// /ipurge GM komutu
-#define ENABLE_SYSLOG_PACKET_SENT				// giden paketleri syslog'a yazar
+// #define ENABLE_SYSLOG_PACKET_SENT			// syslog'u dakikada MB'larca SENT HEADER spam'iyle dolduruyor; sadece paket debug'i icin gecici acilir
 #define ENABLE_PRINT_RECV_PACKET_DEBUG			// gelen paketleri yazdirir
 #define USE_STACKTRACE					// kritik hatada stack trace (Windows: CaptureStackBackTrace+SymFromAddr)
 #define DEBUG_ALLOC						// debug allocator + DebugPtr

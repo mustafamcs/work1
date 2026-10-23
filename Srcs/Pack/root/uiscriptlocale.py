@@ -160,7 +160,7 @@ else:
 			app.Abort()
 
 		for line in lines:
-			tokens = line[:-1].split("\t")
+			tokens = line.rstrip("\r").split("\t")
 
 			if len(tokens) >= 2:
 				localeDict[tokens[0]] = tokens[1]

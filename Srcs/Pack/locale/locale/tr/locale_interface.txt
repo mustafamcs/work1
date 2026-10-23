@@ -1396,3 +1396,9 @@ WORLD_BOSS_TOTAL_DAMAGE_TEXT	Toplam hasar
 WORLD_BUSS_REWARD_BUTTON	Ödülü teslim al
 YES	Evet
 ZONE_MAP	Genel Görünüm Haritası
+LOGIN_COL_CHANNEL	Kanallar
+LOGIN_COL_LOGIN	Giris
+LOGIN_COL_ACCOUNT	Hesaplar
+SAVE_ACCOUNT_EMPTY	Hesap Kaydet
+SAVE_ACCOUNT_SAVE	Bu hesabi bu slota kaydet
+SAVE_ACCOUNT_REMOVE_TIP	Kayitli hesabi sil (sag tik)
