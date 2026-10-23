@@ -9,7 +9,7 @@ if %errorlevel% neq 0 (
 )
 
 if not exist "%MYSQL_BIN%" ( echo [HATA] mysql.exe yok: %MYSQL_BIN% & exit /b 1 )
-netstat -ano | findstr ":3306 " | findstr LISTENING >nul
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0_port_acik.ps1" 3306 >nul 2>&1
 if not %errorlevel%==0 ( echo [HATA] mariadb kapali - once 10_mariadb_baslat.bat & exit /b 1 )
 
 call "%KOK%\sql\import-windows.bat" %MYSQL_USER% 127.0.0.1 3306 "%MYSQL_BIN%"

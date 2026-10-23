@@ -193,19 +193,23 @@ namespace Work1ControlCenter.Pages
                 Padding = new Padding(8, 5, 8, 5)
             };
 
-            var btnAllStart = Theme.CreateButton("★ TÜM SİSTEMİ BAŞLAT (MARIADB + OYUN)", ButtonStyle.Success, 385, 32);
-            btnAllStart.Location = new Point(8, 6);
+            var btnFullCycle = Theme.CreateButton("★ TAM ÇEVRİM: KAPAT+TEMİZLE+DERLE+AÇ", ButtonStyle.PrimaryCrimson, 330, 32);
+            btnFullCycle.Location = new Point(8, 6);
+            btnFullCycle.Click += async (s, e) => await backend.FullCycleAsync(true);
+
+            var btnAllStart = Theme.CreateButton("▶ BAŞLAT", ButtonStyle.Success, 150, 32);
+            btnAllStart.Location = new Point(346, 6);
             btnAllStart.Click += async (s, e) => await backend.StartAllServersAsync(false);
 
-            var btnAllStop = Theme.CreateButton("■ TÜM SİSTEMİ DURDUR", ButtonStyle.Danger, 235, 32);
-            btnAllStop.Location = new Point(401, 6);
-            btnAllStop.Click += async (s, e) => await backend.StopAllServersAsync();
+            var btnAllStop = Theme.CreateButton("■ DURDUR", ButtonStyle.Danger, 150, 32);
+            btnAllStop.Location = new Point(504, 6);
+            btnAllStop.Click += async (s, e) => await backend.KillEverythingAsync();
 
-            var btnGoSetup = Theme.CreateButton("★ SİSTEM", ButtonStyle.PrimaryGold, 148, 32);
-            btnGoSetup.Location = new Point(644, 6);
+            var btnGoSetup = Theme.CreateButton("★ SİSTEM", ButtonStyle.PrimaryGold, 120, 32);
+            btnGoSetup.Location = new Point(662, 6);
             btnGoSetup.Click += (s, e) => this.navigateToPage(2);
 
-            bottomBar.Controls.AddRange(new Control[] { btnAllStart, btnAllStop, btnGoSetup });
+            bottomBar.Controls.AddRange(new Control[] { btnFullCycle, btnAllStart, btnAllStop, btnGoSetup });
 
             Controls.Add(bottomBar);
             Controls.Add(midTable);

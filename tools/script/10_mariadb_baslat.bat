@@ -8,19 +8,14 @@ if %errorlevel% neq 0 (
   exit /b
 )
 
-netstat -ano | findstr ":3306 " | findstr LISTENING >nul
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0_port_acik.ps1" 3306 >nul 2>&1
 if %errorlevel%==0 ( echo [OK] mariadb zaten calisiyor & exit /b 0 )
 
 if not exist "%MARIADB_EXE%" ( echo [HATA] mariadbd.exe yok: %MARIADB_EXE% & exit /b 1 )
 
 cscript //nologo "%~dp0_gizli_baslat.vbs" "%KOK%" "%MARIADB_EXE%" "--defaults-file=%MARIADB_INI%" >nul
 
-set N=0
-:bekele
-ping -n 2 127.0.0.1 >nul
-netstat -ano | findstr ":3306 " | findstr LISTENING >nul
-if %errorlevel%==0 ( echo [OK] mariadb calisiyor :3306 & exit /b 0 )
-set /a N+=1
-if %N% LSS 20 goto bekele
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0_port_bekle.ps1" 3306 20 >nul 2>&1
+if not errorlevel 1 ( echo [OK] port 3306 acik & exit /b 0 )
 echo [HATA] mariadb 3306 portunu acamadi
 exit /b 1

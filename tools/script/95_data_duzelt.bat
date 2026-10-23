@@ -14,7 +14,7 @@ if errorlevel 1 ( echo [HATA] data duzeltme basarisiz & exit /b 1 )
 
 rem --- canli sema esitleme: item.window'a PET ekle (schema.sql ile ayni sira, sona) ---
 if exist "%MYSQL_BIN%" (
-  netstat -ano | findstr ":3306 " | findstr LISTENING >nul
+  powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0_port_acik.ps1" 3306 >nul 2>&1
   if not errorlevel 1 (
     "%MYSQL_BIN%" -u %MYSQL_USER% -p%MYSQL_PASS% -e "ALTER TABLE player.item MODIFY COLUMN `window` enum('INVENTORY','EQUIPMENT','SAFEBOX','MALL','DRAGON_SOUL_INVENTORY','BELT_INVENTORY','GROUND','IKASHOP_OFFLINESHOP','IKASHOP_SAFEBOX','IKASHOP_AUCTION','COSTUME','ACCE','AURA','TALISMAN','PET') NOT NULL;" 2>nul
     if not errorlevel 1 ( echo [OK] item.window enum schema.sql ile esitlendi ) else ( echo [BILGI] item.window alter atlandi )

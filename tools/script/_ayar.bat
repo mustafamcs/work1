@@ -7,11 +7,6 @@ rem ============================================================
 set "KOK=%~dp0..\.."
 set "SRV=%KOK%\server"
 
-rem --- derleme ---
-set "MSBUILD=C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
-set "SLN=%KOK%\Srcs\Server\server.sln"
-set "SLN_CLIENT=%KOK%\Srcs\Metin2.sln"
-
 rem --- diger ---
 set "QUESTDIR=%SRV%\share\locale\turkey\quest"
 set "PACKDIR=%KOK%\client\pack"

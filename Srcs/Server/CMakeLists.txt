@@ -13,7 +13,7 @@ cmake_minimum_required(VERSION 3.15)
 # VS ureteci icin platformu burada sabitliyoruz. (Ninja kullanilacaksa
 # "x86 Native Tools Command Prompt for VS 2022" ortamindan calistirin.
 # -A ile acik secim yapildiysa ona saygi duyulur.)
-if(NOT CMAKE_GENERATOR_PLATFORM)
+if(NOT CMAKE_GENERATOR_PLATFORM AND CMAKE_GENERATOR MATCHES "Visual Studio")
     set(CMAKE_GENERATOR_PLATFORM "Win32" CACHE INTERNAL "vcxproj uyumu: x86" FORCE)
 endif()
 
@@ -55,7 +55,9 @@ if(MSVC)
     # vcxproj RuntimeLibrary: MultiThreaded(/Debug) — statik CRT
     set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
     target_compile_options(server_base INTERFACE
-        /utf-8 /Zc:preprocessor /MP /W3 /WX
+        /utf-8 /Zc:preprocessor /MP /W3
+        # /WX yok: derleyici cache saricilari (sccache/buildcache) preprocess
+        # adiminda /wd bastirmalarini atlar; cikan uyari /WX ile hataya donusur.
         # OutputPaths.props'taki DisableSpecificWarnings listesi
         /wd4996 /wd5054 /wd5055 /wd4244 /wd4242 /wd4267 /wd4838 /wd4805
         /wd4146 /wd4018 /wd4309 /wd4804 /wd4101 /wd4065 /wd4477 /wd4005 /wd4834)

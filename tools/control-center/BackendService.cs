@@ -827,15 +827,16 @@ namespace Work1ControlCenter
         {
             var steps = new List<SetupStepState>();
 
-            string msbuild = Ayar("MSBUILD");
-            bool hasMsbuild = !string.IsNullOrEmpty(msbuild) && File.Exists(msbuild);
+            string scc = Path.Combine(ProjectRoot, @"tools\sccache\sccache-v0.18.0-x86_64-pc-windows-msvc\sccache.exe");
+            string ninjaDir = Path.Combine(ProjectRoot, @"Srcs\Server\build_ninja_sc");
+            bool hasNinjaPipeline = File.Exists(scc) && File.Exists(Path.Combine(ProjectRoot, @"Srcs\Server\CMakeLists.txt"));
             steps.Add(new SetupStepState
             {
                 Id = "deps",
-                Title = "1. Derleme Araçları (VS2022 MSBuild)",
-                Description = "MSBuild.exe yolu _ayar.bat üzerinden doğrulanır",
-                IsReady = hasMsbuild,
-                StatusDetail = hasMsbuild ? "MSBuild Hazır" : "MSBuild Bulunamadı"
+                Title = "1. Derleme Araçları (CMake + Ninja + sccache)",
+                Description = "sccache önbelleği ve server/client CMakeLists doğrulanır",
+                IsReady = hasNinjaPipeline,
+                StatusDetail = hasNinjaPipeline ? "Ninja Hattı Hazır" : "sccache/CMakeLists eksik"
             });
 
             string mariaExe = Ayar("MARIADB_EXE");
@@ -884,7 +885,7 @@ namespace Work1ControlCenter
                 Title = "5. İstemci (metin2client.exe)",
                 Description = "client dizininde çalıştırılabilir istemci",
                 IsReady = hasClient,
-                StatusDetail = hasClient ? "İstemci Hazır" : "Derleme Gerekli (44_build_client)"
+                StatusDetail = hasClient ? "İstemci Hazır" : "Derleme Gerekli (51_ninja_derle)"
             });
 
             var packs = GetPackEntries();
@@ -971,6 +972,141 @@ namespace Work1ControlCenter
                 catch { }
             }
             if (any) EmitLog("[!] Çalışan işlemler kullanıcı tarafından durduruldu.", true);
+        }
+
+        public Task<int> KillEverythingAsync()
+        {
+            return Task.Run(() =>
+            {
+                var sw = Stopwatch.StartNew();
+                EmitLog("======================================================================", false);
+                EmitLog(string.Format("[{0:HH:mm:ss}] BAŞLATILDI: Her Şey Kapatılıyor", DateTime.Now), false);
+                var handler = OnTaskStateChanged;
+                if (handler != null) handler("Her Şey Kapatılıyor", true);
+                try
+                {
+                    var pids = GetListeningPortPids();
+                    int[] ports = { 30901, 30003, 30001, 30000 };
+                    foreach (int port in ports)
+                    {
+                        int pid;
+                        if (pids.TryGetValue(port, out pid)) KillPidFast(pid);
+                    }
+                    string[] names = { "metin2client", "db", "game", "qc", "PackMakerLite" };
+                    foreach (var n in names)
+                    {
+                        try { foreach (var p in Process.GetProcessesByName(n)) p.Kill(); } catch { }
+                    }
+                    string admin = Ayar("MYSQLADMIN");
+                    if (!string.IsNullOrEmpty(admin) && File.Exists(admin) && pids.ContainsKey(3306))
+                    {
+                        try
+                        {
+                            Process.Start(new ProcessStartInfo
+                            {
+                                FileName = admin,
+                                Arguments = "-u " + Ayar("MYSQL_USER", "root") + " -p" + Ayar("MYSQL_PASS", "") + " --protocol=tcp shutdown",
+                                UseShellExecute = false,
+                                CreateNoWindow = true
+                            }).WaitForExit(5000);
+                        }
+                        catch { }
+                    }
+                    try { foreach (var p in Process.GetProcessesByName("mariadbd")) p.Kill(); } catch { }
+                    for (int i = 0; i < 15; i++)
+                    {
+                        var open = GetActiveListeningPorts();
+                        if (!open.Contains(30000) && !open.Contains(30001) && !open.Contains(30003) && !open.Contains(30901) && !open.Contains(3306)) break;
+                        Thread.Sleep(100);
+                    }
+                    sw.Stop();
+                    EmitLog(string.Format("[{0:HH:mm:ss}] TAMAMLANDI: Her Şey Kapatıldı ({1:0.0} sn)", DateTime.Now, sw.Elapsed.TotalSeconds), false);
+                    return 0;
+                }
+                finally { if (handler != null) handler("Her Şey Kapatılıyor", false); }
+            });
+        }
+
+        public Task<int> CleanEverythingAsync(bool wipeBuildTrees = true)
+        {
+            return Task.Run(() =>
+            {
+                var sw = Stopwatch.StartNew();
+                EmitLog(string.Format("[{0:HH:mm:ss}] BAŞLATILDI: Tam Temizlik", DateTime.Now), false);
+                var handler = OnTaskStateChanged;
+                if (handler != null) handler("Tam Temizlik", true);
+                try
+                {
+                    string[] logNames = { "syserr.txt", "syserr", "syslog.txt", "syslog", "stdout.txt", "stdout", "PTS.txt", "usage.txt" };
+                    int silinen = 0;
+                    if (Directory.Exists(ServerDir))
+                    {
+                        foreach (var f in Directory.EnumerateFiles(ServerDir, "*", SearchOption.AllDirectories))
+                        {
+                            string fn = Path.GetFileName(f);
+                            if (Array.IndexOf(logNames, fn) >= 0) { try { File.Delete(f); silinen++; } catch { } }
+                        }
+                    }
+                    if (Directory.Exists(ClientDir))
+                    {
+                        foreach (var fn in logNames)
+                        {
+                            string f = Path.Combine(ClientDir, fn);
+                            if (File.Exists(f)) { try { File.Delete(f); silinen++; } catch { } }
+                        }
+                        string cliLog = Path.Combine(ClientDir, "logs");
+                        if (Directory.Exists(cliLog)) { try { Directory.Delete(cliLog, true); silinen++; } catch { } }
+                    }
+                    string srvLogs = Path.Combine(ServerDir, "logs");
+                    if (Directory.Exists(srvLogs)) { try { Directory.Delete(srvLogs, true); } catch { } }
+
+                    if (wipeBuildTrees)
+                    {
+                        string[] trees =
+                        {
+                            Path.Combine(ProjectRoot, @"Srcs\Server\build_ninja_sc"),
+                            Path.Combine(ProjectRoot, @"Srcs\Client\build_ninja_sc"),
+                            Path.Combine(ProjectRoot, "out")
+                        };
+                        foreach (var t in trees)
+                            if (Directory.Exists(t)) { try { Directory.Delete(t, true); } catch { } }
+                    }
+                    string tmp = Path.Combine(Path.GetTempPath(), "work1ninja");
+                    if (Directory.Exists(tmp)) { try { Directory.Delete(tmp, true); } catch { } }
+                    tmp = Path.Combine(Path.GetTempPath(), "work1build");
+                    if (Directory.Exists(tmp)) { try { Directory.Delete(tmp, true); } catch { } }
+
+                    sw.Stop();
+                    EmitLog(string.Format("[{0:HH:mm:ss}] TAMAMLANDI: Tam Temizlik ({1} log, {2:0.0} sn)", DateTime.Now, silinen, sw.Elapsed.TotalSeconds), false);
+                    return 0;
+                }
+                finally { if (handler != null) handler("Tam Temizlik", false); }
+            });
+        }
+
+        public Task<int> NinjaBuildAsync()
+        {
+            return RunScriptAsync("Ninja Derleme (server+client, sccache)", "_ninja_ic.bat");
+        }
+
+        public Task<int> PackUpdateAsync()
+        {
+            return RunScriptAsync("Değişen Packler Güncelleniyor", "74_paket_guncelle.bat");
+        }
+
+        public async Task<int> FullCycleAsync(bool wipeBuildTrees)
+        {
+            var sw = Stopwatch.StartNew();
+            EmitLog("======================================================================", false);
+            EmitLog(string.Format("[{0:HH:mm:ss}] TAM ÇEVRİM BAŞLADI (kapat → temizle → build → aç)", DateTime.Now), false);
+            int rc = await KillEverythingAsync(); if (rc != 0) return rc;
+            rc = await CleanEverythingAsync(wipeBuildTrees); if (rc != 0) return rc;
+            rc = await NinjaBuildAsync(); if (rc != 0) return rc;
+            rc = await PackUpdateAsync(); if (rc != 0) return rc;
+            rc = await StartAllServersAsync(true);
+            sw.Stop();
+            EmitLog(string.Format("[{0:HH:mm:ss}] TAM ÇEVRİM BİTTİ ({1:0.0} sn) — rc={2}", DateTime.Now, sw.Elapsed.TotalSeconds, rc), rc != 0);
+            return rc;
         }
 
         public Task<int> RunScriptAsync(string taskTitle, string batFileName, string arguments = "")

@@ -9,7 +9,7 @@ if %errorlevel% neq 0 (
 )
 cd /d "%QUESTDIR%"
 
-if not exist qc.exe ( echo [HATA] qc.exe yok - once 42_build_qc.bat & exit /b 1 )
+if not exist qc.exe ( echo [HATA] qc.exe yok - once ninja derleme (51) & exit /b 1 )
 if not exist quest_list ( echo [HATA] quest_list yok & exit /b 1 )
 
 setlocal EnableDelayedExpansion

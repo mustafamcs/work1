@@ -7,33 +7,24 @@ if %errorlevel% neq 0 (
   cscript //nologo "%~dp0_admin.vbs" "%~f0" %*
   exit /b
 )
+
 rem Calisma-ani artiklarini temizler: syserr/syslog/log, editor
 rem yedekleri, _yedek, .pre_qc, __pycache__, Thumbs.db vb.
 
-echo == log/syserr temizligi ==
-for %%F in (syserr.txt syserr syslog.txt syslog stdout.txt stdout PTS.txt usage.txt) do (
-  for /r "%SRV%" %%X in (%%F) do ( del /f "%%X" >nul 2>&1 )
-  del /f "%CLIENTDIR%\%%F" >nul 2>&1
-)
-if exist "%SRV%\logs" rd /s /q "%SRV%\logs" >nul 2>&1
-if exist "%CLIENTDIR%\logs" (
-  for %%X in ("%CLIENTDIR%\logs\*") do del /f "%%X" >nul 2>&1
-)
-if exist "%~dp0log" (
-  for %%X in ("%~dp0log\*") do del /f "%%X" >nul 2>&1
-)
-for /r "%KOK%" %%X in (*.log) do ( del /f "%%X" >nul 2>&1 )
+rem == 1/3 runtime loglari (ps - aninda) ==
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0_temizle.ps1" -kok "%KOK%" -scriptdir "%~dp0"
 
-echo == yedek/gecici dizinler ==
-for /d /r "%KOK%" %%D in (_yedek) do ( rd /s /q "%%D" >nul 2>&1 )
-for /d /r "%KOK%" %%D in (.pre_qc) do ( rd /s /q "%%D" >nul 2>&1 )
-for /d /r "%KOK%" %%D in (__pycache__) do ( rd /s /q "%%D" >nul 2>&1 )
-
-echo == editor artiklari ==
-for /r "%KOK%" %%X in (*.bak *.orig *.tmp *~ *.py~ Thumbs.db desktop.ini) do (
-  del /f "%%X" >nul 2>&1
+rem == 2/3 editor/gecici artiklari (yerel del - hizli) ==
+for %%E in (*.bak *.orig *.tmp *~ *.py~ Thumbs.db desktop.ini) do (
+  del /s /q "%KOK%\%%E" >nul 2>&1
 )
 
-echo.
+rem == 3/3 gecici dizinler ==
+for /d %%D in ("%KOK%\*") do (
+  if exist "%%D\_yedek" rd /s /q "%%D\_yedek" >nul 2>&1
+  if exist "%%D\.pre_qc" rd /s /q "%%D\.pre_qc" >nul 2>&1
+)
+del /s /q "%KOK%\*.log" >nul 2>&1
+
 echo [OK] temizlik bitti
 exit /b 0

@@ -7,5 +7,5 @@ if %errorlevel% neq 0 (
   exit /b
 )
 call "%~dp031_hepsini_durdur.bat"
-ping -n 3 127.0.0.1 >nul
+powershell -NoProfile -Command "Start-Sleep -Milliseconds 800" >nul 2>&1
 call "%~dp030_hepsini_baslat.bat"

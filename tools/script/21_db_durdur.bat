@@ -8,7 +8,6 @@ if %errorlevel% neq 0 (
   exit /b
 )
 
-for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":30000 " ^| findstr LISTENING') do taskkill /PID %%a /F >nul 2>&1
-netstat -ano | findstr ":30000 " | findstr LISTENING >nul
-if %errorlevel%==0 ( echo [HATA] db kapatilamadi & exit /b 1 )
-echo [OK] db durduruldu
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$c=Get-NetTCPConnection -State Listen -LocalPort 30000 -ErrorAction SilentlyContinue; if($c){ $c | Select-Object -Expand OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force } } else { exit 1 }" >nul 2>&1
+if errorlevel 1 ( echo [OK] db zaten kapali & exit /b 0 )
+echo [OK] db durduruldu :30000

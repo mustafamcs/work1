@@ -8,22 +8,19 @@ if %errorlevel% neq 0 (
   exit /b
 )
 
-netstat -ano | findstr ":3306 " | findstr LISTENING >nul
-if not %errorlevel%==0 ( echo [OK] mariadb zaten kapali & exit /b 0 )
+set "PS=%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass"
 
-rem once nazik kapanis (SHUTDOWN yetkisi varsa) - hizli poll ile bekle
+%PS% -File "%~dp0_port_acik.ps1" 3306 >nul 2>&1
+if errorlevel 1 ( echo [OK] mariadb zaten kapali & exit /b 0 )
+
+rem once nazik kapanis, arka planda porta gore 100ms poll ile bekle
 if exist "%MYSQLADMIN%" (
   "%MYSQLADMIN%" -u %MYSQL_USER% -p%MYSQL_PASS% --protocol=tcp shutdown >nul 2>&1
-  set N=0
-  :bekele
-  netstat -ano | findstr ":3306 " | findstr LISTENING >nul
-  if not %errorlevel%==0 ( echo [OK] mariadb nazik kapandi & exit /b 0 )
-  set /a N+=1
-  if %N% LSS 8 ( powershell -NoProfile -Command "Start-Sleep -Milliseconds 200" >nul & goto bekele )
+  %PS% -Command "$t=[Diagnostics.Stopwatch]::StartNew(); while($t.Elapsed.TotalSeconds -lt 3 -and (Get-NetTCPConnection -State Listen -LocalPort 3306 -ErrorAction SilentlyContinue)){ Start-Sleep -Milliseconds 100 }; if(-not (Get-NetTCPConnection -State Listen -LocalPort 3306 -ErrorAction SilentlyContinue)){ exit 0 } else { exit 1 }" >nul 2>&1
+  if not errorlevel 1 ( echo [OK] mariadb nazik kapandi & exit /b 0 )
   echo [UYARI] mysqladmin yetmedi, surec kapatiliyor...
 )
 
-for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":3306 " ^| findstr LISTENING') do taskkill /PID %%a /F >nul 2>&1
-netstat -ano | findstr ":3306 " | findstr LISTENING >nul
-if %errorlevel%==0 ( echo [HATA] mariadb kapatilamadi & exit /b 1 )
+%PS% -Command "$c=Get-NetTCPConnection -State Listen -LocalPort 3306 -ErrorAction SilentlyContinue; if($c){ $c | Select-Object -Expand OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force } } else { exit 1 }" >nul 2>&1
+if errorlevel 1 ( echo [HATA] mariadb kapatilamadi & exit /b 1 )
 echo [OK] mariadb durduruldu

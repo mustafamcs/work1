@@ -267,10 +267,8 @@ if (-not (Test-Path ""$mariaDir\data\mysql"")) {{
                         Path.Combine(backend.ProjectRoot, @"sql\schema.sql"));
                     break;
                 case "serverbin":
-                    await backend.RunScriptAsync("Sunucu Derleniyor (db+game+qc)", "43_build_hepsi.bat");
-                    break;
                 case "client":
-                    await backend.RunScriptAsync("İstemci Derleniyor", "44_build_client.bat");
+                    await backend.NinjaBuildAsync();
                     break;
                 case "packs":
                     await backend.RunScriptAsync("Tüm Packler Üretiliyor", "80_hepsi_repack.bat");

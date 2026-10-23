@@ -114,3 +114,8 @@ server/**/mob_count
 # define_kapat_test yedegi (89_define_test.bat uretir)
 Srcs/Controls.h.on
 _crash_disasm.txt
+
+# Ninja/CMake build agaclari depoya girmez
+**/build_ninja_sc/
+**/build_ninja_nocache/
+/out/

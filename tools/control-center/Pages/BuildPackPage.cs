@@ -40,7 +40,7 @@ namespace Work1ControlCenter.Pages
 
             var lblBuildTitle = new Label
             {
-                Text = "KAYNAK DERLEME (" + backend.CpuThreads + " THREAD)",
+                Text = "NINJA + SCCACHE DERLEME (" + backend.CpuThreads + " THREAD)",
                 Font = Theme.FontCardTitle,
                 ForeColor = Theme.GoldBright,
                 Location = new Point(10, 8),
@@ -48,26 +48,20 @@ namespace Work1ControlCenter.Pages
             };
 
             int y = 30;
-            AddFullWidthBtn(buildCard, "★ TAM DERLEME (SERVER+CLIENT)", ButtonStyle.PrimaryCrimson, ref y, () =>
-                backend.RunScriptAsync("Tam Derleme (84)", "84_tam_derleme.bat"));
+            AddFullWidthBtn(buildCard, "★ TEK TUŞ: KAPAT+TEMİZLE+DERLE+AÇ", ButtonStyle.PrimaryCrimson, ref y, () =>
+                backend.FullCycleAsync(true));
 
-            AddFullWidthBtn(buildCard, "⚡ HEPSİNİ DERLE (db+game+qc)", ButtonStyle.PrimaryGold, ref y, () =>
-                backend.RunScriptAsync("Sunucu Derleme (43)", "43_build_hepsi.bat"));
+            AddFullWidthBtn(buildCard, "⚡ NINJA DERLE (server+client)", ButtonStyle.PrimaryGold, ref y, () =>
+                backend.NinjaBuildAsync());
 
-            AddFullWidthBtn(buildCard, "🛡 DB + GAME DERLE", ButtonStyle.Secondary, ref y, async () =>
-            {
-                await backend.RunScriptAsync("DB Derleniyor", "40_build_db.bat");
-                await backend.RunScriptAsync("Game Derleniyor", "41_build_game.bat");
-            });
+            AddFullWidthBtn(buildCard, "� CANLI GÜNCELLE (build+restart)", ButtonStyle.Secondary, ref y, () =>
+                backend.RunScriptAsync("Canlı Güncelleme", "46_canli_guncelle.bat"));
 
-            AddFullWidthBtn(buildCard, "⚔ CLIENT DERLE (metin2client)", ButtonStyle.Secondary, ref y, () =>
-                backend.RunScriptAsync("İstemci Derleniyor", "44_build_client.bat"));
-
-            AddFullWidthBtn(buildCard, "📜 QUEST DERLE (qc.exe)", ButtonStyle.PrimaryGold, ref y, () =>
+            AddFullWidthBtn(buildCard, "📜 QUEST DERLE (qc.exe)", ButtonStyle.Secondary, ref y, () =>
                 backend.RunScriptAsync("Quest Derleme", "50_quest_derle.bat"));
 
-            AddFullWidthBtn(buildCard, "QC.EXE DERLE", ButtonStyle.Secondary, ref y, () =>
-                backend.RunScriptAsync("qc.exe Derleniyor", "42_build_qc.bat"));
+            AddFullWidthBtn(buildCard, "■ HER ŞEYİ KAPAT", ButtonStyle.Danger, ref y, () =>
+                backend.KillEverythingAsync());
 
             var btnVerify = Theme.CreateButton("DENETLE", ButtonStyle.Success, 140, 28);
             btnVerify.Location = new Point(10, y);
@@ -75,7 +69,7 @@ namespace Work1ControlCenter.Pages
 
             var btnClean = Theme.CreateButton("TEMİZLE", ButtonStyle.Danger, 140, 28);
             btnClean.Location = new Point(156, y);
-            btnClean.Click += async (s, e) => await backend.RunScriptAsync("Proje Temizliği", "82_temizle.bat");
+            btnClean.Click += async (s, e) => await backend.CleanEverythingAsync(false);
 
             buildCard.Controls.AddRange(new Control[] { lblBuildTitle, btnVerify, btnClean });
 
@@ -115,6 +109,11 @@ namespace Work1ControlCenter.Pages
             });
             AddMiniPackBtn(packFlow, "root", ButtonStyle.PrimaryGold, 66, () => BuildPackArchive("root"));
             AddMiniPackBtn(packFlow, "locale", ButtonStyle.PrimaryGold, 72, () => BuildPackArchive("locale"));
+            AddMiniPackBtn(packFlow, "GÜNCELLE", ButtonStyle.PrimaryCrimson, 88, async () =>
+            {
+                await backend.PackUpdateAsync();
+                RefreshPacks();
+            });
             AddMiniPackBtn(packFlow, "TÜMÜ REPACK", ButtonStyle.Success, 110, async () =>
             {
                 await backend.RunScriptAsync("Tüm Packler Üretiliyor", "80_hepsi_repack.bat");
